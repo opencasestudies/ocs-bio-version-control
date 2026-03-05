@@ -31,5 +31,6 @@ repo
 Rmd
 RStudio
 subdir
+Teichman
 th
 www
