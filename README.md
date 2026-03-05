@@ -21,11 +21,11 @@ This specific template sets up the style and content template for Biomedical Ope
 ### Style and Configuration
 
 * _quarto.yml -- Configurations for how the rendered website will look.
-  * [ ] Update the title on line 6
-  * [ ] Replace the Google analytics tracking ID ("G-XXXXXXXXXX") with the appropriate Bio_OCS case study specific tracking ID on line 17
-  * [ ] Update the GitHub Repository link to point to the specific open case studies repository instead of the template
-    * [ ] line 11
-    * [ ] line 28
+  * [x] Update the title on line 6
+  * [x] Replace the Google analytics tracking ID ("G-XXXXXXXXXX") with the appropriate Bio_OCS case study specific tracking ID on line 17
+  * [x] Update the GitHub Repository link to point to the specific open case studies repository instead of the template
+    * [x] line 11
+    * [x] line 28
 
 The rest of these files will largely not need updated though a brief description of what each contains is provided.
 
@@ -50,13 +50,13 @@ The rest of these files will largely not need updated though a brief description
 For the overall content of the Open Case Study, each portion of the case study is split into individual `.qmd` files. They are included in order within the `index.qmd` file. Certain case studies will not have every component, and so we can toggle those on and off using short code and header booleans.  This is mostly for others using our case studies to teach, as they might want to have a version that only has part of the case study.  For our core team, we will likely have all components for our case studies. Below is a list of all of the sub-component `.qmd` files in checklist form. Besides the listed changes below, `index.qmd` should not need updated.
 
 * [ ] `index.qmd`
-  * [ ] Update Case Study Title
+  * [x] Update Case Study Title
   * [ ] Update any header booleans for section inclusion or add additional short code content-hidden sections as necessary
 * [ ] _main_image.qmd
   * Provides an example of including images with Quarto
   * [ ] switch out `mainplot.png` within the `img` directory to be the case study main plot.
 * [ ] _ocs_frontmatter.qmd
-* [ ] _cite.qmd
+* [x] _cite.qmd
 * [ ] _motivation.qmd
   * Provides an example of including images with Quarto (including those that you can click to open in a larger preview)
   * Provides an example of a custom definition box

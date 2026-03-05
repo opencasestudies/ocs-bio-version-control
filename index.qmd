@@ -1,5 +1,5 @@
 ---
-title: "**Biomedical Open Case Studies: {Title}**"
+title: "**Biomedical Open Case Studies: Making version controlled reproducible analyses**"
 include-sections:
   stat-los: false
   data-import: true
