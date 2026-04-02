@@ -33,6 +33,8 @@ include-sections:
 
 {{< include _context.qmd >}}
 
+{{< include _intro_git_github.qmd >}}
+
 {{< include _data_description.qmd >}}
 
 {{< include _limitations.qmd >}}

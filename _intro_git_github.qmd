@@ -1,0 +1,108 @@
+<!--
+Introduction to Git and GitHub (similar to "Dashboard Basics" section in school shootings OCS)
+-->
+
+# **Introduction to Git and GitHub**
+***
+
+Before we start to address your project with Collab O. Rator, we will provide an introduction to version control with Git and GitHub. In this section, you will learn more about what Git and GitHub are, create a GitHub account, download Git software, and create your first version controlled project. In the next section we will return to the infant microbiome sequencing depth project. 
+
+## What is version control? 
+
+We will refer to two papers about version control. 
+
+:::{.reference_box}
+::::{.reference_box_header}
+Version control resources:
+::::
+::::{.inner_block}
+- Blischak, J. D., Davenport, E. R., & Wilson, G (2016). [A Quick Introduction to Version Control with Git and GitHub](https://doi.org/10.1371/journal.pcbi.1004668), PLoS Computational Biology, 12(1).  
+- Bryan, J (2018). [Excuse Me, Do You Have a Moment to Talk About Version Control?](https://doi.org/10.7287/peerj.preprints.3159v2) The American Statistician, 72(1), 20-27. 
+::::
+:::
+
+Version control lets a user track changes made to a set of files. 
+
+Give short description of version control (we did this in motivation as well, decide what to put there vs here).
+
+## What are Git and GitHub? 
+
+Git is a version control tool, and GitHub is an online hosting website. You can consider Git to be the internally focused tool that you will use on your local computer to track changes to a set of files, and GitHub to be the outwardly focused tool that you will use to host the set of files online. 
+
+[Note: add image here]
+
+The files that are tracked as part of a version controlled project are contained in a repository. 
+
+:::{.definition_box}
+::::{.definition_box_header}
+Repository (or repo for short)
+::::
+::::{.inner_block}
+A folder in Git and GitHub that contains all of the files to be tracked for a project.
+::::
+:::
+
+When you set up a repository, Git will save an initial version of that repository. Git works by tracking the evolution of a repository through a series of commits. 
+
+:::{.definition_box}
+::::{.definition_box_header}
+Commit
+::::
+::::{.inner_block}
+A snapshot of a repository at a certain time.
+::::
+:::
+
+Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit. 
+
+### Creating a GitHub account
+
+We will start with GitHub. If you do not have an account, make one [here](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://github.com/signup&ved=2ahUKEwjRoqKR48-TAxVIyOYEHYMpA6QQFnoECA0QAQ&usg=AOvVaw0a6qEmIZVdziwPUb-hFApr). 
+
+When you choose a username, consider [advice](https://happygitwithr.com/github-acct) from Jenny Bryan (a data scientist who has thought a lot about version control). She suggests choosing a username that incorporates your real name and that you would be comfortable sharing with professional colleagues. 
+
+### Creating a new GitHub repository
+
+Now that you have a GitHub account, you can create your first repository. 
+
+To create your repository, click on the menu bottom (three horizontal lines), and click "Repositories." Then click the green button that says "New repository." 
+
+This will take you to a new page. GitHub will automatically set you as the owner of the repository, and you can choose a name. Let's call this repository "my-first-repository". 
+
+A few notes on naming repositories:
+* keep the name descriptive but short
+* don't use spaces, instead use "-", "_", or "." 
+
+Add a short description for this repository. 
+
+Next, under configuration, we have several options. By default repositories will be public, but you can set them as private and add collaborators who can access them. Other defaults include no template, no README, no .gitignore, and no license. Toggle the bottom next to "Add README" to "On". For now, we won't worry about a template, .gitignore, or license. 
+
+![](img/github_new_repo.png){fig-alt="Workflow of the different version control steps in this case study" width=800 .lightbox}
+Once you click "Create respository", you will be brought to the GitHub page for your repository. GitHub URLs all have the same format: "https://github.com/your_user_name/your_repository_name".
+
+### Installing Git
+
+### Installing GitHub Desktop 
+
+### Creating a local version of your new GitHub repository 
+
+Outline: 
+
+Start with GitHub
+
+* short description of GitHub (compare to Google doc) 
+* make a GitHub account (give advice on username)
+* create a new repo on GitHub, initialize with a README 
+
+Next, introduce Git
+
+* short description of Git (explain how it works in diffs) 
+* check if Git is installed on your computer, if not install it
+* install GitHub Desktop 
+* set up Git to communicate with GitHub (via RStudio? Can this be done via GitHub Desktop?)
+* clone repo (look into finder/windows equivalent, this repo now exists locally on your computer)
+* add a line to the readme
+* use GitHub desktop to look at change, stage change, commit change, and push
+* check out GitHub repo again, see how this has changed 
+
+***

@@ -6,6 +6,8 @@ Enumerate the Data Science or Bioinformatic specific learning objectives here.
 For an example, see this previous Open Case Study: https://www.opencasestudies.org/ocs-bp-co2-emissions/#Learning_Objectives
 -->
 
-1. {FILL IN}
-1. {FILL IN}
-1. {FILL IN}
+1. Understand how version control can be used to make a scientific project more reproducible
+1. Understand how version control works by recording differences between versions 
+1. Follow a workflow to create and edit a repository with Git and GitHub
+1. Use forks and pull requests to interact with a repository that belongs to someone else
+1. Organize a repository for a project with a README file and folders for data, figures, and results

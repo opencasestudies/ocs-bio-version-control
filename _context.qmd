@@ -6,8 +6,16 @@ Videos or images may be helpful so this includes an example of embedding a video
 # **Context**
 ***
 
-{FILL IN}
+Outline: 
 
-{{< video https://www.youtube.com/watch?v=j-I0Zgicjsk >}}
-
+* microbiomes are important because the microbes that live in and around us affect human and environmental health
+* specifically, the gut microbiome has been linked to many diseases
+* the infant gut microbiome has been linked to diseases later in life
+* an important research question is how a mother's gut microbiome affects the gut microbiome of an infant
+* metagenomic sequencing gives a comprehensive look into the gut microbiome but is expensive. Therefore it is useful to compare samples across studies in a meta-analysis to increase power and draw conclusions across datasets.
+* meta-analyses require care, because there may be systematic differences across original studies that need to be accounted for
+* in a microbiome sample, sequencing depth is the number of reads (times we observe a microbe) in each sample. This does not necessarily measure a biological quantity, but instead a technical quantity, and may differ across sampling procedures and sequencing procedures
+* therefore, in this meta-analysis, we want to investigate the association of sequencing depth and original study, while also considering whether samples came from a mother or infant 
+* we want to know how comparable these studies are in terms of sequencing depth 
+  
 ***
