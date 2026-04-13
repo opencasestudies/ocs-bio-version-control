@@ -1,7 +1,9 @@
 acknowledgements
 automations
 Bioinformatics
+Blischak
 cheatsheet
+Collab
 css
 custimization
 cwrigh
@@ -13,6 +15,7 @@ GH
 GitHub
 Github
 github
+gitignore
 glyphicons
 HTTPS
 hw
@@ -21,13 +24,18 @@ lightblue
 lightbox
 lightgreen
 los
+microbiome
 NonCommercial
 ocs
 OTTR
 ottrproject
+PLoS
 quarto
 qmd
+Rator
+readme
 repo
+reproducibility
 Rmd
 RStudio
 subdir

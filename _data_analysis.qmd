@@ -1,44 +1,29 @@
 # **Data Analysis**
 ***
 
-If you have been following along but stopped, we could load our wrangled data like so:
+[continue in same script as before]
+
+Generate a table to summarize the information in our plots
 
 ```{r}
-load(here::here("data", "wrangled", "wrangled_data.rda"))
+study_info <- clean_metadata %>%
+  group_by(Study, Category) %>%
+  summarise(n_person = n_distinct(PersonID),
+            n_sample = n_distinct(SampleID),
+            n_time = n_distinct(sampling_paper),
+            min_time = min(sampling_day[!sampling_before_birth], na.rm = TRUE),
+            max_time = max(sampling_day[!sampling_before_birth], na.rm = TRUE),
+            pregnancy_time = ifelse(any(sampling_before_birth), 
+                                    median(sampling_day[sampling_before_birth]),
+                                    NA),
+            .groups = "drop")
+study_info
 ```
 
-***
-<details> <summary> If you skipped the data import section click here. </summary>
+[potentially save this table as a .csv file in results. I'm not sure about this, because this isn't really the type of result that we would need to save (because it is easy and fast to regenerate), however if this is a table that we would hypothetically like to share outside of R and outside of a rendered output file, it could be good to have as a .csv.]
 
-An RDA file (stands for R data) of the data can be found [here](https://github.com//opencasestudies/ocs-bp-co2-emissions/tree/master/data/wrangled) or slightly more directly [here](https://raw.githubusercontent.com/opencasestudies/ocs-bp-co2-emissions/master/data/wrangled/wrangled_data.rda). Download this file and then place it in your current working directory within a subdirectory called "wrangled" within a subdirectory called "data" to use the following code. We used an RStudio project and the [`here` package](https://github.com/jennybc/here_here) to navigate to the file more easily.
+[It would be nice to ask the learner to write a paragraph that compares these studies based on the plots and table. However, I'm not sure (1) if this is too much critical thinking outside of the version control objectives, and (2) exactly where to put this. If this file with data visualization and analysis is a .Rmd or .qmd, they could add a summary section and write it there.]
 
-
-```{r}
-load(here::here("data", "wrangled", "wrangled_data.rda"))
-```
-
-</details>
-***
-
-:::{.think_question}
-::::{.think_question_header}
-Question opportunity
-::::
-::::{.inner_block}
-Pose a question about the data analysis.
-<details><summary>Answer</summary>
-You can use a collapsible details section to provide an answer
-</details>
-::::
-:::
-
-::: {.column-margin}
-We might use a column margin note to add an equation or some other annotation for learners or educators.
-:::
-
-<!--
-Use this section to walk through the methods and code used in the data analysis step-by-step.
-Explain how this analysis helps answer the main questions posed earlier in the case study.
--->
+Now that you've performed this analysis, make sure to document any new files in this repository in the README file. This is another good time to commit any changes. 
 
 ***

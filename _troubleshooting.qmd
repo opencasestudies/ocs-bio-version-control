@@ -1,0 +1,14 @@
+# **Troubleshooting Git and GitHub**
+***
+
+Several drop-down boxes here for common mistakes that come up (especially those that may come up in this case study).
+
+Ideas to bring up here:
+
+- I've created a merge conflict, how do I address this?
+- I've added a file and committed it, but I actually don't want to track this. 
+- I've done work on a current branch, but I actually want to move it to a new branch
+  - what if I haven't committed yet? What if I have already committed? 
+- I've accidentally committed a large file, what to do about this? 
+
+***

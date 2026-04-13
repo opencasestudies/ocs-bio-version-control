@@ -9,32 +9,32 @@ At the end of this section, save incremental data so that users can pause and co
 # **Data Import**
 ***
 
-<!--
-Describe how to import the case study data files into R or Python
--->
+Now that you have created this GitHub repository, and have tracked this project locally with Git, you can start working on the study comparison in R. Open RStudio to your project "infant_gut_analysis". We will start by taking a look at the data. To understand the data contained in this project, first see what the README tells you. 
 
-<!--
-Within your case study project folder,
-put the data files as they came from the source into a 'data/raw/' subfolder
-and use the `here` package. See the following example and update with your data:
--->
+[Data import is in file "01_pull_study_data.R", decide how much to walk learner through in case study.]
 
-```{r}
-pm <-readr::read_csv(here("data", "raw", "pm25_data.csv"))
+01_pull_study_data.R contains the following code:
+
+```{r, eval = FALSE}
+library(readxl) # for reading data from supplementary table
+library(dplyr) # for combining data across studies 
+
+# read tabs for each study from Table S1 from Wang et al. supplementary information, saved as "meta_analysis_metadata.xlsx"
+study_data <- lapply(3:10, function(i) {
+  read_xlsx("raw_data/Table S1.xlsx", sheet = i)
+}) 
+
+# set all variables to be characters in order to combine data across studies
+# original data had encoded same variable in different formats across studies
+study_data_clean <- lapply(study_data, function(df) {
+  df %>% mutate(across(everything(), as.character))
+})
+
+# combine lists for each study into a single data frame
+sample_metadata <- bind_rows(study_data_clean)
+
+# save data frame as a .rda file
+save(sample_metadata, file = "processed_data/sample_metadata.rda")
 ```
-
-<!--
-At the end of the data import section, save the imported data as .rda files
-to allow users to stop and pick up where they left off:
--->
-
-```{r}
-save(pm, file = here::here("data", "imported", "pm25_data_imported.rda"))
-```
-
-<!--
-NOTE that depending on the size of the data for Bio-OCS, the data may not be in the case study project folder directly
-and may need to be imported from an external source
--->
 
 ***

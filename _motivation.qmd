@@ -12,7 +12,7 @@ In this case study, we ask you to imagine that you are working with a collaborat
 
 ![](img/version_control_email.png){fig-alt="Workflow of the different version control steps in this case study" width=800 .lightbox}
 
-In this case study, you will learn how to use Git and GitHub to track this project and perform the requested sequencing depth investigation. Along the way, you will learn how version control can be used to improve reproducibility of a scientific project and how it can make collaboration easier. 
+In this case study, you will learn how to use Git and GitHub to track this project and perform the requested comparison of studies used in the meta-analysis. Along the way, you will learn how version control can be used to improve reproducibility of a scientific project and how it can make collaboration easier. 
 
 :::{.definition_box}
 ::::{.definition_box_header}

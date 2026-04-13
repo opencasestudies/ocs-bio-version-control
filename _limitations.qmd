@@ -9,7 +9,7 @@ See the following example from a previous case study: https://www.opencasestudie
 
 There are some important considerations regarding this data analysis to keep in mind:
 
-1. {FILL IN}
-1. {FILL IN}
+1. [Discuss that some studies describe sampling in terms of days and some in terms of weeks or months. Although all of these are converted to days in variable `Sampling, day`, it may have different levels of resolution for different studies]
+1. [Discuss how in this analysis we are only comparing the studies based on number of samples and when they collected their samples. There are several other ways we may want to compare these cohorts to understand how comparable they are, including measured variables (like maternal age, mode of delivery, birth weight, antibiotic use) and unmeasured variables.]
 
 ***

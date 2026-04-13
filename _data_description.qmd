@@ -6,9 +6,15 @@ You may want to include a table about file or variable info.
 # **What are the data?**
 ***
 
-Variable   | Details
----------- |-------------
-**variable1**  | Variable info  <br> -- more details <br> -- more details <br>  **Example**: Content content
-**variable2**  | Variable info  <br> -- more details <br> -- more details <br>  **Example**: Content content
+We will investigate data about samples from [this meta-analysis](https://www.tandfonline.com/doi/full/10.1080/19490976.2021.1911571) of mother and infant gut microbiome studies. Wang et al. identified a set of eight studies that collected mother and infant gut microbiome samples over time and performed metagenomic sequencing. These studies collectively include 1,496 samples. The variables that we will use to answer our questions include:
+
+Variable | Details
+-------- | -------
+**Study** | Original study the sample comes from 
+**SampleID** | ID for sample
+**PersonID** | ID for participant the sample came from
+**Category** | Either "mother" or "infant"
+**Sampling from papers** | Sampling time frame described in paper 
+**Sampling, day** | Day after birth that the sample was collected on
 
 ***

@@ -9,7 +9,7 @@ Statistical LOs were provided in the original open case studies but they may be 
 Biological LOS were not provided in the original open case studies and should be included in all Bio-OCS case studies.
 -->
 
-In this case study, we will introduce version control and describe why and how to use it to track a scientific project. We will use Git and GitHub to track an investigation of sequencing depth in a set of microbiome samples used in a meta-analysis. 
+In this case study, we will introduce version control and describe why and how to use it to track a scientific project. We will use Git and GitHub to track a comparison of the sampling designs of studies used in a meta-analysis. 
 
 The skills, methods, and concepts that students will be familiar with by the end of this case study are:
 
@@ -21,6 +21,7 @@ The skills, methods, and concepts that students will be familiar with by the end
 
 :::
 
-{{< include _biological_los.qmd >}}
+<!--
+{{< include _biological_los.qmd >}} -->
 
 ***

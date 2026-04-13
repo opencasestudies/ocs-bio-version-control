@@ -1,9 +1,16 @@
 # **Suggested Homework**
 ***
 
-<!--
-Suggest extra exercises using this data for students to practice the skills used in the case study.
-Example from a previous case study: https://www.opencasestudies.org/ocs-bp-co2-emissions/#Suggested_Homework
--->
+## Forking
+
+This could be a good place to talk about forking. Give a quick explanation of forking, and then ask user to fork the repo (this will be the same as the project files that they downloaded early in the case study), make a change (something quick and easy), and then push and open a pull request. Describe how pull requests are similar and different when made between branches in a repo vs from a fork to the upstream repo. They can either stop before opening the pull request, or open it and then close it when they are done (to avoid having a long list of open pull requests on this educational repo). I'm not sure if this should be its own section, or if it should be here in suggested homework (therefore making it optional). 
+
+## Merge conflicts
+
+Another piece of suggested homework could be creating Git problems (such as those addressed in the troubleshooting section) and then fixing those problems. We could come up with a way to address a merge conflict (by committing different conflicting things to main and to an additional branch) and then have the learner resolve this change. 
+
+## Fixing other Git problems
+
+We could also have the learner accidentally commit a file that they don't want to track for some reason, and then remove this file.
 
 ***

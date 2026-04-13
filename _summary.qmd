@@ -3,19 +3,18 @@
 ## **Synopsis**
 ***
 
-<!--
-briefly recap everything that was covered in the case study from the motivation to the data analysis.
-Highlight conclusions made as well as limitations or future work to be done.
--->
-
-<!--
-Connect back to the main questions and what answers the analysis might have
--->
+Potentially add a brief recap here! Focus on why version control, and the ways that we've used version control for reproducibility in this case study.
 
 ***
 
 ## **Summary Plot**
 ***
+
+Provide images that describe each step performed in this analysis as well as captions. Have the learner order these (look into if there is a way to drag and drop these images/captions) - note that a complete version of this figure is in the motivation section at the start of the case study, so not to look at this unless they want to see the correct ordering. A flowchart with the correct order will be the summary plot for this case study. 
+
+This is a mock-up of what the figure may look like, but a final version will be a little more detailed:
+
+![](img/version_control_main_figure_mockup.png){fig-alt="Workflow of the different version control steps in this case study" width=800 .lightbox}
 
 <!--
 construct a plot here that summarizes the conclusions found in the data, if applicable

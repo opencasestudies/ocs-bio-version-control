@@ -9,33 +9,100 @@ At the end of this section, save incremental data so that users can pause and co
 # **Data Visualization**
 ***
 
-If you have been following along but stopped, we could load our wrangled data like so:
+## Create a new branch for the analysis
+
+Now, we will start the data analysis to compare original studies. This is a great time to make a new branch to work on. This will isolate any changes that we make here and let Collab O. Rator assess them as a set of changes. This will also let you or a collaborator to work off of the current version of main for a different aspect of the analysis, without incorporating these changes that we are drafting. 
+
+To make a new branch, go to GitHub Desktop, click the arrow next to where it says "Current Branch main", and click "New Branch". Then, choose an informative but concise name for this branch (perhaps "compare_studies"). When you create a new branch, you will automatically be switched to your new branch. 
+
+Now, make a new file for this analysis. [Decide here if it should be an R script or a R markdown or quarto file]. Give this file a numbered name (to fit with the current scripts in the repository), and add it to the README.
+
+Once you've made and saved these changes return to GitHub Desktop. You should see these new changes in the new branch that you made. Add a commit message and commit these changes. Once you are ready to push these changes to GitHub, click the top right button that says "Publish these changes to origin." Then click "View on GitHub" to open the GitHub page. You should now see just below the repository name that it now says "2 branches". Clicking on this will let you see your new branch on GitHub. 
+
+[This is where the bulk of the R analysis will happen in this case study. To-do, split this into smaller steps and explain each step more clearly.]
+
+## Visualize data
+
+Load data 
 
 ```{r}
-load(here::here("data", "wrangled", "wrangled_data.rda"))
+load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
 ```
 
-***
-<details> <summary> If you skipped the data import section click here. </summary>
-
-An RDA file (stands for R data) of the data can be found [here](https://github.com//opencasestudies/ocs-bp-co2-emissions/tree/master/data/wrangled) or slightly more directly [here](https://raw.githubusercontent.com/opencasestudies/ocs-bp-co2-emissions/master/data/wrangled/wrangled_data.rda). Download this file and then place it in your current working directory within a subdirectory called "wrangled" within a subdirectory called "data" to use the following code. We used an RStudio project and the [`here` package](https://github.com/jennybc/here_here) to navigate to the file more easily.
-
+Count samples by study and category (mother vs infant)
 
 ```{r}
-load(here::here("data", "wrangled", "wrangled_data.rda"))
+sample_counts <- clean_metadata %>%
+  group_by(Study, Category) %>%
+  count(name = "total")
+sample_counts
 ```
 
-</details>
-***
+Make a bar plot of this data 
 
-<!--
-Use this section to walk through step by step how the wrangled data was visualized.
-Explain how these visualizations improve understanding and help extract insights.
--->
+```{r}
+sample_counts %>%
+  ggplot(aes(x = Study, y = total, fill = Category)) +
+  geom_col(position = position_dodge())
+```
 
-<!--
-If any further wrangling was conducted in this section,
-please save the most recent version of the data similar to previous sections.
--->
+Order the bar plot by increasing sample size and add theme and labels
+
+```{r}
+study_order <- sample_counts %>%
+  group_by(Study) %>%
+  summarise(total_both = sum(total)) %>%
+  arrange(total_both) %>%
+  pull(Study)
+sample_counts %>%
+  mutate(Study = factor(Study, levels = study_order)) %>%
+  ggplot(aes(x = Study, y = total, fill = Category)) +
+  geom_col(position = position_dodge()) +
+  theme_minimal() + 
+  labs(y = "Number of samples",
+       x = "Study",
+       title = "Number of Samples by Study and Category") + 
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+Save plot in figures folder. 
+
+```{r, eval = FALSE}
+ggsave("figures/study_sizes_by_category.png", height = 6, width = 9)
+```
+
+Now look into time 
+
+```{r}
+clean_metadata %>%
+  filter(!sampling_before_birth) %>%
+  ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
+  geom_histogram(position = position_dodge(), bins = 20) +
+  facet_wrap(~Study, scale = "free_y") 
+```
+
+Order facets the same as in bar plot, add theme and labels 
+
+```{r}
+clean_metadata %>%
+  mutate(Study = factor(Study, levels = study_order)) %>%
+  filter(!sampling_before_birth) %>% # remove samples taken from mothers while pregnant 
+  ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
+  geom_histogram(position = position_dodge(), bins = 20) +
+  facet_wrap(~Study, scale = "free_y") +
+  labs(x = "Days since birth at sampling",
+       y = "Count",
+       title = "Distribution of sampling day across studies") + 
+  theme_minimal() + 
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+Save plot in figures folder
+
+```{r, eval = FALSE}
+ggsave("figures/sampling_timepoints.png", height = 6, width = 9)
+```
+
+Now that you have two plots that compare the studies, this is a good time to commit your current work. 
 
 ***

@@ -15,7 +15,7 @@ Our main question(s)
 ::::{.inner_block}
 1. How does the use of version control contribute to transparent and reproducible science?
 1. How can Git and GitHub be used to facilitate collaboration on a research project?
-1. What is the association between sequencing depth and original study in this meta-analysis of paired infant and mother microbiome samples? 
+1. In this meta-analysis of infant gut microbiome samples, how do the original studies compare in their sampling designs? 
 ::::
 :::
 ***

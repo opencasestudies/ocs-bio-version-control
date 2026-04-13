@@ -6,5 +6,4 @@ Enumerate the topical Biological specific learning objectives here.
 Previous Open Case Studies do not have an example of this.
 -->
 
-1. Understand why we want to investigate sequencing depth and how it varies across studies
-1. Create plots to compare sequencing depth across studies
+
