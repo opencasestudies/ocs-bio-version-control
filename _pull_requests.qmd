@@ -1,0 +1,33 @@
+# **Pull requests**
+***
+
+## What is a pull request? 
+
+[Describe the mechanics of a pull request, how it relates to branches and commits, other components we've addressed so far.]
+
+## How to make a pull request 
+
+Go to GitHub Desktop, and make sure to commit any changes. Push those changes (these will be pushed to the remote branch on GitHub). Click "View on GitHub" to navigate to the GitHub page. 
+
+At the top, there should be a yellow banner with a green button that says "Compare & pull request". 
+
+[Discuss the organization of {branch to push to} <- {branch to pull from}]
+
+[Describe where it shows the commits the make up the pull request and the files changed (how these show the diff between the branch being pushed to and the branch being pulled from).]
+
+While your pull request is open, any additional changes that you commit and push to this branch will be added to the pull request. If you would like to stop contributing to a pull request but continue work on the project, make sure to work on a different branch. 
+
+## Components of a good pull request 
+
+- A concise but descriptive title
+- A description of the changes you want to merge. This is a good place to list files added and modified and give a quick description of those changes. Give plenty of context, you've likely been thinking about the code you want to merge more recently than your collaborator who will review it 
+- A request for code review (make specific requests: do you want your collaborator to review all changes? Do you want them to focus on a specific file or part of an analysis? do you just a bigger picture review to see if your file organization makes sense?)
+- Don't make a huge pull request, a pull request should be a set of changes that address a certain component of an analysis. Try to avoid combining multiple parts of a project in a single pull request 
+
+## Fill in pull request
+
+Fill in the details of your pull request! 
+
+[Provide an example of a pull request for this project in a drop-down menu.]
+
+***

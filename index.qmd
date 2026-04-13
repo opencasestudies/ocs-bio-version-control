@@ -1,5 +1,5 @@
 ---
-title: "**Biomedical Open Case Studies: {Title}**"
+title: "**Biomedical Open Case Studies: Making version controlled reproducible analyses**"
 include-sections:
   stat-los: false
   data-import: true
@@ -32,6 +32,10 @@ include-sections:
 {{< include _packages.qmd >}}
 
 {{< include _context.qmd >}}
+
+{{< include _intro_git_github.qmd >}}
+
+{{< include _project_organization.qmd >}}
 
 {{< include _data_description.qmd >}}
 
@@ -69,7 +73,11 @@ include-sections:
 
 :::
 
+{{< include _pull_requests.qmd >}}
+
 {{< include _summary.qmd >}}
+
+{{< include _troubleshooting.qmd >}}
 
 {{< include _suggested_hw.qmd >}}
 

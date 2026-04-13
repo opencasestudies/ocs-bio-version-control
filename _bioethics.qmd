@@ -9,6 +9,8 @@ Examples may include: how identifiable (or re-identifiable) is your data? cell l
 # **Ethical Considerations**
 ***
 
+[Return to this section, I'm not sure what ethical considerations we should consider here. We could talk about version control and sensitive data (i.e. never track protected data with version control in a publicly accessible repository).]
+
 There are some important ethical considerations when working with data relating to this case study's main questions.
 
 1. {FILL IN}

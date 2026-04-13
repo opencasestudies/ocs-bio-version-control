@@ -6,8 +6,16 @@ Videos or images may be helpful so this includes an example of embedding a video
 # **Context**
 ***
 
-{FILL IN}
+In this section, we will provide scientific background related to this data and study, as well as on meta-analyses. 
 
-{{< video https://www.youtube.com/watch?v=j-I0Zgicjsk >}}
+Outline: 
 
+* microbiomes are important because the microbes that live in and around us affect human and environmental health
+* specifically, the gut microbiome has been linked to many diseases
+* the infant gut microbiome impacts diseases later in life
+* two important research questions are how a mother's gut microbiome affects the gut microbiome of an infant and how the gut microbiome changes early in an infant's life
+* metagenomic sequencing gives a comprehensive look into the gut microbiome but is expensive and time-consuming to collect and sequence samples. It is useful to compare samples across studies in a meta-analysis to increase power and draw conclusions across datasets.
+* meta-analyses require care, because there may be systematic differences across original studies that need to be accounted for
+* since these studies are longitudinal, and we want to understand how the infant gut microbiome changes over time, we want to know how comparable these studies are in terms of their longitudinal sampling designs.
+  
 ***

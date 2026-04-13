@@ -13,46 +13,61 @@ At the end of this section, save incremental data so that users can pause and co
 # **Data Wrangling**
 ***
 
-If you have been following along but stopped, we could load our imported data like so:
+Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses. 
 
-```{r}
-load(here::here("data", "imported", "pm25_data_imported.rda"))
+[Data import is in file "02_wrangle_data.R", decide how much to walk learner through in case study.]
+
+02_wrangle_data.R contains the following code:
+
+```{r, eval = FALSE}
+library(dplyr)
+library(stringr)
+
+load("processed_data/sample_metadata.rda")
+
+# clean data
+clean_metadata <- sample_metadata %>%
+  filter(!is.na(SampleID)) %>% # remove all rows in data that are missing sample ID
+  mutate(Study = # clean study name to only include last name of first author
+           str_remove(Study, "\\_.*") %>% # remove _year from study name
+           str_remove_all("(?<=.)[A-Z]")) %>% # remove first name initial from study name
+  rename(sampling_paper = `Sampling from papers`, # remove spaces from names of variables 
+         sampling_day = `Sampling, day`) %>%
+  mutate(sampling_day = as.numeric(sampling_day)) # make sampling_day a numeric variable
+
+# in Yassour study, sample IDs are not unique to samples
+clean_metadata %>%
+  filter(Study == "Yassour") %>%
+  select(Study, Category, SampleID, sampling_day) %>%
+  head()
+
+# create new unique sample IDs for Yassour study
+clean_metadata <- clean_metadata %>%
+  mutate(SampleID = ifelse(Study == "Yassour", # check if study is Yassour
+                           paste0(SampleID, sampling_day), # if so, combine sample ID and sampling day
+                           SampleID)) # if not, leave sample ID as is 
+
+# confirm that we've fixed this problem
+clean_metadata %>%
+  filter(Study == "Yassour") %>%
+  select(Study, Category, SampleID, sampling_day) %>%
+  head()
+
+# two studies (Parnanen and Yassour) took samples from mothers during pregnancy
+# for these samples, `sampling_day` represents sampling day since start of pregnancy,
+# unlike all other samples for which `sampling_day` represents sampling day since birth
+ids_before_birth <- clean_metadata %>%
+  filter(Category == "mother",
+         Study == "Parnanen" & sampling_paper == "32WK" |
+           Study == "Yassour" & sampling_paper == "Gest") %>%
+  pull(SampleID) # get sample ids for these samples
+clean_metadata <- clean_metadata %>%
+  mutate(sampling_before_birth = ifelse(SampleID %in% ids_before_birth,
+                                        TRUE,
+                                        FALSE))
+
+# save cleaned data
+save(clean_metadata, file = "processed_data/clean_sample_metadata.rda")
 ```
-***
-
-<details> <summary> If you skipped the data import section click here. </summary>
-
-An RDA version (stands for R data) of the data can be found [here](https://github.com//opencasestudies/ocs-bp-co2-emissions/tree/master/data/imported) or slightly more directly [here](https://raw.githubusercontent.com/opencasestudies/ocs-bp-co2-emissions/master/data/imported/co2_data_imported.rda). Download this file and then place it in your current working directory within a subdirectory called "imported" within a directory called "data" to use the following code. We used an RStudio project and the [`here` package](https://github.com/jennybc/here_here) to navigate to the file more easily.
-
-```{r, eval=FALSE}
-load(here::here("data", "imported", "co2_data_imported.rda"))
-```
-
-</details>
-***
-
-<!--
-Use this section to explain step-by-step the data wrangling process used to prepare the data for analysis.
-This includes an example of code annotation with Quarto. See the documentation for more information: https://quarto.org/docs/authoring/code-annotation.html
--->
-
-To allow users to skip import and wrangling we will save the data as an RDA file as well as a CSV file as this is often useful to send our data to collaborators. We will save this in a “wrangled” subdirectory of our “data” directory of our working directory.
-
-```{r}
-save(pm, file = here::here("data", "wrangled", "wrangled_data.rda")) # <1>
-readr::write_csv(pm, file = here::here("data","wrangled",            # <2>
-                                       "wrangled_data.csv"))         # <2>
-```
-
-1. saving the data as an RDA file within the wrangled data subdirectory
-2. saving the data as a CSV file within the wrangled data subdirectory
-
-<!--
-Note that with this code annotation example, we've used a new line to space the code so that the annotation doesn't overlay the code
--->
-
-<!--
-Replace `pm` above with the name of the data object created at the end of data wrangling.
--->
 
 ***
