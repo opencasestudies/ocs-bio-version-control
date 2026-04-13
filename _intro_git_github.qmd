@@ -94,7 +94,7 @@ Once you click "Create repository", you will be brought to the GitHub page for y
 If you look at your repository, you will see that it has one file, README.md. This is where you will document what is contained in your repository, and it will serve as a homepage for your project. It is written in Markdown language [add some information about markdown]. Click the pencil on the upper right of the README, and add a new line to your README document. 
 
 ![](img/github_edit_readme.png){fig-alt="Edit README from GitHub" width=800 .lightbox}
-Once you add in your new line, click the green botton that says "Commit changes" and provide an informative commit message (something like "adding new line to README"). Then click the repository name in the upper left to navigate back to the home page. 
+Once you add in your new line, click the green button that says "Commit changes" and provide an informative commit message (something like "adding new line to README"). Then click the repository name in the upper left to navigate back to the home page. 
 
 Let's now look at the commit history for this repository. We can do that by clicking where it says "2 Commits" just below the green "Code" button. 
 
@@ -124,11 +124,11 @@ git --version
 ## git version 2.50.1
 ```
 
-[Make one dropdown for installing on Mac.]
+[Make one drop-down for installing on Mac.]
 
-[Make one dropdown for installing on Windows.]
+[Make one drop-down for installing on Windows.]
 
-[Make one dropdown for installing on Linux(??).]
+[Make one drop-down for installing on Linux(??).]
 
 ### Installing GitHub Desktop 
 

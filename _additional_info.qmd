@@ -20,7 +20,7 @@ Use this section to provide any additional information or resources on the topic
   - [Set up Git](https://swcarpentry.github.io/git-novice/02-setup.html): instructions on setting up Git
   - [Build on existing branch](https://docs.carpentries.org/resources/curriculum/fetch-existing-branch.html): instructions on how to work from a branch on someone else's fork of a repository 
 - [Hands on introduction to Git and GitHub](https://training.arcadiascience.com/workshops/20220920-intro-to-git-and-github/lesson/): another introduction to Git and GitHub, covering some overlapping material and some additional material
-- [Contributing to Galxy Training Network with GitHub](https://training.galaxyproject.org/training-material/topics/contributing/tutorials/github-contribution/tutorial.html): tutorial on how to contribute to an open source project with GitHub
+- [Contributing to Galaxy Training Network with GitHub](https://training.galaxyproject.org/training-material/topics/contributing/tutorials/github-contribution/tutorial.html): tutorial on how to contribute to an open source project with GitHub
 - [GitHub cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf): cheatsheet with Git commands that can be used in the command line
 
 <u>Terms and concepts covered:</u>
