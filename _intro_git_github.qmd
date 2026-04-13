@@ -162,7 +162,7 @@ We will now open up our repository in RStudio. This will require one additional 
 
 Now, you'll see that you are in RStudio, in a folder that corresponds to your "my-first-repository" repo. Click on the "README.md" file in the "Files" panel, which will open the README that you made on GitHub. Add a new line to the README and save the file. 
 
-Now, navigate back to GitHub Desktop. Where it previously said "no local changes", it now will show changes to your repository. This will include two added files (".gitignore" and "my-first-repository.Rproj"), and modifications to "README.md". You can see that new files have a green bus with a plus next to them, and modified files have a yellow box with a circle next to them. 
+Now, navigate back to GitHub Desktop. Where it previously said "no local changes", it now will show changes to your repository. This will include two added files (".gitignore" and "my-first-repository.Rproj"), and modifications to "README.md". You can see that new files have a green box with a plus next to them, and modified files have a yellow box with a circle next to them. 
 
 [Note - need to explain .gitignore, here or earlier!]
 
