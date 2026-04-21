@@ -1,0 +1,12 @@
+# **Prerequisites**
+***
+
+Discuss prerequisites. For software, installing R and RStudio locally. For skills, basic R skills (using `tidyverse` packages such as `dplyr` and `ggplot2`). Note here that if someone doesn't have these skills, the code can be provided and they can still work through the version control lesson.
+
+### Installing (or updating) R and RStudio
+
+[Note - this will ideally appear earlier in a "prerequisites" section, in which we'll link to instructions on downloading R and RStudio.]
+
+Provide instructions here if someone wants to follow along with R and RStudio, but doesn't have them installed locally. 
+
+***
