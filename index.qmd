@@ -29,8 +29,6 @@ include-sections:
 
 {{< include _los.qmd >}}
 
-{{< include _packages.qmd >}}
-
 {{< include _context.qmd >}}
 
 {{< include _intro_git_github.qmd >}}
@@ -44,6 +42,8 @@ include-sections:
 {{< include _bioethics.qmd >}}
 
 ::: {.content-hidden unless-meta="include-sections.data-import"}
+
+{{< include _packages.qmd >}}
 
 {{< include _data_import.qmd >}}
 
