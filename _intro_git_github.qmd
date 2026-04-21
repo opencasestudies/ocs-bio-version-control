@@ -100,12 +100,6 @@ Let's now look at the commit history for this repository. We can do that by clic
 
 [More discussion on commits and what we're seeing in terms of diff].
 
-### Installing (or updating) R and RStudio
-
-[Note - this will ideally appear earlier in a "prerequisites" section, in which we'll link to instructions on downloading R and RStudio.]
-
-Provide instructions here if someone wants to follow along with R and RStudio, but doesn't have them installed locally. 
-
 ### Installing Git
 
 Next, we will see if Git is installed on your computer, and install it if not. 
