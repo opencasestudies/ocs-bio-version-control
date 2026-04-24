@@ -191,13 +191,14 @@ gtag('config', 'G-DPKD3JXYG6', { 'anonymize_ip': true});
   <li><a href="#what-is-version-control" id="toc-what-is-version-control" class="nav-link" data-scroll-target="#what-is-version-control">What is version control?</a></li>
   <li><a href="#what-are-git-and-github" id="toc-what-are-git-and-github" class="nav-link" data-scroll-target="#what-are-git-and-github">What are Git and GitHub?</a>
   <ul class="collapse">
+  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git">Git</a></li>
   <li><a href="#branches" id="toc-branches" class="nav-link" data-scroll-target="#branches">Branches</a></li>
+  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">GitHub</a></li>
   </ul></li>
   <li><a href="#getting-started-with-git-and-github" id="toc-getting-started-with-git-and-github" class="nav-link" data-scroll-target="#getting-started-with-git-and-github">Getting started with Git and GitHub</a>
   <ul class="collapse">
   <li><a href="#creating-a-github-account" id="toc-creating-a-github-account" class="nav-link" data-scroll-target="#creating-a-github-account">Creating a GitHub account</a></li>
   <li><a href="#creating-a-new-github-repository" id="toc-creating-a-new-github-repository" class="nav-link" data-scroll-target="#creating-a-new-github-repository">Creating a new GitHub repository</a></li>
-  <li><a href="#installing-or-updating-r-and-rstudio" id="toc-installing-or-updating-r-and-rstudio" class="nav-link" data-scroll-target="#installing-or-updating-r-and-rstudio">Installing (or updating) R and RStudio</a></li>
   <li><a href="#installing-git" id="toc-installing-git" class="nav-link" data-scroll-target="#installing-git">Installing Git</a></li>
   <li><a href="#installing-github-desktop" id="toc-installing-github-desktop" class="nav-link" data-scroll-target="#installing-github-desktop">Installing GitHub Desktop</a></li>
   <li><a href="#connecting-git-to-github" id="toc-connecting-git-to-github" class="nav-link" data-scroll-target="#connecting-git-to-github">Connecting Git to GitHub</a></li>
@@ -364,7 +365,7 @@ Images or videos may be helpful so this includes an example of including an imag
 <hr>
 <p>In this case study, we ask you to imagine that you are working with a collaborator on a scientific project. You receive the following email, with a request for your help tracking the project using version control and performing a preliminary data analysis. Don’t worry if some of these terms don’t make sense right now, each will be explained later on in the case study.</p>
 <p><a href="img/version_control_email.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/version_control_email.png" class="img-fluid" alt="Workflow of the different version control steps in this case study" width="800"></a></p>
-<p>In this case study, you will learn how to use Git and GitHub to track this project and perform the requested comparison of studies used in the meta-analysis. Along the way, you will learn how version control can be used to improve reproducibility of a scientific project and how it can make collaboration easier.</p>
+<p>In this case study, you will learn how to use Git and GitHub to track this project and perform the requested comparison of studies used in the meta-analysis. You will also learn how version control can be used to improve reproducibility of a scientific project and how it can make collaboration easier.</p>
 <div class="definition_box">
 <div class="definition_box_header">
 <p>Reproducibility</p>
@@ -373,7 +374,7 @@ Images or videos may be helpful so this includes an example of including an imag
 <p>The ability for someone else the run the same analysis on the same data and get the same results.</p>
 </div>
 </div>
-<p>When conducting a scientific project, reproducibility is very important. Version control is a tool that enables reproducible research by recording changes to a project over time. When used carefully, it gives a complete history of changes made over the course of a project. It also provides a digital backup and an online repository of code and data for other researchers to see. Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes. While several tools exist for version control, we will introduce Git and GitHub, two of the most commonly used version control tools.</p>
+<p>When conducting a scientific project, reproducibility is very important. If another researcher can use your data and code and generate the same results, then your conclusions are more credible to the scientific community. Version control is a tool that enables reproducible research by recording changes to a project over time. When used carefully, it gives a complete history of changes made over the course of a project. It also provides a digital backup and an online repository of code and data for other researchers to see. Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes. While several tools exist for version control, we will introduce Git and GitHub, two of the most commonly used version control tools.</p>
 <hr>
 <!--
 Describe the main biological questions for this case study.
@@ -423,70 +424,12 @@ For an example, see this previous Open Case Study: https://www.opencasestudies.o
 <li>Follow a workflow to create and make changes to a repository with Git and GitHub</li>
 <li>Make pull requests to propose changes to a codebase and request review from a collaborator</li>
 <li>Organize a repository for a project with a README file and folders for data, figures, and results</li>
-<li>Understand the value of combining data from multiple studies in a meta-analysis.</li>
-<li>Consider the limitations of combining data from multiple studies in a meta-analysis.</li>
+<li>Understand the value and limitations of combining data from multiple studies in a meta-analysis.</li>
 <li>Use visualizations to compare sampling designs across a set of studies.</li>
 </ol>
 <!--
 {{< include _biological_los.qmd >}} -->
 <hr>
-<!--
-load all the packages used in the case study analysis in the code chunk below
-(try to use tidyverse over base R).
-Fill out the table and add rows as necessary providing a link to the source and briefly explaining its use for each package
--->
-<p>We will begin by loading the packages that we will need:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>here() starts at /Users/steichma/Documents/BioOCS/ocs-bio-version-control</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'dplyr'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:stats':
-
-    filter, lag</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Package</th>
-<th>Use</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="https://readxl.tidyverse.org" target="_blank">readxl</a></td>
-<td>To read excel files into R</td>
-</tr>
-<tr class="even">
-<td><a href="https://dplyr.tidyverse.org" target="_blank">dplyr</a></td>
-<td>To combine and manipulate data tables</td>
-</tr>
-<tr class="odd">
-<td><a href="https://ggplot2.tidyverse.org">ggplot2</a></td>
-<td>To visualize data</td>
-</tr>
-<tr class="even">
-<td><a href="https://stringr.tidyverse.org">stringr</a></td>
-<td>To manipulate strings</td>
-</tr>
-</tbody>
-</table>
-<p>The first time we use a function, we will use the <code>::</code> to indicate which package we are using. Unless we have overlapping function names, this is not necessary, but we will include it here to be informative about where the functions we will use come from.</p>
 <!--
 More details on the background on the case study topic as well its relation to biomedical science.
 Videos or images may be helpful so this includes an example of embedding a video.
@@ -530,21 +473,26 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 </ul>
 </div>
 </div>
-<p>Version control lets a user track changes made to a set of files.</p>
-<p>Give short description of version control (we did this in motivation as well, decide what to put there vs here).</p>
+<p>Consider a typical workflow when you have a project with multiple files (for example: data, code, resulting figures). You likely have a folder on your computer where you keep these files. When you edit a file you save it, and you have access to the most recent version. You might run into a situation where you want to try something new, so you save “project_file_old.R” along with “project_file_updated.R” or perhaps “project_file_july_2026.R” or eventually “project_file_final_version_4_final.R”. If you haven’t saved an older version of a file but you wish you could revert to the version from last week before you tried something new, you would be out of luck.</p>
+<p>[Image of what this might look like]</p>
+<p>Similarly, think about how you might work on that same project with a collaborator. Perhaps you both have a folder on your computer for that project, and when you make an update you email the file to your collaborator, and they copy that update into their file, or save your file in their folder. Perhaps the two of you update the same file at the same time and then you have to go through line by line to merge the updates into a single version of the file.</p>
+<p>[Image of what this might look like]</p>
+<p>While both of these organizational systems can work well when carefully maintained, they are time consuming and prone to error. Version control is a tool that makes it easier to manage sets of files for projects. It automates several of the processes described above, and makes others dramatically easier. While version control was originally made for software engineers to work together on large projects, it is now commonly used for scientific projects as well.</p>
+<p>At its core, version control lets the user track sequential changes to a set of files, with a short message attached to each version. Multiple people can work with the same version controlled folder, and different versions of files can automatically be merged, unless they are directly in conflict.</p>
 </section>
 <section id="what-are-git-and-github" class="level2">
 <h2 class="anchored" data-anchor-id="what-are-git-and-github">What are Git and GitHub?</h2>
-<p>[Note: fill in more details in this section, add more how and especially more why, include images. All text in this section is in draft form, and will be refined after the next round of review.]</p>
-<p>Git is a version control tool, and GitHub is an online hosting website. You can consider Git to be the internally focused tool that you will use on your local computer to track changes to a set of files, and GitHub to be the outwardly focused tool that you will use to host the set of files online and collaborate with others.</p>
+<p>Git is a version control tool, and GitHub is an website for hosting folders that are tracked with Git. Git works locally on your computer to record different versions of a project, and GitHub works online to provide a digital backup of files, let you connect with collaborators, and optionally create a web presence for your project.</p>
 <p>[Note: add image here]</p>
+<section id="git" class="level3">
+<h3 class="anchored" data-anchor-id="git">Git</h3>
 <p>The files that are tracked as part of a version controlled project are contained in a repository.</p>
 <div class="definition_box">
 <div class="definition_box_header">
 <p>Repository (or repo for short)</p>
 </div>
 <div class="inner_block">
-<p>A folder in Git and GitHub that contains all of the files to be tracked for a project.</p>
+<p>A folder in Git that contains all of the files to be tracked for a project.</p>
 </div>
 </div>
 <p>When you set up a repository, Git will save an initial version of that repository. Git works by tracking the evolution of a repository through a series of commits.</p>
@@ -556,11 +504,50 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 <p>A snapshot of a repository at a certain time.</p>
 </div>
 </div>
-<p>Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit.</p>
+<p>Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. When you want to return to a previous version of a project, you can only return to the version of files at any commit.</p>
 <p>[Note: add image here].</p>
+<p>[Maybe note here that you don’t need to track all files with Git. But maybe instead talk about this in project organization part?]</p>
+</section>
 <section id="branches" class="level3">
 <h3 class="anchored" data-anchor-id="branches">Branches</h3>
-<p>Potentially add a subsection (with images) about branches here!</p>
+<p>One useful feature of Git is the ability to make branches. A branch is a history of commits, and by default a repository that is tracked by Git starts with the “main” branch. Multiple branches provide multiple parallel versions of the repository that can be developed separately. For example, you may have a version of your analysis and results in the main branch, but you want to experiment with changing a parameter. You could do this in a separate branch. This would let you work on the experimental version of your analysis while also having a current and stable version of your analysis elsewhere. You can switch between branches depending on what version of the analysis you want to work on. If you eventually decide that you want to move forward with the changed parameter, you can merge your experimental branch back into your main branch.</p>
+<div class="definition_box">
+<div class="definition_box_header">
+<p>Merge</p>
+</div>
+<div class="inner_block">
+<p>Integrating changes from one branch into another branch.</p>
+</div>
+</div>
+<p>If there are no lines of code in any files that are directly in conflict, then merging will automatically…</p>
+<p>[Think of how to explain this! And whether we want to explain this here!]</p>
+<p>[Add image of merged versions]</p>
+</section>
+<section id="github" class="level3">
+<h3 class="anchored" data-anchor-id="github">GitHub</h3>
+<p>While you could only use Git locally to track versions of files, it is much more powerful when combined with GitHub. You can use GitHub to host a Git-tracked repository online. We will use the terms local repository and remote repository to distinguish between these.</p>
+<div class="definition_box">
+<div class="definition_box_header">
+<p>Local</p>
+</div>
+<div class="inner_block">
+<p>The Git-tracked repository on your computer.</p>
+</div>
+</div>
+<div class="definition_box">
+<div class="definition_box_header">
+<p>Remote</p>
+</div>
+<div class="inner_block">
+<p>The online version of the repository tracked on GitHub.</p>
+</div>
+</div>
+<p>There are several benefits to pairing your local repositories with remote repositories on GitHub.</p>
+<ul>
+<li>You can easily work with collaborators</li>
+<li>You have a backup of files in case something happens to your computer</li>
+<li>You have a central location where your data and code are stored for a project that can be shared with other scientists</li>
+</ul>
 </section>
 </section>
 <section id="getting-started-with-git-and-github" class="level2">
@@ -584,14 +571,9 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 <p>Next, under configuration, we have several options. By default repositories will be public, but you can set them as private and add collaborators who can access them. Toggle the bottom next to “Add README” to “On”. For now, we won’t worry about a template, .gitignore, or license.</p>
 <p><a href="img/github_new_repo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/github_new_repo.png" class="img-fluid" alt="Create new repository from GitHub" width="800"></a> Once you click “Create repository”, you will be brought to the GitHub page for your repository. GitHub URLs all have the same format: “https://github.com/your_user_name/your_repository_name”.</p>
 <p>If you look at your repository, you will see that it has one file, README.md. This is where you will document what is contained in your repository, and it will serve as a homepage for your project. It is written in Markdown language [add some information about markdown]. Click the pencil on the upper right of the README, and add a new line to your README document.</p>
-<p><a href="img/github_edit_readme.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/github_edit_readme.png" class="img-fluid" alt="Edit README from GitHub" width="800"></a> Once you add in your new line, click the green botton that says “Commit changes” and provide an informative commit message (something like “adding new line to README”). Then click the repository name in the upper left to navigate back to the home page.</p>
+<p><a href="img/github_edit_readme.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/github_edit_readme.png" class="img-fluid" alt="Edit README from GitHub" width="800"></a> Once you add in your new line, click the green button that says “Commit changes” and provide an informative commit message (something like “adding new line to README”). Then click the repository name in the upper left to navigate back to the home page.</p>
 <p>Let’s now look at the commit history for this repository. We can do that by clicking where it says “2 Commits” just below the green “Code” button.</p>
 <p>[More discussion on commits and what we’re seeing in terms of diff].</p>
-</section>
-<section id="installing-or-updating-r-and-rstudio" class="level3">
-<h3 class="anchored" data-anchor-id="installing-or-updating-r-and-rstudio">Installing (or updating) R and RStudio</h3>
-<p>[Note - this will ideally appear earlier in a “prerequisites” section, in which we’ll link to instructions on downloading R and RStudio.]</p>
-<p>Provide instructions here if someone wants to follow along with R and RStudio, but doesn’t have them installed locally.</p>
 </section>
 <section id="installing-git" class="level3">
 <h3 class="anchored" data-anchor-id="installing-git">Installing Git</h3>
@@ -602,9 +584,9 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 ## usr/bin/git</code></pre>
 <pre><code>git --version
 ## git version 2.50.1</code></pre>
-<p>[Make one dropdown for installing on Mac.]</p>
-<p>[Make one dropdown for installing on Windows.]</p>
-<p>[Make one dropdown for installing on Linux(??).]</p>
+<p>[Make one drop-down for installing on Mac.]</p>
+<p>[Make one drop-down for installing on Windows.]</p>
+<p>[Make one drop-down for installing on Linux(??).]</p>
 </section>
 <section id="installing-github-desktop" class="level3">
 <h3 class="anchored" data-anchor-id="installing-github-desktop">Installing GitHub Desktop</h3>
@@ -795,6 +777,63 @@ Examples may include: how identifiable (or re-identifiable) is your data? cell l
 <!--
 Consider incorporating a checklist of statements that learners should answer/discuss for every case study for bioethics principles.
 -->
+<!--
+load all the packages used in the case study analysis in the code chunk below
+(try to use tidyverse over base R).
+Fill out the table and add rows as necessary providing a link to the source and briefly explaining its use for each package
+-->
+<p>We will begin by loading the packages that we will need:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>here() starts at /Users/steichma/Documents/BioOCS/ocs-bio-version-control</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Package</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://readxl.tidyverse.org" target="_blank">readxl</a></td>
+<td>To read excel files into R</td>
+</tr>
+<tr class="even">
+<td><a href="https://dplyr.tidyverse.org" target="_blank">dplyr</a></td>
+<td>To combine and manipulate data tables</td>
+</tr>
+<tr class="odd">
+<td><a href="https://ggplot2.tidyverse.org">ggplot2</a></td>
+<td>To visualize data</td>
+</tr>
+<tr class="even">
+<td><a href="https://stringr.tidyverse.org">stringr</a></td>
+<td>To manipulate strings</td>
+</tr>
+</tbody>
+</table>
+<p>The first time we use a function, we will use the <code>::</code> to indicate which package we are using. Unless we have overlapping function names, this is not necessary, but we will include it here to be informative about where the functions we will use come from.</p>
 <!--
 Update the file paths as needed throughout
 -->
@@ -1197,7 +1236,7 @@ Use this section to provide any additional information or resources on the topic
 <li><a href="https://docs.carpentries.org/resources/curriculum/fetch-existing-branch.html">Build on existing branch</a>: instructions on how to work from a branch on someone else’s fork of a repository</li>
 </ul></li>
 <li><a href="https://training.arcadiascience.com/workshops/20220920-intro-to-git-and-github/lesson/">Hands on introduction to Git and GitHub</a>: another introduction to Git and GitHub, covering some overlapping material and some additional material</li>
-<li><a href="https://training.galaxyproject.org/training-material/topics/contributing/tutorials/github-contribution/tutorial.html">Contributing to Galxy Training Network with GitHub</a>: tutorial on how to contribute to an open source project with GitHub</li>
+<li><a href="https://training.galaxyproject.org/training-material/topics/contributing/tutorials/github-contribution/tutorial.html">Contributing to Galaxy Training Network with GitHub</a>: tutorial on how to contribute to an open source project with GitHub</li>
 <li><a href="https://education.github.com/git-cheat-sheet-education.pdf">GitHub cheatsheet</a>: cheatsheet with Git commands that can be used in the command line</li>
 </ul>
 <p><u>Terms and concepts covered:</u></p>
@@ -1223,7 +1262,7 @@ Automatically include the packages table from _packages.qmd?
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/Los_Angeles
- date     2026-04-12
+ date     2026-04-24
  pandoc   3.6.3 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64/ (via rmarkdown)
  quarto   1.8.25 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto
 

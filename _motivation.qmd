@@ -12,7 +12,7 @@ In this case study, we ask you to imagine that you are working with a collaborat
 
 ![](img/version_control_email.png){fig-alt="Workflow of the different version control steps in this case study" width=800 .lightbox}
 
-In this case study, you will learn how to use Git and GitHub to track this project and perform the requested comparison of studies used in the meta-analysis. Along the way, you will learn how version control can be used to improve reproducibility of a scientific project and how it can make collaboration easier. 
+In this case study, you will learn how to use Git and GitHub to track this project and perform the requested comparison of studies used in the meta-analysis. You will also learn how version control can be used to improve reproducibility of a scientific project and how it can make collaboration easier. 
 
 :::{.definition_box}
 ::::{.definition_box_header}
@@ -23,7 +23,6 @@ The ability for someone else the run the same analysis on the same data and get 
 ::::
 :::
 
-When conducting a scientific project, reproducibility is very important. Version control is a tool that enables reproducible research by recording changes to a project over time. When used carefully, it gives a complete history of changes made over the course of a project. It also provides a digital backup and an online repository of code and data for other researchers to see. Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes. While several tools exist for version control, we will introduce Git and GitHub, two of the most commonly used version control tools. 
+When conducting a scientific project, reproducibility is very important. If another researcher can use your data and code and generate the same results, then your conclusions are more credible to the scientific community. Version control is a tool that enables reproducible research by recording changes to a project over time. When used carefully, it gives a complete history of changes made over the course of a project. It also provides a digital backup and an online repository of code and data for other researchers to see. Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes. While several tools exist for version control, we will introduce Git and GitHub, two of the most commonly used version control tools. 
   
-
 ***
