@@ -21,17 +21,25 @@ Version control resources:
 ::::
 :::
 
-Version control lets a user track changes made to a set of files. 
+Consider a typical workflow when you have a project with multiple files (for example: data, code, resulting figures). You likely have a folder on your computer where you keep these files. When you edit a file you save it, and you have access to the most recent version. You might run into a situation where you want to try something new, so you save "project_file_old.R" along with "project_file_updated.R" or perhaps "project_file_july_2026.R" or eventually "project_file_final_version_4_final.R". If you haven't saved an older version of a file but you wish you could revert to the version from last week before you tried something new, you would be out of luck. 
 
-Give short description of version control (we did this in motivation as well, decide what to put there vs here).
+[Image of what this might look like]
+
+Similarly, think about how you might work on that same project with a collaborator. Perhaps you both have a folder on your computer for that project, and when you make an update you email the file to your collaborator, and they copy that update into their file, or save your file in their folder. Perhaps the two of you update the same file at the same time and then you have to go through line by line to merge the updates into a single version of the file. 
+
+[Image of what this might look like]
+
+While both of these organizational systems can work well when carefully maintained, they are time consuming and prone to error. Version control is a tool that makes it easier to manage sets of files for projects. It automates several of the processes described above, and makes others dramatically easier. While version control was originally made for software engineers to work together on large projects, it is now commonly used for scientific projects as well.
+
+At its core, version control lets the user track sequential changes to a set of files, with a short message attached to each version. Multiple people can work with the same version controlled folder, and different versions of files can automatically be merged, unless they are directly in conflict. 
 
 ## What are Git and GitHub? 
 
-[Note: fill in more details in this section, add more how and especially more why, include images. All text in this section is in draft form, and will be refined after the next round of review.]
-
-Git is a version control tool, and GitHub is an online hosting website. You can consider Git to be the internally focused tool that you will use on your local computer to track changes to a set of files, and GitHub to be the outwardly focused tool that you will use to host the set of files online and collaborate with others. 
+Git is a version control tool, and GitHub is an website for hosting folders that are tracked with Git. Git works locally on your computer to record different versions of a project, and GitHub works online to provide a digital backup of files, let you connect with collaborators, and optionally create a web presence for your project. 
 
 [Note: add image here]
+
+### Git
 
 The files that are tracked as part of a version controlled project are contained in a repository. 
 
@@ -40,7 +48,7 @@ The files that are tracked as part of a version controlled project are contained
 Repository (or repo for short)
 ::::
 ::::{.inner_block}
-A folder in Git and GitHub that contains all of the files to be tracked for a project.
+A folder in Git that contains all of the files to be tracked for a project.
 ::::
 :::
 
@@ -55,13 +63,58 @@ A snapshot of a repository at a certain time.
 ::::
 :::
 
-Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit. 
+Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. When you want to return to a previous version of a project, you can only return to the version of files at any commit.
 
 [Note: add image here].
 
+[Maybe note here that you don't need to track all files with Git. But maybe instead talk about this in project organization part?]
+
 ### Branches
 
-Potentially add a subsection (with images) about branches here! 
+One useful feature of Git is the ability to make branches. A branch is a history of commits, and by default a repository that is tracked by Git starts with the "main" branch. Multiple branches provide multiple parallel versions of the repository that can be developed separately. For example, you may have a version of your analysis and results in the main branch, but you want to experiment with changing a parameter. You could do this in a separate branch. This would let you work on the experimental version of your analysis while also having a current and stable version of your analysis elsewhere. You can switch between branches depending on what version of the analysis you want to work on. If you eventually decide that you want to move forward with the changed parameter, you can merge your experimental branch back into your main branch. 
+
+:::{.definition_box}
+::::{.definition_box_header}
+Merge
+::::
+::::{.inner_block}
+Integrating changes from one branch into another branch. 
+::::
+:::
+
+If there are no lines of code in any files that are directly in conflict, then merging will automatically...
+
+[Think of how to explain this! And whether we want to explain this here!]
+
+[Add image of merged versions]
+
+### GitHub
+
+While you could only use Git locally to track versions of files, it is much more powerful when combined with GitHub. You can use GitHub to host a Git-tracked repository online. We will use the terms local repository and remote repository to distinguish between these. 
+
+:::{.definition_box}
+::::{.definition_box_header}
+Local
+::::
+::::{.inner_block}
+The Git-tracked repository on your computer. 
+::::
+:::
+
+:::{.definition_box}
+::::{.definition_box_header}
+Remote
+::::
+::::{.inner_block}
+The online version of the repository tracked on GitHub. 
+::::
+:::
+
+There are several benefits to pairing your local repositories with remote repositories on GitHub. 
+
+- You can easily work with collaborators
+- You have a backup of files in case something happens to your computer
+- You have a central location where your data and code are stored for a project that can be shared with other scientists
 
 ## Getting started with Git and GitHub
 
