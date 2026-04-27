@@ -116,6 +116,10 @@ There are several benefits to pairing your local repositories with remote reposi
 - You have a backup of files in case something happens to your computer
 - You have a central location where your data and code are stored for a project that can be shared with other scientists
 
+### Creating new repositories
+
+There are two ways to start new version controlled projects with Git and GitHub. You could create a new repository locally on your computer, track it with Git, and then "push" it to GitHub, creating a remote version of the repo. Or, you could create a new remote repository on GitHub and then "clone" it to your computer, creating a local version. We will provide examples of both workflows in the next section. 
+
 ## Getting started with Git and GitHub
 
 ### Creating a GitHub account
@@ -241,7 +245,7 @@ In this section you have made a GitHub account, installed Git and GitHub Desktop
 - Write commit messages concisely explaining what you did to a collaborator now or to yourself in three months
 - If you are working on a repository with multiple contributors, make sure to pull each time you work in order to work on the most up-to-date version of the repository 
 
-## Create GitHub repository for your project
+## Create version controlled repository for your project 
 
 Now, we will return to the project with Collab. O. Rator. In the previous section, we created a repository on GitHub, and then cloned to make a local copy. Here, we will start with a local folder, track it with Git, and then create a remote version on GitHub. 
 
