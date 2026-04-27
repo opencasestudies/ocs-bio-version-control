@@ -10,7 +10,11 @@ Images or videos may be helpful so this includes an example of including an imag
 
 In this case study, we ask you to imagine that you are working with a collaborator on a scientific project. You receive the following email, with a request for your help tracking the project using version control and performing a preliminary data analysis. Don't worry if some of these terms don't make sense right now, each will be explained later on in the case study. 
 
-![](img/version_control_email.png){fig-alt="Workflow of the different version control steps in this case study" width=800 .lightbox}
+```{r, fig.alt="Motivation email asking for cohort comparison analysis", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_0#slide=id.g3d9461be06f_0_0")
+```
+
+
 
 In this case study, you will learn how to use Git and GitHub to track this project and perform the requested comparison of studies used in the meta-analysis. You will also learn how version control can be used to improve reproducibility of a scientific project and how it can make collaboration easier. 
 
