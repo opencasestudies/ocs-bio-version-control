@@ -37,7 +37,9 @@ At its core, version control lets the user track sequential changes to a set of 
 
 Git is a version control tool, and GitHub is an website for hosting folders that are tracked with Git. Git works locally on your computer to record different versions of a project, and GitHub works online to provide a digital backup of files, let you connect with collaborators, and optionally create a web presence for your project. 
 
-[Note: add image here]
+```{r, fig.alt="Git vs GitHub", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_114#slide=id.g3d9461be06f_0_114")
+```
 
 ### Git
 
@@ -65,9 +67,9 @@ A snapshot of a repository at a certain time.
 
 Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. When you want to return to a previous version of a project, you can only return to the version of files at any commit.
 
-[Note: add image here].
-
-[Maybe note here that you don't need to track all files with Git. But maybe instead talk about this in project organization part?]
+```{r, fig.alt="Git vs GitHub", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_114#slide=id.g3d9461be06f_0_143")
+```
 
 ### Branches
 
@@ -112,13 +114,17 @@ The online version of the repository tracked on GitHub.
 
 There are several benefits to pairing your local repositories with remote repositories on GitHub. 
 
-- You can easily work with collaborators
 - You have a backup of files in case something happens to your computer
-- You have a central location where your data and code are stored for a project that can be shared with other scientists
+- You can easily work with collaborators
+- You have a central location where your data and code are stored for a project that can be viewed by and shared with other scientists
 
 ### Creating new repositories
 
 There are two ways to start new version controlled projects with Git and GitHub. You could create a new repository locally on your computer, track it with Git, and then "push" it to GitHub, creating a remote version of the repo. Or, you could create a new remote repository on GitHub and then "clone" it to your computer, creating a local version. We will provide examples of both workflows in the next section. 
+
+```{r, fig.alt="Git vs GitHub", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_210#slide=id.g3d9461be06f_0_210")
+```
 
 ## Getting started with Git and GitHub
 
@@ -146,6 +152,42 @@ Add a short description for this repository.
 Next, under configuration, we have several options. By default repositories will be public, but you can set them as private and add collaborators who can access them. Toggle the bottom next to "Add README" to "On". For now, we won't worry about a template, .gitignore, or license. 
 
 ![](img/github_new_repo.png){fig-alt="Create new repository from GitHub" width=800 .lightbox}
+Let's break down each of the options in the "Configuration" settings here. 
+
+***
+
+<details> <summary> Visibility </summary>
+
+By default your repository will be set to public, which means that anyone can view all of the files contained in it. If you would prefer that only you and collaborators that you add can view the contents, you can set the visibility to private. 
+
+</details>
+
+<details> <summary> Template </summary>
+
+A template is an existing repository that you can use as a template for new repositories. A repository made from this template will have the same folders and files as the template repository. You can make any repository that you have access to into a template. Typically, you will not use a template when creating a new repository. 
+
+</details>
+
+<details> <summary> README </summary>
+
+We will discuss README files in more detail in the project organization section, but a README file explains what your repository is used for and what files it contains. If you are creating a repository from scratch, we strongly suggest that you include a README. 
+
+</details>
+
+<details> <summary> .gitignore </summary>
+
+Often when you commit files you will commit all files in your repository. However, you may have files that you don't want to commit, such as large data files or intermediate files (we will discuss which files you may not want to commit later in the project organization section). If there is a file that you don't want to track with version control, you can add it to the .gitignore file, to tell Git to ignore it. When you click the down arrow next to "No .gitignore" it will provide several templates. For a project using R, the "R" template is a good place to start. It includes files often associated with projects in R that are not typically tracked with version control.
+
+</details>
+
+<details> <summary> License </summary>
+
+A license is a legal document that states who can use your code. Although it may seem counterintuitive, a license typically makes your code more "open", which means that other people can use it with fewer restrictions. There are two main types of licenses used for most R projects hosted on GitHub: permissive (MIT) and copyleft (GPL). A permissive license means that people can use your code with minimal restrictions. A copyleft license means that any code that incorporates your code must also be open-source. [Need to add more info here as well as citations!]
+
+</details>
+
+***
+
 Once you click "Create repository", you will be brought to the GitHub page for your repository. GitHub URLs all have the same format: "https://github.com/your_user_name/your_repository_name".
 
 If you look at your repository, you will see that it has one file, README.md. This is where you will document what is contained in your repository, and it will serve as a homepage for your project. It is written in Markdown language [add some information about markdown]. Click the pencil on the upper right of the README, and add a new line to your README document. 
@@ -197,7 +239,7 @@ When you open GitHub Desktop, it will prompt you to sign into GitHub. If it does
 
 Next, we will configure Git. This means that you will tell Git your name and email. Follow [these instructions](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop), again choosing instructions for Mac or Windows based on your operating system. 
 
-### Creating a local version of your new GitHub repository 
+### Creating a local clone of your GitHub repository 
 
 You've finished setting up GitHub, Git, and GitHub Desktop, great job! Now, we can get a local version of your repository that you made on GitHub earlier. 
 
@@ -214,8 +256,6 @@ We will now open up our repository in RStudio. This will require one additional 
 Now, you'll see that you are in RStudio, in a folder that corresponds to your "my-first-repository" repo. Click on the "README.md" file in the "Files" panel, which will open the README that you made on GitHub. Add a new line to the README and save the file. 
 
 Now, navigate back to GitHub Desktop. Where it previously said "no local changes", it now will show changes to your repository. This will include two added files (".gitignore" and "my-first-repository.Rproj"), and modifications to "README.md". You can see that new files have a green bus with a plus next to them, and modified files have a yellow box with a circle next to them. 
-
-[Note - need to explain .gitignore, here or earlier!]
 
 By default, the box next to each of these files is checked. This means that each of these files are "staged", or ready to be included in a commit and added to the repository history. If you uncheck the box, you are telling Git that for now you would not like to track that file with version control. 
 

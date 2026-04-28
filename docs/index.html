@@ -364,7 +364,7 @@ Images or videos may be helpful so this includes an example of including an imag
 <section id="motivation" class="level1">
 <h1><strong>Motivation</strong></h1>
 <hr>
-<p>In this case study, we ask you to imagine that you are working with a collaborator on a scientific project. You receive the following email, with a request for your help tracking the project using version control and performing a preliminary data analysis. Don’t worry if some of these terms don’t make sense right now, each will be explained later on in the case study.</p>
+<p>In this case study, we ask you to imagine that you are working with a collaborator on a scientific project. You receive the following email, with a request for your help performing a preliminary data analysis. Don’t worry if you don’t understand the context of this project right now, it will be explained later on in the case study.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -374,7 +374,26 @@ Images or videos may be helpful so this includes an example of including an imag
 </div>
 </div>
 </div>
-<p><a href="img/version_control_email.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/version_control_email.png" class="img-fluid" alt="Workflow of the different version control steps in this case study" width="800"></a></p>
+<p>If you were to start working on this project with your collaborator, it may look something like this.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3d9461be06f_0_8.png" class="img-fluid figure-img" style="width:100.0%" alt="Back and forth over email without version control"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Between your own edits as you work on this project and the back-and-forth with your collaborator, it will quickly become challenging to keep track of all of the files and changes to them over time. A solution to this is version control!</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3d9461be06f_0_62.png" class="img-fluid figure-img" style="width:100.0%" alt="Back and forth over email without version control"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>In this case study, you will learn how to use Git and GitHub to track this project and perform the requested comparison of studies used in the meta-analysis. You will also learn how version control can be used to improve reproducibility of a scientific project and how it can make collaboration easier.</p>
 <div class="definition_box">
 <div class="definition_box_header">
@@ -493,7 +512,15 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 <section id="what-are-git-and-github" class="level2">
 <h2 class="anchored" data-anchor-id="what-are-git-and-github">What are Git and GitHub?</h2>
 <p>Git is a version control tool, and GitHub is an website for hosting folders that are tracked with Git. Git works locally on your computer to record different versions of a project, and GitHub works online to provide a digital backup of files, let you connect with collaborators, and optionally create a web presence for your project.</p>
-<p>[Note: add image here]</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3d9461be06f_0_114.png" class="img-fluid figure-img" style="width:100.0%" alt="Git vs GitHub"></p>
+</figure>
+</div>
+</div>
+</div>
 <section id="git" class="level3">
 <h3 class="anchored" data-anchor-id="git">Git</h3>
 <p>The files that are tracked as part of a version controlled project are contained in a repository.</p>
@@ -515,7 +542,15 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 </div>
 </div>
 <p>Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. When you want to return to a previous version of a project, you can only return to the version of files at any commit.</p>
-<p>[Note: add image here].</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3d9461be06f_0_143.png" class="img-fluid figure-img" style="width:100.0%" alt="Git vs GitHub"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>[Maybe note here that you don’t need to track all files with Git. But maybe instead talk about this in project organization part?]</p>
 </section>
 <section id="branches" class="level3">
@@ -562,6 +597,15 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 <section id="creating-new-repositories" class="level3">
 <h3 class="anchored" data-anchor-id="creating-new-repositories">Creating new repositories</h3>
 <p>There are two ways to start new version controlled projects with Git and GitHub. You could create a new repository locally on your computer, track it with Git, and then “push” it to GitHub, creating a remote version of the repo. Or, you could create a new remote repository on GitHub and then “clone” it to your computer, creating a local version. We will provide examples of both workflows in the next section.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3d9461be06f_0_210.png" class="img-fluid figure-img" style="width:100.0%" alt="Git vs GitHub"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="getting-started-with-git-and-github" class="level2">
@@ -583,9 +627,42 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 </ul>
 <p>Add a short description for this repository.</p>
 <p>Next, under configuration, we have several options. By default repositories will be public, but you can set them as private and add collaborators who can access them. Toggle the bottom next to “Add README” to “On”. For now, we won’t worry about a template, .gitignore, or license.</p>
-<p><a href="img/github_new_repo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/github_new_repo.png" class="img-fluid" alt="Create new repository from GitHub" width="800"></a> Once you click “Create repository”, you will be brought to the GitHub page for your repository. GitHub URLs all have the same format: “https://github.com/your_user_name/your_repository_name”.</p>
+<p><a href="img/github_new_repo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/github_new_repo.png" class="img-fluid" alt="Create new repository from GitHub" width="800"></a> Let’s break down each of the options in the “Configuration” settings here.</p>
+<hr>
+<details>
+<summary>
+Visibility
+</summary>
+<p>By default your repository will be set to public, which means that anyone can view all of the files contained in it. If you would prefer that only you and collaborators that you add can view the contents, you can set the visibility to private.</p>
+</details>
+<details>
+<summary>
+Template
+</summary>
+<p>A template is an existing repository that you can use as a template for new repositories. A repository made from this template will have the same folders and files as the template repository. You can make any repository that you have access to into a template. Typically, you will not use a template when creating a new repository.</p>
+</details>
+<details>
+<summary>
+README
+</summary>
+<p>We will discuss README files in more detail in the project organization section, but a README file explains what your repository is used for and what files it contains. If you are creating a repository from scratch, we strongly suggest that you include a README.</p>
+</details>
+<details>
+<summary>
+.gitignore
+</summary>
+<p>Often when you commit files you will commit all files in your repository. However, you may have files that you don’t want to commit, such as large data files or intermediate files (we will discuss which files you may not want to commit later in the project organization section). If there is a file that you don’t want to track with version control, you can add it to the .gitignore file, to tell Git to ignore it. When you click the down arrow next to “No .gitignore” it will provide several templates. For a project using R, the “R” template is a good place to start. It includes files often associated with projects in R that are not typically tracked with version control.</p>
+</details>
+<details>
+<summary>
+License
+</summary>
+<p>A license is a legal document that states who can use your code. Although it may seem counterintuitive, a license typically makes your code more “open”, which means that other people can use it with fewer restrictions. There are two main types of licenses used for most R projects hosted on GitHub: permissive (MIT) and copyleft (GPL). A permissive license means that people can use your code with minimal restrictions. A copyleft license means that any code that incorporates your code must also be open-source. [Need to add more info here as well as citations!]</p>
+</details>
+<hr>
+<p>Once you click “Create repository”, you will be brought to the GitHub page for your repository. GitHub URLs all have the same format: “https://github.com/your_user_name/your_repository_name”.</p>
 <p>If you look at your repository, you will see that it has one file, README.md. This is where you will document what is contained in your repository, and it will serve as a homepage for your project. It is written in Markdown language [add some information about markdown]. Click the pencil on the upper right of the README, and add a new line to your README document.</p>
-<p><a href="img/github_edit_readme.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/github_edit_readme.png" class="img-fluid" alt="Edit README from GitHub" width="800"></a> Once you add in your new line, click the green button that says “Commit changes” and provide an informative commit message (something like “adding new line to README”). Then click the repository name in the upper left to navigate back to the home page.</p>
+<p><a href="img/github_edit_readme.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/github_edit_readme.png" class="img-fluid" alt="Edit README from GitHub" width="800"></a> Once you add in your new line, click the green button that says “Commit changes” and provide an informative commit message (something like “adding new line to README”). Then click the repository name in the upper left to navigate back to the home page.</p>
 <p>Let’s now look at the commit history for this repository. We can do that by clicking where it says “2 Commits” just below the green “Code” button.</p>
 <p>[More discussion on commits and what we’re seeing in terms of diff].</p>
 </section>
@@ -624,7 +701,6 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 <p>We will now open up our repository in RStudio. This will require one additional step. Open RStudio, and click “File -&gt; New Project.” Then click “Existing directory”, and click “Browse” to find the folder labeled “my-first-repository”. Then click “Create Project”. An RStudio project is similar to a repository, it is a folder that R can open as a self-contained unit. It includes a file with the extension “.Rproj”, and when you open this file it will open RStudio to this project folder.</p>
 <p>Now, you’ll see that you are in RStudio, in a folder that corresponds to your “my-first-repository” repo. Click on the “README.md” file in the “Files” panel, which will open the README that you made on GitHub. Add a new line to the README and save the file.</p>
 <p>Now, navigate back to GitHub Desktop. Where it previously said “no local changes”, it now will show changes to your repository. This will include two added files (“.gitignore” and “my-first-repository.Rproj”), and modifications to “README.md”. You can see that new files have a green bus with a plus next to them, and modified files have a yellow box with a circle next to them.</p>
-<p>[Note - need to explain .gitignore, here or earlier!]</p>
 <p>By default, the box next to each of these files is checked. This means that each of these files are “staged”, or ready to be included in a commit and added to the repository history. If you uncheck the box, you are telling Git that for now you would not like to track that file with version control.</p>
 <p>In the lower left corner you will see a box that says “Summary (required)” and “Description”. This is where you will put your commit message.</p>
 <p>[add image]</p>
@@ -681,7 +757,7 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 <section id="this-project" class="level2">
 <h2 class="anchored" data-anchor-id="this-project">This project</h2>
 <p>The projects includes these files:</p>
-<p><a href="img/project_folder_organization.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/project_folder_organization.png" class="img-fluid" alt="Files within project folder, shown in Finder window" width="800"></a></p>
+<p><a href="img/project_folder_organization.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/project_folder_organization.png" class="img-fluid" alt="Files within project folder, shown in Finder window" width="800"></a></p>
 </section>
 <section id="readme" class="level2">
 <h2 class="anchored" data-anchor-id="readme">README</h2>
@@ -1011,7 +1087,7 @@ At the end of this section, save incremental data so that users can pause and co
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1035,7 +1111,7 @@ At the end of this section, save incremental data so that users can pause and co
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1058,7 +1134,7 @@ At the end of this section, save incremental data so that users can pause and co
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1083,7 +1159,7 @@ At the end of this section, save incremental data so that users can pause and co
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1186,7 +1262,7 @@ At the end of this section, save incremental data so that users can pause and co
 <hr>
 <p>Provide images that describe each step performed in this analysis as well as captions. Have the learner order these (look into if there is a way to drag and drop these images/captions) - note that a complete version of this figure is in the motivation section at the start of the case study, so not to look at this unless they want to see the correct ordering. A flowchart with the correct order will be the summary plot for this case study.</p>
 <p>This is a mock-up of what the figure may look like, but a final version will be a little more detailed:</p>
-<p><a href="img/version_control_main_figure_mockup.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/version_control_main_figure_mockup.png" class="img-fluid" alt="Workflow of the different version control steps in this case study" width="800"></a></p>
+<p><a href="img/version_control_main_figure_mockup.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/version_control_main_figure_mockup.png" class="img-fluid" alt="Workflow of the different version control steps in this case study" width="800"></a></p>
 <!--
 construct a plot here that summarizes the conclusions found in the data, if applicable
 (connecting to a main question if possible)
@@ -1368,6 +1444,7 @@ Fill in any Acknowledgments using an example from a previous case study if neede
 -->
 <p>We would also like to acknowledge the National Institute of General Medical Sciences for funding this work (1R25GM160622).</p>
 <p>Icons are from <a href="https://www.iconsets.com/">iconpacks</a>.</p>
+<p>Avatars are from <a href="https://getavataaars.com">avataaars</a>.</p>
 
 
 </section>
