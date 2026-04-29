@@ -203,7 +203,7 @@ gtag('config', 'G-DPKD3JXYG6', { 'anonymize_ip': true});
   <li><a href="#installing-git" id="toc-installing-git" class="nav-link" data-scroll-target="#installing-git">Installing Git</a></li>
   <li><a href="#installing-github-desktop" id="toc-installing-github-desktop" class="nav-link" data-scroll-target="#installing-github-desktop">Installing GitHub Desktop</a></li>
   <li><a href="#connecting-git-to-github" id="toc-connecting-git-to-github" class="nav-link" data-scroll-target="#connecting-git-to-github">Connecting Git to GitHub</a></li>
-  <li><a href="#creating-a-local-version-of-your-new-github-repository" id="toc-creating-a-local-version-of-your-new-github-repository" class="nav-link" data-scroll-target="#creating-a-local-version-of-your-new-github-repository">Creating a local version of your new GitHub repository</a></li>
+  <li><a href="#creating-a-local-clone-of-your-github-repository" id="toc-creating-a-local-clone-of-your-github-repository" class="nav-link" data-scroll-target="#creating-a-local-clone-of-your-github-repository">Creating a local clone of your GitHub repository</a></li>
   <li><a href="#what-youve-done" id="toc-what-youve-done" class="nav-link" data-scroll-target="#what-youve-done">What you’ve done</a></li>
   <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a></li>
   </ul></li>
@@ -216,7 +216,10 @@ gtag('config', 'G-DPKD3JXYG6', { 'anonymize_ip': true});
   <ul class="collapse">
   <li><a href="#this-project" id="toc-this-project" class="nav-link" data-scroll-target="#this-project">This project</a></li>
   <li><a href="#readme" id="toc-readme" class="nav-link" data-scroll-target="#readme">README</a></li>
-  <li><a href="#other-organization-notes" id="toc-other-organization-notes" class="nav-link" data-scroll-target="#other-organization-notes">Other organization notes</a></li>
+  <li><a href="#project-organization-with-git-and-github" id="toc-project-organization-with-git-and-github" class="nav-link" data-scroll-target="#project-organization-with-git-and-github">Project organization with Git and GitHub</a>
+  <ul class="collapse">
+  <li><a href="#what-files-to-track-with-git" id="toc-what-files-to-track-with-git" class="nav-link" data-scroll-target="#what-files-to-track-with-git">What files to track with Git</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#what-are-the-data" id="toc-what-are-the-data" class="nav-link" data-scroll-target="#what-are-the-data"><strong>What are the data?</strong></a></li>
   <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><strong>Limitations</strong></a></li>
@@ -551,7 +554,6 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 </div>
 </div>
 </div>
-<p>[Maybe note here that you don’t need to track all files with Git. But maybe instead talk about this in project organization part?]</p>
 </section>
 <section id="branches" class="level3">
 <h3 class="anchored" data-anchor-id="branches">Branches</h3>
@@ -589,9 +591,9 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 </div>
 <p>There are several benefits to pairing your local repositories with remote repositories on GitHub.</p>
 <ul>
-<li>You can easily work with collaborators</li>
 <li>You have a backup of files in case something happens to your computer</li>
-<li>You have a central location where your data and code are stored for a project that can be shared with other scientists</li>
+<li>You can easily work with collaborators</li>
+<li>You have a central location where your data and code are stored for a project that can be viewed by and shared with other scientists</li>
 </ul>
 </section>
 <section id="creating-new-repositories" class="level3">
@@ -691,8 +693,8 @@ License
 <p>When you open GitHub Desktop, it will prompt you to sign into GitHub. If it does not, then follow <a href="https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/authenticating-to-github-in-github-desktop">these instructions</a>, choosing instructions for Mac or Windows based on your operating system.</p>
 <p>Next, we will configure Git. This means that you will tell Git your name and email. Follow <a href="https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop">these instructions</a>, again choosing instructions for Mac or Windows based on your operating system.</p>
 </section>
-<section id="creating-a-local-version-of-your-new-github-repository" class="level3">
-<h3 class="anchored" data-anchor-id="creating-a-local-version-of-your-new-github-repository">Creating a local version of your new GitHub repository</h3>
+<section id="creating-a-local-clone-of-your-github-repository" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-local-clone-of-your-github-repository">Creating a local clone of your GitHub repository</h3>
 <p>You’ve finished setting up GitHub, Git, and GitHub Desktop, great job! Now, we can get a local version of your repository that you made on GitHub earlier.</p>
 <p>Making a local copy of a repository that is hosted on GitHub is called “cloning”. We will clone the repository using GitHub Desktop. To do this, go to “File -&gt; Clone Repository” and then provide the URL to your GitHub repository.</p>
 <p>[add image]</p>
@@ -745,14 +747,18 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 <section id="scientific-project-organization" class="level1">
 <h1><strong>Scientific project organization</strong></h1>
 <hr>
-<p>In this section, discuss the following:</p>
+<p>While most people have their own approaches to scientific project organization, there are a few principles that most successful organization schemes have in common.</p>
 <ul>
-<li>README: what should be documented in README</li>
-<li>raw data folder</li>
-<li>processed data folder</li>
-<li>scripts, numbered based on the order in which they should be run</li>
-<li>figures folder</li>
-<li>results folder</li>
+<li>file names should be concise but informative</li>
+<li>there is one central folder to contain all files for each project</li>
+<li>there is a central file (often called the README) that explains what files are included and how to use them to run the analysis</li>
+<li>there are folders to keep similar files together
+<ul>
+<li>data folder (this could be split into raw data and processed data)</li>
+<li>figures folder for any figures made for the analysis</li>
+<li>results folder for any results that should be shared or would take moderate computation to re-generate</li>
+</ul></li>
+<li>number code scripts in the order that they should be run to generate results</li>
 </ul>
 <section id="this-project" class="level2">
 <h2 class="anchored" data-anchor-id="this-project">This project</h2>
@@ -782,15 +788,37 @@ This repo is organized as follows:
 - figures: 
 - results: </code></pre>
 </section>
-<section id="other-organization-notes" class="level2">
-<h2 class="anchored" data-anchor-id="other-organization-notes">Other organization notes</h2>
-<p>Note that any empty folders may exist on your computer but will not be tracked by Git until they have content. So while we see “figures” and “results” in the set of files from the folder “infant_gut_files”, they are not tracked by Git or hosted on GitHub.</p>
+<section id="project-organization-with-git-and-github" class="level2">
+<h2 class="anchored" data-anchor-id="project-organization-with-git-and-github">Project organization with Git and GitHub</h2>
+<p>One thing to know is that any empty folders may exist on your computer but will not be tracked by Git until they have content. So while we see “figures” and “results” in the set of files from the folder “infant_gut_files”, they are not tracked by Git or hosted on GitHub. If you want to track an empty folder before it has content, you can add a placeholder script into the folder, and remove it later once the folder has content.</p>
+<section id="what-files-to-track-with-git" class="level3">
+<h3 class="anchored" data-anchor-id="what-files-to-track-with-git">What files to track with Git</h3>
+<p>Recall that version control lets you track project files as they change. Therefore, there are some files that make a lot of sense to track with version control, and others that make less sense. Deciding which files to track is another topic that different people take different approaches to, but there are some rules that are typically followed:</p>
+<ul>
+<li>track source files that you’ve written (such as R scripts, shell scripts, LaTeX files, etc)</li>
+<li>track configuration files (such as .gitignore) that tell your tools how to interact with this project</li>
+<li>do not track intermediate files (such as log files), these are files that are generated automatically during a certain part of your workflow but are not needed on their own</li>
+<li>sometimes track derived products (such as intermediate data, figures, or reports)</li>
+<li>do not track large data files that never change (we’ll explain this more below)</li>
+<li>typically avoid tracking binary files (although there are exceptions)</li>
+</ul>
+<details>
+<summary>
+Binary files
+</summary>
+<p>From a Git perspective, files are either text files or binary files. Text files are human-readable. They work nicely with Git because they can be represented in terms of diffs between versions. In contrast, binary files are readable by certain programs but are not human-readable. They cannot be represented in terms of diffs, and therefore a new version of the file is saved at each commit. Examples of binary files are images (.png, .jpg), word and excel files (.doc, .xlsx) and PDFs (.pdf).</p>
+</details>
+<p>The best way to avoid tracking a file is to add it to your .gitignore file.</p>
+<p>[add image of adding certain files not to track to .gitignore]</p>
+<p>An important consideration for which files to track is file size. Tracking large files can slow down the operations you do with Git and GitHub, and eventually run into GitHub’s <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits">repository limits</a>. For binary files or moderately large files, Git Large File Storage (often referred to as Git LFS) is an option.</p>
+<p>talk about good size for git vs git LFS vs FigShare/Zenodo. Discuss things you may need versions of/not need versions of.</p>
 <p>[This could also be a good time to talk about large files, what to track vs not track with GitHub. Connect to .gitignore. Discuss how tracking large files either in terms of data and results can cause problems. Discuss Git LFS vs data repositories like Figshare and Zenodo]</p>
 <hr>
 <!--
 Describe the data to be analyzed and where it came from.
 You may want to include a table about file or variable info.
 -->
+</section>
 </section>
 </section>
 <section id="what-are-the-data" class="level1">
@@ -1352,7 +1380,7 @@ Automatically include the packages table from _packages.qmd?
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/Los_Angeles
- date     2026-04-27
+ date     2026-04-29
  pandoc   3.6.3 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64/ (via rmarkdown)
  quarto   1.8.25 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto
 
