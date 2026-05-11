@@ -182,6 +182,33 @@
   background-image: url("assets/box_images/license.png");
 }
 
+
+
+.funding_box{
+  margin: 1em 0;
+  border: 3px solid #ffcc33;
+  border-left: 10px solid #ffcc33;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.funding_box_header{
+  margin-left: 0em;
+  padding-left: 60px;
+  padding-top: 5px;
+  padding-bottom: 0.1em;
+  color: black;
+  background-color: #ffcc33;
+  font-size: 1em;
+  font-weight: bold;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-image: url("assets/box_images/funding.png");
+}
+
+
+
 .scrollable {
    white-space: pre !important;
    max-height: 400px;
