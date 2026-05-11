@@ -31,7 +31,16 @@ This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 [
 
 #### Funding
 
+:::{.funding_box}
+::::{.funding_box_header}
+Funding information
+::::
+::::{.inner_block}
 This work is funded through the National Institutes of Health, specifically the National Institute of General Medical Sciences: Grant Number 1R25GM160622.
+::::
+:::
+
+
 
 #### Citation
 
