@@ -1,5 +1,6 @@
 acknowledgements
 al
+avataaars
 automations
 Bioinformatics
 Blischak
@@ -7,6 +8,7 @@ Carpentries
 cheatsheet
 codebase
 Collab
+counterintuitive
 css
 csv
 custimization
@@ -30,6 +32,8 @@ glyphicons
 HTTPS
 hw
 iconpacks
+jpeg
+july
 LFS
 lightblue
 lightbox
@@ -45,6 +49,7 @@ OTTR
 ottrproject
 PersonID
 PLoS
+png
 quarto
 qmd
 Rator
@@ -58,8 +63,10 @@ RStudio
 SampleID
 stringr
 subdir
+tabset
 Teichman
 th
 uncheck
 www
+xlsx
 Zenodo

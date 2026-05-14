@@ -65,7 +65,7 @@ Recall that version control lets you track project files as they change. Therefo
 
 <details> <summary> Binary files </summary>
 
-From a Git perspective, files are either text files or binary files. Text files are human-readable. They work nicely with Git because they can be represented in terms of diffs between versions. In contrast, binary files are readable by certain programs but are not human-readable. They cannot be represented in terms of diffs, and therefore a new version of the file is saved at each commit. Examples of binary files are images (.png, .jpg), word and excel files (.doc, .xlsx) and PDFs (.pdf). 
+From a Git perspective, files are either text files or binary files. Text files are human-readable. They work nicely with Git because they can be represented in terms of diffs between versions. In contrast, binary files are readable by certain programs but are not human-readable. They cannot be represented in terms of diffs, and therefore a new version of the file is saved at each commit. Examples of binary files are images (.png, .jpeg), word and excel files (.doc, .xlsx) and PDFs (.pdf). 
 
 </details>
 
@@ -75,7 +75,7 @@ The best way to avoid tracking a file is to add it to your .gitignore file.
 
 An important consideration for which files to track is file size. Tracking large files can slow down the operations you do with Git and GitHub, and eventually run into GitHub's [repository limits](https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits). For binary files or moderately large files, Git Large File Storage (often referred to as Git LFS) is an option. 
 
-talk about good size for git vs git LFS vs FigShare/Zenodo. Discuss things you may need versions of/not need versions of.
+talk about good size for git vs git LFS vs Figshare/Zenodo. Discuss things you may need versions of/not need versions of.
 
 [This could also be a good time to talk about large files, what to track vs not track with GitHub. Connect to .gitignore. Discuss how tracking large files either in terms of data and results can cause problems. Discuss Git LFS vs data repositories like Figshare and Zenodo]
 
