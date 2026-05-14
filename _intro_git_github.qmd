@@ -21,17 +21,27 @@ Version control resources:
 ::::
 :::
 
-Version control lets a user track changes made to a set of files. 
+Consider a typical workflow when you have a project with multiple files (for example: data, code, resulting figures). You likely have a folder on your computer where you keep these files. When you edit a file you save it, and you have access to the most recent version. You might run into a situation where you want to try something new, so you save "project_file_old.R" along with "project_file_updated.R" or perhaps "project_file_july_2026.R" or eventually "project_file_final_version_4_final.R". If you haven't saved an older version of a file but you wish you could revert to the version from last week before you tried something new, you would be out of luck. 
 
-Give short description of version control (we did this in motivation as well, decide what to put there vs here).
+[Image of what this might look like]
+
+Similarly, think about how you might work on that same project with a collaborator. Perhaps you both have a folder on your computer for that project, and when you make an update you email the file to your collaborator, and they copy that update into their file, or save your file in their folder. Perhaps the two of you update the same file at the same time and then you have to go through line by line to merge the updates into a single version of the file. 
+
+[Image of what this might look like]
+
+While both of these organizational systems can work well when carefully maintained, they are time consuming and prone to error. Version control is a tool that makes it easier to manage sets of files for projects. It automates several of the processes described above, and makes others dramatically easier. While version control was originally made for software engineers to work together on large projects, it is now commonly used for scientific projects as well.
+
+At its core, version control lets the user track sequential changes to a set of files, with a short message attached to each version. Multiple people can work with the same version controlled folder, and different versions of files can automatically be merged, unless they are directly in conflict. 
 
 ## What are Git and GitHub? 
 
-[Note: fill in more details in this section, add more how and especially more why, include images. All text in this section is in draft form, and will be refined after the next round of review.]
+Git is a version control tool, and GitHub is an website for hosting folders that are tracked with Git. Git works locally on your computer to record different versions of a project, and GitHub works online to provide a digital backup of files, let you connect with collaborators, and optionally create a web presence for your project. 
 
-Git is a version control tool, and GitHub is an online hosting website. You can consider Git to be the internally focused tool that you will use on your local computer to track changes to a set of files, and GitHub to be the outwardly focused tool that you will use to host the set of files online and collaborate with others. 
+```{r, fig.alt="Git vs GitHub", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_114#slide=id.g3d9461be06f_0_114")
+```
 
-[Note: add image here]
+### Git
 
 The files that are tracked as part of a version controlled project are contained in a repository. 
 
@@ -40,7 +50,7 @@ The files that are tracked as part of a version controlled project are contained
 Repository (or repo for short)
 ::::
 ::::{.inner_block}
-A folder in Git and GitHub that contains all of the files to be tracked for a project.
+A folder in Git that contains all of the files to be tracked for a project.
 ::::
 :::
 
@@ -55,13 +65,66 @@ A snapshot of a repository at a certain time.
 ::::
 :::
 
-Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit. 
+Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. When you want to return to a previous version of a project, you can only return to the version of files at any commit.
 
-[Note: add image here].
+```{r, fig.alt="Git vs GitHub", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_114#slide=id.g3d9461be06f_0_143")
+```
 
 ### Branches
 
-Potentially add a subsection (with images) about branches here! 
+One useful feature of Git is the ability to make branches. A branch is a history of commits, and by default a repository that is tracked by Git starts with the "main" branch. Multiple branches provide multiple parallel versions of the repository that can be developed separately. For example, you may have a version of your analysis and results in the main branch, but you want to experiment with changing a parameter. You could do this in a separate branch. This would let you work on the experimental version of your analysis while also having a current and stable version of your analysis elsewhere. You can switch between branches depending on what version of the analysis you want to work on. If you eventually decide that you want to move forward with the changed parameter, you can merge your experimental branch back into your main branch. 
+
+:::{.definition_box}
+::::{.definition_box_header}
+Merge
+::::
+::::{.inner_block}
+Integrating changes from one branch into another branch. 
+::::
+:::
+
+If there are no lines of code in any files that are directly in conflict, then merging will automatically...
+
+[Think of how to explain this! And whether we want to explain this here!]
+
+[Add image of merged versions]
+
+### GitHub
+
+While you could only use Git locally to track versions of files, it is much more powerful when combined with GitHub. You can use GitHub to host a Git-tracked repository online. We will use the terms local repository and remote repository to distinguish between these. 
+
+:::{.definition_box}
+::::{.definition_box_header}
+Local
+::::
+::::{.inner_block}
+The Git-tracked repository on your computer. 
+::::
+:::
+
+:::{.definition_box}
+::::{.definition_box_header}
+Remote
+::::
+::::{.inner_block}
+The online version of the repository tracked on GitHub. 
+::::
+:::
+
+There are several benefits to pairing your local repositories with remote repositories on GitHub. 
+
+- You have a backup of files in case something happens to your computer
+- You can easily work with collaborators
+- You have a central location where your data and code are stored for a project that can be viewed by and shared with other scientists
+
+### Creating new repositories
+
+There are two ways to start new version controlled projects with Git and GitHub. You could create a new repository locally on your computer, track it with Git, and then "push" it to GitHub, creating a remote version of the repo. Or, you could create a new remote repository on GitHub and then "clone" it to your computer, creating a local version. We will provide examples of both workflows in the next section. 
+
+```{r, fig.alt="Git vs GitHub", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_210#slide=id.g3d9461be06f_0_210")
+```
 
 ## Getting started with Git and GitHub
 
@@ -89,6 +152,42 @@ Add a short description for this repository.
 Next, under configuration, we have several options. By default repositories will be public, but you can set them as private and add collaborators who can access them. Toggle the bottom next to "Add README" to "On". For now, we won't worry about a template, .gitignore, or license. 
 
 ![](img/github_new_repo.png){fig-alt="Create new repository from GitHub" width=800 .lightbox}
+Let's break down each of the options in the "Configuration" settings here. 
+
+***
+
+<details> <summary> Visibility </summary>
+
+By default your repository will be set to public, which means that anyone can view all of the files contained in it. If you would prefer that only you and collaborators that you add can view the contents, you can set the visibility to private. 
+
+</details>
+
+<details> <summary> Template </summary>
+
+A template is an existing repository that you can use as a template for new repositories. A repository made from this template will have the same folders and files as the template repository. You can make any repository that you have access to into a template. Typically, you will not use a template when creating a new repository. 
+
+</details>
+
+<details> <summary> README </summary>
+
+We will discuss README files in more detail in the project organization section, but a README file explains what your repository is used for and what files it contains. If you are creating a repository from scratch, we strongly suggest that you include a README. 
+
+</details>
+
+<details> <summary> .gitignore </summary>
+
+Often when you commit files you will commit all files in your repository. However, you may have files that you don't want to commit, such as large data files or intermediate files (we will discuss which files you may not want to commit later in the project organization section). If there is a file that you don't want to track with version control, you can add it to the .gitignore file, to tell Git to ignore it. When you click the down arrow next to "No .gitignore" it will provide several templates. For a project using R, the "R" template is a good place to start. It includes files often associated with projects in R that are not typically tracked with version control.
+
+</details>
+
+<details> <summary> License </summary>
+
+A license is a legal document that states who can use your code. Although it may seem counterintuitive, a license typically makes your code more "open", which means that other people can use it with fewer restrictions. There are two main types of licenses used for most R projects hosted on GitHub: permissive (MIT) and copyleft (GPL). A permissive license means that people can use your code with minimal restrictions. A copyleft license means that any code that incorporates your code must also be open-source. [Need to add more info here as well as citations!]
+
+</details>
+
+***
+
 Once you click "Create repository", you will be brought to the GitHub page for your repository. GitHub URLs all have the same format: "https://github.com/your_user_name/your_repository_name".
 
 If you look at your repository, you will see that it has one file, README.md. This is where you will document what is contained in your repository, and it will serve as a homepage for your project. It is written in Markdown language [add some information about markdown]. Click the pencil on the upper right of the README, and add a new line to your README document. 
@@ -99,12 +198,6 @@ Once you add in your new line, click the green button that says "Commit changes"
 Let's now look at the commit history for this repository. We can do that by clicking where it says "2 Commits" just below the green "Code" button. 
 
 [More discussion on commits and what we're seeing in terms of diff].
-
-### Installing (or updating) R and RStudio
-
-[Note - this will ideally appear earlier in a "prerequisites" section, in which we'll link to instructions on downloading R and RStudio.]
-
-Provide instructions here if someone wants to follow along with R and RStudio, but doesn't have them installed locally. 
 
 ### Installing Git
 
@@ -146,7 +239,7 @@ When you open GitHub Desktop, it will prompt you to sign into GitHub. If it does
 
 Next, we will configure Git. This means that you will tell Git your name and email. Follow [these instructions](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop), again choosing instructions for Mac or Windows based on your operating system. 
 
-### Creating a local version of your new GitHub repository 
+### Creating a local clone of your GitHub repository 
 
 You've finished setting up GitHub, Git, and GitHub Desktop, great job! Now, we can get a local version of your repository that you made on GitHub earlier. 
 
@@ -163,8 +256,6 @@ We will now open up our repository in RStudio. This will require one additional 
 Now, you'll see that you are in RStudio, in a folder that corresponds to your "my-first-repository" repo. Click on the "README.md" file in the "Files" panel, which will open the README that you made on GitHub. Add a new line to the README and save the file. 
 
 Now, navigate back to GitHub Desktop. Where it previously said "no local changes", it now will show changes to your repository. This will include two added files (".gitignore" and "my-first-repository.Rproj"), and modifications to "README.md". You can see that new files have a green box with a plus next to them, and modified files have a yellow box with a circle next to them. 
-
-[Note - need to explain .gitignore, here or earlier!]
 
 By default, the box next to each of these files is checked. This means that each of these files are "staged", or ready to be included in a commit and added to the repository history. If you uncheck the box, you are telling Git that for now you would not like to track that file with version control. 
 
@@ -194,7 +285,7 @@ In this section you have made a GitHub account, installed Git and GitHub Desktop
 - Write commit messages concisely explaining what you did to a collaborator now or to yourself in three months
 - If you are working on a repository with multiple contributors, make sure to pull each time you work in order to work on the most up-to-date version of the repository 
 
-## Create GitHub repository for your project
+## Create version controlled repository for your project 
 
 Now, we will return to the project with Collab. O. Rator. In the previous section, we created a repository on GitHub, and then cloned to make a local copy. Here, we will start with a local folder, track it with Git, and then create a remote version on GitHub. 
 

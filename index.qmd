@@ -21,15 +21,15 @@ include-sections:
 
 {{< include _ocs_frontmatter.qmd >}}
 
+::: {.content-hidden}
 {{< include _cite.qmd >}}
+:::
 
 {{< include _motivation.qmd >}}
 
 {{< include _main_question.qmd >}}
 
 {{< include _los.qmd >}}
-
-{{< include _packages.qmd >}}
 
 {{< include _context.qmd >}}
 
@@ -44,6 +44,8 @@ include-sections:
 {{< include _bioethics.qmd >}}
 
 ::: {.content-hidden unless-meta="include-sections.data-import"}
+
+{{< include _packages.qmd >}}
 
 {{< include _data_import.qmd >}}
 

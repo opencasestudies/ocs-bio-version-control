@@ -5,14 +5,16 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 # **Scientific project organization**
 ***
 
-In this section, discuss the following:
+While most people have their own approaches to scientific project organization, there are a few principles that most successful organization schemes have in common. 
 
-- README: what should be documented in README
-- raw data folder
-- processed data folder
-- scripts, numbered based on the order in which they should be run 
-- figures folder
-- results folder
+- file names should be concise but informative
+- there is one central folder to contain all files for each project
+- there is a central file (often called the README) that explains what files are included and how to use them to run the analysis
+- there are folders to keep similar files together 
+  - data folder (this could be split into raw data and processed data)
+  - figures folder for any figures made for the analysis
+  - results folder for any results that should be shared or would take moderate computation to re-generate
+- number code scripts in the order that they should be run to generate results 
 
 ## This project
 
@@ -46,9 +48,34 @@ This repo is organized as follows:
 - results: 
 ```
 
-## Other organization notes
+## Project organization with Git and GitHub
 
-Note that any empty folders may exist on your computer but will not be tracked by Git until they have content. So while we see "figures" and "results" in the set of files from the folder "infant_gut_files", they are not tracked by Git or hosted on GitHub. 
+One thing to know is that any empty folders may exist on your computer but will not be tracked by Git until they have content. So while we see "figures" and "results" in the set of files from the folder "infant_gut_files", they are not tracked by Git or hosted on GitHub. If you want to track an empty folder before it has content, you can add a placeholder script into the folder, and remove it later once the folder has content. 
+
+### What files to track with Git 
+
+Recall that version control lets you track project files as they change. Therefore, there are some files that make a lot of sense to track with version control, and others that make less sense. Deciding which files to track is another topic that different people take different approaches to, but there are some rules that are typically followed: 
+
+- track source files that you've written (such as R scripts, shell scripts, LaTeX files, etc) 
+- track configuration files (such as .gitignore) that tell your tools how to interact with this project
+- do not track intermediate files (such as log files), these are files that are generated automatically during a certain part of your workflow but are not needed on their own
+- sometimes track derived products (such as intermediate data, figures, or reports)
+- do not track large data files that never change (we'll explain this more below)
+- typically avoid tracking binary files (although there are exceptions)
+
+<details> <summary> Binary files </summary>
+
+From a Git perspective, files are either text files or binary files. Text files are human-readable. They work nicely with Git because they can be represented in terms of diffs between versions. In contrast, binary files are readable by certain programs but are not human-readable. They cannot be represented in terms of diffs, and therefore a new version of the file is saved at each commit. Examples of binary files are images (.png, .jpeg), word and excel files (.doc, .xlsx) and PDFs (.pdf). 
+
+</details>
+
+The best way to avoid tracking a file is to add it to your .gitignore file. 
+
+[add image of adding certain files not to track to .gitignore]
+
+An important consideration for which files to track is file size. Tracking large files can slow down the operations you do with Git and GitHub, and eventually run into GitHub's [repository limits](https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits). For binary files or moderately large files, Git Large File Storage (often referred to as Git LFS) is an option. 
+
+talk about good size for git vs git LFS vs Figshare/Zenodo. Discuss things you may need versions of/not need versions of.
 
 [This could also be a good time to talk about large files, what to track vs not track with GitHub. Connect to .gitignore. Discuss how tracking large files either in terms of data and results can cause problems. Discuss Git LFS vs data repositories like Figshare and Zenodo]
 
