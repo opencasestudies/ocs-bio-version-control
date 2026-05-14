@@ -46,7 +46,7 @@ This work is funded through the National Institutes of Health, specifically the 
 
 {{< include _cite.qmd >}}
 
-:::
+#### GitHub Repository 
 
 <!--
 UPDATE: ACCESS Information (github source and data)
@@ -60,6 +60,10 @@ To access the GitHub repository for this case study see here: [https://github.co
 <!--
 If the data isn't in the main github repository, be sure to describe and link to the open source location of the data and how to access it
 -->
+
+:::
+
+
 
 <!--
 Include bioOCSdata package information once ready/applicable
