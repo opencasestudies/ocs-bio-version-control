@@ -8,7 +8,7 @@ Images or videos may be helpful so this includes an example of including an imag
 # **Motivation**
 ***
 
-In this case study, we ask you to imagine that you are working with a collaborator on a scientific project. You receive the following email, with a request for your help performing a preliminary data analysis. Don't worry if you don't understand the context of this project right now, it will be explained later on in the case study. 
+In this case study, we ask you to imagine that you are working with a collaborator on a scientific project. You receive the following email, with a request for your help performing a preliminary data analysis. Don't worry if you don't understand the context of this analysis right now, background will be given later in the case study. 
 
 ```{r, fig.alt="Motivation email asking for cohort comparison analysis", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_0#slide=id.g3d9461be06f_0_0")
@@ -17,13 +17,17 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 If you were to start working on this project with your collaborator, it may look something like this.
 
 ```{r, fig.alt="Back and forth over email without version control", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_8#slide=id.g3d9461be06f_0_8")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e1f8f72664_0_368#slide=id.g3e1f8f72664_0_368")
 ```
+```{r, fig.alt="Back and forth over email without version control", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e1f8f72664_0_429#slide=id.g3e1f8f72664_0_429")
+```
+
 
 Between your own edits as you work on this project and the back-and-forth with your collaborator, it will quickly become challenging to keep track of all of the files and changes to them over time. A solution to this is version control! 
 
 ```{r, fig.alt="Back and forth over email without version control", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_62#slide=id.g3d9461be06f_0_62")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e1f8f72664_0_444#slide=id.g3e1f8f72664_0_444")
 ```
 
 In this case study, you will learn how to use Git and GitHub to track this project and perform the requested comparison of studies used in the meta-analysis. You will also learn how version control can be used to improve reproducibility of a scientific project and how it can make collaboration easier. 

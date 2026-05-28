@@ -68,27 +68,8 @@ A snapshot of a repository at a certain time.
 Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. When you want to return to a previous version of a project, you can only return to the version of files at any commit.
 
 ```{r, fig.alt="Git vs GitHub", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_114#slide=id.g3d9461be06f_0_143")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_143#slide=id.g3d9461be06f_0_143")
 ```
-
-### Branches
-
-One useful feature of Git is the ability to make branches. A branch is a history of commits, and by default a repository that is tracked by Git starts with the "main" branch. Multiple branches provide multiple parallel versions of the repository that can be developed separately. For example, you may have a version of your analysis and results in the main branch, but you want to experiment with changing a parameter. You could do this in a separate branch. This would let you work on the experimental version of your analysis while also having a current and stable version of your analysis elsewhere. You can switch between branches depending on what version of the analysis you want to work on. If you eventually decide that you want to move forward with the changed parameter, you can merge your experimental branch back into your main branch. 
-
-:::{.definition_box}
-::::{.definition_box_header}
-Merge
-::::
-::::{.inner_block}
-Integrating changes from one branch into another branch. 
-::::
-:::
-
-If there are no lines of code in any files that are directly in conflict, then merging will automatically...
-
-[Think of how to explain this! And whether we want to explain this here!]
-
-[Add image of merged versions]
 
 ### GitHub
 
@@ -151,7 +132,9 @@ Add a short description for this repository.
 
 Next, under configuration, we have several options. By default repositories will be public, but you can set them as private and add collaborators who can access them. Toggle the bottom next to "Add README" to "On". For now, we won't worry about a template, .gitignore, or license. 
 
-![](img/github_new_repo.png){fig-alt="Create new repository from GitHub" width=800 .lightbox}
+```{r, fig.alt="Creating first repository", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e1f8f72664_0_798#slide=id.g3e1f8f72664_0_798")
+```
 Let's break down each of the options in the "Configuration" settings here. 
 
 ***
@@ -199,45 +182,151 @@ Let's now look at the commit history for this repository. We can do that by clic
 
 [More discussion on commits and what we're seeing in terms of diff].
 
-### Installing Git
-
-Next, we will see if Git is installed on your computer, and install it if not. 
-
-[For figuring out if installed, we may need them to open up a command line, or use the one in RStudio, or maybe these is an easy way to do this in R itself?]
-
-In command line: 
-
-```
-which git
-## usr/bin/git
-```
-
-```
-git --version
-## git version 2.50.1
-```
-
-[Make one drop-down for installing on Mac.]
-
-[Make one drop-down for installing on Windows.]
-
-[Make one drop-down for installing on Linux(??).]
-
 ### Installing GitHub Desktop 
 
-Next, we will install GitHub Desktop. This is a GUI (graphical user interface) that makes it easier for us to interact with Git. While we will use GitHub Desktop in this case study, another common way to interact with Git is through the command line on your computer. If you are already comfortable using the command line, you may prefer this to GitHub Desktop. When we use GitHub Desktop for version control tasks in this case study, we will also provide the command line command to do the same thing in drop-down boxes.
+Next, we will install GitHub Desktop. This is a GUI (graphical user interface) that makes it easier for us to interact with Git. While we will use GitHub Desktop in this case study, another common way to interact with Git is through the command line on your computer. If you are already comfortable using the command line, you may prefer this to GitHub Desktop. When we use GitHub Desktop for version control tasks in this case study, we will also provide the command line code for all Git operations.
+
+<details> <summary> More information about the command line. </summary>
+
+You may have also heard this called the *shell*, *terminal*, *console*, or *command prompt*. The command line interface lets us interact with our computers by typing commands (as opposed to using a graphical interface which involves clicking buttons and menus). These commands let you perform tasks such as navigating and modifying your file system, installing programs, running code, and working with Git. Each of these tasks can also be performed using a graphical interface. Some people prefer the visual layout of a GUI, while others prefer the simplicity and centralized control of the command line. 
+
+</details>
 
 Follow this [link](https://desktop.github.com/download/) to install GitHub Desktop. 
 
-[Make note on if macOS, determine which chip you're using. Determine if there is anything similar needed for Windows.]
+<details> <summary> If you are using a Mac, it will ask you if your Mac has a Apple silicon or Intel chip. Click here for more information. </summary>
+
+To check whether your Mac has an Apple silicon chip or an Intel chip, click the Apple menu -> "About This Mac". If the information window shows "Chip" then your Mac uses Apple silicon. If the information window shows "Processor" then your Mac uses an Intel processor. 
+
+</details>
+
+### Installing Git
+
+If you have successfully installed GitHub Desktop, then Git is already installed on your system and no further installation is required. 
+
+<details> <summary> If you are unable to install GitHub Desktop or would prefer not to install GitHub Desktop, you can install Git using the command line. Click here for more information. </summary>
+
+First, we will see if Git is installed on your computer, and install it if not. We will start by opening the command line. 
+
+::: {.panel-tabset}
+#### Mac
+
+Open the application called "Terminal". You can find this by using Spotlight Search and searching for "Terminal". 
+
+#### Windows
+
+Open the application called "Command Prompt". You can find this by using the Start menu and searching for "Command Prompt". You could instead use the PowerShell by searching for "PowerShell" instead. 
+
+#### Linux 
+
+Open the application called "Terminal". You can find it by using your system’s application menu and searching for "Terminal".
+
+:::
+
+In the command line, type:
+
+```{.cmd-box}
+git version
+```
+
+If the output tells you which version of Git is installed, then you already have Git. For example, it may look like:
+
+```{.cmd-box}
+git version 2.50.1
+```
+
+If you see a message like "git: command not found" or "git is not recognized" or a prompt to install something, then Git is not installed and you'll need to install it. 
+
+To install Git, follow these instructions:
+
+::: {.panel-tabset}
+#### Mac
+
+Follow [these instructions](https://github.com/git-guides/install-git#install-git-on-mac).
+
+#### Windows
+
+Follow [these instructions](https://github.com/git-guides/install-git#install-git-on-windows).
+
+#### Linux 
+
+Follow [these instructions](https://github.com/git-guides/install-git#install-git-on-linux).
+
+:::
+
+</details>
 
 ### Connecting Git to GitHub
 
-Now that we have GitHub Desktop installed, we can use it to connect your local Git to your GitHub account. 
+If you have GitHub Desktop installed, we can use it to authenticate your GitHub account with Git. We could also do this with the command line, but GitHub Desktop makes it easier. 
+
+::: {.panel-tabset}
+
+#### GitHub Desktop 
 
 When you open GitHub Desktop, it will prompt you to sign into GitHub. If it does not, then follow [these instructions](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/authenticating-to-github-in-github-desktop), choosing instructions for Mac or Windows based on your operating system.
 
 Next, we will configure Git. This means that you will tell Git your name and email. Follow [these instructions](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop), again choosing instructions for Mac or Windows based on your operating system. 
+
+#### Command line 
+
+First we will tell Git your name and email address. Open the command line and enter the following:
+
+```{.cmd-box}
+git config --global user.name "Your name here"
+git config --global user.email "Your email here"
+git config --global --list
+```
+
+The third line should print your name and email correctly.
+
+Next, you need to connect your GitHub account to your local Git. 
+
+GitHub no longer supports using passwords to connect Git and GitHub, so you'll instead need to use a Personal Access Token (PAT). To create a token, [follow these instructions](https://github.com/settings/tokens). Click "Generate new token" and choose "Generate new token (classic)". Give your token a name and expiration date. Select the "repo" scope. Click "Generate Token". Copy the token to your clipboard, or keep this window open. You will not be able to access this again. 
+
+Now, open the command line and run the following:
+
+::: {.panel-tabset}
+
+#### Mac
+
+```{.cmd-box}
+git config --global credential.helper osxkeychain
+```
+
+#### Windows
+
+```{.cmd-box}
+git config --global credential.helper manager
+```
+
+#### Linux 
+
+If available, run:
+
+```{.cmd-box}
+git config --global credential.helper manager
+```
+
+If that does not work, use: 
+
+```{.cmd-box}
+git config --global credential.helper cache
+```
+
+:::
+
+This tells Git to remember the login credentials that we will provide so you won't need to enter them each time. 
+
+Next, we need to trigger a GitHub credentials check. We will do this by cloning the repository that you made (this means we will make a local version of this repo). Run the following, replacing "your_username" with your username:
+
+```{.cmd-box}
+git clone https://github.com/your_username/my-first-repository.git  
+```
+
+Running this command should prompt you to give a username and password. Use your GitHub username, and the PAT you just generated as the password (do not use your GitHub password). Git will now store these credentials so you won't need to enter them again. When your PAT expires, you will need to follow these steps again. 
+
+:::
 
 ### Creating a local clone of your GitHub repository 
 
@@ -303,5 +392,28 @@ Once you add these files, return to GitHub Desktop. You should see a set of stag
 ### Open this project in RStudio
 
 Finally, we will create another RStudio project for this GitHub repository, so that we can easily work with these set of files in RStudio. Do this by opening RStudio and clicking "File -> New Project -> Existing Repository" and use "Browse" to find the folder for the repository that you created. This will open your project in R. You will have added a .Rproj file, which we will add to our .gitignore (this means that we'll use it locally but we will not track changes to it with Git or push it to GitHub). Open your .gitignore file and add a new line with the text "infant_gut_analysis.Rproj". 
+
+## Branches
+
+One useful feature of Git is the ability to make branches. A branch is a history of commits, and by default a repository that is tracked by Git starts with the "main" branch. Multiple branches provide multiple parallel versions of the repository that can be developed separately. For example, you may have a version of your analysis and results in the main branch, but you want to experiment with changing a parameter. You could do this in a separate branch. This would let you work on the experimental version of your analysis while also having a stable version of your analysis elsewhere. You can switch between branches depending on what version of the analysis you want to work on. If you eventually decide that you want to move forward with the changed parameter, you can merge your experimental branch back into your main branch. 
+
+:::{.definition_box}
+::::{.definition_box_header}
+Merge
+::::
+::::{.inner_block}
+Integrating changes from one branch into another branch. 
+::::
+:::
+
+If there are no lines of code in any files that are directly in conflict, then merging will automatically combine the sets of files into a single version to move forward with. [Mention that we discuss merge conflicts in "Troubleshooting Git and GitHub"]
+
+[Add image of merged versions]
+
+Branches are also helpful when working with collaborators. If you are developing a new part of an analysis, you can do it in a separate branch. When you are ready for your collaborator to review your work, you can submit a "pull request", which is a request to merge your branch with the main branch. Your collaborator can review all of the changes between your branch and the new branch, and either approve the pull request or request edits before merging. [Mention that we describe pull requests in more detail below.]
+
+### Create a new branch for this analysis 
+
+You can create a new branch with GitHub Desktop. In GitHub Desktop, navigate to the tab in the top left of the window that says "Current Branch." Click on this tab, and you should see a button that says "New Branch". Name your new branch "study_comparison". 
 
 ***
