@@ -1,7 +1,9 @@
 # **Troubleshooting Git and GitHub**
 ***
 
-Several drop-down boxes here for common mistakes that come up (especially those that may come up in this case study).
+to-do: create sections for each of these problems, with ways to resolve them (both with GitHub Desktop and with the command line).
+
+Include several drop-down boxes here for common mistakes that come up (especially those that may come up in this case study).
 
 Ideas to bring up here:
 

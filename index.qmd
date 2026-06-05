@@ -1,12 +1,13 @@
 ---
 title: "**Biomedical Open Case Studies: Making version controlled reproducible analyses**"
+bibliography: resources/references.bib
 include-sections:
   stat-los: false
   data-import: true
   data-exploration: false
   data-wrangling: true
   data-viz: true
-  data-analysis: true
+  data-analysis: false
 ---
 
 <!--

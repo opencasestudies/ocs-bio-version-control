@@ -5,7 +5,7 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 # **Scientific project organization**
 ***
 
-While most people have their own approaches to scientific project organization, there are a few principles that most successful organization schemes have in common. 
+Although this is not directly related to version control, there are some useful ideas to know about organizing a scientific project, that will improve reproducibility. While most people have their own approaches to scientific project organization, there are a few principles that most successful organization schemes have in common. 
 
 - file names should be concise but informative
 - there is one central folder to contain all files for each project
@@ -27,6 +27,8 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 ## README
 
 A README file should describe the files related to your scientific project. It should describe where inputs come from, what each script does, and where outputs are generated. If someone reads through your README, they should know where to find each component of your analysis. 
+
+to-do: add question box
 
 Read through the REAMDME.md file for this project. Which script generates "sample_metadata.csv"? 
 
@@ -55,12 +57,10 @@ From a Git perspective, files are either text files or binary files. Text files 
 
 The best way to avoid tracking a file is to add it to your .gitignore file. 
 
-[add image of adding certain files not to track to .gitignore]
+to-do: add image of adding certain files not to track to .gitignore
 
 An important consideration for which files to track is file size. Tracking large files can slow down the operations you do with Git and GitHub, and eventually run into GitHub's [repository limits](https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits). For binary files or moderately large files, Git Large File Storage (often referred to as Git LFS) is an option. 
 
-talk about good size for git vs git LFS vs Figshare/Zenodo. Discuss things you may need versions of/not need versions of.
-
-[This could also be a good time to talk about large files, what to track vs not track with GitHub. Connect to .gitignore. Discuss how tracking large files either in terms of data and results can cause problems. Discuss Git LFS vs data repositories like Figshare and Zenodo]
+to-do: talk about good size for git vs git LFS vs Figshare/Zenodo. Discuss things you may need versions of/not need versions of.
 
 ***

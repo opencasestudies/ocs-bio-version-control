@@ -30,7 +30,7 @@ Between your own edits as you work on this project and the back-and-forth with y
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e1f8f72664_0_444#slide=id.g3e1f8f72664_0_444")
 ```
 
-In this case study, you will learn how to use Git and GitHub to track this project and perform the requested comparison of studies used in the meta-analysis. You will also learn how version control can be used to improve reproducibility of a scientific project and how it can make collaboration easier. 
+In this case study, you will learn how to use Git and GitHub to track this project and perform the requested comparison of studies used in the meta-analysis. You will also learn how version control can be used to make a scientific project more reproducible and to facilitate collaboration. 
 
 :::{.definition_box}
 ::::{.definition_box_header}
@@ -40,7 +40,5 @@ Reproducibility
 The ability for someone else the run the same analysis on the same data and get the same results.
 ::::
 :::
-
-When conducting a scientific project, reproducibility is very important. If another researcher can use your data and code and generate the same results, then your conclusions are more credible to the scientific community. Version control is a tool that enables reproducible research by recording changes to a project over time. When used carefully, it gives a complete history of changes made over the course of a project. It also provides a digital backup and an online repository of code and data for other researchers to see. Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes. While several tools exist for version control, we will introduce Git and GitHub, two of the most commonly used version control tools. 
   
 ***

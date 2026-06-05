@@ -13,7 +13,7 @@ There are some important ethical considerations when working with version contro
 
 1. When hosting data, code, and results on GitHub, make sure to never include protected health information (PHI) in a public repository. This includes names, dates of birth, medical records and diagnosis, lab results, identifiable genomic sequencing data, as well as other types of data. 
 1. Make sure to keep comprehensive documentation for scientific projects. Losing track of which data generated a set of results or figure, or which version of a software that you used in an analysis. Reproducible science is ethical science, as it is more difficult for others in the scientific community to trust your results if your scientific process is not transparent and reproducible.
-1. Potential ethical issues that come up with scientific collaboration? 
+1. to-do: potential ethical issues that come up with scientific collaboration? (as we discussed in meeting, mention using GitHub history to keep track of individual's contributions to a project)
 
 ***
 
