@@ -13,4 +13,6 @@ Ideas to bring up here:
   - what if I haven't committed yet? What if I have already committed? 
 - I've accidentally committed a large file, what to do about this? 
 
+Also add a section about using AI with Git and GitHub, it can be very helpful but make sure it doesn't have you do something destructive! 
+
 ***
