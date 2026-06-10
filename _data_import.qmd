@@ -13,6 +13,8 @@ Now that you have created this GitHub repository, and have tracked this project 
 
 Start by opening the file that reads in the raw data and running it. Look at the output. How many observations are included in our data set? How many variables are included in our data set? 
 
+^ add question box for this! 
+
 <details> <summary> Hint </summary>
 
 Data is imported in the file "01_pull_study_data.R". You can find out how many rows are in a data frame with the function `nrow(name_of_data_frame)`. You can see the variables in a data frame with the function `names(name_of_data_frame)`.
