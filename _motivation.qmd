@@ -30,7 +30,7 @@ Between your own edits as you work on this project and the back-and-forth with y
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e1f8f72664_0_444#slide=id.g3e1f8f72664_0_444")
 ```
 
-In this case study, you will learn how to use Git and GitHub to track this project and perform the requested comparison of studies used in the meta-analysis. You will also learn how version control can be used to make a scientific project more reproducible and to facilitate collaboration. 
+In this case study, you will learn how to use Git and GitHub to track this project and perform the requested comparison of studies used in the meta-analysis. You will also learn how version control can facilitate collaboration and  make a scientific project more reproducible. 
 
 :::{.definition_box}
 ::::{.definition_box_header}
