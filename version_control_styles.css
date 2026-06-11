@@ -1,0 +1,46 @@
+/* Shared styling for code containers */
+.rcode,
+.shell {
+  margin: 1em 0;
+}
+
+/* Labels */
+.rcode::before,
+.shell::before {
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 600;
+  margin-bottom: 8px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  opacity: 1;
+  font-family: monospace;
+  color: #24292e;
+}
+
+.rcode::before {
+  content: "R";
+}
+
+.shell::before {
+  content: "Command line";
+}
+
+/* R code block */
+.rcode {
+  background-color: #bdeffc;
+  padding: 12px 16px;
+  border-radius: 6px;
+}
+
+/* Command line block */
+.shell {
+  background-color: #D6DCE5;
+  padding: 12px 16px;
+  border-radius: 6px;
+}
+
+.rcode pre code,
+.shell pre code {
+  color: #24292e;
+}

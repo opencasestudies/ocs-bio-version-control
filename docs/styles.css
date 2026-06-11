@@ -81,7 +81,7 @@
   padding-top: 5px;
   padding-bottom: 0.1em;
   color: black;
-  background-color: #beeffd;
+  background-color: #bdeffc;
   font-size: 1em;
   font-weight: bold;
   background-size: 40px;
@@ -92,8 +92,8 @@
 
 .reference_box{
   margin: 1em 0;
-  border: 3px solid #beeffd;
-  border-left: 10px solid #beeffd;
+  border: 3px solid #bdeffc;
+  border-left: 10px solid #bdeffc;
   border-radius: 10px;
   background-color: white;
 }
@@ -104,7 +104,7 @@
   padding-top: 5px;
   padding-bottom: 0.1em;
   color: black;
-  background-color: #beeffd;
+  background-color: #bdeffc;
   font-size: 1em;
   font-weight: bold;
   background-size: 40px;
@@ -266,7 +266,7 @@
 }
 
 .blue-outline {
-   background-color: #beeffd;
+   background-color: #bdeffc;
    padding:10px;
    display: inline-block;
 }
@@ -307,7 +307,7 @@
 
 /* 4. Citation */
 .frontmatter-tabs .nav-tabs li:nth-child(4) a {
-  background-color: #beeffd;
+  background-color: #bdeffc;
 }
 
 /* 5. GitHub repo */
@@ -331,38 +331,4 @@
   font-family: monospace;
   font-size: 0.95em;
   overflow-x: auto;
-}
-
-/* Command line box */
-.cmd-box {
-  background-color: #D6DCE5;  
-}
-
-/* R code box */
-.r-box {
-  background-color: #beeffd;   
-}
-
-/* Optional: darker text for readability */
-.cmd-box code,
-.r-box code {
-  color: #24292e;
-}
-
-
-.cmd-box::before,
-.r-box::before {
-  display: block;
-  font-size: 0.7em;
-  font-weight: bold;
-  margin-bottom: 6px;
-  opacity: 0.7;
-}
-
-.cmd-box::before {
-  content: "Command line";
-}
-
-.r-box::before {
-  content: "R";
 }

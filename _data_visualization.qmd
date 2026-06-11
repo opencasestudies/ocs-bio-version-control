@@ -22,29 +22,36 @@ Question: preference on .R and .Rmd files for this?
 
 Load data 
 
+::: {.rcode}
 ```{r}
 load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
 ```
+:::
 
 Count samples by study and category (mother vs infant)
 
+::: {.rcode}
 ```{r}
 sample_counts <- clean_metadata %>%
   group_by(Study, Category) %>%
   count(name = "total")
 sample_counts
 ```
+:::
 
 Make a bar plot of this data 
 
+::: {.rcode}
 ```{r}
 sample_counts %>%
   ggplot(aes(x = Study, y = total, fill = Category)) +
   geom_col(position = position_dodge())
 ```
+:::
 
 Order the bar plot by increasing sample size and add theme and labels
 
+::: {.rcode}
 ```{r}
 study_order <- sample_counts %>%
   group_by(Study) %>%
@@ -61,15 +68,19 @@ sample_counts %>%
        title = "Number of Samples by Study and Category") + 
   theme(plot.title = element_text(hjust = 0.5))
 ```
+:::
 
 Save plot in figures folder. 
 
+::: {.rcode}
 ```{r, eval = FALSE}
 ggsave("figures/study_sizes_by_category.png", height = 6, width = 9)
 ```
+:::
 
 Now look into time 
 
+::: {.rcode}
 ```{r}
 clean_metadata %>%
   filter(!sampling_before_birth) %>%
@@ -77,9 +88,11 @@ clean_metadata %>%
   geom_histogram(position = position_dodge(), bins = 20) +
   facet_wrap(~Study, scale = "free_y") 
 ```
+:::
 
 Order facets the same as in bar plot, add theme and labels 
 
+::: {.rcode}
 ```{r}
 clean_metadata %>%
   mutate(Study = factor(Study, levels = study_order)) %>%
@@ -93,12 +106,15 @@ clean_metadata %>%
   theme_minimal() + 
   theme(plot.title = element_text(hjust = 0.5))
 ```
+:::
 
 Save plot in figures folder
 
+::: {.rcode}
 ```{r, eval = FALSE}
 ggsave("figures/sampling_timepoints.png", height = 6, width = 9)
 ```
+:::
 
 Now that you have two plots that compare the studies, this is a good time to commit your current work. 
 

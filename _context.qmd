@@ -10,7 +10,17 @@ Videos or images may be helpful so this includes an example of embedding a video
 
 A microbiome is a collection of microorganisms that live in an environment. One commonly studied microbiome is the human gut microbiome. The bacteria that live in our gut help regulate our metabolism, digest fiber, protect us against pathogens, and perform other important roles in our health [@han2026host]. Studies have shown associations between changes to the gut microbiome and many diseases, including diabetes, autoimmune diseases, and Alzheimer's disease. 
 
-to-do: add [image](https://unsplash.com/s/photos/bacteria?asset=%5B%22Photos%22%2C%7B%22slug%22%3A%22red-strawberry-on-white-textile-2-Hv-Rg4asA%22%7D%5D&license=free) of collection of microbes and/or [image](https://pixabay.com/illustrations/abdomen-biology-bladder-body-8762848/) of digestive system
+::: {.columns}
+
+::: {.column width="50%"}
+![Bacterium from [Unsplash](https://unsplash.com/photos/red-strawberry-on-white-textile-2-Hv-Rg4asA)](img/bacterium.png)
+:::
+
+::: {.column width="50%"}
+![Human digestive system from [Pixabay](https://pixabay.com/illustrations/abdomen-biology-bladder-body-8762848/)](img/digestive_system.png)
+:::
+
+:::
 
 Much of the gut microbiome composition is determined at birth and in early life, and the infant gut microbiome has implications for health later in life [@wang2021metagenomic]. Therefore, scientists are interested in understanding more about the factors that shape the infant gut microbiome. One question of interest is how similar the gut microbiomes are between infants and their mothers, and how this changes over time. In order to address this question, several longitudinal studies have been conducted to collect samples from pairs of infant and mother longitudinally. Sequencing microbiome samples is expensive, and therefore each study is limited in the number of samples they can collect. Want et al. conducted a meta-analysis of eight of these studies, using this large data set to compare gut microbiome composition (which microbes are there?) and function (what are the microbes doing?) between infants and mothers.
 

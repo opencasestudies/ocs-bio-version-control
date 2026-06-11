@@ -5,7 +5,9 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 # **Scientific project organization**
 ***
 
-Although this is not directly related to version control, there are some useful ideas to know about organizing a scientific project, that will improve reproducibility. While most people have their own approaches to scientific project organization, there are a few principles that most successful organization schemes have in common. 
+note: once styles updated, make this a reproducibility box! 
+
+Although this is not directly related to version control, there are some useful ideas to know about organizing a scientific project, that will improve reproducibility. While most people have their own approaches to scientific project organization, there are a few principles that most successful organization schemes have in common. More information can be found in [this course](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/organizing-your-project.html).
 
 - file names should be concise but informative
 - there is one central folder to contain all files for each project
@@ -13,7 +15,7 @@ Although this is not directly related to version control, there are some useful 
 - there are folders to keep similar files together 
   - data folder (this could be split into raw data and processed data)
   - figures folder for any figures made for the analysis
-  - results folder for any results that should be shared or would take moderate computation to re-generate
+  - results folder for any results that should be shared or would take moderate or more computation to re-generate
 - number code scripts in the order that they should be run to generate results 
 
 ## Organization of this project 
@@ -30,7 +32,17 @@ A README file should describe the files related to your scientific project. It s
 
 to-do: add question box
 
-Read through the REAMDME.md file for this project. Which script generates "sample_metadata.csv"? 
+:::{.think_question}
+::::{.think_question_header}
+Question opportunity
+::::
+::::{.inner_block}
+Read through the README.md file for this project. Which script generates "sample_metadata.csv"? 
+<details><summary>Answer</summary>
+01_pull_study_data.R
+</details>
+::::
+:::
 
 ## Project organization with Git and GitHub
 
@@ -43,15 +55,16 @@ One thing to know is that any empty folders may exist on your computer but will 
 Recall that version control lets you track project files as they change. Therefore, there are some files that make a lot of sense to track with version control, and others that make less sense. Deciding which files to track is another topic that different people take different approaches to, but there are some rules that are typically followed: 
 
 - track source files that you've written (such as R scripts, shell scripts, LaTeX files, etc) 
-- track configuration files (such as .gitignore) that tell your tools how to interact with this project
+- track configuration files (such as .gitignore) that tell your tools how to interact with this repository
 - do not track intermediate files (such as log files), these are files that are generated automatically during a certain part of your workflow but are not needed on their own
 - sometimes track derived products (such as intermediate data, figures, or reports)
+  - this depends if you would like a copy of these products to live on GitHub, or if you would like anyone who wants them to reproduce them using your data and scripts that are tracked with Git
 - do not track large data files that never change (we'll explain this more below)
 - typically avoid tracking binary files (although there are exceptions)
 
 <details> <summary> Binary files </summary>
 
-From a Git perspective, files are either text files or binary files. Text files are human-readable. They work nicely with Git because they can be represented in terms of diffs between versions. In contrast, binary files are readable by certain programs but are not human-readable. They cannot be represented in terms of diffs, and therefore a new version of the file is saved at each commit. Examples of binary files are images (.png, .jpeg), word and excel files (.doc, .xlsx) and PDFs (.pdf). 
+From a Git perspective, files are either text files or binary files. Text files are human-readable. They work nicely with Git because they can be represented in terms of diffs between versions. In contrast, binary files are readable by certain programs but are not human-readable. They cannot be represented in terms of diffs, and therefore a new version of the file is saved at each commit. Examples of binary files are images (.png, .jpeg), word and excel files (.doc, .xlsx) and PDFs (.pdf). Tracking many binary files with Git can eventually slow down Git operations.  
 
 </details>
 

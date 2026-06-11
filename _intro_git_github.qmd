@@ -183,9 +183,7 @@ Often when you commit files you will commit all files in your repository. Howeve
 
 <details> <summary> License </summary>
 
-A license is a legal document that states who can use your code. Although it may seem counterintuitive, a license typically makes your code more "open", which means that other people can use it with fewer restrictions. There are two main types of licenses used for most R projects hosted on GitHub: permissive (MIT) and copyleft (GPL). A permissive license means that people can use your code with minimal restrictions. A copyleft license means that any code that incorporates your code must also be open-source. 
-
-to-do: Need to add more info here as well as citations! Mention [this](https://choosealicense.com).
+A license is a legal document that states who can use your code. Although it may seem counterintuitive, a license typically makes your code more "open", which means that other people can use it with fewer restrictions. There are two main types of licenses used for most R projects hosted on GitHub: permissive (MIT) and copyleft (GPL). A permissive license means that people can use your code with minimal restrictions. A copyleft license means that any code that incorporates your code must also be open-source. You can read more about licenses for open-source projects [here](https://opensource.guide/legal/), or use [this resource](https://choosealicense.com) to see what license might be most appropriate for your project. 
 
 </details>
 
@@ -257,15 +255,19 @@ Open the application called "Terminal". You can find it by using your system’s
 
 In the command line, type:
 
-```{.cmd-box}
+::: {.shell}
+```bash
 git version
 ```
+:::
 
-If the output tells you which version of Git is installed, then you already have Git. For example, it may look like:
+If the output tells you which version of Git is installed, then you already have Git. For example, if Git is already installed, the output may look like:
 
-```{.cmd-box}
+::: {.shell}
+```bash
 git version 2.50.1
 ```
+:::
 
 If you see a message like "git: command not found" or "git is not recognized" or a prompt to install something, then Git is not installed and you'll need to install it. 
 
@@ -304,11 +306,13 @@ Next, we will configure Git. This means that you will tell Git your name and ema
 
 First we will tell Git your name and email address. Open the command line and enter the following:
 
-```{.cmd-box}
+:::: {.shell}
+```bash
 git config --global user.name "Your name here"
 git config --global user.email "Your email here"
 git config --global --list
 ```
+::::
 
 The third line should print your name and email correctly.
 
@@ -318,43 +322,53 @@ GitHub no longer supports using passwords to connect Git and GitHub, so you'll i
 
 Now, open the command line and run the following:
 
-::: {.panel-tabset}
+:::: {.panel-tabset}
 
 #### Mac
 
-```{.cmd-box}
+::::: {.shell}
+```bash
 git config --global credential.helper osxkeychain
 ```
+:::::
 
 #### Windows
 
-```{.cmd-box}
+::::: {.shell}
+```bash
 git config --global credential.helper manager
 ```
+:::::
 
 #### Linux 
 
 If available, run:
 
-```{.cmd-box}
+::::: {.shell}
+```bash
 git config --global credential.helper manager
 ```
+:::::
 
 If that does not work, use: 
 
-```{.cmd-box}
+::::: {.shell}
+```bash
 git config --global credential.helper cache
 ```
+:::::
 
-:::
+::::
 
 This tells Git to remember the login credentials that we will provide so you won't need to enter them each time. 
 
 Next, we need to trigger a GitHub credentials check. We will do this by cloning the repository that you made (this means we will make a local version of this repo). Run the following, replacing "your_username" with your username:
 
-```{.cmd-box}
+:::: {.shell}
+```bash
 git clone https://github.com/your_username/my-first-repository.git  
 ```
+::::
 
 Running this command should prompt you to give a username and password. Use your GitHub username, and the PAT you just generated as the password (do not use your GitHub password). Git will now store these credentials so you won't need to enter them again. When your PAT expires, you will need to follow these steps again. 
 
@@ -376,46 +390,53 @@ to-do: add image
 
 #### Command line 
 
-Open the command line and enter the following:
+You were already asked to clone this repository in the last section, in order to trigger Git's login credentials. If you haven't done that, open the command line and enter the following, replacing "your_username" with your username:
 
-```{.cmd-box}
-git clone your_github_repository_url
+:::: {.shell}
+```bash
+git clone https://github.com/your_username/my-first-repository.git  
 ```
+::::
 
 You will know that this has worked if you see the following output:
 
-```{.cmd-box}
+:::: {.shell}
+```
 Cloning into 'my-first-repository'...
 ```
+::::
 
 :::
 
-Question: should we use RStudio projects? Or just use the RStudio file navigator to open files?
+Next, you will open the local repository and make an update. RStudio and Positron have different approaches to opening folders. 
 
-We will now open up our repository in RStudio. This will require one additional step, which is creating an RStudio project for this repository.
+::: {.panel-tabset}
+#### RStudio
 
-<details> <summary> RStudio project </summary>
+The easiest way to work with a Git-tracked repository in RStudio is to make an RStudio project. A project is a folder that R can open as a self-contained unit. The most useful part of an RStudio project is that you can use relative file paths, with the folder that you used to create the project as the root. Using relative file paths for a project, as opposed to absolute file paths that are specific to your personal computer, make it easier to collaborate with other people.
 
-An RStudio project is similar to a repository, it is a folder that R can open as a self-contained unit. An RStudio project lets you open a folder in RStudio, and automatically have your working directory be the folder that you're working in. 
+In order to open your Git-tracked repository as an RStudio project, open RStudio and click "File -> Open Project". This should prompt you to open your file browser, and you should navigate to the folder called "my_first_repository", which was created when you cloned the repository. Once you select the correct folder, RStudio will open the project. If you look at the "Files" panel, you'll see the README that you made for "my_first_repository" on GitHub. You will additionally see a file called "my_first_repository.Rproj". This file is automatically made by RStudio when opening a new project, and saves information about the project. 
 
-to-do: add more details here 
+#### Positron
 
-</details>
+In Positron, click "File -> Open Folder..." and then navigate to the folder called "my_first_repository", which was created when you cloned the repository. Once you select the correct folder, Positron will open it. In the file explorer, you will be able to see the README that you made for "my_first_repository" on GitHub. 
 
-To create an RStudio project for your repository, do the following:
+#### Other R IDE
 
-- open RStudio
-- click "File -> New Project"
-- click "Existing directory"
-- click "Browse" to find the folder labeled "my-first-repository"
-- click "Create Project". 
+If you are using another R IDE besides RStudio or Positron, you should look up instructions for opening a folder in your environment. 
 
-The RStudio project includes a file with the extension ".Rproj", and when you open this file it will open RStudio to this project folder. 
+:::
 
-Now, you'll see that you are in RStudio, in a folder that corresponds to your "my-first-repository" repo. We will add a new line to the README:
+Now that we've opened our local repository and have access to the README, we will add a new line:
 
-- click on the "README.md" file in the "Files" panel, which will open the README that you made on GitHub
-- add a new line to the README that says "Adding a new commit from RStudio" and save the file
+- click on the "README.md" file
+- add a new line to the README that says "Adding a new commit locally" and save the file
+
+
+
+
+
+
 
 ::: {.panel-tabset}
 
@@ -429,9 +450,25 @@ In the lower left corner you will see a box that says "Summary (required)" and "
 
 to-do: add image
 
-A quick note on commit messages...
+A few pieces of advice to consider for your commit messages:
 
-to-do: discuss how commit messages should be informative to you in a few months or to a collaborate. They will live forever on GitHub, so make sure they are appropriate.
+- A commit message should be informative. Think of a collaborator (or yourself in a few months) reading the commit message. It should tell the reader why you've made this commit. Did you add a file? Did you fix a bug in the code? Did you remove an outdated data file? 
+- A commit message should be concise. Avoid adding too many unnecessary details here. The reader can always look at the differences in files for the commit to see exactly what you've done. 
+- In a public repository, the commit message will be visible to anyone and exist as long as the repository does. Make sure that your message is appropriate and you'd be comfortable with colleagues seeing it. 
+
+to-do: make graphic showing good and bad commit messages:
+good
+
+- "Add '01_clean_data.R' for data cleaning."
+- "Add boxplot to '03_make_plots.Rmd'"
+- "Removing 'old_data.csv' because it has been replaced by a newer version of the dataset"
+
+bad
+
+- "commit"
+- "adding file"
+- "Add '01_clean_data.R', which takes the data found in 'data/data.csv', removes all NA observations, renames columns, converts the data into long format instead of wide format, and then saves the new version of the data as 'data/cleaned_data.csv'"
+- "blahhhhhhhh removing this stupid file that I hate" 
 
 For this commit, you might use the summary "Adding .gitignore and .Rproj files, adding a line to README.md." 
 
@@ -443,29 +480,37 @@ We have one more step to update the GitHub repository, which is to "push" these 
 
 Open the command line, navigate to the folder that contains your repository, and enter the following:
 
-```{.cmd-box}
+:::: {.shell}
+```bash
 cd my-first-repository
 ```
+::::
 
 This will move you into the repository folder. Next, enter:
 
-```{.cmd-box}
+:::: {.shell}
+```bash
 git status
 ```
+::::
 
 This will list untracked files, which are files that Git is not keeping track of. In order to tell Git to start tracking them, enter:
 
-```{.cmd-box}
+:::: {.shell}
+```bash
 git add .gitignore my-first-repository.Rproj
 ```
+::::
 
 If you ever want to tell Git to track all files, you can use the command `git add .`. 
 
 Next, we will commit these files (remember, this is similar to creating a snapshot of these files, or to creating a save point in a video game).
 
-```{.cmd-box}
+:::: {.shell}
+```bash
 git commit -m "Adding .gitignore and .Rproj files"
 ```
+::::
 
 The tag `-m` lets you add a commit message, and then is followed by the text that you'd like to be associated with your commit. 
 
@@ -473,9 +518,11 @@ to-do: discuss how commit messages should be informative to you in a few months 
 
 We have one more step to update the GitHub repository, which is to "push" these files to GitHub. This is the final step that updates the GitHub repository to include the changes that we made locally. To push, enter: 
 
-```{.cmd-box}
+:::: {.shell}
+```bash
 git push 
 ```
+::::
 
 Now, open your project in GitHub. You should now see the updated files including changes that you made locally, as well the commit message. 
 
@@ -506,9 +553,11 @@ If you return to RStudio and open "README.md", you will now see the update that 
 
 Open the command line, navigate to the folder that contains your repository, and enter the following:
 
-```{.cmd-box}
+:::: {.shell}
+```bash
 git pull
 ```
+::::
 
 If you return to RStudio and open "README.md", you will now see the update that you made on GitHub. 
 
@@ -525,7 +574,6 @@ to-do: Add image to show a summary of the clone/stage/commit/push workflow
 ### Tips
 
 - Commit often. A history will not be helpful if you run an entire analysis locally and then commit everything in a single commit. 
-- Write commit messages concisely explaining what you did to a collaborator now or to yourself in three months
 - If you are working on a repository with multiple contributors, make sure to pull each time you work in order to work on the most up-to-date version of the repository 
 
 ## Create version controlled repository for your project 
@@ -559,24 +607,30 @@ Once you add these files, return to GitHub Desktop. You should see a set of stag
 
 Open the command line, navigate to the folder that you have unzipped, and enter the following:
 
-```{.cmd-box}
+:::: {.shell}
+```bash
 git init
 ```
+::::
 
 If you look into your folder you will not see any changes. However, this command creates a hidden `.git` folder within the current folder, which contains the files that are needed to start tracking this folder with Git. It is now a Git-tracked repository. Now we will stage all files, so that Git knows to track them, and commit them, so that Git saves the set of files as part of the history. 
 
-```{.cmd-box}
+:::: {.shell}
+```bash
 git add .
 git commit -m "track all files for infant gut project" 
 ```
+::::
 
 Next, you will need to create an empty repository on GitHub. Go to GitHub and create a new repository called "infant_gut_analysis". Importantly, this time do not check "Initialize with README", this should be a fully empty repository. Copy the URL of this repository. 
 
 Now, return to the command line and enter (replacing the URL below with the URL that you just copied):
 
-```{.cmd-box}
+:::: {.shell}
+```bash
 git remote add origin https://github.com/your_username/infant_gut_analysis.git
 ```
+::::
 
 :::
 
@@ -623,9 +677,11 @@ In GitHub Desktop:
 
 Open the command line, navigate to the folder that you have unzipped, and enter the following:
 
-```{.cmd-box}
+:::: {.shell}
+```bash
 git checkout -b study_comparison
 ```
+::::
 
 When you create a new branch, you can name it by providing a new branch name (we name the new branch "study_comparison" above).
 

@@ -50,6 +50,8 @@ ottrproject
 PersonID
 PLoS
 png
+Powershell
+prereq
 quarto
 qmd
 Rator
@@ -67,6 +69,7 @@ tabset
 Teichman
 th
 uncheck
+untracked
 www
 xlsx
 Zenodo
