@@ -52,13 +52,12 @@ In this space, provide an open access link to the case study source files.
 This is necessary for users to get access to case study data, at a minimum.
 See the following example from a previous case study (prior to Motivation section): https://www.opencasestudies.org/ocs-bp-co2-emissions/
 -->
-
 :::{.github_repo_box}
 ::::{.github_repo_box_header}
-GitHub repository
+GitHub Repository
 ::::
 ::::{.inner_block}
-To access the GitHub repository for this case study see here: {LINK}
+To access the GitHub repository for this case study see here: [https://github.com/opencasestudies/ocs-bio-version-control](https://github.com/opencasestudies/ocs-bio-version-control)
 ::::
 :::
 
@@ -78,10 +77,6 @@ Keywords
 * Keyword 3
 * ...Keyword n
 
-<!-- Note that keywords should be the types of words that you'd use for a conference abstract or grant submission; focus on the emerging tech or best practice that is being covered as well as the specific part of the task/analysis/visualization that is being shown. Just a quick way to overview what skills/topics are part of the case study -->
-
-::::
-:::
 
 <!--
 Include bioOCSdata package information once ready/applicable
@@ -95,7 +90,17 @@ Include bioOCSdata package information once ready/applicable
 Prerequisites
 ::::
 ::::{.inner_block}
-Add a list of prerequisites here.
+To follow along with this case study, you'll need the following installed:
+
+- R ([install here](https://www.r-project.org))
+- RStudio ([install here](https://posit.co/download/rstudio-desktop)) or Positron ([install here](https://positron.posit.co/install.html))
+
+It will also be helpful to be have the following skills:
+
+- basic R skills (many introductory courses can be found online, including [this one](https://hutchdatascience.org/Intro_to_R/))
+- familiarity with `dplyr` ([`dplyr` cheatsheet](https://rstudio.github.io/cheatsheets/data-transformation.pdf)) and `ggplot2` ([`ggplot2` cheatsheet](https://rstudio.github.io/cheatsheets/data-visualization.pdf)), or willingness to learn
+
+You do not need to have any previous Git and GitHub knowledge or experience for this case study. 
 ::::
 :::
 

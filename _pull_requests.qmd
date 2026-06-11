@@ -3,17 +3,21 @@
 
 ## What is a pull request? 
 
-[Describe the mechanics of a pull request, how it relates to branches and commits, other components we've addressed so far.]
+to-do: Describe the mechanics of a pull request, how it relates to branches and commits, other components we've addressed so far.
 
 ## How to make a pull request 
+
+to-do: Make GitHub Desktop tab and command line tab for this first part! 
 
 Go to GitHub Desktop, and make sure to commit any changes. Push those changes (these will be pushed to the remote branch on GitHub). Click "View on GitHub" to navigate to the GitHub page. 
 
 At the top, there should be a yellow banner with a green button that says "Compare & pull request". 
 
-[Discuss the organization of {branch to push to} <- {branch to pull from}]
+to-do: Discuss the organization of {branch to push to} <- {branch to pull from}
 
-[Describe where it shows the commits the make up the pull request and the files changed (how these show the diff between the branch being pushed to and the branch being pulled from).]
+to-do: Describe where it shows the commits the make up the pull request and the files changed (how these show the diff between the branch being pushed to and the branch being pulled from).
+
+to-do: add an image of a pull request here
 
 While your pull request is open, any additional changes that you commit and push to this branch will be added to the pull request. If you would like to stop contributing to a pull request but continue work on the project, make sure to work on a different branch. 
 
@@ -28,6 +32,6 @@ While your pull request is open, any additional changes that you commit and push
 
 Fill in the details of your pull request! 
 
-[Provide an example of a pull request for this project in a drop-down menu.]
+to-do: Provide a good example of a pull request for this project in a drop-down box
 
 ***

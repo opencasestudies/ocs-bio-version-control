@@ -3,14 +3,14 @@
 ## **Synopsis**
 ***
 
-Potentially add a brief recap here! Focus on why version control, and the ways that we've used version control for reproducibility in this case study.
+To-do: add a brief recap here! Focus on why version control, and the ways that we've used version control for reproducibility in this case study.
 
 ***
 
 ## **Summary Plot**
 ***
 
-Provide images that describe each step performed in this analysis as well as captions. Have the learner order these (look into if there is a way to drag and drop these images/captions) - note that a complete version of this figure is in the motivation section at the start of the case study, so not to look at this unless they want to see the correct ordering. A flowchart with the correct order will be the summary plot for this case study. 
+To-do: figure out how to make this into a drag and drop activity for the learner.
 
 This is a mock-up of what the figure may look like, but a final version will be a little more detailed:
 

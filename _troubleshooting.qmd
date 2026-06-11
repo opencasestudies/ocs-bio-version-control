@@ -1,7 +1,9 @@
 # **Troubleshooting Git and GitHub**
 ***
 
-Several drop-down boxes here for common mistakes that come up (especially those that may come up in this case study).
+to-do: create sections for each of these problems, with ways to resolve them (both with GitHub Desktop and with the command line).
+
+Include several drop-down boxes here for common mistakes that come up (especially those that may come up in this case study).
 
 Ideas to bring up here:
 
@@ -10,5 +12,7 @@ Ideas to bring up here:
 - I've done work on a current branch, but I actually want to move it to a new branch
   - what if I haven't committed yet? What if I have already committed? 
 - I've accidentally committed a large file, what to do about this? 
+
+Also add a section about using AI with Git and GitHub, it can be very helpful but make sure it doesn't have you do something destructive! 
 
 ***

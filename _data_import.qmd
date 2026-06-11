@@ -11,30 +11,12 @@ At the end of this section, save incremental data so that users can pause and co
 
 Now that you have created this GitHub repository, and have tracked this project locally with Git, you can start working on the study comparison in R. Open RStudio to your project "infant_gut_analysis". We will start by taking a look at the data. To understand the data contained in this project, first see what the README tells you. 
 
-[Data import is in file "01_pull_study_data.R", decide how much to walk learner through in case study.]
+Start by opening the file that reads in the raw data and running it. Look at the output. How many observations are included in our data set? How many variables are included in our data set? 
 
-01_pull_study_data.R contains the following code:
+<details> <summary> Hint </summary>
 
-```{r, eval = FALSE}
-library(readxl) # for reading data from supplementary table
-library(dplyr) # for combining data across studies 
+Data is imported in the file "01_pull_study_data.R". You can find out how many rows are in a data frame with the function `nrow(name_of_data_frame)`. You can see the variables in a data frame with the function `names(name_of_data_frame)`.
 
-# read tabs for each study from Table S1 from Wang et al. supplementary information, saved as "meta_analysis_metadata.xlsx"
-study_data <- lapply(3:10, function(i) {
-  read_xlsx("raw_data/Table S1.xlsx", sheet = i)
-}) 
-
-# set all variables to be characters in order to combine data across studies
-# original data had encoded same variable in different formats across studies
-study_data_clean <- lapply(study_data, function(df) {
-  df %>% mutate(across(everything(), as.character))
-})
-
-# combine lists for each study into a single data frame
-sample_metadata <- bind_rows(study_data_clean)
-
-# save data frame as a .rda file
-save(sample_metadata, file = "processed_data/sample_metadata.rda")
-```
+</details>
 
 ***

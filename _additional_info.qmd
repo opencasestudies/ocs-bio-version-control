@@ -5,6 +5,11 @@
 Use this section to provide any additional information or resources on the topic and methods covered in the case study
 -->
 
+## References 
+
+::: {#refs}
+:::
+
 ## **Helpful Links**
 ***
 
@@ -24,6 +29,8 @@ Use this section to provide any additional information or resources on the topic
 - [GitHub cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf): cheatsheet with Git commands that can be used in the command line
 
 <u>Terms and concepts covered:</u>
+
+to-do: add glossary here
 
 <u>Packages used in this case study: </u>
 

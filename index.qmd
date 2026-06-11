@@ -1,5 +1,5 @@
 ---
-title: "**Biomedical Open Case Studies: {Fill In Title}**"
+title: "**Biomedical Open Case Studies: Making version controlled reproducible analyses**"
 bibliography: resources/references.bib
 include-sections:
   stat-los: false
@@ -7,7 +7,7 @@ include-sections:
   data-exploration: false
   data-wrangling: true
   data-viz: true
-  data-analysis: true
+  data-analysis: false
 ---
 
 <!--
