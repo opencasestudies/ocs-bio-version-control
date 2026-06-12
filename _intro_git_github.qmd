@@ -408,7 +408,7 @@ Cloning into 'my-first-repository'...
 
 :::
 
-Next, you will open the local repository and make an update. RStudio and Positron have different approaches to opening folders. 
+Next, you will open the local repository. RStudio and Positron have different approaches to opening folders. 
 
 ::: {.panel-tabset}
 #### RStudio
@@ -427,24 +427,32 @@ If you are using another R IDE besides RStudio or Positron, you should look up i
 
 :::
 
-Now that we've opened our local repository and have access to the README, we will add a new line:
+#### Add, commit, push
 
-- click on the "README.md" file
-- add a new line to the README that says "Adding a new commit locally" and save the file
+Next, we will create a new file locally. Create a new R file with "my-first-repository" and call it "01-calculations.R". In this file, include the following:
 
+::: {.rcode}
+```r
+x <- 103
+y <- 5
+x * y
+```
+:::
 
-
-
-
-
+Save this file. Now, we will discuss how to track a new file with Git. 
 
 ::: {.panel-tabset}
 
 #### GitHub Desktop 
 
-Now, navigate back to GitHub Desktop. Where it previously said "no local changes", it now will show changes to your repository. This will include two added files (".gitignore" and "my-first-repository.Rproj"), and modifications to "README.md". You can see that new files have a green box with a plus next to them, and modified files have a yellow box with a circle next to them. 
+Now, navigate back to GitHub Desktop. Where it previously said "no local changes", it now will show changes to your repository. You should see your new file name "01-calculations.R" with a green plus next to it. 
 
-By default, the box next to each of these files is checked. This means that each of these files are "staged", or ready to be included in a commit and added to the repository history. If you uncheck the box, you are telling Git that for now you would not like to track that file with version control. 
+<details>
+<summary> If you are using RStudio, you will likely see additional added files here. </summary>
+When you created a RStudio project, RStudio automatically created a "my-first-repository.Rproj" file to manage the project, and a ".gitignore" file to avoid tracking several hidden files that manage the project. Because these files were added, they are now included in the changed files that you see in GitHub Desktop. It is typically recommended to track your .Rproj and .gitignore files with Git. 
+</details>
+
+By default, the box next to added or updated files is checked. This means that each of these files are "staged", or ready to be included in a commit and added to the repository history. If you uncheck the box, you are telling Git that for now you would not like to track that file with version control. If you would like to tell Git to never track files, you should add them to a .gitignore file. 
 
 In the lower left corner you will see a box that says "Summary (required)" and "Description". This is where you will put your commit message. 
 
@@ -470,11 +478,13 @@ bad
 - "Add '01_clean_data.R', which takes the data found in 'data/data.csv', removes all NA observations, renames columns, converts the data into long format instead of wide format, and then saves the new version of the data as 'data/cleaned_data.csv'"
 - "blahhhhhhhh removing this stupid file that I hate" 
 
-For this commit, you might use the summary "Adding .gitignore and .Rproj files, adding a line to README.md." 
+For this commit, you might use the summary "Adding new file 01-calculations.R" to perform calculations."  
 
 Once you've added the commit message, you are ready to commit these files. Click "commit to main". Now these changes have been entered into the version control history of your repository in Git. 
 
-We have one more step to update the GitHub repository, which is to "push" these files to GitHub. This will be provided in a blue box on GitHub Desktop which says "Push commits to the origin remote". Now, open your project in GitHub. You should now see the updated files including changes that you made locally, as well the commit message. 
+We have one more step to update the GitHub repository, which is to "push" these files to GitHub. This is the step that transfers local changes to the remote repository. Once you commit you will see a box in GitHub Desktop that says "Push commits to the origin remote". Click this box. 
+
+Now, open your project in GitHub. You should now see the file that you added locally, as well the commit message. 
 
 #### Command line 
 
@@ -494,27 +504,61 @@ git status
 ```
 ::::
 
-This will list untracked files, which are files that Git is not keeping track of. In order to tell Git to start tracking them, enter:
+This will list untracked files, which are files that Git is not keeping track of.
+
+<details>
+<summary> If you are using RStudio, you will likely see additional added files here. </summary>
+When you created a RStudio project, RStudio automatically created a "my-first-repository.Rproj" file to manage the project, and a ".gitignore" file to avoid tracking several hidden files that manage the project. Because these files were added, they are now included in the changed files that you see in GitHub Desktop. It is typically recommended to track your .Rproj and .gitignore files with Git. 
+</details>
+
+In order to tell Git to start tracking files, enter:
 
 :::: {.shell}
 ```bash
-git add .gitignore my-first-repository.Rproj
+git add 01-calculations.R
 ```
 ::::
+
+<details>
+<summary> If you are using RStudio, you can also track the additional files that have been created. </summary>
+:::: {.shell}
+```bash
+git add my-first-repository.Rproj .gitignore
+```
+::::
+</details>
 
 If you ever want to tell Git to track all files, you can use the command `git add .`. 
 
-Next, we will commit these files (remember, this is similar to creating a snapshot of these files, or to creating a save point in a video game).
+Next, we will commit these files (remember, this is similar to creating a snapshot of these files, or to creating a save point in a video game). The command `git commit -m "..."` commits the staged files and the flag `-m` adds a commit messages. 
+
+A few pieces of advice to consider for your commit messages:
+
+- A commit message should be informative. Think of a collaborator (or yourself in a few months) reading the commit message. It should tell the reader why you've made this commit. Did you add a file? Did you fix a bug in the code? Did you remove an outdated data file? 
+- A commit message should be concise. Avoid adding too many unnecessary details here. The reader can always look at the differences in files for the commit to see exactly what you've done. 
+- In a public repository, the commit message will be visible to anyone and exist as long as the repository does. Make sure that your message is appropriate and you'd be comfortable with colleagues seeing it. 
+
+to-do: make graphic showing good and bad commit messages:
+good
+
+- "Add '01_clean_data.R' for data cleaning."
+- "Add boxplot to '03_make_plots.Rmd'"
+- "Removing 'old_data.csv' because it has been replaced by a newer version of the dataset"
+
+bad
+
+- "commit"
+- "adding file"
+- "Add '01_clean_data.R', which takes the data found in 'data/data.csv', removes all NA observations, renames columns, converts the data into long format instead of wide format, and then saves the new version of the data as 'data/cleaned_data.csv'"
+- "blahhhhhhhh removing this stupid file that I hate" 
+
+For this commit, you might use the summary "Adding new file '01-calculations.R' to perform calculations."  
 
 :::: {.shell}
 ```bash
-git commit -m "Adding .gitignore and .Rproj files"
+git commit -m "Adding new file '01-calculations.R' to perform calculations."
 ```
 ::::
-
-The tag `-m` lets you add a commit message, and then is followed by the text that you'd like to be associated with your commit. 
-
-to-do: discuss how commit messages should be informative to you in a few months or to a collaborate. They will live forever on GitHub, so make sure they are appropriate.
 
 We have one more step to update the GitHub repository, which is to "push" these files to GitHub. This is the final step that updates the GitHub repository to include the changes that we made locally. To push, enter: 
 
@@ -524,7 +568,7 @@ git push
 ```
 ::::
 
-Now, open your project in GitHub. You should now see the updated files including changes that you made locally, as well the commit message. 
+Now, open your project in GitHub. You should now see the new file that you made locally, as well the commit message. 
 
 :::
 
@@ -547,7 +591,7 @@ Now, return to GitHub Desktop. Do the following:
 - Click "Pull origin". 
 - Go to the "History" pane, and you'll see the most recent commit that you made on GitHub, now included in your local repository. 
 
-If you return to RStudio and open "README.md", you will now see the update that you made on GitHub. 
+If you return to RStudio or Positron and open "README.md", you will now see the update that you made on GitHub. 
 
 #### Command line 
 
@@ -595,7 +639,7 @@ Now, go to GitHub Desktop and do the following:
 - under Git Ignore choose "R" and under License choose "MIT License". 
 
 Now, copy the contents of the "infant_gut_files" into the new repository that you just created with GitHub Desktop 
-to-do: potentially include drop-down to help find the folders on different operating systems]. 
+to-do: potentially include drop-down to help find the folders on different operating systems. 
 
 Once you add these files, return to GitHub Desktop. You should see a set of staged files. 
 
@@ -634,9 +678,24 @@ git remote add origin https://github.com/your_username/infant_gut_analysis.git
 
 :::
 
-### Open this project in RStudio
+### Open this repository in RStudio or Positron
 
-Finally, we will create another RStudio project for this GitHub repository, so that we can easily work with these set of files in RStudio. Do this by opening RStudio and clicking "File -> New Project -> Existing Repository" and use "Browse" to find the folder for the repository that you created. This will open your project in R. You are now ready to work on this project locally.
+Finally, we will open this repository with RStudio or Positron. 
+
+::: {.panel-tabset}
+#### RStudio
+
+In order to open your Git-tracked repository as an RStudio project, open RStudio and click "File -> Open Project". This should prompt you to open your file browser, and you should navigate to the folder called "infant_gut_analysis". Once you select the correct folder, RStudio will open the project. 
+
+#### Positron
+
+In Positron, click "File -> Open Folder..." and then navigate to the folder called "infant_gut_analysis", which was created when you opened the .zip file. Once you select the correct folder, Positron will open it. 
+
+#### Other R IDE
+
+If you are using another R IDE besides RStudio or Positron, you should look up instructions for opening a folder in your environment. 
+
+:::
 
 ## Branches
 
@@ -655,7 +714,7 @@ Integrating changes from one branch into another branch.
 
 If there are no lines of code in any files that are directly in conflict, then merging will automatically combine the sets of files into a single version to move forward with. If there are lines that are directly in conflict, this will create what is called a merge conflict. [to-do: link to merge conflict section in troubleshooting Git and GitHub section]
 
-to-do: Add image of merged versions]
+to-do: Add image of merged versions
 
 Branches are also helpful when working with collaborators. If you are developing a new part of an analysis, you can do it in a separate branch. When you are ready for your collaborator to review your work, you can submit a "pull request", which is a request to merge your branch with the main branch. Your collaborator can review all of the changes between your branch and the new branch, and either approve the pull request or request edits before merging. [to-do: link to sections that describes pull requests in more detail below.]
 

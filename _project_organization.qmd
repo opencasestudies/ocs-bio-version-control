@@ -5,8 +5,11 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 # **Scientific project organization**
 ***
 
-note: once styles updated, make this a reproducibility box! 
-
+:::{.reproducibility_box}
+::::{.reproducibility_box_header}
+Reproducibility considerations
+::::
+::::{.inner_block}
 Although this is not directly related to version control, there are some useful ideas to know about organizing a scientific project, that will improve reproducibility. While most people have their own approaches to scientific project organization, there are a few principles that most successful organization schemes have in common. More information can be found in [this course](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/organizing-your-project.html).
 
 - file names should be concise but informative
@@ -18,9 +21,12 @@ Although this is not directly related to version control, there are some useful 
   - results folder for any results that should be shared or would take moderate or more computation to re-generate
 - number code scripts in the order that they should be run to generate results 
 
+::::
+:::
+
 ## Organization of this project 
 
-This project includes these files:
+If we look at the files contained in the "infant_gut_analysis" repository, they follow the recommendations provided above. 
 
 ```{r, fig.alt="Creating first repository", out.width = "70%", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e3d77952e3_0_0#slide=id.g3e3d77952e3_0_0")
@@ -29,8 +35,6 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 ## README
 
 A README file should describe the files related to your scientific project. It should describe where inputs come from, what each script does, and where outputs are generated. If someone reads through your README, they should know where to find each component of your analysis. 
-
-to-do: add question box
 
 :::{.think_question}
 ::::{.think_question_header}
@@ -52,13 +56,14 @@ One thing that often surprises new Git users is that any empty folders may exist
 
 ### Which files to track with Git 
 
-Recall that version control lets you track project files as they change. Therefore, there are some files that make a lot of sense to track with version control, and others that make less sense. Deciding which files to track is another topic that different people take different approaches to, but there are some rules that are typically followed: 
+Recall that version control lets you track project files as they change throughout the research process. Therefore, there are some files that should always be tracked with version control, some files that should never be tracked with version control, and some files that depend more on personal preference. Deciding which files to track is another topic that different people take different approaches to, but there are some rules that are typically followed: 
 
 - track source files that you've written (such as R scripts, shell scripts, LaTeX files, etc) 
 - track configuration files (such as .gitignore) that tell your tools how to interact with this repository
 - do not track intermediate files (such as log files), these are files that are generated automatically during a certain part of your workflow but are not needed on their own
 - sometimes track derived products (such as intermediate data, figures, or reports)
-  - this depends if you would like a copy of these products to live on GitHub, or if you would like anyone who wants them to reproduce them using your data and scripts that are tracked with Git
+  - this depends if you would like a copy of these products to live on GitHub
+  - this also depends on how you want other people to interact with figures or report, do you want them to be able to view or download them from GitHub, or do you want them to download your data and scripts from GitHub and generate the outputs for themselves 
 - do not track large data files that never change (we'll explain this more below)
 - typically avoid tracking binary files (although there are exceptions)
 
@@ -68,7 +73,7 @@ From a Git perspective, files are either text files or binary files. Text files 
 
 </details>
 
-The best way to avoid tracking a file is to add it to your .gitignore file. 
+The best way to avoid tracking a file is to add it to your .gitignore file. If a file or folder is included in your .gitignore file, it will not be staged when you use the command `git add .`. 
 
 to-do: add image of adding certain files not to track to .gitignore
 
