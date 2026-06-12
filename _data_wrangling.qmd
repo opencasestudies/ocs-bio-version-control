@@ -13,12 +13,38 @@ At the end of this section, save incremental data so that users can pause and co
 # **Data Wrangling**
 ***
 
-Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses. Use the README to identify which file performs data wrangling. Open this file and run the code. What are the minimum and maximum sampling days in the data set?  
+Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses. Use the README to identify which file performs data wrangling. Open this file and run the code. 
 
+:::{.think_question}
+::::{.think_question_header}
+Question opportunity
+::::
+::::{.inner_block}
+What are the earliest and latest days that samples were taken on in the data set?  
 <details> <summary> Hint </summary>
 
-Data are wrangled in the file "02_wrangle_data.R". You can use the functions `max()` and `min()` to get the maximum and minimum values in a vector. 
+Data are wrangled in the file "02_wrangle_data.R". You can use the functions `max()` and `min()` to get the maximum and minimum values in a vector. The variable in the cleaned dataset that gives the sampling day is called `sampling_day`. 
 
 </details>
+<details><summary>Answer</summary>
+
+```{r, echo = FALSE}
+load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
+```
+
+::: {.rcode}
+```{r}
+min(clean_metadata$sampling_day, na.rm = TRUE)
+max(clean_metadata$sampling_day, na.rm = TRUE)
+```
+
+The earliest day that a participant was sampled after birth was $0$, and the latest day was $480$. 
+
+:::
+
+
+</details>
+::::
+:::
 
 ***

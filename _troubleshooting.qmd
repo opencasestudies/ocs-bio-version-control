@@ -1,6 +1,30 @@
 # **Troubleshooting Git and GitHub**
 ***
 
+Most new and experienced users of Git and GitHub will run into problems occasionally. Luckily, version control is designed so that these problems can be solved, it just may take some time to get used to. There are many helpful [resources](https://dangitgit.com/en) online for common Git and GitHub problems, and AI chatbots can provide advice (add note here to verify AI advice before running it!). In this section, we will mention a few common Git and GitHub problems and provide solutions. 
+
+## I've created a merge conflict. What is this? How do I fix it? 
+
+Typically the "pull" -> "edit" -> "stage" -> "commit" -> "push" workflow smoothly incorporates changes that are made locally into the remote repository. However, occasionally merge conflicts will occur and need to be fixed manually. 
+
+:::{.definition_box}
+::::{.definition_box_header}
+Merge conflict
+::::
+::::{.inner_block}
+When one branch is being merged into another, and the branches both edited the same line or a file differently, or one branch edited a file that is deleted by the other branch. 
+::::
+:::
+
+to-do: include image of merge conflict
+
+
+## I've accidentally been working in the main branch, but I actually want my work to all go into a new branch. How do I switch branches and move this work with me? 
+
+## I've staged and commited a file, but I don't want to track it anymore. How can I remove it?
+
+## I've accidentally committed a large file. How do I remove this? 
+
 to-do: create sections for each of these problems, with ways to resolve them (both with GitHub Desktop and with the command line).
 
 Include several drop-down boxes here for common mistakes that come up (especially those that may come up in this case study).

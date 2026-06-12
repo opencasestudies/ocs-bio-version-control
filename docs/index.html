@@ -1,0 +1,2455 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Biomedical Open Case Studies: Making version controlled reproducible analyses – Biomedical Open Case Studies: Making version controlled reproducible analyses</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./assets/Bio-OCS_Logo.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-54dd8a8d8328b3b1e39060ef23a8f746.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-54dd8a8d8328b3b1e39060ef23a8f746.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-54dd8a8d8328b3b1e39060ef23a8f746.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DPKD3JXYG6"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-DPKD3JXYG6', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="version_control_styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./assets/Bio-OCS_Logo.png" alt="" class="navbar-logo light-content">
+    <img src="./assets/Bio-OCS_Logo.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Biomedical Open Case Studies: Making version controlled reproducible analyses</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/opencasestudies/ocs-bio-version-control"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Biomedical Open Case Studies: Making version controlled reproducible analyses</strong></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="https://www.opencasestudies.org/" class="sidebar-logo-link">
+      <img src="./assets/Bio-OCS_Logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./assets/Bio-OCS_Logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation"><strong>Motivation</strong></a></li>
+  <li><a href="#main-question" id="toc-main-question" class="nav-link" data-scroll-target="#main-question"><strong>Main Question</strong></a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><strong>Learning Objectives</strong></a></li>
+  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context"><strong>Context</strong></a>
+  <ul class="collapse">
+  <li><a href="#what-is-a-microbiome" id="toc-what-is-a-microbiome" class="nav-link" data-scroll-target="#what-is-a-microbiome">What is a microbiome?</a></li>
+  <li><a href="#what-is-a-meta-analysis" id="toc-what-is-a-meta-analysis" class="nav-link" data-scroll-target="#what-is-a-meta-analysis">What is a meta-analysis?</a></li>
+  </ul></li>
+  <li><a href="#introduction-to-git-and-github" id="toc-introduction-to-git-and-github" class="nav-link" data-scroll-target="#introduction-to-git-and-github"><strong>Introduction to Git and GitHub</strong></a>
+  <ul class="collapse">
+  <li><a href="#reproducibility-and-version-control" id="toc-reproducibility-and-version-control" class="nav-link" data-scroll-target="#reproducibility-and-version-control">Reproducibility and version control</a></li>
+  <li><a href="#why-use-version-control" id="toc-why-use-version-control" class="nav-link" data-scroll-target="#why-use-version-control">Why use version control?</a></li>
+  <li><a href="#what-are-git-and-github" id="toc-what-are-git-and-github" class="nav-link" data-scroll-target="#what-are-git-and-github">What are Git and GitHub?</a>
+  <ul class="collapse">
+  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git">Git</a></li>
+  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">GitHub</a></li>
+  <li><a href="#creating-new-repositories" id="toc-creating-new-repositories" class="nav-link" data-scroll-target="#creating-new-repositories">Creating new repositories</a></li>
+  </ul></li>
+  <li><a href="#getting-started-with-git-and-github" id="toc-getting-started-with-git-and-github" class="nav-link" data-scroll-target="#getting-started-with-git-and-github">Getting started with Git and GitHub</a>
+  <ul class="collapse">
+  <li><a href="#creating-a-github-account" id="toc-creating-a-github-account" class="nav-link" data-scroll-target="#creating-a-github-account">Creating a GitHub account</a></li>
+  <li><a href="#creating-a-new-github-repository" id="toc-creating-a-new-github-repository" class="nav-link" data-scroll-target="#creating-a-new-github-repository">Creating a new GitHub repository</a></li>
+  <li><a href="#installing-github-desktop" id="toc-installing-github-desktop" class="nav-link" data-scroll-target="#installing-github-desktop">Installing GitHub Desktop</a></li>
+  <li><a href="#installing-git" id="toc-installing-git" class="nav-link" data-scroll-target="#installing-git">Installing Git</a></li>
+  <li><a href="#connecting-git-to-github" id="toc-connecting-git-to-github" class="nav-link" data-scroll-target="#connecting-git-to-github">Connecting Git to GitHub</a></li>
+  <li><a href="#creating-a-local-clone-of-your-github-repository" id="toc-creating-a-local-clone-of-your-github-repository" class="nav-link" data-scroll-target="#creating-a-local-clone-of-your-github-repository">Creating a local clone of your GitHub repository</a></li>
+  <li><a href="#what-youve-done" id="toc-what-youve-done" class="nav-link" data-scroll-target="#what-youve-done">What you’ve done</a></li>
+  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a></li>
+  </ul></li>
+  <li><a href="#create-version-controlled-repository-for-your-project" id="toc-create-version-controlled-repository-for-your-project" class="nav-link" data-scroll-target="#create-version-controlled-repository-for-your-project">Create version controlled repository for your project</a>
+  <ul class="collapse">
+  <li><a href="#open-this-project-in-rstudio" id="toc-open-this-project-in-rstudio" class="nav-link" data-scroll-target="#open-this-project-in-rstudio">Open this project in RStudio</a></li>
+  </ul></li>
+  <li><a href="#branches" id="toc-branches" class="nav-link" data-scroll-target="#branches">Branches</a>
+  <ul class="collapse">
+  <li><a href="#create-a-new-branch-for-this-analysis" id="toc-create-a-new-branch-for-this-analysis" class="nav-link" data-scroll-target="#create-a-new-branch-for-this-analysis">Create a new branch for this analysis</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#scientific-project-organization" id="toc-scientific-project-organization" class="nav-link" data-scroll-target="#scientific-project-organization"><strong>Scientific project organization</strong></a>
+  <ul class="collapse">
+  <li><a href="#organization-of-this-project" id="toc-organization-of-this-project" class="nav-link" data-scroll-target="#organization-of-this-project">Organization of this project</a></li>
+  <li><a href="#readme" id="toc-readme" class="nav-link" data-scroll-target="#readme">README</a></li>
+  <li><a href="#project-organization-with-git-and-github" id="toc-project-organization-with-git-and-github" class="nav-link" data-scroll-target="#project-organization-with-git-and-github">Project organization with Git and GitHub</a>
+  <ul class="collapse">
+  <li><a href="#empty-folders" id="toc-empty-folders" class="nav-link" data-scroll-target="#empty-folders">Empty folders</a></li>
+  <li><a href="#which-files-to-track-with-git" id="toc-which-files-to-track-with-git" class="nav-link" data-scroll-target="#which-files-to-track-with-git">Which files to track with Git</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#what-are-the-data" id="toc-what-are-the-data" class="nav-link" data-scroll-target="#what-are-the-data"><strong>What are the data?</strong></a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><strong>Limitations</strong></a></li>
+  <li><a href="#ethical-considerations" id="toc-ethical-considerations" class="nav-link" data-scroll-target="#ethical-considerations"><strong>Ethical Considerations</strong></a></li>
+  <li><a href="#data-import" id="toc-data-import" class="nav-link" data-scroll-target="#data-import"><strong>Data Import</strong></a></li>
+  <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link" data-scroll-target="#data-wrangling"><strong>Data Wrangling</strong></a></li>
+  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><strong>Data Visualization</strong></a>
+  <ul class="collapse">
+  <li><a href="#create-a-new-branch-for-the-analysis" id="toc-create-a-new-branch-for-the-analysis" class="nav-link" data-scroll-target="#create-a-new-branch-for-the-analysis">Create a new branch for the analysis</a></li>
+  <li><a href="#visualize-data" id="toc-visualize-data" class="nav-link" data-scroll-target="#visualize-data">Visualize data</a></li>
+  </ul></li>
+  <li><a href="#pull-requests" id="toc-pull-requests" class="nav-link" data-scroll-target="#pull-requests"><strong>Pull requests</strong></a>
+  <ul class="collapse">
+  <li><a href="#what-is-a-pull-request" id="toc-what-is-a-pull-request" class="nav-link" data-scroll-target="#what-is-a-pull-request">What is a pull request?</a></li>
+  <li><a href="#how-to-make-a-pull-request" id="toc-how-to-make-a-pull-request" class="nav-link" data-scroll-target="#how-to-make-a-pull-request">How to make a pull request</a></li>
+  <li><a href="#components-of-a-good-pull-request" id="toc-components-of-a-good-pull-request" class="nav-link" data-scroll-target="#components-of-a-good-pull-request">Components of a good pull request</a></li>
+  <li><a href="#fill-in-pull-request" id="toc-fill-in-pull-request" class="nav-link" data-scroll-target="#fill-in-pull-request">Fill in pull request</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><strong>Summary</strong></a>
+  <ul class="collapse">
+  <li><a href="#synopsis" id="toc-synopsis" class="nav-link" data-scroll-target="#synopsis"><strong>Synopsis</strong></a></li>
+  <li><a href="#summary-plot" id="toc-summary-plot" class="nav-link" data-scroll-target="#summary-plot"><strong>Summary Plot</strong></a></li>
+  </ul></li>
+  <li><a href="#troubleshooting-git-and-github" id="toc-troubleshooting-git-and-github" class="nav-link" data-scroll-target="#troubleshooting-git-and-github"><strong>Troubleshooting Git and GitHub</strong></a></li>
+  <li><a href="#continued-learning" id="toc-continued-learning" class="nav-link" data-scroll-target="#continued-learning"><strong>Continued Learning</strong></a>
+  <ul class="collapse">
+  <li><a href="#merge-conflicts" id="toc-merge-conflicts" class="nav-link" data-scroll-target="#merge-conflicts">Merge conflicts</a></li>
+  <li><a href="#advancement-exercises" id="toc-advancement-exercises" class="nav-link" data-scroll-target="#advancement-exercises">Advancement Exercises</a>
+  <ul class="collapse">
+  <li><a href="#beginner" id="toc-beginner" class="nav-link" data-scroll-target="#beginner">Beginner</a></li>
+  <li><a href="#intermediate" id="toc-intermediate" class="nav-link" data-scroll-target="#intermediate">Intermediate</a></li>
+  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced">Advanced</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#additional-information" id="toc-additional-information" class="nav-link" data-scroll-target="#additional-information"><strong>Additional Information</strong></a>
+  <ul class="collapse">
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#helpful-links" id="toc-helpful-links" class="nav-link" data-scroll-target="#helpful-links"><strong>Helpful Links</strong></a></li>
+  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary">Glossary</a></li>
+  <li><a href="#references-1" id="toc-references-1" class="nav-link" data-scroll-target="#references-1">References</a></li>
+  <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info"><strong>Session Info</strong></a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments"><strong>Acknowledgments</strong></a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><strong>Biomedical Open Case Studies: Making version controlled reproducible analyses</strong></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!--
+  Update the various qmd documents below with each component of a Bio-OCS case study.
+  Besides filling in the title in the header of this document, no other changes should be necessary within this file.
+  Use the `include-sections` within the header to toggle section inclusion/exclusion as needed.
+  For documentation on quarto syntax possibilities, use https://quarto.org/docs/authoring/markdown-basics.html.
+  Examples in the documentation range from including images and videos to including margin notes, annotating code, and linking within a document.
+-->
+<section id="section" class="level4 outline">
+<h4 class="outline anchored" data-anchor-id="section"></h4>
+<p><a href="img/version_control_main_figure_mockup.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/version_control_main_figure_mockup.png" class="img-fluid" alt="Workflow of the different version control steps in this case study" width="800"></a></p>
+</section>
+<section id="section-1" class="level4">
+<h4 class="anchored" data-anchor-id="section-1"></h4>
+<!--
+The disclaimer block, license block, and funding info generally will not need updated
+
+Please update the access information (e.g., github link and data access)
+as well as any system or server requirements to work with the data
+-->
+<div class="tabset-margin-container"></div><div class="panel-tabset frontmatter-tabs">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Disclaimer</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">License</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Funding</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Citation</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">GitHub Repository</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href="">Keywords</a></li></ul>
+<div class="tab-content frontmatter-tabs">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="disclaimer_box">
+<div class="disclaimer_box_header">
+<p>Disclaimer</p>
+</div>
+<div class="inner_block">
+<p>The purpose of the <a href="https://opencasestudies.github.io" target="_blank">Open Case Studies</a> project is <strong>to demonstrate the use of various data science methods, tools, and software in the context of messy, real-world data</strong>. A given case study does not cover all aspects of the research process, is not claiming to be the most appropriate way to analyze a given data set, and should not be used in the context of making policy or clinical decisions without external consultation from scientific experts or medical care professionals. In addition, due to size constraints, datasets used within a case study may be a subset of the original/full dataset.</p>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="license_box">
+<div class="license_box_header">
+<p>License information</p>
+</div>
+<div class="inner_block">
+<p>This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en" target="_blank">(CC BY-NC 4.0)</a> United States License.</p>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="funding_box">
+<div class="funding_box_header">
+<p>Funding information</p>
+</div>
+<div class="inner_block">
+<p>This work is funded through the National Institutes of Health, specifically the National Institute of General Medical Sciences: Grant Number 1R25GM160622.</p>
+</div>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<!--
+The reference block (specifically the inner_block) should be updated to reflect how this case study should be cited
+-->
+<div class="reference_box">
+<div class="reference_box_header">
+<p>To cite this case study, please use:</p>
+</div>
+<div class="inner_block">
+<p>Teichman, Sarah and Wright, Carrie. (2026). <a href="https://github.com/opencasestudies/ocs-bio-version-control/">https://github.com/opencasestudies/ocs-bio-version-control/</a>. Making version-controlled reproducible analyses (Version v1.0.0).</p>
+</div>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<!--
+UPDATE: ACCESS Information (github source and data)
+In this space, provide an open access link to the case study source files.
+This is necessary for users to get access to case study data, at a minimum.
+See the following example from a previous case study (prior to Motivation section): https://www.opencasestudies.org/ocs-bp-co2-emissions/
+-->
+<div class="github_repo_box">
+<div class="github_repo_box_header">
+<p>GitHub Repository</p>
+</div>
+<div class="inner_block">
+<p>To access the GitHub repository for this case study see here: <a href="https://github.com/opencasestudies/ocs-bio-version-control">https://github.com/opencasestudies/ocs-bio-version-control</a></p>
+</div>
+</div>
+<!--
+If the data isn't in the main github repository, be sure to describe and link to the open source location of the data and how to access it
+-->
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<div class="keyword_box">
+<div class="keyword_box_header">
+<p>Keywords</p>
+</div>
+<div class="inner_block">
+<ul>
+<li>Keyword 1</li>
+<li>Keyword 2</li>
+<li>Keyword 3</li>
+<li>…Keyword n</li>
+</ul>
+</div>
+</div>
+<!--
+Include bioOCSdata package information once ready/applicable
+-->
+</div>
+</div>
+</div>
+</section>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<div class="prereq_box">
+<div class="prereq_box_header">
+<p>Prerequisites</p>
+</div>
+<div class="inner_block">
+<p>To follow along with this case study, you’ll need the following installed:</p>
+<ul>
+<li>R (<a href="https://www.r-project.org">install here</a>)</li>
+<li>RStudio (<a href="https://posit.co/download/rstudio-desktop">install here</a>) or Positron (<a href="https://positron.posit.co/install.html">install here</a>) or another IDE compatible with R</li>
+</ul>
+<p>It will also be helpful to be have the following skills:</p>
+<ul>
+<li>basic R skills (many introductory courses can be found online, including <a href="https://hutchdatascience.org/Intro_to_R/">this one</a>)</li>
+<li>familiarity with <code>dplyr</code> and <code>ggplot2</code>, or willingness to learn (these <a href="https://rstudio.github.io/cheatsheets/data-transformation.pdf"><code>dplyr</code></a> and <a href="https://rstudio.github.io/cheatsheets/data-visualization.pdf"><code>ggplot2</code></a> cheatsheets may be helpful, as well as the original <a href="https://www.opencasestudies.org/search.html">open case studies</a>)</li>
+</ul>
+<p>You do not need to have any previous Git and GitHub knowledge or experience for this case study.</p>
+</div>
+</div>
+<!--
+UPDATE: SYSTEM, SERVER, or MOCK COMPUTING Information:
+
+In this space, provide any necessary system requirements or instructions on how to access a server (if necessary)
+or submit a mock computing job within the learnr environment in order to receive pre-processed datasets (if necessary).
+In essence this section is useful to provide information to learners on how to work with the data and follow along with this case study.
+This section may not be needed for all case studies and can be removed if not
+-->
+<!--
+Describe the biological motivation for this case study.
+Include relevant explanatory images and references throughout.
+See this previous case study as an example: https://www.opencasestudies.org/ocs-bp-co2-emissions/#Motivation
+Images or videos may be helpful so this includes an example of including an image.
+-->
+</section>
+<section id="motivation" class="level1">
+<h1><strong>Motivation</strong></h1>
+<hr>
+<p>In this case study, we ask you to imagine that you are working with a collaborator on a scientific project. You receive the following email, with a request for your help performing a preliminary data analysis. Don’t worry if you don’t understand the context of this analysis right now, background will be given later in the case study.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3d9461be06f_0_0.png" class="img-fluid figure-img" style="width:100.0%" alt="Motivation email asking for cohort comparison analysis"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>If you were to start working on this project with your collaborator, it may look something like this.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3e1f8f72664_0_368.png" class="img-fluid figure-img" style="width:100.0%" alt="Back and forth over email without version control"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3e1f8f72664_0_429.png" class="img-fluid figure-img" style="width:100.0%" alt="Back and forth over email without version control"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Between your own edits as you work on this project and the back-and-forth with your collaborator, it will quickly become challenging to keep track of all of the files and changes to them over time. A solution to this is version control!</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3e1f8f72664_0_444.png" class="img-fluid figure-img" style="width:100.0%" alt="Back and forth over email without version control"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In this case study, you will learn how to use Git and GitHub to track this project and perform the requested comparison of studies used in the meta-analysis. You will also learn how version control can facilitate collaboration and make a scientific project more reproducible.</p>
+<div class="definition_box">
+<div class="definition_box_header">
+<p>Reproducibility</p>
+</div>
+<div class="inner_block">
+<p>The ability for someone else the run the same analysis on the same data and get the same results.</p>
+</div>
+</div>
+<hr>
+<!--
+Describe the main biological questions for this case study.
+What will our analysis aim to answer? There can be more than 2.
+Fill them in within the inner_block section, but leave the custom box syntax
+See this previous case study as an example: https://www.opencasestudies.org/ocs-bp-co2-emissions/#Main_Questions
+-->
+</section>
+<section id="main-question" class="level1">
+<h1><strong>Main Question</strong></h1>
+<hr>
+<div class="main_question">
+<div class="main_question_header">
+<p>Our main question(s)</p>
+</div>
+<div class="inner_block">
+<ol type="1">
+<li>How does the use of version control contribute to transparent and reproducible science?</li>
+<li>How can Git and GitHub be used to facilitate collaboration on a research project?</li>
+<li>In this meta-analysis of infant gut microbiome samples, how do the original studies compare in their sampling designs?</li>
+</ol>
+</div>
+</div>
+<hr>
+</section>
+<section id="learning-objectives" class="level1">
+<h1><strong>Learning Objectives</strong></h1>
+<hr>
+<!--
+Replace the shell content and enumerate the learning objectives in the referenced qmd files.
+For an example of this section, see this previous Open Case Study: https://www.opencasestudies.org/ocs-bp-co2-emissions/#Learning_Objectives
+
+Statistical LOs were provided in the original open case studies but they may be omitted here depending on the case study.
+Biological LOS were not provided in the original open case studies and should be included in all Bio-OCS case studies.
+-->
+<p>In this case study, we will introduce version control and describe why and how to use it to track a scientific project. We will use Git and GitHub to track a comparison of the sampling designs of studies used in a meta-analysis.</p>
+<p>The skills, methods, and concepts that students will be familiar with by the end of this case study are:</p>
+<p><u><strong>Data Science/Bioinformatics Learning Objectives:</strong></u></p>
+<!--
+Enumerate the Data Science or Bioinformatic specific learning objectives here.
+(Can have more than 3).
+For an example, see this previous Open Case Study: https://www.opencasestudies.org/ocs-bp-co2-emissions/#Learning_Objectives
+-->
+<ol type="1">
+<li>Understand ways in which version control facilitates reproducible science</li>
+<li>Understand how version control works by recording differences between versions of a project</li>
+<li>Follow a workflow to create and make changes to a repository with Git and GitHub</li>
+<li>Make pull requests to propose changes to a codebase and request review from a collaborator</li>
+<li>Organize a repository for a project with a README file and folders for data, figures, and results</li>
+<li>Understand the value and limitations of combining data from multiple studies in a meta-analysis.</li>
+<li>Use visualizations to compare sampling designs across a set of studies.</li>
+</ol>
+<!--
+{{< include _biological_los.qmd >}} -->
+<hr>
+<!--
+More details on the background on the case study topic as well its relation to biomedical science.
+Videos or images may be helpful so this includes an example of embedding a video.
+-->
+</section>
+<section id="context" class="level1">
+<h1><strong>Context</strong></h1>
+<hr>
+<section id="what-is-a-microbiome" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-a-microbiome">What is a microbiome?</h3>
+<p>A microbiome is a collection of microorganisms that live in an environment. One commonly studied microbiome is the human gut microbiome. The bacteria that live in our gut help regulate our metabolism, digest fiber, protect us against pathogens, and perform other important roles in our health <span class="citation" data-cites="han2026host">(<a href="#ref-han2026host" role="doc-biblioref"><span class="nocase">Han et al.</span> 2026</a>)</span>. Studies have shown associations between changes to the gut microbiome and many diseases, including diabetes, autoimmune diseases, and Alzheimer’s disease.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bacterium.png" class="img-fluid figure-img"></p>
+<figcaption>Bacterium from <a href="https://unsplash.com/photos/red-strawberry-on-white-textile-2-Hv-Rg4asA">Unsplash</a></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/digestive_system.png" class="img-fluid figure-img"></p>
+<figcaption>Human digestive system from <a href="https://pixabay.com/illustrations/abdomen-biology-bladder-body-8762848/">Pixabay</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Much of the gut microbiome composition is determined at birth and in early life, and the infant gut microbiome has implications for health later in life <span class="citation" data-cites="wang2021metagenomic">(<a href="#ref-wang2021metagenomic" role="doc-biblioref"><span class="nocase">Wang et al.</span> 2021</a>)</span>. Therefore, scientists are interested in understanding more about the factors that shape the infant gut microbiome. One question of interest is how similar the gut microbiomes are between infants and their mothers, and how this changes over time. In order to address this question, several longitudinal studies have been conducted to collect samples from pairs of infant and mother longitudinally. Sequencing microbiome samples is expensive, and therefore each study is limited in the number of samples they can collect. Want et al.&nbsp;conducted a meta-analysis of eight of these studies, using this large data set to compare gut microbiome composition (which microbes are there?) and function (what are the microbes doing?) between infants and mothers.</p>
+</section>
+<section id="what-is-a-meta-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-a-meta-analysis">What is a meta-analysis?</h3>
+<p>A meta-analysis is the analysis of data from a collection of studies targeting a common research question <span class="citation" data-cites="dersimonian1986meta">(<a href="#ref-dersimonian1986meta" role="doc-biblioref">DerSimonian and Laird 1986</a>)</span>. Ideally these studies would have similar participants and study protocols. A meta-analysis may be beneficial when the original studies have samples sizes that are too small to provide enough evidence for significant results. Additionally, meta-analyses provide opportunities to reuse data, which often require a large amount of effort and funding to collect. Meta-analyses can also be used to generate a consensus result from a set of studies. However, meta-analyses must be conducted with care, as combining data from studies with different participant populations and different study designs can lead to misleading results.</p>
+<p>There are two general approaches to performing meta-analyses <span class="citation" data-cites="andrade2025primer">(<a href="#ref-andrade2025primer" role="doc-biblioref">Andrade 2025</a>)</span>. In the first approach, estimates or other summaries from each study are combined in order to generate a summary from the set of studies. One benefit of this approach is that the original data from each study are not needed. However, original studies can only be combined if they estimate the same summary of their population (for example, a difference in means between two groups or an odds ratio). Additionally, the data would need to be analyzed in the same way for each study (for example, the same variables would need to be adjusted for). In the second approach, data from each of the studies are combined and re-analyzed jointly, accounting for the study from which each observation originated. A benefit of this approach is that new research questions can be asked, as long as the relevant data exist from each study. However, it requires accessing the raw data from each study.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3e878f6c4a7_0_0.png" class="img-fluid figure-img" style="width:100.0%" alt="Types of meta-analyses"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><span class="citation" data-cites="wang2021metagenomic"><span class="nocase">Wang et al.</span> (<a href="#ref-wang2021metagenomic" role="doc-biblioref">2021</a>)</span> take the second approach, using the raw data from eight longitudinal studies of infant and mother gut microbiomes, processing the datasets with a unified protocol, and conducting analyses on the combined dataset. When they fit models to the data, they “block” by study, which means they include a term in their models that accounts for which study each participant came from, so that results are not confounded by differences between study cohorts. However, the validity of this approach depends on how comparable the original studies are. In particular, differences in sample size and longitudinal sampling schedules may affect the interpretation of results. This motivates our exploration of the similarities and differences between the various study cohorts before the data were pooled. We want to understand how comparable these studies are, both in terms of sample size (how many samples are in each study?), and in terms of their longitudinal sampling study design (when in the lifespan of the infants did they take samples?).</p>
+<hr>
+<!--
+Introduction to Git and GitHub (similar to "Dashboard Basics" section in school shootings OCS)
+-->
+</section>
+</section>
+<section id="introduction-to-git-and-github" class="level1">
+<h1><strong>Introduction to Git and GitHub</strong></h1>
+<hr>
+<p>Before we start to address your project with Collab O. Rator, we will provide an introduction to version control with Git and GitHub. In this section, you will learn more about what Git and GitHub are, create a GitHub account, download Git software, and create your first version controlled project. In the next section we will return to the infant microbiome meta-analysis project.</p>
+<section id="reproducibility-and-version-control" class="level2">
+<h2 class="anchored" data-anchor-id="reproducibility-and-version-control">Reproducibility and version control</h2>
+<div class="definition_box">
+<div class="definition_box_header">
+<p>Reproducibility</p>
+</div>
+<div class="inner_block">
+<p>The ability for someone else the run the same analysis on the same data and get the same results.</p>
+</div>
+</div>
+<p>When conducting a scientific project, reproducibility is very important. If another researcher can use your data and code and generate the same results, then your conclusions are more credible to the scientific community. Version control is a tool that enables reproducible research by recording changes to a project over time. When used carefully, it gives a complete history of changes made over the course of a project. It also provides a digital backup and an online repository of code and data for other researchers to see. Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes. While several tools exist for version control, we will introduce Git and GitHub, two of the most commonly used version control tools.</p>
+</section>
+<section id="why-use-version-control" class="level2">
+<h2 class="anchored" data-anchor-id="why-use-version-control">Why use version control?</h2>
+<p>We will refer to two papers about version control.</p>
+<div class="reference_box">
+<div class="reference_box_header">
+<p>Version control resources:</p>
+</div>
+<div class="inner_block">
+<ul>
+<li>Blischak, J. D., Davenport, E. R., &amp; Wilson, G (2016). <a href="https://doi.org/10.1371/journal.pcbi.1004668">A Quick Introduction to Version Control with Git and GitHub</a>, PLoS Computational Biology, 12(1).<br>
+</li>
+<li>Bryan, J (2018). <a href="https://doi.org/10.7287/peerj.preprints.3159v2">Excuse Me, Do You Have a Moment to Talk About Version Control?</a> The American Statistician, 72(1), 20-27.</li>
+</ul>
+</div>
+</div>
+<p>Consider a typical workflow when you have a project with multiple files (for example: data, code, resulting figures). You likely have a folder on your computer where you keep these files. When you edit a file you save it, and you have access to the most recent version. You might run into a situation where you want to try something new, so you save “project_file_old.R” along with “project_file_updated.R” or perhaps “project_file_july_2026.R” or eventually “project_file_final_version_4_final.R”. If you haven’t saved an older version of a file but you wish you could revert to the version from last week before you tried something new, you would be out of luck.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3eb20c49c0b_0_0.png" class="img-fluid figure-img" style="width:100.0%" alt="why do you need version control (single person)"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Similarly, think about how you might work on that same project with a collaborator. Perhaps you both have a folder on your computer for that project, and when you make an update you email the file to your collaborator, and they copy that update into their file, or save your file in their folder. Perhaps the two of you update the same file at the same time and then you have to go through line by line to merge the updates into a single version of the file.</p>
+<p>to-do: include similar image to above, but if multiple people are working on a project and sending files back and forth.</p>
+<p>While both of these organizational systems can work well when carefully maintained, they are time consuming and prone to error. Version control is a tool that makes it easier to manage sets of files for projects. It automates several of the processes described above, and makes others dramatically easier. While version control was originally made for software engineers to work together on large projects, it is now commonly used for scientific projects as well.</p>
+<p>At its core, version control lets the user track sequential changes to a set of files, with a short message attached to each version. Multiple people can work with the same version controlled folder, and different versions of files can automatically be merged, unless they are directly in conflict.</p>
+</section>
+<section id="what-are-git-and-github" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-git-and-github">What are Git and GitHub?</h2>
+<p>Git is a version control tool, and GitHub is an website for hosting folders that are tracked with Git. Git works locally on your computer to record different versions of a project, and GitHub works online to provide a digital backup of files, let you connect with collaborators, and optionally create a web presence for your project.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3d9461be06f_0_114.png" class="img-fluid figure-img" style="width:100.0%" alt="Git vs GitHub"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="git" class="level3">
+<h3 class="anchored" data-anchor-id="git">Git</h3>
+<p>The files that are tracked as part of a version controlled project are contained in a repository.</p>
+<div class="definition_box">
+<div class="definition_box_header">
+<p>Repository (or repo for short)</p>
+</div>
+<div class="inner_block">
+<p>A folder in Git that contains all of the files to be tracked for a project.</p>
+</div>
+</div>
+<p>When you set up a repository, Git will save an initial version of that repository. Git works by tracking the evolution of a repository through a series of commits.</p>
+<div class="definition_box">
+<div class="definition_box_header">
+<p>Commit</p>
+</div>
+<div class="inner_block">
+<p>A snapshot of a repository at a certain time.</p>
+</div>
+</div>
+<p>Another way to think about a commit is as a save point in a video game. This means that it saves your work up to a certain point in time.</p>
+<p>Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. If you want to return to a previous version of a project, you can return to the version of files at any commit.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3d9461be06f_0_143.png" class="img-fluid figure-img" style="width:100.0%" alt="Git vs GitHub"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="github" class="level3">
+<h3 class="anchored" data-anchor-id="github">GitHub</h3>
+<p>While you could only use Git locally to track versions of files, it is much more powerful when combined with GitHub. You can use GitHub to host a Git-tracked repository online. We will use the terms local repository and remote repository to distinguish between these.</p>
+<div class="definition_box">
+<div class="definition_box_header">
+<p>Local</p>
+</div>
+<div class="inner_block">
+<p>The Git-tracked repository on your computer.</p>
+</div>
+</div>
+<div class="definition_box">
+<div class="definition_box_header">
+<p>Remote</p>
+</div>
+<div class="inner_block">
+<p>The online version of the repository tracked on GitHub.</p>
+</div>
+</div>
+<p>There are several benefits to pairing your local repositories with remote repositories on GitHub.</p>
+<ul>
+<li>You have a backup of files in case something happens to your computer</li>
+<li>You can easily work with collaborators</li>
+<li>You have a central location where your data and code are stored for a project that can be viewed by and shared with other scientists</li>
+</ul>
+</section>
+<section id="creating-new-repositories" class="level3">
+<h3 class="anchored" data-anchor-id="creating-new-repositories">Creating new repositories</h3>
+<p>There are two ways to start new version controlled projects with Git and GitHub. You could create a new repository locally on your computer, track it with Git, and then “push” it to GitHub, creating a remote version of the repo. Or, you could create a new remote repository on GitHub and then “clone” it to your computer, creating a local version. We will provide examples of both workflows in the next section.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3d9461be06f_0_210.png" class="img-fluid figure-img" style="width:100.0%" alt="Git vs GitHub"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="getting-started-with-git-and-github" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started-with-git-and-github">Getting started with Git and GitHub</h2>
+<section id="creating-a-github-account" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-github-account">Creating a GitHub account</h3>
+<p>We will start with GitHub. If you do not have an account, make one <a href="https://www.google.com/url?sa=t&amp;source=web&amp;rct=j&amp;opi=89978449&amp;url=https://github.com/signup&amp;ved=2ahUKEwjRoqKR48-TAxVIyOYEHYMpA6QQFnoECA0QAQ&amp;usg=AOvVaw0a6qEmIZVdziwPUb-hFApr">here</a>.</p>
+<p>When you choose a username, consider <a href="https://happygitwithr.com/github-acct">advice</a> from Jenny Bryan (a data scientist who has thought a lot about version control). She suggests choosing a username that incorporates your real name and that you would be comfortable sharing with professional colleagues.</p>
+</section>
+<section id="creating-a-new-github-repository" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-new-github-repository">Creating a new GitHub repository</h3>
+<p>Now that you have a GitHub account, you can create your first repository.</p>
+<p>To create your repository: - click on the menu bottom (three horizontal lines) - click “Repositories” - click the green button that says “New repository”</p>
+<p>This will take you to a new page. GitHub will automatically set you as the owner of the repository, and you can choose a name. Let’s call this repository “my-first-repository”.</p>
+<p>A few notes on naming repositories:</p>
+<ul>
+<li>keep the name descriptive but short</li>
+<li>don’t use spaces, instead use “-”, “_“, or”.”</li>
+</ul>
+<p>Next, add a short description for this repository. Toggle the bottom next to “Add README” to “On”. For now, we won’t worry about visibility, a template, .gitignore, or license.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3e1f8f72664_0_798.png" class="img-fluid figure-img" style="width:100.0%" alt="Creating first repository"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Use the drop-down sections to learn about each of the configuration options.</p>
+<hr>
+<details>
+<summary>
+Visibility
+</summary>
+<p>By default your repository will be set to public, which means that anyone can view all of the files contained in it. If you would prefer that only you and collaborators that you add can view the contents, you can set the visibility to private.</p>
+</details>
+<details>
+<summary>
+Template
+</summary>
+<p>A template is an existing repository that you can use as a template for new repositories. A repository made from this template will have the same folders and files as the template repository. You can make any repository that you have access to into a template. Typically, you will not use a template when creating a new repository.</p>
+</details>
+<details>
+<summary>
+README
+</summary>
+<p>We will discuss README files in more detail in the project organization section, but a README file explains what your repository is used for and what files it contains. If you are creating a repository from scratch, we strongly suggest that you include a README.</p>
+</details>
+<details>
+<summary>
+.gitignore
+</summary>
+<p>Often when you commit files you will commit all files in your repository. However, you may have files that you don’t want to commit, such as large data files or intermediate files (we will discuss which files you may not want to commit later in the project organization section). If there is a file that you don’t want to track with version control, you can add it to the .gitignore file, to tell Git to ignore it. When you click the down arrow next to “No .gitignore” it will provide several templates. For a project using R, the “R” template is a good place to start. It includes files often associated with projects in R that are not typically tracked with version control.</p>
+</details>
+<details>
+<summary>
+License
+</summary>
+<p>A license is a legal document that states who can use your code. Although it may seem counterintuitive, a license typically makes your code more “open”, which means that other people can use it with fewer restrictions. There are two main types of licenses used for most R projects hosted on GitHub: permissive (MIT) and copyleft (GPL). A permissive license means that people can use your code with minimal restrictions. A copyleft license means that any code that incorporates your code must also be open-source. You can read more about licenses for open-source projects <a href="https://opensource.guide/legal/">here</a>, or use <a href="https://choosealicense.com">this resource</a> to see what license might be most appropriate for your project.</p>
+</details>
+<hr>
+<p>Once you click “Create repository”, you will be brought to the GitHub page for your repository. GitHub URLs all have the same format: “https://github.com/your_user_name/your_repository_name”.</p>
+<p>If you look at your repository, you will see that it has one file, README.md. This is where you will document what is contained in your repository, and it will serve as a homepage for your project. It is written in Markdown, an easy language that can be used to format documents (you can find more information about how Markdown works and its syntax <a href="https://www.markdownguide.org">here</a>). You will now edit the README:</p>
+<ul>
+<li>click the pencil on the upper right of the README</li>
+<li>add a new line to your README document that says “Adding a commit from GitHub.”</li>
+<li>click the green button that says “Commit changes”</li>
+<li>provide an informative commit message, something like “adding new line to README”</li>
+<li>click the green button that says “Commit changes”</li>
+<li>click the repository name in the upper left to navigate back to the home page</li>
+</ul>
+<p>to-do: replace this image with a simplified figure with some cartoon elements.</p>
+<p><a href="img/github_edit_readme.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/github_edit_readme.png" class="img-fluid" alt="Edit README from GitHub" width="800"></a></p>
+<p>Let’s now look at the commit history for this repository. We can do that by clicking where it says “2 Commits” just below the green “Code” button.</p>
+<p>This brings us to a list of commits for this repository. You should see two commits, the initial commit that created the repository and the one you just made when you edited the README file. Click on the title of the newer commit.</p>
+<p>[to-do: add image of this]</p>
+<p>This will bring you to information about the commit. Each commit has an alphanumeric hash (set of letters and numbers), which uniquely identifies that commit. In this view, you can see each file that has been changed in your commit, as well as the changes to the files. Here, we can see with the plus signs that you’ve added a line to the README. This type of visual representation of a commit, in terms of the changes between files, can be helpful when you want to understand the history of a project.</p>
+</section>
+<section id="installing-github-desktop" class="level3">
+<h3 class="anchored" data-anchor-id="installing-github-desktop">Installing GitHub Desktop</h3>
+<p>Next, we will move from interacting with GitHub to interacting with Git. First, we recommend that you install GitHub Desktop. This is a GUI (graphical user interface) that makes it easier for us to interact with Git. While we will use GitHub Desktop in this case study, another common way to interact with Git is through the command line on your computer. If you are already comfortable using the command line, you may prefer this to GitHub Desktop. When we use GitHub Desktop for version control tasks in this case study, we will also provide the command line code for all Git operations.</p>
+<details>
+<summary>
+More information about the command line.
+</summary>
+<p>You may have also heard this called the <em>shell</em>, <em>terminal</em>, <em>console</em>, or <em>command prompt</em>. The command line lets us interact with our computers by typing commands (as opposed to using a graphical interface which involves clicking buttons and menus). These commands let you perform tasks such as navigating and modifying your file system, installing programs, running code, and working with Git. Each of these tasks can also be performed using a graphical interface. Some people prefer the visual layout of a GUI, while others prefer the simplicity and centralized control of the command line.</p>
+</details>
+<p>Follow this <a href="https://desktop.github.com/download/">link</a> to install GitHub Desktop.</p>
+<details>
+<summary>
+If you are using a Mac, it will ask you if your Mac has a Apple silicon or Intel chip. Click here for more information.
+</summary>
+<p>To check whether your Mac has an Apple silicon chip or an Intel chip, click the Apple menu -&gt; “About This Mac”. If the information window shows “Chip” then your Mac uses Apple silicon. If the information window shows “Processor” then your Mac uses an Intel processor.</p>
+</details>
+</section>
+<section id="installing-git" class="level3">
+<h3 class="anchored" data-anchor-id="installing-git">Installing Git</h3>
+<p>If you have successfully installed GitHub Desktop, then Git is already installed on your system and no further installation is required.</p>
+<details>
+<summary>
+If you are unable to install GitHub Desktop or would prefer not to install GitHub Desktop, you can install Git using the command line. Click here for more information.
+</summary>
+<p>First, we will see if Git is installed on your computer, and install it if not. We will start by opening the command line.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Open the application called “Terminal”. You can find this by using Spotlight Search and searching for “Terminal”.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Open the application called “Command Prompt”. You can find this by using the Start menu and searching for “Command Prompt”. You could instead use the PowerShell by searching for “PowerShell” instead.</p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>Open the application called “Terminal”. You can find it by using your system’s application menu and searching for “Terminal”.</p>
+</div>
+</div>
+</div>
+<p>In the command line, type:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> version</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>If the output tells you which version of Git is installed, then you already have Git. For example, if Git is already installed, the output may look like:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> version 2.50.1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>If you see a message like “git: command not found” or “git is not recognized” or a prompt to install something, then Git is not installed and you’ll need to install it.</p>
+<p>To install Git, follow these instructions:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>Follow <a href="https://github.com/git-guides/install-git#install-git-on-mac">these instructions</a>.</p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p>Follow <a href="https://github.com/git-guides/install-git#install-git-on-windows">these instructions</a>.</p>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p>Follow <a href="https://github.com/git-guides/install-git#install-git-on-linux">these instructions</a>.</p>
+</div>
+</div>
+</div>
+</details>
+</section>
+<section id="connecting-git-to-github" class="level3">
+<h3 class="anchored" data-anchor-id="connecting-git-to-github">Connecting Git to GitHub</h3>
+<p>If you have GitHub Desktop installed, we can use it to authenticate your GitHub account with Git. We could also do this with the command line, but GitHub Desktop makes it easier.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Command line</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p>When you open GitHub Desktop, it will prompt you to sign into GitHub. If it does not, then follow <a href="https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/authenticating-to-github-in-github-desktop">these instructions</a>, choosing instructions for Mac or Windows based on your operating system.</p>
+<p>Next, we will configure Git. This means that you will tell Git your name and email. Follow <a href="https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop">these instructions</a>, again choosing instructions for Mac or Windows based on your operating system.</p>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<p>First we will tell Git your name and email address. Open the command line and enter the following:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your name here"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"Your email here"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The third line should print your name and email correctly.</p>
+<p>Next, you need to connect your GitHub account to your local Git.</p>
+<p>GitHub no longer supports using passwords to connect Git and GitHub, so you’ll instead need to use a Personal Access Token (PAT). To create a token, <a href="https://github.com/settings/tokens">follow these instructions</a>. Click “Generate new token” and choose “Generate new token (classic)”. Give your token a name and expiration date. Select the “repo” scope. Click “Generate Token”. Copy the token to your clipboard, or keep this window open. You will not be able to access this again.</p>
+<p>Now, open the command line and run the following:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper osxkeychain</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper manager</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<p>If available, run:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper manager</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>If that does not work, use:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper cache</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>This tells Git to remember the login credentials that we will provide so you won’t need to enter them each time.</p>
+<p>Next, we need to trigger a GitHub credentials check. We will do this by cloning the repository that you made (this means we will make a local version of this repo). Run the following, replacing “your_username” with your username:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/your_username/my-first-repository.git  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Running this command should prompt you to give a username and password. Use your GitHub username, and the PAT you just generated as the password (do not use your GitHub password). Git will now store these credentials so you won’t need to enter them again. When your PAT expires, you will need to follow these steps again.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="creating-a-local-clone-of-your-github-repository" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-local-clone-of-your-github-repository">Creating a local clone of your GitHub repository</h3>
+<p>You’ve finished setting up GitHub, Git, and GitHub Desktop, great job! Now, we can create a local version of “my-first-repository” that you made on GitHub earlier.</p>
+<p>Making a local copy of a repository that is hosted on GitHub is called “cloning”. Start by navigating to your repository on GitHub, and copy the URL.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Command line</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<p>From GitHub Desktop, go to “File -&gt; Clone Repository” and then provide the URL to your GitHub repository. Now, you should be able to see a window in GitHub Desktop that corresponds with “my-first-repository”. If you click on history, you can see a list of commits to this repository.</p>
+<p>to-do: add image</p>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<p>You were already asked to clone this repository in the last section, in order to trigger Git’s login credentials. If you haven’t done that, open the command line and enter the following, replacing “your_username” with your username:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/your_username/my-first-repository.git  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>You will know that this has worked if you see the following output:</p>
+<div class="shell">
+<pre><code>Cloning into 'my-first-repository'...</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>Next, you will open the local repository and make an update. RStudio and Positron have different approaches to opening folders.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false" href="">Positron</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false" href="">Other R IDE</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<p>The easiest way to work with a Git-tracked repository in RStudio is to make an RStudio project. A project is a folder that R can open as a self-contained unit. The most useful part of an RStudio project is that you can use relative file paths, with the folder that you used to create the project as the root. Using relative file paths for a project, as opposed to absolute file paths that are specific to your personal computer, make it easier to collaborate with other people.</p>
+<p>In order to open your Git-tracked repository as an RStudio project, open RStudio and click “File -&gt; Open Project”. This should prompt you to open your file browser, and you should navigate to the folder called “my_first_repository”, which was created when you cloned the repository. Once you select the correct folder, RStudio will open the project. If you look at the “Files” panel, you’ll see the README that you made for “my_first_repository” on GitHub. You will additionally see a file called “my_first_repository.Rproj”. This file is automatically made by RStudio when opening a new project, and saves information about the project.</p>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<p>In Positron, click “File -&gt; Open Folder…” and then navigate to the folder called “my_first_repository”, which was created when you cloned the repository. Once you select the correct folder, Positron will open it. In the file explorer, you will be able to see the README that you made for “my_first_repository” on GitHub.</p>
+</div>
+<div id="tabset-7-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-3-tab">
+<p>If you are using another R IDE besides RStudio or Positron, you should look up instructions for opening a folder in your environment.</p>
+</div>
+</div>
+</div>
+<p>Now that we’ve opened our local repository and have access to the README, we will add a new line:</p>
+<ul>
+<li>click on the “README.md” file</li>
+<li>add a new line to the README that says “Adding a new commit locally” and save the file</li>
+</ul>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false" href="">Command line</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
+<p>Now, navigate back to GitHub Desktop. Where it previously said “no local changes”, it now will show changes to your repository. This will include two added files (“.gitignore” and “my-first-repository.Rproj”), and modifications to “README.md”. You can see that new files have a green box with a plus next to them, and modified files have a yellow box with a circle next to them.</p>
+<p>By default, the box next to each of these files is checked. This means that each of these files are “staged”, or ready to be included in a commit and added to the repository history. If you uncheck the box, you are telling Git that for now you would not like to track that file with version control.</p>
+<p>In the lower left corner you will see a box that says “Summary (required)” and “Description”. This is where you will put your commit message.</p>
+<p>to-do: add image</p>
+<p>A few pieces of advice to consider for your commit messages:</p>
+<ul>
+<li>A commit message should be informative. Think of a collaborator (or yourself in a few months) reading the commit message. It should tell the reader why you’ve made this commit. Did you add a file? Did you fix a bug in the code? Did you remove an outdated data file?</li>
+<li>A commit message should be concise. Avoid adding too many unnecessary details here. The reader can always look at the differences in files for the commit to see exactly what you’ve done.</li>
+<li>In a public repository, the commit message will be visible to anyone and exist as long as the repository does. Make sure that your message is appropriate and you’d be comfortable with colleagues seeing it.</li>
+</ul>
+<p>to-do: make graphic showing good and bad commit messages: good</p>
+<ul>
+<li>“Add ‘01_clean_data.R’ for data cleaning.”</li>
+<li>“Add boxplot to ‘03_make_plots.Rmd’”</li>
+<li>“Removing ‘old_data.csv’ because it has been replaced by a newer version of the dataset”</li>
+</ul>
+<p>bad</p>
+<ul>
+<li>“commit”</li>
+<li>“adding file”</li>
+<li>“Add ‘01_clean_data.R’, which takes the data found in ‘data/data.csv’, removes all NA observations, renames columns, converts the data into long format instead of wide format, and then saves the new version of the data as ‘data/cleaned_data.csv’”</li>
+<li>“blahhhhhhhh removing this stupid file that I hate”</li>
+</ul>
+<p>For this commit, you might use the summary “Adding .gitignore and .Rproj files, adding a line to README.md.”</p>
+<p>Once you’ve added the commit message, you are ready to commit these files. Click “commit to main”. Now these changes have been entered into the version control history of your repository in Git.</p>
+<p>We have one more step to update the GitHub repository, which is to “push” these files to GitHub. This will be provided in a blue box on GitHub Desktop which says “Push commits to the origin remote”. Now, open your project in GitHub. You should now see the updated files including changes that you made locally, as well the commit message.</p>
+</div>
+<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
+<p>Open the command line, navigate to the folder that contains your repository, and enter the following:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-first-repository</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>This will move you into the repository folder. Next, enter:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>This will list untracked files, which are files that Git is not keeping track of. In order to tell Git to start tracking them, enter:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .gitignore my-first-repository.Rproj</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>If you ever want to tell Git to track all files, you can use the command <code>git add .</code>.</p>
+<p>Next, we will commit these files (remember, this is similar to creating a snapshot of these files, or to creating a save point in a video game).</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Adding .gitignore and .Rproj files"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The tag <code>-m</code> lets you add a commit message, and then is followed by the text that you’d like to be associated with your commit.</p>
+<p>to-do: discuss how commit messages should be informative to you in a few months or to a collaborate. They will live forever on GitHub, so make sure they are appropriate.</p>
+<p>We have one more step to update the GitHub repository, which is to “push” these files to GitHub. This is the final step that updates the GitHub repository to include the changes that we made locally. To push, enter:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Now, open your project in GitHub. You should now see the updated files including changes that you made locally, as well the commit message.</p>
+</div>
+</div>
+</div>
+<p>Finally, we’re going to make another change from GitHub, and then “pull” that change into our local Git repository. We’ll follow the same steps to make a change on GitHub:</p>
+<ul>
+<li>click the pencil on the upper right of the README</li>
+<li>add a new line to your README document that says “Adding another commit from GitHub.”</li>
+<li>click the green button that says “Commit changes”</li>
+<li>provide an informative commit message, something like “adding one more new line to README”</li>
+<li>click the green button that says “Commit changes”</li>
+<li>click the repository name in the upper left to navigate back to the home page</li>
+</ul>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false" href="">Command line</a></li></ul>
+<div class="tab-content">
+<div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
+<p>Now, return to GitHub Desktop. Do the following:</p>
+<ul>
+<li>In the upper banner, click where it says “Fetch origin”. It should then update and say “Pull origin”.</li>
+<li>Click “Pull origin”.</li>
+<li>Go to the “History” pane, and you’ll see the most recent commit that you made on GitHub, now included in your local repository.</li>
+</ul>
+<p>If you return to RStudio and open “README.md”, you will now see the update that you made on GitHub.</p>
+</div>
+<div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
+<p>Open the command line, navigate to the folder that contains your repository, and enter the following:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>If you return to RStudio and open “README.md”, you will now see the update that you made on GitHub.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="what-youve-done" class="level3">
+<h3 class="anchored" data-anchor-id="what-youve-done">What you’ve done</h3>
+<p>In this section you have made a GitHub account, installed Git and GitHub Desktop, configured Git and GitHub to talk to each other, and made your first repository. You’ve learned how to make changes to the remote on GitHub and transfer them to the local repository on your computer, as well as do the opposite.</p>
+<p>In a typical GitHub workflow, you will rarely be making changes from GitHub. Instead, you will often be working with one or multiple collaborators on a repository. Once your collaborator makes changes locally, they can push those changes to GitHub, and then you can pull those changes to your local copy of the repository.</p>
+<p>to-do: Add image to show a summary of the clone/stage/commit/push workflow</p>
+</section>
+<section id="tips" class="level3">
+<h3 class="anchored" data-anchor-id="tips">Tips</h3>
+<ul>
+<li>Commit often. A history will not be helpful if you run an entire analysis locally and then commit everything in a single commit.</li>
+<li>If you are working on a repository with multiple contributors, make sure to pull each time you work in order to work on the most up-to-date version of the repository</li>
+</ul>
+</section>
+</section>
+<section id="create-version-controlled-repository-for-your-project" class="level2">
+<h2 class="anchored" data-anchor-id="create-version-controlled-repository-for-your-project">Create version controlled repository for your project</h2>
+<p>Now, we will return to the project with Collab. O. Rator. In the previous section, we created a repository on GitHub, and then cloned to make a local copy. Here, we will start with a local folder, track it with Git, and then create a remote version on GitHub.</p>
+<p>First, download the .zip file <a href="https://github.com/opencasestudies/mother-infant-gut-microbiome-analysis-sandbox/raw/refs/heads/main/infant_gut_files.zip">here</a>. Your browser may automatically unzip this file to create a folder called “infant_gut_files”, if not then unzip the file.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-10-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-1" role="tab" aria-controls="tabset-10-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-2" role="tab" aria-controls="tabset-10-2" aria-selected="false" href="">Command line</a></li></ul>
+<div class="tab-content">
+<div id="tabset-10-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-10-1-tab">
+<p>Now, go to GitHub Desktop and do the following:</p>
+<ul>
+<li>click the button “Add” in the top right</li>
+<li>click “Create New Repository”</li>
+<li>give your repository the name “infant_gut_analysis”.</li>
+<li>leave the box “Initialize this repository with a README” unchecked (because a README is already included in the set of files).</li>
+<li>under Git Ignore choose “R” and under License choose “MIT License”.</li>
+</ul>
+<p>Now, copy the contents of the “infant_gut_files” into the new repository that you just created with GitHub Desktop to-do: potentially include drop-down to help find the folders on different operating systems].</p>
+<p>Once you add these files, return to GitHub Desktop. You should see a set of staged files.</p>
+<ul>
+<li>add a commit message and commit this change</li>
+<li>you should then see an option to “Publish repository”, click this</li>
+<li>you should now see the option “Open the repository page on GitHub in your browser”. Clicking this will bring you to the new GitHub repo that you just made for this project!</li>
+</ul>
+</div>
+<div id="tabset-10-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-2-tab">
+<p>Open the command line, navigate to the folder that you have unzipped, and enter the following:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>If you look into your folder you will not see any changes. However, this command creates a hidden <code>.git</code> folder within the current folder, which contains the files that are needed to start tracking this folder with Git. It is now a Git-tracked repository. Now we will stage all files, so that Git knows to track them, and commit them, so that Git saves the set of files as part of the history.</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"track all files for infant gut project"</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Next, you will need to create an empty repository on GitHub. Go to GitHub and create a new repository called “infant_gut_analysis”. Importantly, this time do not check “Initialize with README”, this should be a fully empty repository. Copy the URL of this repository.</p>
+<p>Now, return to the command line and enter (replacing the URL below with the URL that you just copied):</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/your_username/infant_gut_analysis.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<section id="open-this-project-in-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="open-this-project-in-rstudio">Open this project in RStudio</h3>
+<p>Finally, we will create another RStudio project for this GitHub repository, so that we can easily work with these set of files in RStudio. Do this by opening RStudio and clicking “File -&gt; New Project -&gt; Existing Repository” and use “Browse” to find the folder for the repository that you created. This will open your project in R. You are now ready to work on this project locally.</p>
+</section>
+</section>
+<section id="branches" class="level2">
+<h2 class="anchored" data-anchor-id="branches">Branches</h2>
+<p>Question: should we explain branches now while talking about Git and GitHub, or later (in data visualization) when we need them?</p>
+<p>One useful feature of Git is the ability to make branches. A branch is a history of commits, and by default a repository that is tracked by Git starts with the “main” branch. Multiple branches provide parallel versions of the repository that can be developed separately. For example, you may have a version of your analysis and results in the main branch, but you want to experiment with changing a parameter. You could do this in a separate branch. This would let you work on the experimental version of your analysis while also having a stable version of your analysis elsewhere. You can switch between branches depending on what version of the analysis you want to work with on a given day. If you eventually decide that you want to move forward with the changed parameter, you can merge your experimental branch back into your main branch.</p>
+<div class="definition_box">
+<div class="definition_box_header">
+<p>Merge</p>
+</div>
+<div class="inner_block">
+<p>Integrating changes from one branch into another branch.</p>
+</div>
+</div>
+<p>If there are no lines of code in any files that are directly in conflict, then merging will automatically combine the sets of files into a single version to move forward with. If there are lines that are directly in conflict, this will create what is called a merge conflict. [to-do: link to merge conflict section in troubleshooting Git and GitHub section]</p>
+<p>to-do: Add image of merged versions]</p>
+<p>Branches are also helpful when working with collaborators. If you are developing a new part of an analysis, you can do it in a separate branch. When you are ready for your collaborator to review your work, you can submit a “pull request”, which is a request to merge your branch with the main branch. Your collaborator can review all of the changes between your branch and the new branch, and either approve the pull request or request edits before merging. [to-do: link to sections that describes pull requests in more detail below.]</p>
+<section id="create-a-new-branch-for-this-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-new-branch-for-this-analysis">Create a new branch for this analysis</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-11-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-1" role="tab" aria-controls="tabset-11-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-11-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-2" role="tab" aria-controls="tabset-11-2" aria-selected="false" href="">Command line</a></li></ul>
+<div class="tab-content">
+<div id="tabset-11-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-11-1-tab">
+<p>You will create a new branch with GitHub Desktop.</p>
+<p>In GitHub Desktop:</p>
+<ul>
+<li>navigate to the tab in the top left of the window that says “Current Branch”</li>
+<li>click on this tab, and you should see a button that says “New Branch”</li>
+<li>name your new branch “study_comparison”.</li>
+</ul>
+</div>
+<div id="tabset-11-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-11-2-tab">
+<p>Open the command line, navigate to the folder that you have unzipped, and enter the following:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> study_comparison</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>When you create a new branch, you can name it by providing a new branch name (we name the new branch “study_comparison” above).</p>
+</div>
+</div>
+</div>
+<hr>
+<!--
+Project organization (similar to "Dashboard Basics" section in school shootings OCS)
+-->
+</section>
+</section>
+</section>
+<section id="scientific-project-organization" class="level1">
+<h1><strong>Scientific project organization</strong></h1>
+<hr>
+<p>note: once styles updated, make this a reproducibility box!</p>
+<p>Although this is not directly related to version control, there are some useful ideas to know about organizing a scientific project, that will improve reproducibility. While most people have their own approaches to scientific project organization, there are a few principles that most successful organization schemes have in common. More information can be found in <a href="https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/organizing-your-project.html">this course</a>.</p>
+<ul>
+<li>file names should be concise but informative</li>
+<li>there is one central folder to contain all files for each project</li>
+<li>there is a central file (often called the README) that explains what files are included and how to use them to run the analysis</li>
+<li>there are folders to keep similar files together
+<ul>
+<li>data folder (this could be split into raw data and processed data)</li>
+<li>figures folder for any figures made for the analysis</li>
+<li>results folder for any results that should be shared or would take moderate or more computation to re-generate</li>
+</ul></li>
+<li>number code scripts in the order that they should be run to generate results</li>
+</ul>
+<section id="organization-of-this-project" class="level2">
+<h2 class="anchored" data-anchor-id="organization-of-this-project">Organization of this project</h2>
+<p>This project includes these files:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3e3d77952e3_0_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Creating first repository"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="readme" class="level2">
+<h2 class="anchored" data-anchor-id="readme">README</h2>
+<p>A README file should describe the files related to your scientific project. It should describe where inputs come from, what each script does, and where outputs are generated. If someone reads through your README, they should know where to find each component of your analysis.</p>
+<p>to-do: add question box</p>
+<div class="think_question">
+<div class="think_question_header">
+<p>Question opportunity</p>
+</div>
+<div class="inner_block">
+Read through the README.md file for this project. Which script generates “sample_metadata.csv”?
+<details>
+<summary>
+Answer
+</summary>
+01_pull_study_data.R
+</details>
+</div>
+</div>
+</section>
+<section id="project-organization-with-git-and-github" class="level2">
+<h2 class="anchored" data-anchor-id="project-organization-with-git-and-github">Project organization with Git and GitHub</h2>
+<section id="empty-folders" class="level3">
+<h3 class="anchored" data-anchor-id="empty-folders">Empty folders</h3>
+<p>One thing to know is that any empty folders may exist on your computer but will not be tracked by Git until they have content. So while we see “figures” and “results” in the set of files from the folder “infant_gut_files”, they are not tracked by Git or hosted on GitHub. If you want to track an empty folder before it has content, you can add a placeholder script into the folder, and remove it later once the folder has content.</p>
+</section>
+<section id="which-files-to-track-with-git" class="level3">
+<h3 class="anchored" data-anchor-id="which-files-to-track-with-git">Which files to track with Git</h3>
+<p>Recall that version control lets you track project files as they change. Therefore, there are some files that make a lot of sense to track with version control, and others that make less sense. Deciding which files to track is another topic that different people take different approaches to, but there are some rules that are typically followed:</p>
+<ul>
+<li>track source files that you’ve written (such as R scripts, shell scripts, LaTeX files, etc)</li>
+<li>track configuration files (such as .gitignore) that tell your tools how to interact with this repository</li>
+<li>do not track intermediate files (such as log files), these are files that are generated automatically during a certain part of your workflow but are not needed on their own</li>
+<li>sometimes track derived products (such as intermediate data, figures, or reports)
+<ul>
+<li>this depends if you would like a copy of these products to live on GitHub, or if you would like anyone who wants them to reproduce them using your data and scripts that are tracked with Git</li>
+</ul></li>
+<li>do not track large data files that never change (we’ll explain this more below)</li>
+<li>typically avoid tracking binary files (although there are exceptions)</li>
+</ul>
+<details>
+<summary>
+Binary files
+</summary>
+<p>From a Git perspective, files are either text files or binary files. Text files are human-readable. They work nicely with Git because they can be represented in terms of diffs between versions. In contrast, binary files are readable by certain programs but are not human-readable. They cannot be represented in terms of diffs, and therefore a new version of the file is saved at each commit. Examples of binary files are images (.png, .jpeg), word and excel files (.doc, .xlsx) and PDFs (.pdf). Tracking many binary files with Git can eventually slow down Git operations.</p>
+</details>
+<p>The best way to avoid tracking a file is to add it to your .gitignore file.</p>
+<p>to-do: add image of adding certain files not to track to .gitignore</p>
+<p>An important consideration for which files to track is file size. Tracking large files can slow down the operations you do with Git and GitHub, and eventually run into GitHub’s <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits">repository limits</a>. For binary files or moderately large files, Git Large File Storage (often referred to as Git LFS) is an option.</p>
+<p>to-do: talk about good size for git vs git LFS vs Figshare/Zenodo. Discuss things you may need versions of/not need versions of.</p>
+<hr>
+<!--
+Describe the data to be analyzed and where it came from.
+You may want to include a table about file or variable info.
+-->
+</section>
+</section>
+</section>
+<section id="what-are-the-data" class="level1">
+<h1><strong>What are the data?</strong></h1>
+<hr>
+<p>We will investigate data about samples from <a href="https://www.tandfonline.com/doi/full/10.1080/19490976.2021.1911571">this meta-analysis</a> of mother and infant gut microbiome studies. Wang et al.&nbsp;identified a set of eight studies that collected mother and infant gut microbiome samples over time and performed metagenomic sequencing. These studies collectively include 1,496 samples. The variables that we will use to answer our questions include:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Study</strong></td>
+<td>Original study the sample comes from</td>
+</tr>
+<tr class="even">
+<td><strong>SampleID</strong></td>
+<td>ID for sample</td>
+</tr>
+<tr class="odd">
+<td><strong>PersonID</strong></td>
+<td>ID for participant the sample came from</td>
+</tr>
+<tr class="even">
+<td><strong>Category</strong></td>
+<td>Either “mother” or “infant”</td>
+</tr>
+<tr class="odd">
+<td><strong>Sampling from papers</strong></td>
+<td>Sampling time frame described in paper</td>
+</tr>
+<tr class="even">
+<td><strong>Sampling, day</strong></td>
+<td>Day after birth that the sample was collected on</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<!--
+Describe any limitations that exist in this analysis whether it be due to the data itself, methods used, nature of the topic, etc.
+You can list more than 2
+See the following example from a previous case study: https://www.opencasestudies.org/ocs-bp-opioid-rural-urban/#Limitations
+-->
+</section>
+<section id="limitations" class="level1">
+<h1><strong>Limitations</strong></h1>
+<hr>
+<p>There are some important considerations regarding this data analysis to keep in mind:</p>
+<ol type="1">
+<li>In the original studies included in this meta-analysis, some studies describe sampling date in terms of days, and some in terms of weeks or months. Although this is converted into days in the variable <code>Sampling, day</code>, time has been measured in finer resolution for some studies compared to others.</li>
+<li>In this analysis we are only comparing the original studies based on the number of samples they have and when they collected their samples. There are several other ways we may want to compare these cohorts to understand how comparable they are, including based on measured information (like maternal age, mode of delivery, birth weight, maternal antibiotic use, etc.) as well as unmeasured information.</li>
+</ol>
+<hr>
+<!--
+List any important bioethics considerations when performing an analysis like this or working with data like this.
+
+See doi: 10.1007/s41649-019-00099-x and https://depts.washington.edu/bhdept/ethics-medicine/bioethics-topics/articles/principles-bioethics for principles and considerations.
+Examples may include: how identifiable (or re-identifiable) is your data? cell lines or consent? specific considerations for a specific population?
+-->
+</section>
+<section id="ethical-considerations" class="level1">
+<h1><strong>Ethical Considerations</strong></h1>
+<hr>
+<p>There are some important ethical considerations when working with version control, as well as with health related data in general and when collaborating on scientific projects.</p>
+<ol type="1">
+<li>When hosting data, code, and results on GitHub, make sure to never include personally identifiable information (PII) or protected health information (PHI) in a repository (even private repositories are not secure enough for sensitive data). This includes names, dates of birth, medical records and diagnosis, lab results, identifiable genomic sequencing data, as well as other types of data.</li>
+<li>Make sure to keep comprehensive documentation for scientific projects to avoid losing track of which data generated a set of results or figure, or which version of a software that you used in an analysis. Reproducible science is ethical science: without a transparent and well-documented process, others in the scientific community cannot easily verify or trust your results.</li>
+<li>For projects with large teams, it can be difficult to keep track of which contributions came from which team members. Version control histories can be helpful to see who worked on each component on an analysis, in order to fairly acknowledge each contributor’s work.</li>
+<li>When performing a meta-analysis such as the one described in this case study, it is important to be transparent about inclusion and exclusion criteria for studies and for individual observations within studies. Criteria should be determined before analysis, to avoid choosing studies that will support a desired conclusion. It is also important to properly cite the original studies and recognize the groups that collected the data.</li>
+</ol>
+<hr>
+<!--
+Consider incorporating a checklist of statements that learners should answer/discuss for every case study for bioethics principles.
+-->
+<!--
+load all the packages used in the case study analysis in the code chunk below
+(try to use tidyverse over base R).
+Fill out the table and add rows as necessary providing a link to the source and briefly explaining its use for each package
+-->
+<p>We will begin by loading the packages that we will need:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Package</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://here.r-lib.org">here</a></td>
+<td>To construct file paths within folders</td>
+</tr>
+<tr class="even">
+<td><a href="https://readxl.tidyverse.org" target="_blank">readxl</a></td>
+<td>To read excel files into R</td>
+</tr>
+<tr class="odd">
+<td><a href="https://dplyr.tidyverse.org" target="_blank">dplyr</a></td>
+<td>To combine and manipulate data tables</td>
+</tr>
+<tr class="even">
+<td><a href="https://ggplot2.tidyverse.org">ggplot2</a></td>
+<td>To visualize data</td>
+</tr>
+<tr class="odd">
+<td><a href="https://stringr.tidyverse.org">stringr</a></td>
+<td>To manipulate strings</td>
+</tr>
+</tbody>
+</table>
+<p>The first time we use a function, we will use the <code>::</code> to indicate which package we are using. Unless we have overlapping function names, this is not necessary, but we will include it here to be informative about where the functions we will use come from.</p>
+<!--
+Update the file paths as needed throughout
+-->
+<!--
+At the end of this section, save incremental data so that users can pause and come back later
+-->
+</section>
+<section id="data-import" class="level1">
+<h1><strong>Data Import</strong></h1>
+<hr>
+<p>Now that you have created this GitHub repository, and have tracked this project locally with Git, you can start working on the study comparison in R. Open RStudio to your project “infant_gut_analysis”. We will start by taking a look at the data. To understand the data contained in this project, first see what the README tells you.</p>
+<p>Start by opening the file that reads in the raw data and running it. Look at the output.</p>
+<div class="think_question">
+<div class="think_question_header">
+<p>Question opportunity</p>
+</div>
+<div class="inner_block">
+How many observations are included in our data set? How many variables are included in our data set?
+<details>
+<summary>
+Hint
+</summary>
+<p>Data is imported in the file “01_pull_study_data.R”. You can find out how many rows are in a data frame with the function <code>nrow(name_of_data_frame)</code>. You can find out how many columns are in a data frame with the function <code>ncol(name_of_data_frame)</code>.</p>
+</details>
+<details>
+<summary>
+Answer
+</summary>
+<div class="rcode">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(sample_metadata)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1499</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(sample_metadata)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 20</code></pre>
+</div>
+</div>
+</div>
+There are <span class="math inline">\(1499\)</span> observations and <span class="math inline">\(20\)</span> variables in the data frame.
+</details>
+</div>
+</div>
+<hr>
+<!--
+Update the file paths as needed throughout
+-->
+<!--
+Some case studies may wish to merge Data Exploration with this Wrangling subsection
+-->
+<!--
+At the end of this section, save incremental data so that users can pause and come back later
+-->
+</section>
+<section id="data-wrangling" class="level1">
+<h1><strong>Data Wrangling</strong></h1>
+<hr>
+<p>Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses. Use the README to identify which file performs data wrangling. Open this file and run the code.</p>
+<div class="think_question">
+<div class="think_question_header">
+<p>Question opportunity</p>
+</div>
+<div class="inner_block">
+What are the earliest and latest days that samples were taken on in the data set?<br>
+
+<details>
+<summary>
+Hint
+</summary>
+<p>Data are wrangled in the file “02_wrangle_data.R”. You can use the functions <code>max()</code> and <code>min()</code> to get the maximum and minimum values in a vector. The variable in the cleaned dataset that gives the sampling day is called <code>sampling_day</code>.</p>
+</details>
+<details>
+<summary>
+Answer
+</summary>
+<div class="rcode">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(clean_metadata<span class="sc">$</span>sampling_day, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(clean_metadata<span class="sc">$</span>sampling_day, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 480</code></pre>
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+<hr>
+<!--
+Update the file paths as needed throughout
+-->
+<!--
+At the end of this section, save incremental data so that users can pause and come back later
+-->
+</section>
+<section id="data-visualization" class="level1">
+<h1><strong>Data Visualization</strong></h1>
+<hr>
+<section id="create-a-new-branch-for-the-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-new-branch-for-the-analysis">Create a new branch for the analysis</h2>
+<p>Note: If we describe branches in the “Introduction to Git and GitHub” section then we don’t need to here.</p>
+</section>
+<section id="visualize-data" class="level2">
+<h2 class="anchored" data-anchor-id="visualize-data">Visualize data</h2>
+<p>to-do: break this into smaller pieces, provide more information, and give learner space to figure things out on their own, with hints and solutions in drop-down boxes. See original case studies for examples here!</p>
+<p>to-do: have the learner open a .R or .Rmd file for this code. Question: preference on .R and .Rmd files for this?</p>
+<p>Load data</p>
+<div class="rcode">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"wrangled"</span>, <span class="st">"clean_sample_metadata.rda"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<p>Count samples by study and category (mother vs infant)</p>
+<div class="rcode">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>sample_counts <span class="ot">&lt;-</span> clean_metadata <span class="sc">%&gt;%</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Study, Category) <span class="sc">%&gt;%</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(<span class="at">name =</span> <span class="st">"total"</span>)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>sample_counts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 16 × 3
+# Groups:   Study, Category [16]
+   Study    Category total
+   &lt;chr&gt;    &lt;chr&gt;    &lt;int&gt;
+ 1 Asnicar  infant       8
+ 2 Asnicar  mother       8
+ 3 Backhed  infant     294
+ 4 Backhed  mother      98
+ 5 Chu      infant      12
+ 6 Chu      mother      15
+ 7 Ferretti infant      81
+ 8 Ferretti mother      21
+ 9 Parnanen infant      32
+10 Parnanen mother      32
+11 Shao     infant     410
+12 Shao     mother     178
+13 Wampach  infant      35
+14 Wampach  mother      14
+15 Yassour  infant     152
+16 Yassour  mother     106</code></pre>
+</div>
+</div>
+</div>
+<p>Make a bar plot of this data</p>
+<div class="rcode">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>sample_counts <span class="sc">%&gt;%</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Study, <span class="at">y =</span> total, <span class="at">fill =</span> Category)) <span class="sc">+</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Order the bar plot by increasing sample size and add theme and labels</p>
+<div class="rcode">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>study_order <span class="ot">&lt;-</span> sample_counts <span class="sc">%&gt;%</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Study) <span class="sc">%&gt;%</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">total_both =</span> <span class="fu">sum</span>(total)) <span class="sc">%&gt;%</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(total_both) <span class="sc">%&gt;%</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(Study)</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>sample_counts <span class="sc">%&gt;%</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Study =</span> <span class="fu">factor</span>(Study, <span class="at">levels =</span> study_order)) <span class="sc">%&gt;%</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Study, <span class="at">y =</span> total, <span class="at">fill =</span> Category)) <span class="sc">+</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>()) <span class="sc">+</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Number of samples"</span>,</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Study"</span>,</span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Number of Samples by Study and Category"</span>) <span class="sc">+</span> </span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Save plot in figures folder.</p>
+<div class="rcode">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"figures/study_sizes_by_category.png"</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">width =</span> <span class="dv">9</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<p>Now look into time</p>
+<div class="rcode">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="sc">%&gt;%</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>sampling_before_birth) <span class="sc">%&gt;%</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sampling_day, <span class="at">fill =</span> Category, <span class="at">group =</span> Category)) <span class="sc">+</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>(), <span class="at">bins =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Study, <span class="at">scale =</span> <span class="st">"free_y"</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 7 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Order facets the same as in bar plot, add theme and labels</p>
+<div class="rcode">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="sc">%&gt;%</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Study =</span> <span class="fu">factor</span>(Study, <span class="at">levels =</span> study_order)) <span class="sc">%&gt;%</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>sampling_before_birth) <span class="sc">%&gt;%</span> <span class="co"># remove samples taken from mothers while pregnant </span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sampling_day, <span class="at">fill =</span> Category, <span class="at">group =</span> Category)) <span class="sc">+</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>(), <span class="at">bins =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Study, <span class="at">scale =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Days since birth at sampling"</span>,</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>,</span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Distribution of sampling day across studies"</span>) <span class="sc">+</span> </span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 7 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Save plot in figures folder</p>
+<div class="rcode">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"figures/sampling_timepoints.png"</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">width =</span> <span class="dv">9</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<p>Now that you have two plots that compare the studies, this is a good time to commit your current work.</p>
+<p>Since you’ve performed the requested analysis, make sure to document any new files in this repository in the README file. This is another good time to commit any changes.</p>
+<hr>
+</section>
+</section>
+<section id="pull-requests" class="level1">
+<h1><strong>Pull requests</strong></h1>
+<hr>
+<section id="what-is-a-pull-request" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-pull-request">What is a pull request?</h2>
+<p>to-do: Describe the mechanics of a pull request, how it relates to branches and commits, other components we’ve addressed so far.</p>
+</section>
+<section id="how-to-make-a-pull-request" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-make-a-pull-request">How to make a pull request</h2>
+<p>to-do: Make GitHub Desktop tab and command line tab for this first part!</p>
+<p>Go to GitHub Desktop, and make sure to commit any changes. Push those changes (these will be pushed to the remote branch on GitHub). Click “View on GitHub” to navigate to the GitHub page.</p>
+<p>At the top, there should be a yellow banner with a green button that says “Compare &amp; pull request”.</p>
+<p>to-do: Discuss the organization of {branch to push to} &lt;- {branch to pull from}</p>
+<p>to-do: Describe where it shows the commits the make up the pull request and the files changed (how these show the diff between the branch being pushed to and the branch being pulled from).</p>
+<p>to-do: add an image of a pull request here</p>
+<p>While your pull request is open, any additional changes that you commit and push to this branch will be added to the pull request. If you would like to stop contributing to a pull request but continue work on the project, make sure to work on a different branch.</p>
+</section>
+<section id="components-of-a-good-pull-request" class="level2">
+<h2 class="anchored" data-anchor-id="components-of-a-good-pull-request">Components of a good pull request</h2>
+<ul>
+<li>A concise but descriptive title</li>
+<li>A description of the changes you want to merge. This is a good place to list files added and modified and give a quick description of those changes. Give plenty of context, you’ve likely been thinking about the code you want to merge more recently than your collaborator who will review it</li>
+<li>A request for code review (make specific requests: do you want your collaborator to review all changes? Do you want them to focus on a specific file or part of an analysis? do you just a bigger picture review to see if your file organization makes sense?)</li>
+<li>Don’t make a huge pull request, a pull request should be a set of changes that address a certain component of an analysis. Try to avoid combining multiple parts of a project in a single pull request</li>
+</ul>
+</section>
+<section id="fill-in-pull-request" class="level2">
+<h2 class="anchored" data-anchor-id="fill-in-pull-request">Fill in pull request</h2>
+<p>Fill in the details of your pull request!</p>
+<p>to-do: Provide a good example of a pull request for this project in a drop-down box</p>
+<hr>
+</section>
+</section>
+<section id="summary" class="level1">
+<h1><strong>Summary</strong></h1>
+<hr>
+<section id="synopsis" class="level2">
+<h2 class="anchored" data-anchor-id="synopsis"><strong>Synopsis</strong></h2>
+<hr>
+<p>To-do: add a brief recap here! Focus on why version control, and the ways that we’ve used version control for reproducibility in this case study.</p>
+<hr>
+</section>
+<section id="summary-plot" class="level2">
+<h2 class="anchored" data-anchor-id="summary-plot"><strong>Summary Plot</strong></h2>
+<hr>
+<p>To-do: figure out how to make this into a drag and drop activity for the learner.</p>
+<p>This is a mock-up of what the figure may look like, but a final version will be a little more detailed:</p>
+<p><a href="img/version_control_main_figure_mockup.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/version_control_main_figure_mockup.png" class="img-fluid" alt="Workflow of the different version control steps in this case study" width="800"></a></p>
+<!--
+construct a plot here that summarizes the conclusions found in the data, if applicable
+(connecting to a main question if possible)
+-->
+<hr>
+</section>
+</section>
+<section id="troubleshooting-git-and-github" class="level1">
+<h1><strong>Troubleshooting Git and GitHub</strong></h1>
+<hr>
+<p>to-do: create sections for each of these problems, with ways to resolve them (both with GitHub Desktop and with the command line).</p>
+<p>Include several drop-down boxes here for common mistakes that come up (especially those that may come up in this case study).</p>
+<p>Ideas to bring up here:</p>
+<ul>
+<li>I’ve created a merge conflict, how do I address this?</li>
+<li>I’ve added a file and committed it, but I actually don’t want to track this.</li>
+<li>I’ve done work on a current branch, but I actually want to move it to a new branch
+<ul>
+<li>what if I haven’t committed yet? What if I have already committed?</li>
+</ul></li>
+<li>I’ve accidentally committed a large file, what to do about this?</li>
+</ul>
+<p>Also add a section about using AI with Git and GitHub, it can be very helpful but make sure it doesn’t have you do something destructive!</p>
+<hr>
+</section>
+<section id="continued-learning" class="level1">
+<h1><strong>Continued Learning</strong></h1>
+<hr>
+<div class="next_steps_box">
+<div class="next_steps_box_header">
+<p>Common Next Steps</p>
+</div>
+<div class="inner_block">
+<p>Discuss common next steps for this type of an analysis in this box. Is there a specific number of steps that you need to do before a specific step? Is a “next step” more of an alternate step?</p>
+</div>
+</div>
+<!--
+## Reinforcement Exercises
+## Forking
+
+to-do: Create the GitHub repo for them to fork and draft this section! 
+
+This could be a good place to talk about forking. Give a quick explanation of forking, and then ask user to fork the repo (this will be the same as the project files that they downloaded early in the case study), make a change (something quick and easy), and then push and open a pull request. Describe how pull requests are similar and different when made between branches in a repo vs from a fork to the upstream repo. They can either stop before opening the pull request, or open it and then close it when they are done (to avoid having a long list of open pull requests on this educational repo). I'm not sure if this should be its own section, or if it should be here in suggested homework (therefore making it optional). 
+
+Uncomment this section if you're suggesting an exercise that reiterates a large portion of the case study so learners can practice a hard skill again, reinforcing topics from the case study
+-->
+<section id="merge-conflicts" class="level2">
+<h2 class="anchored" data-anchor-id="merge-conflicts">Merge conflicts</h2>
+<p>Another piece of suggested homework could be creating Git problems (such as those addressed in the troubleshooting section) and then fixing those problems. We could come up with a way to address a merge conflict (by committing different conflicting things to main and to an additional branch) and then have the learner resolve this change.</p>
+</section>
+<section id="advancement-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="advancement-exercises">Advancement Exercises</h2>
+<p>Use this section to suggest different levels of exercises that build upon topics from the case study … next steps, tangential skills, diving deeper into a side quest, etc.</p>
+<p>Perhaps explain how the suggested exercises relate to the common next steps.</p>
+<section id="beginner" class="level3">
+<h3 class="anchored" data-anchor-id="beginner">Beginner</h3>
+</section>
+<section id="intermediate" class="level3">
+<h3 class="anchored" data-anchor-id="intermediate">Intermediate</h3>
+</section>
+<section id="advanced" class="level3">
+<h3 class="anchored" data-anchor-id="advanced">Advanced</h3>
+<!--
+Example from a previous case study: https://www.opencasestudies.org/ocs-bp-co2-emissions/#Suggested_Homework (though this example doesn't include different levels like Beginner, Intermediate, and Advanced)
+-->
+<hr>
+</section>
+</section>
+</section>
+<section id="additional-information" class="level1">
+<h1><strong>Additional Information</strong></h1>
+<hr>
+<!--
+Use this section to provide any additional information or resources on the topic and methods covered in the case study
+-->
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-andrade2025primer" class="csl-entry" role="listitem">
+Andrade, Chittaranjan. 2025. <span>“A Primer on Individual Participant Data Meta-Analysis and Its Strengths and Limitations.”</span> <em>J Clin Psychiatry</em> 86 (3): 25f16001.
+</div>
+<div id="ref-dersimonian1986meta" class="csl-entry" role="listitem">
+DerSimonian, Rebecca, and Nan Laird. 1986. <span>“Meta-Analysis in Clinical Trials.”</span> <em>Controlled Clinical Trials</em> 7 (3): 177–88.
+</div>
+<div id="ref-han2026host" class="csl-entry" role="listitem">
+<span class="nocase">Han, Yu, Zian Wang, Jiahao Xie, et al.</span> 2026. <span>“Host–Gut Microbiota Interactions in Health and Disease: Mechanisms and Intervention Strategies.”</span> <em>Frontiers in Microbiology</em> 17: 1785607.
+</div>
+<div id="ref-wang2021metagenomic" class="csl-entry" role="listitem">
+<span class="nocase">Wang, Shaopu, Shuqin Zeng, Muireann Egan, et al.</span> 2021. <span>“Metagenomic Analysis of Mother-Infant Gut Microbiome Reveals Global Distinct and Shared Microbial Signatures.”</span> <em>Gut Microbes</em> 13 (1): 1911571.
+</div>
+</div>
+</section>
+<section id="helpful-links" class="level2">
+<h2 class="anchored" data-anchor-id="helpful-links"><strong>Helpful Links</strong></h2>
+<hr>
+<p>[These are a set of resources that I’ve identified or reviewers have identified. I will link to some of these resources in relevant parts of the lesson (so that each element of GitHub includes a resource of where to learn more). I will also reorganize these resources here to group similar resources together.]</p>
+<ul>
+<li><a href="https://happygitwithr.com">happy git with R</a>: online book that covers most relevant topics for using Git and GitHub with R</li>
+<li><a href="https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r">How to Use Git/GitHub with R</a>: blog post about getting Git and GitHub set up and working with RStudio. This uses the built-in Git GUI in RStudio instead of GitHub Desktop</li>
+<li><a href="https://dangitgit.com/en">Dangit, Git!?!</a>: brief description of some common Git errors and how to resolve them</li>
+<li><a href="https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/">Intro to reproducibility in cancer informatics</a>: short course on reproducibility for scientific projects, includes Git and GitHub in chapter 4 and provides other resources on reproducibility</li>
+<li><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/">Advanced reproducibility in cancer informatics</a>: short course on more advanced reproducibility for scientific projects, includes GitHub in chapter 3 and provides other resources on reproducibility</li>
+<li><a href="https://carpentries.org">Carpentries</a>:
+<ul>
+<li><a href="https://carpentries.github.io/workshop-template/install_instructions/">Install Git</a>: instructions on installing Git (and other types of software)</li>
+<li><a href="https://swcarpentry.github.io/git-novice/02-setup.html">Set up Git</a>: instructions on setting up Git</li>
+<li><a href="https://docs.carpentries.org/resources/curriculum/fetch-existing-branch.html">Build on existing branch</a>: instructions on how to work from a branch on someone else’s fork of a repository</li>
+</ul></li>
+<li><a href="https://training.arcadiascience.com/workshops/20220920-intro-to-git-and-github/lesson/">Hands on introduction to Git and GitHub</a>: another introduction to Git and GitHub, covering some overlapping material and some additional material</li>
+<li><a href="https://training.galaxyproject.org/training-material/topics/contributing/tutorials/github-contribution/tutorial.html">Contributing to Galaxy Training Network with GitHub</a>: tutorial on how to contribute to an open source project with GitHub</li>
+<li><a href="https://education.github.com/git-cheat-sheet-education.pdf">GitHub cheatsheet</a>: cheatsheet with Git commands that can be used in the command line</li>
+</ul>
+<p><u>Terms and concepts covered:</u></p>
+<p>to-do: add glossary here</p>
+<p><u>Packages used in this case study: </u></p>
+<!--
+Automatically include the packages table from _packages.qmd?
+-->
+<hr>
+</section>
+<section id="glossary" class="level2">
+<h2 class="anchored" data-anchor-id="glossary">Glossary</h2>
+<hr>
+<table class="glossary_table caption-top table">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"><strong>Term</strong></th>
+<th data-quarto-table-cell-role="th"><strong>Definition</strong></th>
+</tr>
+<tr class="even">
+<td>Term 1</td>
+<td>Definition of Term 1</td>
+</tr>
+<tr class="odd">
+<td>Term2</td>
+<td>Definition of Term 2</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="references-1" class="level2">
+<h2 class="anchored" data-anchor-id="references-1">References</h2>
+<hr>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-andrade2025primer" class="csl-entry" role="listitem">
+Andrade, Chittaranjan. 2025. <span>“A Primer on Individual Participant Data Meta-Analysis and Its Strengths and Limitations.”</span> <em>J Clin Psychiatry</em> 86 (3): 25f16001.
+</div>
+<div id="ref-dersimonian1986meta" class="csl-entry" role="listitem">
+DerSimonian, Rebecca, and Nan Laird. 1986. <span>“Meta-Analysis in Clinical Trials.”</span> <em>Controlled Clinical Trials</em> 7 (3): 177–88.
+</div>
+<div id="ref-han2026host" class="csl-entry" role="listitem">
+<span class="nocase">Han, Yu, Zian Wang, Jiahao Xie, et al.</span> 2026. <span>“Host–Gut Microbiota Interactions in Health and Disease: Mechanisms and Intervention Strategies.”</span> <em>Frontiers in Microbiology</em> 17: 1785607.
+</div>
+<div id="ref-wang2021metagenomic" class="csl-entry" role="listitem">
+<span class="nocase">Wang, Shaopu, Shuqin Zeng, Muireann Egan, et al.</span> 2021. <span>“Metagenomic Analysis of Mother-Infant Gut Microbiome Reveals Global Distinct and Shared Microbial Signatures.”</span> <em>Gut Microbes</em> 13 (1): 1911571.
+</div>
+</div>
+</section>
+<section id="session-info" class="level2">
+<h2 class="anchored" data-anchor-id="session-info"><strong>Session Info</strong></h2>
+<hr>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.5.2 (2025-10-31)
+ os       macOS Tahoe 26.3.1
+ system   aarch64, darwin20
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       America/Los_Angeles
+ date     2026-06-11
+ pandoc   3.8.3 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64/ (via rmarkdown)
+ quarto   1.9.37 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto
+
+─ Packages ───────────────────────────────────────────────────────────────────
+ package      * version   date (UTC) lib source
+ cachem         1.1.0     2024-05-16 [1] CRAN (R 4.5.0)
+ cellranger     1.1.0     2016-07-27 [1] CRAN (R 4.5.0)
+ chromote       0.5.1     2025-04-24 [1] CRAN (R 4.5.0)
+ cli            3.6.6     2026-04-09 [1] CRAN (R 4.5.2)
+ curl           7.1.0     2026-04-22 [1] CRAN (R 4.5.2)
+ devtools       2.5.2     2026-04-30 [1] CRAN (R 4.5.2)
+ digest         0.6.39    2025-11-19 [1] CRAN (R 4.5.2)
+ dplyr        * 1.2.1     2026-04-03 [1] CRAN (R 4.5.2)
+ ellipsis       0.3.3     2026-04-04 [1] CRAN (R 4.5.2)
+ evaluate       1.0.5     2025-08-27 [1] CRAN (R 4.5.0)
+ farver         2.1.2     2024-05-13 [1] CRAN (R 4.5.0)
+ fastmap        1.2.0     2024-05-15 [1] CRAN (R 4.5.0)
+ fs             2.1.0     2026-04-18 [1] CRAN (R 4.5.2)
+ generics       0.1.4     2025-05-09 [1] CRAN (R 4.5.0)
+ ggplot2      * 4.0.3     2026-04-22 [1] CRAN (R 4.5.2)
+ gitcreds       0.1.2     2022-09-08 [1] CRAN (R 4.5.0)
+ glue           1.8.1     2026-04-17 [1] CRAN (R 4.5.2)
+ gtable         0.3.6     2024-10-25 [1] CRAN (R 4.5.0)
+ here         * 1.0.2     2025-09-15 [1] CRAN (R 4.5.0)
+ hms            1.1.4     2025-10-17 [1] CRAN (R 4.5.0)
+ htmltools      0.5.9     2025-12-04 [1] CRAN (R 4.5.2)
+ htmlwidgets    1.6.4     2023-12-06 [1] CRAN (R 4.5.0)
+ httr           1.4.8     2026-02-13 [1] CRAN (R 4.5.2)
+ jsonlite       2.0.0     2025-03-27 [1] CRAN (R 4.5.0)
+ knitr          1.51      2025-12-20 [1] CRAN (R 4.5.2)
+ labeling       0.4.3     2023-08-29 [1] CRAN (R 4.5.0)
+ later          1.4.8     2026-03-05 [1] CRAN (R 4.5.2)
+ lifecycle      1.0.5     2026-01-08 [1] CRAN (R 4.5.2)
+ magrittr       2.0.5     2026-04-04 [1] CRAN (R 4.5.2)
+ memoise        2.0.1     2021-11-26 [1] CRAN (R 4.5.0)
+ otel           0.2.0     2025-08-29 [1] CRAN (R 4.5.0)
+ ottrpal        2.0.0     2025-03-31 [1] CRAN (R 4.5.0)
+ pillar         1.11.1    2025-09-17 [1] CRAN (R 4.5.0)
+ pkgbuild       1.4.8     2025-05-26 [1] CRAN (R 4.5.0)
+ pkgconfig      2.0.3     2019-09-22 [1] CRAN (R 4.5.0)
+ pkgload        1.5.2     2026-04-22 [1] CRAN (R 4.5.2)
+ processx       3.9.0     2026-04-22 [1] CRAN (R 4.5.2)
+ promises       1.5.0     2025-11-01 [1] CRAN (R 4.5.0)
+ purrr          1.2.2     2026-04-10 [1] CRAN (R 4.5.2)
+ R6             2.6.1     2025-02-15 [1] CRAN (R 4.5.0)
+ RColorBrewer   1.1-3     2022-04-03 [1] CRAN (R 4.5.0)
+ Rcpp           1.1.1-1.1 2026-04-24 [1] CRAN (R 4.5.2)
+ readr          2.2.0     2026-02-19 [1] CRAN (R 4.5.2)
+ readxl       * 1.4.5     2025-03-07 [1] CRAN (R 4.5.0)
+ rlang          1.2.0     2026-04-06 [1] CRAN (R 4.5.2)
+ rmarkdown      2.31      2026-03-26 [1] CRAN (R 4.5.2)
+ rprojroot      2.1.1     2025-08-26 [1] CRAN (R 4.5.0)
+ rstudioapi     0.18.0    2026-01-16 [1] CRAN (R 4.5.2)
+ rvest          1.0.5     2025-08-29 [1] CRAN (R 4.5.0)
+ S7             0.2.2     2026-04-22 [1] CRAN (R 4.5.2)
+ scales         1.4.0     2025-04-24 [1] CRAN (R 4.5.0)
+ sessioninfo    1.2.3     2025-02-05 [1] CRAN (R 4.5.0)
+ spelling       2.3.2     2025-08-18 [1] CRAN (R 4.5.0)
+ stringi        1.8.7     2025-03-27 [1] CRAN (R 4.5.0)
+ stringr      * 1.6.0     2025-11-04 [1] CRAN (R 4.5.0)
+ tibble         3.3.1     2026-01-11 [1] CRAN (R 4.5.2)
+ tidyr          1.3.2     2025-12-19 [1] CRAN (R 4.5.2)
+ tidyselect     1.2.1     2024-03-11 [1] CRAN (R 4.5.0)
+ tzdb           0.5.0     2025-03-15 [1] CRAN (R 4.5.0)
+ usethis        3.2.1     2025-09-06 [1] CRAN (R 4.5.0)
+ utf8           1.2.6     2025-06-08 [1] CRAN (R 4.5.0)
+ vctrs          0.7.3     2026-04-11 [1] CRAN (R 4.5.2)
+ webshot2       0.1.2     2025-04-23 [1] CRAN (R 4.5.0)
+ websocket      1.4.4     2025-04-10 [1] CRAN (R 4.5.0)
+ withr          3.0.2     2024-10-28 [1] CRAN (R 4.5.0)
+ xfun           0.57      2026-03-20 [1] CRAN (R 4.5.2)
+ xml2           1.5.2     2026-01-17 [1] CRAN (R 4.5.2)
+ yaml         * 2.3.12    2025-12-10 [1] CRAN (R 4.5.2)
+
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
+
+──────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
+</section>
+<section id="acknowledgments" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgments"><strong>Acknowledgments</strong></h2>
+<hr>
+<!--
+Fill in any Acknowledgments using an example from a previous case study if needed: https://www.opencasestudies.org/ocs-bp-co2-emissions/#Acknowledgments
+-->
+<p>We would also like to acknowledge the National Institute of General Medical Sciences for funding this work (1R25GM160622).</p>
+<p>Icons are from <a href="https://www.iconpacks.net/">iconpacks</a>.</p>
+<p>Avatars are from <a href="https://getavataaars.com">avataaars</a></p>
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>This book was built with <a href="https://quarto.org/" style="color: #0000FF;">Quarto</a> using <a href="https://github.com/opencasestudies/ocs-template-quarto" style="color: #0000FF;">OTTR</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+<p>All illustrations <a href="hhttps://creativecommons.org/licenses/by-nc/4.0/us/" style="color: #0000FF;">CC BY-NC 4.0. </a> <br> All other materials <a href="https://creativecommons.org/licenses/by-nc/4.0/us/" style="color: #0000FF;"> CC BY-NC 4.0 </a> unless noted otherwise.</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/opencasestudies/ocs-bio-version-control">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

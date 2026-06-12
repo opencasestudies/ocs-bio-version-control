@@ -5,21 +5,6 @@
 
 To-do: add a brief recap here! Focus on why version control, and the ways that we've used version control for reproducibility in this case study.
 
-test:
-
-```{bash}
-ls
-```
-
-```{r}
-2+2
-```
-
-```
-2+2
-``` 
-
-
 ***
 
 ## **Summary Plot**
