@@ -288,13 +288,13 @@ ggsave("figures/sampling_timepoints.png", height = 6, width = 9)
 
 Now that we have two plots, go back through your file "03_visualize_study_cohorts.qmd" to make sure that it contains all relevant code to make these two plots, and that there are explanations before each code chunk. Render your file to confirm that when rendered it will create these two plots. 
 
-Since you've performed the requested analysis, make sure to document any new files in this repository in the README.md file. After doing this, make another commit. 
+Since you've performed the requested analysis, make sure to document any new files in this repository in the README.md file. After doing this, make another commit and push your work. 
 
 ::: {.panel-tabset}
 
 #### GitHub Desktop 
 
-Navigate back to GitHub Desktop. You should now see the modifications that you've made to "03_visualize_study_cohorts.qmd", as well as the added .png files for the figures. Add an appropriate commit message and commit. 
+Navigate back to GitHub Desktop. You should now see the modifications that you've made to "03_visualize_study_cohorts.qmd", as well as the added .png files for the figures. Add an appropriate commit message and commit. Then click "Push origin", to push these changes that you've made locally to your remote repository. 
 
 #### Command line 
 
@@ -311,6 +311,14 @@ Next, add a commit with an appropriate commit message.
 :::: {.shell}
 ```bash
 git commit -m "Add plot of sampling days to '03_visualize_study_cohorts' and document new files in README"
+```
+::::
+
+Finally, push these changes that you've made locally to your remote repository. 
+
+:::: {.shell}
+```bash
+git push
 ```
 ::::
 

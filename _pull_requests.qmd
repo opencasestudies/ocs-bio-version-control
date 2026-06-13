@@ -1,9 +1,9 @@
 # **Pull requests**
 ***
 
-## What is a pull request? 
+In the previous section, you worked locally to make the visualizations that Collab O. Rator had asked you for, and you staged, committed, and pushed these changes. Recall that you were working on a branch called "study comparison". Let's take a look at this branch on GitHub. Navigate back to "https://github.com/your_username/infant_gut_analysis.git" (replacing your username), and underneath the repository name click where is says "Branches". This should take you to a page that shows you the existing branches (this should include "main" and "study_comparison"). Click on "study_comparison". 
 
-to-do: Describe the mechanics of a pull request, how it relates to branches and commits, other components we've addressed so far.
+## What is a pull request? 
 
 ## How to make a pull request 
 
