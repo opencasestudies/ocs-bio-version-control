@@ -9,9 +9,7 @@ At the end of this section, save incremental data so that users can pause and co
 # **Data Import**
 ***
 
-Now that you have created this GitHub repository, and have tracked this project locally with Git, you can start working on the study comparison in R. Open RStudio to your project "infant_gut_analysis". We will start by taking a look at the data. To understand the data contained in this project, first see what the README tells you. 
-
-Start by opening the file that reads in the raw data and running it. Look at the output. 
+Now that you have set up this project with Git and GitHub, you can start working on the study comparison in R. Open RStudio or Positron to your project "infant_gut_analysis". We will start by taking a look at the data. To do this, use the README.md file to determine which file reads in the raw data. Open this file and run the code. 
 
 :::{.think_question}
 ::::{.think_question_header}
