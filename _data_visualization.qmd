@@ -314,11 +314,11 @@ git commit -m "Add plot of sampling days to '03_visualize_study_cohorts' and doc
 ```
 ::::
 
-Finally, push these changes that you've made locally to your remote repository. 
+Finally, push these changes that you've made locally to your remote repository. Because this is your first time pushing from a new branch, you will need to tell Git where you want to push to, adding the flag `--set-upstream origin branch_name`. 
 
 :::: {.shell}
 ```bash
-git push
+git push --set-upstream origin study_comparison
 ```
 ::::
 
