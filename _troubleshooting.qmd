@@ -65,7 +65,7 @@ Open GitHub Desktop, and create a new branch. If you have changes in main that h
 
 #### Command line
 
-Use the following command, repacing "new_branch_name" with your desired branch name. 
+Use the following command, replacing "new_branch_name" with your desired branch name. 
 
 :::: {.shell}
 ```bash
@@ -79,9 +79,106 @@ git checkout -b new_branch_name
 
 <details> <summary> I've staged and committed a file, but I don't want to track it anymore. How can I remove it? </summary>
 
+This is another common problem. We'll first tell Git to stop tracking the file (but keep it locally), and then we will add it to the .gitignore file to avoid tracking it with Git in the future. First, we will stop tracking the file. 
+
+:::{.panel-tabset}
+#### GitHub Desktop
+
+Make sure you are starting in the correct branch that you have been working in. Click "Repository -> Open in Terminal". This will open a command line for you to work with. In this command line, use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. 
+
+:::: {.shell}
+```bash
+git rm --cached "path_to_file" 
+```
+::::
+
+Next, open the .gitignore file and add the file to the list of files to avoid tracking. 
+
+Then, return to GitHub Desktop and commit these changes. 
+...
+
+#### Command line
+
+Use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. 
+
+:::: {.shell}
+```bash
+git rm --cached path/to/file
+```
+::::
+
+Next, open the .gitignore file and add the file to the list of files to avoid tracking. 
+
+Then, return to the command line and stage and stage and commit these changes. 
+
+:::: {.shell}
+```bash
+git add .gitignore
+git commit -m "removing file_name from Git tracking and adding it to .gitignore" 
+```
+::::
+
+:::
+
 </details>
 
-<details> <summary> I've accidentally committed a large file. How do I remove this?  </summary>
+<details> <summary> I've accidentally committed a large file and when I try to push I get an error from GitHub saying that the file is too big. How do I resolve this?  </summary>
+
+This is a common error that can be a little tricky to resolve. You need to remove this file from Git tracking and also amend the commits that include the file. We will assume that the large file was added in the most recent commit. If it was added multiple commits previously, then it can still be removed but will include additional steps that we will not cover here (see [here](https://www.git-tower.com/learn/git/faq/git-filter-repo) for a workflow for removing a file from multiple commits). 
+
+:::{.panel-tabset}
+#### GitHub Desktop
+
+Make sure you are starting in the correct branch that you have been working in. Click "Repository -> Open in Terminal". This will open a command line for you to work with. In this command line, use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. 
+
+:::: {.shell}
+```bash
+git rm --cached "path_to_file" 
+git commit --ammend 
+```
+::::
+
+Including the `git commit --ammend` rewrites the most recent commit as if the large file was not added. Don't close the terminal yet, we will come back to it. 
+
+Next, open the .gitignore file and add the file to the list of files to avoid tracking. In GitHub Desktop, stage the .gitignore, but do not commit it yet. 
+
+Return to the terminal. Repeat the `git commit --ammend` command, which will add this update to the .gitignore to the most recent commit. 
+
+:::: {.shell}
+```bash
+git commit --ammend 
+```
+::::
+
+Then, return to GitHub Desktop and commit these changes. 
+...
+
+#### Command line
+
+Use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. Including the `git commit --ammend` rewrites the most recent commit as if the large file was not added.
+
+:::: {.shell}
+```bash
+git rm --cached path/to/file
+git commit --ammend
+```
+::::
+
+Next, open the .gitignore file and add the file to the list of files to avoid tracking. 
+
+Then, return to the command line and stage and stage and commit these changes. Note that we include `git commit --ammend` a second time to add the changes to the .gitignore file to the previous commit. 
+
+:::: {.shell}
+```bash
+git add .gitignore
+git commit --ammend
+git commit -m "removing file_name from Git tracking and adding it to .gitignore" 
+```
+::::
+
+:::
+
+The best way to avoid this problem is when you add large files to a folder that is tracked with Git, immediately add them to the .gitignore. If you really do want to track them with version control, consider using [Git Large File Storage](https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage) (LFS). 
 
 </details>
 
