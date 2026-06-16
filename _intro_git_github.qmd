@@ -42,7 +42,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 
 Similarly, think about how you might work on that same project with a collaborator. Perhaps you both have a folder on your computer for that project, and when you make an update you email the file to your collaborator, and they copy that update into their file, or save your file in their folder. Perhaps the two of you update the same file at the same time and then you have to go through line by line to merge the updates into a single version of the file. 
 
-to-do: include similar image to above, but if multiple people are working on a project and sending files back and forth.
+::: {.column-margin}
+to-do: Include similar image to above, but if multiple people are working on a project and sending files back and forth
+:::
 
 While both of these organizational systems can work well when carefully maintained, they are time consuming and prone to error. Version control is a tool that makes it easier to manage sets of files for projects. It automates several of the processes described above, and makes others dramatically easier. While version control was originally made for software engineers to work together on large projects, it is now commonly used for scientific projects as well.
 
@@ -200,7 +202,10 @@ If you look at your repository, you will see that it has one file, README.md. Th
 - click the green button that says "Commit changes"
 - click the repository name in the upper left to navigate back to the home page
 
-to-do: replace this image with a simplified figure with some cartoon elements.
+::: {.column-margin}
+to-do: replace this image with a simplified figure with some cartoon elements
+:::
+
 
 ![](img/github_edit_readme.png){fig-alt="Edit README from GitHub" width=800 .lightbox}
 
@@ -208,7 +213,9 @@ Let's now look at the commit history for this repository. We can do that by clic
 
 This brings us to a list of commits for this repository. You should see two commits, the initial commit that created the repository and the one you just made when you edited the README file. Click on the title of the newer commit. 
 
-[to-do: add image of this]
+::: {.column-margin}
+to-do: add image of this
+:::
 
 This will bring you to information about the commit. Each commit has an alphanumeric hash (set of letters and numbers), which uniquely identifies that commit. In this view, you can see each file that has been changed in your commit, as well as the changes to the files. Here, we can see with the plus signs that you've added a line to the README. This type of visual representation of a commit, in terms of the changes between files, can be helpful when you want to understand the history of a project. 
 
@@ -386,7 +393,9 @@ Making a local copy of a repository that is hosted on GitHub is called "cloning"
 
 From GitHub Desktop, go to "File -> Clone Repository" and then provide the URL to your GitHub repository. Now, you should be able to see a window in GitHub Desktop that corresponds with "my-first-repository". If you click on history, you can see a list of commits to this repository. 
 
+::: {.column-margin}
 to-do: add image
+:::
 
 #### Command line 
 
@@ -456,7 +465,9 @@ By default, the box next to added or updated files is checked. This means that e
 
 In the lower left corner you will see a box that says "Summary (required)" and "Description". This is where you will put your commit message. 
 
+::: {.column-margin}
 to-do: add image
+:::
 
 A few pieces of advice to consider for your commit messages:
 
@@ -464,7 +475,9 @@ A few pieces of advice to consider for your commit messages:
 - A commit message should be concise. Avoid adding too many unnecessary details here. The reader can always look at the differences in files for the commit to see exactly what you've done. 
 - In a public repository, the commit message will be visible to anyone and exist as long as the repository does. Make sure that your message is appropriate and you'd be comfortable with colleagues seeing it. 
 
+::: {.column-margin}
 to-do: make graphic showing good and bad commit messages:
+
 good
 
 - "Add '01_clean_data.R' for data cleaning."
@@ -477,6 +490,7 @@ bad
 - "adding file"
 - "Add '01_clean_data.R', which takes the data found in 'data/data.csv', removes all NA observations, renames columns, converts the data into long format instead of wide format, and then saves the new version of the data as 'data/cleaned_data.csv'"
 - "blahhhhhhhh removing this stupid file that I hate" 
+:::
 
 For this commit, you might use the summary "Adding new file 01-calculations.R" to perform calculations."  
 
@@ -538,7 +552,9 @@ A few pieces of advice to consider for your commit messages:
 - A commit message should be concise. Avoid adding too many unnecessary details here. The reader can always look at the differences in files for the commit to see exactly what you've done. 
 - In a public repository, the commit message will be visible to anyone and exist as long as the repository does. Make sure that your message is appropriate and you'd be comfortable with colleagues seeing it. 
 
+::: {.column-margin}
 to-do: make graphic showing good and bad commit messages:
+
 good
 
 - "Add '01_clean_data.R' for data cleaning."
@@ -551,6 +567,7 @@ bad
 - "adding file"
 - "Add '01_clean_data.R', which takes the data found in 'data/data.csv', removes all NA observations, renames columns, converts the data into long format instead of wide format, and then saves the new version of the data as 'data/cleaned_data.csv'"
 - "blahhhhhhhh removing this stupid file that I hate" 
+:::
 
 For this commit, you might use the summary "Adding new file '01-calculations.R' to perform calculations."  
 
@@ -613,7 +630,9 @@ In this section you have made a GitHub account, installed Git and GitHub Desktop
 
 In a typical GitHub workflow, you will rarely be making changes from GitHub. Instead, you will often be working with one or multiple collaborators on a repository. Once your collaborator makes changes locally, they can push those changes to GitHub, and then you can pull those changes to your local copy of the repository. 
 
+::: {.column-margin}
 to-do: Add image to show a summary of the clone/stage/commit/push workflow
+:::
 
 ### Tips
 
@@ -638,8 +657,7 @@ Now, go to GitHub Desktop and do the following:
 - leave the box "Initialize this repository with a README" unchecked (because a README is already included in the set of files). 
 - under Git Ignore choose "R" and under License choose "MIT License". 
 
-Now, copy the contents of the "infant_gut_files" into the new repository that you just created with GitHub Desktop 
-to-do: potentially include drop-down to help find the folders on different operating systems. 
+Now, copy the contents of the "infant_gut_files" into the new repository that you just created with GitHub Desktop
 
 Once you add these files, return to GitHub Desktop. You should see a set of staged files. 
 
@@ -712,11 +730,23 @@ Integrating changes from one branch into another branch.
 ::::
 :::
 
-If there are no lines of code in any files that are directly in conflict, then merging will automatically combine the sets of files into a single version to move forward with. If there are lines that are directly in conflict, this will create what is called a merge conflict. [to-do: link to merge conflict section in troubleshooting Git and GitHub section]
+If there are no lines of code in any files that are directly in conflict, then merging will automatically combine the sets of files into a single version to move forward with. If there are lines that are directly in conflict, this will create what is called a merge conflict. 
 
+::: {.column-margin}
+to-do: link to merge conflict section in troubleshooting Git and GitHub section
+:::
+
+::: {.column-margin}
 to-do: Add image of merged versions
+:::
 
-Branches are also helpful when working with collaborators. If you are developing a new part of an analysis, you can do it in a separate branch. When you are ready for your collaborator to review your work, you can submit a "pull request", which is a request to merge your branch with the main branch. Your collaborator can review all of the changes between your branch and the new branch, and either approve the pull request or request edits before merging. [to-do: link to sections that describes pull requests in more detail below.]
+
+Branches are also helpful when working with collaborators. If you are developing a new part of an analysis, you can do it in a separate branch. When you are ready for your collaborator to review your work, you can submit a "pull request", which is a request to merge your branch with the main branch. Your collaborator can review all of the changes between your branch and the new branch, and either approve the pull request or request edits before merging. 
+
+::: {.column-margin}
+to-do: link to sections that describes pull requests in more detail below.
+:::
+
 
 ### Create a new branch for this analysis 
 

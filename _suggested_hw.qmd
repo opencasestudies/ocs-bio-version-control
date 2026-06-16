@@ -18,7 +18,9 @@ Uncomment this section if you're suggesting an exercise that reiterates a large 
 
 ## Forking
 
+::: {.column-margin}
 to-do: Create the GitHub repo for them to fork and draft this section! 
+:::
 
 This could be a good place to talk about forking. Give a quick explanation of forking, and then ask user to fork the repo (this will be the same as the project files that they downloaded early in the case study), make a change (something quick and easy), and then push and open a pull request. Describe how pull requests are similar and different when made between branches in a repo vs from a fork to the upstream repo. They can either stop before opening the pull request, or open it and then close it when they are done (to avoid having a long list of open pull requests on this educational repo). I'm not sure if this should be its own section, or if it should be here in suggested homework (therefore making it optional). 
 

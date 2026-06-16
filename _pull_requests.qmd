@@ -16,7 +16,9 @@ In the previous section, you worked locally to make the visualizations that Coll
 
 This set of steps will bring you to a page where you can make your pull request. The first thing to note is the panel at the top of the page, which gives you the base branch (this will by default be "main") and the compare branch (this will be the branch you've been working on, in this case "study_comparison"). There is an arrow, showing that you are trying to merge the updates that you've made in the compare branch into the base branch. 
 
-to-do: add image of a pull request here
+::: {.column-margin}
+to-do: add image of a pull request here!
+:::
 
 There are a few useful components of this page in which you make a pull request. First, you have a spot to add a title and a description. If you scroll down, you'll see a list of commits that make up this pull request along with the commit messages, and each of the files changed. On the right panel next to the title you'll see an option for reviewers. If other users have access to this repository, then you can add them as a reviewer. They will get an email notification that you've requested a review from them. 
 
@@ -31,7 +33,9 @@ Add a title and a description for your pull request now.
 <details>
 <summary>Example pull request for this analysis</summary>
 
-to-do: add image of pull request here! 
+::: {.column-margin}
+to-do: add image of pull request here!
+:::
 
 </details>
 
@@ -41,21 +45,7 @@ Once you have created a pull request, it is considered an "open" pull request an
 
 ### Merging pull requests 
 
-Let's say that you submitted a pull request, you or your collaborator has decided that the changes look good, and you want to integrate the changes from your development branch into the base branch. This is called "merging" your pull request. This will either be easy or more complex, depending on whether there are conflicts between the two branches. 
-:::{.definition_box}
-::::{.definition_box_header}
-Merge conflict
-::::
-::::{.inner_block}
-When there are competing changes made to the same line of a file, or a file has been modified in one branch and deleted in another branch. 
-::::
-:::
-
-Typically, Git is able to automatically merge changes from one branch into another. However, a merge conflict happens when there are competing changes between the two branches, and Git needs you to manually decide how to resolve these differences. A merge conflict may arise in a scenario in which you made a branch from main, worked on that branch, and by the time you submit a pull request back to main, someone else has already committed to main and updated the same file as you have. 
-
-to-do: image of how merge conflict may have happened 
-
-In this pull request that you've made, you shouldn't have any merge conflicts. However, see [add link to troubleshooting section] for information about how to resolve merge conflcits. 
+Let's say that you submitted a pull request, you or your collaborator has decided that the changes look good, and you want to integrate the changes from your development branch into the base branch. This is called "merging" your pull request. In most cases, you will see a box that says "No conflicts with base branch", and you can click the button that says "Merge pull request". However, in some cases, you will not be able to merge until you resolve merge conflicts. See [add link to troubleshooting section] for more information about merge conflicts and how to resolve them. 
 
 ### Closing pull requests
 

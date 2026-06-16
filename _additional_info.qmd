@@ -13,8 +13,6 @@ Use this section to provide any additional information or resources on the topic
 ## **Helpful Links**
 ***
 
-[These are a set of resources that I've identified or reviewers have identified. I will link to some of these resources in relevant parts of the lesson (so that each element of GitHub includes a resource of where to learn more). I will also reorganize these resources here to group similar resources together.]
-
 - [happy git with R](https://happygitwithr.com): online book that covers most relevant topics for using Git and GitHub with R
 - [How to Use Git/GitHub with R](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r): blog post about getting Git and GitHub set up and working with RStudio. This uses the built-in Git GUI in RStudio instead of GitHub Desktop
 - [Dangit, Git!?!](https://dangitgit.com/en): brief description of some common Git errors and how to resolve them
@@ -30,7 +28,9 @@ Use this section to provide any additional information or resources on the topic
 
 <u>Terms and concepts covered:</u>
 
-to-do: add glossary here
+::: {.column-margin}
+to-do: add glossary here!
+:::
 
 <u>Packages used in this case study: </u>
 

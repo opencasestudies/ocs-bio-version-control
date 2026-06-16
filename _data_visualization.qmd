@@ -9,11 +9,6 @@ At the end of this section, save incremental data so that users can pause and co
 # **Data Visualization**
 ***
 
-to-do: break this into smaller pieces, provide more information, and give learner space to figure things out on their own, with hints and solutions in drop-down boxes. See original case studies for examples here! 
-
-to-do: have the learner open a .R or .Rmd file for this code.
-Question: preference on .R and .Rmd files for this?
-
 We will now generate visualizations to compare the meta-analysis study cohorts. Because this is a new component of the analysis, we will create a new file in "infant_gut_analysis" for this code. 
 
 :::{.reproducibility_box}

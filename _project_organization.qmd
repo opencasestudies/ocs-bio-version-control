@@ -75,7 +75,9 @@ From a Git perspective, files are either text files or binary files. Text files 
 
 The best way to avoid tracking a file is to add it to your .gitignore file. If a file or folder is included in your .gitignore file, it will not be staged when you use the command `git add .`. 
 
+::: {.column-margin}
 to-do: add image of adding certain files not to track to .gitignore
+:::
 
 An important consideration for which files to track is file size. Tracking large files can slow down common Git operations and may eventually exceed GitHub's [repository limits](https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits). For binary files or moderately large files that still need version control, Git Large File Storage (often referred to as Git LFS) is an option. Git LFS stores large files outside the main repository while preserving version tracking. You can read more about Git LFS [here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage). 
 

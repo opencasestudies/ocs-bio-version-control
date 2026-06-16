@@ -1,32 +1,83 @@
 # **Troubleshooting Git and GitHub**
 ***
 
-Most new and experienced users of Git and GitHub will run into problems occasionally. Luckily, version control is designed so that these problems can be solved, it just may take some time to get used to. There are many helpful [resources](https://dangitgit.com/en) online for common Git and GitHub problems, and AI chatbots can provide advice (add note here to verify AI advice before running it!). In this section, we will mention a few common Git and GitHub problems and provide solutions. 
+Most new and experienced users of Git and GitHub will run into problems occasionally. Luckily, version control is designed so that these problems can be solved, it just may take some time to get used to. There are many helpful [resources](https://dangitgit.com/en) online for common Git and GitHub problems, and AI chatbots can provide advice (please see our AI disclaimer below for advice on using AI for version control!). In this section, we will mention a few common Git and GitHub problems and provide solutions. 
 
 <details> <summary> I've created a merge conflict. What is this? How do I fix it?  </summary>
 
-Typically the "pull" -> "edit" -> "stage" -> "commit" -> "push" workflow smoothly incorporates changes that are made locally into the remote repository. However, occasionally merge conflicts will occur and need to be fixed manually. 
+Typically, Git is able to automatically merge changes from one branch into another. However, a merge conflict happens when there are competing changes between the two branches, and Git needs you to manually decide how to resolve these differences. A merge conflict may arise in a scenario in which you made a branch from main, worked on that branch, and by the time you submit a pull request back to main, someone else has already committed to main and updated the same file as you have. 
+
+::: {.column-margin}
+to-do: image of how merge conflict may have happened
+:::
 
 :::{.definition_box}
 ::::{.definition_box_header}
 Merge conflict
 ::::
 ::::{.inner_block}
-When one branch is being merged into another, and the branches both edited the same line or a file differently, or one branch edited a file that is deleted by the other branch. 
+When Git cannot automatically reconcile differences between branches it is attempting to combine, typically because the same part of a file (or closely related parts) were edited in incompatible ways, or because one branch modified something the other removed.
 ::::
 :::
 
-to-do: include image of merge conflict
+You will know that you have a merge conflict when Git attempts to combine changes (for example, during `git merge` or `git pull`) and reports tha tit cannot automatically resolve some differences. 
 
-to-do: how to solve merge conflicts
+:::{.panel-tabset}
+#### GitHub Desktop
+
+You will see a pop-up window that says "Resolve conflicts before Merge", along with a list of files with conflicts. You will need to open the files in a text editor in order to manually resolve the merge conflicts. 
+
+#### Command line
+
+When you try to run `git pull`, you'll get a response that includes: "Automatic merge failed; fix conflicts and then commit the result". 
+
+:::
+
+When you open a file with a merge conflict, you will see that conflict markers have been added. It may look something like this: 
+
+```
+<<<<<<< HEAD
+x <- 26
+=======
+x <- 25
+>>>>>>> feature-branch
+
+```
+
+For lines that are in conflict, you'll see "<<<<<<< HEAD" and "=======". The code in between these two markers is the code that is contained locally in the branch that you are working with. Lower in the file, you'll see ">>>>>>> incoming_change_tag", where "incoming_change_tag" references the commit or branch that identifies the incoming change. You need to manually edit the file to remove the tags, and to include whatever content you would like (either the content in your local branch, the content from the remote commit that is being pulled, or a combination of the two). Once you've edited this file, you should save and stage the file. 
+
+In some cases (such as when one branch deletes a file and another edits it), you may not see conflict markers inside a file. Instead, you will need to either remove the file if you want it to be deleted, or stage the file if you would like it to be kept. 
+
+After you resolve and stage all files that had merge conflicts, you should commit these changes. This will resolve your merge conflict. 
 
 </details>
 
 <details> <summary> I've accidentally been working in the main branch, but I actually want my work to all go into a new branch. How do I switch branches and move this work with me?   </summary>
 
+Luckily, this is an easy problem to resolve!
+
+:::{.panel-tabset}
+#### GitHub Desktop
+
+Open GitHub Desktop, and create a new branch. If you have changes in main that haven't been committed, GitHub Desktop will open a pop-up to ask you if you'd like to leave your changes on main or bring your changes to the new branch. Choose to bring the changes to the new branch. 
+
+...
+
+#### Command line
+
+Use the following command, repacing "new_branch_name" with your desired branch name. 
+
+:::: {.shell}
+```bash
+git checkout -b new_branch_name 
+```
+::::
+
+:::
+
 </details>
 
-<details> <summary> I've staged and commited a file, but I don't want to track it anymore. How can I remove it? </summary>
+<details> <summary> I've staged and committed a file, but I don't want to track it anymore. How can I remove it? </summary>
 
 </details>
 
@@ -34,6 +85,8 @@ to-do: how to solve merge conflicts
 
 </details>
 
-Also add a section about using AI with Git and GitHub, it can be very helpful but make sure it doesn't have you do something destructive! 
+::: {.column-margin}
+to-do: Also add a section about using AI with Git and GitHub, it can be very helpful but make sure it doesn't have you do something destructive! 
+:::
 
 ***
