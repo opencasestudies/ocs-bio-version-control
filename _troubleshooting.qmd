@@ -3,13 +3,14 @@
 
 Most new and experienced users of Git and GitHub will run into problems occasionally. Luckily, version control is designed so that these problems can be solved, it just may take some time to get used to. There are many helpful [resources](https://dangitgit.com/en) online for common Git and GitHub problems, and AI chatbots can provide advice (please see our AI disclaimer below for advice on using AI for version control!). In this section, we will mention a few common Git and GitHub problems and provide solutions. 
 
-<details> <summary> I've created a merge conflict. What is this? How do I fix it?  </summary>
-
-Typically, Git is able to automatically merge changes from one branch into another. However, a merge conflict happens when there are competing changes between the two branches, and Git needs you to manually decide how to resolve these differences. A merge conflict may arise in a scenario in which you made a branch from main, worked on that branch, and by the time you submit a pull request back to main, someone else has already committed to main and updated the same file as you have. 
-
 ::: {.column-margin}
 to-do: image of how merge conflict may have happened
 :::
+
+<details> 
+<summary>I've created a merge conflict. What is this? How do I fix it?</summary>
+
+Typically, Git is able to automatically merge changes from one branch into another. However, a merge conflict happens when there are competing changes between the two branches, and Git needs you to manually decide how to resolve these differences. A merge conflict may arise in a scenario in which you made a branch from main, worked on that branch, and by the time you submit a pull request back to main, someone else has already committed to main and updated the same file as you have. 
 
 :::{.definition_box}
 ::::{.definition_box_header}
@@ -60,8 +61,6 @@ Luckily, this is an easy problem to resolve!
 #### GitHub Desktop
 
 Open GitHub Desktop, and create a new branch. If you have changes in main that haven't been committed, GitHub Desktop will open a pop-up to ask you if you'd like to leave your changes on main or bring your changes to the new branch. Choose to bring the changes to the new branch. 
-
-...
 
 #### Command line
 
@@ -182,8 +181,34 @@ The best way to avoid this problem is when you add large files to a folder that 
 
 </details>
 
-::: {.column-margin}
-to-do: Also add a section about using AI with Git and GitHub, it can be very helpful but make sure it doesn't have you do something destructive! 
+:::{.ai_box}
+::::{.ai_box_header}
+AI use considerations
+::::
+::::{.inner_block}
+
+<u>Context:</u>
+
+When you ask an AI chatbot for assistance with version control, make sure to give appropriate background. Describe the specific task that you would like to do, or the problem that you are encountering. It can be helpful to include any error messages that you might be receiving from Git. For example, imagine that you've created a merge conflict. 
+
+<u>Suggested Prompt:</u>
+
+```{ .default .code-overflow-wrap }
+I am working with a Git-controlled repository, in a branch called new_feature. I have made several changes locally, and have staged those files and committed them. I just went to pull changes from the remote version of this branch that my collaborator made recently, and I'm getting a merge conflict. Specifically, I've received the following message:
+
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Auto-merging 01_import_data.R
+CONFLICT (content): Merge conflict in 01_import_data.R
+Automatic merge failed; fix conflicts and then commit the result.
+
+How can I resolve this merge conflict?
+```
+
+<u>Validation:</u>
+You should always be careful when taking advice on Git and GitHub from an AI chatbot. If you are asking for commands to use with Git for a situation that is very new to you, it could be helpful to do a quick search of the commands the chatbot tells you to use, to confirm that they do what you want to do. You could also ask multiple chatbots the same question. 
+::::
 :::
+
 
 ***

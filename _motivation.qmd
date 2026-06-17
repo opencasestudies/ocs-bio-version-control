@@ -31,14 +31,5 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 ```
 
 In this case study, you will learn how to use Git and GitHub to track this project and perform the requested comparison of studies used in the meta-analysis. You will also learn how version control can facilitate collaboration and  make a scientific project more reproducible. 
-
-:::{.definition_box}
-::::{.definition_box_header}
-Reproducibility
-::::
-::::{.inner_block}
-The ability for someone else the run the same analysis on the same data and get the same results.
-::::
-:::
   
 ***

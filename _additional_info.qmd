@@ -26,14 +26,6 @@ Use this section to provide any additional information or resources on the topic
 - [Contributing to Galaxy Training Network with GitHub](https://training.galaxyproject.org/training-material/topics/contributing/tutorials/github-contribution/tutorial.html): tutorial on how to contribute to an open source project with GitHub
 - [GitHub cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf): cheatsheet with Git commands that can be used in the command line
 
-<u>Terms and concepts covered:</u>
-
-::: {.column-margin}
-to-do: add glossary here!
-:::
-
-<u>Packages used in this case study: </u>
-
 <!--
 Automatically include the packages table from _packages.qmd?
 -->

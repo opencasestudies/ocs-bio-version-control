@@ -82,11 +82,6 @@ include-sections:
 
 {{< include _bibliography.qmd >}}
 
-## **Session Info**
-***
-
-```{r}
-devtools::session_info()
-```
+{{< include _session_info.qmd >}}
 
 {{< include _acknowledgements.qmd >}}

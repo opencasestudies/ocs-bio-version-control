@@ -28,6 +28,12 @@ There are a few useful components of this page in which you make a pull request.
 - A description of the changes you want to merge. This is a good place to list files added and modified and give a quick description of those changes. Give plenty of context, you've likely been thinking about the code you want to merge more recently than your collaborator who will review it 
 - A request for code review (make specific requests: do you want your collaborator to review all changes? Do you want them to focus on a specific file or part of an analysis? do you just a bigger picture review to see if your approach to the problem makes sense?)
 
+For additional suggestions on making good pull requests, you can read more in [this reproducibility course](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html).
+
+::: {.column-margin}
+to-do: I've been looking for good examples of pull requests to link to here, but most that I've looked at have brief descriptions and are for complex software packages, which seem less ideal for these learners. Does anyone have examples of pull requests (preferably for scientific projects) that they like, on GitHub repos that are unlikely to be deleted? 
+:::
+
 Add a title and a description for your pull request now. 
 
 <details>

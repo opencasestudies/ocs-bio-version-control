@@ -20,6 +20,23 @@ The ability for someone else the run the same analysis on the same data and get 
 
 When conducting a scientific project, reproducibility is very important. If another researcher can use your data and code and generate the same results, then your conclusions are more credible to the scientific community. Version control is a tool that enables reproducible research by recording changes to a project over time. When used carefully, it gives a complete history of changes made over the course of a project. It also provides a digital backup and an online repository of code and data for other researchers to see. Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes. While several tools exist for version control, we will introduce Git and GitHub, two of the most commonly used version control tools. 
 
+::: {.column-margin}
+I've had a difficult time finding additional resources that describe other version control options besides Git and GitHub (outside of lists of GitHub alternatives, such as GitLab and BitBucket). I'm curious if anyone has a resource on this that they like.
+:::
+
+<details>
+<summary>More information on how reproducibility fits into the scientific process.</summary>
+
+Reproducibility is one concept that helps ensure that scientific projects and their results are valid and can be trusted by the scientific community. It can be considered as the intermediate goal between repeatability and replicability. 
+
+An experiment or analysis is repeatable if the **same** researcher can run it a second time, with the **same** data and code, and get the same results. 
+
+For that experiment or analysis to be reproducible, a **new** researcher needs to be able to run it with the **same** data and code and get the same result. 
+
+Finally, conclusions from an experiment or analysis are replicable if a **new** researcher can run the same experiment or analysis with **new** data and draw the same conclusions. 
+
+</details>
+
 ## Why use version control? 
 
 We will refer to two papers about version control. 
@@ -42,9 +59,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 
 Similarly, think about how you might work on that same project with a collaborator. Perhaps you both have a folder on your computer for that project, and when you make an update you email the file to your collaborator, and they copy that update into their file, or save your file in their folder. Perhaps the two of you update the same file at the same time and then you have to go through line by line to merge the updates into a single version of the file. 
 
-::: {.column-margin}
-to-do: Include similar image to above, but if multiple people are working on a project and sending files back and forth
-:::
+```{r, fig.alt="why do you need version control (single person)", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_2#slide=id.g3f139628ce6_0_2")
+```
 
 While both of these organizational systems can work well when carefully maintained, they are time consuming and prone to error. Version control is a tool that makes it easier to manage sets of files for projects. It automates several of the processes described above, and makes others dramatically easier. While version control was originally made for software engineers to work together on large projects, it is now commonly used for scientific projects as well.
 
@@ -191,6 +208,8 @@ A license is a legal document that states who can use your code. Although it may
 
 ***
 
+For more information on any of these components of a new repository, see GitHub's [documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) for creating new repositories.
+
 Once you click "Create repository", you will be brought to the GitHub page for your repository. GitHub URLs all have the same format: "https://github.com/your_user_name/your_repository_name".
 
 If you look at your repository, you will see that it has one file, README.md. This is where you will document what is contained in your repository, and it will serve as a homepage for your project. It is written in Markdown, an easy language that can be used to format documents (you can find more information about how Markdown works and its syntax [here](https://www.markdownguide.org)). You will now edit the README:
@@ -202,22 +221,27 @@ If you look at your repository, you will see that it has one file, README.md. Th
 - click the green button that says "Commit changes"
 - click the repository name in the upper left to navigate back to the home page
 
-::: {.column-margin}
-to-do: replace this image with a simplified figure with some cartoon elements
-:::
-
-
-![](img/github_edit_readme.png){fig-alt="Edit README from GitHub" width=800 .lightbox}
+```{r, fig.alt="Image of first repository", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_87#slide=id.g3f139628ce6_0_87")
+```
 
 Let's now look at the commit history for this repository. We can do that by clicking where it says "2 Commits" just below the green "Code" button. 
 
 This brings us to a list of commits for this repository. You should see two commits, the initial commit that created the repository and the one you just made when you edited the README file. Click on the title of the newer commit. 
 
-::: {.column-margin}
-to-do: add image of this
-:::
+```{r, fig.alt="List of commits", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_130#slide=id.g3f139628ce6_0_130")
+```
+
 
 This will bring you to information about the commit. Each commit has an alphanumeric hash (set of letters and numbers), which uniquely identifies that commit. In this view, you can see each file that has been changed in your commit, as well as the changes to the files. Here, we can see with the plus signs that you've added a line to the README. This type of visual representation of a commit, in terms of the changes between files, can be helpful when you want to understand the history of a project. 
+
+<details>
+<summary>GitHub issues: a convenient to-do list for your repository</summary>
+One thing that you'll see when looking at your new repository is a tab in the upper left corner (just above the repository name) that says "Issues". Click on this "Issues" button.
+
+An issue is a way to keep track of ideas, tasks to complete, errors to resolve, or anything else related to a GitHub repo (see how GitHub describes issues [here](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues)). Issues are also a good place to collaborate. You can tag people with their GitHub usernames in an issue, which will trigger an email notification. Multiple people can comment on an issue, so you can have a discussion about how to resolve the issue. The benefit of this over an email thread is that other collaborators can view this conversation, as well as other GitHub users who may want to know about the issue and resolution as well. Once an issue is considered resolved (for example, the task it mentions has been completed or the error it mentions has been fixed), then the issue can be closed. However, the GitHub repo will retain a searchable list of closed issues. When used frequently, this can be a helpful record of the development of a project. 
+</details>
 
 ### Installing GitHub Desktop 
 
@@ -387,15 +411,16 @@ You've finished setting up GitHub, Git, and GitHub Desktop, great job! Now, we c
 
 Making a local copy of a repository that is hosted on GitHub is called "cloning". Start by navigating to your repository on GitHub, and copy the URL. 
 
+```{r, fig.alt="Cloning repo", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_146#slide=id.g3f139628ce6_0_146")
+```
+
 ::: {.panel-tabset}
 
 #### GitHub Desktop 
 
 From GitHub Desktop, go to "File -> Clone Repository" and then provide the URL to your GitHub repository. Now, you should be able to see a window in GitHub Desktop that corresponds with "my-first-repository". If you click on history, you can see a list of commits to this repository. 
 
-::: {.column-margin}
-to-do: add image
-:::
 
 #### Command line 
 
@@ -475,22 +500,9 @@ A few pieces of advice to consider for your commit messages:
 - A commit message should be concise. Avoid adding too many unnecessary details here. The reader can always look at the differences in files for the commit to see exactly what you've done. 
 - In a public repository, the commit message will be visible to anyone and exist as long as the repository does. Make sure that your message is appropriate and you'd be comfortable with colleagues seeing it. 
 
-::: {.column-margin}
-to-do: make graphic showing good and bad commit messages:
-
-good
-
-- "Add '01_clean_data.R' for data cleaning."
-- "Add boxplot to '03_make_plots.Rmd'"
-- "Removing 'old_data.csv' because it has been replaced by a newer version of the dataset"
-
-bad
-
-- "commit"
-- "adding file"
-- "Add '01_clean_data.R', which takes the data found in 'data/data.csv', removes all NA observations, renames columns, converts the data into long format instead of wide format, and then saves the new version of the data as 'data/cleaned_data.csv'"
-- "blahhhhhhhh removing this stupid file that I hate" 
-:::
+```{r, fig.alt="good and bad commit messages", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_174#slide=id.g3f139628ce6_0_174")
+```
 
 For this commit, you might use the summary "Adding new file 01-calculations.R" to perform calculations."  
 
@@ -552,22 +564,9 @@ A few pieces of advice to consider for your commit messages:
 - A commit message should be concise. Avoid adding too many unnecessary details here. The reader can always look at the differences in files for the commit to see exactly what you've done. 
 - In a public repository, the commit message will be visible to anyone and exist as long as the repository does. Make sure that your message is appropriate and you'd be comfortable with colleagues seeing it. 
 
-::: {.column-margin}
-to-do: make graphic showing good and bad commit messages:
-
-good
-
-- "Add '01_clean_data.R' for data cleaning."
-- "Add boxplot to '03_make_plots.Rmd'"
-- "Removing 'old_data.csv' because it has been replaced by a newer version of the dataset"
-
-bad
-
-- "commit"
-- "adding file"
-- "Add '01_clean_data.R', which takes the data found in 'data/data.csv', removes all NA observations, renames columns, converts the data into long format instead of wide format, and then saves the new version of the data as 'data/cleaned_data.csv'"
-- "blahhhhhhhh removing this stupid file that I hate" 
-:::
+```{r, fig.alt="good and bad commit messages", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_174#slide=id.g3f139628ce6_0_174")
+```
 
 For this commit, you might use the summary "Adding new file '01-calculations.R' to perform calculations."  
 
@@ -638,12 +637,13 @@ to-do: Add image to show a summary of the clone/stage/commit/push workflow
 
 - Commit often. A history will not be helpful if you run an entire analysis locally and then commit everything in a single commit. 
 - If you are working on a repository with multiple contributors, make sure to pull each time you work in order to work on the most up-to-date version of the repository 
+- Never use version control to track files with passwords or other sensitive information. If you have there are ways to remove these files and change the Git history, but this should be considered a last resort. Instead, add any files with sensitive information to your .gitignore.
 
 ## Create version controlled repository for your project 
 
 Now, we will return to the project with Collab. O. Rator. In the previous section, we created a repository on GitHub, and then cloned to make a local copy. Here, we will start with a local folder, track it with Git, and then create a remote version on GitHub. 
 
-First, download the .zip file [here](https://github.com/opencasestudies/mother-infant-gut-microbiome-analysis-sandbox/raw/refs/heads/main/infant_gut_files.zip). Your browser may automatically unzip this file to create a folder called "infant_gut_files", if not then unzip the file. 
+First, download the .zip file [here](https://github.com/opencasestudies/version_controlled_infant_gut_analysis/blob/main/version_controlled_infant_gut_analysis.zip). Your browser may automatically unzip this file to create a folder called "infant_gut_files", if not then unzip the file. 
 
 ::: {.panel-tabset}
 

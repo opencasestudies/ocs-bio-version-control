@@ -283,7 +283,7 @@ ggsave("figures/sampling_timepoints.png", height = 6, width = 9)
 
 Now that we have two plots, go back through your file "03_visualize_study_cohorts.qmd" to make sure that it contains all relevant code to make these two plots, and that there are explanations before each code chunk. Render your file to confirm that when rendered it will create these two plots. 
 
-Since you've performed the requested analysis, make sure to document any new files in this repository in the README.md file. After doing this, make another commit and push your work. 
+Since you've performed the requested analysis, make sure to document any new files in this repository in the README.md file. Specifically, describe what the file "03_visualize_study_cohorts.qmd" does, and describe the two plots that are now saved in the figures folder. After doing this, make another commit and push your work. 
 
 ::: {.panel-tabset}
 
