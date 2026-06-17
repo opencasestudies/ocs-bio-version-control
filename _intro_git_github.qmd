@@ -510,7 +510,7 @@ A few pieces of advice to consider for your commit messages:
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_174#slide=id.g3f139628ce6_0_174")
 ```
 
-For this commit, you might use the summary "Adding new file 01-calculations.R" to perform calculations."  
+For this commit, you might use the summary "Add new file '01-calculations.R' to perform calculations."  
 
 Once you've added the commit message, you are ready to commit these files. Click "commit to main". Now these changes have been entered into the version control history of your repository in Git. 
 
@@ -578,7 +578,7 @@ For this commit, you might use the summary "Adding new file '01-calculations.R' 
 
 :::: {.shell}
 ```bash
-git commit -m "Adding new file '01-calculations.R' to perform calculations."
+git commit -m "Add new file '01-calculations.R' to do calculations."
 ```
 ::::
 

@@ -305,7 +305,8 @@ Next, add a commit with an appropriate commit message.
 
 :::: {.shell}
 ```bash
-git commit -m "Add plot of sampling days to '03_visualize_study_cohorts' and document new files in README"
+git commit -m "Add plot of sampling days to 
+'03_visualize_study_cohorts' and document new files in README"
 ```
 ::::
 
