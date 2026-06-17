@@ -481,6 +481,10 @@ Save this file. Now, we will discuss how to track a new file with Git.
 
 Now, navigate back to GitHub Desktop. Where it previously said "no local changes", it now will show changes to your repository. You should see your new file name "01-calculations.R" with a green plus next to it. 
 
+```{r, fig.alt="GitHub Desktop with a new file added", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_189#slide=id.g3f139628ce6_0_189")
+```
+
 <details>
 <summary> If you are using RStudio, you will likely see additional added files here. </summary>
 When you created a RStudio project, RStudio automatically created a "my-first-repository.Rproj" file to manage the project, and a ".gitignore" file to avoid tracking several hidden files that manage the project. Because these files were added, they are now included in the changed files that you see in GitHub Desktop. It is typically recommended to track your .Rproj and .gitignore files with Git. 
@@ -489,10 +493,6 @@ When you created a RStudio project, RStudio automatically created a "my-first-re
 By default, the box next to added or updated files is checked. This means that each of these files are "staged", or ready to be included in a commit and added to the repository history. If you uncheck the box, you are telling Git that for now you would not like to track that file with version control. If you would like to tell Git to never track files, you should add them to a .gitignore file. 
 
 In the lower left corner you will see a box that says "Summary (required)" and "Description". This is where you will put your commit message. 
-
-::: {.column-margin}
-to-do: add image
-:::
 
 A few pieces of advice to consider for your commit messages:
 
@@ -627,11 +627,11 @@ If you return to RStudio and open "README.md", you will now see the update that 
 
 In this section you have made a GitHub account, installed Git and GitHub Desktop, configured Git and GitHub to talk to each other, and made your first repository. You've learned how to make changes to the remote on GitHub and transfer them to the local repository on your computer, as well as do the opposite. 
 
-In a typical GitHub workflow, you will rarely be making changes from GitHub. Instead, you will often be working with one or multiple collaborators on a repository. Once your collaborator makes changes locally, they can push those changes to GitHub, and then you can pull those changes to your local copy of the repository. 
+In a typical GitHub workflow, you will rarely be making changes from GitHub. Instead, you will often be working with one or multiple collaborators on a repository. Once your collaborator makes changes locally, they can push those changes to GitHub, and then you can pull those changes to your local copy of the repository. This process will continue cyclically while you collaboratively work on a project. Note that this is a simplified system where you take turns to make changes, in practice you can be working on the project at the same time.
 
-::: {.column-margin}
-to-do: Add image to show a summary of the clone/stage/commit/push workflow
-:::
+```{r, fig.alt="Git and GitHub workflow", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_206#slide=id.g3f139628ce6_0_206")
+```
 
 ### Tips
 
