@@ -67,7 +67,7 @@ rcode
 rda
 readme
 readxl
-replicabilitity
+replicability
 replicable
 repo
 reproducibility
