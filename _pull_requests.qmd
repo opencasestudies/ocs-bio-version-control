@@ -69,6 +69,6 @@ If you close a pull request without merging it, this means that you've decided n
 
 While your pull request is open, any additional changes that you commit and push to this branch will be automatically added to the pull request. 
 
-It is recommended to not let your pull requests get too large. A pull request should be a set of changes that address a certain component of an analysis. Try to avoid combining multiple parts of a project in a single pull request. If you decide to start working on a different part of a project, you can create a new branch for this, and eventually submit a new pull request from that branch. This is a great way to stay organized for complex projects that have different components happening in parallel. 
+It is recommended to not let your pull requests get too large. A pull request should be a set of changes that address a certain component of an analysis. Try to avoid combining multiple parts of a project in a single pull request. If you decide to start working on a different part of a project, you can create a new branch for this, and eventually submit a new pull request from that branch. This is a great way to stay organized for complex projects that have different components happening in parallel. Additionally, using more branches and smaller pull requests, each focused on a single set of related changes, can make it easier to review the pull requests and to identify where changes were introduced to a project. 
 
 ***

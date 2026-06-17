@@ -3,10 +3,6 @@
 
 Most new and experienced users of Git and GitHub will run into problems occasionally. Luckily, version control is designed so that these problems can be solved, it just may take some time to get used to. There are many helpful [resources](https://dangitgit.com/en) online for common Git and GitHub problems, and AI chatbots can provide advice (please see our AI disclaimer below for advice on using AI for version control!). In this section, we will mention a few common Git and GitHub problems and provide solutions. 
 
-::: {.column-margin}
-to-do: image of how merge conflict may have happened
-:::
-
 <details> 
 <summary>I've created a merge conflict. What is this? How do I fix it?</summary>
 
@@ -34,18 +30,19 @@ When you try to run `git pull`, you'll get a response that includes: "Automatic 
 
 :::
 
-When you open a file with a merge conflict, you will see that conflict markers have been added. It may look something like this: 
+Recall the hypothetical branch workflow from earlier in the case study.
 
-```
-<<<<<<< HEAD
-x <- 26
-=======
-x <- 25
->>>>>>> feature-branch
-
+```{r, fig.alt="branch workflow", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_263#slide=id.g3f139628ce6_0_263")
 ```
 
-For lines that are in conflict, you'll see "<<<<<<< HEAD" and "=======". The code in between these two markers is the code that is contained locally in the branch that you are working with. Lower in the file, you'll see ">>>>>>> incoming_change_tag", where "incoming_change_tag" references the commit or branch that identifies the incoming change. You need to manually edit the file to remove the tags, and to include whatever content you would like (either the content in your local branch, the content from the remote commit that is being pulled, or a combination of the two). Once you've edited this file, you should save and stage the file. 
+Here is an example of a file from the branching workflow that will result in a merge conflict. 
+
+```{r, fig.alt="file before and after merge conflict", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_344#slide=id.g3f139628ce6_0_344")
+```
+
+When you open a file with a merge conflict, you will see that conflict markers have been added. For lines that are in conflict, you'll see "<<<<<<< HEAD" and "=======". The code in between these two markers is the code that is contained locally in the branch that you are working with. Lower in the file, you'll see ">>>>>>> incoming_change_tag", where "incoming_change_tag" references the commit or branch that identifies the incoming change. You need to manually edit the file to remove the tags, and to include whatever content you would like (either the content in your local branch, the content from the remote commit that is being pulled, or a combination of the two). Once you've edited this file, you should save and stage the file. 
 
 In some cases (such as when one branch deletes a file and another edits it), you may not see conflict markers inside a file. Instead, you will need to either remove the file if you want it to be deleted, or stage the file if you would like it to be kept. 
 

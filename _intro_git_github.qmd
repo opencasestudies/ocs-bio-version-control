@@ -574,6 +574,8 @@ A few pieces of advice to consider for your commit messages:
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_174#slide=id.g3f139628ce6_0_174")
 ```
 
+https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_263#slide=id.g3f139628ce6_0_263
+
 For this commit, you might use the summary "Adding new file '01-calculations.R' to perform calculations."  
 
 :::: {.shell}
@@ -738,21 +740,25 @@ Integrating changes from one branch into another branch.
 ::::
 :::
 
+Here is an example of a workflow, in which a Git user makes a "feature" branch from the "main" branch, adds commits to both branches, and then eventually merges the "feature" branch back into "main". 
+
+```{r, fig.alt="branch workflow", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_263#slide=id.g3f139628ce6_0_263")
+```
+
 If there are no lines of code in any files that are directly in conflict, then merging will automatically combine the sets of files into a single version to move forward with. If there are lines that are directly in conflict, this will create what is called a merge conflict. 
 
-::: {.column-margin}
-to-do: link to merge conflict section in troubleshooting Git and GitHub section
-:::
+Here is an example of a file from the branching workflow above that can be merged automatically. 
 
-::: {.column-margin}
-to-do: Add image of merged versions
-:::
+```{r, fig.alt="file before and after merge", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_292#slide=id.g3f139628ce6_0_292")
+```
 
 
 Branches are also helpful when working with collaborators. If you are developing a new part of an analysis, you can do it in a separate branch. When you are ready for your collaborator to review your work, you can submit a "pull request", which is a request to merge your branch with the main branch. Your collaborator can review all of the changes between your branch and the new branch, and either approve the pull request or request edits before merging. 
 
 ::: {.column-margin}
-to-do: link to sections that describes pull requests in more detail below.
+to-do: link to section that describes pull requests in more detail below.
 :::
 
 
