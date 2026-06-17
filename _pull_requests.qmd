@@ -39,9 +39,17 @@ Add a title and a description for your pull request now.
 <details>
 <summary>Example pull request for this analysis</summary>
 
-::: {.column-margin}
-to-do: add image of pull request here!
-:::
+#### **Plots to compare study cohorts**
+
+This pull request is in response to the request from **`@collab.o.rator`** to compare the original studies in the meta-analysis. Our goal is to make plots to compare the study sample sizes and time points at which each study collected samples. This pull request adds the following files to the repository:
+
+- "03_visualize_study_cohorts.qmd": which reads in the cleaned data and makes two figures to compare the cohorts
+- "figures/study_size_by_category.png": a bar chart comparing the number of samples included in each study, separated by whether a sample is from an infant or a mother
+- "figures/sampling_timepoints.png": a histogram of days that samples were taken on, separated by whether a sample is from an infant or a mother and faceted by study
+
+This pull request also updates "README.md" to document these new files.
+
+**`@collab.o.rator`**, could you please let me know if these figures are what you were looking for? Are there any additional plots that you'd like me to include, or different characteristics of the cohorts that you would like me to visualize? I would also appreciate a review of the code that I used to generate these figures, to make sure that I'm using the correct data. 
 
 </details>
 
