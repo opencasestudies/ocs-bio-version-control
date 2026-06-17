@@ -21,7 +21,7 @@ When Git cannot automatically reconcile differences between branches it is attem
 ::::
 :::
 
-You will know that you have a merge conflict when Git attempts to combine changes (for example, during `git merge` or `git pull`) and reports tha tit cannot automatically resolve some differences. 
+You will know that you have a merge conflict when Git attempts to combine changes (for example, during `git merge` or `git pull`) and reports that it cannot automatically resolve some differences. 
 
 :::{.panel-tabset}
 #### GitHub Desktop

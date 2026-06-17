@@ -46,7 +46,7 @@ to-do: Make an image of cloning directly vs forking
 
 To practice using a fork, go to [this GitHub repository](https://github.com/opencasestudies/version_controlled_infant_gut_analysis). You'll see that this repository contains the files that you originally downloaded when you started working on this infant gut analysis project. 
 
-Look for the button that says "Fork" on the rop right, above the "Code" button that you previously used to clone a repository. Click on "Fork". 
+Look for the button that says "Fork" on the top right, above the "Code" button that you previously used to clone a repository. Click on "Fork". 
 
 This will bring you to a page that is very similar to when you had created a new repository at the beginning of the case study. However, there are a few differences. You'll see now that you are the owner of this repository, and by default it has the same name as the repository that you are forking from. Click "Create fork". 
 

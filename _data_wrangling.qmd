@@ -23,7 +23,7 @@ Question opportunity
 What are the earliest and latest days that samples were taken on in the data set?  
 <details> <summary> Hint </summary>
 
-Data are wrangled in the file "02_wrangle_data.R". You can use the functions `max()` and `min()` to get the maximum and minimum values in a vector. The variable in the cleaned dat aset that gives the sampling day is called `sampling_day`. 
+Data are wrangled in the file "02_wrangle_data.R". You can use the functions `max()` and `min()` to get the maximum and minimum values in a vector. The variable in the cleaned data set that gives the sampling day is called `sampling_day`. 
 
 </details>
 <details><summary>Answer</summary>
