@@ -19,7 +19,7 @@ Although this is not directly related to version control, there are some useful 
   - data folder (this could be split into raw data and processed data)
   - figures folder for any figures made for the analysis
   - results folder for any results that should be shared or would take moderate or more computation to re-generate
-- number code scripts in the order that they should be run to generate results 
+- scripts are numbered in the order that they should be run to generate results
 
 ::::
 :::
@@ -77,7 +77,7 @@ From a Git perspective, files are either text files or binary files. Text files 
 
 The best way to avoid tracking a file is to add it to your .gitignore file. If a file or folder is included in your .gitignore file, it will not be staged when you use the command `git add .`. 
 
-If you open an RStudio project for a Git-tracked respository, you'll have a .gitignore file that looks similar to the following:
+If you open an RStudio project for a Git-tracked repository, you'll have a .gitignore file that looks similar to the following:
 
 ```
 # History files
@@ -109,7 +109,7 @@ restricted_data/
 
 #### Git and large files
 
-An important consideration for which files to track is file size. Tracking large files can slow down common Git operations and may eventually exceed GitHub's [repository limits](https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits). For binary files or moderately large files that still need version control, Git Large File Storage (often referred to as Git LFS) is an option. Git LFS stores large files outside the main repository while preserving version tracking. You can read more about Git LFS [here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage). 
+An important consideration for which files to track is file size. Tracking large files can slow down common Git operations and may eventually exceed GitHub's [repository limits](https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits). GitHub recommends that the maximum size of a single object being pushed to GitHub be 1MB, and enforces this size limit at 100 MB. For binary files or moderately large files that still need version control, Git Large File Storage (often referred to as Git LFS) is an option. Git LFS stores large files outside the main repository while preserving version tracking. You can read more about Git LFS [here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage). 
 
 However, large data files or results that are not expected to change over time should generally not be tracked with Git at all. Instead, they are better stored in dedicated research data repositories such as [figshare](https://figshare.com) or [Zenodo](https://zenodo.org), which are designed for long-term storage, sharing, and citation. 
 

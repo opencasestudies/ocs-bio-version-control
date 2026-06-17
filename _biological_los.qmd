@@ -1,4 +1,4 @@
-<u>**Biological/Topical Learning Objectives:**</u>
+<u>**Biological/Bioinformatics Objectives:**</u>
 
 <!--
 Enumerate the topical Biological specific learning objectives here.
@@ -6,4 +6,5 @@ Enumerate the topical Biological specific learning objectives here.
 Previous Open Case Studies do not have an example of this.
 -->
 
-
+1. Understand the value and limitations of combining data from multiple studies in a meta-analysis.
+1. Use visualizations to compare sampling designs across a set of studies. 

@@ -18,10 +18,16 @@ The ability for someone else the run the same analysis on the same data and get 
 ::::
 :::
 
-When conducting a scientific project, reproducibility is very important. If another researcher can use your data and code and generate the same results, then your conclusions are more credible to the scientific community. Version control is a tool that enables reproducible research by recording changes to a project over time. When used carefully, it gives a complete history of changes made over the course of a project. It also provides a digital backup and an online repository of code and data for other researchers to see. Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes. While several tools exist for version control, we will introduce Git and GitHub, two of the most commonly used version control tools. 
+When conducting a scientific project, reproducibility is very important and provides the following benefits: 
+
+- If another researcher can use your data and code and generate the same results, then your conclusions are more credible to the scientific community. Version control is a tool that enables reproducible research by recording changes to a project over time. When used carefully, it gives a complete history of changes made over the course of a project. This can also be helpful for a research team to better understand what they did in one of their own previous studies!
+- It also provides a digital backup and an online repository of code and possibly also data (if it doesn't contain sensitive data). This can be very valuable if something happens to your computer.
+- Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes. 
+
+While several tools exist for version control (such as Bitbucket, GitLab, and others), we will introduce Git and GitHub, two of the most commonly used version control tools. Common alternatives to GitHub include [GitLab](https://about.gitlab.com/resources/) and [Bitbucket](https://bitbucket.org/product/guides)
 
 ::: {.column-margin}
-I've had a difficult time finding additional resources that describe other version control options besides Git and GitHub (outside of lists of GitHub alternatives, such as GitLab and BitBucket). I'm curious if anyone has a resource on this that they like.
+I've had a difficult time finding additional resources that describe other version control options besides Git. I'm curious if anyone other version control systems they'd include here.
 :::
 
 <details>

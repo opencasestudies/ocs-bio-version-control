@@ -21,7 +21,6 @@ The skills, methods, and concepts that students will be familiar with by the end
 
 :::
 
-<!--
-{{< include _biological_los.qmd >}} -->
+{{< include _biological_los.qmd >}} 
 
 ***
