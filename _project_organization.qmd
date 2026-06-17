@@ -73,11 +73,41 @@ From a Git perspective, files are either text files or binary files. Text files 
 
 </details>
 
+#### How to use the .gitignore file
+
 The best way to avoid tracking a file is to add it to your .gitignore file. If a file or folder is included in your .gitignore file, it will not be staged when you use the command `git add .`. 
 
-::: {.column-margin}
-to-do: add image of adding certain files not to track to .gitignore
-:::
+If you open an RStudio project for a Git-tracked respository, you'll have a .gitignore file that looks similar to the following:
+
+```
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.Rdata
+.RDataTmp
+
+# User-specific files
+.Ruserdata
+
+# RStudio files
+.Rproj.user/
+```
+
+If you would like Git to avoid tracking a file called "large_data.csv", which lives in a folder called "data", you would add the following line to the end of your .gitignore file:
+
+```
+data/large_data.csv
+```
+
+You could also tell Git to avoid tracking an entire folder. If you didn't want to track any data from a folder called "restricted_data", you would add the following line to your .gitignore file:
+
+```
+restricted_data/
+```
+
+#### Git and large files
 
 An important consideration for which files to track is file size. Tracking large files can slow down common Git operations and may eventually exceed GitHub's [repository limits](https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits). For binary files or moderately large files that still need version control, Git Large File Storage (often referred to as Git LFS) is an option. Git LFS stores large files outside the main repository while preserving version tracking. You can read more about Git LFS [here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage). 
 
