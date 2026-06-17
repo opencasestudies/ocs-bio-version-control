@@ -717,7 +717,9 @@ If you are using another R IDE besides RStudio or Positron, you should look up i
 
 ## Branches
 
-Question: should we explain branches now while talking about Git and GitHub, or later (in data visualization) when we need them? 
+::: {.column-margin}
+Question: should we explain branches now while talking about Git and GitHub, or later (in data visualization) when we need them? I'm not sure whether to adhere to just in time teaching here (bring them up later on), or if it would be awkward to separate branches from the other Git and GitHub sections here. 
+:::
 
 One useful feature of Git is the ability to make branches. A branch is a history of commits, and by default a repository that is tracked by Git starts with the "main" branch. Multiple branches provide parallel versions of the repository that can be developed separately. For example, you may have a version of your analysis and results in the main branch, but you want to experiment with changing a parameter. You could do this in a separate branch. This would let you work on the experimental version of your analysis while also having a stable version of your analysis elsewhere. You can switch between branches depending on what version of the analysis you want to work with on a given day. If you eventually decide that you want to move forward with the changed parameter, you can merge your experimental branch back into your main branch. 
 
