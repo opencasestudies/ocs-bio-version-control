@@ -17,7 +17,7 @@ In order to create the final summary plot, please drag and drop the steps that y
 ::: {.column-margin}
 to-do: figure out how to make this into a drag and drop activity for the learner (see [this platform](https://lumi.education/en/)))
 
-Note: this is a mock-up of what the figure may look like, but a final version will be a little more detailed
+Note: this is a mock-up of what the figure may look like, but a final version will be a little more detailed and include color and more collaborative elements of the process! 
 :::
 
 ![](img/version_control_main_figure_mockup.png){fig-alt="Workflow of the different version control steps in this case study" width=800 .lightbox}
