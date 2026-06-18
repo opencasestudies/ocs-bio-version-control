@@ -1,12 +1,13 @@
 ---
 title: "**Biomedical Open Case Studies: Making version controlled reproducible analyses**"
+bibliography: resources/references.bib
 include-sections:
   stat-los: false
   data-import: true
   data-exploration: false
   data-wrangling: true
   data-viz: true
-  data-analysis: true
+  data-analysis: false
 ---
 
 <!--
@@ -21,9 +22,6 @@ include-sections:
 
 {{< include _ocs_frontmatter.qmd >}}
 
-::: {.content-hidden}
-{{< include _cite.qmd >}}
-:::
 
 {{< include _motivation.qmd >}}
 
@@ -31,10 +29,9 @@ include-sections:
 
 {{< include _los.qmd >}}
 
+
 {{< include _context.qmd >}}
-
 {{< include _intro_git_github.qmd >}}
-
 {{< include _project_organization.qmd >}}
 
 {{< include _data_description.qmd >}}
@@ -44,9 +41,7 @@ include-sections:
 {{< include _bioethics.qmd >}}
 
 ::: {.content-hidden unless-meta="include-sections.data-import"}
-
 {{< include _packages.qmd >}}
-
 {{< include _data_import.qmd >}}
 
 :::
@@ -76,20 +71,21 @@ include-sections:
 :::
 
 {{< include _pull_requests.qmd >}}
-
 {{< include _summary.qmd >}}
-
 {{< include _troubleshooting.qmd >}}
 
 {{< include _suggested_hw.qmd >}}
 
 {{< include _additional_info.qmd >}}
 
-## **Session Info**
-***
+{{< include _glossary_table.qmd >}}
 
-```{r}
-devtools::session_info()
-```
+::: {.column-margin}
+to-do: link the glossary to these terms in text, so that the definitions will pop up when a learner hovers over the word with their mouse
+:::
+
+{{< include _bibliography.qmd >}}
+
+{{< include _session_info.qmd >}}
 
 {{< include _acknowledgements.qmd >}}

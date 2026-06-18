@@ -3,16 +3,22 @@
 ## **Synopsis**
 ***
 
-Potentially add a brief recap here! Focus on why version control, and the ways that we've used version control for reproducibility in this case study.
+In this case study, you've learned about why version control is used as part of reproducible science workflows. You've been introduced to Git and GitHub, and learned procedures for managing Git-tracked repositories locally using GitHub Desktop or the command line, and remotely using GitHub. You've practiced using the "pull -> stage -> commit -> push" workflow to make changes locally that are then tracked remotely. In your analysis, you worked in a branch, and you submitted a pull request in order to integrate new changes into a stable version of the code and as a way to ask a collaborate to review your code. 
+
+Along the way, you've also learned about the advantages and challenges of meta-analyses and best practices for scientific project organization. 
 
 ***
 
 ## **Summary Plot**
 ***
 
-Provide images that describe each step performed in this analysis as well as captions. Have the learner order these (look into if there is a way to drag and drop these images/captions) - note that a complete version of this figure is in the motivation section at the start of the case study, so not to look at this unless they want to see the correct ordering. A flowchart with the correct order will be the summary plot for this case study. 
+In order to create the final summary plot, please drag and drop the steps that you've followed in this case study into the correct order. 
 
-This is a mock-up of what the figure may look like, but a final version will be a little more detailed:
+::: {.column-margin}
+to-do: figure out how to make this into a drag and drop activity for the learner (see [this platform](https://lumi.education/en/)))
+
+Note: this is a mock-up of what the figure may look like, but a final version will be a little more detailed and include color and more collaborative elements of the process! 
+:::
 
 ![](img/version_control_main_figure_mockup.png){fig-alt="Workflow of the different version control steps in this case study" width=800 .lightbox}
 

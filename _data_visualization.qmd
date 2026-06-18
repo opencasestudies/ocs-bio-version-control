@@ -9,51 +9,173 @@ At the end of this section, save incremental data so that users can pause and co
 # **Data Visualization**
 ***
 
-## Create a new branch for the analysis
+We will now generate visualizations to compare the meta-analysis study cohorts. Because this is a new component of the analysis, we will create a new file in the "infant_gut_analysis" folder for this code. 
 
-Now, we will start the data analysis to compare original studies. This is a great time to make a new branch to work on. This will isolate any changes that we make here and let Collab O. Rator assess them as a set of changes. This will also let you or a collaborator to work off of the current version of main for a different aspect of the analysis, without incorporating these changes that we are drafting. 
+:::{.reproducibility_box}
+::::{.reproducibility_box_header}
+Reproducibility considerations
+::::
+::::{.inner_block}
+There are different types of files that you can create to run R code. The most basic file is a .R script, which is used for the scripts that we ran in the data import and wrangling sections: "01_pull_study_data.R" and "02_wrangle_data.R". An R script assumes that all contents are R code, except for comments (which are preceded by `#`). 
 
-To make a new branch, go to GitHub Desktop, click the arrow next to where it says "Current Branch main", and click "New Branch". Then, choose an informative but concise name for this branch (perhaps "compare_studies"). When you create a new branch, you will automatically be switched to your new branch. 
+Another file type is a notebook-style document, which combines text components with code components. The code is broken into pieces, which are referred to as "code chunks". Two common types of these files are R Markdown files (.Rmd) and quarto files (.qmd). These files can be rendered, which means that all code chunks are run in order (typically in a fresh R session), and any output (calculations, tables, plots) is included in the resulting document. These notebook-style formats also make it easier to explain what each step of an analysis is doing, improving both readability and reproducibility by clearly linking code, output, and interpretation in a single document.
+::::
+:::
 
-Now, make a new file for this analysis. [Decide here if it should be an R script or a R markdown or quarto file]. Give this file a numbered name (to fit with the current scripts in the repository), and add it to the README.
+To start, we will create a new quarto document and call it "03_visualize_study_cohorts.qmd". Make sure to give your quarto document an appropriate title. 
 
-Once you've made and saved these changes return to GitHub Desktop. You should see these new changes in the new branch that you made. Add a commit message and commit these changes. Once you are ready to push these changes to GitHub, click the top right button that says "Publish these changes to origin." Then click "View on GitHub" to open the GitHub page. You should now see just below the repository name that it now says "2 branches". Clicking on this will let you see your new branch on GitHub. 
+In this section, we will go through the steps to make two visualizations to compare the study cohorts. As you go, include the relevant code (as well as explanations of what the code is doing) into your quarto document. When you are done, you or someone else with access to the data and your document, should be able to run the code and create the visualizations. 
 
-[This is where the bulk of the R analysis will happen in this case study. To-do, split this into smaller steps and explain each step more clearly.]
+In your quarto document, you should start by making a code chunk to load the required packages. 
 
-## Visualize data
+<details>
+<summary>Adding a code chunk to a quarto file</summary>
 
-Load data 
+::: {.panel-tabset}
 
-```{r}
+#### Manually
+
+To add a new R code chunk, go to a new line and enter: ```{r}
+
+Then, type your code, starting on the following line. To end a code chunk, go to another new line and enter: ```
+
+#### In RStudio
+
+You can also add a code chunk in RStudio by navigating to "Code" -> "Insert Chunk". There is also a keyboard shortcut: `Ctrl + Alt + I` in Windows and Linux, and `Cmd + Option + I` on Mac. 
+
+#### In Positron
+
+In Positron there is a keyboard shortcut to add a code chunk: `Ctrl + Shift + I` in Windows and Linux, and `Cmd + Shift + I` on Mac. 
+
+:::
+</details>
+
+::: {.rcode}
+```{r, message = FALSE, warning = FALSE}
+library(here)
+library(dplyr)
+library(ggplot2)
+```
+:::
+
+We will start by loaded the wrangled data. We will use the function `here`, which creates relative file paths. We want to load data from the file "clean_sample_metadata.rda", contained within the "processed_data" folder. 
+
+```{r, echo = FALSE}
 load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
 ```
 
-Count samples by study and category (mother vs infant)
+::: {.rcode}
+```{r, eval = FALSE}
+load(here::here("processed_data", "clean_sample_metadata.rda"))
+```
+:::
 
+Now that you have created a new file and loaded packages and data, this is a good time to track this new file and commit your work. 
+
+::: {.panel-tabset}
+
+#### GitHub Desktop 
+
+Navigate back to GitHub Desktop. You should see your new file name "03_visualize_study_cohorts.qmd" with a green plus next to it, meaning that this is a new file. The check in the checkbox means that this file is staged. Add an appropriate commit message and commit this file. 
+
+#### Command line 
+
+Open the command line and navigate to your repository. Recall that you can stage the new file (tell Git to track it with):
+
+:::: {.shell}
+```bash
+git add 03_visualize_study_cohorts.qmd
+```
+::::
+
+Next, add a commit with an appropriate commit message. 
+
+:::: {.shell}
+```bash
+git commit -m "Add new file '03_visualize_study_cohorts'"
+```
+::::
+
+:::
+
+Now that we've started tracking our work with Git, let's start by considering the first question: how do these studies compare in terms of the number of observations? 
+
+Use the `dplyr` functions `group_by()` and `count()` to get the number of observations per study.
+
+::: {.rcode}
+```{r}
+clean_metadata %>%
+  group_by(Study) %>%
+  count(name = "total")
+```
+:::
+
+We can see that there is quite the spread of study sizes. Let's also break this down by whether observations are from infants vs mothers. Whether the observation comes from an infant or a mother is contained in the variable `Category`.
+
+Modify the code above to count the number of observations by `Study` and by `Category`, and save the results as a data frame named `sample_counts`. 
+
+<details>
+<summary>Code:</summary>
+::: {.rcode}
 ```{r}
 sample_counts <- clean_metadata %>%
   group_by(Study, Category) %>%
   count(name = "total")
 sample_counts
 ```
+:::
+</details>
 
-Make a bar plot of this data 
+Now that we've looked at this data in a table format, let's make a plot so that we can compare this data visually. We'll make a bar plot, with separate bars for each study and for observation category (infant vs mother). 
 
+::: {.rcode}
 ```{r}
 sample_counts %>%
   ggplot(aes(x = Study, y = total, fill = Category)) +
   geom_col(position = position_dodge())
 ```
+:::
 
-Order the bar plot by increasing sample size and add theme and labels
+While this plot looks good, it would be visually easier to compare if the studies were ordered by the number of observations. We can make a vector that orders the studies from the least observations to the most observations by using the `dplyr` functions `group_by()`, `summarise()`, `arrange()`, and `pull()`. 
 
+<details>
+<summary>More information about these `dplyr` functions:</summary>
+
+| `dplyr` function | operation | 
+| ---------------- | --------- |
+| `group_by()` | groups rows by a variable | 
+| `summarise()` | computes table of summaries | 
+| `arrange()` | sorts rows by one or more variables | 
+| `pull()` | pulls a variable from the data frame as a vector|
+
+</details>
+
+::: {.rcode}
 ```{r}
 study_order <- sample_counts %>%
   group_by(Study) %>%
   summarise(total_both = sum(total)) %>%
   arrange(total_both) %>%
   pull(Study)
+study_order
+```
+:::
+
+We can now order the bar plot by increasing sample size.
+
+::: {.rcode}
+```{r}
+sample_counts %>%
+  mutate(Study = factor(Study, levels = study_order)) %>%
+  ggplot(aes(x = Study, y = total, fill = Category)) +
+  geom_col(position = position_dodge()) 
+```
+:::
+
+Finally, we can update the colors of the plot and add labels.
+ 
+::: {.rcode}
+```{r}
 sample_counts %>%
   mutate(Study = factor(Study, levels = study_order)) %>%
   ggplot(aes(x = Study, y = total, fill = Category)) +
@@ -64,29 +186,82 @@ sample_counts %>%
        title = "Number of Samples by Study and Category") + 
   theme(plot.title = element_text(hjust = 0.5))
 ```
+:::
 
-Save plot in figures folder. 
+We will now use `ggsave()` to save this plot in the figures folder. 
 
+::: {.rcode}
 ```{r, eval = FALSE}
 ggsave("figures/study_sizes_by_category.png", height = 6, width = 9)
 ```
+:::
 
-Now look into time 
+This is another great time to commit your current work.
 
+::: {.panel-tabset}
+
+#### GitHub Desktop 
+
+Navigate back to GitHub Desktop. You should now see that "03_visualize_study_cohorts.qmd" has a check in the checkbox (meaning it is staged) and has an orange box next to it, which means the file has been modified. Add an appropriate commit message and commit this file. 
+
+#### Command line 
+
+Even though Git is already tracking "03_visualize_study_cohorts.qmd", we still need to use `git add` to tell Git to stage this file for this commit. 
+
+:::: {.shell}
+```bash
+git add 03_visualize_study_cohorts.qmd
+```
+::::
+
+Next, add a commit with an appropriate commit message. 
+
+:::: {.shell}
+```bash
+git commit -m "Add plot of study sizes to '03_visualize_study_cohorts'"
+```
+::::
+
+:::
+
+Next we will consider the second question: how do these studies compare in terms of when they took samples after the birth of the infants? You may have noticed in the script "02_wrangle_data.R" that two studies took samples from mothers during pregnancy. This information is contained in the variable `sampling_before_birth`. We would like to exclude these observations from our plots, because their `sampling_day` is counted from the beginning of pregnancy and not since birth. 
+
+Create a data frame `observations_after_birth` that does not include these observations that were taken before birth. 
+
+<details>
+<summary>Hint:</summary>
+::: {.rcode}
+The function `filter()` will remove rows that match a certain logical condition. 
+:::
+</details>
+
+<details>
+<summary>Code:</summary>
+::: {.rcode}
 ```{r}
-clean_metadata %>%
-  filter(!sampling_before_birth) %>%
+observations_after_birth <- clean_metadata %>%
+  filter(!sampling_before_birth) 
+```
+:::
+</details>
+
+Now, we will make a histogram of sampling day, where we separate the data by `Category` and `Study`. There are multiple ways to do this, but we will color the bars by `Category` and then use `facet_wrap()` to make separate panels for each study.
+
+::: {.rcode}
+```{r}
+observations_after_birth %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
   facet_wrap(~Study, scale = "free_y") 
 ```
+:::
 
-Order facets the same as in bar plot, add theme and labels 
+Notice that because we set `scale = "free_y"` in the `facet_wrap()`, each of the y-axes of the panels is different. Let's order the studies in the same order that we used in the bar plot earlier. We will also update the theme and add axes labels.
 
+::: {.rcode}
 ```{r}
-clean_metadata %>%
+observations_after_birth %>%
   mutate(Study = factor(Study, levels = study_order)) %>%
-  filter(!sampling_before_birth) %>% # remove samples taken from mothers while pregnant 
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
   facet_wrap(~Study, scale = "free_y") +
@@ -96,13 +271,53 @@ clean_metadata %>%
   theme_minimal() + 
   theme(plot.title = element_text(hjust = 0.5))
 ```
+:::
 
-Save plot in figures folder
+Finally, we will save this plot in the figures folder. 
 
+::: {.rcode}
 ```{r, eval = FALSE}
 ggsave("figures/sampling_timepoints.png", height = 6, width = 9)
 ```
+:::
 
-Now that you have two plots that compare the studies, this is a good time to commit your current work. 
+Now that we have two plots, go back through your file "03_visualize_study_cohorts.qmd" to make sure that it contains all relevant code to make these two plots, and that there are explanations before each code chunk. Render your file to confirm that when rendered it will create these two plots. 
+
+Since you've performed the requested analysis, make sure to document any new files in this repository in the README.md file. Specifically, describe what the file "03_visualize_study_cohorts.qmd" does, and describe the two plots that are now saved in the figures folder. After doing this, make another commit and push your work. 
+
+::: {.panel-tabset}
+
+#### GitHub Desktop 
+
+Navigate back to GitHub Desktop. You should now see the modifications that you've made to "03_visualize_study_cohorts.qmd", as well as the added .png files for the figures. Add an appropriate commit message and commit. Then click "Push origin", to push these changes that you've made locally to your remote repository. 
+
+#### Command line 
+
+We need to now make sure to stage "03_visualize_study_cohorts.qmd" and the figures that we've added. We can use `git add .` to tell Git to track all files that have changes in this repository. 
+
+:::: {.shell}
+```bash
+git add .
+```
+::::
+
+Next, add a commit with an appropriate commit message. 
+
+:::: {.shell}
+```bash
+git commit -m "Add plot of sampling days to 
+'03_visualize_study_cohorts' and document new files in README"
+```
+::::
+
+Finally, push these changes that you've made locally to your remote repository. Because this is your first time pushing from a new branch, you will need to tell Git where you want to push to, adding the flag `--set-upstream origin branch_name`. 
+
+:::: {.shell}
+```bash
+git push --set-upstream origin study_comparison
+```
+::::
+
+:::
 
 ***

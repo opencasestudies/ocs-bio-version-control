@@ -1,14 +1,209 @@
 # **Troubleshooting Git and GitHub**
 ***
 
-Several drop-down boxes here for common mistakes that come up (especially those that may come up in this case study).
+Most new and experienced users of Git and GitHub will run into problems occasionally. Luckily, version control is designed so that these problems can be solved, it just may take some time to get used to. There are many helpful [resources](https://dangitgit.com/en) online for common Git and GitHub problems, and AI chatbots can provide advice (please see our AI disclaimer below for advice on using AI for version control!). In this section, we will mention a few common Git and GitHub problems and provide solutions. 
 
-Ideas to bring up here:
+<details> 
+<summary>I've created a merge conflict. What is this? How do I fix it?</summary>
 
-- I've created a merge conflict, how do I address this?
-- I've added a file and committed it, but I actually don't want to track this. 
-- I've done work on a current branch, but I actually want to move it to a new branch
-  - what if I haven't committed yet? What if I have already committed? 
-- I've accidentally committed a large file, what to do about this? 
+Typically, Git is able to automatically merge changes from one branch into another. However, a merge conflict happens when there are competing changes between the two branches, and Git needs you to manually decide how to resolve these differences. A merge conflict may arise in a scenario in which you made a branch from main, worked on that branch, and by the time you submit a pull request back to main, someone else has already committed to main and updated the same file as you have. 
+
+:::{.definition_box}
+::::{.definition_box_header}
+Merge conflict
+::::
+::::{.inner_block}
+When Git cannot automatically reconcile differences between branches it is attempting to combine, typically because the same part of a file (or closely related parts) were edited in incompatible ways, or because one branch modified something the other removed.
+::::
+:::
+
+You will know that you have a merge conflict when Git attempts to combine changes (for example, during `git merge` or `git pull`) and reports that it cannot automatically resolve some differences. 
+
+:::{.panel-tabset}
+#### GitHub Desktop
+
+You will see a pop-up window that says "Resolve conflicts before Merge", along with a list of files with conflicts. You will need to open the files in a text editor in order to manually resolve the merge conflicts. 
+
+#### Command line
+
+When you try to run `git pull`, you'll get a response that includes: "Automatic merge failed; fix conflicts and then commit the result". 
+
+:::
+
+Recall the hypothetical branch workflow from earlier in the case study.
+
+```{r, fig.alt="branch workflow", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_263#slide=id.g3f139628ce6_0_263")
+```
+
+Here is an example of a file from the branching workflow that will result in a merge conflict. 
+
+```{r, fig.alt="file before and after merge conflict", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_344#slide=id.g3f139628ce6_0_344")
+```
+
+When you open a file with a merge conflict, you will see that conflict markers have been added. For lines that are in conflict, you'll see "<<<<<<< HEAD" and "=======". The code in between these two markers is the code that is contained locally in the branch that you are working with. Lower in the file, you'll see ">>>>>>> incoming_change_tag", where "incoming_change_tag" references the commit or branch that identifies the incoming change. You need to manually edit the file to remove the tags, and to include whatever content you would like (either the content in your local branch, the content from the remote commit that is being pulled, or a combination of the two). Once you've edited this file, you should save and stage the file. 
+
+In some cases (such as when one branch deletes a file and another edits it), you may not see conflict markers inside a file. Instead, you will need to either remove the file if you want it to be deleted, or stage the file if you would like it to be kept. 
+
+After you resolve and stage all files that had merge conflicts, you should commit these changes. This will resolve your merge conflict. 
+
+</details>
+
+<details> <summary> I've accidentally been working in the main branch, but I actually want my work to all go into a new branch. How do I switch branches and move this work with me?   </summary>
+
+Luckily, this is an easy problem to resolve!
+
+:::{.panel-tabset}
+#### GitHub Desktop
+
+Open GitHub Desktop, and create a new branch. If you have changes in main that haven't been committed, GitHub Desktop will open a pop-up to ask you if you'd like to leave your changes on main or bring your changes to the new branch. Choose to bring the changes to the new branch. 
+
+#### Command line
+
+Use the following command, replacing "new_branch_name" with your desired branch name. 
+
+:::: {.shell}
+```bash
+git checkout -b new_branch_name 
+```
+::::
+
+:::
+
+</details>
+
+<details> <summary> I've staged and committed a file, but I don't want to track it anymore. How can I remove it? </summary>
+
+This is another common problem. We'll first tell Git to stop tracking the file (but keep it locally), and then we will add it to the .gitignore file to avoid tracking it with Git in the future. First, we will stop tracking the file. 
+
+:::{.panel-tabset}
+#### GitHub Desktop
+
+Make sure you are starting in the correct branch that you have been working in. Click "Repository -> Open in Terminal". This will open a command line for you to work with. In this command line, use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. 
+
+:::: {.shell}
+```bash
+git rm --cached "path_to_file" 
+```
+::::
+
+Next, open the .gitignore file and add the file to the list of files to avoid tracking. 
+
+Then, return to GitHub Desktop and commit these changes. 
+
+#### Command line
+
+Use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. 
+
+:::: {.shell}
+```bash
+git rm --cached path/to/file
+```
+::::
+
+Next, open the .gitignore file and add the file to the list of files to avoid tracking. 
+
+Then, return to the command line and stage and stage and commit these changes. 
+
+:::: {.shell}
+```bash
+git add .gitignore
+git commit -m "removing file_name from Git tracking and adding it to .gitignore" 
+```
+::::
+
+:::
+
+</details>
+
+<details> <summary> I've accidentally committed a large file and when I try to push I get an error from GitHub saying that the file is too big. How do I resolve this?  </summary>
+
+This is a common error that can be a little tricky to resolve. You need to remove this file from Git tracking and also amend the commits that include the file. We will assume that the large file was added in the most recent commit. If it was added multiple commits previously, then it can still be removed but will include additional steps that we will not cover here (see [here](https://www.git-tower.com/learn/git/faq/git-filter-repo) for a workflow for removing a file from multiple commits). 
+
+:::{.panel-tabset}
+#### GitHub Desktop
+
+Make sure you are starting in the correct branch that you have been working in. Click "Repository -> Open in Terminal". This will open a command line for you to work with. In this command line, use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. 
+
+:::: {.shell}
+```bash
+git rm --cached "path_to_file" 
+git commit --ammend 
+```
+::::
+
+Including the `git commit --ammend` rewrites the most recent commit as if the large file was not added. Don't close the terminal yet, we will come back to it. 
+
+Next, open the .gitignore file and add the file to the list of files to avoid tracking. In GitHub Desktop, stage the .gitignore, but do not commit it yet. 
+
+Return to the terminal. Repeat the `git commit --ammend` command, which will add this update to the .gitignore to the most recent commit. 
+
+:::: {.shell}
+```bash
+git commit --ammend 
+```
+::::
+
+Then, return to GitHub Desktop and commit these changes. 
+
+#### Command line
+
+Use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. Including the `git commit --ammend` rewrites the most recent commit as if the large file was not added.
+
+:::: {.shell}
+```bash
+git rm --cached path/to/file
+git commit --ammend
+```
+::::
+
+Next, open the .gitignore file and add the file to the list of files to avoid tracking. 
+
+Then, return to the command line and stage and stage and commit these changes. Note that we include `git commit --ammend` a second time to add the changes to the .gitignore file to the previous commit. 
+
+:::: {.shell}
+```bash
+git add .gitignore
+git commit --ammend
+git commit -m "removing file_name from Git tracking and adding it to .gitignore" 
+```
+::::
+
+:::
+
+The best way to avoid this problem is when you add large files to a folder that is tracked with Git, immediately add them to the .gitignore. If you really do want to track them with version control, consider using [Git Large File Storage](https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage) (LFS). 
+
+</details>
+
+:::{.ai_box}
+::::{.ai_box_header}
+AI use considerations
+::::
+::::{.inner_block}
+
+<u>Context:</u>
+
+When you ask an AI chatbot for assistance with version control, make sure to give appropriate background. Describe the specific task that you would like to do, or the problem that you are encountering. It can be helpful to include any error messages that you might be receiving from Git. For example, imagine that you've created a merge conflict. 
+
+<u>Suggested Prompt:</u>
+
+```{ .default .code-overflow-wrap }
+I am working with a Git-controlled repository, in a branch called new_feature. I have made several changes locally, and have staged those files and committed them. I just went to pull changes from the remote version of this branch that my collaborator made recently, and I'm getting a merge conflict. Specifically, I've received the following message:
+
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Auto-merging 01_import_data.R
+CONFLICT (content): Merge conflict in 01_import_data.R
+Automatic merge failed; fix conflicts and then commit the result.
+
+How can I resolve this merge conflict?
+```
+
+<u>Validation:</u>
+You should always be careful when taking advice on Git and GitHub from an AI chatbot. If you are asking for commands to use with Git for a situation that is very new to you, it could be helpful to do a quick search of the commands the chatbot tells you to use, to confirm that they do what you want to do. You could also ask multiple chatbots the same question. 
+::::
+:::
+
 
 ***

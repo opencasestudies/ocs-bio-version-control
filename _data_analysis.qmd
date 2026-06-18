@@ -1,6 +1,8 @@
 # **Data Analysis**
 ***
 
+[potentially cut this section!]
+
 [continue in same script as before]
 
 Generate a table to summarize the information in our plots

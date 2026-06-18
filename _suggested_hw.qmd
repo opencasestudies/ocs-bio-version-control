@@ -1,16 +1,94 @@
-# **Suggested Homework**
+# **Continued Learning**
 ***
 
-## Forking
+:::{.next_steps_box}
+::::{.next_steps_box_header}
+Common Next Steps
+::::
+::::{.inner_block}
+Now that you've learned how to how to make and use version-controlled repositories, you are ready to use Git and GitHub for your work! Common next steps include:
 
-This could be a good place to talk about forking. Give a quick explanation of forking, and then ask user to fork the repo (this will be the same as the project files that they downloaded early in the case study), make a change (something quick and easy), and then push and open a pull request. Describe how pull requests are similar and different when made between branches in a repo vs from a fork to the upstream repo. They can either stop before opening the pull request, or open it and then close it when they are done (to avoid having a long list of open pull requests on this educational repo). I'm not sure if this should be its own section, or if it should be here in suggested homework (therefore making it optional). 
+- [adding collaborators to your repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository)
+- making more branches for other components of your analysis
+- using [GitHub issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues) to keep track of to-do's related to your GitHub repository. 
+::::
+:::
 
-## Merge conflicts
 
-Another piece of suggested homework could be creating Git problems (such as those addressed in the troubleshooting section) and then fixing those problems. We could come up with a way to address a merge conflict (by committing different conflicting things to main and to an additional branch) and then have the learner resolve this change. 
+## Reinforcement Exercises
 
-## Fixing other Git problems
+A good way to reinforce these version control skills is to make a current scientific project that you've been working on into a Git tracked repository, and connecting it to a remote GitHub repository. See if you can integrate the Git workflow that you've learned here into your scientific process. Even if you are the only one working on this project, this is a good way to practice skills and get used to staging, committing, and pushing changes as you work. 
 
-We could also have the learner accidentally commit a file that they don't want to track for some reason, and then remove this file.
+## Advancement Exercises
+
+### Beginner
+
+#### Forking
+
+So far, you've created repositories to work with. This means that GitHub considers you the repository owner. If you are working with collaborators who you want to be able to push to your GitHub repo, you can add them to your repository with write permissions (you can also make them a maintainer or admin to have additional abilities). However, let's consider a different situation. You want to contribute to a GitHub repository, but you do not have permission to push to this repository. This is where forks come in. 
+
+:::{.definition_box}
+::::{.definition_box_header}
+Fork 
+::::
+::::{.inner_block}
+A copy of a repository, often used to make changes when the user does not have write access to the original repository. 
+::::
+:::
+
+We will call the original repository (which you do not have write permissions for) the upstream. Earlier, when you cloned a GitHub repository, you made a local version of that repository. In contrast, when you fork from the upstream, you make a remote copy of the GitHub repository, that you own with your GitHub account. You can then clone this fork, so that you can work locally. 
+
+```{r, fig.alt="Fork workflow, making local repo", out.width = "70%", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_369#slide=id.g3f139628ce6_0_369")
+```
+
+When you want to propose changes back to the upstream repository, you can submit a pull request from your fork into the upstream. 
+
+```{r, fig.alt="Fork repo, integrating local changes to remote", out.width = "70%", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_399#slide=id.g3f139628ce6_0_399")
+```
+
+##### Practice making and using a fork
+
+To practice using a fork, go to [this GitHub repository](https://github.com/opencasestudies/version_controlled_infant_gut_analysis). You'll see that this repository contains the files that you originally downloaded when you started working on this infant gut analysis project. 
+
+Look for the button that says "Fork" on the top right, above the "Code" button that you previously used to clone a repository. Click on "Fork". 
+
+This will bring you to a page that is very similar to when you had created a new repository at the beginning of the case study. However, there are a few differences. You'll see now that you are the owner of this repository, and by default it has the same name as the repository that you are forking from. Click "Create fork". 
+
+Once you create the fork, you'll be brought to this repository. Now, follow the same process that you used previously to clone this repository (*note: make sure that you are cloning the fork, and not the upstream repository!*). Open the repository locally. Make a copy of the file "03_visualize_study_cohorts.qmd", and add it to your local version of your forked repo. Follow the workflow to stage this file, commit it, and push it. 
+
+After you push, you should now see the file on GitHub in your forked repo, along with a notification that this branch is a commit ahead of the upstream repository. There will be a button with the option to "Contribute" these changes. Click that button. This will take you to a page on the upstream repository where you can make a pull request from your fork. 
+
+Fill in the title and description of your pull request. 
+
+:::{.think_question}
+::::{.think_question_header}
+Question opportunity
+::::
+::::{.inner_block}
+
+How does this pull request from a fork to an upstream repository look different from the pull request that you made earlier, between two branches in the same repository? How does it look similar? 
+
+::::
+:::
+
+Click "Create pull request" and inspect your pull request. 
+
+Finally, please close this pull request, as we do not actually want to include these changes in this repository. 
+
+### Intermediate
+
+#### Merge conflicts
+
+**Under construction** 
+
+Another piece of suggested homework will be creating a merge conflict and then resolving it.
+
+### Advanced
+
+:::{.column-margin}
+I don't have an advanced piece of homework planned yet, but am very open to ideas for this!
+:::
 
 ***

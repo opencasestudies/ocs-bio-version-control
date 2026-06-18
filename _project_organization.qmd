@@ -5,78 +5,112 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 # **Scientific project organization**
 ***
 
-While most people have their own approaches to scientific project organization, there are a few principles that most successful organization schemes have in common. 
+:::{.reproducibility_box}
+::::{.reproducibility_box_header}
+Reproducibility considerations
+::::
+::::{.inner_block}
+Although this is not directly related to version control, there are some useful ideas to know about organizing a scientific project, that will improve reproducibility. While most people have their own approaches to scientific project organization, there are a few principles that most successful organization schemes have in common. More information can be found in [this reproducibility course](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/organizing-your-project.html).
 
-- file names should be concise but informative
+- file names are concise but informative
 - there is one central folder to contain all files for each project
 - there is a central file (often called the README) that explains what files are included and how to use them to run the analysis
 - there are folders to keep similar files together 
   - data folder (this could be split into raw data and processed data)
   - figures folder for any figures made for the analysis
-  - results folder for any results that should be shared or would take moderate computation to re-generate
-- number code scripts in the order that they should be run to generate results 
+  - results folder for any results that should be shared or would take moderate or more computation to re-generate
+- scripts are numbered in the order that they should be run to generate results
 
-## This project
+::::
+:::
 
-The projects includes these files:
+## Organization of this project 
 
-![](img/project_folder_organization.png){fig-alt="Files within project folder, shown in Finder window" width=800 .lightbox}
+If we look at the files contained in the "infant_gut_analysis" repository, they follow the recommendations provided above. 
+
+```{r, fig.alt="Creating first repository", out.width = "70%", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e3d77952e3_0_0#slide=id.g3e3d77952e3_0_0")
+```
 
 ## README
 
-README.md contains the following:
+A README file should describe the files related to your scientific project. It should describe where inputs come from, what each script does, and where outputs are generated. If someone reads through your README, they should know where to find each component of your analysis. 
 
-```
-## Project information
-
-The goal of this project is to use recent microbiome meta-analysis methods to re-analyze data from Wang et al.
-
-Data citation: Wang, S., Zeng, S., Egan, M., Cherry, P., Strain, C., Morais, E., Boyaval, P., Ryan, C. A., Dempsey, E., Ross, R. P., & Stanton, C. (2021). Metagenomic analysis of mother‑infant gut microbiome reveals global distinct and shared microbial signatures. Gut Microbes, 13(1). https://doi.org/10.1080/19490976.2021.1911571 
-
-## Organization
-
-This repo is organized as follows:
-
-- 01_pull_study_data.R: script to read in data from "raw_data/Table S1.xlsx" and create a single data table in "processed_data/sample_metadata.rda"
-- 02_wrangle_data.R: script to wrangle data from "processed_data/sample_metadata.Rda" to fix mistakes, remove invalid observations, and make data easier to work with, creates "processed_data/clean_sample_metadata.Rda"
-- raw_data: 
-  - Table S1.xlsx: Supplementary information from [Wang et al.](https://www.tandfonline.com/doi/full/10.1080/19490976.2021.1911571?scroll=top&needAccess=true#abstract), included as part of a [.zip file](https://www.tandfonline.com/action/downloadSupplement?doi=10.1080%2F19490976.2021.1911571&file=kgmi_a_1911571_sm8722.zip)
-- processed_data: 
-  - sample_metadata.rda: table with data about samples from each original study included in the meta-analysis of Wang et al., generated in "01_pull_study_data.R"
-  - clean_sample_metadata.rda: table with cleaned data about samples from each original study, generated in "02_wrangle_data.R"
-- figures: 
-- results: 
-```
+:::{.think_question}
+::::{.think_question_header}
+Question opportunity
+::::
+::::{.inner_block}
+Read through the README.md file for this project. Which script generates "sample_metadata.csv"? 
+<details><summary>Answer</summary>
+The script "01_pull_study_data.R" generates "sample_metadata.csv". 
+</details>
+::::
+:::
 
 ## Project organization with Git and GitHub
 
-One thing to know is that any empty folders may exist on your computer but will not be tracked by Git until they have content. So while we see "figures" and "results" in the set of files from the folder "infant_gut_files", they are not tracked by Git or hosted on GitHub. If you want to track an empty folder before it has content, you can add a placeholder script into the folder, and remove it later once the folder has content. 
+### Empty folders
 
-### What files to track with Git 
+One thing that often surprises new Git users is that any empty folders may exist on your computer but will not be tracked by Git until they have content. So while we see "figures" and "results" in the set of files from the folder "infant_gut_files", they are not tracked by Git or hosted on GitHub. If you want to track an empty folder before it has content, you can add a placeholder script into the folder, and remove it later once the folder has content. 
 
-Recall that version control lets you track project files as they change. Therefore, there are some files that make a lot of sense to track with version control, and others that make less sense. Deciding which files to track is another topic that different people take different approaches to, but there are some rules that are typically followed: 
+### Which files to track with Git 
+
+Recall that version control lets you track project files as they change throughout the research process. Therefore, there are some files that should always be tracked with version control, some files that should never be tracked with version control, and some files that depend more on personal preference. Deciding which files to track is another topic that different people take different approaches to, but there are some rules that are typically followed: 
 
 - track source files that you've written (such as R scripts, shell scripts, LaTeX files, etc) 
-- track configuration files (such as .gitignore) that tell your tools how to interact with this project
+- track configuration files (such as .gitignore) that tell your tools how to interact with this repository
 - do not track intermediate files (such as log files), these are files that are generated automatically during a certain part of your workflow but are not needed on their own
 - sometimes track derived products (such as intermediate data, figures, or reports)
+  - this depends if you would like a copy of these products to live on GitHub
+  - this also depends on how you want other people to interact with figures or report, do you want them to be able to view or download them from GitHub, or do you want them to download your data and scripts from GitHub and generate the outputs for themselves 
 - do not track large data files that never change (we'll explain this more below)
 - typically avoid tracking binary files (although there are exceptions)
 
 <details> <summary> Binary files </summary>
 
-From a Git perspective, files are either text files or binary files. Text files are human-readable. They work nicely with Git because they can be represented in terms of diffs between versions. In contrast, binary files are readable by certain programs but are not human-readable. They cannot be represented in terms of diffs, and therefore a new version of the file is saved at each commit. Examples of binary files are images (.png, .jpeg), word and excel files (.doc, .xlsx) and PDFs (.pdf). 
+From a Git perspective, files are either text files or binary files. Text files are human-readable. They work nicely with Git because they can be represented in terms of differences between versions. In contrast, binary files are readable by certain programs but are not human-readable. They cannot be represented in terms of diffs, and therefore a new version of the file is saved at each commit. Examples of binary files are images (.png, .jpeg), word and excel files (.doc, .xlsx) and PDFs (.pdf). Tracking many binary files with Git can eventually slow down Git operations.  
 
 </details>
 
-The best way to avoid tracking a file is to add it to your .gitignore file. 
+#### How to use the .gitignore file
 
-[add image of adding certain files not to track to .gitignore]
+The best way to avoid tracking a file is to add it to your .gitignore file. If a file or folder is included in your .gitignore file, it will not be staged when you use the command `git add .`. 
 
-An important consideration for which files to track is file size. Tracking large files can slow down the operations you do with Git and GitHub, and eventually run into GitHub's [repository limits](https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits). For binary files or moderately large files, Git Large File Storage (often referred to as Git LFS) is an option. 
+If you open an RStudio project for a Git-tracked repository, you'll have a .gitignore file that looks similar to the following:
 
-talk about good size for git vs git LFS vs Figshare/Zenodo. Discuss things you may need versions of/not need versions of.
+```
+# History files
+.Rhistory
+.Rapp.history
 
-[This could also be a good time to talk about large files, what to track vs not track with GitHub. Connect to .gitignore. Discuss how tracking large files either in terms of data and results can cause problems. Discuss Git LFS vs data repositories like Figshare and Zenodo]
+# Session Data files
+.Rdata
+.RDataTmp
+
+# User-specific files
+.Ruserdata
+
+# RStudio files
+.Rproj.user/
+```
+
+If you would like Git to avoid tracking a file called "large_data.csv", which lives in a folder called "data", you would add the following line to the end of your .gitignore file:
+
+```
+data/large_data.csv
+```
+
+You could also tell Git to avoid tracking an entire folder. If you didn't want to track any data from a folder called "restricted_data", you would add the following line to your .gitignore file:
+
+```
+restricted_data/
+```
+
+#### Git and large files
+
+An important consideration for which files to track is file size. Tracking large files can slow down common Git operations and may eventually exceed GitHub's [repository limits](https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits). GitHub recommends that the maximum size of a single object being pushed to GitHub be 1MB, and enforces this size limit at 100 MB. For binary files or moderately large files that still need version control, Git Large File Storage (often referred to as Git LFS) is an option. Git LFS stores large files outside the main repository while preserving version tracking. You can read more about Git LFS [here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage). 
+
+However, large data files or results that are not expected to change over time should generally not be tracked with Git at all. Instead, they are better stored in dedicated research data repositories such as [figshare](https://figshare.com) or [Zenodo](https://zenodo.org), which are designed for long-term storage, sharing, and citation. 
 
 ***

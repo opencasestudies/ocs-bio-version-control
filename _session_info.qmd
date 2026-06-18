@@ -1,0 +1,17 @@
+# **Session info**
+***
+
+:::{.reproducibility_box}
+::::{.reproducibility_box_header}
+Reproducibility considerations
+::::
+::::{.inner_block}
+While using version control to track the data and code that produce a given output improves the reproducibility of a project, two people can be working from the same GitHub repository and get different results when they run an identical script. This can happen if they have different versions of the software they are using (for example, different versions of the same R package). To learn more about standardizing the versions of tools to use in an analysis, you can work through this [open case study](https://www.opencasestudies.org/ocs-bio-containers/) about containers. However, a good first step is to print the versions of software that you are using for a project. We do that here, using the R function `session_info()` from the `devtools` package.
+::::
+:::
+
+:::{.rcode}
+```{r}
+devtools::session_info()
+```
+:::

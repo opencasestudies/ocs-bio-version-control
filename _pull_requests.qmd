@@ -3,31 +3,72 @@
 
 ## What is a pull request? 
 
-[Describe the mechanics of a pull request, how it relates to branches and commits, other components we've addressed so far.]
+Recall that in the initial description of branches, you learned that branches can be used for development of a new part of a project, separate from the stable version of a repository. A pull request is a way to take a collection of commits on a branch and request to merge those into another branch, typically "main". A pull request will provide a list of each file that is changed in the branch, as well as the difference between each file and the version of that file on the branch that you are trying to merge your changes into. While you can review your own pull requests, GitHub also has features that make it convenient for collaborators to review your pull requests. 
 
 ## How to make a pull request 
 
-Go to GitHub Desktop, and make sure to commit any changes. Push those changes (these will be pushed to the remote branch on GitHub). Click "View on GitHub" to navigate to the GitHub page. 
+In the previous section, you worked locally to make the visualizations that Collab O. Rator had asked you for, and you staged, committed, and pushed these changes. Recall that you were working on a branch called "study comparison". Let's take a look at this branch on GitHub. 
 
-At the top, there should be a yellow banner with a green button that says "Compare & pull request". 
+- Navigate back to "https://github.com/your_username/infant_gut_analysis.git" (replacing your username). 
+- Click underneath the repository name where is says "Branches". This should take you to a page that shows you the existing branches (this should include "main" and "study_comparison"). 
+- Click on "study_comparison". 
+- You should see a yellow banner with a green button that says "Compare & pull request". Click on this button. 
 
-[Discuss the organization of {branch to push to} <- {branch to pull from}]
+This set of steps will bring you to a page where you can make your pull request. The first thing to note is the panel at the top of the page, which gives you the base branch (this will by default be "main") and the compare branch (this will be the branch you've been working on, in this case "study_comparison"). There is an arrow, showing that you are trying to merge the updates that you've made in the compare branch into the base branch. 
 
-[Describe where it shows the commits the make up the pull request and the files changed (how these show the diff between the branch being pushed to and the branch being pulled from).]
+There are a few useful components of this page in which you make a pull request. First, you have a spot to add a title and a description. If you scroll down, you'll see a list of commits that make up this pull request along with the commit messages, and each of the files changed. On the right panel next to the title you'll see an option for reviewers. If other users have access to this repository, then you can add them as a reviewer. They will get an email notification that you've requested a review from them. 
 
-While your pull request is open, any additional changes that you commit and push to this branch will be added to the pull request. If you would like to stop contributing to a pull request but continue work on the project, make sure to work on a different branch. 
-
-## Components of a good pull request 
+### Components of a good pull title and description 
 
 - A concise but descriptive title
 - A description of the changes you want to merge. This is a good place to list files added and modified and give a quick description of those changes. Give plenty of context, you've likely been thinking about the code you want to merge more recently than your collaborator who will review it 
-- A request for code review (make specific requests: do you want your collaborator to review all changes? Do you want them to focus on a specific file or part of an analysis? do you just a bigger picture review to see if your file organization makes sense?)
-- Don't make a huge pull request, a pull request should be a set of changes that address a certain component of an analysis. Try to avoid combining multiple parts of a project in a single pull request 
+- A request for code review (make specific requests: do you want your collaborator to review all changes? Do you want them to focus on a specific file or part of an analysis? do you just a bigger picture review to see if your approach to the problem makes sense?)
 
-## Fill in pull request
+For additional suggestions on making good pull requests, you can read more in [this reproducibility course](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html).
 
-Fill in the details of your pull request! 
+::: {.column-margin}
+to-do: I've been looking for good examples of pull requests to link to here, but most that I've looked at have brief descriptions and are for complex software packages, which seem less ideal for these learners. Does anyone have examples of pull requests (preferably for scientific projects) that they like, on GitHub repos that are unlikely to be deleted? 
+:::
 
-[Provide an example of a pull request for this project in a drop-down menu.]
+Add a title and a description for your pull request now. 
+
+<details>
+<summary>Example pull request for this analysis</summary>
+
+<div style="border: 1px solid #ccc; padding: 1em;">
+
+#### **Plots to compare study cohorts**
+
+This pull request is in response to the request from **`@collab.o.rator`** to compare the original studies in the meta-analysis. Our goal is to make plots to compare the study sample sizes and time points at which each study collected samples. This pull request adds the following files to the repository:
+
+- "03_visualize_study_cohorts.qmd": which reads in the cleaned data and makes two figures to compare the cohorts
+- "figures/study_size_by_category.png": a bar chart comparing the number of samples included in each study, separated by whether a sample is from an infant or a mother
+- "figures/sampling_timepoints.png": a histogram of days that samples were taken on, separated by whether a sample is from an infant or a mother and faceted by study
+
+This pull request also updates "README.md" to document these new files.
+
+**`@collab.o.rator`**, could you please let me know if these figures are what you were looking for? Are there any additional plots that you'd like me to include, or different characteristics of the cohorts that you would like me to visualize? I would also appreciate a review of the code that I used to generate these figures, to make sure that I'm using the correct data. 
+
+</div>
+
+</details>
+
+## Merging or closing pull requests 
+
+Once you have created a pull request, it is considered an "open" pull request and there are two potential actions, either merging it or closing it. 
+
+### Merging pull requests 
+
+Let's say that you submitted a pull request, you or your collaborator has decided that the changes look good, and you want to integrate the changes from your development branch into the base branch. This is called "merging" your pull request. In most cases, you will see a box that says "No conflicts with base branch", and you can click the button that says "Merge pull request". However, in some cases, you will not be able to merge until you resolve merge conflicts. See the troubleshooting section for more information about merge conflicts and how to resolve them. 
+
+### Closing pull requests
+
+If you close a pull request without merging it, this means that you've decided not to integrate the changes from the compare branch into the base branch. This may happen if you decide to go in another direction with an analysis. You can close a pull request by clicking the "Close pull request" button at the bottom of the pull request page. It is important to close pull requests that are no longer active so that the set of open pull requests accurately represents the current state of the project. 
+
+## Additional notes on pull requests 
+
+While your pull request is open, any additional changes that you commit and push to this branch will be automatically added to the pull request. 
+
+It is recommended to not let your pull requests get too large. A pull request should be a set of changes that address a certain component of an analysis. Try to avoid combining multiple parts of a project in a single pull request. If you decide to start working on a different part of a project, you can create a new branch for this, and eventually submit a new pull request from that branch. This is a great way to stay organized for complex projects that have different components happening in parallel. Additionally, using more branches and smaller pull requests, each focused on a single set of related changes, can make it easier to review the pull requests and to identify where changes were introduced to a project. 
 
 ***

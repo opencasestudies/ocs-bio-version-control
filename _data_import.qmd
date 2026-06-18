@@ -9,32 +9,35 @@ At the end of this section, save incremental data so that users can pause and co
 # **Data Import**
 ***
 
-Now that you have created this GitHub repository, and have tracked this project locally with Git, you can start working on the study comparison in R. Open RStudio to your project "infant_gut_analysis". We will start by taking a look at the data. To understand the data contained in this project, first see what the README tells you. 
+Now that you have set up this project with Git and GitHub, you can start working on the study comparison in R. Open RStudio or Positron or your preferred R IDE to the "infant_gut_analysis" folder. We will start by taking a look at the data. To do this, use the README.md file to determine which file reads in the raw data. Open this file and run the code. 
 
-[Data import is in file "01_pull_study_data.R", decide how much to walk learner through in case study.]
+:::{.think_question}
+::::{.think_question_header}
+Question opportunity
+::::
+::::{.inner_block}
+How many observations are included in our data set? How many variables are included in our data set? 
+<details> <summary> Hint </summary>
 
-01_pull_study_data.R contains the following code:
+Data is imported in the file "01_pull_study_data.R". You can find out how many rows are in a data frame with the function `nrow(name_of_data_frame)`. You can find out how many columns are in a data frame with the function `ncol(name_of_data_frame)`. 
 
-```{r, eval = FALSE}
-library(readxl) # for reading data from supplementary table
-library(dplyr) # for combining data across studies 
+</details>
+<details><summary>Answer</summary>
 
-# read tabs for each study from Table S1 from Wang et al. supplementary information, saved as "meta_analysis_metadata.xlsx"
-study_data <- lapply(3:10, function(i) {
-  read_xlsx("raw_data/Table S1.xlsx", sheet = i)
-}) 
-
-# set all variables to be characters in order to combine data across studies
-# original data had encoded same variable in different formats across studies
-study_data_clean <- lapply(study_data, function(df) {
-  df %>% mutate(across(everything(), as.character))
-})
-
-# combine lists for each study into a single data frame
-sample_metadata <- bind_rows(study_data_clean)
-
-# save data frame as a .rda file
-save(sample_metadata, file = "processed_data/sample_metadata.rda")
+```{r, echo = FALSE}
+load(here::here("data", "imported", "sample_metadata.rda"))
 ```
+
+::: {.rcode}
+```{r}
+nrow(sample_metadata)
+ncol(sample_metadata)
+```
+:::
+
+There are $1499$ observations and $20$ variables in the data frame.
+</details>
+::::
+:::
 
 ***

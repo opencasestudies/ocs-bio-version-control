@@ -27,14 +27,24 @@ website:
       - icon: github
         href: https://github.com/opencasestudies/ocs-bio-version-control
 
+glossary:
+  path: glossary.yml
+  popup: click
+  show: true
+
 brand: _brand.yml
 format:
   html:
+    code-copy: true
+    code-block-bg: true
     grid:
        sidebar-width: 260px
     theme: cosmo
-    css: styles.css
+    css: [styles.css, version_control_styles.css]
     sidebar: true
     toc: true
     toc-location: left
     license: "CC BY-NC 4.0"
+
+filters:
+  - auto-add-ai-disclaimer.lua

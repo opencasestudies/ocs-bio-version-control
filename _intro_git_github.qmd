@@ -5,11 +5,63 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 # **Introduction to Git and GitHub**
 ***
 
-Before we start to address your project with Collab O. Rator, we will provide an introduction to version control with Git and GitHub. In this section, you will learn more about what Git and GitHub are, create a GitHub account, download Git software, and create your first version controlled project. In the next section we will return to the infant microbiome meta-analysis project. 
+Before we start to address your project with Collab O. Rator, we will provide an introduction to version control with Git and GitHub. In this section, you will learn more about what Git and GitHub are, create a GitHub account, download Git software, and create your first version controlled project. Towards the end of this section we will return to the infant microbiome meta-analysis project. 
 
-## What is version control? 
+## Reproducibility and version control 
+
+:::{.definition_box}
+::::{.definition_box_header}
+Reproducibility
+::::
+::::{.inner_block}
+The ability for someone else the run the same analysis on the same data and get the same results.
+::::
+:::
+
+When conducting a scientific project, reproducibility is very important and provides the following benefits: 
+
+- If another researcher can use your data and code and generate the same results, then your conclusions are more credible to the scientific community. 
+- Version control is a tool that enables reproducible research by recording changes to a project over time. When used carefully, it gives a complete history of changes made over the course of a project. This can also be helpful for a research team to better understand what they did in one of their own previous studies!
+- It also provides a digital backup and an online repository of code and possibly also data (if it doesn't contain sensitive data). This can be very valuable if something happens to your computer.
+- Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes. 
+
+While several tools exist for version control, we will introduce Git and GitHub, two of the most commonly used version control tools. Common alternatives to GitHub include [GitLab](https://about.gitlab.com/resources/) and [Bitbucket](https://bitbucket.org/product/guides)
+
+::: {.column-margin}
+I've had a difficult time finding additional resources that describe other version control options besides Git. I'm curious if anyone other version control systems they'd include here.
+:::
+
+<details>
+<summary>More information on how reproducibility fits into the scientific process.</summary>
+
+:::{.reproducibility_box}
+::::{.reproducibility_box_header}
+Reproducibility considerations
+::::
+::::{.inner_block}
+
+Reproducibility is one concept that helps ensure that scientific projects and their results are valid and can be trusted by the scientific community. It can be considered as the intermediate goal between repeatability and replicability. 
+
+An experiment or analysis is repeatable if the **same** researcher can run it a second time, with the **same** data and code, and get the same results. 
+
+For that experiment or analysis to be reproducible, a **new** researcher needs to be able to run it with the **same** data and code and get the same result. 
+
+Finally, conclusions from an experiment or analysis are replicable if a **new** researcher can run the same experiment or analysis with **new** data and draw the same conclusions. 
+
+::::
+:::
+
+::: {.column-margin}
+to-do: make an image to show these three different scientific goals with avatars. 
+:::
+
+</details>
+
+## Why use version control? 
 
 We will refer to two papers about version control. 
+
+Our discussion of version control is inspired by the following two papers. They both provide a helpful introduction to version control with Git and GitHub. 
 
 :::{.reference_box}
 ::::{.reference_box_header}
@@ -17,17 +69,23 @@ Version control resources:
 ::::
 ::::{.inner_block}
 - Blischak, J. D., Davenport, E. R., & Wilson, G (2016). [A Quick Introduction to Version Control with Git and GitHub](https://doi.org/10.1371/journal.pcbi.1004668), PLoS Computational Biology, 12(1).  
+  - this paper provides an overview of Git and GitHub for scientists who primarily work with the command line
 - Bryan, J (2018). [Excuse Me, Do You Have a Moment to Talk About Version Control?](https://doi.org/10.7287/peerj.preprints.3159v2) The American Statistician, 72(1), 20-27. 
+  - this paper provides an overview of Git and GitHub for data scientists who primarily work with R and RStudio
 ::::
 :::
 
 Consider a typical workflow when you have a project with multiple files (for example: data, code, resulting figures). You likely have a folder on your computer where you keep these files. When you edit a file you save it, and you have access to the most recent version. You might run into a situation where you want to try something new, so you save "project_file_old.R" along with "project_file_updated.R" or perhaps "project_file_july_2026.R" or eventually "project_file_final_version_4_final.R". If you haven't saved an older version of a file but you wish you could revert to the version from last week before you tried something new, you would be out of luck. 
 
-[Image of what this might look like]
+```{r, fig.alt="why do you need version control (single person)", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3eb20c49c0b_0_0#slide=id.g3eb20c49c0b_0_0")
+```
 
 Similarly, think about how you might work on that same project with a collaborator. Perhaps you both have a folder on your computer for that project, and when you make an update you email the file to your collaborator, and they copy that update into their file, or save your file in their folder. Perhaps the two of you update the same file at the same time and then you have to go through line by line to merge the updates into a single version of the file. 
 
-[Image of what this might look like]
+```{r, fig.alt="why do you need version control (single person)", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_2#slide=id.g3f139628ce6_0_2")
+```
 
 While both of these organizational systems can work well when carefully maintained, they are time consuming and prone to error. Version control is a tool that makes it easier to manage sets of files for projects. It automates several of the processes described above, and makes others dramatically easier. While version control was originally made for software engineers to work together on large projects, it is now commonly used for scientific projects as well.
 
@@ -65,30 +123,13 @@ A snapshot of a repository at a certain time.
 ::::
 :::
 
-Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. When you want to return to a previous version of a project, you can only return to the version of files at any commit.
+Another way to think about a commit is as a save point in a video game. This means that it saves your work up to a certain point in time. 
+
+Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. If you want to return to a previous version of a project, you can only return to the version of files at any commit.
 
 ```{r, fig.alt="Git vs GitHub", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_114#slide=id.g3d9461be06f_0_143")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_143#slide=id.g3d9461be06f_0_143")
 ```
-
-### Branches
-
-One useful feature of Git is the ability to make branches. A branch is a history of commits, and by default a repository that is tracked by Git starts with the "main" branch. Multiple branches provide multiple parallel versions of the repository that can be developed separately. For example, you may have a version of your analysis and results in the main branch, but you want to experiment with changing a parameter. You could do this in a separate branch. This would let you work on the experimental version of your analysis while also having a current and stable version of your analysis elsewhere. You can switch between branches depending on what version of the analysis you want to work on. If you eventually decide that you want to move forward with the changed parameter, you can merge your experimental branch back into your main branch. 
-
-:::{.definition_box}
-::::{.definition_box_header}
-Merge
-::::
-::::{.inner_block}
-Integrating changes from one branch into another branch. 
-::::
-:::
-
-If there are no lines of code in any files that are directly in conflict, then merging will automatically...
-
-[Think of how to explain this! And whether we want to explain this here!]
-
-[Add image of merged versions]
 
 ### GitHub
 
@@ -138,21 +179,25 @@ When you choose a username, consider [advice](https://happygitwithr.com/github-a
 
 Now that you have a GitHub account, you can create your first repository. 
 
-To create your repository, click on the menu bottom (three horizontal lines), and click "Repositories." Then click the green button that says "New repository." 
+To create your repository:
+
+- click on the menu bottom (three horizontal lines)
+- click "Repositories"
+- click the green button that says "New repository" 
 
 This will take you to a new page. GitHub will automatically set you as the owner of the repository, and you can choose a name. Let's call this repository "my-first-repository". 
 
 A few notes on naming repositories:
 
-* keep the name descriptive but short
-* don't use spaces, instead use "-", "_", or "." 
+- keep the name descriptive but short
+- don't use spaces, instead use "-", "_", or "." 
 
-Add a short description for this repository. 
+Next, add a short description for this repository. Toggle the bottom next to "Add README" to "On". For now, we won't worry about visibility, a template, .gitignore, or license. 
 
-Next, under configuration, we have several options. By default repositories will be public, but you can set them as private and add collaborators who can access them. Toggle the bottom next to "Add README" to "On". For now, we won't worry about a template, .gitignore, or license. 
-
-![](img/github_new_repo.png){fig-alt="Create new repository from GitHub" width=800 .lightbox}
-Let's break down each of the options in the "Configuration" settings here. 
+```{r, fig.alt="Creating first repository", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e1f8f72664_0_798#slide=id.g3e1f8f72664_0_798")
+```
+Use the drop-down sections to learn about each of the configuration options. 
 
 ***
 
@@ -182,126 +227,593 @@ Often when you commit files you will commit all files in your repository. Howeve
 
 <details> <summary> License </summary>
 
-A license is a legal document that states who can use your code. Although it may seem counterintuitive, a license typically makes your code more "open", which means that other people can use it with fewer restrictions. There are two main types of licenses used for most R projects hosted on GitHub: permissive (MIT) and copyleft (GPL). A permissive license means that people can use your code with minimal restrictions. A copyleft license means that any code that incorporates your code must also be open-source. [Need to add more info here as well as citations!]
+A license is a legal document that states who can use your code. Although it may seem counterintuitive, a license typically makes your code more "open", which means that other people can use it with fewer restrictions. There are two main types of licenses used for most R projects hosted on GitHub: permissive (MIT) and copyleft (GPL). A permissive license means that people can use your code with minimal restrictions. A copyleft license means that any code that incorporates your code must also be open-source. You can read more about licenses for open-source projects [here](https://opensource.guide/legal/), or use [this resource](https://choosealicense.com) to see what license might be most appropriate for your project. 
 
 </details>
 
 ***
 
+For more information on any of these components of a new repository, see GitHub's [documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) for creating new repositories.
+
 Once you click "Create repository", you will be brought to the GitHub page for your repository. GitHub URLs all have the same format: "https://github.com/your_user_name/your_repository_name".
 
-If you look at your repository, you will see that it has one file, README.md. This is where you will document what is contained in your repository, and it will serve as a homepage for your project. It is written in Markdown language [add some information about markdown]. Click the pencil on the upper right of the README, and add a new line to your README document. 
+If you look at your repository, you will see that it has one file, README.md. This is where you will document what is contained in your repository, and it will serve as a homepage for your project. It is written in Markdown, a language that can be used to format documents (you can find more information about how Markdown works and its syntax [here](https://www.markdownguide.org)). You will now edit the README:
 
-![](img/github_edit_readme.png){fig-alt="Edit README from GitHub" width=800 .lightbox}
-Once you add in your new line, click the green button that says "Commit changes" and provide an informative commit message (something like "adding new line to README"). Then click the repository name in the upper left to navigate back to the home page. 
+- click the pencil on the upper right of the README
+- add a new line to your README document that says "Adding a new commit to my README." 
+- click the green button that says "Commit changes"
+- provide an informative commit message, something like "Add new line to README.md" 
+- click the green button that says "Commit changes"
+- click the repository name in the upper left to navigate back to the home page
+
+```{r, fig.alt="Image of first repository", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_87#slide=id.g3f139628ce6_0_87")
+```
 
 Let's now look at the commit history for this repository. We can do that by clicking where it says "2 Commits" just below the green "Code" button. 
 
-[More discussion on commits and what we're seeing in terms of diff].
+This brings us to a list of commits for this repository. You should see two commits, the initial commit that created the repository and the one you just made when you edited the README file. Click on the title of the newer commit. 
 
-### Installing Git
-
-Next, we will see if Git is installed on your computer, and install it if not. 
-
-[For figuring out if installed, we may need them to open up a command line, or use the one in RStudio, or maybe these is an easy way to do this in R itself?]
-
-In command line: 
-
-```
-which git
-## usr/bin/git
+```{r, fig.alt="List of commits", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_130#slide=id.g3f139628ce6_0_130")
 ```
 
-```
-git --version
-## git version 2.50.1
-```
 
-[Make one drop-down for installing on Mac.]
+This will bring you to information about the commit. Each commit has an alphanumeric hash (set of letters and numbers), which uniquely identifies that commit. In this view, you can see each file that has been changed in your commit, as well as the changes to the files. Here, we can see with the plus signs that you've added a line to the README. This type of visual representation of a commit, in terms of the changes between files, can be helpful when you want to understand the history of a project. 
 
-[Make one drop-down for installing on Windows.]
+<details>
+<summary>GitHub issues: a convenient to-do list for your repository</summary>
+One thing that you'll see when looking at your new repository is a tab in the upper left corner (just above the repository name) that says "Issues". Click on this "Issues" button.
 
-[Make one drop-down for installing on Linux(??).]
+An issue is a way to keep track of ideas, tasks to complete, errors to resolve, or anything else related to a GitHub repo (see how GitHub describes issues [here](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues)). Issues are also a good place to collaborate. You can tag people with their GitHub usernames in an issue, which will trigger an email notification. Multiple people can comment on an issue, so you can have a discussion about how to resolve the issue. The benefit of this over an email thread is that other collaborators can view this conversation, as well as other GitHub users who may want to know about the issue and resolution as well. Once an issue is considered resolved (for example, the task it mentions has been completed or the error it mentions has been fixed), then the issue can be closed. However, the GitHub repo will retain a searchable list of closed issues. When used frequently, this can be a helpful record of the development of a project. 
+</details>
 
 ### Installing GitHub Desktop 
 
-Next, we will install GitHub Desktop. This is a GUI (graphical user interface) that makes it easier for us to interact with Git. While we will use GitHub Desktop in this case study, another common way to interact with Git is through the command line on your computer. If you are already comfortable using the command line, you may prefer this to GitHub Desktop. When we use GitHub Desktop for version control tasks in this case study, we will also provide the command line command to do the same thing in drop-down boxes.
+Next, we will move from interacting with GitHub to interacting with Git. First, we recommend that you install GitHub Desktop. This is a GUI (graphical user interface) that makes it easier for us to interact with Git. While we will use GitHub Desktop in this case study, another common way to interact with Git is through the command line on your computer. If you are already comfortable using the command line, you may prefer this to GitHub Desktop. When we use GitHub Desktop for version control tasks in this case study, we will also provide the command line code for all Git operations.
+
+<details> <summary> More information about the command line. </summary>
+
+You may have also heard this called the *shell*, *terminal*, *console*, or *command prompt*. The command line lets us interact with our computers by typing commands (as opposed to using a graphical interface which involves clicking buttons and menus). These commands let you perform tasks such as navigating and modifying your file system, installing programs, running code, and working with Git. Each of these tasks can also be performed using a graphical interface. Some people prefer the visual layout of a GUI, while others prefer the simplicity and centralized control of the command line. 
+
+</details>
 
 Follow this [link](https://desktop.github.com/download/) to install GitHub Desktop. 
 
-[Make note on if macOS, determine which chip you're using. Determine if there is anything similar needed for Windows.]
+<details> <summary> If you are using a Mac, it will ask you if your Mac has a Apple silicon or Intel chip. Click here for more information. </summary>
+
+To check whether your Mac has an Apple silicon chip or an Intel chip, click the Apple menu -> "About This Mac". If the information window shows "Chip" then your Mac uses Apple silicon. If the information window shows "Processor" then your Mac uses an Intel processor. 
+
+</details>
+
+### Installing Git
+
+If you have successfully installed GitHub Desktop, then Git is already installed on your system and no further installation is required. 
+
+<details> <summary> If you are unable to install GitHub Desktop or would prefer not to install GitHub Desktop, you can install Git using the command line. Click here for more information. </summary>
+
+First, we will see if Git is installed on your computer, and install it if not. We will start by opening the command line. 
+
+::: {.panel-tabset}
+#### Mac
+
+Open the application called "Terminal". You can find this by using Spotlight Search and searching for "Terminal". 
+
+#### Windows
+
+Open the application called "Command Prompt". You can find this by using the Start menu and searching for "Command Prompt". You could instead use the PowerShell by searching for "PowerShell" instead. 
+
+#### Linux 
+
+Open the application called "Terminal". You can find it by using your system’s application menu and searching for "Terminal".
+
+:::
+
+In the command line, type:
+
+::: {.shell}
+```bash
+git version
+```
+:::
+
+If the output tells you which version of Git is installed, then you already have Git. For example, if Git is already installed, the output may look like:
+
+::: {.shell}
+```bash
+git version 2.50.1
+```
+:::
+
+If you see a message like "git: command not found" or "git is not recognized" or a prompt to install something, then Git is not installed and you'll need to install it. 
+
+To install Git, follow these instructions:
+
+::: {.panel-tabset}
+#### Mac
+
+Follow [these instructions](https://github.com/git-guides/install-git#install-git-on-mac).
+
+#### Windows
+
+Follow [these instructions](https://github.com/git-guides/install-git#install-git-on-windows).
+
+#### Linux 
+
+Follow [these instructions](https://github.com/git-guides/install-git#install-git-on-linux).
+
+:::
+
+</details>
 
 ### Connecting Git to GitHub
 
-Now that we have GitHub Desktop installed, we can use it to connect your local Git to your GitHub account. 
+If you have GitHub Desktop installed, we can use it to authenticate your GitHub account with Git. We could also do this with the command line, but GitHub Desktop makes it easier. 
+
+::: {.panel-tabset}
+
+#### GitHub Desktop 
 
 When you open GitHub Desktop, it will prompt you to sign into GitHub. If it does not, then follow [these instructions](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/authenticating-to-github-in-github-desktop), choosing instructions for Mac or Windows based on your operating system.
 
 Next, we will configure Git. This means that you will tell Git your name and email. Follow [these instructions](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop), again choosing instructions for Mac or Windows based on your operating system. 
 
+#### Command line 
+
+First we will tell Git your name and email address. Open the command line and enter the following:
+
+:::: {.shell}
+```bash
+git config --global user.name "Your name here"
+git config --global user.email "Your email here"
+git config --global --list
+```
+::::
+
+The third line should print your name and email correctly.
+
+Next, you need to connect your GitHub account to your local Git. 
+
+GitHub no longer supports using passwords to connect Git and GitHub, so you'll instead need to use a Personal Access Token (PAT). To create a token, [follow these instructions](https://github.com/settings/tokens). In order to connect your token to your computer do the following:
+
+- click "Generate new token"
+- choose "Generate new token (classic)"
+- give your token a name and expiration date
+- select the "repo" scope
+- click "Generate Token"
+- copy the token to your clipboard, or keep this window open (you will not be able to access this again)
+
+Now, open the command line and run the following:
+
+:::: {.panel-tabset}
+
+#### Mac
+
+::::: {.shell}
+```bash
+git config --global credential.helper osxkeychain
+```
+:::::
+
+#### Windows
+
+::::: {.shell}
+```bash
+git config --global credential.helper manager
+```
+:::::
+
+#### Linux 
+
+If available, run:
+
+::::: {.shell}
+```bash
+git config --global credential.helper manager
+```
+:::::
+
+If that does not work, use: 
+
+::::: {.shell}
+```bash
+git config --global credential.helper cache
+```
+:::::
+
+::::
+
+This tells Git to remember the login credentials that we will provide so you won't need to enter them each time. 
+
+Next, we need to trigger a GitHub credentials check. We will do this by cloning the repository that you made (this means we will make a local version of this repo). Run the following, replacing "your_username" with your username:
+
+:::: {.shell}
+```bash
+git clone https://github.com/your_username/my-first-repository.git  
+```
+::::
+
+Running this command should prompt you to give a username and password. Use your GitHub username, and the PAT you just generated as the password (do not use your GitHub password). Git will now store these credentials so you won't need to enter them again. When your PAT expires, you will need to follow these steps again. 
+
+:::
+
 ### Creating a local clone of your GitHub repository 
 
-You've finished setting up GitHub, Git, and GitHub Desktop, great job! Now, we can get a local version of your repository that you made on GitHub earlier. 
+You've finished setting up GitHub, Git, and GitHub Desktop, great job! Now, we can create a local version of "my-first-repository" that you made on GitHub earlier. 
 
-Making a local copy of a repository that is hosted on GitHub is called "cloning". We will clone the repository using GitHub Desktop. To do this, go to "File -> Clone Repository" and then provide the URL to your GitHub repository. 
+Making a local copy of a repository that is hosted on GitHub is called "cloning". Start by navigating to your repository on GitHub, and copy the URL. 
 
-[add image]
+```{r, fig.alt="Cloning repo", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_146#slide=id.g3f139628ce6_0_146")
+```
 
-Now, you should be able to see a window in GitHub Desktop that corresponds with "my-first-repository". If you click on history, you can see a list of commits to this repository. 
+::: {.panel-tabset}
 
-[Make separate small section on RStudio projects, what they are and how they can be used along with GitHub repositories]
+#### GitHub Desktop 
 
-We will now open up our repository in RStudio. This will require one additional step. Open RStudio, and click "File -> New Project." Then click "Existing directory", and click "Browse" to find the folder labeled "my-first-repository". Then click "Create Project". An RStudio project is similar to a repository, it is a folder that R can open as a self-contained unit. It includes a file with the extension ".Rproj", and when you open this file it will open RStudio to this project folder. 
+From GitHub Desktop, go to "File -> Clone Repository" and then provide the URL to your GitHub repository. Now, you should be able to see a window in GitHub Desktop that corresponds with "my-first-repository". If you click on history, you can see a list of commits to this repository. 
 
-Now, you'll see that you are in RStudio, in a folder that corresponds to your "my-first-repository" repo. Click on the "README.md" file in the "Files" panel, which will open the README that you made on GitHub. Add a new line to the README and save the file. 
 
-Now, navigate back to GitHub Desktop. Where it previously said "no local changes", it now will show changes to your repository. This will include two added files (".gitignore" and "my-first-repository.Rproj"), and modifications to "README.md". You can see that new files have a green box with a plus next to them, and modified files have a yellow box with a circle next to them. 
+#### Command line 
 
-By default, the box next to each of these files is checked. This means that each of these files are "staged", or ready to be included in a commit and added to the repository history. If you uncheck the box, you are telling Git that for now you would not like to track that file with version control. 
+You were already asked to clone this repository in the last section, in order to trigger Git's login credentials. If you haven't done that, open the command line and enter the following, replacing "your_username" with your username:
+
+:::: {.shell}
+```bash
+git clone https://github.com/your_username/my-first-repository.git  
+```
+::::
+
+You will know that this has worked if you see the following output:
+
+:::: {.shell}
+```
+Cloning into 'my-first-repository'...
+```
+::::
+
+:::
+
+Next, you will open the local repository. RStudio and Positron have different approaches to opening folders. 
+
+::: {.panel-tabset}
+#### RStudio
+
+The easiest way to work with a Git-tracked repository in RStudio is to make an RStudio project. A project is a folder that R can open as a self-contained unit. The most useful part of an RStudio project is that you can use relative file paths, with the folder that you used to create the project as the root. Using relative file paths for a project, as opposed to absolute file paths that are specific to your personal computer, make it easier to collaborate with other people.
+
+In order to open your Git-tracked repository as an RStudio project, open RStudio and click "File -> Open Project". This should prompt you to open your file browser, and you should navigate to the folder called "my_first_repository", which was created when you cloned the repository. Once you select the correct folder, RStudio will open the project. If you look at the "Files" panel, you'll see the README that you made for "my_first_repository" on GitHub. You will additionally see a file called "my_first_repository.Rproj". This file is automatically made by RStudio when opening a new project, and saves information about the project. 
+
+#### Positron
+
+In Positron, click "File -> Open Folder..." and then navigate to the folder called "my_first_repository", which was created when you cloned the repository. Once you select the correct folder, Positron will open it. In the file explorer, you will be able to see the README that you made for "my_first_repository" on GitHub. 
+
+#### Other R IDE
+
+If you are using another R IDE besides RStudio or Positron, you should look up instructions for opening a folder in your environment. 
+
+:::
+
+#### Stage, commit, push
+
+Next, we will create a new file locally. Create a new R file with "my-first-repository" and call it "01-calculations.R". In this file, include the following:
+
+::: {.rcode}
+```r
+x <- 103
+y <- 5
+x * y
+```
+:::
+
+Save this file. Now, we will discuss how to track a new file with Git. 
+
+::: {.panel-tabset}
+
+#### GitHub Desktop 
+
+Now, navigate back to GitHub Desktop. Where it previously said "no local changes", it now will show changes to your repository. You should see your new file name "01-calculations.R" with a green plus next to it. 
+
+```{r, fig.alt="GitHub Desktop with a new file added", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_189#slide=id.g3f139628ce6_0_189")
+```
+
+<details>
+<summary> If you are using RStudio, you will likely see additional added files here. </summary>
+When you created a RStudio project, RStudio automatically created a "my-first-repository.Rproj" file to manage the project, and a ".gitignore" file to avoid tracking several hidden files that manage the project. Because these files were added, they are now included in the changed files that you see in GitHub Desktop. It is typically recommended to track your .Rproj and .gitignore files with Git. 
+</details>
+
+By default, the box next to added or updated files is checked. This means that each of these files are "staged", or ready to be included in a commit and added to the repository history. If you uncheck the box, you are telling Git that for now you would not like to track that file with version control. If you would like to tell Git to never track files, you should add them to a .gitignore file. 
 
 In the lower left corner you will see a box that says "Summary (required)" and "Description". This is where you will put your commit message. 
 
-[add image]
+A few pieces of advice to consider for your commit messages:
 
-A quick note on commit messages (discuss how these should be informative to you in a few months or to a collaborate. They will live forever on GitHub, so make sure they are appropriate). 
+- A commit message should be informative. Think of a collaborator (or yourself in a few months) reading the commit message. It should tell the reader why you've made this commit. Did you add a file? Did you fix a bug in the code? Did you remove an outdated data file? 
+- A commit message should be concise. Avoid adding too many unnecessary details here. The reader can always look at the differences in files for the commit to see exactly what you've done. 
+- In a public repository, the commit message will be visible to anyone and exist as long as the repository does. Make sure that your message is appropriate and you'd be comfortable with colleagues seeing it. 
 
-For this commit, you might use the summary "Adding .gitignore and .Rproj files, adding a line to README.md." 
+```{r, fig.alt="good and bad commit messages", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_174#slide=id.g3f139628ce6_0_174")
+```
+
+For this commit, you might use the summary "Add new file '01-calculations.R' to do calculations."  
 
 Once you've added the commit message, you are ready to commit these files. Click "commit to main". Now these changes have been entered into the version control history of your repository in Git. 
 
-We have one more step to update the GitHub repository, which is to "push" these files to GitHub. This will be provided in a blue box on GitHub Desktop which says "Push commits to the origin remote". Now, open your project in GitHub. You should now see the updated files including changes that you made locally, as well the commit message. 
+We have one more step to update the GitHub repository, which is to "push" these files to GitHub. This is the step that transfers local changes to the remote repository. Once you commit you will see a box in GitHub Desktop that says "Push commits to the origin remote". Click this box. 
 
-On GitHub, we will use the online interface to add one more line to the README. Add whatever you want, and commit that change. Now, return to GitHub Desktop. In the upper banner, click where it says "Fetch origin". It should then update and say "Pull origin". Click "Pull origin". Go to the "History" pane, and you'll see the most recent commit that you made on GitHub, now included in your local repository. If you return to RStudio and open "README.md", you will now see the update that you made on GitHub. 
+Now, open your project in GitHub. You should now see the file that you added locally, as well the commit message. 
+
+#### Command line 
+
+Open the command line, navigate to the folder that contains your repository, and enter the following:
+
+:::: {.shell}
+```bash
+cd my-first-repository
+```
+::::
+
+This will move you into the repository folder. Next, enter:
+
+:::: {.shell}
+```bash
+git status
+```
+::::
+
+This will list untracked files, which are files that Git is not keeping track of.
+
+<details>
+<summary> If you are using RStudio, you will likely see additional added files here. </summary>
+When you created a RStudio project, RStudio automatically created a "my-first-repository.Rproj" file to manage the project, and a ".gitignore" file to avoid tracking several hidden files that manage the project. Because these files were added, they are now included in the changed files that you see in GitHub Desktop. It is typically recommended to track your .Rproj and .gitignore files with Git. 
+</details>
+
+In order to tell Git to start tracking files, we need to "stage" the files for version control. We do this with the `git add` command:
+
+:::: {.shell}
+```bash
+git add 01-calculations.R
+```
+::::
+
+<details>
+<summary> If you are using RStudio, you can also track the additional files that have been created. </summary>
+:::: {.shell}
+```bash
+git add my-first-repository.Rproj .gitignore
+```
+::::
+</details>
+
+If you ever want to tell Git to track all files, you can use the command `git add .`. 
+
+Next, we will commit these files (remember, this is similar to creating a snapshot of these files, or to creating a save point in a video game). The command `git commit -m "..."` commits the staged files and the flag `-m` adds a commit messages. 
+
+A few pieces of advice to consider for your commit messages:
+
+- A commit message should be informative. Think of a collaborator (or yourself in a few months) reading the commit message. It should tell the reader why you've made this commit. Did you add a file? Did you fix a bug in the code? Did you remove an outdated data file? 
+- A commit message should be concise. Avoid adding too many unnecessary details here. The reader can always look at the differences in files for the commit to see exactly what you've done. 
+- In a public repository, the commit message will be visible to anyone and exist as long as the repository does. Make sure that your message is appropriate and you'd be comfortable with colleagues seeing it. 
+
+```{r, fig.alt="good and bad commit messages", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_174#slide=id.g3f139628ce6_0_174")
+```
+
+For this commit, you might use the summary "Add new file '01-calculations.R' to do calculations."  
+
+:::: {.shell}
+```bash
+git commit -m "Add new file '01-calculations.R' to do calculations."
+```
+::::
+
+We have one more step to update the GitHub repository, which is to "push" these files to GitHub. This is the final step that updates the GitHub repository to include the changes that we made locally. To push, enter: 
+
+:::: {.shell}
+```bash
+git push 
+```
+::::
+
+Now, open your project in GitHub. You should now see the new file that you made locally, as well the commit message. 
+
+:::
+
+Finally, we're going to make another change from GitHub, and then "pull" that change into our local Git repository. We'll follow the same steps to make a change on GitHub:
+
+- click the pencil on the upper right of the README
+- add a new line to your README document that says "Adding another commit from GitHub." 
+- click the green button that says "Commit changes"
+- provide an informative commit message, something like "Add one more new line to README" 
+- click the green button that says "Commit changes"
+- click the repository name in the upper left to navigate back to the home page
+
+::: {.panel-tabset}
+
+#### GitHub Desktop 
+
+Now, return to GitHub Desktop. Do the following: 
+
+- In the upper banner, click where it says "Fetch origin". It should then update and say "Pull origin".
+- Click "Pull origin". 
+- Go to the "History" pane, and you'll see the most recent commit that you made on GitHub, now included in your local repository. 
+
+If you return to RStudio or Positron and open "README.md", you will now see the update that you made on GitHub. 
+
+#### Command line 
+
+Open the command line, navigate to the folder that contains your repository, and enter the following:
+
+:::: {.shell}
+```bash
+git pull
+```
+::::
+
+If you return to RStudio and open "README.md", you will now see the update that you made on GitHub. 
+
+:::
 
 ### What you've done
 
-In this section you have made a GitHub account, installed Git and GitHub Desktop, configured Git and GitHub to talk to each other, and made your first repository. You've learned how to make changes to the remote, from GitHub, and transfer them to your local repository on your computer, as well as do the opposite. In a typical GitHub workflow, you will rarely be making changes from GitHub. Instead, you will often be working with one or multiple collaborators on a repository. Once your collaborator makes changes locally, they can push those changes to GitHub, and then you can pull those changes to your local copy of the repository. 
+In this section you have made a GitHub account, installed Git and GitHub Desktop, configured Git and GitHub to talk to each other, and made your first repository. You've learned how to make changes to the remote on GitHub and transfer them to the local repository on your computer, as well as do the opposite. 
 
-[Add image to show a summary of the clone/stage/commit/push workflow]
+In a typical GitHub workflow, you will rarely be making changes from GitHub. Instead, you will often be working with one or multiple collaborators on a repository. Once your collaborator makes changes locally, they can push those changes to GitHub, and then you can pull those changes to your local copy of the repository. This process will continue cyclically while you collaboratively work on a project. Note that this is a simplified system where you take turns to make changes, in practice you can be working on the project at the same time.
+
+```{r, fig.alt="Git and GitHub workflow", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_206#slide=id.g3f139628ce6_0_206")
+```
 
 ### Tips
 
 - Commit often. A history will not be helpful if you run an entire analysis locally and then commit everything in a single commit. 
-- Write commit messages concisely explaining what you did to a collaborator now or to yourself in three months
 - If you are working on a repository with multiple contributors, make sure to pull each time you work in order to work on the most up-to-date version of the repository 
+- Never use version control to track files with passwords or other sensitive information. If you have there are ways to remove these files and change the Git history, but this should be considered a last resort. Instead, add any files with sensitive information to your .gitignore.
 
 ## Create version controlled repository for your project 
 
 Now, we will return to the project with Collab. O. Rator. In the previous section, we created a repository on GitHub, and then cloned to make a local copy. Here, we will start with a local folder, track it with Git, and then create a remote version on GitHub. 
 
-First, download the .zip file [here](https://github.com/opencasestudies/mother-infant-gut-microbiome-analysis-sandbox/raw/refs/heads/main/infant_gut_files.zip). Your browser may automatically unzip this file to create a folder called "infant_gut_files", if not then unzip the file. 
+First, download the .zip file [here](https://github.com/opencasestudies/version_controlled_infant_gut_analysis/blob/main/version_controlled_infant_gut_analysis.zip). Your browser may automatically unzip this file to create a folder called "infant_gut_files", if not then unzip the file. 
 
-Now, go to GitHub Desktop. Click the button "Add" in the top right, and "Create New Repository". Give your repository the name "infant_gut_analysis". Leave the box "Initialize this repository with a README" unchecked (because a README is already included in the set of files). Under Git Ignore choose "R" and under License choose 
-"MIT License". 
+::: {.panel-tabset}
 
-[discuss what .gitignore files and licenses mean. Question - any good resources for choosing a license for a scientific research project hosted on GitHub?]
+#### GitHub Desktop 
 
-Now, copy the contents of the "infant_gut_files" into the new repository that you just created with GitHub Desktop [potentially include drop-down to help find the folders on different operating systems]. 
+Now, go to GitHub Desktop and do the following: 
 
-Once you add these files, return to GitHub Desktop. You should see a set of staged files. Add a commit message and commit this change. You should then see an option to "Publish repository". Once you do this, you should see the option "Open the repository page on GitHub in your browser". Clicking this will bring you to the new GitHub repo that you just made for this project! 
+- click the button "Add" in the top right
+- click "Create New Repository"
+- give your repository the name "infant_gut_analysis".
+- leave the box "Initialize this repository with a README" unchecked (because a README is already included in the set of files). 
+- under Git Ignore choose "R" and under License choose "MIT License". 
 
-### Open this project in RStudio
+Now, copy the contents of the "infant_gut_files" into the new repository that you just created with GitHub Desktop
 
-Finally, we will create another RStudio project for this GitHub repository, so that we can easily work with these set of files in RStudio. Do this by opening RStudio and clicking "File -> New Project -> Existing Repository" and use "Browse" to find the folder for the repository that you created. This will open your project in R. You will have added a .Rproj file, which we will add to our .gitignore (this means that we'll use it locally but we will not track changes to it with Git or push it to GitHub). Open your .gitignore file and add a new line with the text "infant_gut_analysis.Rproj". 
+Once you add these files, return to GitHub Desktop. You should see a set of staged files. 
+
+- add a commit message and commit this change
+- you should then see an option to "Publish repository", click this
+- you should now see the option "Open the repository page on GitHub in your browser". 
+
+Clicking this will bring you to the new GitHub repo that you just made for this project! 
+
+#### Command line 
+
+Open the command line, navigate to the folder that you have unzipped, and enter the following:
+
+:::: {.shell}
+```bash
+git init
+```
+::::
+
+If you look into your folder you will not see any changes. However, this command creates a hidden `.git` folder within the current folder, which contains the files that are needed to start tracking this folder with Git. It is now a Git-tracked repository. Now we will stage all files, so that Git knows to track them, and commit them, so that Git saves the set of files as part of the history. 
+
+:::: {.shell}
+```bash
+git add .
+git commit -m "track all files for infant gut project" 
+```
+::::
+
+Next, you will need to create an empty repository on GitHub. Go to GitHub and create a new repository called "infant_gut_analysis". Importantly, this time do not check "Initialize with README", this should be a fully empty repository. Copy the URL of this repository. 
+
+Now, return to the command line and enter (replacing the URL below with the URL that you just copied):
+
+:::: {.shell}
+```bash
+git remote add origin https://github.com/your_username/infant_gut_analysis.git
+```
+::::
+
+:::
+
+### Open this repository in RStudio or Positron
+
+Finally, we will open this repository with RStudio or Positron. 
+
+::: {.panel-tabset}
+#### RStudio
+
+In order to open your Git-tracked repository as an RStudio project, open RStudio and click "File -> Open Project". This should prompt you to open your file browser, and you should navigate to the folder called "infant_gut_analysis". Once you select the correct folder, RStudio will open the project. 
+
+#### Positron
+
+In Positron, click "File -> Open Folder..." and then navigate to the folder called "infant_gut_analysis", which was created when you opened the .zip file. Once you select the correct folder, Positron will open it. 
+
+#### Other R IDE
+
+If you are using another R IDE besides RStudio or Positron, you should look up instructions for opening a folder in your environment. 
+
+:::
+
+## Branches
+
+::: {.column-margin}
+Question: should we explain branches now while talking about Git and GitHub, or later (in data visualization) when we need them? I'm not sure whether to adhere to just in time teaching here (bring them up later on), or if it would be awkward to separate branches from the other Git and GitHub sections here. 
+:::
+
+One useful feature of Git is the ability to make branches. A branch is a history of commits, and by default a repository that is tracked by Git starts with the "main" branch. Multiple branches provide parallel versions of the repository that can be developed separately. For example, you may have a version of your analysis and results in the main branch, but you want to experiment with changing a parameter. You could do this in a separate branch. This would let you work on the experimental version of your analysis while also having a stable version of your analysis elsewhere. You can switch between branches depending on what version of the analysis you want to work with on a given day. If you eventually decide that you want to move forward with the changed parameter, you can merge your experimental branch back into your main branch. 
+
+:::{.definition_box}
+::::{.definition_box_header}
+Merge
+::::
+::::{.inner_block}
+Integrating changes from one branch into another branch. 
+::::
+:::
+
+Here is an example of a workflow, in which a Git user makes a "feature" branch from the "main" branch, adds commits to both branches, and then eventually merges the "feature" branch back into "main". 
+
+```{r, fig.alt="branch workflow", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_263#slide=id.g3f139628ce6_0_263")
+```
+
+If there are no lines of code in any files that are directly in conflict, then merging will automatically combine the sets of files into a single version to move forward with. If there are lines that are directly in conflict, this will create what is called a merge conflict. 
+
+Here is an example of a file from the branching workflow above that can be merged automatically. 
+
+```{r, fig.alt="file before and after merge", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_292#slide=id.g3f139628ce6_0_292")
+```
+
+
+Branches are also helpful when working with collaborators. If you are developing a new part of an analysis, you can do it in a separate branch. When you are ready for your collaborator to review your work, you can submit a "pull request", which is a request to merge your branch with the main branch. Your collaborator can review all of the changes between your branch and the new branch, and either approve the pull request or request edits before merging. 
+
+::: {.column-margin}
+to-do: link to section that describes pull requests in more detail below.
+:::
+
+
+### Create a new branch for this analysis 
+
+::: {.panel-tabset}
+
+#### GitHub Desktop 
+
+You will create a new branch with GitHub Desktop. 
+
+In GitHub Desktop:
+
+- navigate to the tab in the top left of the window that says "Current Branch" 
+- click on this tab, and you should see a button that says "New Branch"
+- name your new branch "study_comparison". 
+
+#### Command line 
+
+Open the command line, navigate to the folder that you have unzipped, and enter the following:
+
+:::: {.shell}
+```bash
+git checkout -b study_comparison
+```
+::::
+
+When you create a new branch, you can name it by providing a new branch name (we name the new branch "study_comparison" above).
+
+:::
 
 ***

@@ -9,12 +9,12 @@ Examples may include: how identifiable (or re-identifiable) is your data? cell l
 # **Ethical Considerations**
 ***
 
-[Return to this section, I'm not sure what ethical considerations we should consider here. We could talk about version control and sensitive data (i.e. never track protected data with version control in a publicly accessible repository).]
+There are some important ethical considerations when working with version control, as well as with health related data in general and when collaborating on scientific projects. 
 
-There are some important ethical considerations when working with data relating to this case study's main questions.
-
-1. {FILL IN}
-1. {FILL IN}
+1. When hosting data, code, and results on GitHub, make sure to never include personally identifiable information (PII) or protected health information (PHI) in a repository (even private repositories are not secure enough for sensitive data). This includes names, dates of birth, medical records and diagnosis, lab results, identifiable genomic sequencing data, as well as other types of data. You can read more about PII and PHI in [this course](https://hutchdatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-privacy.html#pii-personal-identifiable-information) about ethical data handling.
+1. Make sure to keep comprehensive documentation for scientific projects to avoid losing track of which data generated a set of results or figure, or which version of a software that you used in an analysis. Reproducible science is ethical science: without a transparent and well-documented process, others in the scientific community cannot easily verify or trust your results.
+1. For projects with large teams, it can be difficult to keep track of which contributions came from which team members. Version control histories can be helpful to see who worked on each component on an analysis, in order to fairly acknowledge each contributor’s work.
+1. When performing a meta-analysis such as the one described in this case study, it is important to be transparent about inclusion and exclusion criteria for studies and for individual observations within studies. Criteria should be determined before analysis, to avoid choosing studies that will support a desired conclusion. It is also important to properly cite the original studies and recognize the groups that collected the data. 
 
 ***
 

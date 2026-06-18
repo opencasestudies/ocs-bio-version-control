@@ -4,9 +4,9 @@ load all the packages used in the case study analysis in the code chunk below
 Fill out the table and add rows as necessary providing a link to the source and briefly explaining its use for each package
 -->
 
-We will begin by loading the packages that we will need:
+Before we get into the coding, we want to describe the R packages that we'll use in this case study, or that are used in other scripts contained in our repository:
 
-```{r}
+```{r, message = FALSE, warning = FALSE, echo = FALSE}
 library(here)
 library(readxl)
 library(dplyr)
@@ -16,6 +16,7 @@ library(stringr)
 
 Package    | Use
 ---------- |-------------
+[here](https://here.r-lib.org) | To construct file paths within folders
 [readxl](https://readxl.tidyverse.org){target="_blank"}      | To read excel files into R
 [dplyr](https://dplyr.tidyverse.org){target="_blank"}      | To combine and manipulate data tables
 [ggplot2](https://ggplot2.tidyverse.org) | To visualize data
