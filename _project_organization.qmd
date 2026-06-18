@@ -10,9 +10,9 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 Reproducibility considerations
 ::::
 ::::{.inner_block}
-Although this is not directly related to version control, there are some useful ideas to know about organizing a scientific project, that will improve reproducibility. While most people have their own approaches to scientific project organization, there are a few principles that most successful organization schemes have in common. More information can be found in [this course](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/organizing-your-project.html).
+Although this is not directly related to version control, there are some useful ideas to know about organizing a scientific project, that will improve reproducibility. While most people have their own approaches to scientific project organization, there are a few principles that most successful organization schemes have in common. More information can be found in [this reproducibility course](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/organizing-your-project.html).
 
-- file names should be concise but informative
+- file names are concise but informative
 - there is one central folder to contain all files for each project
 - there is a central file (often called the README) that explains what files are included and how to use them to run the analysis
 - there are folders to keep similar files together 
@@ -43,7 +43,7 @@ Question opportunity
 ::::{.inner_block}
 Read through the README.md file for this project. Which script generates "sample_metadata.csv"? 
 <details><summary>Answer</summary>
-The script 01_pull_study_data.R generates "sample_metadata.csv". 
+The script "01_pull_study_data.R" generates "sample_metadata.csv". 
 </details>
 ::::
 :::
@@ -69,7 +69,7 @@ Recall that version control lets you track project files as they change througho
 
 <details> <summary> Binary files </summary>
 
-From a Git perspective, files are either text files or binary files. Text files are human-readable. They work nicely with Git because they can be represented in terms of diffs between versions. In contrast, binary files are readable by certain programs but are not human-readable. They cannot be represented in terms of diffs, and therefore a new version of the file is saved at each commit. Examples of binary files are images (.png, .jpeg), word and excel files (.doc, .xlsx) and PDFs (.pdf). Tracking many binary files with Git can eventually slow down Git operations.  
+From a Git perspective, files are either text files or binary files. Text files are human-readable. They work nicely with Git because they can be represented in terms of differences between versions. In contrast, binary files are readable by certain programs but are not human-readable. They cannot be represented in terms of diffs, and therefore a new version of the file is saved at each commit. Examples of binary files are images (.png, .jpeg), word and excel files (.doc, .xlsx) and PDFs (.pdf). Tracking many binary files with Git can eventually slow down Git operations.  
 
 </details>
 

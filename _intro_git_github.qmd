@@ -5,7 +5,7 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 # **Introduction to Git and GitHub**
 ***
 
-Before we start to address your project with Collab O. Rator, we will provide an introduction to version control with Git and GitHub. In this section, you will learn more about what Git and GitHub are, create a GitHub account, download Git software, and create your first version controlled project. In the next section we will return to the infant microbiome meta-analysis project. 
+Before we start to address your project with Collab O. Rator, we will provide an introduction to version control with Git and GitHub. In this section, you will learn more about what Git and GitHub are, create a GitHub account, download Git software, and create your first version controlled project. Towards the end of this section we will return to the infant microbiome meta-analysis project. 
 
 ## Reproducibility and version control 
 
@@ -20,7 +20,8 @@ The ability for someone else the run the same analysis on the same data and get 
 
 When conducting a scientific project, reproducibility is very important and provides the following benefits: 
 
-- If another researcher can use your data and code and generate the same results, then your conclusions are more credible to the scientific community. Version control is a tool that enables reproducible research by recording changes to a project over time. When used carefully, it gives a complete history of changes made over the course of a project. This can also be helpful for a research team to better understand what they did in one of their own previous studies!
+- If another researcher can use your data and code and generate the same results, then your conclusions are more credible to the scientific community. 
+- Version control is a tool that enables reproducible research by recording changes to a project over time. When used carefully, it gives a complete history of changes made over the course of a project. This can also be helpful for a research team to better understand what they did in one of their own previous studies!
 - It also provides a digital backup and an online repository of code and possibly also data (if it doesn't contain sensitive data). This can be very valuable if something happens to your computer.
 - Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes. 
 
@@ -33,6 +34,12 @@ I've had a difficult time finding additional resources that describe other versi
 <details>
 <summary>More information on how reproducibility fits into the scientific process.</summary>
 
+:::{.reproducibility_box}
+::::{.reproducibility_box_header}
+Reproducibility considerations
+::::
+::::{.inner_block}
+
 Reproducibility is one concept that helps ensure that scientific projects and their results are valid and can be trusted by the scientific community. It can be considered as the intermediate goal between repeatability and replicability. 
 
 An experiment or analysis is repeatable if the **same** researcher can run it a second time, with the **same** data and code, and get the same results. 
@@ -41,11 +48,20 @@ For that experiment or analysis to be reproducible, a **new** researcher needs t
 
 Finally, conclusions from an experiment or analysis are replicable if a **new** researcher can run the same experiment or analysis with **new** data and draw the same conclusions. 
 
+::::
+:::
+
+::: {.column-margin}
+to-do: make an image to show these three different scientific goals with avatars. 
+:::
+
 </details>
 
 ## Why use version control? 
 
 We will refer to two papers about version control. 
+
+Our discussion of version control is inspired by the following two papers. They both provide a helpful introduction to version control with Git and GitHub. 
 
 :::{.reference_box}
 ::::{.reference_box_header}
@@ -53,7 +69,9 @@ Version control resources:
 ::::
 ::::{.inner_block}
 - Blischak, J. D., Davenport, E. R., & Wilson, G (2016). [A Quick Introduction to Version Control with Git and GitHub](https://doi.org/10.1371/journal.pcbi.1004668), PLoS Computational Biology, 12(1).  
+  - this paper provides an overview of Git and GitHub for scientists who primarily work with the command line
 - Bryan, J (2018). [Excuse Me, Do You Have a Moment to Talk About Version Control?](https://doi.org/10.7287/peerj.preprints.3159v2) The American Statistician, 72(1), 20-27. 
+  - this paper provides an overview of Git and GitHub for data scientists who primarily work with R and RStudio
 ::::
 :::
 
@@ -107,7 +125,7 @@ A snapshot of a repository at a certain time.
 
 Another way to think about a commit is as a save point in a video game. This means that it saves your work up to a certain point in time. 
 
-Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. If you want to return to a previous version of a project, you can return to the version of files at any commit.
+Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. If you want to return to a previous version of a project, you can only return to the version of files at any commit.
 
 ```{r, fig.alt="Git vs GitHub", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_143#slide=id.g3d9461be06f_0_143")
@@ -162,6 +180,7 @@ When you choose a username, consider [advice](https://happygitwithr.com/github-a
 Now that you have a GitHub account, you can create your first repository. 
 
 To create your repository:
+
 - click on the menu bottom (three horizontal lines)
 - click "Repositories"
 - click the green button that says "New repository" 
@@ -218,12 +237,12 @@ For more information on any of these components of a new repository, see GitHub'
 
 Once you click "Create repository", you will be brought to the GitHub page for your repository. GitHub URLs all have the same format: "https://github.com/your_user_name/your_repository_name".
 
-If you look at your repository, you will see that it has one file, README.md. This is where you will document what is contained in your repository, and it will serve as a homepage for your project. It is written in Markdown, an easy language that can be used to format documents (you can find more information about how Markdown works and its syntax [here](https://www.markdownguide.org)). You will now edit the README:
+If you look at your repository, you will see that it has one file, README.md. This is where you will document what is contained in your repository, and it will serve as a homepage for your project. It is written in Markdown, a language that can be used to format documents (you can find more information about how Markdown works and its syntax [here](https://www.markdownguide.org)). You will now edit the README:
 
 - click the pencil on the upper right of the README
-- add a new line to your README document that says "Adding a commit from GitHub." 
+- add a new line to your README document that says "Adding a new commit to my README." 
 - click the green button that says "Commit changes"
-- provide an informative commit message, something like "adding new line to README" 
+- provide an informative commit message, something like "Add new line to README.md" 
 - click the green button that says "Commit changes"
 - click the repository name in the upper left to navigate back to the home page
 
@@ -355,7 +374,14 @@ The third line should print your name and email correctly.
 
 Next, you need to connect your GitHub account to your local Git. 
 
-GitHub no longer supports using passwords to connect Git and GitHub, so you'll instead need to use a Personal Access Token (PAT). To create a token, [follow these instructions](https://github.com/settings/tokens). Click "Generate new token" and choose "Generate new token (classic)". Give your token a name and expiration date. Select the "repo" scope. Click "Generate Token". Copy the token to your clipboard, or keep this window open. You will not be able to access this again. 
+GitHub no longer supports using passwords to connect Git and GitHub, so you'll instead need to use a Personal Access Token (PAT). To create a token, [follow these instructions](https://github.com/settings/tokens). In order to connect your token to your computer do the following:
+
+- click "Generate new token"
+- choose "Generate new token (classic)"
+- give your token a name and expiration date
+- select the "repo" scope
+- click "Generate Token"
+- copy the token to your clipboard, or keep this window open (you will not be able to access this again)
 
 Now, open the command line and run the following:
 
@@ -467,7 +493,7 @@ If you are using another R IDE besides RStudio or Positron, you should look up i
 
 :::
 
-#### Add, commit, push
+#### Stage, commit, push
 
 Next, we will create a new file locally. Create a new R file with "my-first-repository" and call it "01-calculations.R". In this file, include the following:
 
@@ -510,7 +536,7 @@ A few pieces of advice to consider for your commit messages:
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_174#slide=id.g3f139628ce6_0_174")
 ```
 
-For this commit, you might use the summary "Add new file '01-calculations.R' to perform calculations."  
+For this commit, you might use the summary "Add new file '01-calculations.R' to do calculations."  
 
 Once you've added the commit message, you are ready to commit these files. Click "commit to main". Now these changes have been entered into the version control history of your repository in Git. 
 
@@ -543,7 +569,7 @@ This will list untracked files, which are files that Git is not keeping track of
 When you created a RStudio project, RStudio automatically created a "my-first-repository.Rproj" file to manage the project, and a ".gitignore" file to avoid tracking several hidden files that manage the project. Because these files were added, they are now included in the changed files that you see in GitHub Desktop. It is typically recommended to track your .Rproj and .gitignore files with Git. 
 </details>
 
-In order to tell Git to start tracking files, enter:
+In order to tell Git to start tracking files, we need to "stage" the files for version control. We do this with the `git add` command:
 
 :::: {.shell}
 ```bash
@@ -574,9 +600,7 @@ A few pieces of advice to consider for your commit messages:
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_174#slide=id.g3f139628ce6_0_174")
 ```
 
-https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_263#slide=id.g3f139628ce6_0_263
-
-For this commit, you might use the summary "Adding new file '01-calculations.R' to perform calculations."  
+For this commit, you might use the summary "Add new file '01-calculations.R' to do calculations."  
 
 :::: {.shell}
 ```bash
@@ -601,7 +625,7 @@ Finally, we're going to make another change from GitHub, and then "pull" that ch
 - click the pencil on the upper right of the README
 - add a new line to your README document that says "Adding another commit from GitHub." 
 - click the green button that says "Commit changes"
-- provide an informative commit message, something like "adding one more new line to README" 
+- provide an informative commit message, something like "Add one more new line to README" 
 - click the green button that says "Commit changes"
 - click the repository name in the upper left to navigate back to the home page
 
@@ -671,7 +695,9 @@ Once you add these files, return to GitHub Desktop. You should see a set of stag
 
 - add a commit message and commit this change
 - you should then see an option to "Publish repository", click this
-- you should now see the option "Open the repository page on GitHub in your browser". Clicking this will bring you to the new GitHub repo that you just made for this project! 
+- you should now see the option "Open the repository page on GitHub in your browser". 
+
+Clicking this will bring you to the new GitHub repo that you just made for this project! 
 
 #### Command line 
 

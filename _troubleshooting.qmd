@@ -91,7 +91,6 @@ git rm --cached "path_to_file"
 Next, open the .gitignore file and add the file to the list of files to avoid tracking. 
 
 Then, return to GitHub Desktop and commit these changes. 
-...
 
 #### Command line
 
@@ -147,7 +146,6 @@ git commit --ammend
 ::::
 
 Then, return to GitHub Desktop and commit these changes. 
-...
 
 #### Command line
 

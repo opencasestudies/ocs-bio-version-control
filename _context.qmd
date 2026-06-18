@@ -13,7 +13,7 @@ A microbiome is a collection of microorganisms that live in an environment. One 
 ::: {.columns}
 
 ::: {.column width="50%"}
-![Bacterium from [Unsplash](https://unsplash.com/photos/red-strawberry-on-white-textile-2-Hv-Rg4asA)](img/bacterium.png)
+![Bacteria from [Unsplash](https://unsplash.com/photos/red-strawberry-on-white-textile-2-Hv-Rg4asA)](img/bacterium.png)
 :::
 
 ::: {.column width="50%"}

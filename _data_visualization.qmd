@@ -9,7 +9,7 @@ At the end of this section, save incremental data so that users can pause and co
 # **Data Visualization**
 ***
 
-We will now generate visualizations to compare the meta-analysis study cohorts. Because this is a new component of the analysis, we will create a new file in "infant_gut_analysis" for this code. 
+We will now generate visualizations to compare the meta-analysis study cohorts. Because this is a new component of the analysis, we will create a new file in the "infant_gut_analysis" folder for this code. 
 
 :::{.reproducibility_box}
 ::::{.reproducibility_box_header}
@@ -112,7 +112,7 @@ clean_metadata %>%
 
 We can see that there is quite the spread of study sizes. Let's also break this down by whether observations are from infants vs mothers. Whether the observation comes from an infant or a mother is contained in the variable `Category`.
 
-Modify the code above to count the number of observations by `Study` and by `Category`. 
+Modify the code above to count the number of observations by `Study` and by `Category`, and save the results as a data frame named `sample_counts`. 
 
 <details>
 <summary>Code:</summary>
@@ -224,7 +224,7 @@ git commit -m "Add plot of study sizes to '03_visualize_study_cohorts'"
 
 :::
 
-Next we will consider the second question: how do these studies compare in terms of when they took samples after the birth of the infants. You may have noticed in the script "02_wrangle_data.R" that two studies took samples from mothers during pregnancy. This information is contained in the variable `sampling_before_birth`. We would like to exclude these observations from our plots, because their `sampling_day` is counted from the beginning of pregnancy and not since birth. 
+Next we will consider the second question: how do these studies compare in terms of when they took samples after the birth of the infants? You may have noticed in the script "02_wrangle_data.R" that two studies took samples from mothers during pregnancy. This information is contained in the variable `sampling_before_birth`. We would like to exclude these observations from our plots, because their `sampling_day` is counted from the beginning of pregnancy and not since birth. 
 
 Create a data frame `observations_after_birth` that does not include these observations that were taken before birth. 
 

@@ -620,7 +620,7 @@ Videos or images may be helpful so this includes an example of embedding a video
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/bacterium.png" class="img-fluid figure-img"></p>
-<figcaption>Bacterium from <a href="https://unsplash.com/photos/red-strawberry-on-white-textile-2-Hv-Rg4asA">Unsplash</a></figcaption>
+<figcaption>Bacteria from <a href="https://unsplash.com/photos/red-strawberry-on-white-textile-2-Hv-Rg4asA">Unsplash</a></figcaption>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
@@ -657,7 +657,7 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 <section id="introduction-to-git-and-github" class="level1 page-columns page-full">
 <h1><strong>Introduction to Git and GitHub</strong></h1>
 <hr>
-<p>Before we start to address your project with Collab O. Rator, we will provide an introduction to version control with Git and GitHub. In this section, you will learn more about what Git and GitHub are, create a GitHub account, download Git software, and create your first version controlled project. In the next section we will return to the infant microbiome meta-analysis project.</p>
+<p>Before we start to address your project with Collab O. Rator, we will provide an introduction to version control with Git and GitHub. In this section, you will learn more about what Git and GitHub are, create a GitHub account, download Git software, and create your first version controlled project. Towards the end of this section we will return to the infant microbiome meta-analysis project.</p>
 <section id="reproducibility-and-version-control" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="reproducibility-and-version-control">Reproducibility and version control</h2>
 <div class="definition_box">
@@ -670,7 +670,8 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 </div>
 <p>When conducting a scientific project, reproducibility is very important and provides the following benefits:</p>
 <ul>
-<li>If another researcher can use your data and code and generate the same results, then your conclusions are more credible to the scientific community. Version control is a tool that enables reproducible research by recording changes to a project over time. When used carefully, it gives a complete history of changes made over the course of a project. This can also be helpful for a research team to better understand what they did in one of their own previous studies!</li>
+<li>If another researcher can use your data and code and generate the same results, then your conclusions are more credible to the scientific community.</li>
+<li>Version control is a tool that enables reproducible research by recording changes to a project over time. When used carefully, it gives a complete history of changes made over the course of a project. This can also be helpful for a research team to better understand what they did in one of their own previous studies!</li>
 <li>It also provides a digital backup and an online repository of code and possibly also data (if it doesn’t contain sensitive data). This can be very valuable if something happens to your computer.</li>
 <li>Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes.</li>
 </ul>
@@ -678,28 +679,44 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>I’ve had a difficult time finding additional resources that describe other version control options besides Git. I’m curious if anyone other version control systems they’d include here.</p>
-</div></div><details>
+</div></div><details class="page-columns page-full">
 <summary>
 More information on how reproducibility fits into the scientific process.
 </summary>
+<div class="reproducibility_box">
+<div class="reproducibility_box_header">
+<p>Reproducibility considerations</p>
+</div>
+<div class="inner_block">
 <p>Reproducibility is one concept that helps ensure that scientific projects and their results are valid and can be trusted by the scientific community. It can be considered as the intermediate goal between repeatability and replicability.</p>
 <p>An experiment or analysis is repeatable if the <strong>same</strong> researcher can run it a second time, with the <strong>same</strong> data and code, and get the same results.</p>
 <p>For that experiment or analysis to be reproducible, a <strong>new</strong> researcher needs to be able to run it with the <strong>same</strong> data and code and get the same result.</p>
 <p>Finally, conclusions from an experiment or analysis are replicable if a <strong>new</strong> researcher can run the same experiment or analysis with <strong>new</strong> data and draw the same conclusions.</p>
-</details>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>to-do: make an image to show these three different scientific goals with avatars.</p>
+</div></div></details>
 </section>
 <section id="why-use-version-control" class="level2">
 <h2 class="anchored" data-anchor-id="why-use-version-control">Why use version control?</h2>
 <p>We will refer to two papers about version control.</p>
+<p>Our discussion of version control is inspired by the following two papers. They both provide a helpful introduction to version control with Git and GitHub.</p>
 <div class="reference_box">
 <div class="reference_box_header">
 <p>Version control resources:</p>
 </div>
 <div class="inner_block">
 <ul>
-<li>Blischak, J. D., Davenport, E. R., &amp; Wilson, G (2016). <a href="https://doi.org/10.1371/journal.pcbi.1004668">A Quick Introduction to Version Control with Git and GitHub</a>, PLoS Computational Biology, 12(1).<br>
-</li>
-<li>Bryan, J (2018). <a href="https://doi.org/10.7287/peerj.preprints.3159v2">Excuse Me, Do You Have a Moment to Talk About Version Control?</a> The American Statistician, 72(1), 20-27.</li>
+<li>Blischak, J. D., Davenport, E. R., &amp; Wilson, G (2016). <a href="https://doi.org/10.1371/journal.pcbi.1004668">A Quick Introduction to Version Control with Git and GitHub</a>, PLoS Computational Biology, 12(1).
+<ul>
+<li>this paper provides an overview of Git and GitHub for scientists who primarily work with the command line</li>
+</ul></li>
+<li>Bryan, J (2018). <a href="https://doi.org/10.7287/peerj.preprints.3159v2">Excuse Me, Do You Have a Moment to Talk About Version Control?</a> The American Statistician, 72(1), 20-27.
+<ul>
+<li>this paper provides an overview of Git and GitHub for data scientists who primarily work with R and RStudio</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -2134,7 +2151,7 @@ Example pull request for this analysis
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>to-do: figure out how to make this into a drag and drop activity for the learner (see <a href="https://lumi.education/en/">this platform</a>))</p>
-<p>Note: this is a mock-up of what the figure may look like, but a final version will be a little more detailed</p>
+<p>Note: this is a mock-up of what the figure may look like, but a final version will be a little more detailed and include color and more collaborative elements of the process!</p>
 </div></div><p><a href="img/version_control_main_figure_mockup.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/version_control_main_figure_mockup.png" class="img-fluid" alt="Workflow of the different version control steps in this case study" width="800"></a></p>
 <!--
 construct a plot here that summarizes the conclusions found in the data, if applicable
@@ -2704,6 +2721,7 @@ DerSimonian, Rebecca, and Nan Laird. 1986. <span>“Meta-Analysis in Clinical Tr
 <!--
 Fill in any Acknowledgments using an example from a previous case study if needed: https://www.opencasestudies.org/ocs-bp-co2-emissions/#Acknowledgments
 -->
+<p>We would like to acknowledge Candace Savonen, Casey Greene, Emma Lathouwers, and Taylor Reiter for their expert review of this case study.</p>
 <p>We would also like to acknowledge the National Institute of General Medical Sciences for funding this work (1R25GM160622).</p>
 <p>Icons are from <a href="https://www.iconpacks.net/">iconpacks</a>.</p>
 <p>Avatars are from <a href="https://getavataaars.com">avataaars</a></p>

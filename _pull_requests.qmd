@@ -3,7 +3,7 @@
 
 ## What is a pull request? 
 
-Recall that in the initial description of branches, you learned that branches can be used for development of a new part of a project, separate from the stable version of a repository. A pull request is a way to take a collection of commits on a branch and request to merge those into another branch, typically "main". A pull request will provide a list of each file that is changed in the branch, as well as the difference between each file and the version of that file on the branch that you are trying to merge your changes into. While you can review your own pull requests, they also have great built-in features for collaborators to review your pull request. 
+Recall that in the initial description of branches, you learned that branches can be used for development of a new part of a project, separate from the stable version of a repository. A pull request is a way to take a collection of commits on a branch and request to merge those into another branch, typically "main". A pull request will provide a list of each file that is changed in the branch, as well as the difference between each file and the version of that file on the branch that you are trying to merge your changes into. While you can review your own pull requests, GitHub also has features that make it convenient for collaborators to review your pull requests. 
 
 ## How to make a pull request 
 
@@ -59,7 +59,7 @@ Once you have created a pull request, it is considered an "open" pull request an
 
 ### Merging pull requests 
 
-Let's say that you submitted a pull request, you or your collaborator has decided that the changes look good, and you want to integrate the changes from your development branch into the base branch. This is called "merging" your pull request. In most cases, you will see a box that says "No conflicts with base branch", and you can click the button that says "Merge pull request". However, in some cases, you will not be able to merge until you resolve merge conflicts. See [add link to troubleshooting section] for more information about merge conflicts and how to resolve them. 
+Let's say that you submitted a pull request, you or your collaborator has decided that the changes look good, and you want to integrate the changes from your development branch into the base branch. This is called "merging" your pull request. In most cases, you will see a box that says "No conflicts with base branch", and you can click the button that says "Merge pull request". However, in some cases, you will not be able to merge until you resolve merge conflicts. See the troubleshooting section for more information about merge conflicts and how to resolve them. 
 
 ### Closing pull requests
 

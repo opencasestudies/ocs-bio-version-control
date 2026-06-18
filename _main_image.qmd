@@ -1,8 +1,5 @@
 #### {.outline }
 
 ![](img/version_control_main_figure_mockup.png){fig-alt="Workflow of the different version control steps in this case study" width=800 .lightbox}
-::: {.column-margin}
-Note: this is a mock-up of what the figure may look like, but a final version will be a little more detailed and include color and more collaborative elements of the process! 
-:::
 
 ####
