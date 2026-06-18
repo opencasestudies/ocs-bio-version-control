@@ -36,11 +36,17 @@ A copy of a repository, often used to make changes when the user does not have w
 ::::
 :::
 
-We will call the original repository (which you do not have write permissions for) the upstream. Earlier, when you cloned a GitHub repository, you made a local version of that repository. In contrast, when you fork from the upstream, you make a remote copy of the GitHub repository, that you own with your GitHub account. You can then clone this fork, so that you can work locally. When you want to propose changes back to the upstream repository, you can submit a pull request from your fork into the upstream. 
+We will call the original repository (which you do not have write permissions for) the upstream. Earlier, when you cloned a GitHub repository, you made a local version of that repository. In contrast, when you fork from the upstream, you make a remote copy of the GitHub repository, that you own with your GitHub account. You can then clone this fork, so that you can work locally. 
 
-::: {.column-margin}
-to-do: Make an image of cloning directly vs forking 
-:::
+```{r, fig.alt="Fork workflow, making local repo", out.width = "70%", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_369#slide=id.g3f139628ce6_0_369")
+```
+
+When you want to propose changes back to the upstream repository, you can submit a pull request from your fork into the upstream. 
+
+```{r, fig.alt="Fork repo, integrating local changes to remote", out.width = "70%", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_399#slide=id.g3f139628ce6_0_399")
+```
 
 ##### Practice making and using a fork
 
@@ -52,7 +58,7 @@ This will bring you to a page that is very similar to when you had created a new
 
 Once you create the fork, you'll be brought to this repository. Now, follow the same process that you used previously to clone this repository (*note: make sure that you are cloning the fork, and not the upstream repository!*). Open the repository locally. Make a copy of the file "03_visualize_study_cohorts.qmd", and add it to your local version of your forked repo. Follow the workflow to stage this file, commit it, and push it. 
 
-After you push, you should now see the file on GitHub in your forked repo, along with a notification that this branch is a commit ahead of the upstream repository. There will be a button with the option to "Contribution" these changes. Click that button. This will take you to a page on the upstream repository where you can make a pull request from your fork. 
+After you push, you should now see the file on GitHub in your forked repo, along with a notification that this branch is a commit ahead of the upstream repository. There will be a button with the option to "Contribute" these changes. Click that button. This will take you to a page on the upstream repository where you can make a pull request from your fork. 
 
 Fill in the title and description of your pull request. 
 
@@ -79,14 +85,10 @@ Finally, please close this pull request, as we do not actually want to include t
 
 Another piece of suggested homework will be creating a merge conflict and then resolving it.
 
-<!--
-Commenting this out, because I don't have any "advanced" concepts to include as continued learning right now
-
 ### Advanced
--->
 
-<!--
-Example from a previous case study: https://www.opencasestudies.org/ocs-bp-co2-emissions/#Suggested_Homework (though this example doesn't include different levels like Beginner, Intermediate, and Advanced)
--->
+:::{.column-margin}
+I don't have an advanced piece of homework planned yet, but am very open to ideas for this!
+:::
 
 ***

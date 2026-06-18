@@ -24,7 +24,7 @@ When conducting a scientific project, reproducibility is very important and prov
 - It also provides a digital backup and an online repository of code and possibly also data (if it doesn't contain sensitive data). This can be very valuable if something happens to your computer.
 - Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes. 
 
-While several tools exist for version control (such as Bitbucket, GitLab, and others), we will introduce Git and GitHub, two of the most commonly used version control tools. Common alternatives to GitHub include [GitLab](https://about.gitlab.com/resources/) and [Bitbucket](https://bitbucket.org/product/guides)
+While several tools exist for version control, we will introduce Git and GitHub, two of the most commonly used version control tools. Common alternatives to GitHub include [GitLab](https://about.gitlab.com/resources/) and [Bitbucket](https://bitbucket.org/product/guides)
 
 ::: {.column-margin}
 I've had a difficult time finding additional resources that describe other version control options besides Git. I'm curious if anyone other version control systems they'd include here.

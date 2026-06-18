@@ -3,7 +3,7 @@ ai
 al
 avataaars
 automations
-BitBucket
+Bitbucket
 Bioinformatics
 Blischak
 Carpentries

@@ -16,10 +16,6 @@ In the previous section, you worked locally to make the visualizations that Coll
 
 This set of steps will bring you to a page where you can make your pull request. The first thing to note is the panel at the top of the page, which gives you the base branch (this will by default be "main") and the compare branch (this will be the branch you've been working on, in this case "study_comparison"). There is an arrow, showing that you are trying to merge the updates that you've made in the compare branch into the base branch. 
 
-::: {.column-margin}
-to-do: add image of a pull request here!
-:::
-
 There are a few useful components of this page in which you make a pull request. First, you have a spot to add a title and a description. If you scroll down, you'll see a list of commits that make up this pull request along with the commit messages, and each of the files changed. On the right panel next to the title you'll see an option for reviewers. If other users have access to this repository, then you can add them as a reviewer. They will get an email notification that you've requested a review from them. 
 
 ### Components of a good pull title and description 
@@ -39,6 +35,8 @@ Add a title and a description for your pull request now.
 <details>
 <summary>Example pull request for this analysis</summary>
 
+<div style="border: 1px solid #ccc; padding: 1em;">
+
 #### **Plots to compare study cohorts**
 
 This pull request is in response to the request from **`@collab.o.rator`** to compare the original studies in the meta-analysis. Our goal is to make plots to compare the study sample sizes and time points at which each study collected samples. This pull request adds the following files to the repository:
@@ -50,6 +48,8 @@ This pull request is in response to the request from **`@collab.o.rator`** to co
 This pull request also updates "README.md" to document these new files.
 
 **`@collab.o.rator`**, could you please let me know if these figures are what you were looking for? Are there any additional plots that you'd like me to include, or different characteristics of the cohorts that you would like me to visualize? I would also appreciate a review of the code that I used to generate these figures, to make sure that I'm using the correct data. 
+
+</div>
 
 </details>
 
