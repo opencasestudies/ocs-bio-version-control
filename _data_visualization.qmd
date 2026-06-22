@@ -110,6 +110,35 @@ clean_metadata %>%
 ```
 :::
 
+<details>
+<summary>A note on the pipe operator `%>%`<\summary>
+The pipe operator `%>%` chains R commands together. It takes the preceding object and inputs it as the first argument to the function that follows it. It often is used to make code more readable and to avoid using intermediate objects or nested functions. The code above is equivalent to both of these expressions:
+
+::: {.rcode}
+```{r}
+grouped_data <- group_by(clean_metadata, Study)
+count(grouped_data, name = "total")
+```
+:::
+
+::: {.rcode}
+```{r}
+count(group_by(clean_metadata, Study))
+```
+:::
+
+The pipe operator that we use, `%>%`, is part of the `magrittr` R package. There is also a pipe operator in base R, `|>`. In most cases, these two pipe operators will work equivalently. 
+
+::: {.rcode}
+```{r}
+clean_metadata |>
+  group_by(Study) |>
+  count(name = "total")
+```
+:::
+
+</details>
+
 We can see that there is quite the spread of study sizes. Let's also break this down by whether observations are from infants vs mothers. Whether the observation comes from an infant or a mother is contained in the variable `Category`.
 
 Modify the code above to count the number of observations by `Study` and by `Category`, and save the results as a data frame named `sample_counts`. 
