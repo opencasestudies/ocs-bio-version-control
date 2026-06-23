@@ -20,12 +20,16 @@ license: |
   A legal document that states who can use your code and for what purposes 
 local: |
   The Git-tracked repository on your computer
+longitudinal: |
+  Over time (a longitudinal study follows a group of participants over time)
 merge: |
   Integrating changes from one branch to another branch 
 merge conflict: |
   When Git cannot automatically reconcile differences between branches it is attempting to combine, typically because the same part of a file (or closely related parts) were edited in incompatible ways, or because one branch modified something the other removed
 meta-analysis: | 
   An analysis of data from a collection of studies targeting a common research question
+meta-analyses: | 
+  Analyses of data from a collection of studies targeting a common research question
 microbiome: |
   A collection of microorganisms that live in a shared environment
 pull request: |
@@ -40,9 +44,13 @@ remote: |
   The online version of the repository tracked on GitHub
 repository: |
   A folder in Git that contains all of the files to be tracked for a project
+repositories: |
+  Folders in Git that contains all of the files to be tracked for a project
 repo: |
   A shortened version of "repository", a folder in Git that contains all of hte files to be tracked for a project
 reproducible: |
   A project in which a new researcher can re-run an experiment or analysis with the same data and code and generate the same results
+reproducibility: |
+  The ability for someone else the run the same analysis on the same data and get the same results
 version control: |
   A tool that records changes to a project over time

@@ -10,11 +10,11 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 Reproducibility considerations
 ::::
 ::::{.inner_block}
-Although this is not directly related to version control, there are some useful ideas to know about organizing a scientific project, that will improve reproducibility. While most people have their own approaches to scientific project organization, there are a few principles that most successful organization schemes have in common. More information can be found in [this reproducibility course](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/organizing-your-project.html).
+Although this is not directly related to {{< glossary "version control" >}}, there are some useful ideas to know about organizing a scientific project, that will improve {{< glossary "reproducibility" >}}. While most people have their own approaches to scientific project organization, there are a few principles that most successful organization schemes have in common. More information can be found in [this reproducibility course](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/organizing-your-project.html).
 
 - file names are concise but informative
 - there is one central folder to contain all files for each project
-- there is a central file (often called the README) that explains what files are included and how to use them to run the analysis
+- there is a central file (often called the {{< glossary "README" >}}) that explains what files are included and how to use them to run the analysis
 - there are folders to keep similar files together 
   - data folder (this could be split into raw data and processed data)
   - figures folder for any figures made for the analysis
@@ -75,7 +75,7 @@ From a Git perspective, files are either text files or binary files. Text files 
 
 #### How to use the .gitignore file
 
-The best way to avoid tracking a file is to add it to your .gitignore file. If a file or folder is included in your .gitignore file, it will not be staged when you use the command `git add .`. 
+The best way to avoid tracking a file is to add it to your {{< glossary ".gitignore" >}} file. If a file or folder is included in your .gitignore file, it will not be staged when you use the command `git add .`. 
 
 If you open an RStudio project for a Git-tracked repository, you'll have a .gitignore file that looks similar to the following:
 

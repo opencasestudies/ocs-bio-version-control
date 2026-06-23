@@ -9,7 +9,7 @@ At the end of this section, save incremental data so that users can pause and co
 # **Data Visualization**
 ***
 
-We will now generate visualizations to compare the meta-analysis study cohorts. Because this is a new component of the analysis, we will create a new file in the "infant_gut_analysis" folder for this code. 
+We will now generate visualizations to compare the {{< glossary "meta-analysis" >}} study cohorts. Because this is a new component of the analysis, we will create a new file in the "infant_gut_analysis" folder for this code. 
 
 :::{.reproducibility_box}
 ::::{.reproducibility_box_header}
@@ -70,17 +70,17 @@ load(here::here("processed_data", "clean_sample_metadata.rda"))
 ```
 :::
 
-Now that you have created a new file and loaded packages and data, this is a good time to track this new file and commit your work. 
+Now that you have created a new file and loaded packages and data, this is a good time to track this new file and {{< glossary "commit" >}} your work. 
 
 ::: {.panel-tabset}
 
 #### GitHub Desktop 
 
-Navigate back to GitHub Desktop. You should see your new file name "03_visualize_study_cohorts.qmd" with a green plus next to it, meaning that this is a new file. The check in the checkbox means that this file is staged. Add an appropriate commit message and commit this file. 
+Navigate back to {{< glossary "GitHub Desktop" >}}. You should see your new file name "03_visualize_study_cohorts.qmd" with a green plus next to it, meaning that this is a new file. The check in the checkbox means that this file is staged. Add an appropriate commit message and commit this file. 
 
 #### Command line 
 
-Open the command line and navigate to your repository. Recall that you can stage the new file (tell Git to track it with):
+Open the {{< glossary "command line" >}} and navigate to your repository. Recall that you can stage the new file (tell Git to track it with):
 
 :::: {.shell}
 ```bash
@@ -339,7 +339,7 @@ git commit -m "Add plot of sampling days to
 ```
 ::::
 
-Finally, push these changes that you've made locally to your remote repository. Because this is your first time pushing from a new branch, you will need to tell Git where you want to push to, adding the flag `--set-upstream origin branch_name`. 
+Finally, {{< glossary "push" >}} these changes that you've made locally to your remote repository. Because this is your first time pushing from a new branch, you will need to tell Git where you want to push to, adding the flag `--set-upstream origin branch_name`. 
 
 :::: {.shell}
 ```bash

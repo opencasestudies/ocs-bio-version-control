@@ -24,12 +24,12 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 ```
 
 
-Between your own edits as you work on this project and the back-and-forth with your collaborator, it will quickly become challenging to keep track of all of the files and changes to them over time. A solution to this is version control! 
+Between your own edits as you work on this project and the back-and-forth with your collaborator, it will quickly become challenging to keep track of all of the files and changes to them over time. A solution to this is {{< glossary "version control" >}}! 
 
 ```{r, fig.alt="Back and forth over email without version control", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e1f8f72664_0_444#slide=id.g3e1f8f72664_0_444")
 ```
 
-In this case study, you will learn how to use Git and GitHub to track this project and perform the requested comparison of studies used in the meta-analysis. You will also learn how version control can facilitate collaboration and  make a scientific project more reproducible. 
+In this case study, you will learn how to use {{< glossary "Git" >}} and {{< glossary "GitHub" >}} to track this project and perform the requested comparison of studies used in the {{< glossary "meta-analysis" >}}. You will also learn how version control can facilitate collaboration and make a scientific project more {{< glossary "reproducible" >}}. 
   
 ***
