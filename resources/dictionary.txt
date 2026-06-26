@@ -40,6 +40,7 @@ hw
 iconpacks
 jpeg
 july
+Lathouwers
 LFS
 lightblue
 lightbox
@@ -67,6 +68,7 @@ rcode
 rda
 readme
 readxl
+Reiter
 replicability
 replicable
 repo
@@ -75,6 +77,7 @@ Rmd
 Rproj
 RStudio
 SampleID
+Savonen
 stringr
 subdir
 tabset
