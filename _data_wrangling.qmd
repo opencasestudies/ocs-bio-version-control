@@ -13,17 +13,18 @@ At the end of this section, save incremental data so that users can pause and co
 # **Data Wrangling**
 ***
 
-Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses. Use the {{< glossary "README" >}} to identify which file performs data wrangling. Open this file and run the code. 
+Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses. Again, use the {{< glossary "README" >}} to identify which file contains commands that wrangle the data. Open this file and run the code. 
 
 :::{.think_question}
 ::::{.think_question_header}
 Question opportunity
 ::::
 ::::{.inner_block}
-What are the earliest and latest days that samples were taken on in the data set?  
+What are the earliest and latest time points that samples were taken, relative to an infant's birth date, in the data set?  
+
 <details> <summary> Hint </summary>
 
-Data are wrangled in the file "02_wrangle_data.R". You can use the functions `max()` and `min()` to get the maximum and minimum values in a vector. The variable in the cleaned data set that gives the sampling day is called `sampling_day`. 
+Data are wrangled in the file "02_wrangle_data.R". You can use the functions `max()` and `min()` to get the maximum and minimum values in a vector. The variable in the cleaned data set that gives the sampling day relative to the infant's birth date is called `sampling_day`. 
 
 </details>
 <details><summary>Answer</summary>

@@ -9,14 +9,14 @@ Recall that in the initial description of branches, you learned that branches ca
 
 In the previous section, you worked locally to make the visualizations that Collab O. Rator had asked you for, and you staged, committed, and pushed these changes. Recall that you were working on a branch called "study comparison". Let's take a look at this branch on GitHub. 
 
-- Navigate back to "https://github.com/your_username/infant_gut_analysis.git" (replacing your username). 
+- Navigate back to "https://github.com/your_username/infant_gut_analysis" (replacing your username). 
 - Click underneath the repository name where is says "Branches". This should take you to a page that shows you the existing branches (this should include "main" and "study_comparison"). 
 - Click on "study_comparison". 
 - You should see a yellow banner with a green button that says "Compare & pull request". Click on this button. 
 
 This set of steps will bring you to a page where you can make your pull request. The first thing to note is the panel at the top of the page, which gives you the base branch (this will by default be "main") and the compare branch (this will be the branch you've been working on, in this case "study_comparison"). There is an arrow, showing that you are trying to merge the updates that you've made in the compare branch into the base branch. 
 
-There are a few useful components of this page in which you make a pull request. First, you have a spot to add a title and a description. If you scroll down, you'll see a list of commits that make up this pull request along with the commit messages, and each of the files changed. On the right panel next to the title you'll see an option for reviewers. If other users have access to this repository, then you can add them as a reviewer. They will get an email notification that you've requested a review from them. 
+There are a few useful components of this page in which you make a pull request. First, you have a spot to add a title and a description. If you scroll down, you'll see a list of commits that make up this pull request along with the commit messages, and each of the files changed. On the right panel next to the title you'll see an option for reviewers. If other users have access to this repository, then you can add them as a reviewer. Depending on how they have configured their notification preferences, they may get an email notification that you've requested a review from them. It is good practice for you to also reach out to them and send them the link to your pull request to review! 
 
 ### Components of a good pull title and description 
 
@@ -59,7 +59,7 @@ Once you have created a pull request, it is considered an "open" pull request an
 
 ### Merging pull requests 
 
-Let's say that you submitted a pull request, you or your collaborator has decided that the changes look good, and you want to integrate the changes from your development branch into the base branch. This is called "merging" your pull request. In most cases, you will see a box that says "No conflicts with base branch", and you can click the button that says "Merge pull request". However, in some cases, you will not be able to merge until you resolve merge conflicts. See the troubleshooting section for more information about merge conflicts and how to resolve them. 
+Let's say that you submitted a pull request, you or your collaborator has decided that the changes look good, and you want to integrate the changes from your development branch into the base branch. This is called "merging" your pull request. In most cases, you will see a box that says "No conflicts with base branch", and you can click the button that says "Merge pull request". However, in some cases, you will not be able to merge until you resolve merge conflicts. See the [troubleshooting section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github) for more information about merge conflicts and how to resolve them. 
 
 ### Closing pull requests
 
