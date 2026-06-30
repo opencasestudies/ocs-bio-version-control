@@ -43,11 +43,11 @@ For that experiment or analysis to be reproducible, a **new** researcher needs t
 
 Finally, conclusions from an experiment or analysis are replicable if a **new** researcher can run the same experiment or analysis with **new** data and draw the same conclusions. 
 
-::::
-:::
+```{r, fig.alt="stairway of repeatability, reproducibility, replicability", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f2d5a3e170_0_0#slide=id.g3f2d5a3e170_0_0")
+```
 
-::: {.column-margin}
-to-do: make an image to show these three different scientific goals with avatars. 
+::::
 :::
 
 </details>
@@ -151,6 +151,15 @@ There are several benefits to pairing your local repositories with remote reposi
 - You have a backup of files in case something happens to your computer
 - You can easily work with collaborators
 - You have a central location where your data and code are stored for a project that can be viewed by and shared with other scientists
+
+:::{.reproducibility_box}
+::::{.reproducibility_box_header}
+Reproducibility considerations
+::::
+::::{.inner_block}
+A scientific paper is more reproducible if the data (or instructions to access the data) and code are publicly available, because other researchers can directly inspect and reproduce the analysis. While some papers have data and code "available upon request", hosting data and code on GitHub makes it easier to share these files without requiring additional time and effort from the authors to respond to emails. This aligns with the open science movement, which aims to make research, data, and scientific software more transparent and accessible. 
+::::
+:::
 
 ### Creating new repositories
 
@@ -521,7 +530,7 @@ In the lower left corner you will see a box that says "Summary (required)" and "
 
 A few pieces of advice to consider for your commit messages:
 
-- A commit message should be informative. Think of a collaborator (or yourself in a few months) reading the commit message. It should tell the reader why you've made this commit. Did you add a file? Did you fix a bug in the code? Did you remove an outdated data file? 
+- A commit message should be informative. Think of a collaborator (or yourself in a few months) reading the commit message. It should tell the reader why you've made this commit. Did you add a file? Did you fix a bug in the code? Did you remove an outdated data file? Your commit history, when maintained thoughtfully, can provide a record of why you made changes throughout a project. 
 - A commit message should be concise. Avoid adding too many unnecessary details here. The reader can always look at the differences in files for the commit to see exactly what you've done. 
 - In a public repository, the commit message will be visible to anyone and exist as long as the repository does. Make sure that your message is appropriate and you'd be comfortable with colleagues seeing it. 
 
