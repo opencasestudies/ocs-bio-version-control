@@ -1,10 +1,3 @@
-<!--
-Update the file paths as needed throughout
--->
-
-<!--
-At the end of this section, save incremental data so that users can pause and come back later
--->
 
 # **Data Visualization**
 ***
@@ -118,7 +111,7 @@ clean_metadata %>%
 :::
 
 <details>
-<summary>A note on the pipe operator `%>%`<\summary>
+<summary>A note on the pipe operator `%>%`</summary>
 The pipe operator `%>%` chains R commands together. It takes the preceding object and inputs it as the first argument to the function that follows it. It often is used to make code more readable and to avoid using intermediate objects or nested functions. The code above is equivalent to both of these expressions:
 
 ::: {.rcode}
