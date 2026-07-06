@@ -3,6 +3,7 @@ ai
 al
 avataaars
 automations
+Backhed
 Bitbucket
 Bioinformatics
 Blischak
@@ -78,6 +79,7 @@ Rproj
 RStudio
 SampleID
 Savonen
+Shao
 stringr
 subdir
 tabset
