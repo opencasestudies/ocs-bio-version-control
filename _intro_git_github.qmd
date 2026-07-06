@@ -165,6 +165,24 @@ A scientific paper is more reproducible if the data (or instructions to access t
 
 There are two ways to start new version controlled projects with Git and GitHub. You could create a new repository locally on your computer, track it with Git, and then "push" it to GitHub, creating a remote version of the repo. Or, you could create a new remote repository on GitHub and then "clone" it to your computer, creating a local version. We will provide examples of both workflows in the next section. 
 
+:::{.definition_box}
+::::{.definition_box_header}
+Push
+::::
+::::{.inner_block}
+Sending commits from the local version of a repository to the remote version of the repository on GitHub.
+::::
+:::
+
+:::{.definition_box}
+::::{.definition_box_header}
+Clone
+::::
+::::{.inner_block}
+Creating a local repository that is a copy of a remote repository on GitHub. 
+::::
+:::
+
 ```{r, fig.alt="Git vs GitHub", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_210#slide=id.g3d9461be06f_0_210")
 ```
@@ -666,12 +684,6 @@ In a typical GitHub workflow, you will rarely be making changes from GitHub. Ins
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_206#slide=id.g3f139628ce6_0_206")
 ```
 
-### Tips
-
-- Commit often. A history will not be helpful if you run an entire analysis locally and then commit everything in a single commit. 
-- If you are working on a repository with multiple contributors, make sure to pull each time you work in order to work on the most up-to-date version of the repository 
-- Never use version control to track files with passwords or other sensitive information. If you have there are ways to remove these files and change the Git history, but this should be considered a last resort. Instead, add any files with sensitive information to your .gitignore.
-
 ## Create a version controlled repository for your project 
 
 Now, we will return to the project with Collab. O. Rator. In the previous section, we created a repository on GitHub, and then cloned to make a local copy. Here, we will start with a local folder, track it with Git, and then create a remote version on GitHub. 
@@ -849,6 +861,20 @@ git checkout -b study_comparison
 
 When you create a new branch, you can name it by providing a new branch name (we name the new branch "study_comparison" above).
 
+:::
+
+## Tips for Git and GitHub
+
+:::{.reproducibility_box}
+::::{.reproducibility_box_header}
+Tips
+::::
+::::{.inner_block}
+- Commit often. A history will not be helpful if you run an entire analysis locally and then commit everything in a single commit. 
+- If you are working on a repository with multiple contributors, make sure to pull each time you work in order to work on the most up-to-date version of the repository 
+- Never use version control to track files with passwords or other sensitive information. If you have there are ways to remove these files and change the Git history, but this should be considered a last resort. Instead, add any files with sensitive information to your .gitignore.
+
+::::
 :::
 
 ***

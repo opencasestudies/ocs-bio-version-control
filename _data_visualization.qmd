@@ -309,6 +309,24 @@ observations_after_birth %>%
 ```
 :::
 
+<details>
+<summary>More information about this warning message.</summary>
+`ggplot` will give you warning messages when there are data in the dataframe that it cannot include in a plot due to missing information. In this warning, we can see that 7 observations in the data (representing samples taken) cannot be plotted because of non-finite values. Typically, this means there are observations with missing data. We can investigate what is missing with the following:
+
+::: {.rcode}
+```{r}
+observations_after_birth %>%
+  # only keep rows that have NA values for Study, sampling_day, or Category
+  filter(is.na(Study) | is.na(sampling_day) | is.na(Category)) %>% 
+  # view a smaller subset of variables
+  select(Study, SampleID, PersonID, sampling_day, Category)
+```
+:::
+
+Here we can see that there are 6 observations from the Backhed study and one observation from the Shao study for which `sampling_day` is missing. Therefore, these observations cannot be included in the plot.
+
+</details>
+
 Finally, we will save this plot in the figures folder. 
 
 ::: {.rcode}
@@ -332,26 +350,32 @@ Navigate back to GitHub Desktop. You should now see the modifications that you'v
 We need to now make sure to stage "03_visualize_study_cohorts.qmd" and the figures that we've added. We can use `git add .` to tell Git to track all files that have changes in this repository. 
 
 :::: {.shell}
+
 ```bash
 git add .
 ```
+
 ::::
 
 Next, add a commit with an appropriate commit message. 
 
 :::: {.shell}
+
 ```bash
 git commit -m "Add plot of sampling days to 
 '03_visualize_study_cohorts' and document new files in README"
 ```
+
 ::::
 
 Finally, {{< glossary "push" >}} these changes that you've made locally to your remote repository. Because this is your first time pushing from a new branch, you will need to tell Git where you want to push to, adding the flag `--set-upstream origin branch_name`. 
 
 :::: {.shell}
+
 ```bash
 git push --set-upstream origin study_comparison
 ```
+
 ::::
 
 :::
