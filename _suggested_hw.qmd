@@ -38,13 +38,13 @@ A copy of a repository, often used to make changes when the user does not have w
 
 We will call the original repository (which you do not have write permissions for) the upstream. Earlier, when you cloned a GitHub repository, you made a local version of that repository. In contrast, when you fork from the upstream, you make a remote copy of the GitHub repository, that you own with your GitHub account. You can then clone this fork, so that you can work locally. 
 
-```{r, fig.alt="Fork workflow, making local repo", out.width = "70%", echo = FALSE, fig.align = "center"}
+```{r, fig.alt="Fork workflow, making local repo", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_369#slide=id.g3f139628ce6_0_369")
 ```
 
 When you want to propose changes back to the upstream repository, you can submit a pull request from your fork into the upstream. 
 
-```{r, fig.alt="Fork repo, integrating local changes to remote", out.width = "70%", echo = FALSE, fig.align = "center"}
+```{r, fig.alt="Fork repo, integrating local changes to remote", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_399#slide=id.g3f139628ce6_0_399")
 ```
 

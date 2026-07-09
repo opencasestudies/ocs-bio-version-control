@@ -6,7 +6,7 @@ Most new and experienced users of Git and GitHub will run into problems occasion
 <details> 
 <summary>I've created a merge conflict. What is this? How do I fix it?</summary>
 
-Typically, Git is able to automatically merge changes from one branch into another. However, a merge conflict happens when there are competing changes between the two branches, and Git needs you to manually decide how to resolve these differences. A merge conflict may arise in a scenario in which you made a branch from main, worked on that branch, and by the time you submit a pull request back to main, someone else has already committed to main and updated the same file as you have. 
+Typically, Git is able to automatically {{< glossary "merge" >}} changes from one {{< glossary "branch" >}} into another. However, a merge conflict happens when there are competing changes between the two branches, and Git needs you to manually decide how to resolve these differences. A merge conflict may arise in a scenario in which you made a branch from main, worked on that branch, and by the time you submit a pull request back to main, someone else has already committed to main and updated the same file as you have. 
 
 :::{.definition_box}
 ::::{.definition_box_header}
@@ -129,19 +129,19 @@ Make sure you are starting in the correct branch that you have been working in. 
 :::: {.shell}
 ```bash
 git rm --cached "path_to_file" 
-git commit --ammend 
+git commit --amend 
 ```
 ::::
 
-Including the `git commit --ammend` rewrites the most recent commit as if the large file was not added. Don't close the terminal yet, we will come back to it. 
+Including the `git commit --amend` rewrites the most recent commit as if the large file was not added. Don't close the terminal yet, we will come back to it. 
 
 Next, open the .gitignore file and add the file to the list of files to avoid tracking. In GitHub Desktop, stage the .gitignore, but do not commit it yet. 
 
-Return to the terminal. Repeat the `git commit --ammend` command, which will add this update to the .gitignore to the most recent commit. 
+Return to the terminal. Repeat the `git commit --amend` command, which will add this update to the .gitignore to the most recent commit. 
 
 :::: {.shell}
 ```bash
-git commit --ammend 
+git commit --amend 
 ```
 ::::
 
@@ -149,23 +149,23 @@ Then, return to GitHub Desktop and commit these changes.
 
 #### Command line
 
-Use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. Including the `git commit --ammend` rewrites the most recent commit as if the large file was not added.
+Use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. Including the `git commit --amend` rewrites the most recent commit as if the large file was not added.
 
 :::: {.shell}
 ```bash
 git rm --cached path/to/file
-git commit --ammend
+git commit --amend
 ```
 ::::
 
 Next, open the .gitignore file and add the file to the list of files to avoid tracking. 
 
-Then, return to the command line and stage and stage and commit these changes. Note that we include `git commit --ammend` a second time to add the changes to the .gitignore file to the previous commit. 
+Then, return to the command line and stage and stage and commit these changes. Note that we include `git commit --amend` a second time to add the changes to the .gitignore file to the previous commit. 
 
 :::: {.shell}
 ```bash
 git add .gitignore
-git commit --ammend
+git commit --amend
 git commit -m "removing file_name from Git tracking and adding it to .gitignore" 
 ```
 ::::

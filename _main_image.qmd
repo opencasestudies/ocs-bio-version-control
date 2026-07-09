@@ -1,5 +1,7 @@
 #### {.outline }
 
-![](img/version_control_main_figure_mockup.png){fig-alt="Workflow of the different version control steps in this case study" width=800 .lightbox}
+```{r, fig.alt="Workflow of this project using Git and GitHub", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f2d5a3e170_0_38#slide=id.g3f2d5a3e170_0_38")
+```
 
 ####

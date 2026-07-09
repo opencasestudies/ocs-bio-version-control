@@ -80,10 +80,6 @@ include-sections:
 
 {{< include _glossary_table.qmd >}}
 
-::: {.column-margin}
-to-do: link the glossary to these terms in text, so that the definitions will pop up when a learner hovers over the word with their mouse
-:::
-
 {{< include _bibliography.qmd >}}
 
 {{< include _session_info.qmd >}}

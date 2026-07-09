@@ -1,15 +1,8 @@
-<!--
-Update the file paths as needed throughout
--->
-
-<!--
-At the end of this section, save incremental data so that users can pause and come back later
--->
 
 # **Data Visualization**
 ***
 
-We will now generate visualizations to compare the meta-analysis study cohorts. Because this is a new component of the analysis, we will create a new file in the "infant_gut_analysis" folder for this code. 
+We will now generate visualizations to compare the {{< glossary "meta-analysis" >}} study cohorts. Because this is a new component of the analysis, we will create a new file in the "infant_gut_analysis" folder for this code. 
 
 :::{.reproducibility_box}
 ::::{.reproducibility_box_header}
@@ -58,7 +51,14 @@ library(ggplot2)
 ```
 :::
 
-We will start by loaded the wrangled data. We will use the function `here`, which creates relative file paths. We want to load data from the file "clean_sample_metadata.rda", contained within the "processed_data" folder. 
+Next, we will load the wrangled data. We will use the function `here()`, which creates relative file paths. 
+
+<details>
+<summary>More information about the `here()` function:</summary>
+The `here()` function creates file paths that always start from the main project folder (the top-level folder that contains all of your project files). In a Git-tracked repository, this is the folder that contains the `.git` directory, which was created when you initialized the repository. Using relative file paths (i.e., paths that only reference folders within your project) makes your code more portable and easier for collaborators to run. In contrast, absolute file paths depend on the specific file structure of your personal computer and will not necessarily work on other machines.
+</details>
+
+We want to load data from the file "clean_sample_metadata.rda", contained within the "processed_data" folder. 
 
 ```{r, echo = FALSE}
 load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
@@ -70,17 +70,17 @@ load(here::here("processed_data", "clean_sample_metadata.rda"))
 ```
 :::
 
-Now that you have created a new file and loaded packages and data, this is a good time to track this new file and commit your work. 
+Now that you have created a new file and loaded packages and data, this is a good time to track this new file and {{< glossary "commit" >}} your work. 
 
 ::: {.panel-tabset}
 
 #### GitHub Desktop 
 
-Navigate back to GitHub Desktop. You should see your new file name "03_visualize_study_cohorts.qmd" with a green plus next to it, meaning that this is a new file. The check in the checkbox means that this file is staged. Add an appropriate commit message and commit this file. 
+Navigate back to {{< glossary "GitHub Desktop" >}}. You should see your new file name "03_visualize_study_cohorts.qmd" with a green plus next to it, meaning that this is a new file. The check in the checkbox means that this file is staged. Add an appropriate commit message and commit this file. 
 
 #### Command line 
 
-Open the command line and navigate to your repository. Recall that you can stage the new file (tell Git to track it with):
+Open the {{< glossary "command line" >}} and navigate to your repository. Recall that you can stage the new file (tell Git to track it with):
 
 :::: {.shell}
 ```bash
@@ -109,6 +109,35 @@ clean_metadata %>%
   count(name = "total")
 ```
 :::
+
+<details>
+<summary>A note on the pipe operator `%>%`</summary>
+The pipe operator `%>%` chains R commands together. It takes the preceding object and inputs it as the first argument to the function that follows it. It often is used to make code more readable and to avoid using intermediate objects or nested functions. The code above is equivalent to both of these expressions:
+
+::: {.rcode}
+```{r}
+grouped_data <- group_by(clean_metadata, Study)
+count(grouped_data, name = "total")
+```
+:::
+
+::: {.rcode}
+```{r}
+count(group_by(clean_metadata, Study))
+```
+:::
+
+The pipe operator that we use, `%>%`, is part of the `magrittr` R package. There is also a pipe operator in base R, `|>`. In most cases, these two pipe operators will work equivalently. 
+
+::: {.rcode}
+```{r}
+clean_metadata |>
+  group_by(Study) |>
+  count(name = "total")
+```
+:::
+
+</details>
 
 We can see that there is quite the spread of study sizes. Let's also break this down by whether observations are from infants vs mothers. Whether the observation comes from an infant or a mother is contained in the variable `Category`.
 
@@ -273,6 +302,24 @@ observations_after_birth %>%
 ```
 :::
 
+<details>
+<summary>More information about this warning message.</summary>
+`ggplot` will give you warning messages when there are data in the dataframe that it cannot include in a plot due to missing information. In this warning, we can see that 7 observations in the data (representing samples taken) cannot be plotted because of non-finite values. Typically, this means there are observations with missing data. We can investigate what is missing with the following:
+
+::: {.rcode}
+```{r}
+observations_after_birth %>%
+  # only keep rows that have NA values for Study, sampling_day, or Category
+  filter(is.na(Study) | is.na(sampling_day) | is.na(Category)) %>% 
+  # view a smaller subset of variables
+  select(Study, SampleID, PersonID, sampling_day, Category)
+```
+:::
+
+Here we can see that there are 6 observations from the Backhed study and one observation from the Shao study for which `sampling_day` is missing. Therefore, these observations cannot be included in the plot.
+
+</details>
+
 Finally, we will save this plot in the figures folder. 
 
 ::: {.rcode}
@@ -296,26 +343,32 @@ Navigate back to GitHub Desktop. You should now see the modifications that you'v
 We need to now make sure to stage "03_visualize_study_cohorts.qmd" and the figures that we've added. We can use `git add .` to tell Git to track all files that have changes in this repository. 
 
 :::: {.shell}
+
 ```bash
 git add .
 ```
+
 ::::
 
 Next, add a commit with an appropriate commit message. 
 
 :::: {.shell}
+
 ```bash
 git commit -m "Add plot of sampling days to 
 '03_visualize_study_cohorts' and document new files in README"
 ```
+
 ::::
 
-Finally, push these changes that you've made locally to your remote repository. Because this is your first time pushing from a new branch, you will need to tell Git where you want to push to, adding the flag `--set-upstream origin branch_name`. 
+Finally, {{< glossary "push" >}} these changes that you've made locally to your remote repository. Because this is your first time pushing from a new branch, you will need to tell Git where you want to push to, adding the flag `--set-upstream origin branch_name`. 
 
 :::: {.shell}
+
 ```bash
 git push --set-upstream origin study_comparison
 ```
+
 ::::
 
 :::

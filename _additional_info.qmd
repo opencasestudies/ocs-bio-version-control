@@ -5,11 +5,6 @@
 Use this section to provide any additional information or resources on the topic and methods covered in the case study
 -->
 
-## References 
-
-::: {#refs}
-:::
-
 ## **Helpful Links**
 ***
 

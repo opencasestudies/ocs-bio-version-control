@@ -18,18 +18,13 @@ The ability for someone else the run the same analysis on the same data and get 
 ::::
 :::
 
-When conducting a scientific project, reproducibility is very important and provides the following benefits: 
+When conducting a scientific project, reproducibility is very important. If another researcher can use your data and code and generate the same results, then your conclusions are more credible to the scientific community. Version control is a tool that enables reproducible research by recording changes to a project over time. It has the following benefits:
 
-- If another researcher can use your data and code and generate the same results, then your conclusions are more credible to the scientific community. 
-- Version control is a tool that enables reproducible research by recording changes to a project over time. When used carefully, it gives a complete history of changes made over the course of a project. This can also be helpful for a research team to better understand what they did in one of their own previous studies!
+- When used carefully, it gives a complete history of changes made over the course of a project. This can be helpful for a research team to better understand what they did in one of their own previous studies!
 - It also provides a digital backup and an online repository of code and possibly also data (if it doesn't contain sensitive data). This can be very valuable if something happens to your computer.
 - Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes. 
 
-While several tools exist for version control, we will introduce Git and GitHub, two of the most commonly used version control tools. Common alternatives to GitHub include [GitLab](https://about.gitlab.com/resources/) and [Bitbucket](https://bitbucket.org/product/guides)
-
-::: {.column-margin}
-I've had a difficult time finding additional resources that describe other version control options besides Git. I'm curious if anyone other version control systems they'd include here.
-:::
+While several tools exist for version control, we will introduce [Git](https://git-scm.com) and [GitHub](https://github.com), two of the most commonly used version control tools. Common alternatives to GitHub include [GitLab](https://about.gitlab.com/resources/) and [Bitbucket](https://bitbucket.org/product/guides)
 
 <details>
 <summary>More information on how reproducibility fits into the scientific process.</summary>
@@ -48,32 +43,16 @@ For that experiment or analysis to be reproducible, a **new** researcher needs t
 
 Finally, conclusions from an experiment or analysis are replicable if a **new** researcher can run the same experiment or analysis with **new** data and draw the same conclusions. 
 
-::::
-:::
+```{r, fig.alt="stairway of repeatability, reproducibility, replicability", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f2d5a3e170_0_0#slide=id.g3f2d5a3e170_0_0")
+```
 
-::: {.column-margin}
-to-do: make an image to show these three different scientific goals with avatars. 
+::::
 :::
 
 </details>
 
 ## Why use version control? 
-
-We will refer to two papers about version control. 
-
-Our discussion of version control is inspired by the following two papers. They both provide a helpful introduction to version control with Git and GitHub. 
-
-:::{.reference_box}
-::::{.reference_box_header}
-Version control resources:
-::::
-::::{.inner_block}
-- Blischak, J. D., Davenport, E. R., & Wilson, G (2016). [A Quick Introduction to Version Control with Git and GitHub](https://doi.org/10.1371/journal.pcbi.1004668), PLoS Computational Biology, 12(1).  
-  - this paper provides an overview of Git and GitHub for scientists who primarily work with the command line
-- Bryan, J (2018). [Excuse Me, Do You Have a Moment to Talk About Version Control?](https://doi.org/10.7287/peerj.preprints.3159v2) The American Statistician, 72(1), 20-27. 
-  - this paper provides an overview of Git and GitHub for data scientists who primarily work with R and RStudio
-::::
-:::
 
 Consider a typical workflow when you have a project with multiple files (for example: data, code, resulting figures). You likely have a folder on your computer where you keep these files. When you edit a file you save it, and you have access to the most recent version. You might run into a situation where you want to try something new, so you save "project_file_old.R" along with "project_file_updated.R" or perhaps "project_file_july_2026.R" or eventually "project_file_final_version_4_final.R". If you haven't saved an older version of a file but you wish you could revert to the version from last week before you tried something new, you would be out of luck. 
 
@@ -90,6 +69,20 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 While both of these organizational systems can work well when carefully maintained, they are time consuming and prone to error. Version control is a tool that makes it easier to manage sets of files for projects. It automates several of the processes described above, and makes others dramatically easier. While version control was originally made for software engineers to work together on large projects, it is now commonly used for scientific projects as well.
 
 At its core, version control lets the user track sequential changes to a set of files, with a short message attached to each version. Multiple people can work with the same version controlled folder, and different versions of files can automatically be merged, unless they are directly in conflict. 
+
+Our discussion of version control is inspired by the following two papers. They both provide a helpful introduction to version control with Git and GitHub. 
+
+:::{.reference_box}
+::::{.reference_box_header}
+Version control resources:
+::::
+::::{.inner_block}
+- Blischak, J. D., Davenport, E. R., & Wilson, G (2016). [A Quick Introduction to Version Control with Git and GitHub](https://doi.org/10.1371/journal.pcbi.1004668), PLoS Computational Biology, 12(1).  
+  - this paper provides an overview of Git and GitHub for scientists who primarily work with the command line
+- Bryan, J (2018). [Excuse Me, Do You Have a Moment to Talk About Version Control?](https://doi.org/10.7287/peerj.preprints.3159v2) The American Statistician, 72(1), 20-27. 
+  - this paper provides an overview of Git and GitHub for data scientists who primarily work with R and RStudio
+::::
+:::
 
 ## What are Git and GitHub? 
 
@@ -112,20 +105,20 @@ A folder in Git that contains all of the files to be tracked for a project.
 ::::
 :::
 
-When you set up a repository, Git will save an initial version of that repository. Git works by tracking the evolution of a repository through a series of commits. 
+When you set up a repository, Git will save an initial version of the files in that repository. Git works by tracking the evolution of files in a repository through a series of commits. 
 
 :::{.definition_box}
 ::::{.definition_box_header}
 Commit
 ::::
 ::::{.inner_block}
-A snapshot of a repository at a certain time.
+A snapshot of a the files in a repository at a certain time.
 ::::
 :::
 
 Another way to think about a commit is as a save point in a video game. This means that it saves your work up to a certain point in time. 
 
-Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. If you want to return to a previous version of a project, you can only return to the version of files at any commit.
+Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between each file in the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. If you want to return to a previous version of a project, you can only return to the version of files at any commit.
 
 ```{r, fig.alt="Git vs GitHub", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_143#slide=id.g3d9461be06f_0_143")
@@ -159,9 +152,36 @@ There are several benefits to pairing your local repositories with remote reposi
 - You can easily work with collaborators
 - You have a central location where your data and code are stored for a project that can be viewed by and shared with other scientists
 
+:::{.reproducibility_box}
+::::{.reproducibility_box_header}
+Reproducibility considerations
+::::
+::::{.inner_block}
+A scientific paper is more reproducible if the data (or instructions to access the data) and code are publicly available, because other researchers can directly inspect and reproduce the analysis. While some papers have data and code "available upon request", hosting data and code on GitHub makes it easier to share these files without requiring additional time and effort from the authors to respond to emails. This aligns with the open science movement, which aims to make research, data, and scientific software more transparent and accessible. 
+::::
+:::
+
 ### Creating new repositories
 
 There are two ways to start new version controlled projects with Git and GitHub. You could create a new repository locally on your computer, track it with Git, and then "push" it to GitHub, creating a remote version of the repo. Or, you could create a new remote repository on GitHub and then "clone" it to your computer, creating a local version. We will provide examples of both workflows in the next section. 
+
+:::{.definition_box}
+::::{.definition_box_header}
+Push
+::::
+::::{.inner_block}
+Sending commits from the local version of a repository to the remote version of the repository on GitHub.
+::::
+:::
+
+:::{.definition_box}
+::::{.definition_box_header}
+Clone
+::::
+::::{.inner_block}
+Creating a local repository that is a copy of a remote repository on GitHub. 
+::::
+:::
 
 ```{r, fig.alt="Git vs GitHub", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_210#slide=id.g3d9461be06f_0_210")
@@ -221,7 +241,7 @@ We will discuss README files in more detail in the project organization section,
 
 <details> <summary> .gitignore </summary>
 
-Often when you commit files you will commit all files in your repository. However, you may have files that you don't want to commit, such as large data files or intermediate files (we will discuss which files you may not want to commit later in the project organization section). If there is a file that you don't want to track with version control, you can add it to the .gitignore file, to tell Git to ignore it. When you click the down arrow next to "No .gitignore" it will provide several templates. For a project using R, the "R" template is a good place to start. It includes files often associated with projects in R that are not typically tracked with version control.
+You may have files in your repository that you don't want to commit, such as large data files or intermediate files (we will discuss which files you may not want to commit later in the project organization [section](https://www.opencasestudies.org/ocs-bio-version-control/#scientific-project-organization)). If there is a file that you don't want to track with version control, you can add it to the .gitignore file, to tell Git to ignore it. When you click the down arrow next to "No .gitignore" it will provide several templates. For a project using R, the "R" template is a good place to start. It includes files often associated with projects in R that are not typically tracked with version control.
 
 </details>
 
@@ -270,7 +290,7 @@ An issue is a way to keep track of ideas, tasks to complete, errors to resolve, 
 
 ### Installing GitHub Desktop 
 
-Next, we will move from interacting with GitHub to interacting with Git. First, we recommend that you install GitHub Desktop. This is a GUI (graphical user interface) that makes it easier for us to interact with Git. While we will use GitHub Desktop in this case study, another common way to interact with Git is through the command line on your computer. If you are already comfortable using the command line, you may prefer this to GitHub Desktop. When we use GitHub Desktop for version control tasks in this case study, we will also provide the command line code for all Git operations.
+Next, we will move from interacting with GitHub to interacting with Git. First, we recommend that you install GitHub Desktop. This is a GUI (graphical user interface) that makes it easier for us to interact with Git locally. While we will use GitHub Desktop in this case study, another common way to interact with Git is through the {{< glossary "command line" >}} on your computer. If you are already comfortable using the command line, you may prefer this to GitHub Desktop. When we use GitHub Desktop for version control tasks in this case study, we will also provide the command line code for all Git operations.
 
 <details> <summary> More information about the command line. </summary>
 
@@ -528,7 +548,7 @@ In the lower left corner you will see a box that says "Summary (required)" and "
 
 A few pieces of advice to consider for your commit messages:
 
-- A commit message should be informative. Think of a collaborator (or yourself in a few months) reading the commit message. It should tell the reader why you've made this commit. Did you add a file? Did you fix a bug in the code? Did you remove an outdated data file? 
+- A commit message should be informative. Think of a collaborator (or yourself in a few months) reading the commit message. It should tell the reader why you've made this commit. Did you add a file? Did you fix a bug in the code? Did you remove an outdated data file? Your commit history, when maintained thoughtfully, can provide a record of why you made changes throughout a project. 
 - A commit message should be concise. Avoid adding too many unnecessary details here. The reader can always look at the differences in files for the commit to see exactly what you've done. 
 - In a public repository, the commit message will be visible to anyone and exist as long as the repository does. Make sure that your message is appropriate and you'd be comfortable with colleagues seeing it. 
 
@@ -586,9 +606,7 @@ git add my-first-repository.Rproj .gitignore
 ::::
 </details>
 
-If you ever want to tell Git to track all files, you can use the command `git add .`. 
-
-Next, we will commit these files (remember, this is similar to creating a snapshot of these files, or to creating a save point in a video game). The command `git commit -m "..."` commits the staged files and the flag `-m` adds a commit messages. 
+Next, we will commit the staged files (remember, this is similar to creating a snapshot of these files, or to creating a save point in a video game). The command `git commit -m "..."` commits the staged files and the flag `-m` adds a commit messages. 
 
 A few pieces of advice to consider for your commit messages:
 
@@ -617,10 +635,11 @@ git push
 ::::
 
 Now, open your project in GitHub. You should now see the new file that you made locally, as well the commit message. 
-
 :::
 
-Finally, we're going to make another change from GitHub, and then "pull" that change into our local Git repository. We'll follow the same steps to make a change on GitHub:
+#### Pulling updates from GitHub
+
+You've learned how to make updates locally, and stage, commit, and push these changes so that the GitHub repository includes those updates. While "pushing" sends updates from a local repository to the remote repository on GitHub, "pulling" sends updates from the remote GitHub repository to your local repository. To practice pulling, we're going to make another change and commit from GitHub, and then pull that commit into our local repository. We'll follow the same steps to make a change and commit on GitHub:
 
 - click the pencil on the upper right of the README
 - add a new line to your README document that says "Adding another commit from GitHub." 
@@ -659,19 +678,13 @@ If you return to RStudio and open "README.md", you will now see the update that 
 
 In this section you have made a GitHub account, installed Git and GitHub Desktop, configured Git and GitHub to talk to each other, and made your first repository. You've learned how to make changes to the remote on GitHub and transfer them to the local repository on your computer, as well as do the opposite. 
 
-In a typical GitHub workflow, you will rarely be making changes from GitHub. Instead, you will often be working with one or multiple collaborators on a repository. Once your collaborator makes changes locally, they can push those changes to GitHub, and then you can pull those changes to your local copy of the repository. This process will continue cyclically while you collaboratively work on a project. Note that this is a simplified system where you take turns to make changes, in practice you can be working on the project at the same time.
+In a typical GitHub workflow, you will rarely be making changes from GitHub. Instead, you will often be working with one or multiple collaborators on a repository. Once your collaborator makes changes locally, they can push those changes to GitHub, and then you can pull those changes to your local copy of the repository. This process will continue cyclically while you collaboratively work on a project. Note that this is a simplified system where you take turns to make changes, in practice you can work on the project at the same time.
 
 ```{r, fig.alt="Git and GitHub workflow", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_206#slide=id.g3f139628ce6_0_206")
 ```
 
-### Tips
-
-- Commit often. A history will not be helpful if you run an entire analysis locally and then commit everything in a single commit. 
-- If you are working on a repository with multiple contributors, make sure to pull each time you work in order to work on the most up-to-date version of the repository 
-- Never use version control to track files with passwords or other sensitive information. If you have there are ways to remove these files and change the Git history, but this should be considered a last resort. Instead, add any files with sensitive information to your .gitignore.
-
-## Create version controlled repository for your project 
+## Create a version controlled repository for your project 
 
 Now, we will return to the project with Collab. O. Rator. In the previous section, we created a repository on GitHub, and then cloned to make a local copy. Here, we will start with a local folder, track it with Git, and then create a remote version on GitHub. 
 
@@ -691,7 +704,7 @@ Now, go to GitHub Desktop and do the following:
 
 Now, copy the contents of the "infant_gut_files" into the new repository that you just created with GitHub Desktop
 
-Once you add these files, return to GitHub Desktop. You should see a set of staged files. 
+Once you add these files, return to GitHub Desktop. You should see a set of changed files, with check marks next to them to denote that they are staged. 
 
 - add a commit message and commit this change
 - you should then see an option to "Publish repository", click this
@@ -705,18 +718,50 @@ Open the command line, navigate to the folder that you have unzipped, and enter 
 
 :::: {.shell}
 ```bash
-git init
+git init -b main
 ```
 ::::
 
-If you look into your folder you will not see any changes. However, this command creates a hidden `.git` folder within the current folder, which contains the files that are needed to start tracking this folder with Git. It is now a Git-tracked repository. Now we will stage all files, so that Git knows to track them, and commit them, so that Git saves the set of files as part of the history. 
+This command tests Git to create a version controlled repository in the current folder. Don't worry about understanding the `-b main` part of the command for now, we will discuss it in a later section about branches. 
+
+If you look into your folder you will not see any changes. However, this command creates a hidden `.git` folder within the current folder, which contains the files that are needed to start tracking this folder with Git. It is now a Git-tracked repository. 
+
+Because we've created a Git repository from a folder of existing files, we should be sure to add a .gitignore file before staging and committing. While we could create an empty file called ".gitignore" and add files to it that we don't want to track, we will instead download a .gitignore file from GitHub that includes files that are typically not tracked in workflows that use R. While most of the files in this .gitignore won't be included in your project, there is no harm in including files in a .gitignore file that don't exist in the repository. 
+
+In the command line, enter:
 
 :::: {.shell}
 ```bash
-git add .
+curl -o .gitignore https://raw.githubusercontent.com/github/gitignore/main/R.gitignore
+```
+::::
+
+Now we will stage files, so that Git knows to track them, and commit them, so that Git saves the set of files as part of the history. 
+
+First, check which files are currently untracked or modified.
+
+:::: {.shell}
+```bash
+git status
+```
+::::
+
+When you run `git status`, look for files listed under *"Untracked files"* (new files not yet tracked) or *"Changes not staged for commit"* (modified files that have not yet been added). You can then choose which files to add. In this repo, because the data is small and publicly available, we will add and commit the data folders. If this is not the case for your data, you should add data files or folders to your .gitignore file, to avoid tracking them. 
+
+:::: {.shell}
+```bash
+git add README.md 01_pull_study_data.R 02_wrangle_data.R
+processed_data raw_data .gitignore
 git commit -m "track all files for infant gut project" 
 ```
 ::::
+
+In the `git add` command above, we track all scripts (.R files) and data. We do not track the figures and results folders for now because Git will not track empty folders. Once we add figures and results to these folders, we can then version control them (if we want to include these outputs in our version controlled repository). 
+
+<details>
+<summary> Note on staging all files in a repository </summary>
+You may see examples in other Git tutorials using `git add .`, which stages all files in the current directory. While convenient, you should use this with caution, as it can unintentionally include files you do not want to track, such as large data files, sensitive data, or auxiliary files generated by your computer (e.g., .Rproj, .Rproj.user, .DS_Store). While this can be avoided by adding all of these files to your .gitignore file, it is generally safer to add individual files and folder to your `git add` command that you'd like to track. 
+</details>
 
 Next, you will need to create an empty repository on GitHub. Go to GitHub and create a new repository called "infant_gut_analysis". Importantly, this time do not check "Initialize with README", this should be a fully empty repository. Copy the URL of this repository. 
 
@@ -727,6 +772,16 @@ Now, return to the command line and enter (replacing the URL below with the URL 
 git remote add origin https://github.com/your_username/infant_gut_analysis.git
 ```
 ::::
+
+Finally, we'll push the files that we have locally to the remote repository on GitHub. Use the following command:
+
+:::: {.shell}
+```bash
+git push -u origin main
+```
+::::
+
+Because this is the first time pushing to the remote repository, we need the `-u` flag to tell Git to remember where to send our changes. `origin` refers to the remote GitHub repository (that we set in the previous command), and `main` refers to the default version of the repository.
 
 :::
 
@@ -772,7 +827,7 @@ Here is an example of a workflow, in which a Git user makes a "feature" branch f
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_263#slide=id.g3f139628ce6_0_263")
 ```
 
-If there are no lines of code in any files that are directly in conflict, then merging will automatically combine the sets of files into a single version to move forward with. If there are lines that are directly in conflict, this will create what is called a merge conflict. 
+If there are no lines of code in any files that are directly in conflict, then merging will automatically combine the sets of files into a single version to move forward with. If there are lines that are directly in conflict, this will create what is called a merge conflict (merge conflicts are explained further in [this section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github). 
 
 Here is an example of a file from the branching workflow above that can be merged automatically. 
 
@@ -780,13 +835,7 @@ Here is an example of a file from the branching workflow above that can be merge
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_292#slide=id.g3f139628ce6_0_292")
 ```
 
-
-Branches are also helpful when working with collaborators. If you are developing a new part of an analysis, you can do it in a separate branch. When you are ready for your collaborator to review your work, you can submit a "pull request", which is a request to merge your branch with the main branch. Your collaborator can review all of the changes between your branch and the new branch, and either approve the pull request or request edits before merging. 
-
-::: {.column-margin}
-to-do: link to section that describes pull requests in more detail below.
-:::
-
+Branches are also helpful when working with collaborators. If you are developing a new part of an analysis, you can do it in a separate branch. When you are ready for your collaborator to review your work, you can submit a "pull request", which is a request to merge your branch with the main branch. Your collaborator can review all of the changes between your branch and the new branch, and either approve the pull request or request edits before merging. You can read more about pull requests in [this section](https://www.opencasestudies.org/ocs-bio-version-control/#pull-requests).
 
 ### Create a new branch for this analysis 
 
@@ -814,6 +863,22 @@ git checkout -b study_comparison
 
 When you create a new branch, you can name it by providing a new branch name (we name the new branch "study_comparison" above).
 
+:::
+
+## Tips for Git and GitHub
+
+:::{.reproducibility_box}
+::::{.reproducibility_box_header}
+Tips
+::::
+::::{.inner_block}
+- Commit often. A history will not be helpful if you run an entire analysis locally and then commit everything in a single commit. 
+- If you are working on a repository with multiple contributors, make sure to pull each time you work in order to work on the most up-to-date version of the repository 
+- Never use version control to track files with passwords or other sensitive information. If you have there are ways to remove these files and change the Git history, but this should be considered a last resort. Instead, add any files with sensitive information to your .gitignore.
+
+    - If passwords, access tokens, API keys, or other credentials are accidentally committed and pushed to a remote repository on GitHub (either public or private), they should be considered compromised and changed as soon as possible, and all collaborators who work with that repository should be alerted. 
+
+::::
 :::
 
 ***

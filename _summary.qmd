@@ -1,16 +1,17 @@
 # **Summary**
 ***
+
 ## **Synopsis**
-***
 
-In this case study, you've learned about why version control is used as part of reproducible science workflows. You've been introduced to Git and GitHub, and learned procedures for managing Git-tracked repositories locally using GitHub Desktop or the command line, and remotely using GitHub. You've practiced using the "pull -> stage -> commit -> push" workflow to make changes locally that are then tracked remotely. In your analysis, you worked in a branch, and you submitted a pull request in order to integrate new changes into a stable version of the code and as a way to ask a collaborate to review your code. 
 
-Along the way, you've also learned about the advantages and challenges of meta-analyses and best practices for scientific project organization. 
+In this case study, you've learned about why {{< glossary "version control" >}} is used as part of {{< glossary "reproducible" >}} science workflows. You've been introduced to {{< glossary "Git" >}} and {{< glossary "GitHub" >}}, and learned procedures for managing Git-tracked {{< glossary "repositories" >}} locally using {{< glossary "GitHub Desktop" >}} or the {{< glossary "command line" >}}, and remotely using GitHub. You've practiced using the "pull -> stage -> commit -> push" workflow to make changes locally that are then tracked remotely. In your analysis, you worked in a {{< glossary "branch" >}}, and you submitted a {{< glossary "pull request" >}} in order to integrate new changes into a stable version of the code and as a way to ask a collaborate to review your code. 
+
+Along the way, you've also learned about the advantages and challenges of {{< glossary "meta-analyses" >}} and best practices for scientific project organization. 
 
 ***
 
 ## **Summary Plot**
-***
+
 
 In order to create the final summary plot, please drag and drop the steps that you've followed in this case study into the correct order. 
 
@@ -20,7 +21,9 @@ to-do: figure out how to make this into a drag and drop activity for the learner
 Note: this is a mock-up of what the figure may look like, but a final version will be a little more detailed and include color and more collaborative elements of the process! 
 :::
 
-![](img/version_control_main_figure_mockup.png){fig-alt="Workflow of the different version control steps in this case study" width=800 .lightbox}
+```{r, fig.alt="Workflow of this project using Git and GitHub", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f2d5a3e170_0_38#slide=id.g3f2d5a3e170_0_38")
+```
 
 <!--
 construct a plot here that summarizes the conclusions found in the data, if applicable

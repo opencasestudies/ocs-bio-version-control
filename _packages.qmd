@@ -1,8 +1,5 @@
-<!--
-load all the packages used in the case study analysis in the code chunk below
-(try to use tidyverse over base R).
-Fill out the table and add rows as necessary providing a link to the source and briefly explaining its use for each package
--->
+# **Packages and Setup**
+***
 
 Before we get into the coding, we want to describe the R packages that we'll use in this case study, or that are used in other scripts contained in our repository:
 
