@@ -718,9 +718,11 @@ Open the command line, navigate to the folder that you have unzipped, and enter 
 
 :::: {.shell}
 ```bash
-git init
+git init -b main
 ```
 ::::
+
+This command tests Git to create a version controlled repository in the current folder. Don't worry about understanding the `-b main` part of the command for now, we will discuss it in a later section about branches. 
 
 If you look into your folder you will not see any changes. However, this command creates a hidden `.git` folder within the current folder, which contains the files that are needed to start tracking this folder with Git. It is now a Git-tracked repository. 
 
