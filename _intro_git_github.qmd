@@ -876,6 +876,8 @@ Tips
 - If you are working on a repository with multiple contributors, make sure to pull each time you work in order to work on the most up-to-date version of the repository 
 - Never use version control to track files with passwords or other sensitive information. If you have there are ways to remove these files and change the Git history, but this should be considered a last resort. Instead, add any files with sensitive information to your .gitignore.
 
+    - If passwords, access tokens, API keys, or other credentials are accidentally committed and pushed to a remote repository on GitHub (either public or private), they should be considered compromised and changed as soon as possible, and all collaborators who work with that repository should be alerted. 
+
 ::::
 :::
 
