@@ -1,6 +1,7 @@
 project:
   type: website
   output-dir: docs
+  resources: img/**
 
 website:
   title: "Biomedical Open Case Studies: Making version controlled reproducible analyses"

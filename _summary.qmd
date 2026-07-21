@@ -15,19 +15,426 @@ Along the way, you've also learned about the advantages and challenges of {{< gl
 
 In order to create the final summary plot, please drag and drop the steps that you've followed in this case study into the correct order. 
 
-::: {.column-margin}
-to-do: figure out how to make this into a drag and drop activity for the learner (see [this platform](https://lumi.education/en/)))
-
-Note: this is a mock-up of what the figure may look like, but a final version will be a little more detailed and include color and more collaborative elements of the process! 
-:::
-
-```{r, fig.alt="Workflow of this project using Git and GitHub", echo = FALSE, fig.align = "center"}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f2d5a3e170_0_38#slide=id.g3f2d5a3e170_0_38")
-```
-
 <!--
 construct a plot here that summarizes the conclusions found in the data, if applicable
 (connecting to a main question if possible)
 -->
+
+### Reconstruct the workflow
+
+Drag each workflow block into the correct position and click **Check Answer**.
+
+```{=html}
+
+<div class="workflow-grid">
+
+  <!-- Row 1 -->
+  <div class="dropzone" data-correct="receive-files"></div>
+
+  <div class="arrow">
+    <svg viewBox="0 0 100 40" width="60" height="24">
+      <line x1="5" y1="20" x2="80" y2="20"
+            stroke="black"
+            stroke-width="6"
+            stroke-linecap="round"/>
+      <polygon points="80,5 98,20 80,35"
+               fill="black"/>
+    </svg>
+  </div>
+
+  <div class="dropzone" data-correct="local-git"></div>
+
+  <div class="arrow">
+    <svg viewBox="0 0 100 40" width="60" height="24">
+      <line x1="5" y1="20" x2="80" y2="20"
+            stroke="black"
+            stroke-width="6"
+            stroke-linecap="round"/>
+      <polygon points="80,5 98,20 80,35"
+               fill="black"/>
+    </svg>
+  </div>
+
+  <div class="dropzone" data-correct="remote-github"></div>
+
+  <!-- Row 2 -->
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <div class="arrow top-down-arrow">
+    <svg viewBox="0 0 40 100" width="20" height="50">
+      <line x1="20" y1="5" x2="20" y2="80"
+            stroke="black"
+            stroke-width="6"
+            stroke-linecap="round"/>
+      <polygon points="5,80 20,98 35,80"
+               fill="black"/>
+    </svg>
+  </div>
+
+  <div></div>
+
+  <!-- Row 3 -->
+  <div class="dropzone" data-correct="readme"></div>
+
+  <div class="arrow">
+    <svg viewBox="0 0 100 40" width="60" height="24">
+      <line x1="95" y1="20" x2="20" y2="20"
+            stroke="black"
+            stroke-width="6"
+            stroke-linecap="round"/>
+      <polygon points="20,5 2,20 20,35"
+               fill="black"/>
+    </svg>
+  </div>
+
+  <div class="dropzone" data-correct="perform-analysis"></div>
+
+  <div class="arrow">
+    <svg viewBox="0 0 100 40" width="60" height="24">
+      <line x1="95" y1="20" x2="20" y2="20"
+            stroke="black"
+            stroke-width="6"
+            stroke-linecap="round"/>
+      <polygon points="20,5 2,20 20,35"
+               fill="black"/>
+    </svg>
+  </div>
+
+  <div class="dropzone" data-correct="make-branch"></div>
+
+  <!-- Row 4 -->
+  <div class="arrow">
+    <svg viewBox="0 0 40 100" width="20" height="50">
+      <line x1="20" y1="5" x2="20" y2="80"
+            stroke="black"
+            stroke-width="6"
+            stroke-linecap="round"/>
+      <polygon points="5,80 20,98 35,80"
+               fill="black"/>
+    </svg>
+  </div>
+
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <!-- Row 5 -->
+  <div class="dropzone" data-correct="push-remote"></div>
+
+  <div class="arrow">
+    <svg viewBox="0 0 100 40" width="60" height="24">
+      <line x1="5" y1="20" x2="80" y2="20"
+            stroke="black"
+            stroke-width="6"
+            stroke-linecap="round"/>
+      <polygon points="80,5 98,20 80,35"
+               fill="black"/>
+    </svg>
+  </div>
+
+  <div class="dropzone" data-correct="pull-request"></div>
+
+</div>
+
+<div id="bank" class="bank"></div>
+
+<br>
+
+<button id="check-btn">Check Answer</button>
+<button id="reset-btn">Reset</button>
+
+<div id="feedback"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+
+<script>
+
+const cards = [
+  { id: "receive-files", img: "img/receive-files.png" },
+  { id: "local-git", img: "img/local-git.png" },
+  { id: "remote-github", img: "img/remote-github.png" },
+  { id: "make-branch", img: "img/make-branch.png" },
+  { id: "perform-analysis", img: "img/perform-analysis.png" },
+  { id: "readme", img: "img/readme.png" },
+  { id: "push-remote", img: "img/push-remote.png" },
+  { id: "pull-request", img: "img/pull-request.png" }
+];
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+function createCard(card) {
+
+  const div = document.createElement("div");
+
+  div.className = "card";
+  div.dataset.id = card.id;
+
+  div.innerHTML =
+    '<img src="' + card.img + '" alt="' + card.id + '">';
+
+  return div;
+}
+
+function setupBoard() {
+
+  const bank = document.getElementById("bank");
+
+  bank.innerHTML = "";
+
+  document
+    .querySelectorAll(".dropzone")
+    .forEach(z => {
+      z.innerHTML = "";
+      z.classList.remove(
+        "correct",
+        "incorrect"
+      );
+    });
+
+  const shuffled = [...cards];
+
+  shuffle(shuffled);
+
+  shuffled.forEach(card => {
+    bank.appendChild(createCard(card));
+  });
+
+}
+
+window.addEventListener("load", function() {
+
+  setupBoard();
+
+  Sortable.create(
+    document.getElementById("bank"),
+    {
+      group: "workflow",
+      animation: 150
+    }
+  );
+
+  document
+    .querySelectorAll(".dropzone")
+    .forEach(zone => {
+
+      Sortable.create(zone, {
+        group: "workflow",
+        animation: 150
+      });
+
+    });
+
+});
+
+document
+.getElementById("check-btn")
+.addEventListener("click", () => {
+
+  let correct = 0;
+
+  const zones =
+    document.querySelectorAll(".dropzone");
+
+  zones.forEach(zone => {
+
+    zone.classList.remove(
+      "correct",
+      "incorrect"
+    );
+
+    const card =
+      zone.querySelector(".card");
+
+    if(!card) {
+
+      zone.classList.add("incorrect");
+      return;
+
+    }
+
+    if(
+      card.dataset.id ===
+      zone.dataset.correct
+    ) {
+
+      correct++;
+      zone.classList.add("correct");
+
+    } else {
+
+      zone.classList.add("incorrect");
+
+    }
+
+  });
+
+  const feedback =
+    document.getElementById("feedback");
+
+  if(correct === 8) {
+
+    feedback.innerHTML =
+      "<p class='pass'>Perfect! All 8 positions are correct.</p>";
+
+  } else {
+
+    feedback.innerHTML =
+      "<p class='fail'>" +
+      correct +
+      "/8 positions are correct. Continue adjusting the workflow.</p>";
+
+  }
+
+});
+
+document
+.getElementById("reset-btn")
+.addEventListener("click", () => {
+
+  document
+    .getElementById("feedback")
+    .innerHTML = "";
+
+  setupBoard();
+
+});
+
+</script>
+
+<style>
+
+.workflow-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    180px 40px 180px 40px 180px;
+
+  gap: 16px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 40px;
+}
+
+.dropzone {
+
+  width: 180px;
+  height: 130px;
+
+  border: 3px dashed #bdbdbd;
+  border-radius: 12px;
+
+  background: #fafafa;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-down-arrow {
+  transform: translateX(135px);
+}
+
+
+.bank {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 180px);
+
+  gap: 12px;
+
+  justify-content: center;
+
+  margin-top: 20px;
+}
+
+
+.card {
+
+  width: 180px;
+  height: 130px;
+
+  border: none;
+  border-radius: 0;
+
+  background: transparent;
+
+  overflow: hidden;
+
+  cursor: grab;
+}
+
+.card img {
+
+  width: 95%;
+  height: 95%;
+
+  object-fit: contain;
+  
+  display: block;
+  margin: auto;
+}
+
+.correct {
+
+  border: 4px solid #26734d;
+  background: #eef8f1;
+}
+
+.incorrect {
+
+  border: 4px solid #b22222;
+  background: #fff0f0;
+}
+
+.pass {
+
+  color: #26734d;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.fail {
+
+  color: #b22222;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+button {
+
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+#feedback {
+
+  margin-top: 20px;
+}
+
+</style>
+
+```
+
 
 ***
