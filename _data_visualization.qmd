@@ -2,7 +2,53 @@
 # **Data Visualization**
 ***
 
-We will now generate visualizations to compare the {{< glossary "meta-analysis" >}} study cohorts. Because this is a new component of the analysis, we will create a new file in the "infant_gut_analysis" folder for this code. 
+We will now generate visualizations to compare the {{< glossary "meta-analysis" >}} study cohorts.
+
+First, we will make sure that we are on the correct branch. We want to use a development branch for this analysis, which we will request to merge back into the main branch once the analysis is ready. We already created the branch "study_comparison" in the [**Introduction to Git and GitHub**](https://www.opencasestudies.org/ocs-bio-version-control/#branches) section, so we just need to make sure that we are working on that branch.
+
+::: {.panel-tabset}
+
+#### GitHub Desktop 
+
+- In the upper panel, under "Current Branch", look to see if it says the current branch is "study_comparison" or "main" or something else.
+  - If it says "study_comparison", then you are already working on the correct branch.
+  - If it says "main", then you can click the drop-down button next to "Current Branch" and select "study_comparison".
+    - If "study_comparison" does not appear, you can click the "New Branch" button to create it. 
+
+```{r, fig.alt="Creating first repository", out.width = "100%", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_170#slide=id.g3f94a4bdf40_0_170")
+```
+
+#### Command line 
+
+Open the command line and navigate to your repository. Use the `git branch` command. 
+
+:::: {.shell}
+```bash
+git branch
+```
+::::
+
+This should list the branches for your repository, with the current branch highlighted and marked with an asterisk (*). If the highlighted branch is "study_comparison", then you are already working on the correct branch. If the highlighted branch is "main" or something else, you can switch over to "study_comparison" using the `git checkout` command. 
+
+If "study_comparison" appears in your list of branches, you can move to it with the following command:
+
+:::: {.shell}
+```bash
+git checkout study_comparison
+```
+::::
+
+However, if "study_comparison" doesn't appear in your list of branches, you can create it with `git checkout -b`. 
+
+:::: {.shell}
+```bash
+git checkout -b study_comparison
+```
+::::
+:::
+
+Because this is a new component of the analysis, we will create a new file in the "infant_gut_analysis" folder for this code. 
 
 :::{.reproducibility_box}
 ::::{.reproducibility_box_header}
@@ -43,6 +89,8 @@ In Positron there is a keyboard shortcut to add a code chunk: `Ctrl + Shift + I`
 :::
 </details>
 
+**Include this code in your .qmd file**, to load the packages that we'll need. 
+
 ::: {.rcode}
 ```{r, message = FALSE, warning = FALSE}
 library(here)
@@ -58,7 +106,7 @@ Next, we will load the wrangled data. We will use the function `here()`, which c
 The `here()` function creates file paths that always start from the main project folder (the top-level folder that contains all of your project files). In a Git-tracked repository, this is the folder that contains the `.git` directory, which was created when you initialized the repository. Using relative file paths (i.e., paths that only reference folders within your project) makes your code more portable and easier for collaborators to run. In contrast, absolute file paths depend on the specific file structure of your personal computer and will not necessarily work on other machines.
 </details>
 
-We want to load data from the file "clean_sample_metadata.rda", contained within the "processed_data" folder. 
+We want to load data from the file "clean_sample_metadata.rda", contained within the "processed_data" folder. **Include this code in your .qmd file** to load the data.
 
 ```{r, echo = FALSE}
 load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
@@ -100,7 +148,7 @@ git commit -m "Add new file '03_visualize_study_cohorts'"
 
 Now that we've started tracking our work with Git, let's start by considering the first question: how do these studies compare in terms of the number of observations? 
 
-Use the `dplyr` functions `group_by()` and `count()` to get the number of observations per study.
+Use the `dplyr` functions `group_by()` and `count()` to view the number of observations per study.
 
 ::: {.rcode}
 ```{r}
@@ -141,10 +189,10 @@ clean_metadata |>
 
 We can see that there is quite the spread of study sizes. Let's also break this down by whether observations are from infants vs mothers. Whether the observation comes from an infant or a mother is contained in the variable `Category`.
 
-Modify the code above to count the number of observations by `Study` and by `Category`, and save the results as a data frame named `sample_counts`. 
+**Your turn**: Modify the code above to count the number of observations by `Study` and by `Category`, and save the results as a data frame named `sample_counts`. **Add this code to your .qmd file.**
 
 <details>
-<summary>Code:</summary>
+<summary>View code:</summary>
 ::: {.rcode}
 ```{r}
 sample_counts <- clean_metadata %>%
@@ -155,7 +203,7 @@ sample_counts
 :::
 </details>
 
-Now that we've looked at this data in a table format, let's make a plot so that we can compare this data visually. We'll make a bar plot, with separate bars for each study and for observation category (infant vs mother). 
+Now that we've looked at this data in a table format, let's make a plot so that we can compare this data visually. We'll make a bar plot, with separate bars for each study and for observation category (infant vs mother). **Include this code in your .qmd document** to make a bar plot.
 
 ::: {.rcode}
 ```{r}
@@ -179,6 +227,8 @@ While this plot looks good, it would be visually easier to compare if the studie
 
 </details>
 
+**Include this code in your .qmd document** to make a new vector for the desired study order.
+
 ::: {.rcode}
 ```{r}
 study_order <- sample_counts %>%
@@ -190,7 +240,7 @@ study_order
 ```
 :::
 
-We can now order the bar plot by increasing sample size.
+We can now order the bar plot by increasing sample size. **Include this code in your .qmd document** to make the bar plot with increasing bar heights.
 
 ::: {.rcode}
 ```{r}
@@ -201,7 +251,7 @@ sample_counts %>%
 ```
 :::
 
-Finally, we can update the colors of the plot and add labels.
+Finally, we can update the colors of the plot and add labels. **Include this code in your .qmd document** to refine your bar plot.
  
 ::: {.rcode}
 ```{r}
@@ -217,7 +267,7 @@ sample_counts %>%
 ```
 :::
 
-We will now use `ggsave()` to save this plot in the figures folder. 
+We will now use `ggsave()` to save this plot in the figures folder. **Include this code in your .qmd document** to save this bar plot under the filename "study_sizes_by_cateogory.png" within the "figures" folder.
 
 ::: {.rcode}
 ```{r, eval = FALSE}
@@ -255,7 +305,7 @@ git commit -m "Add plot of study sizes to '03_visualize_study_cohorts'"
 
 Next we will consider the second question: how do these studies compare in terms of when they took samples after the birth of the infants? You may have noticed in the script "02_wrangle_data.R" that two studies took samples from mothers during pregnancy. This information is contained in the variable `sampling_before_birth`. We would like to exclude these observations from our plots, because their `sampling_day` is counted from the beginning of pregnancy and not since birth. 
 
-Create a data frame `observations_after_birth` that does not include these observations that were taken before birth. 
+**Your turn**: create a data frame `observations_after_birth` that does not include these observations that were taken before birth. **Include this code in your .qmd document.**
 
 <details>
 <summary>Hint:</summary>
@@ -265,7 +315,7 @@ The function `filter()` will remove rows that match a certain logical condition.
 </details>
 
 <details>
-<summary>Code:</summary>
+<summary>View code:</summary>
 ::: {.rcode}
 ```{r}
 observations_after_birth <- clean_metadata %>%
@@ -274,7 +324,7 @@ observations_after_birth <- clean_metadata %>%
 :::
 </details>
 
-Now, we will make a histogram of sampling day, where we separate the data by `Category` and `Study`. There are multiple ways to do this, but we will color the bars by `Category` and then use `facet_wrap()` to make separate panels for each study.
+Now, we will make a histogram of sampling day, where we separate the data by `Category` and `Study`. There are multiple ways to do this, but we will color the bars by `Category` and then use `facet_wrap()` to make separate panels for each study. **Include this code in your .qmd document** to make histograms of sampling day for each study. 
 
 ::: {.rcode}
 ```{r}
@@ -285,7 +335,7 @@ observations_after_birth %>%
 ```
 :::
 
-Notice that because we set `scale = "free_y"` in the `facet_wrap()`, each of the y-axes of the panels is different. Let's order the studies in the same order that we used in the bar plot earlier. We will also update the theme and add axes labels.
+Notice that because we set `scale = "free_y"` in the `facet_wrap()`, each of the y-axes of the panels is different. Let's order the studies in the same order that we used in the bar plot earlier. We will also update the theme and add axes labels. **Include this code in your .qmd document** to order the studies and refine your histograms. 
 
 ::: {.rcode}
 ```{r}
@@ -320,7 +370,7 @@ Here we can see that there are 6 observations from the Backhed study and one obs
 
 </details>
 
-Finally, we will save this plot in the figures folder. 
+Finally, we will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the filename "sampling_timepoints.png" within the "figures" folder.
 
 ::: {.rcode}
 ```{r, eval = FALSE}
@@ -329,6 +379,8 @@ ggsave("figures/sampling_timepoints.png", height = 6, width = 9)
 :::
 
 Now that we have two plots, go back through your file "03_visualize_study_cohorts.qmd" to make sure that it contains all relevant code to make these two plots, and that there are explanations before each code chunk. Render your file to confirm that when rendered it will create these two plots. 
+
+
 
 Since you've performed the requested analysis, make sure to document any new files in this repository in the README.md file. Specifically, describe what the file "03_visualize_study_cohorts.qmd" does, and describe the two plots that are now saved in the figures folder. After doing this, make another commit and push your work. 
 
