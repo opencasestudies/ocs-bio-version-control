@@ -28,7 +28,7 @@ Although this is not directly related to {{< glossary "version control" >}}, the
 
 If we look at the files contained in the "infant_gut_analysis" repository, they follow the recommendations provided above. 
 
-```{r, fig.alt="Creating first repository", out.width = "70%", echo = FALSE, fig.align = "center"}
+```{r, fig.alt="File viewer for files in this repository", out.width = "100%", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e3d77952e3_0_0#slide=id.g3e3d77952e3_0_0")
 ```
 
@@ -52,7 +52,7 @@ The script "01_pull_study_data.R" generates "sample_metadata.csv".
 
 ### Empty folders
 
-One thing that often surprises new Git users is that any empty folders may exist on your computer but will not be tracked by Git until they have content. So while we see "figures" and "results" in the set of files from the folder "infant_gut_files", they are not tracked by Git or hosted on GitHub. If you want to track an empty folder before it has content, you can add a placeholder script into the folder, and remove it later once the folder has content. 
+One thing that often surprises new Git users is that any empty folders may exist on your computer but will not be tracked by Git until they have content. So while we see "figures" and "results" in the set of files from the folder "infant_gut_files", they  cannot be tracked by Git or hosted on GitHub until they have content. If you want to track an empty folder before it has content, you can add a placeholder file into the folder, and remove it later once the folder has content.
 
 ### Which files to track with Git 
 
