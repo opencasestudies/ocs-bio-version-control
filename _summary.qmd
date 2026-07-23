@@ -308,15 +308,12 @@ document
   const total = cards.length;
   
   if (correct === total) {
-
-    feedback.innerHTML =
-      `<p class="pass">Perfect! All ${total} positions are correct.</p>`;
-  
+    feedback.innerHTML = "<p class='pass'>Perfect! All " + total +
+      " positions are correct.</p>";
   } else {
-  
     feedback.innerHTML =
-      `<p class="fail">${correct}/${total} positions are correct. Continue adjusting the workflow.</p>`;
-  
+      "<p class='fail'>" + correct + "/" + total +
+      " positions are correct. Continue adjusting the workflow.</p>";
   }
 
 });
