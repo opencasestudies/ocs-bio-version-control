@@ -25,7 +25,8 @@ construct a plot here that summarizes the conclusions found in the data, if appl
 Drag each workflow block into the correct position and click **Check Answer**.
 
 ```{=html}
-
+<!-- html part of code, creates structure of activity -->
+<!-- creates board with dropzones, arrows, and empty placeholder divs -->
 <div class="workflow-grid">
 
   <!-- Row 1 -->
@@ -139,19 +140,24 @@ Drag each workflow block into the correct position and click **Check Answer**.
 
 </div>
 
+<!-- creates empty card bank, to be filled with shuffled cards -->
 <div id="bank" class="bank"></div>
 
 <br>
 
+<!-- creates buttons to check answer and reset board -->
 <button id="check-btn">Check Answer</button>
 <button id="reset-btn">Reset</button>
 
 <div id="feedback"></div>
 
+<!-- JavaScript part of code, creates interactive features -->
+<!-- calls external library SortableJS to do drag-and-drop interaction -->
 <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
 
 <script>
 
+// create cards, each with an id and a relative path to an image
 const cards = [
   { id: "receive-files", img: "img/receive-files.png" },
   { id: "local-git", img: "img/local-git.png" },
@@ -163,6 +169,7 @@ const cards = [
   { id: "pull-request", img: "img/pull-request.png" }
 ];
 
+// function to shuffle the cards when they are put into the card bank 
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -170,6 +177,7 @@ function shuffle(array) {
   }
 }
 
+// function to create card 
 function createCard(card) {
 
   const div = document.createElement("div");
@@ -177,12 +185,17 @@ function createCard(card) {
   div.className = "card";
   div.dataset.id = card.id;
 
-  div.innerHTML =
-    '<img src="' + card.img + '" alt="' + card.id + '">';
+  const img = document.createElement("img");
+
+  img.src = card.img;
+  img.alt = card.id;
+  
+  div.appendChild(img);
 
   return div;
 }
 
+// function to reset all elements, shuffle cards in bank and clear dropzones 
 function setupBoard() {
 
   const bank = document.getElementById("bank");
@@ -209,6 +222,7 @@ function setupBoard() {
 
 }
 
+// initialize drag-and-drop 
 window.addEventListener("load", function() {
 
   setupBoard();
@@ -227,13 +241,25 @@ window.addEventListener("load", function() {
 
       Sortable.create(zone, {
         group: "workflow",
-        animation: 150
+        animation: 150,
+        
+        onAdd(event) {
+
+          const zone = event.to;
+      
+          if (zone.children.length > 1) {
+      
+            document
+              .getElementById("bank")
+              .appendChild(zone.firstElementChild);
+      
+          }
+        }
       });
-
     });
-
 });
 
+// event handler, to check all dropzones to see if correct or incorrect 
 document
 .getElementById("check-btn")
 .addEventListener("click", () => {
@@ -279,22 +305,23 @@ document
   const feedback =
     document.getElementById("feedback");
 
-  if(correct === 8) {
+  const total = cards.length;
+  
+  if (correct === total) {
 
     feedback.innerHTML =
-      "<p class='pass'>Perfect! All 8 positions are correct.</p>";
-
+      `<p class="pass">Perfect! All ${total} positions are correct.</p>`;
+  
   } else {
-
+  
     feedback.innerHTML =
-      "<p class='fail'>" +
-      correct +
-      "/8 positions are correct. Continue adjusting the workflow.</p>";
-
+      `<p class="fail">${correct}/${total} positions are correct. Continue adjusting the workflow.</p>`;
+  
   }
 
 });
 
+// event handler, to reset the board 
 document
 .getElementById("reset-btn")
 .addEventListener("click", () => {
@@ -309,8 +336,10 @@ document
 
 </script>
 
+<!-- CSS part of code, controls layout and style -->
 <style>
 
+/* Set up workflow layout with grid */
 .workflow-grid {
 
   display: grid;
@@ -326,10 +355,15 @@ document
   margin-bottom: 40px;
 }
 
+/* Set up dropzone appearance */
+:root {
+  --card-width: 180px;
+  --card-height: 130px;
+}
 .dropzone {
 
-  width: 180px;
-  height: 130px;
+  width: var(--card-width);
+  height: var(--card-height);
 
   border: 3px dashed #bdbdbd;
   border-radius: 12px;
@@ -341,6 +375,7 @@ document
   justify-content: center;
 }
 
+/* Create arrows */
 .arrow {
 
   display: flex;
@@ -352,13 +387,13 @@ document
   transform: translateX(135px);
 }
 
-
+/* Set up layout of card bank */
 .bank {
 
   display: grid;
 
   grid-template-columns:
-    repeat(4, 180px);
+    repeat(4, var(--card-width));
 
   gap: 12px;
 
@@ -367,11 +402,11 @@ document
   margin-top: 20px;
 }
 
-
+/* Set up each card */
 .card {
 
-  width: 180px;
-  height: 130px;
+  width: var(--card-width);
+  height: var(--card-height);
 
   border: none;
   border-radius: 0;
@@ -383,6 +418,7 @@ document
   cursor: grab;
 }
 
+/* Control how image will look within card */
 .card img {
 
   width: 95%;
@@ -394,18 +430,21 @@ document
   margin: auto;
 }
 
+/* Style for correct boxes after checking */
 .correct {
 
   border: 4px solid #26734d;
   background: #eef8f1;
 }
 
+/* Style for incorrect boxes after checking */
 .incorrect {
 
   border: 4px solid #b22222;
   background: #fff0f0;
 }
 
+/* Style if all cards are in correct order */
 .pass {
 
   color: #26734d;
@@ -413,6 +452,7 @@ document
   font-size: 1.2rem;
 }
 
+/* Style if some cards in incorrect order */
 .fail {
 
   color: #b22222;
@@ -420,6 +460,7 @@ document
   font-size: 1.2rem;
 }
 
+/* Style for buttons to check answers and reset board */
 button {
 
   padding: 10px 20px;
