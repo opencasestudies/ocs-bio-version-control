@@ -336,13 +336,19 @@ document
 <!-- CSS part of code, controls layout and style -->
 <style>
 
+/* Set up dimensions of cards and images */
+:root {
+  --card-width: 180px;
+  --card-height: 130px;
+}
+
 /* Set up workflow layout with grid */
 .workflow-grid {
 
   display: grid;
 
   grid-template-columns:
-    180px 40px 180px 40px 180px;
+    var(--card-width) 40px var(--card-width) 40px var(--card-width);
 
   gap: 16px;
 
@@ -352,11 +358,6 @@ document
   margin-bottom: 40px;
 }
 
-/* Set up dropzone appearance */
-:root {
-  --card-width: 180px;
-  --card-height: 130px;
-}
 .dropzone {
 
   width: var(--card-width);
