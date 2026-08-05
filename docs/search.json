@@ -7,6 +7,13 @@
     "text": "Prerequisites\n\n\nPrerequisites\n\n\nTo follow along with this case study, you’ll need the following installed:\n\nR (install here)\nRStudio (install here) or Positron (install here) or another IDE compatible with R\n\nIt will also be helpful to be have the following skills:\n\nbasic R skills (many introductory courses can be found online, including this one)\nfamiliarity with dplyr and ggplot2, or willingness to learn (these dplyr and ggplot2 cheatsheets may be helpful, as well as the original open case studies)\n\nYou do not need to have any previous Git and GitHub knowledge or experience for this case study."
   },
   {
+    "objectID": "index.html#objectives-map",
+    "href": "index.html#objectives-map",
+    "title": "Biomedical Open Case Studies: Making version controlled reproducible analyses",
+    "section": "Objectives Map",
+    "text": "Objectives Map\n\n\n\n\n\n\nNoteObjectives Map: Where It Is Covered\n\n\n\n\n\n\n\n\nLearning Goal\nApplications / Practice\nLocation\n\n\n\n\nTerm related to a learning objective\nDescription of action or activity that will reinforce that LO\nData Import\n\n\nAnother term\nDescription of its activity\nData Wrangling\n\n\nAnother learning objective concept\nAnother description of this one’s activity\nData Visualization"
+  },
+  {
     "objectID": "index.html#reproducibility-and-version-control",
     "href": "index.html#reproducibility-and-version-control",
     "title": "Biomedical Open Case Studies: Making version controlled reproducible analyses",
@@ -117,6 +124,13 @@
     "title": "Biomedical Open Case Studies: Making version controlled reproducible analyses",
     "section": "Summary Plot",
     "text": "Summary Plot\nThis diagram provides a high-level overview of the steps that you took in this case study. While some of these will not always be necessary for all projects or follow this exact order, each of these steps represent parts of a version controlled project workflow and are important to understand."
+  },
+  {
+    "objectID": "index.html#main-questions-revisited",
+    "href": "index.html#main-questions-revisited",
+    "title": "Biomedical Open Case Studies: Making version controlled reproducible analyses",
+    "section": "Main Questions Revisited",
+    "text": "Main Questions Revisited\n\n\n\n\n\n\nNoteMain Questions Revisited: What Did We Learn\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion\nCurrent answer\nCaveat\n\n\n\n\nReiteration or restatement of main question\nDescribe the answer based on case study activities\nList any important caveats potentially connecting to earlier limitations\n\n\nAnother main question\nDescription of its activity\nCaveats for this Q & A\n\n\nAnother of the main questions\nAnother description of this one’s activity\nQ & A specific caveats"
   },
   {
     "objectID": "index.html#reinforcement-exercises",
