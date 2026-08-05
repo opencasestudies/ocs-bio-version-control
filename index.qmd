@@ -1,5 +1,5 @@
 ---
-title: "**Biomedical Open Case Studies: {Fill In Title}**"
+title: "**Biomedical Open Case Studies: Making version controlled reproducible analyses**"
 bibliography: resources/references.bib
 include-sections:
   stat-los: false
@@ -8,7 +8,7 @@ include-sections:
   data-exploration: false
   data-wrangling: true
   data-viz: true
-  data-analysis: true
+  data-analysis: false
   main-q-table: true
 ---
 
@@ -37,9 +37,10 @@ include-sections:
 
 :::
 
-{{< include _packages.qmd >}}
 
 {{< include _context.qmd >}}
+{{< include _intro_git_github.qmd >}}
+{{< include _project_organization.qmd >}}
 
 {{< include _data_description.qmd >}}
 
@@ -48,7 +49,7 @@ include-sections:
 {{< include _bioethics.qmd >}}
 
 ::: {.content-hidden unless-meta="include-sections.data-import"}
-
+{{< include _packages.qmd >}}
 {{< include _data_import.qmd >}}
 
 :::
@@ -77,8 +78,9 @@ include-sections:
 
 :::
 
+{{< include _pull_requests.qmd >}}
 {{< include _summary.qmd >}}
-
+{{< include _troubleshooting.qmd >}}
 ::: {.content-hidden unless-meta="include-sections.main-q-table"}
 
 {{< include _main_qs_answers_table.qmd >}}
@@ -93,11 +95,6 @@ include-sections:
 
 {{< include _bibliography.qmd >}}
 
-## **Session Info**
-***
-
-```{r}
-devtools::session_info()
-```
+{{< include _session_info.qmd >}}
 
 {{< include _acknowledgements.qmd >}}
