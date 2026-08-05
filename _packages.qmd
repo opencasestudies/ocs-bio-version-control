@@ -1,22 +1,23 @@
 # **Packages and Setup**
 ***
 
-Before we get into the coding, we want to describe the R packages that we'll use in this case study, or that are used in other scripts contained in our repository:
+<!--
+load all the packages used in the case study analysis in the code chunk below
+(try to use tidyverse over base R).
+Fill out the table and add rows as necessary providing a link to the source and briefly explaining its use for each package
+-->
 
-```{r, message = FALSE, warning = FALSE, echo = FALSE}
+We will begin by loading the packages that we will need:
+
+```{r}
+#add library() calls
 library(here)
-library(readxl)
-library(dplyr)
-library(ggplot2)
-library(stringr)
 ```
 
 Package    | Use
 ---------- |-------------
-[here](https://here.r-lib.org) | To construct file paths within folders
-[readxl](https://readxl.tidyverse.org){target="_blank"}      | To read excel files into R
-[dplyr](https://dplyr.tidyverse.org){target="_blank"}      | To combine and manipulate data tables
-[ggplot2](https://ggplot2.tidyverse.org) | To visualize data
-[stringr](https://stringr.tidyverse.org) | To manipulate strings
+[{Package Name}]({Documentation URL}){target="_blank"}      | {Package use}
+[{Package Name}]({Documentation URL}){target="_blank"}      | {Package use}
+
 
 The first time we use a function, we will use the `::` to indicate which package we are using. Unless we have overlapping function names, this is not necessary, but we will include it here to be informative about where the functions we will use come from.
