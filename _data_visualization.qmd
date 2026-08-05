@@ -267,7 +267,7 @@ sample_counts %>%
 ```
 :::
 
-We will now use `ggsave()` to save this plot in the figures folder. **Include this code in your .qmd document** to save this bar plot under the filename "study_sizes_by_cateogory.png" within the "figures" folder.
+We will now use `ggsave()` to save this plot in the figures folder. **Include this code in your .qmd document** to save this bar plot with the file name "study_sizes_by_category.png" within the "figures" folder.
 
 ::: {.rcode}
 ```{r, eval = FALSE}
@@ -370,7 +370,7 @@ Here we can see that there are 6 observations from the Backhed study and one obs
 
 </details>
 
-Finally, we will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the filename "sampling_timepoints.png" within the "figures" folder.
+Finally, we will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name "sampling_timepoints.png" within the "figures" folder.
 
 ::: {.rcode}
 ```{r, eval = FALSE}
