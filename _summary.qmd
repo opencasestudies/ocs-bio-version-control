@@ -12,14 +12,7 @@ Along the way, you've also learned about the advantages and challenges of {{< gl
 
 ## **Summary Plot**
 
-
-In order to create the final summary plot, please drag and drop the steps that you've followed in this case study into the correct order. 
-
-::: {.column-margin}
-to-do: figure out how to make this into a drag and drop activity for the learner (see [this platform](https://lumi.education/en/)))
-
-Note: this is a mock-up of what the figure may look like, but a final version will be a little more detailed and include color and more collaborative elements of the process! 
-:::
+This diagram provides a high-level overview of the steps that you took in this case study. While some of these will not always be necessary for all projects or follow this exact order, each of these steps represent parts of a version controlled project workflow and are important to understand. 
 
 ```{r, fig.alt="Workflow of this project using Git and GitHub", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f2d5a3e170_0_38#slide=id.g3f2d5a3e170_0_38")
