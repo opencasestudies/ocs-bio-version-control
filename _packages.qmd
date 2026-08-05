@@ -1,9 +1,15 @@
 # **Packages and Setup**
 ***
 
-Before we get into the coding, we want to describe the R packages that we'll use in this case study, or that are used in other scripts contained in our repository:
+<!--
+load all the packages used in the case study analysis in the code chunk below
+(try to use tidyverse over base R).
+Fill out the table and add rows as necessary providing a link to the source and briefly explaining its use for each package
+-->
 
-```{r, message = FALSE, warning = FALSE, echo = FALSE}
+We will begin by loading the packages that we will need:
+
+#add library() calls
 library(here)
 library(readxl)
 library(dplyr)
@@ -18,5 +24,6 @@ Package    | Use
 [dplyr](https://dplyr.tidyverse.org){target="_blank"}      | To combine and manipulate data tables
 [ggplot2](https://ggplot2.tidyverse.org) | To visualize data
 [stringr](https://stringr.tidyverse.org) | To manipulate strings
+
 
 The first time we use a function, we will use the `::` to indicate which package we are using. Unless we have overlapping function names, this is not necessary, but we will include it here to be informative about where the functions we will use come from.
