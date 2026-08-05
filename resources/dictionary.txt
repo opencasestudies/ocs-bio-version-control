@@ -1,7 +1,7 @@
 acknowledgements
 ai
 al
-avatars
+avataaars
 automations
 Backhed
 Bitbucket
