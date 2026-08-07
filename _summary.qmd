@@ -22,7 +22,7 @@ construct a plot here that summarizes the conclusions found in the data, if appl
 
 ### Reconstruct the workflow
 
-Drag each workflow block into the correct position and click **Check Answer**.
+Drag each workflow block into the correct position and click **Check Answer** or **Reset** to start over.
 
 ```{=html}
 <!-- html part of code, creates structure of activity -->
