@@ -36,6 +36,14 @@
   background-color: RoyalBlue;
 }
 
+.emphasis_block {
+    padding: 1em;
+    padding-top: .5em;
+    border: 1px grey;
+    background: #E8E8E8;
+    color: black;
+}
+
 /* set common elements for the outer boxes */
 .main_question,
 .think_question,
@@ -111,11 +119,8 @@
 }
 
 .reference_box{
-  margin: 1em 0;
   border: 3px solid #bdeffc;
   border-left: 10px solid #bdeffc;
-  border-radius: 10px;
-  background-color: white;
 }
 
 .reference_box_header{
@@ -242,6 +247,7 @@
    padding:10px;
    display: inline-block;
 }
+
 
 /* =========================
    Frontmatter tab styling

@@ -10,18 +10,25 @@ Now that you've learned how to how to make and use version-controlled repositori
 
 - [adding collaborators to your repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository)
 - making more branches for other components of your analysis
-- using [GitHub issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues) to keep track of to-do's related to your GitHub repository. 
+- using [GitHub issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues) to keep track of to-do's related to your GitHub repository 
 ::::
 :::
 
-
 ## Reinforcement Exercises
 
-A good way to reinforce these version control skills is to make a current scientific project that you've been working on into a Git tracked repository, and connecting it to a remote GitHub repository. See if you can integrate the Git workflow that you've learned here into your scientific process. Even if you are the only one working on this project, this is a good way to practice skills and get used to staging, committing, and pushing changes as you work. 
+A good way to reinforce these version control skills is to make a current scientific project that you've been working on into a Git tracked repository, and connecting it to a remote GitHub repository. See if you can integrate the Git workflow that you've learned here into your scientific process. Even if you are the only one working on this project, this is a good way to practice skills. This will get you into the habit of staging, committing, and pushing changes as you work, and working on different branches for different components of a project. 
 
 ## Advancement Exercises
 
+<!--
 ### Beginner
+
+**Under construction**
+
+Have the learner make a commit and then reset it. 
+
+### Intermediate
+-->
 
 #### Forking
 
@@ -77,7 +84,8 @@ Click "Create pull request" and inspect your pull request.
 
 Finally, please close this pull request, as we do not actually want to include these changes in this repository. 
 
-### Intermediate
+<!--
+### Advanced
 
 #### Merge conflicts
 
@@ -85,10 +93,6 @@ Finally, please close this pull request, as we do not actually want to include t
 
 Another piece of suggested homework will be creating a merge conflict and then resolving it.
 
-### Advanced
-
-:::{.column-margin}
-I don't have an advanced piece of homework planned yet, but am very open to ideas for this!
-:::
+-->
 
 ***

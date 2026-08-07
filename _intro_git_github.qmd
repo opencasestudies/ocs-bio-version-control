@@ -89,7 +89,7 @@ Version control resources:
 Git is a version control tool, and GitHub is an website for hosting folders that are tracked with Git. Git works locally on your computer to record different versions of a project, and GitHub works online to provide a digital backup of files, let you connect with collaborators, and optionally create a web presence for your project. 
 
 ```{r, fig.alt="Git vs GitHub", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_114#slide=id.g3d9461be06f_0_114")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_0#slide=id.g3f94a4bdf40_0_0")
 ```
 
 ### Git
@@ -120,7 +120,7 @@ Another way to think about a commit is as a save point in a video game. This mea
 
 Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between each file in the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. If you want to return to a previous version of a project, you can only return to the version of files at any commit.
 
-```{r, fig.alt="Git vs GitHub", out.width = "100%", echo = FALSE}
+```{r, fig.alt="commit diagram", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_143#slide=id.g3d9461be06f_0_143")
 ```
 
@@ -267,7 +267,7 @@ If you look at your repository, you will see that it has one file, README.md. Th
 - click the repository name in the upper left to navigate back to the home page
 
 ```{r, fig.alt="Image of first repository", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_87#slide=id.g3f139628ce6_0_87")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_13#slide=id.g3f94a4bdf40_0_13")
 ```
 
 Let's now look at the commit history for this repository. We can do that by clicking where it says "2 Commits" just below the green "Code" button. 
@@ -275,7 +275,7 @@ Let's now look at the commit history for this repository. We can do that by clic
 This brings us to a list of commits for this repository. You should see two commits, the initial commit that created the repository and the one you just made when you edited the README file. Click on the title of the newer commit. 
 
 ```{r, fig.alt="List of commits", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_130#slide=id.g3f139628ce6_0_130")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_68#slide=id.g3f94a4bdf40_0_68")
 ```
 
 
@@ -464,7 +464,7 @@ You've finished setting up GitHub, Git, and GitHub Desktop, great job! Now, we c
 Making a local copy of a repository that is hosted on GitHub is called "cloning". Start by navigating to your repository on GitHub, and copy the URL. 
 
 ```{r, fig.alt="Cloning repo", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_146#slide=id.g3f139628ce6_0_146")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_38#slide=id.g3f94a4bdf40_0_38")
 ```
 
 ::: {.panel-tabset}
@@ -534,7 +534,7 @@ Save this file. Now, we will discuss how to track a new file with Git.
 Now, navigate back to GitHub Desktop. Where it previously said "no local changes", it now will show changes to your repository. You should see your new file name "01-calculations.R" with a green plus next to it. 
 
 ```{r, fig.alt="GitHub Desktop with a new file added", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_189#slide=id.g3f139628ce6_0_189")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_84#slide=id.g3f94a4bdf40_0_84")
 ```
 
 <details>
@@ -824,7 +824,7 @@ Integrating changes from one branch into another branch.
 Here is an example of a workflow, in which a Git user makes a "feature" branch from the "main" branch, adds commits to both branches, and then eventually merges the "feature" branch back into "main". 
 
 ```{r, fig.alt="branch workflow", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_263#slide=id.g3f139628ce6_0_263")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f139628ce6_0_263#slide=id.g3f139628ce6_0_263")
 ```
 
 If there are no lines of code in any files that are directly in conflict, then merging will automatically combine the sets of files into a single version to move forward with. If there are lines that are directly in conflict, this will create what is called a merge conflict (merge conflicts are explained further in [this section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github). 
@@ -832,7 +832,7 @@ If there are no lines of code in any files that are directly in conflict, then m
 Here is an example of a file from the branching workflow above that can be merged automatically. 
 
 ```{r, fig.alt="file before and after merge", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_292#slide=id.g3f139628ce6_0_292")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f139628ce6_0_292#slide=id.g3f139628ce6_0_292")
 ```
 
 Branches are also helpful when working with collaborators. If you are developing a new part of an analysis, you can do it in a separate branch. When you are ready for your collaborator to review your work, you can submit a "pull request", which is a request to merge your branch with the main branch. Your collaborator can review all of the changes between your branch and the new branch, and either approve the pull request or request edits before merging. You can read more about pull requests in [this section](https://www.opencasestudies.org/ocs-bio-version-control/#pull-requests).

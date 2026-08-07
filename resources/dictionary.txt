@@ -8,11 +8,14 @@ Bitbucket
 Bioinformatics
 Blischak
 Carpentries
+callout
 chatbot
+Chatbots
 cheatsheet
 codebase
 Collab
 counterintuitive
+css
 css
 csv
 custimization
@@ -43,6 +46,7 @@ jpeg
 july
 Lathouwers
 LFS
+knuth
 lightblue
 lightbox
 lightgreen
@@ -72,8 +76,10 @@ readxl
 Reiter
 replicability
 replicable
+qs
 repo
 reproducibility
+Reproducibility
 Rmd
 Rproj
 RStudio
@@ -91,3 +97,4 @@ untracked
 www
 xlsx
 Zenodo
+Zotero

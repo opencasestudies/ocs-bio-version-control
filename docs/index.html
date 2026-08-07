@@ -98,9 +98,9 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b3bb40a8176a7974df64f59f1193bb6c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-b3bb40a8176a7974df64f59f1193bb6c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-b3bb40a8176a7974df64f59f1193bb6c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ce706aef3f93b6d158b493c7f42ffbbf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ce706aef3f93b6d158b493c7f42ffbbf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ce706aef3f93b6d158b493c7f42ffbbf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/glossary/glossary.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -233,7 +233,10 @@ window.Quarto = {
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
   <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation"><strong>Motivation</strong></a></li>
   <li><a href="#main-question" id="toc-main-question" class="nav-link" data-scroll-target="#main-question"><strong>Main Question</strong></a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><strong>Learning Objectives</strong></a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><strong>Learning Objectives</strong></a>
+  <ul class="collapse">
+  <li><a href="#objectives-map" id="toc-objectives-map" class="nav-link" data-scroll-target="#objectives-map"><strong>Objectives Map</strong></a></li>
+  </ul></li>
   <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context"><strong>Context</strong></a>
   <ul class="collapse">
   <li><a href="#what-is-a-microbiome" id="toc-what-is-a-microbiome" class="nav-link" data-scroll-target="#what-is-a-microbiome">What is a microbiome?</a></li>
@@ -283,7 +286,6 @@ window.Quarto = {
   <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><strong>Limitations</strong></a></li>
   <li><a href="#ethical-considerations" id="toc-ethical-considerations" class="nav-link" data-scroll-target="#ethical-considerations"><strong>Ethical Considerations</strong></a></li>
   <li><a href="#packages-and-setup" id="toc-packages-and-setup" class="nav-link" data-scroll-target="#packages-and-setup"><strong>Packages and Setup</strong></a></li>
-  <li><a href="#data-import" id="toc-data-import" class="nav-link" data-scroll-target="#data-import"><strong>Data Import</strong></a></li>
   <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link" data-scroll-target="#data-wrangling"><strong>Data Wrangling</strong></a></li>
   <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><strong>Data Visualization</strong></a></li>
   <li><a href="#pull-requests" id="toc-pull-requests" class="nav-link" data-scroll-target="#pull-requests"><strong>Pull requests</strong></a>
@@ -305,16 +307,14 @@ window.Quarto = {
   <li><a href="#synopsis" id="toc-synopsis" class="nav-link" data-scroll-target="#synopsis"><strong>Synopsis</strong></a></li>
   <li><a href="#summary-plot" id="toc-summary-plot" class="nav-link" data-scroll-target="#summary-plot"><strong>Summary Plot</strong></a></li>
   </ul></li>
-  <li><a href="#troubleshooting-git-and-github" id="toc-troubleshooting-git-and-github" class="nav-link" data-scroll-target="#troubleshooting-git-and-github"><strong>Troubleshooting Git and GitHub</strong></a></li>
+  <li><a href="#troubleshooting-git-and-github" id="toc-troubleshooting-git-and-github" class="nav-link" data-scroll-target="#troubleshooting-git-and-github"><strong>Troubleshooting Git and GitHub</strong></a>
+  <ul class="collapse">
+  <li><a href="#main-questions-revisited" id="toc-main-questions-revisited" class="nav-link" data-scroll-target="#main-questions-revisited"><strong>Main Questions Revisited</strong></a></li>
+  </ul></li>
   <li><a href="#continued-learning" id="toc-continued-learning" class="nav-link" data-scroll-target="#continued-learning"><strong>Continued Learning</strong></a>
   <ul class="collapse">
   <li><a href="#reinforcement-exercises" id="toc-reinforcement-exercises" class="nav-link" data-scroll-target="#reinforcement-exercises">Reinforcement Exercises</a></li>
-  <li><a href="#advancement-exercises" id="toc-advancement-exercises" class="nav-link" data-scroll-target="#advancement-exercises">Advancement Exercises</a>
-  <ul class="collapse">
-  <li><a href="#beginner" id="toc-beginner" class="nav-link" data-scroll-target="#beginner">Beginner</a></li>
-  <li><a href="#intermediate" id="toc-intermediate" class="nav-link" data-scroll-target="#intermediate">Intermediate</a></li>
-  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced">Advanced</a></li>
-  </ul></li>
+  <li><a href="#advancement-exercises" id="toc-advancement-exercises" class="nav-link" data-scroll-target="#advancement-exercises">Advancement Exercises</a></li>
   </ul></li>
   <li><a href="#additional-information" id="toc-additional-information" class="nav-link" data-scroll-target="#additional-information"><strong>Additional Information</strong></a>
   <ul class="collapse">
@@ -356,6 +356,7 @@ window.Quarto = {
 
 
 <!--
+  Update above to exclude optional or new sections by changing from true to false.
   Update the various qmd documents below with each component of a Bio-OCS case study.
   Besides filling in the title in the header of this document, no other changes should be necessary within this file.
   Use the `include-sections` within the header to toggle section inclusion/exclusion as needed.
@@ -401,7 +402,7 @@ as well as any system or server requirements to work with the data
 <p>License information</p>
 </div>
 <div class="inner_block">
-<p>This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en" target="_blank">(CC BY-NC 4.0)</a> United States License.</p>
+<p>This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en" target="_blank">(CC BY-NC 4.0)</a> United States License unless otherwise noted.</p>
 </div>
 </div>
 </div>
@@ -610,9 +611,57 @@ Previous Open Case Studies do not have an example of this.
 </ol>
 <hr>
 <!--
+Don't adjust the shortcode or the table header in this file, only the markdown table contents
+-->
+<section id="objectives-map" class="level2">
+<h2 class="anchored" data-anchor-id="objectives-map"><strong>Objectives Map</strong></h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Objectives Map: Where It Is Covered">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Objectives Map: Where It Is Covered
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Learning Goal</th>
+<th style="text-align: left;">Applications / Practice</th>
+<th style="text-align: left;">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Term related to a learning objective</td>
+<td style="text-align: left;">Description of action or activity that will reinforce that LO</td>
+<td style="text-align: left;"><a href="https://www.opencasestudies.org/ocs-template-quarto/#data-import">Data Import</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Another term</td>
+<td style="text-align: left;">Description of its activity</td>
+<td style="text-align: left;"><a href="https://www.opencasestudies.org/ocs-template-quarto/#data-wrangling">Data Wrangling</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Another learning objective concept</td>
+<td style="text-align: left;">Another description of this one’s activity</td>
+<td style="text-align: left;"><a href="https://www.opencasestudies.org/ocs-template-quarto/#data-visualization">Data Visualization</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<hr>
+<!--
 More details on the background on the case study topic as well its relation to biomedical science.
 Videos or images may be helpful so this includes an example of embedding a video.
 -->
+</section>
 </section>
 <section id="context" class="level1">
 <h1><strong>Context</strong></h1>
@@ -756,7 +805,7 @@ More information on how reproducibility fits into the scientific process.
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3d9461be06f_0_114.png" class="img-fluid figure-img" style="width:100.0%" alt="Git vs GitHub"></p>
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f94a4bdf40_0_0.png" class="img-fluid figure-img" style="width:100.0%" alt="Git vs GitHub"></p>
 </figure>
 </div>
 </div>
@@ -787,7 +836,7 @@ More information on how reproducibility fits into the scientific process.
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3d9461be06f_0_143.png" class="img-fluid figure-img" style="width:100.0%" alt="Git vs GitHub"></p>
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3d9461be06f_0_143.png" class="img-fluid figure-img" style="width:100.0%" alt="commit diagram"></p>
 </figure>
 </div>
 </div>
@@ -937,7 +986,7 @@ License
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3f139628ce6_0_87.png" class="img-fluid figure-img" style="width:100.0%" alt="Image of first repository"></p>
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f94a4bdf40_0_13.png" class="img-fluid figure-img" style="width:100.0%" alt="Image of first repository"></p>
 </figure>
 </div>
 </div>
@@ -948,7 +997,7 @@ License
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3f139628ce6_0_130.png" class="img-fluid figure-img" style="width:100.0%" alt="List of commits"></p>
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f94a4bdf40_0_68.png" class="img-fluid figure-img" style="width:100.0%" alt="List of commits"></p>
 </figure>
 </div>
 </div>
@@ -1099,7 +1148,7 @@ If you are unable to install GitHub Desktop or would prefer not to install GitHu
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3f139628ce6_0_146.png" class="img-fluid figure-img" style="width:100.0%" alt="Cloning repo"></p>
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f94a4bdf40_0_38.png" class="img-fluid figure-img" style="width:100.0%" alt="Cloning repo"></p>
 </figure>
 </div>
 </div>
@@ -1156,7 +1205,7 @@ If you are unable to install GitHub Desktop or would prefer not to install GitHu
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3f139628ce6_0_189.png" class="img-fluid figure-img" style="width:100.0%" alt="GitHub Desktop with a new file added"></p>
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f94a4bdf40_0_84.png" class="img-fluid figure-img" style="width:100.0%" alt="GitHub Desktop with a new file added"></p>
 </figure>
 </div>
 </div>
@@ -1401,7 +1450,7 @@ You may see examples in other Git tutorials using <code>git add .</code>, which 
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3f139628ce6_0_263.png" class="img-fluid figure-img" style="width:100.0%" alt="branch workflow"></p>
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f139628ce6_0_263.png" class="img-fluid figure-img" style="width:100.0%" alt="branch workflow"></p>
 </figure>
 </div>
 </div>
@@ -1412,7 +1461,7 @@ You may see examples in other Git tutorials using <code>git add .</code>, which 
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3f139628ce6_0_292.png" class="img-fluid figure-img" style="width:100.0%" alt="file before and after merge"></p>
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f139628ce6_0_292.png" class="img-fluid figure-img" style="width:100.0%" alt="file before and after merge"></p>
 </figure>
 </div>
 </div>
@@ -1496,7 +1545,7 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3e3d77952e3_0_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Creating first repository"></p>
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3e3d77952e3_0_0.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="File viewer for files in this repository"></p>
 </figure>
 </div>
 </div>
@@ -1524,7 +1573,7 @@ The script “01_pull_study_data.R” generates “sample_metadata.csv”.
 <h2 class="anchored" data-anchor-id="project-organization-with-git-and-github">Project organization with Git and GitHub</h2>
 <section id="empty-folders" class="level3">
 <h3 class="anchored" data-anchor-id="empty-folders">Empty folders</h3>
-<p>One thing that often surprises new Git users is that any empty folders may exist on your computer but will not be tracked by Git until they have content. So while we see “figures” and “results” in the set of files from the folder “infant_gut_files”, they are not tracked by Git or hosted on GitHub. If you want to track an empty folder before it has content, you can add a placeholder script into the folder, and remove it later once the folder has content.</p>
+<p>One thing that often surprises new Git users is that any empty folders may exist on your computer but will not be tracked by Git until they have content. So while we see “figures” and “results” in the set of files from the folder “infant_gut_files”, they cannot be tracked by Git or hosted on GitHub until they have content. If you want to track an empty folder before it has content, you can add a placeholder file into the folder, and remove it later once the folder has content.</p>
 </section>
 <section id="which-files-to-track-with-git" class="level3">
 <h3 class="anchored" data-anchor-id="which-files-to-track-with-git">Which files to track with Git</h3>
@@ -1670,68 +1719,63 @@ Consider incorporating a checklist of statements that learners should answer/dis
 <section id="packages-and-setup" class="level1">
 <h1><strong>Packages and Setup</strong></h1>
 <hr>
-<p>Before we get into the coding, we want to describe the R packages that we’ll use in this case study, or that are used in other scripts contained in our repository:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Package</th>
-<th>Use</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="https://here.r-lib.org">here</a></td>
-<td>To construct file paths within folders</td>
-</tr>
-<tr class="even">
-<td><a href="https://readxl.tidyverse.org" target="_blank">readxl</a></td>
-<td>To read excel files into R</td>
-</tr>
-<tr class="odd">
-<td><a href="https://dplyr.tidyverse.org" target="_blank">dplyr</a></td>
-<td>To combine and manipulate data tables</td>
-</tr>
-<tr class="even">
-<td><a href="https://ggplot2.tidyverse.org">ggplot2</a></td>
-<td>To visualize data</td>
-</tr>
-<tr class="odd">
-<td><a href="https://stringr.tidyverse.org">stringr</a></td>
-<td>To manipulate strings</td>
-</tr>
-</tbody>
-</table>
-<p>The first time we use a function, we will use the <code>::</code> to indicate which package we are using. Unless we have overlapping function names, this is not necessary, but we will include it here to be informative about where the functions we will use come from.</p>
 <!--
+load all the packages used in the case study analysis in the code chunk below
+(try to use tidyverse over base R).
+Fill out the table and add rows as necessary providing a link to the source and briefly explaining its use for each package
+-->
+<p>We will begin by loading the packages that we will need:</p>
+<p>#add library() calls library(here) library(readxl) library(dplyr) library(ggplot2) library(stringr)</p>
+<pre><code>
+Package    | Use
+---------- |-------------
+[here](https://here.r-lib.org) | To construct file paths within folders
+[readxl](https://readxl.tidyverse.org){target="_blank"}      | To read excel files into R
+[dplyr](https://dplyr.tidyverse.org){target="_blank"}      | To combine and manipulate data tables
+[ggplot2](https://ggplot2.tidyverse.org) | To visualize data
+[stringr](https://stringr.tidyverse.org) | To manipulate strings
+
+
+The first time we use a function, we will use the `::` to indicate which package we are using. Unless we have overlapping function names, this is not necessary, but we will include it here to be informative about where the functions we will use come from.
+
+&lt;!--
 Update the file paths as needed throughout
--->
-<!--
+--&gt;
+
+&lt;!--
 At the end of this section, save incremental data so that users can pause and come back later
--->
-</section>
-<section id="data-import" class="level1">
-<h1><strong>Data Import</strong></h1>
-<hr>
-<p>Now that you have set up this project with <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with GitHub</span>GitHub</button>, you can start working on the study comparison in R. Open RStudio or Positron or your preferred R IDE to the “infant_gut_analysis” folder. We will start by taking a look at the data. Take a look at the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button> file to determine which file contains commands that can read in the raw data. Open this file and run the code.</p>
-<div class="think_question">
-<div class="think_question_header">
-<p>Question opportunity</p>
-</div>
-<div class="inner_block">
-How many observations are included in our data set? How many variables are included in our data set?
-<details>
-<summary>
-Hint
-</summary>
-<p>Data is imported in the file “01_pull_study_data.R”. You can find out how many rows are in a data frame with the function <code>nrow(name_of_data_frame)</code>. You can find out how many columns are in a data frame with the function <code>ncol(name_of_data_frame)</code>.</p>
-</details>
-<details>
-<summary>
-Answer
-</summary>
-<div class="rcode">
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(sample_metadata)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+--&gt;
+
+# **Data Import**
+***
+
+Now that you have set up this project with  and , you can start working on the study comparison in R. Open RStudio or Positron or your preferred R IDE to the "infant_gut_analysis" folder. We will start by taking a look at the data. Take a look at the  file to determine which file contains commands that can read in the raw data. Open this file and run the code. 
+
+:::{.think_question}
+::::{.think_question_header}
+Question opportunity
+::::
+::::{.inner_block}
+How many observations are included in our data set? How many variables are included in our data set? 
+&lt;details&gt; &lt;summary&gt; Hint &lt;/summary&gt;
+
+Data is imported in the file "01_pull_study_data.R". You can find out how many rows are in a data frame with the function `nrow(name_of_data_frame)`. You can find out how many columns are in a data frame with the function `ncol(name_of_data_frame)`. 
+
+&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Answer&lt;/summary&gt;
+
+
+::: {.cell}
+
+:::
+
+
+::: {.rcode}
+
+::: {.cell}
+
+```{.r .cell-code}
+nrow(sample_metadata)</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1499</code></pre>
 </div>
@@ -1739,13 +1783,12 @@ Answer
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 20</code></pre>
 </div>
-</div>
-</div>
+<p>:::</p>
 There are <span class="math inline">\(1499\)</span> observations and <span class="math inline">\(20\)</span> variables in the data frame.
-</details>
-</div>
-</div>
+
+<p>:::: :::</p>
 <hr>
+<p>:::</p>
 <!--
 Update the file paths as needed throughout
 -->
@@ -1797,7 +1840,50 @@ Answer
 <section id="data-visualization" class="level1">
 <h1><strong>Data Visualization</strong></h1>
 <hr>
-<p>We will now generate visualizations to compare the <button class="glossary"><span class="def">An analysis of data from a collection of studies targeting a common research question</span>meta-analysis</button> study cohorts. Because this is a new component of the analysis, we will create a new file in the “infant_gut_analysis” folder for this code.</p>
+<p>We will now generate visualizations to compare the <button class="glossary"><span class="def">An analysis of data from a collection of studies targeting a common research question</span>meta-analysis</button> study cohorts.</p>
+<p>First, we will make sure that we are on the correct branch. We want to use a development branch for this analysis, which we will request to merge back into the main branch once the analysis is ready. We already created the branch “study_comparison” in the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#branches"><strong>Introduction to Git and GitHub</strong></a> section, so we just need to make sure that we are working on that branch.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-13-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-1" role="tab" aria-controls="tabset-13-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-13-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-2" role="tab" aria-controls="tabset-13-2" aria-selected="false" href="">Command line</a></li></ul>
+<div class="tab-content">
+<div id="tabset-13-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-13-1-tab">
+<ul>
+<li>In the upper panel, under “Current Branch”, look to see if it says the current branch is “study_comparison” or “main” or something else.
+<ul>
+<li>If it says “study_comparison”, then you are already working on the correct branch.</li>
+<li>If it says “main”, then you can click the drop-down button next to “Current Branch” and select “study_comparison”.
+<ul>
+<li>If “study_comparison” does not appear, you can click the “New Branch” button to create it.</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f94a4bdf40_0_170.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Creating first repository"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-13-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-13-2-tab">
+<p>Open the command line and navigate to your repository. Use the <code>git branch</code> command.</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>This should list the branches for your repository, with the current branch highlighted and marked with an asterisk (*). If the highlighted branch is “study_comparison”, then you are already working on the correct branch. If the highlighted branch is “main” or something else, you can switch over to “study_comparison” using the <code>git checkout</code> command.</p>
+<p>If “study_comparison” appears in your list of branches, you can move to it with the following command:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout study_comparison</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>However, if “study_comparison” doesn’t appear in your list of branches, you can create it with <code>git checkout -b</code>.</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> study_comparison</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>Because this is a new component of the analysis, we will create a new file in the “infant_gut_analysis” folder for this code.</p>
 <div class="reproducibility_box">
 <div class="reproducibility_box_header">
 <p>Reproducibility considerations</p>
@@ -1815,26 +1901,27 @@ Answer
 Adding a code chunk to a quarto file
 </summary>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-13-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-1" role="tab" aria-controls="tabset-13-1" aria-selected="true" href="">Manually</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-13-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-2" role="tab" aria-controls="tabset-13-2" aria-selected="false" href="">In RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-13-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-3" role="tab" aria-controls="tabset-13-3" aria-selected="false" href="">In Positron</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-14-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-14-1" role="tab" aria-controls="tabset-14-1" aria-selected="true" href="">Manually</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-14-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-14-2" role="tab" aria-controls="tabset-14-2" aria-selected="false" href="">In RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-14-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-14-3" role="tab" aria-controls="tabset-14-3" aria-selected="false" href="">In Positron</a></li></ul>
 <div class="tab-content">
-<div id="tabset-13-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-13-1-tab">
+<div id="tabset-14-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-14-1-tab">
 <p>To add a new R code chunk, go to a new line and enter: ```{r}</p>
 <p>Then, type your code, starting on the following line. To end a code chunk, go to another new line and enter: ```</p>
 </div>
-<div id="tabset-13-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-13-2-tab">
+<div id="tabset-14-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-14-2-tab">
 <p>You can also add a code chunk in RStudio by navigating to “Code” -&gt; “Insert Chunk”. There is also a keyboard shortcut: <code>Ctrl + Alt + I</code> in Windows and Linux, and <code>Cmd + Option + I</code> on Mac.</p>
 </div>
-<div id="tabset-13-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-13-3-tab">
+<div id="tabset-14-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-14-3-tab">
 <p>In Positron there is a keyboard shortcut to add a code chunk: <code>Ctrl + Shift + I</code> in Windows and Linux, and <code>Cmd + Shift + I</code> on Mac.</p>
 </div>
 </div>
 </div>
 </details>
+<p><strong>Include this code in your .qmd file</strong>, to load the packages that we’ll need.</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <p>Next, we will load the wrangled data. We will use the function <code>here()</code>, which creates relative file paths.</p>
@@ -1844,38 +1931,38 @@ More information about the <code>here()</code> function:
 </summary>
 The <code>here()</code> function creates file paths that always start from the main project folder (the top-level folder that contains all of your project files). In a Git-tracked repository, this is the folder that contains the <code>.git</code> directory, which was created when you initialized the repository. Using relative file paths (i.e., paths that only reference folders within your project) makes your code more portable and easier for collaborators to run. In contrast, absolute file paths depend on the specific file structure of your personal computer and will not necessarily work on other machines.
 </details>
-<p>We want to load data from the file “clean_sample_metadata.rda”, contained within the “processed_data” folder.</p>
+<p>We want to load data from the file “clean_sample_metadata.rda”, contained within the “processed_data” folder. <strong>Include this code in your .qmd file</strong> to load the data.</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"processed_data"</span>, <span class="st">"clean_sample_metadata.rda"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"processed_data"</span>, <span class="st">"clean_sample_metadata.rda"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <p>Now that you have created a new file and loaded packages and data, this is a good time to track this new file and <button class="glossary"><span class="def">A snapshot of all files in a repository at a moment in time</span>commit</button> your work.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-14-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-14-1" role="tab" aria-controls="tabset-14-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-14-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-14-2" role="tab" aria-controls="tabset-14-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-15-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-15-1" role="tab" aria-controls="tabset-15-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-15-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-15-2" role="tab" aria-controls="tabset-15-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-14-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-14-1-tab">
+<div id="tabset-15-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-15-1-tab">
 <p>Navigate back to <button class="glossary"><span class="def">A graphical user interface for interacting with Git on a local computer</span>GitHub Desktop</button>. You should see your new file name “03_visualize_study_cohorts.qmd” with a green plus next to it, meaning that this is a new file. The check in the checkbox means that this file is staged. Add an appropriate commit message and commit this file.</p>
 </div>
-<div id="tabset-14-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-14-2-tab">
+<div id="tabset-15-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-15-2-tab">
 <p>Open the <button class="glossary"><span class="def">A window that lets a user interact with a computer through typing commands</span>command line</button> and navigate to your repository. Recall that you can stage the new file (tell Git to track it with):</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add 03_visualize_study_cohorts.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add 03_visualize_study_cohorts.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Next, add a commit with an appropriate commit message.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add new file '03_visualize_study_cohorts'"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add new file '03_visualize_study_cohorts'"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
 </div>
 <p>Now that we’ve started tracking our work with Git, let’s start by considering the first question: how do these studies compare in terms of the number of observations?</p>
-<p>Use the <code>dplyr</code> functions <code>group_by()</code> and <code>count()</code> to get the number of observations per study.</p>
+<p>Use the <code>dplyr</code> functions <code>group_by()</code> and <code>count()</code> to view the number of observations per study.</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="sc">%&gt;%</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Study) <span class="sc">%&gt;%</span></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(<span class="at">name =</span> <span class="st">"total"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="sc">%&gt;%</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Study) <span class="sc">%&gt;%</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(<span class="at">name =</span> <span class="st">"total"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8 × 2
 # Groups:   Study [8]
@@ -1899,8 +1986,8 @@ A note on the pipe operator <code>%&gt;%</code>
 <p>The pipe operator <code>%&gt;%</code> chains R commands together. It takes the preceding object and inputs it as the first argument to the function that follows it. It often is used to make code more readable and to avoid using intermediate objects or nested functions. The code above is equivalent to both of these expressions:</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>grouped_data <span class="ot">&lt;-</span> <span class="fu">group_by</span>(clean_metadata, Study)</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(grouped_data, <span class="at">name =</span> <span class="st">"total"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>grouped_data <span class="ot">&lt;-</span> <span class="fu">group_by</span>(clean_metadata, Study)</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(grouped_data, <span class="at">name =</span> <span class="st">"total"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8 × 2
 # Groups:   Study [8]
@@ -1919,7 +2006,7 @@ A note on the pipe operator <code>%&gt;%</code>
 </div>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(<span class="fu">group_by</span>(clean_metadata, Study))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(<span class="fu">group_by</span>(clean_metadata, Study))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8 × 2
 # Groups:   Study [8]
@@ -1939,9 +2026,9 @@ A note on the pipe operator <code>%&gt;%</code>
 <p>The pipe operator that we use, <code>%&gt;%</code>, is part of the <code>magrittr</code> R package. There is also a pipe operator in base R, <code>|&gt;</code>. In most cases, these two pipe operators will work equivalently.</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="sc">|&gt;</span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Study) <span class="sc">|&gt;</span></span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(<span class="at">name =</span> <span class="st">"total"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="sc">|&gt;</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Study) <span class="sc">|&gt;</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(<span class="at">name =</span> <span class="st">"total"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8 × 2
 # Groups:   Study [8]
@@ -1960,17 +2047,17 @@ A note on the pipe operator <code>%&gt;%</code>
 </div>
 </details>
 <p>We can see that there is quite the spread of study sizes. Let’s also break this down by whether observations are from infants vs mothers. Whether the observation comes from an infant or a mother is contained in the variable <code>Category</code>.</p>
-<p>Modify the code above to count the number of observations by <code>Study</code> and by <code>Category</code>, and save the results as a data frame named <code>sample_counts</code>.</p>
+<p><strong>Your turn</strong>: Modify the code above to count the number of observations by <code>Study</code> and by <code>Category</code>, and save the results as a data frame named <code>sample_counts</code>. <strong>Add this code to your .qmd file.</strong></p>
 <details>
 <summary>
-Code:
+View code:
 </summary>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>sample_counts <span class="ot">&lt;-</span> clean_metadata <span class="sc">%&gt;%</span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Study, Category) <span class="sc">%&gt;%</span></span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(<span class="at">name =</span> <span class="st">"total"</span>)</span>
-<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>sample_counts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>sample_counts <span class="ot">&lt;-</span> clean_metadata <span class="sc">%&gt;%</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Study, Category) <span class="sc">%&gt;%</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(<span class="at">name =</span> <span class="st">"total"</span>)</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>sample_counts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 16 × 3
 # Groups:   Study, Category [16]
@@ -1996,12 +2083,12 @@ Code:
 </div>
 </div>
 </details>
-<p>Now that we’ve looked at this data in a table format, let’s make a plot so that we can compare this data visually. We’ll make a bar plot, with separate bars for each study and for observation category (infant vs mother).</p>
+<p>Now that we’ve looked at this data in a table format, let’s make a plot so that we can compare this data visually. We’ll make a bar plot, with separate bars for each study and for observation category (infant vs mother). <strong>Include this code in your .qmd document</strong> to make a bar plot.</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>sample_counts <span class="sc">%&gt;%</span></span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Study, <span class="at">y =</span> total, <span class="at">fill =</span> Category)) <span class="sc">+</span></span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>sample_counts <span class="sc">%&gt;%</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Study, <span class="at">y =</span> total, <span class="at">fill =</span> Category)) <span class="sc">+</span></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2043,27 +2130,28 @@ More information about these <code>dplyr</code> functions:
 </tbody>
 </table>
 </details>
+<p><strong>Include this code in your .qmd document</strong> to make a new vector for the desired study order.</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>study_order <span class="ot">&lt;-</span> sample_counts <span class="sc">%&gt;%</span></span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Study) <span class="sc">%&gt;%</span></span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">total_both =</span> <span class="fu">sum</span>(total)) <span class="sc">%&gt;%</span></span>
-<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(total_both) <span class="sc">%&gt;%</span></span>
-<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(Study)</span>
-<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>study_order</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>study_order <span class="ot">&lt;-</span> sample_counts <span class="sc">%&gt;%</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Study) <span class="sc">%&gt;%</span></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">total_both =</span> <span class="fu">sum</span>(total)) <span class="sc">%&gt;%</span></span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(total_both) <span class="sc">%&gt;%</span></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(Study)</span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>study_order</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Asnicar"  "Chu"      "Wampach"  "Parnanen" "Ferretti" "Yassour"  "Backhed" 
 [8] "Shao"    </code></pre>
 </div>
 </div>
 </div>
-<p>We can now order the bar plot by increasing sample size.</p>
+<p>We can now order the bar plot by increasing sample size. <strong>Include this code in your .qmd document</strong> to make the bar plot with increasing bar heights.</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>sample_counts <span class="sc">%&gt;%</span></span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Study =</span> <span class="fu">factor</span>(Study, <span class="at">levels =</span> study_order)) <span class="sc">%&gt;%</span></span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Study, <span class="at">y =</span> total, <span class="at">fill =</span> Category)) <span class="sc">+</span></span>
-<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>()) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>sample_counts <span class="sc">%&gt;%</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Study =</span> <span class="fu">factor</span>(Study, <span class="at">levels =</span> study_order)) <span class="sc">%&gt;%</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Study, <span class="at">y =</span> total, <span class="at">fill =</span> Category)) <span class="sc">+</span></span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>()) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2073,18 +2161,18 @@ More information about these <code>dplyr</code> functions:
 </div>
 </div>
 </div>
-<p>Finally, we can update the colors of the plot and add labels.</p>
+<p>Finally, we can update the colors of the plot and add labels. <strong>Include this code in your .qmd document</strong> to refine your bar plot.</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>sample_counts <span class="sc">%&gt;%</span></span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Study =</span> <span class="fu">factor</span>(Study, <span class="at">levels =</span> study_order)) <span class="sc">%&gt;%</span></span>
-<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Study, <span class="at">y =</span> total, <span class="at">fill =</span> Category)) <span class="sc">+</span></span>
-<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>()) <span class="sc">+</span></span>
-<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
-<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Number of samples"</span>,</span>
-<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Study"</span>,</span>
-<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Number of Samples by Study and Category"</span>) <span class="sc">+</span> </span>
-<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>sample_counts <span class="sc">%&gt;%</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Study =</span> <span class="fu">factor</span>(Study, <span class="at">levels =</span> study_order)) <span class="sc">%&gt;%</span></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Study, <span class="at">y =</span> total, <span class="at">fill =</span> Category)) <span class="sc">+</span></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>()) <span class="sc">+</span></span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Number of samples"</span>,</span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Study"</span>,</span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Number of Samples by Study and Category"</span>) <span class="sc">+</span> </span>
+<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2094,33 +2182,33 @@ More information about these <code>dplyr</code> functions:
 </div>
 </div>
 </div>
-<p>We will now use <code>ggsave()</code> to save this plot in the figures folder.</p>
+<p>We will now use <code>ggsave()</code> to save this plot in the figures folder. <strong>Include this code in your .qmd document</strong> to save this bar plot with the file name “study_sizes_by_category.png” within the “figures” folder.</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"figures/study_sizes_by_category.png"</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">width =</span> <span class="dv">9</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"figures/study_sizes_by_category.png"</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">width =</span> <span class="dv">9</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <p>This is another great time to commit your current work.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-15-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-15-1" role="tab" aria-controls="tabset-15-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-15-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-15-2" role="tab" aria-controls="tabset-15-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-16-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-1" role="tab" aria-controls="tabset-16-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-16-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-2" role="tab" aria-controls="tabset-16-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-15-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-15-1-tab">
+<div id="tabset-16-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-16-1-tab">
 <p>Navigate back to GitHub Desktop. You should now see that “03_visualize_study_cohorts.qmd” has a check in the checkbox (meaning it is staged) and has an orange box next to it, which means the file has been modified. Add an appropriate commit message and commit this file.</p>
 </div>
-<div id="tabset-15-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-15-2-tab">
+<div id="tabset-16-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-16-2-tab">
 <p>Even though Git is already tracking “03_visualize_study_cohorts.qmd”, we still need to use <code>git add</code> to tell Git to stage this file for this commit.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb57"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add 03_visualize_study_cohorts.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add 03_visualize_study_cohorts.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Next, add a commit with an appropriate commit message.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add plot of study sizes to '03_visualize_study_cohorts'"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb61"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add plot of study sizes to '03_visualize_study_cohorts'"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
 </div>
 <p>Next we will consider the second question: how do these studies compare in terms of when they took samples after the birth of the infants? You may have noticed in the script “02_wrangle_data.R” that two studies took samples from mothers during pregnancy. This information is contained in the variable <code>sampling_before_birth</code>. We would like to exclude these observations from our plots, because their <code>sampling_day</code> is counted from the beginning of pregnancy and not since birth.</p>
-<p>Create a data frame <code>observations_after_birth</code> that does not include these observations that were taken before birth.</p>
+<p><strong>Your turn</strong>: create a data frame <code>observations_after_birth</code> that does not include these observations that were taken before birth. <strong>Include this code in your .qmd document.</strong></p>
 <details>
 <summary>
 Hint:
@@ -2131,22 +2219,22 @@ Hint:
 </details>
 <details>
 <summary>
-Code:
+View code:
 </summary>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>observations_after_birth <span class="ot">&lt;-</span> clean_metadata <span class="sc">%&gt;%</span></span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>sampling_before_birth) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>observations_after_birth <span class="ot">&lt;-</span> clean_metadata <span class="sc">%&gt;%</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>sampling_before_birth) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </details>
-<p>Now, we will make a histogram of sampling day, where we separate the data by <code>Category</code> and <code>Study</code>. There are multiple ways to do this, but we will color the bars by <code>Category</code> and then use <code>facet_wrap()</code> to make separate panels for each study.</p>
+<p>Now, we will make a histogram of sampling day, where we separate the data by <code>Category</code> and <code>Study</code>. There are multiple ways to do this, but we will color the bars by <code>Category</code> and then use <code>facet_wrap()</code> to make separate panels for each study. <strong>Include this code in your .qmd document</strong> to make histograms of sampling day for each study.</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>observations_after_birth <span class="sc">%&gt;%</span></span>
-<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sampling_day, <span class="at">fill =</span> Category, <span class="at">group =</span> Category)) <span class="sc">+</span></span>
-<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>(), <span class="at">bins =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
-<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Study, <span class="at">scale =</span> <span class="st">"free_y"</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>observations_after_birth <span class="sc">%&gt;%</span></span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sampling_day, <span class="at">fill =</span> Category, <span class="at">group =</span> Category)) <span class="sc">+</span></span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>(), <span class="at">bins =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
+<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Study, <span class="at">scale =</span> <span class="st">"free_y"</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 7 rows containing non-finite outside the scale range
 (`stat_bin()`).</code></pre>
@@ -2160,19 +2248,19 @@ Code:
 </div>
 </div>
 </div>
-<p>Notice that because we set <code>scale = "free_y"</code> in the <code>facet_wrap()</code>, each of the y-axes of the panels is different. Let’s order the studies in the same order that we used in the bar plot earlier. We will also update the theme and add axes labels.</p>
+<p>Notice that because we set <code>scale = "free_y"</code> in the <code>facet_wrap()</code>, each of the y-axes of the panels is different. Let’s order the studies in the same order that we used in the bar plot earlier. We will also update the theme and add axes labels. <strong>Include this code in your .qmd document</strong> to order the studies and refine your histograms.</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>observations_after_birth <span class="sc">%&gt;%</span></span>
-<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Study =</span> <span class="fu">factor</span>(Study, <span class="at">levels =</span> study_order)) <span class="sc">%&gt;%</span></span>
-<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sampling_day, <span class="at">fill =</span> Category, <span class="at">group =</span> Category)) <span class="sc">+</span></span>
-<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>(), <span class="at">bins =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
-<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Study, <span class="at">scale =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
-<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Days since birth at sampling"</span>,</span>
-<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>,</span>
-<span id="cb62-8"><a href="#cb62-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Distribution of sampling day across studies"</span>) <span class="sc">+</span> </span>
-<span id="cb62-9"><a href="#cb62-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
-<span id="cb62-10"><a href="#cb62-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>observations_after_birth <span class="sc">%&gt;%</span></span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Study =</span> <span class="fu">factor</span>(Study, <span class="at">levels =</span> study_order)) <span class="sc">%&gt;%</span></span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sampling_day, <span class="at">fill =</span> Category, <span class="at">group =</span> Category)) <span class="sc">+</span></span>
+<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>(), <span class="at">bins =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
+<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Study, <span class="at">scale =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb65-6"><a href="#cb65-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Days since birth at sampling"</span>,</span>
+<span id="cb65-7"><a href="#cb65-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>,</span>
+<span id="cb65-8"><a href="#cb65-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Distribution of sampling day across studies"</span>) <span class="sc">+</span> </span>
+<span id="cb65-9"><a href="#cb65-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
+<span id="cb65-10"><a href="#cb65-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 7 rows containing non-finite outside the scale range
 (`stat_bin()`).</code></pre>
@@ -2193,11 +2281,11 @@ More information about this warning message.
 <p><code>ggplot</code> will give you warning messages when there are data in the dataframe that it cannot include in a plot due to missing information. In this warning, we can see that 7 observations in the data (representing samples taken) cannot be plotted because of non-finite values. Typically, this means there are observations with missing data. We can investigate what is missing with the following:</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>observations_after_birth <span class="sc">%&gt;%</span></span>
-<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># only keep rows that have NA values for Study, sampling_day, or Category</span></span>
-<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(Study) <span class="sc">|</span> <span class="fu">is.na</span>(sampling_day) <span class="sc">|</span> <span class="fu">is.na</span>(Category)) <span class="sc">%&gt;%</span> </span>
-<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># view a smaller subset of variables</span></span>
-<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Study, SampleID, PersonID, sampling_day, Category)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>observations_after_birth <span class="sc">%&gt;%</span></span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># only keep rows that have NA values for Study, sampling_day, or Category</span></span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(Study) <span class="sc">|</span> <span class="fu">is.na</span>(sampling_day) <span class="sc">|</span> <span class="fu">is.na</span>(Category)) <span class="sc">%&gt;%</span> </span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># view a smaller subset of variables</span></span>
+<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Study, SampleID, PersonID, sampling_day, Category)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 5
   Study   SampleID  PersonID sampling_day Category
@@ -2214,33 +2302,33 @@ More information about this warning message.
 </div>
 <p>Here we can see that there are 6 observations from the Backhed study and one observation from the Shao study for which <code>sampling_day</code> is missing. Therefore, these observations cannot be included in the plot.</p>
 </details>
-<p>Finally, we will save this plot in the figures folder.</p>
+<p>Finally, we will save this plot in the figures folder. <strong>Include this code in your .qmd document</strong> to save this plot with the file name “sampling_timepoints.png” within the “figures” folder.</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"figures/sampling_timepoints.png"</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">width =</span> <span class="dv">9</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"figures/sampling_timepoints.png"</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">width =</span> <span class="dv">9</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <p>Now that we have two plots, go back through your file “03_visualize_study_cohorts.qmd” to make sure that it contains all relevant code to make these two plots, and that there are explanations before each code chunk. Render your file to confirm that when rendered it will create these two plots.</p>
 <p>Since you’ve performed the requested analysis, make sure to document any new files in this repository in the README.md file. Specifically, describe what the file “03_visualize_study_cohorts.qmd” does, and describe the two plots that are now saved in the figures folder. After doing this, make another commit and push your work.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-16-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-1" role="tab" aria-controls="tabset-16-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-16-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-2" role="tab" aria-controls="tabset-16-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-17-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-17-1" role="tab" aria-controls="tabset-17-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-17-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-17-2" role="tab" aria-controls="tabset-17-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-16-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-16-1-tab">
+<div id="tabset-17-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-17-1-tab">
 <p>Navigate back to GitHub Desktop. You should now see the modifications that you’ve made to “03_visualize_study_cohorts.qmd”, as well as the added .png files for the figures. Add an appropriate commit message and commit. Then click “Push origin”, to push these changes that you’ve made locally to your remote repository.</p>
 </div>
-<div id="tabset-16-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-16-2-tab">
+<div id="tabset-17-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-17-2-tab">
 <p>We need to now make sure to stage “03_visualize_study_cohorts.qmd” and the figures that we’ve added. We can use <code>git add .</code> to tell Git to track all files that have changes in this repository.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb67"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Next, add a commit with an appropriate commit message.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb68"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add plot of sampling days to </span></span>
-<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="st">'03_visualize_study_cohorts' and document new files in README"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb71"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add plot of sampling days to </span></span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="st">'03_visualize_study_cohorts' and document new files in README"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Finally, <button class="glossary"><span class="def">Sending commits from the local version of a repository to the remote version of the repository on GitHub</span>push</button> these changes that you’ve made locally to your remote repository. Because this is your first time pushing from a new branch, you will need to tell Git where you want to push to, adding the flag <code>--set-upstream origin branch_name</code>.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb69"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">--set-upstream</span> origin study_comparison</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">--set-upstream</span> origin study_comparison</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -2313,7 +2401,7 @@ Example pull request for this analysis
 <hr>
 </section>
 </section>
-<section id="summary" class="level1 page-columns page-full">
+<section id="summary" class="level1">
 <h1><strong>Summary</strong></h1>
 <hr>
 <section id="synopsis" class="level2">
@@ -2322,14 +2410,10 @@ Example pull request for this analysis
 <p>Along the way, you’ve also learned about the advantages and challenges of <button class="glossary"><span class="def">Analyses of data from a collection of studies targeting a common research question</span>meta-analyses</button> and best practices for scientific project organization.</p>
 <hr>
 </section>
-<section id="summary-plot" class="level2 page-columns page-full">
+<section id="summary-plot" class="level2">
 <h2 class="anchored" data-anchor-id="summary-plot"><strong>Summary Plot</strong></h2>
-<p>In order to create the final summary plot, please drag and drop the steps that you’ve followed in this case study into the correct order.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>to-do: figure out how to make this into a drag and drop activity for the learner (see <a href="https://lumi.education/en/">this platform</a>))</p>
-<p>Note: this is a mock-up of what the figure may look like, but a final version will be a little more detailed and include color and more collaborative elements of the process!</p>
-</div></div><div class="cell" data-layout-align="center">
+<p>This diagram provides a high-level overview of the steps that you took in this case study. While some of these will not always be necessary for all projects or follow this exact order, each of these steps represent parts of a version controlled project workflow and are important to understand.</p>
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2364,12 +2448,12 @@ I’ve created a merge conflict. What is this? How do I fix it?
 </div>
 <p>You will know that you have a merge conflict when Git attempts to combine changes (for example, during <code>git merge</code> or <code>git pull</code>) and reports that it cannot automatically resolve some differences.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-17-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-17-1" role="tab" aria-controls="tabset-17-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-17-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-17-2" role="tab" aria-controls="tabset-17-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-18-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-1" role="tab" aria-controls="tabset-18-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-18-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-2" role="tab" aria-controls="tabset-18-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-17-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-17-1-tab">
+<div id="tabset-18-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-18-1-tab">
 <p>You will see a pop-up window that says “Resolve conflicts before Merge”, along with a list of files with conflicts. You will need to open the files in a text editor in order to manually resolve the merge conflicts.</p>
 </div>
-<div id="tabset-17-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-17-2-tab">
+<div id="tabset-18-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-18-2-tab">
 <p>When you try to run <code>git pull</code>, you’ll get a response that includes: “Automatic merge failed; fix conflicts and then commit the result”.</p>
 </div>
 </div>
@@ -2379,7 +2463,7 @@ I’ve created a merge conflict. What is this? How do I fix it?
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3f139628ce6_0_263.png" class="img-fluid figure-img" style="width:100.0%" alt="branch workflow"></p>
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f139628ce6_0_263.png" class="img-fluid figure-img" style="width:100.0%" alt="branch workflow"></p>
 </figure>
 </div>
 </div>
@@ -2389,7 +2473,7 @@ I’ve created a merge conflict. What is this? How do I fix it?
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3f139628ce6_0_344.png" class="img-fluid figure-img" style="width:100.0%" alt="file before and after merge conflict"></p>
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f94a4bdf40_0_142.png" class="img-fluid figure-img" style="width:100.0%" alt="file before and after merge conflict"></p>
 </figure>
 </div>
 </div>
@@ -2404,15 +2488,15 @@ I’ve accidentally been working in the main branch, but I actually want my work
 </summary>
 <p>Luckily, this is an easy problem to resolve!</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-18-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-1" role="tab" aria-controls="tabset-18-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-18-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-2" role="tab" aria-controls="tabset-18-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-19-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-19-1" role="tab" aria-controls="tabset-19-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-19-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-19-2" role="tab" aria-controls="tabset-19-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-18-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-18-1-tab">
+<div id="tabset-19-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-19-1-tab">
 <p>Open GitHub Desktop, and create a new branch. If you have changes in main that haven’t been committed, GitHub Desktop will open a pop-up to ask you if you’d like to leave your changes on main or bring your changes to the new branch. Choose to bring the changes to the new branch.</p>
 </div>
-<div id="tabset-18-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-18-2-tab">
+<div id="tabset-19-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-19-2-tab">
 <p>Use the following command, replacing “new_branch_name” with your desired branch name.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> new_branch_name </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb73"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> new_branch_name </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -2424,26 +2508,26 @@ I’ve staged and committed a file, but I don’t want to track it anymore. How 
 </summary>
 <p>This is another common problem. We’ll first tell Git to stop tracking the file (but keep it locally), and then we will add it to the .gitignore file to avoid tracking it with Git in the future. First, we will stop tracking the file.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-19-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-19-1" role="tab" aria-controls="tabset-19-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-19-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-19-2" role="tab" aria-controls="tabset-19-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-20-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-20-1" role="tab" aria-controls="tabset-20-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-20-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-20-2" role="tab" aria-controls="tabset-20-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-19-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-19-1-tab">
+<div id="tabset-20-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-20-1-tab">
 <p>Make sure you are starting in the correct branch that you have been working in. Click “Repository -&gt; Open in Terminal”. This will open a command line for you to work with. In this command line, use the following command, replacing “path_to_file” with the path to the file to stop tracking, including the file name.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb71"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> <span class="st">"path_to_file"</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb74"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> <span class="st">"path_to_file"</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Next, open the .gitignore file and add the file to the list of files to avoid tracking.</p>
 <p>Then, return to GitHub Desktop and commit these changes.</p>
 </div>
-<div id="tabset-19-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-19-2-tab">
+<div id="tabset-20-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-20-2-tab">
 <p>Use the following command, replacing “path_to_file” with the path to the file to stop tracking, including the file name.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> path/to/file</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb75"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> path/to/file</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Next, open the .gitignore file and add the file to the list of files to avoid tracking.</p>
 <p>Then, return to the command line and stage and stage and commit these changes.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb73"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .gitignore</span>
-<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"removing file_name from Git tracking and adding it to .gitignore"</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb76"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .gitignore</span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"removing file_name from Git tracking and adding it to .gitignore"</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -2455,34 +2539,34 @@ I’ve accidentally committed a large file and when I try to push I get an error
 </summary>
 <p>This is a common error that can be a little tricky to resolve. You need to remove this file from Git tracking and also amend the commits that include the file. We will assume that the large file was added in the most recent commit. If it was added multiple commits previously, then it can still be removed but will include additional steps that we will not cover here (see <a href="https://www.git-tower.com/learn/git/faq/git-filter-repo">here</a> for a workflow for removing a file from multiple commits).</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-20-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-20-1" role="tab" aria-controls="tabset-20-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-20-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-20-2" role="tab" aria-controls="tabset-20-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-21-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-21-1" role="tab" aria-controls="tabset-21-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-21-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-21-2" role="tab" aria-controls="tabset-21-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-20-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-20-1-tab">
+<div id="tabset-21-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-21-1-tab">
 <p>Make sure you are starting in the correct branch that you have been working in. Click “Repository -&gt; Open in Terminal”. This will open a command line for you to work with. In this command line, use the following command, replacing “path_to_file” with the path to the file to stop tracking, including the file name.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb74"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> <span class="st">"path_to_file"</span> </span>
-<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb77"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> <span class="st">"path_to_file"</span> </span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Including the <code>git commit --amend</code> rewrites the most recent commit as if the large file was not added. Don’t close the terminal yet, we will come back to it.</p>
 <p>Next, open the .gitignore file and add the file to the list of files to avoid tracking. In GitHub Desktop, stage the .gitignore, but do not commit it yet.</p>
 <p>Return to the terminal. Repeat the <code>git commit --amend</code> command, which will add this update to the .gitignore to the most recent commit.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb75"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb78"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Then, return to GitHub Desktop and commit these changes.</p>
 </div>
-<div id="tabset-20-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-20-2-tab">
+<div id="tabset-21-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-21-2-tab">
 <p>Use the following command, replacing “path_to_file” with the path to the file to stop tracking, including the file name. Including the <code>git commit --amend</code> rewrites the most recent commit as if the large file was not added.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb76"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> path/to/file</span>
-<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb79"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> path/to/file</span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Next, open the .gitignore file and add the file to the list of files to avoid tracking.</p>
 <p>Then, return to the command line and stage and stage and commit these changes. Note that we include <code>git commit --amend</code> a second time to add the changes to the .gitignore file to the previous commit.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb77"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .gitignore</span>
-<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span></span>
-<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"removing file_name from Git tracking and adding it to .gitignore"</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb80"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .gitignore</span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span></span>
+<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"removing file_name from Git tracking and adding it to .gitignore"</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -2497,33 +2581,110 @@ I’ve accidentally committed a large file and when I try to push I get an error
 <p><u>Context:</u></p>
 <p>When you ask an AI chatbot for assistance with version control, make sure to give appropriate background. Describe the specific task that you would like to do, or the problem that you are encountering. It can be helpful to include any error messages that you might be receiving from Git. For example, imagine that you’ve created a merge conflict.</p>
 <p><u>Suggested Prompt:</u></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb78"><pre class="sourceCode default code-overflow-wrap code-with-copy"><code class="sourceCode default"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>I am working with a Git-controlled repository, in a branch called new_feature. I have made several changes locally, and have staged those files and committed them. I just went to pull changes from the remote version of this branch that my collaborator made recently, and I'm getting a merge conflict. Specifically, I've received the following message:</span>
-<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>Auto-merging README.md</span>
-<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a>CONFLICT (content): Merge conflict in README.md</span>
-<span id="cb78-5"><a href="#cb78-5" aria-hidden="true" tabindex="-1"></a>Auto-merging 01_import_data.R</span>
-<span id="cb78-6"><a href="#cb78-6" aria-hidden="true" tabindex="-1"></a>CONFLICT (content): Merge conflict in 01_import_data.R</span>
-<span id="cb78-7"><a href="#cb78-7" aria-hidden="true" tabindex="-1"></a>Automatic merge failed; fix conflicts and then commit the result.</span>
-<span id="cb78-8"><a href="#cb78-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-9"><a href="#cb78-9" aria-hidden="true" tabindex="-1"></a>How can I resolve this merge conflict?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb81"><pre class="sourceCode default code-overflow-wrap code-with-copy"><code class="sourceCode default"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>I am working with a Git-controlled repository, in a branch called new_feature. I have made several changes locally, and have staged those files and committed them. I just went to pull changes from the remote version of this branch that my collaborator made recently, and I'm getting a merge conflict. Specifically, I've received the following message:</span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>Auto-merging README.md</span>
+<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a>CONFLICT (content): Merge conflict in README.md</span>
+<span id="cb81-5"><a href="#cb81-5" aria-hidden="true" tabindex="-1"></a>Auto-merging 01_import_data.R</span>
+<span id="cb81-6"><a href="#cb81-6" aria-hidden="true" tabindex="-1"></a>CONFLICT (content): Merge conflict in 01_import_data.R</span>
+<span id="cb81-7"><a href="#cb81-7" aria-hidden="true" tabindex="-1"></a>Automatic merge failed; fix conflicts and then commit the result.</span>
+<span id="cb81-8"><a href="#cb81-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-9"><a href="#cb81-9" aria-hidden="true" tabindex="-1"></a>How can I resolve this merge conflict?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><u>Validation:</u> You should always be careful when taking advice on Git and GitHub from an AI chatbot. If you are asking for commands to use with Git for a situation that is very new to you, it could be helpful to do a quick search of the commands the chatbot tells you to use, to confirm that they do what you want to do. You could also ask multiple chatbots the same question.</p>
 </div>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><strong>AI chatbot use Disclaimer:</strong></p>
+<p><strong>AI Use Disclaimer:</strong></p>
 <ul>
-<li>Never provide sensitive data to a public AI chatbot.</li>
-<li>Be specific in your prompts and ask the chatbot to help you understand code, instead of simply providing it.</li>
-<li>Recognize that you may need to iteratively improve your prompt to reach the desired output.</li>
-<li>The confidence of a chatbot does not indicate if its responses are correct. They may also agree with you when you are wrong.</li>
-<li>Chatbots may produce inaccurate, out-of-date, incomplete, or unnecessarily complicated information. Always evaluate their responses critically, test and simplify generated code, and validate information using reliable sources.</li>
-<li>Asking a chatbot the same question more than once (even with the same prompt!) can result in different answers, so be sure to document what you can for the sake of reproducibility.</li>
-<li>Keep track of the models you use (including versions) and be transparent about AI use in your work.</li>
+<li><p>Follow any relevant required guidelines/policies for AI use.</p>
+<details>
+<summary>
+<p>Examples</p>
+</summary>
+<p>Your team or lab, institution, funding organization, or publisher. These requirements should take precedence over our suggestions.</p>
+</details></li>
+<li><p>Check AI responses critically, as they may be inaccurate, out-of-date, incomplete, or unnecessarily complicated.</p>
+<details>
+<summary>
+<p>Examples</p>
+</summary>
+<ul>
+<li>Always validate the existence and relevance of suggested citations or packages.</li>
+<li>Review, test, possibly simplify, and work to understand generated code or functions.</li>
+<li>Validate factual information using reliable sources.</li>
+<li>Exercise extra caution with code in certain instances: code that installs packages, accesses or modifies files or data, uses credentials, or sends information over the internet.</li>
+</ul>
+</details></li>
+<li><p><a href="https://aiattribution.github.io/">Disclose</a> your AI use (including model and versions).</p></li>
+<li><p>Never provide sensitive data to a public AI tool.</p>
+<details>
+<summary>
+<p>Examples</p>
+</summary>
+<p>Patient or student data, passwords, credentials, API keys, unpublished manuscripts or grants, and other proprietary code or internal documents.</p>
+</details></li>
+<li><p>Be specific in your prompts and ask the AI tool to help you understand the code.</p></li>
+<li><p>The confidence of an AI tool does not indicate if its responses are correct. They may also agree with you when you are wrong.</p></li>
+<li><p>AI may respond differently to the same repeated prompt. Be sure to document what you can for the sake of reproducibility.</p></li>
+<li><p>Recognize that you may need to iteratively improve your prompt to reach the desired output.</p></li>
 </ul>
 </div></div><hr>
+<!--
+Don't adjust the shortcode or the table header in this file, only the markdown table contents
+-->
+<section id="main-questions-revisited" class="level2">
+<h2 class="anchored" data-anchor-id="main-questions-revisited"><strong>Main Questions Revisited</strong></h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Main Questions Revisited: What Did We Learn">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Main Questions Revisited: What Did We Learn
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 38%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Question</th>
+<th style="text-align: left;">Current answer</th>
+<th style="text-align: left;">Caveat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Reiteration or restatement of main question</td>
+<td style="text-align: left;">Describe the answer based on case study activities</td>
+<td style="text-align: left;">List any important caveats potentially connecting to earlier limitations</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Another main question</td>
+<td style="text-align: left;">Description of its activity</td>
+<td style="text-align: left;">Caveats for this Q &amp; A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Another of the main questions</td>
+<td style="text-align: left;">Another description of this one’s activity</td>
+<td style="text-align: left;">Q &amp; A specific caveats</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<hr>
 </section>
-<section id="continued-learning" class="level1 page-columns page-full">
+</section>
+<section id="continued-learning" class="level1">
 <h1><strong>Continued Learning</strong></h1>
 <hr>
 <div class="next_steps_box">
@@ -2535,18 +2696,25 @@ I’ve accidentally committed a large file and when I try to push I get an error
 <ul>
 <li><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository">adding collaborators to your repository</a></li>
 <li>making more branches for other components of your analysis</li>
-<li>using <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues">GitHub issues</a> to keep track of to-do’s related to your GitHub repository.</li>
+<li>using <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues">GitHub issues</a> to keep track of to-do’s related to your GitHub repository</li>
 </ul>
 </div>
 </div>
 <section id="reinforcement-exercises" class="level2">
 <h2 class="anchored" data-anchor-id="reinforcement-exercises">Reinforcement Exercises</h2>
-<p>A good way to reinforce these version control skills is to make a current scientific project that you’ve been working on into a Git tracked repository, and connecting it to a remote GitHub repository. See if you can integrate the Git workflow that you’ve learned here into your scientific process. Even if you are the only one working on this project, this is a good way to practice skills and get used to staging, committing, and pushing changes as you work.</p>
+<p>A good way to reinforce these version control skills is to make a current scientific project that you’ve been working on into a Git tracked repository, and connecting it to a remote GitHub repository. See if you can integrate the Git workflow that you’ve learned here into your scientific process. Even if you are the only one working on this project, this is a good way to practice skills. This will get you into the habit of staging, committing, and pushing changes as you work, and working on different branches for different components of a project.</p>
 </section>
-<section id="advancement-exercises" class="level2 page-columns page-full">
+<section id="advancement-exercises" class="level2">
 <h2 class="anchored" data-anchor-id="advancement-exercises">Advancement Exercises</h2>
-<section id="beginner" class="level3">
-<h3 class="anchored" data-anchor-id="beginner">Beginner</h3>
+<!--
+### Beginner
+
+**Under construction**
+
+Have the learner make a commit and then reset it. 
+
+### Intermediate
+-->
 <section id="forking" class="level4">
 <h4 class="anchored" data-anchor-id="forking">Forking</h4>
 <p>So far, you’ve created repositories to work with. This means that GitHub considers you the repository owner. If you are working with collaborators who you want to be able to push to your GitHub repo, you can add them to your repository with write permissions (you can also make them a maintainer or admin to have additional abilities). However, let’s consider a different situation. You want to contribute to a GitHub repository, but you do not have permission to push to this repository. This is where forks come in.</p>
@@ -2596,23 +2764,18 @@ I’ve accidentally committed a large file and when I try to push I get an error
 </div>
 <p>Click “Create pull request” and inspect your pull request.</p>
 <p>Finally, please close this pull request, as we do not actually want to include these changes in this repository.</p>
-</section>
-</section>
-</section>
-<section id="intermediate" class="level3">
-<h3 class="anchored" data-anchor-id="intermediate">Intermediate</h3>
-<section id="merge-conflicts" class="level4">
-<h4 class="anchored" data-anchor-id="merge-conflicts">Merge conflicts</h4>
-<p><strong>Under construction</strong></p>
-<p>Another piece of suggested homework will be creating a merge conflict and then resolving it.</p>
-</section>
-</section>
-<section id="advanced" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="advanced">Advanced</h3>
+<!--
+### Advanced
 
-<div class="no-row-height column-margin column-container"><div class="">
-<p>I don’t have an advanced piece of homework planned yet, but am very open to ideas for this!</p>
-</div></div><hr>
+#### Merge conflicts
+
+**Under construction** 
+
+Another piece of suggested homework will be creating a merge conflict and then resolving it.
+
+-->
+<hr>
+</section>
 </section>
 </section>
 </section>
@@ -2802,7 +2965,7 @@ Wang, Shaopu, Shuqin Zeng, Muireann Egan, Paul Cherry, Conall Strain, Emilene Mo
 </div>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value
@@ -2814,13 +2977,12 @@ Wang, Shaopu, Shuqin Zeng, Muireann Egan, Paul Cherry, Conall Strain, Emilene Mo
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       Etc/UTC
- date     2026-07-09
+ date     2026-08-05
  pandoc   3.1.1 @ /usr/local/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
  cachem        1.0.8   2023-05-01 [1] RSPM (R 4.3.0)
- cellranger    1.1.0   2016-07-27 [1] RSPM (R 4.3.0)
  chromote      0.5.1   2025-04-24 [1] CRAN (R 4.3.2)
  cli           3.6.5   2025-04-23 [1] CRAN (R 4.3.2)
  colorspace    2.1-0   2023-01-23 [1] RSPM (R 4.3.0)
@@ -2869,7 +3031,6 @@ Wang, Shaopu, Shuqin Zeng, Muireann Egan, Paul Cherry, Conall Strain, Emilene Mo
  R6            2.6.1   2025-02-15 [1] CRAN (R 4.3.2)
  Rcpp          1.0.12  2024-01-09 [1] RSPM (R 4.3.0)
  readr         2.1.5   2024-01-10 [1] RSPM (R 4.3.0)
- readxl      * 1.4.3   2023-07-06 [1] RSPM (R 4.3.0)
  remotes       2.4.2.1 2023-07-18 [1] RSPM (R 4.3.0)
  rlang         1.1.6   2025-04-11 [1] CRAN (R 4.3.2)
  rmarkdown     2.25    2023-09-18 [1] RSPM (R 4.3.0)
@@ -2880,7 +3041,7 @@ Wang, Shaopu, Shuqin Zeng, Muireann Egan, Paul Cherry, Conall Strain, Emilene Mo
  shiny         1.8.0   2023-11-17 [1] RSPM (R 4.3.0)
  spelling      2.3.2   2025-08-18 [1] CRAN (R 4.3.2)
  stringi       1.8.3   2023-12-11 [1] RSPM (R 4.3.0)
- stringr     * 1.5.1   2023-11-14 [1] RSPM (R 4.3.0)
+ stringr       1.5.1   2023-11-14 [1] RSPM (R 4.3.0)
  tibble        3.3.0   2025-06-08 [1] CRAN (R 4.3.2)
  tidyr         1.3.1   2024-01-24 [1] RSPM (R 4.3.0)
  tidyselect    1.2.0   2022-10-10 [1] RSPM (R 4.3.0)
@@ -3327,7 +3488,7 @@ Fill in any Acknowledgments using an example from a previous case study if neede
 <p>This book was built with <a href="https://quarto.org/" style="color: #0000FF;">Quarto</a> using <a href="https://github.com/opencasestudies/ocs-template-quarto" style="color: #0000FF;">OTTR</a>.</p>
 </div>   
     <div class="nav-footer-center">
-<p>All illustrations <a href="hhttps://creativecommons.org/licenses/by-nc/4.0/us/" style="color: #0000FF;">CC BY-NC 4.0. </a> <br> All other materials <a href="https://creativecommons.org/licenses/by-nc/4.0/us/" style="color: #0000FF;"> CC BY-NC 4.0 </a> unless noted otherwise.</p>
+<p>All illustrations <a href="https://creativecommons.org/licenses/by-nc/4.0/us/" style="color: #0000FF;">CC BY-NC 4.0. </a> <br> All other materials <a href="https://creativecommons.org/licenses/by-nc/4.0/us/" style="color: #0000FF;"> CC BY-NC 4.0 </a> unless noted otherwise.</p>
 </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
