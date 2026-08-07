@@ -6,7 +6,7 @@ name: Render all output courses
 on:
   workflow_dispatch:
   push:
-    branches: [ main, main_figure ]
+    branches: [ main, staging ]
     paths:
       - '*.qmd'
       - '*.Rmd'
