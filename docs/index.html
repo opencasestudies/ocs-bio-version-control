@@ -286,6 +286,7 @@ window.Quarto = {
   <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><strong>Limitations</strong></a></li>
   <li><a href="#ethical-considerations" id="toc-ethical-considerations" class="nav-link" data-scroll-target="#ethical-considerations"><strong>Ethical Considerations</strong></a></li>
   <li><a href="#packages-and-setup" id="toc-packages-and-setup" class="nav-link" data-scroll-target="#packages-and-setup"><strong>Packages and Setup</strong></a></li>
+  <li><a href="#data-import" id="toc-data-import" class="nav-link" data-scroll-target="#data-import"><strong>Data Import</strong></a></li>
   <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link" data-scroll-target="#data-wrangling"><strong>Data Wrangling</strong></a></li>
   <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><strong>Data Visualization</strong></a></li>
   <li><a href="#pull-requests" id="toc-pull-requests" class="nav-link" data-scroll-target="#pull-requests"><strong>Pull requests</strong></a>
@@ -1719,63 +1720,68 @@ Consider incorporating a checklist of statements that learners should answer/dis
 <section id="packages-and-setup" class="level1">
 <h1><strong>Packages and Setup</strong></h1>
 <hr>
+<p>Before we get into the coding, we want to describe the R packages that we’ll use in this case study, or that are used in other scripts contained in our repository:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Package</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://here.r-lib.org">here</a></td>
+<td>To construct file paths within folders</td>
+</tr>
+<tr class="even">
+<td><a href="https://readxl.tidyverse.org" target="_blank">readxl</a></td>
+<td>To read excel files into R</td>
+</tr>
+<tr class="odd">
+<td><a href="https://dplyr.tidyverse.org" target="_blank">dplyr</a></td>
+<td>To combine and manipulate data tables</td>
+</tr>
+<tr class="even">
+<td><a href="https://ggplot2.tidyverse.org">ggplot2</a></td>
+<td>To visualize data</td>
+</tr>
+<tr class="odd">
+<td><a href="https://stringr.tidyverse.org">stringr</a></td>
+<td>To manipulate strings</td>
+</tr>
+</tbody>
+</table>
+<p>The first time we use a function, we will use the <code>::</code> to indicate which package we are using. Unless we have overlapping function names, this is not necessary, but we will include it here to be informative about where the functions we will use come from.</p>
 <!--
-load all the packages used in the case study analysis in the code chunk below
-(try to use tidyverse over base R).
-Fill out the table and add rows as necessary providing a link to the source and briefly explaining its use for each package
--->
-<p>We will begin by loading the packages that we will need:</p>
-<p>#add library() calls library(here) library(readxl) library(dplyr) library(ggplot2) library(stringr)</p>
-<pre><code>
-Package    | Use
----------- |-------------
-[here](https://here.r-lib.org) | To construct file paths within folders
-[readxl](https://readxl.tidyverse.org){target="_blank"}      | To read excel files into R
-[dplyr](https://dplyr.tidyverse.org){target="_blank"}      | To combine and manipulate data tables
-[ggplot2](https://ggplot2.tidyverse.org) | To visualize data
-[stringr](https://stringr.tidyverse.org) | To manipulate strings
-
-
-The first time we use a function, we will use the `::` to indicate which package we are using. Unless we have overlapping function names, this is not necessary, but we will include it here to be informative about where the functions we will use come from.
-
-&lt;!--
 Update the file paths as needed throughout
---&gt;
-
-&lt;!--
+-->
+<!--
 At the end of this section, save incremental data so that users can pause and come back later
---&gt;
-
-# **Data Import**
-***
-
-Now that you have set up this project with  and , you can start working on the study comparison in R. Open RStudio or Positron or your preferred R IDE to the "infant_gut_analysis" folder. We will start by taking a look at the data. Take a look at the  file to determine which file contains commands that can read in the raw data. Open this file and run the code. 
-
-:::{.think_question}
-::::{.think_question_header}
-Question opportunity
-::::
-::::{.inner_block}
-How many observations are included in our data set? How many variables are included in our data set? 
-&lt;details&gt; &lt;summary&gt; Hint &lt;/summary&gt;
-
-Data is imported in the file "01_pull_study_data.R". You can find out how many rows are in a data frame with the function `nrow(name_of_data_frame)`. You can find out how many columns are in a data frame with the function `ncol(name_of_data_frame)`. 
-
-&lt;/details&gt;
-&lt;details&gt;&lt;summary&gt;Answer&lt;/summary&gt;
-
-
-::: {.cell}
-
-:::
-
-
-::: {.rcode}
-
-::: {.cell}
-
-```{.r .cell-code}
-nrow(sample_metadata)</code></pre>
+-->
+</section>
+<section id="data-import" class="level1">
+<h1><strong>Data Import</strong></h1>
+<hr>
+<p>Now that you have set up this project with <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with GitHub</span>GitHub</button>, you can start working on the study comparison in R. Open RStudio or Positron or your preferred R IDE to the “infant_gut_analysis” folder. We will start by taking a look at the data. Take a look at the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button> file to determine which file contains commands that can read in the raw data. Open this file and run the code.</p>
+<div class="think_question">
+<div class="think_question_header">
+<p>Question opportunity</p>
+</div>
+<div class="inner_block">
+How many observations are included in our data set? How many variables are included in our data set?
+<details>
+<summary>
+Hint
+</summary>
+<p>Data is imported in the file “01_pull_study_data.R”. You can find out how many rows are in a data frame with the function <code>nrow(name_of_data_frame)</code>. You can find out how many columns are in a data frame with the function <code>ncol(name_of_data_frame)</code>.</p>
+</details>
+<details>
+<summary>
+Answer
+</summary>
+<div class="rcode">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(sample_metadata)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1499</code></pre>
 </div>
@@ -1783,12 +1789,13 @@ nrow(sample_metadata)</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 20</code></pre>
 </div>
-<p>:::</p>
+</div>
+</div>
 There are <span class="math inline">\(1499\)</span> observations and <span class="math inline">\(20\)</span> variables in the data frame.
-
-<p>:::: :::</p>
+</details>
+</div>
+</div>
 <hr>
-<p>:::</p>
 <!--
 Update the file paths as needed throughout
 -->
@@ -2092,7 +2099,7 @@ View code:
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2155,7 +2162,7 @@ More information about these <code>dplyr</code> functions:
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-39-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2176,7 +2183,7 @@ More information about these <code>dplyr</code> functions:
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-41-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2242,7 +2249,7 @@ View code:
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-43-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2268,7 +2275,7 @@ View code:
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-45-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2977,12 +2984,13 @@ Wang, Shaopu, Shuqin Zeng, Muireann Egan, Paul Cherry, Conall Strain, Emilene Mo
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       Etc/UTC
- date     2026-08-05
+ date     2026-08-11
  pandoc   3.1.1 @ /usr/local/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
  cachem        1.0.8   2023-05-01 [1] RSPM (R 4.3.0)
+ cellranger    1.1.0   2016-07-27 [1] RSPM (R 4.3.0)
  chromote      0.5.1   2025-04-24 [1] CRAN (R 4.3.2)
  cli           3.6.5   2025-04-23 [1] CRAN (R 4.3.2)
  colorspace    2.1-0   2023-01-23 [1] RSPM (R 4.3.0)
@@ -3031,6 +3039,7 @@ Wang, Shaopu, Shuqin Zeng, Muireann Egan, Paul Cherry, Conall Strain, Emilene Mo
  R6            2.6.1   2025-02-15 [1] CRAN (R 4.3.2)
  Rcpp          1.0.12  2024-01-09 [1] RSPM (R 4.3.0)
  readr         2.1.5   2024-01-10 [1] RSPM (R 4.3.0)
+ readxl      * 1.4.3   2023-07-06 [1] RSPM (R 4.3.0)
  remotes       2.4.2.1 2023-07-18 [1] RSPM (R 4.3.0)
  rlang         1.1.6   2025-04-11 [1] CRAN (R 4.3.2)
  rmarkdown     2.25    2023-09-18 [1] RSPM (R 4.3.0)
@@ -3041,7 +3050,7 @@ Wang, Shaopu, Shuqin Zeng, Muireann Egan, Paul Cherry, Conall Strain, Emilene Mo
  shiny         1.8.0   2023-11-17 [1] RSPM (R 4.3.0)
  spelling      2.3.2   2025-08-18 [1] CRAN (R 4.3.2)
  stringi       1.8.3   2023-12-11 [1] RSPM (R 4.3.0)
- stringr       1.5.1   2023-11-14 [1] RSPM (R 4.3.0)
+ stringr     * 1.5.1   2023-11-14 [1] RSPM (R 4.3.0)
  tibble        3.3.0   2025-06-08 [1] CRAN (R 4.3.2)
  tidyr         1.3.1   2024-01-24 [1] RSPM (R 4.3.0)
  tidyselect    1.2.0   2022-10-10 [1] RSPM (R 4.3.0)
