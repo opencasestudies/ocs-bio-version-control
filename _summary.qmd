@@ -12,20 +12,10 @@ Along the way, you've also learned about the advantages and challenges of {{< gl
 
 ## **Summary Plot**
 
-This diagram provides a high-level overview of the steps that you took in this case study. While some of these will not always be necessary for all projects or follow this exact order, each of these steps represent parts of a version controlled project workflow and are important to understand. 
-
-```{r, fig.alt="Workflow of this project using Git and GitHub", echo = FALSE, fig.align = "center"}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f2d5a3e170_0_38#slide=id.g3f2d5a3e170_0_38")
-```
-
-<!--
-construct a plot here that summarizes the conclusions found in the data, if applicable
-(connecting to a main question if possible)
--->
 
 ### Reconstruct the workflow
 
-Drag each workflow block into the correct position and click **Check Answer** or **Reset** to start over.
+Drag each workflow block into the correct position below and click **Check Answer** or **Reset** to start over. This diagram provides a high-level overview of the steps that you took in this case study. While some of these will not always be necessary for all projects or follow this exact order, each of these steps represent parts of a version controlled project workflow and are important to understand. 
 
 ```{=html}
 <!-- html part of code, creates structure of activity -->
