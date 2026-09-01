@@ -290,7 +290,7 @@ An issue is a way to keep track of ideas, tasks to complete, errors to resolve, 
 
 ### Installing GitHub Desktop 
 
-Next, we will move from interacting with GitHub to interacting with Git. First, we recommend that you install GitHub Desktop. This is a GUI (graphical user interface) that makes it easier for us to interact with Git locally. While we will use GitHub Desktop in this case study, another common way to interact with Git is through the {{< glossary "command line" >}} on your computer. If you are already comfortable using the command line, you may prefer this to GitHub Desktop. When we use GitHub Desktop for version control tasks in this case study, we will also provide the command line code for all Git operations.
+Next, we will move from interacting with GitHub to interacting with Git. First, we recommend that you install GitHub Desktop. This is a GUI (graphical user interface) that makes it easier for us to interact with Git locally. While we will use GitHub Desktop in this case study, another common way to interact with Git is through the {{< glossary "command line">}} on your computer. If you are already comfortable using the command line, you may prefer this to GitHub Desktop. When we use GitHub Desktop for version control tasks in this case study, we will also provide the command line code for all Git operations.
 
 <details> <summary> More information about the command line. </summary>
 

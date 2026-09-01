@@ -9,7 +9,7 @@ See the following example from a previous case study: https://www.opencasestudie
 
 There are some important considerations regarding this data analysis to keep in mind:
 
-1. In the original studies included in this {{< glossary "meta-analysis" >}}, some studies describe sampling date in terms of days, and some in terms of weeks or months. Although this is converted into days in the variable `Sampling, day`, time has been measured in finer resolution for some studies compared to others. 
+1. In the original studies included in this {{< glossary "meta-analysis">}}, some studies describe sampling date in terms of days, and some in terms of weeks or months. Although this is converted into days in the variable `Sampling, day`, time has been measured in finer resolution for some studies compared to others. 
 2. In this analysis we are only comparing the original studies based on the number of samples they have and when they collected their samples. There are several other ways we may want to compare these cohorts to understand how comparable they are, including based on measured information (like maternal age, mode of delivery, birth weight, maternal antibiotic use, etc.) as well as unmeasured information. 
 
 There are also limitations of version control: 

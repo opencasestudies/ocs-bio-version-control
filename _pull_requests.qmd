@@ -3,7 +3,7 @@
 
 ## What is a pull request? 
 
-Recall that in the initial description of branches, you learned that branches can be used for development of a new part of a project, separate from the stable version of a repository. A pull request is a way to take a collection of commits on a branch and request to {{< glossary "merge" >}} those into another {{< glossary "branch" >}}, typically "main". A pull request will provide a list of each file that is changed in the branch, as well as the difference between each file and the version of that file on the branch that you are trying to merge your changes into. While you can review your own pull requests, GitHub also has features that make it convenient for collaborators to review your pull requests. 
+Recall that in the initial description of branches, you learned that branches can be used for development of a new part of a project, separate from the stable version of a repository. A pull request is a way to take a collection of commits on a branch and request to {{< glossary "merge">}} those into another {{< glossary "branch">}}, typically "main". A pull request will provide a list of each file that is changed in the branch, as well as the difference between each file and the version of that file on the branch that you are trying to merge your changes into. While you can review your own pull requests, GitHub also has features that make it convenient for collaborators to review your pull requests. 
 
 ## How to make a pull request 
 
