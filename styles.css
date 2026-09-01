@@ -239,15 +239,11 @@
    padding: .1em;
    border: 1px solid black;
    background-color: #000000;
-   display: inline-block;
-}
-
-.outline img {
-  display: block;
-  vertical-align: middle;
-  display: flex;
-  justify-content: center; /* Horizontally centers */
-  align-items: center; /* Vertically centers */
+   display: block;
+   vertical-align: middle;
+   display: flex;
+   justify-content: center; /* Horizontally centers */
+   align-items: center; /* Vertically centers */
 }
 
 .blue-outline {
