@@ -80,12 +80,14 @@ include-sections:
 
 {{< include _pull_requests.qmd >}}
 {{< include _summary.qmd >}}
-{{< include _troubleshooting.qmd >}}
+
 ::: {.content-hidden unless-meta="include-sections.main-q-table"}
 
 {{< include _main_qs_answers_table.qmd >}}
 
 :::
+
+{{< include _troubleshooting.qmd >}}
 
 {{< include _suggested_hw.qmd >}}
 
