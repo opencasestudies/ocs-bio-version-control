@@ -5,6 +5,15 @@ Please update the access information (e.g., github link and data access)
 as well as any system or server requirements to work with the data
 -->
 
+:::{.disclaimer_box}
+::::{.disclaimer_box_header}
+Disclaimer
+::::
+::::{.inner_block}
+This case study is still getting reviewed by a team of experts. While it is complete and has undergone some review by experts, we are continuing to improve the case study. If you have any suggestions, please email us at bioOCS@fredhutch.org. This case study is scheduled to be finalized by October 19, 2026.
+::::
+:::
+
 ::: {.panel-tabset .frontmatter-tabs}
 
 #### Disclaimer

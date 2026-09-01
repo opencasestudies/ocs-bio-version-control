@@ -4,13 +4,13 @@
 ## **Synopsis**
 
 
-In this case study, you've learned about why {{< glossary "version control" >}} is used as part of {{< glossary "reproducible" >}} science workflows. You've been introduced to {{< glossary "Git" >}} and {{< glossary "GitHub" >}}, and learned procedures for managing Git-tracked {{< glossary "repositories" >}} locally using {{< glossary "GitHub Desktop" >}} or the {{< glossary "command line" >}}, and remotely using GitHub. You've practiced using the "pull -> stage -> commit -> push" workflow to make changes locally that are then tracked remotely. In your analysis, you worked in a {{< glossary "branch" >}}, and you submitted a {{< glossary "pull request" >}} in order to integrate new changes into a stable version of the code and as a way to ask a collaborate to review your code. 
+In this case study, you've learned about why {{< glossary "version control">}} is used as part of {{< glossary "reproducible">}} science workflows. You've been introduced to {{< glossary "Git">}} and {{< glossary "GitHub">}}, and learned procedures for managing Git-tracked {{< glossary "repositories">}} locally using {{< glossary "GitHub Desktop">}} or the {{< glossary "command line">}}, and remotely using GitHub. You've practiced using the "pull -> stage -> commit -> push" workflow to make changes locally that are then tracked remotely. In your analysis, you worked in a {{< glossary "branch">}}, and you submitted a {{< glossary "pull request">}} in order to integrate new changes into a stable version of the code and as a way to ask a collaborate to review your code. 
 
-Along the way, you've also learned about the advantages and challenges of {{< glossary "meta-analyses" >}} and best practices for scientific project organization. 
+Along the way, you've also learned about the advantages and challenges of {{< glossary "meta-analyses">}} and best practices for scientific project organization. 
 
 ***
 
-## **Summary Plot**
+## **Summary Activity**
 
 
 ### Reconstruct the workflow
@@ -468,5 +468,12 @@ button {
 
 ```
 
+## **Summary Image**
+
+Now that you've reconstructed the version control workflow from this case study, recall the motivation for version control. 
+
+```{r, fig.alt="Motivation for using version control", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f9c5fef626_0_3&pli=1#slide=id.g3f9c5fef626_0_3")
+```
 
 ***

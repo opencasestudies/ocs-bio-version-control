@@ -13,7 +13,7 @@ At the end of this section, save incremental data so that users can pause and co
 # **Data Wrangling**
 ***
 
-Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses. Again, use the {{< glossary "README" >}} to identify which file contains commands that wrangle the data. Open this file and run the code. 
+Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses. Again, use the {{< glossary "README">}} to identify which file contains commands that wrangle the data. Open this file and run the code. 
 
 :::{.think_question}
 ::::{.think_question_header}
@@ -39,7 +39,7 @@ min(clean_metadata$sampling_day, na.rm = TRUE)
 max(clean_metadata$sampling_day, na.rm = TRUE)
 ```
 
-The earliest day that a participant was sampled after birth was $0$, and the latest day was $480$. 
+The earliest day that a participant was sampled after birth was 0, and the latest day was 480. 
 
 :::
 

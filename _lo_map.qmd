@@ -7,11 +7,15 @@ Don't adjust the shortcode or the table header in this file, only the markdown t
 ::: {.callout-note collapse="true" title="Objectives Map: Where It Is Covered"}
 
 
-| Learning Goal          | Applications / Practice                            | Location                |
+| Learning Goal          | Explanation / Practice                            | Location                |
 | :----------------------------------- | :-------------------------------------------------------------|:-----------------------|
-| Term related to a learning objective | Description of action or activity that will reinforce that LO | [Data Import](https://www.opencasestudies.org/ocs-template-quarto/#data-import) |
-| Another term                         | Description of its activity                                   | [Data Wrangling](https://www.opencasestudies.org/ocs-template-quarto/#data-wrangling) |
-| Another learning objective concept   | Another description of this one's activity                    | [Data Visualization](https://www.opencasestudies.org/ocs-template-quarto/#data-visualization) |
+| Understand how version control facilitates reproducible science |Learn what reproducibility means and how version control contributes to reproducible analyses| [Introduction to Git and GitHub](https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github) |
+| Understand how version control works  | Learn about how version control works in terms of differences between commits | [Introduction to Git and GitHub](https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github) |
+| Create and make changes to a repository with Git and GitHub   | Create new repositories (both locally with Git and remotely with GitHub) and track changes over the course of an analysis |[Introduction to Git and GitHub](https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github), [Data Visualization](https://www.opencasestudies.org/ocs-bio-version-control/#data-visualization) |
+| Make a pull request | Open a pull request to propose changes to a codebase, practice requesting a review from a collaborator | [Pull Requests](https://www.opencasestudies.org/ocs-bio-version-control/#pull-requests) |
+| Organize a repository | Learn about why the files in this project are organized in this way, understand best practices in scientific project organization | [Scientific Project Organization](https://www.opencasestudies.org/ocs-bio-version-control/#scientific-project-organization) | 
+| Learn about meta-analyses | Learn about what meta-analyses are, why they are used, and limitations to combining data from multiple studies. | [Context](https://www.opencasestudies.org/ocs-bio-version-control/#context) | 
+| Use visualizations to compare sampling designs | Make plots to compare the sampling designs of the original studies used in the meta-analysis described in this case study |[Data Visualization](https://www.opencasestudies.org/ocs-bio-version-control/#data-visualization)|
 
 
 :::

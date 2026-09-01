@@ -6,7 +6,7 @@ Most new and experienced users of Git and GitHub will run into problems occasion
 <details> 
 <summary>I've created a merge conflict. What is this? How do I fix it?</summary>
 
-Typically, Git is able to automatically {{< glossary "merge" >}} changes from one {{< glossary "branch" >}} into another. However, a merge conflict happens when there are competing changes between the two branches, and Git needs you to manually decide how to resolve these differences. A merge conflict may arise in a scenario in which you made a branch from main, worked on that branch, and by the time you submit a pull request back to main, someone else has already committed to main and updated the same file as you have. 
+Typically, Git is able to automatically {{< glossary "merge">}} changes from one {{< glossary "branch">}} into another. However, a merge conflict happens when there are competing changes between the two branches, and Git needs you to manually decide how to resolve these differences. A merge conflict may arise in a scenario in which you made a branch from main, worked on that branch, and by the time you submit a pull request back to main, someone else has already committed to main and updated the same file as you have. 
 
 :::{.definition_box}
 ::::{.definition_box_header}

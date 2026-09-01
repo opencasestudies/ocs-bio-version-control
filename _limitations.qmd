@@ -9,13 +9,13 @@ See the following example from a previous case study: https://www.opencasestudie
 
 There are some important considerations regarding this data analysis to keep in mind:
 
-1. In the original studies included in this {{< glossary "meta-analysis" >}}, some studies describe sampling date in terms of days, and some in terms of weeks or months. Although this is converted into days in the variable `Sampling, day`, time has been measured in finer resolution for some studies compared to others. 
+1. In the original studies included in this {{< glossary "meta-analysis">}}, some studies describe sampling date in terms of days, and some in terms of weeks or months. Although this is converted into days in the variable `Sampling, day`, time has been measured in finer resolution for some studies compared to others. 
 2. In this analysis we are only comparing the original studies based on the number of samples they have and when they collected their samples. There are several other ways we may want to compare these cohorts to understand how comparable they are, including based on measured information (like maternal age, mode of delivery, birth weight, maternal antibiotic use, etc.) as well as unmeasured information. 
 
 There are also limitations of version control: 
 
 1. Git does not automatically make commits for you. Any work that you have locally that you have not staged and committed is not under version control. As a version control user, you need to make commits in order to create a record of changes over time. 
-1. As described in the **Scientific project organization** section, version control is not ideal for large binary files. 
+1. As described in the [scientific project organization section](https://www.opencasestudies.org/ocs-bio-version-control/#scientific-project-organization), version control is not ideal for large binary files. 
 1. Git and GitHub are currently the most widely used tools for version control, with extensive documentation and active development. However, like any software tool, their long-term availability is not guaranteed. While the principles of version control will remain integral to reproducible research, the specific technologies used to implement these principles may evolve over time. 
 
 ***
