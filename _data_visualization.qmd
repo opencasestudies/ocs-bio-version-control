@@ -4,7 +4,7 @@
 
 We will now generate visualizations to compare the {{< glossary "meta-analysis">}} study cohorts.
 
-First, we will make sure that we are on the correct branch. We want to use a development branch for this analysis, which we will request to merge back into the main branch once the analysis is ready. We already created the branch "study_comparison" in the [**Introduction to Git and GitHub**](https://www.opencasestudies.org/ocs-bio-version-control/#branches) section, so we just need to make sure that we are working on that branch.
+First, we will make sure that we are on the correct branch. We want to use a development branch for this analysis, which we will request to merge back into the main branch once the analysis is ready. We already created the branch "study_comparison" in the [introduction to Git and GitHub section](https://www.opencasestudies.org/ocs-bio-version-control/#branches), so we just need to make sure that we are working on that branch.
 
 ::: {.panel-tabset}
 
