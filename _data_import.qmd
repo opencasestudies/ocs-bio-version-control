@@ -35,7 +35,7 @@ ncol(sample_metadata)
 ```
 :::
 
-There are $1499$ observations and $20$ variables in the data frame.
+There are 1,499 observations and 20 variables in the data frame.
 </details>
 ::::
 :::

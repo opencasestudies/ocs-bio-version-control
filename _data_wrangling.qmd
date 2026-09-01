@@ -39,7 +39,7 @@ min(clean_metadata$sampling_day, na.rm = TRUE)
 max(clean_metadata$sampling_day, na.rm = TRUE)
 ```
 
-The earliest day that a participant was sampled after birth was $0$, and the latest day was $480$. 
+The earliest day that a participant was sampled after birth was 0, and the latest day was 480. 
 
 :::
 
