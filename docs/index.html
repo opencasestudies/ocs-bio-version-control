@@ -98,9 +98,9 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ce706aef3f93b6d158b493c7f42ffbbf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-ce706aef3f93b6d158b493c7f42ffbbf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-ce706aef3f93b6d158b493c7f42ffbbf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f636a4ba9f8baff21ad862c8cdd28a94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-f636a4ba9f8baff21ad862c8cdd28a94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f636a4ba9f8baff21ad862c8cdd28a94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/glossary/glossary.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -139,35 +139,6 @@ gtag('js', new Date());
 gtag('config', 'G-DPKD3JXYG6', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="version_control_styles.css">
@@ -272,7 +243,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#tips-for-git-and-github" id="toc-tips-for-git-and-github" class="nav-link" data-scroll-target="#tips-for-git-and-github">Tips for Git and GitHub</a></li>
   </ul></li>
-  <li><a href="#scientific-project-organization" id="toc-scientific-project-organization" class="nav-link" data-scroll-target="#scientific-project-organization"><strong>Scientific project organization</strong></a>
+  <li><a href="#scientific-project-organization" id="toc-scientific-project-organization" class="nav-link" data-scroll-target="#scientific-project-organization"><strong>Scientific Project Organization</strong></a>
   <ul class="collapse">
   <li><a href="#organization-of-this-project" id="toc-organization-of-this-project" class="nav-link" data-scroll-target="#organization-of-this-project">Organization of this project</a></li>
   <li><a href="#readme" id="toc-readme" class="nav-link" data-scroll-target="#readme">README</a></li>
@@ -289,7 +260,7 @@ window.Quarto = {
   <li><a href="#data-import" id="toc-data-import" class="nav-link" data-scroll-target="#data-import"><strong>Data Import</strong></a></li>
   <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link" data-scroll-target="#data-wrangling"><strong>Data Wrangling</strong></a></li>
   <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><strong>Data Visualization</strong></a></li>
-  <li><a href="#pull-requests" id="toc-pull-requests" class="nav-link" data-scroll-target="#pull-requests"><strong>Pull requests</strong></a>
+  <li><a href="#pull-requests" id="toc-pull-requests" class="nav-link" data-scroll-target="#pull-requests"><strong>Pull Requests</strong></a>
   <ul class="collapse">
   <li><a href="#what-is-a-pull-request" id="toc-what-is-a-pull-request" class="nav-link" data-scroll-target="#what-is-a-pull-request">What is a pull request?</a></li>
   <li><a href="#how-to-make-a-pull-request" id="toc-how-to-make-a-pull-request" class="nav-link" data-scroll-target="#how-to-make-a-pull-request">How to make a pull request</a>
@@ -306,12 +277,14 @@ window.Quarto = {
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><strong>Summary</strong></a>
   <ul class="collapse">
   <li><a href="#synopsis" id="toc-synopsis" class="nav-link" data-scroll-target="#synopsis"><strong>Synopsis</strong></a></li>
-  <li><a href="#summary-plot" id="toc-summary-plot" class="nav-link" data-scroll-target="#summary-plot"><strong>Summary Plot</strong></a></li>
-  </ul></li>
-  <li><a href="#troubleshooting-git-and-github" id="toc-troubleshooting-git-and-github" class="nav-link" data-scroll-target="#troubleshooting-git-and-github"><strong>Troubleshooting Git and GitHub</strong></a>
+  <li><a href="#summary-activity" id="toc-summary-activity" class="nav-link" data-scroll-target="#summary-activity"><strong>Summary Activity</strong></a>
   <ul class="collapse">
+  <li><a href="#reconstruct-the-workflow" id="toc-reconstruct-the-workflow" class="nav-link" data-scroll-target="#reconstruct-the-workflow">Reconstruct the workflow</a></li>
+  </ul></li>
+  <li><a href="#summary-image" id="toc-summary-image" class="nav-link" data-scroll-target="#summary-image"><strong>Summary Image</strong></a></li>
   <li><a href="#main-questions-revisited" id="toc-main-questions-revisited" class="nav-link" data-scroll-target="#main-questions-revisited"><strong>Main Questions Revisited</strong></a></li>
   </ul></li>
+  <li><a href="#troubleshooting-git-and-github" id="toc-troubleshooting-git-and-github" class="nav-link" data-scroll-target="#troubleshooting-git-and-github"><strong>Troubleshooting Git and GitHub</strong></a></li>
   <li><a href="#continued-learning" id="toc-continued-learning" class="nav-link" data-scroll-target="#continued-learning"><strong>Continued Learning</strong></a>
   <ul class="collapse">
   <li><a href="#reinforcement-exercises" id="toc-reinforcement-exercises" class="nav-link" data-scroll-target="#reinforcement-exercises">Reinforcement Exercises</a></li>
@@ -370,7 +343,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3f2d5a3e170_0_38.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Workflow of this project using Git and GitHub" width="1250"></p>
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3f9c5fef626_0_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Motivation for using version control" width="1250"></p>
 </figure>
 </div>
 </div>
@@ -384,6 +357,14 @@ The disclaimer block, license block, and funding info generally will not need up
 Please update the access information (e.g., github link and data access)
 as well as any system or server requirements to work with the data
 -->
+<div class="disclaimer_box">
+<div class="disclaimer_box_header">
+<p>Disclaimer</p>
+</div>
+<div class="inner_block">
+<p>This case study is still getting reviewed by a team of experts. While it is complete and has undergone some review by experts, we are continuing to improve the case study. If you have any suggestions, please email us at bioOCS@fredhutch.org. This case study is scheduled to be finalized by October 19, 2026.</p>
+</div>
+</div>
 <div class="tabset-margin-container"></div><div class="panel-tabset frontmatter-tabs">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Disclaimer</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">License</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Funding</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Citation</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">GitHub Repository</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href="">Keywords</a></li></ul>
 <div class="tab-content frontmatter-tabs">
@@ -632,25 +613,45 @@ Don't adjust the shortcode or the table header in this file, only the markdown t
 <thead>
 <tr class="header">
 <th style="text-align: left;">Learning Goal</th>
-<th style="text-align: left;">Applications / Practice</th>
+<th style="text-align: left;">Explanation / Practice</th>
 <th style="text-align: left;">Location</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Term related to a learning objective</td>
-<td style="text-align: left;">Description of action or activity that will reinforce that LO</td>
-<td style="text-align: left;"><a href="https://www.opencasestudies.org/ocs-template-quarto/#data-import">Data Import</a></td>
+<td style="text-align: left;">Understand how version control facilitates reproducible science</td>
+<td style="text-align: left;">Learn what reproducibility means and how version control contributes to reproducible analyses</td>
+<td style="text-align: left;"><a href="https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github">Introduction to Git and GitHub</a></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Another term</td>
-<td style="text-align: left;">Description of its activity</td>
-<td style="text-align: left;"><a href="https://www.opencasestudies.org/ocs-template-quarto/#data-wrangling">Data Wrangling</a></td>
+<td style="text-align: left;">Understand how version control works</td>
+<td style="text-align: left;">Learn about how version control works in terms of differences between commits</td>
+<td style="text-align: left;"><a href="https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github">Introduction to Git and GitHub</a></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Another learning objective concept</td>
-<td style="text-align: left;">Another description of this one’s activity</td>
-<td style="text-align: left;"><a href="https://www.opencasestudies.org/ocs-template-quarto/#data-visualization">Data Visualization</a></td>
+<td style="text-align: left;">Create and make changes to a repository with Git and GitHub</td>
+<td style="text-align: left;">Create new repositories (both locally with Git and remotely with GitHub) and track changes over the course of an analysis</td>
+<td style="text-align: left;"><a href="https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github">Introduction to Git and GitHub</a>, <a href="https://www.opencasestudies.org/ocs-bio-version-control/#data-visualization">Data Visualization</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Make a pull request</td>
+<td style="text-align: left;">Open a pull request to propose changes to a codebase, practice requesting a review from a collaborator</td>
+<td style="text-align: left;"><a href="https://www.opencasestudies.org/ocs-bio-version-control/#pull-requests">Pull Requests</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Organize a repository</td>
+<td style="text-align: left;">Learn about why the files in this project are organized in this way, understand best practices in scientific project organization</td>
+<td style="text-align: left;"><a href="https://www.opencasestudies.org/ocs-bio-version-control/#scientific-project-organization">Scientific Project Organization</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Learn about meta-analyses</td>
+<td style="text-align: left;">Learn about what meta-analyses are, why they are used, and limitations to combining data from multiple studies.</td>
+<td style="text-align: left;"><a href="https://www.opencasestudies.org/ocs-bio-version-control/#context">Context</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Use visualizations to compare sampling designs</td>
+<td style="text-align: left;">Make plots to compare the sampling designs of the original studies used in the meta-analysis described in this case study</td>
+<td style="text-align: left;"><a href="https://www.opencasestudies.org/ocs-bio-version-control/#data-visualization">Data Visualization</a></td>
 </tr>
 </tbody>
 </table>
@@ -709,7 +710,7 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 -->
 </section>
 </section>
-<section id="introduction-to-git-and-github" class="level1 page-columns page-full">
+<section id="introduction-to-git-and-github" class="level1">
 <h1><strong>Introduction to Git and GitHub</strong></h1>
 <hr>
 <p>Before we start to address your project with Collab O. Rator, we will provide an introduction to version control with Git and GitHub. In this section, you will learn more about what Git and GitHub are, create a GitHub account, download Git software, and create your first version controlled project. Towards the end of this section we will return to the infant microbiome meta-analysis project.</p>
@@ -1432,12 +1433,9 @@ You may see examples in other Git tutorials using <code>git add .</code>, which 
 </div>
 </section>
 </section>
-<section id="branches" class="level2 page-columns page-full">
+<section id="branches" class="level2">
 <h2 class="anchored" data-anchor-id="branches">Branches</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Question: should we explain branches now while talking about Git and GitHub, or later (in data visualization) when we need them? I’m not sure whether to adhere to just in time teaching here (bring them up later on), or if it would be awkward to separate branches from the other Git and GitHub sections here.</p>
-</div></div><p>One useful feature of Git is the ability to make branches. A branch is a history of commits, and by default a repository that is tracked by Git starts with the “main” branch. Multiple branches provide parallel versions of the repository that can be developed separately. For example, you may have a version of your analysis and results in the main branch, but you want to experiment with changing a parameter. You could do this in a separate branch. This would let you work on the experimental version of your analysis while also having a stable version of your analysis elsewhere. You can switch between branches depending on what version of the analysis you want to work with on a given day. If you eventually decide that you want to move forward with the changed parameter, you can merge your experimental branch back into your main branch.</p>
+<p>One useful feature of Git is the ability to make branches. A branch is a history of commits, and by default a repository that is tracked by Git starts with the “main” branch. Multiple branches provide parallel versions of the repository that can be developed separately. For example, you may have a version of your analysis and results in the main branch, but you want to experiment with changing a parameter. You could do this in a separate branch. This would let you work on the experimental version of your analysis while also having a stable version of your analysis elsewhere. You can switch between branches depending on what version of the analysis you want to work with on a given day. If you eventually decide that you want to move forward with the changed parameter, you can merge your experimental branch back into your main branch.</p>
 <div class="definition_box">
 <div class="definition_box_header">
 <p>Merge</p>
@@ -1517,7 +1515,7 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 </section>
 </section>
 <section id="scientific-project-organization" class="level1">
-<h1><strong>Scientific project organization</strong></h1>
+<h1><strong>Scientific Project Organization</strong></h1>
 <hr>
 <div class="reproducibility_box">
 <div class="reproducibility_box_header">
@@ -1688,7 +1686,7 @@ See the following example from a previous case study: https://www.opencasestudie
 <p>There are also limitations of version control:</p>
 <ol type="1">
 <li>Git does not automatically make commits for you. Any work that you have locally that you have not staged and committed is not under version control. As a version control user, you need to make commits in order to create a record of changes over time.</li>
-<li>As described in the <strong>Scientific project organization</strong> section, version control is not ideal for large binary files.</li>
+<li>As described in the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#scientific-project-organization">scientific project organization section</a>, version control is not ideal for large binary files.</li>
 <li>Git and GitHub are currently the most widely used tools for version control, with extensive documentation and active development. However, like any software tool, their long-term availability is not guaranteed. While the principles of version control will remain integral to reproducible research, the specific technologies used to implement these principles may evolve over time.</li>
 </ol>
 <hr>
@@ -1791,7 +1789,7 @@ Answer
 </div>
 </div>
 </div>
-There are <span class="math inline">\(1499\)</span> observations and <span class="math inline">\(20\)</span> variables in the data frame.
+There are 1,499 observations and 20 variables in the data frame.
 </details>
 </div>
 </div>
@@ -1837,7 +1835,7 @@ Answer
 <pre><code>[1] 480</code></pre>
 </div>
 </div>
-<p>The earliest day that a participant was sampled after birth was <span class="math inline">\(0\)</span>, and the latest day was <span class="math inline">\(480\)</span>.</p>
+<p>The earliest day that a participant was sampled after birth was 0, and the latest day was 480.</p>
 </div>
 </details>
 </div>
@@ -1848,7 +1846,7 @@ Answer
 <h1><strong>Data Visualization</strong></h1>
 <hr>
 <p>We will now generate visualizations to compare the <button class="glossary"><span class="def">An analysis of data from a collection of studies targeting a common research question</span>meta-analysis</button> study cohorts.</p>
-<p>First, we will make sure that we are on the correct branch. We want to use a development branch for this analysis, which we will request to merge back into the main branch once the analysis is ready. We already created the branch “study_comparison” in the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#branches"><strong>Introduction to Git and GitHub</strong></a> section, so we just need to make sure that we are working on that branch.</p>
+<p>First, we will make sure that we are on the correct branch. We want to use a development branch for this analysis, which we will request to merge back into the main branch once the analysis is ready. We already created the branch “study_comparison” in the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#branches">introduction to Git and GitHub section</a>, so we just need to make sure that we are working on that branch.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-13-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-1" role="tab" aria-controls="tabset-13-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-13-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-2" role="tab" aria-controls="tabset-13-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
@@ -2343,7 +2341,7 @@ More information about this warning message.
 <hr>
 </section>
 <section id="pull-requests" class="level1">
-<h1><strong>Pull requests</strong></h1>
+<h1><strong>Pull Requests</strong></h1>
 <hr>
 <section id="what-is-a-pull-request" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-a-pull-request">What is a pull request?</h2>
@@ -2417,22 +2415,493 @@ Example pull request for this analysis
 <p>Along the way, you’ve also learned about the advantages and challenges of <button class="glossary"><span class="def">Analyses of data from a collection of studies targeting a common research question</span>meta-analyses</button> and best practices for scientific project organization.</p>
 <hr>
 </section>
-<section id="summary-plot" class="level2">
-<h2 class="anchored" data-anchor-id="summary-plot"><strong>Summary Plot</strong></h2>
-<p>This diagram provides a high-level overview of the steps that you took in this case study. While some of these will not always be necessary for all projects or follow this exact order, each of these steps represent parts of a version controlled project workflow and are important to understand.</p>
+<section id="summary-activity" class="level2">
+<h2 class="anchored" data-anchor-id="summary-activity"><strong>Summary Activity</strong></h2>
+<section id="reconstruct-the-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="reconstruct-the-workflow">Reconstruct the workflow</h3>
+<p>Drag each workflow block into the correct position below and click <strong>Check Answer</strong> or <strong>Reset</strong> to start over. This diagram provides a high-level overview of the steps that you took in this case study. While some of these will not always be necessary for all projects or follow this exact order, each of these steps represent parts of a version controlled project workflow and are important to understand.</p>
+<!-- html part of code, creates structure of activity -->
+<!-- creates board with dropzones, arrows, and empty placeholder divs -->
+<div class="workflow-grid">
+
+  <!-- Row 1 -->
+  <div class="dropzone" data-correct="receive-files"></div>
+
+  <div class="arrow">
+    <svg viewbox="0 0 100 40" width="60" height="24">
+      <line x1="5" y1="20" x2="80" y2="20" stroke="black" stroke-width="6" stroke-linecap="round"></line>
+      <polygon points="80,5 98,20 80,35" fill="black"></polygon>
+    </svg>
+  </div>
+
+  <div class="dropzone" data-correct="local-git"></div>
+
+  <div class="arrow">
+    <svg viewbox="0 0 100 40" width="60" height="24">
+      <line x1="5" y1="20" x2="80" y2="20" stroke="black" stroke-width="6" stroke-linecap="round"></line>
+      <polygon points="80,5 98,20 80,35" fill="black"></polygon>
+    </svg>
+  </div>
+
+  <div class="dropzone" data-correct="remote-github"></div>
+
+  <!-- Row 2 -->
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <div class="arrow top-down-arrow">
+    <svg viewbox="0 0 40 100" width="20" height="50">
+      <line x1="20" y1="5" x2="20" y2="80" stroke="black" stroke-width="6" stroke-linecap="round"></line>
+      <polygon points="5,80 20,98 35,80" fill="black"></polygon>
+    </svg>
+  </div>
+
+  <div></div>
+
+  <!-- Row 3 -->
+  <div class="dropzone" data-correct="readme"></div>
+
+  <div class="arrow">
+    <svg viewbox="0 0 100 40" width="60" height="24">
+      <line x1="95" y1="20" x2="20" y2="20" stroke="black" stroke-width="6" stroke-linecap="round"></line>
+      <polygon points="20,5 2,20 20,35" fill="black"></polygon>
+    </svg>
+  </div>
+
+  <div class="dropzone" data-correct="perform-analysis"></div>
+
+  <div class="arrow">
+    <svg viewbox="0 0 100 40" width="60" height="24">
+      <line x1="95" y1="20" x2="20" y2="20" stroke="black" stroke-width="6" stroke-linecap="round"></line>
+      <polygon points="20,5 2,20 20,35" fill="black"></polygon>
+    </svg>
+  </div>
+
+  <div class="dropzone" data-correct="make-branch"></div>
+
+  <!-- Row 4 -->
+  <div class="arrow">
+    <svg viewbox="0 0 40 100" width="20" height="50">
+      <line x1="20" y1="5" x2="20" y2="80" stroke="black" stroke-width="6" stroke-linecap="round"></line>
+      <polygon points="5,80 20,98 35,80" fill="black"></polygon>
+    </svg>
+  </div>
+
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <!-- Row 5 -->
+  <div class="dropzone" data-correct="push-remote"></div>
+
+  <div class="arrow">
+    <svg viewbox="0 0 100 40" width="60" height="24">
+      <line x1="5" y1="20" x2="80" y2="20" stroke="black" stroke-width="6" stroke-linecap="round"></line>
+      <polygon points="80,5 98,20 80,35" fill="black"></polygon>
+    </svg>
+  </div>
+
+  <div class="dropzone" data-correct="pull-request"></div>
+
+</div>
+
+<!-- creates empty card bank, to be filled with shuffled cards -->
+<div id="bank" class="bank"></div>
+
+<br>
+
+<!-- creates buttons to check answer and reset board -->
+<button id="check-btn">Check Answer</button>
+<button id="reset-btn">Reset</button>
+
+<div id="feedback"></div>
+
+<!-- JavaScript part of code, creates interactive features -->
+<!-- calls external library SortableJS to do drag-and-drop interaction -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+
+<script>
+
+// create cards, each with an id and a relative path to an image
+const cards = [
+  { id: "receive-files", img: "img/receive-files.png" },
+  { id: "local-git", img: "img/local-git.png" },
+  { id: "remote-github", img: "img/remote-github.png" },
+  { id: "make-branch", img: "img/make-branch.png" },
+  { id: "perform-analysis", img: "img/perform-analysis.png" },
+  { id: "readme", img: "img/readme.png" },
+  { id: "push-remote", img: "img/push-remote.png" },
+  { id: "pull-request", img: "img/pull-request.png" }
+];
+
+// function to shuffle the cards when they are put into the card bank 
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+// function to create card 
+function createCard(card) {
+
+  const div = document.createElement("div");
+
+  div.className = "card";
+  div.dataset.id = card.id;
+
+  const img = document.createElement("img");
+
+  img.src = card.img;
+  img.alt = card.id;
+  
+  div.appendChild(img);
+
+  return div;
+}
+
+// function to reset all elements, shuffle cards in bank and clear dropzones 
+function setupBoard() {
+
+  const bank = document.getElementById("bank");
+
+  bank.innerHTML = "";
+
+  document
+    .querySelectorAll(".dropzone")
+    .forEach(z => {
+      z.innerHTML = "";
+      z.classList.remove(
+        "correct",
+        "incorrect"
+      );
+    });
+
+  const shuffled = [...cards];
+
+  shuffle(shuffled);
+
+  shuffled.forEach(card => {
+    bank.appendChild(createCard(card));
+  });
+
+}
+
+// initialize drag-and-drop 
+window.addEventListener("load", function() {
+
+  setupBoard();
+
+  Sortable.create(
+    document.getElementById("bank"),
+    {
+      group: "workflow",
+      animation: 150
+    }
+  );
+
+  document
+    .querySelectorAll(".dropzone")
+    .forEach(zone => {
+
+      Sortable.create(zone, {
+        group: "workflow",
+        animation: 150,
+        
+        onAdd(event) {
+
+          const zone = event.to;
+      
+          if (zone.children.length > 1) {
+      
+            document
+              .getElementById("bank")
+              .appendChild(zone.firstElementChild);
+      
+          }
+        }
+      });
+    });
+});
+
+// event handler, to check all dropzones to see if correct or incorrect 
+document
+.getElementById("check-btn")
+.addEventListener("click", () => {
+
+  let correct = 0;
+
+  const zones =
+    document.querySelectorAll(".dropzone");
+
+  zones.forEach(zone => {
+
+    zone.classList.remove(
+      "correct",
+      "incorrect"
+    );
+
+    const card =
+      zone.querySelector(".card");
+
+    if(!card) {
+
+      zone.classList.add("incorrect");
+      return;
+
+    }
+
+    if(
+      card.dataset.id ===
+      zone.dataset.correct
+    ) {
+
+      correct++;
+      zone.classList.add("correct");
+
+    } else {
+
+      zone.classList.add("incorrect");
+
+    }
+
+  });
+
+  const feedback =
+    document.getElementById("feedback");
+
+  const total = cards.length;
+  
+  if (correct === total) {
+    feedback.innerHTML = "<p class='pass'>Perfect! All " + total +
+      " positions are correct.</p>";
+  } else {
+    feedback.innerHTML =
+      "<p class='fail'>" + correct + "/" + total +
+      " positions are correct. Continue adjusting the workflow.</p>";
+  }
+
+});
+
+// event handler, to reset the board 
+document
+.getElementById("reset-btn")
+.addEventListener("click", () => {
+
+  document
+    .getElementById("feedback")
+    .innerHTML = "";
+
+  setupBoard();
+
+});
+
+</script>
+
+<!-- CSS part of code, controls layout and style -->
+<style>
+
+/* Set up dimensions of cards and images */
+:root {
+  --card-width: 180px;
+  --card-height: 130px;
+}
+
+/* Set up workflow layout with grid */
+.workflow-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    var(--card-width) 40px var(--card-width) 40px var(--card-width);
+
+  gap: 16px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 40px;
+}
+
+.dropzone {
+
+  width: var(--card-width);
+  height: var(--card-height);
+
+  border: 3px dashed #bdbdbd;
+  border-radius: 12px;
+
+  background: #fafafa;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Create arrows */
+.arrow {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-down-arrow {
+  transform: translateX(135px);
+}
+
+/* Set up layout of card bank */
+.bank {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, var(--card-width));
+
+  gap: 12px;
+
+  justify-content: center;
+
+  margin-top: 20px;
+}
+
+/* Set up each card */
+.card {
+
+  width: var(--card-width);
+  height: var(--card-height);
+
+  border: none;
+  border-radius: 0;
+
+  background: transparent;
+
+  overflow: hidden;
+
+  cursor: grab;
+}
+
+/* Control how image will look within card */
+.card img {
+
+  width: 95%;
+  height: 95%;
+
+  object-fit: contain;
+  
+  display: block;
+  margin: auto;
+}
+
+/* Style for correct boxes after checking */
+.correct {
+
+  border: 4px solid #26734d;
+  background: #eef8f1;
+}
+
+/* Style for incorrect boxes after checking */
+.incorrect {
+
+  border: 4px solid #b22222;
+  background: #fff0f0;
+}
+
+/* Style if all cards are in correct order */
+.pass {
+
+  color: #26734d;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Style if some cards in incorrect order */
+.fail {
+
+  color: #b22222;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Style for buttons to check answers and reset board */
+button {
+
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+#feedback {
+
+  margin-top: 20px;
+}
+
+</style>
+
+</section>
+</section>
+<section id="summary-image" class="level2">
+<h2 class="anchored" data-anchor-id="summary-image"><strong>Summary Image</strong></h2>
+<p>Now that you’ve reconstructed the version control workflow from this case study, recall the motivation for version control.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3f2d5a3e170_0_38.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Workflow of this project using Git and GitHub" width="1250"></p>
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3f9c5fef626_0_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Motivation for using version control" width="1250"></p>
 </figure>
 </div>
 </div>
 </div>
+<hr>
 <!--
-construct a plot here that summarizes the conclusions found in the data, if applicable
-(connecting to a main question if possible)
+Don't adjust the shortcode or the table header in this file, only the markdown table contents
 -->
+</section>
+<section id="main-questions-revisited" class="level2">
+<h2 class="anchored" data-anchor-id="main-questions-revisited"><strong>Main Questions Revisited</strong></h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Main Questions Revisited: What Did We Learn">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Main Questions Revisited: What Did We Learn
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Question</th>
+<th style="text-align: left;">Current answer</th>
+<th style="text-align: left;">Caveat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">How does the use of version control contribute to transparent and reproducible science?</td>
+<td style="text-align: left;">As we describe in the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github">introduction to Git and GitHub section</a>, version control provides a full history of a project, showing who made which changes and when. Additionally, commit messages and pull request descriptions explain why changes were made. Version control also provides an easy way to make a public online code repository for a project.</td>
+<td style="text-align: left;">Versions of a project are only tracked when the user manually makes a commit, changes are not automatically tracked. Commit messages and pull request descriptions are only useful when they are concise and meaningful.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">How can Git and GitHub be used to facilitate collaboration on a research project?</td>
+<td style="text-align: left;">GitHub provides a central location to store the files for a project, and collaborators can pull changes to their local repository, make updates, and push changes back to the remote repository. An individual can suggest a series of changes through a pull request (see the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#pull-requests">pull request section</a> for more information), and request a code review from a collaborator before merging the changes into the main branch of the repository.</td>
+<td style="text-align: left;">It is important for collaborators to pull before they begin work locally, otherwise they will likely create merge conflicts (see the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github">troubleshooting section</a> for advice for working through merge conflicts). The careful use of branches will let collaborators work on different aspects of projects at different times and help organize work to be reviewed in pull requests. More information about branches can be found in the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#branches">branches section</a>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">In this meta-analysis of infant git microbiome samples, how do the original studies compare in their sampling designs?</td>
+<td style="text-align: left;">From the plots created in the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#data_visualization">data visualization section</a>, we can identify major differences across studies in terms of number of samples, proportion of samples from infants versus mothers, and different times at which samples were collected from infants and from mothers.</td>
+<td style="text-align: left;">As described in the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#limitations">limitations section</a>, the sampling date is measured differently in different studies, and there are other potentially relevant study characteristics that we don’t consider in this analysis.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 <hr>
 </section>
 </section>
@@ -2637,59 +3106,6 @@ I’ve accidentally committed a large file and when I try to push I get an error
 <li><p>Recognize that you may need to iteratively improve your prompt to reach the desired output.</p></li>
 </ul>
 </div></div><hr>
-<!--
-Don't adjust the shortcode or the table header in this file, only the markdown table contents
--->
-<section id="main-questions-revisited" class="level2">
-<h2 class="anchored" data-anchor-id="main-questions-revisited"><strong>Main Questions Revisited</strong></h2>
-<div class="callout callout-style-default callout-note callout-titled" title="Main Questions Revisited: What Did We Learn">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Main Questions Revisited: What Did We Learn
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 32%">
-<col style="width: 38%">
-<col style="width: 29%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Question</th>
-<th style="text-align: left;">Current answer</th>
-<th style="text-align: left;">Caveat</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Reiteration or restatement of main question</td>
-<td style="text-align: left;">Describe the answer based on case study activities</td>
-<td style="text-align: left;">List any important caveats potentially connecting to earlier limitations</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Another main question</td>
-<td style="text-align: left;">Description of its activity</td>
-<td style="text-align: left;">Caveats for this Q &amp; A</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Another of the main questions</td>
-<td style="text-align: left;">Another description of this one’s activity</td>
-<td style="text-align: left;">Q &amp; A specific caveats</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<hr>
-</section>
 </section>
 <section id="continued-learning" class="level1">
 <h1><strong>Continued Learning</strong></h1>
@@ -2984,7 +3400,7 @@ Wang, Shaopu, Shuqin Zeng, Muireann Egan, Paul Cherry, Conall Strain, Emilene Mo
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       Etc/UTC
- date     2026-08-11
+ date     2026-09-01
  pandoc   3.1.1 @ /usr/local/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────
