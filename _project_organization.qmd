@@ -2,7 +2,7 @@
 Project organization (similar to "Dashboard Basics" section in school shootings OCS)
 -->
 
-# **Scientific project organization**
+# **Scientific Project Organization**
 ***
 
 :::{.reproducibility_box}
