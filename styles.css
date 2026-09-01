@@ -244,6 +244,7 @@
 
 .outline img {
   display: block;
+  vertical-align: middle;
 }
 
 .blue-outline {
