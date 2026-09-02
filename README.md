@@ -1,4 +1,4 @@
-# Biomedical Open Case Studies: Making version controlled reproducible analyses
+# Biomedical Open Case Studies: Making Version Controlled Reproducible Analyses
 
 ### Useful Links
 
@@ -44,7 +44,7 @@ Avatars are from [getavataaars](https://getavataaars.com).
 
 ### Title
 
-Making version controlled reproducible analyses
+Making Version Controlled Reproducible Analyses
 
 ### Prerequisites
 
