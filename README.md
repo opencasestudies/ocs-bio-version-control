@@ -155,7 +155,7 @@ Package    | Use
 
 ### Data Import
 
-In this section, we ask the learner to open the file in their repository that laods data, run the file, and answer a question about the dataset. 
+In this section, we ask the learner to open the file in their repository that loads data, run the file, and answer a question about the dataset. 
 
 ### Data Wrangling
 
@@ -164,11 +164,11 @@ In this section, we ask the learner to open the file in their repository that wr
 ### Data Visualization
 
 In this section, we guide the learner through creating two plots to compare the designs of the studies included in the meta-analysis. After each update, 
-the learner documents changes in the README document and stages and commits their changes. Finally, they push their updates to the remote repository.
+the learner documents changes in the README document, and stages and commits their changes. Finally, they push their updates to the remote repository.
 
 ### Pull Requests
 
-In this section, we describe what a pull request is and why it is useful, and prompt the learner to create a pull request with their plots and analysis. 
+In this section, we describe what a pull request is and why it is useful, and prompt the learner to create a pull request with their plots and analysis and a request for code review. 
 
 ### Summary 
 
@@ -185,7 +185,7 @@ It also provides guidance on using AI for troubleshooting Git and GitHub.
 
 This section provides suggestions to reinforce version control skills by making other scientific project folders into version-controlled repositories, 
 adding additional branches to their analysis from the case study, and adding collaborators to repositories. This section also introduces the concept of forking,
-and guides the learner in forking a repository with files for their analysis, adding in the plots they made in the case study, and opening a pull request from their
+and guides the learner in forking a repository with files for this case study analysis, adding in the plots they made, and opening a pull request from their
 fork. 
 
 ### Other notes and resources
