@@ -104,7 +104,7 @@ In this case study, we examine several studies that have collected longitudinal 
 understand how the infant gut microbiome develops over time and how it relates to the maternal microbiome. 
 
 A meta-analysis combines data or results from multiple studies investigating a common research question. The scientific
-paper that reference performed a meta-analysis of eight longitudinal gut microbiome studies. In the case study, we ask how comparable
+paper that we reference performed a meta-analysis of eight longitudinal gut microbiome studies. In the case study, we ask how comparable
 the original studies in their study design, specifically in terms of their sample sizes and longitudinal sampling designs.
 
 ### Introduction to Git and GitHub
