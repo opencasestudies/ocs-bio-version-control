@@ -100,7 +100,7 @@ The learning objectives of this case study are the following:
 ### Context 
 
 A microbiome is a collection of microorganisms that live in a particular environment. One commonly studied microbiome is the human gut microbiome. 
-In this case study, we examine data from several studies that have collected longitudinal gut microbiome samples from infant-mother pairs in order to
+In this case study, we examine several studies that have collected longitudinal gut microbiome samples from infant-mother pairs in order to
 understand how the infant gut microbiome develops over time and how it relates to the maternal microbiome. 
 
 A meta-analysis combines data or results from multiple studies investigating a common research question. The scientific
