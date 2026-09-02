@@ -1,7 +1,9 @@
-#### {.outline }
 
+
+:::{.outline }
 ```{r, fig.alt="Motivation for using version control", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f9c5fef626_0_3&pli=1#slide=id.g3f9c5fef626_0_3")
 ```
+:::
 
-####
+
