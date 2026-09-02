@@ -250,6 +250,13 @@
     font-size: 0;         /* helps reduce space below image */
 }
 
+outline .anchor {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 0 !important;
+}
+
 .outline img {
     display: block;
     /* Forces smaller images to stretch and larger images to shrink */
