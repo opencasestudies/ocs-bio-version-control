@@ -1,4 +1,4 @@
-# Biomedical Open Case Studies: Making version controlled reproducible analyses
+# Biomedical Open Case Studies: Making Version Controlled Reproducible Analyses
 
 ### Useful Links
 
@@ -20,7 +20,7 @@ datasets used within a case study may be a subset of the original/full dataset.
 
 ### License
 
-This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 [(CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/deed.en){target="_blank"}  United States License unless otherwise noted.
+This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 [(CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/deed.en) United States License unless otherwise noted.
 
 ### Citation
 
@@ -44,7 +44,7 @@ Avatars are from [getavataaars](https://getavataaars.com).
 
 ### Title
 
-Making version controlled reproducible analyses
+Making Version Controlled Reproducible Analyses
 
 ### Prerequisites
 
@@ -100,11 +100,11 @@ The learning objectives of this case study are the following:
 ### Context 
 
 A microbiome is a collection of microorganisms that live in a particular environment. One commonly studied microbiome is the human gut microbiome. 
-In this case study, we examine data from several studies that have collected longitudinal gut microbiome samples from infant-mother pairs in order to
+In this case study, we examine several studies that have collected longitudinal gut microbiome samples from infant-mother pairs in order to
 understand how the infant gut microbiome develops over time and how it relates to the maternal microbiome. 
 
 A meta-analysis combines data or results from multiple studies investigating a common research question. The scientific
-paper that reference performed a meta-analysis of eight longitudinal gut microbiome studies. In the case study, we ask how comparable
+paper that we reference performed a meta-analysis of eight longitudinal gut microbiome studies. In the case study, we ask how comparable
 the original studies in their study design, specifically in terms of their sample sizes and longitudinal sampling designs.
 
 ### Introduction to Git and GitHub
@@ -112,7 +112,7 @@ the original studies in their study design, specifically in terms of their sampl
 We provide an explanation of how reproducibility fits into the scientific process and how version control facilitates reproducible analyses.
 We describe Git and GitHub and how they work together. We guide the learner through creating a GitHub account and their first GitHub repository. 
 We next walk through installing Git locally and connecting Git and GitHub to each other. The learner makes a local clone of their first GitHub repo, 
-and works through the staging, commiting, pushing, and pulling process. We then have the learner download a folder of files related to the microbiome
+and works through the staging, committing, pushing, and pulling process. We then have the learner download a folder of files related to the microbiome
 meta-analysis study design comparison, and have them track the folder locally with Git and make a remote version on GitHub. Finally, we discuss
 branches and have the learner make a new branch for their analysis. 
 
@@ -123,7 +123,7 @@ files to track with Git and .gitignore files, and working with large files.
 
 ### What are the Data?
 
-In this case study, we will investigate data about samples from [this meta-analysis](https://www.tandfonline.com/doi/full/10.1080/19490976.2021.1911571) of mother and infant gut {{< glossary "microbiome">}} studies. Wang et al. identified a set of eight studies that collected mother and infant gut microbiome samples over time and performed metagenomic sequencing. These studies collectively include 1,496 samples. The variables that we will use to answer our questions include:
+In this case study, we will investigate data about samples from [this meta-analysis](https://www.tandfonline.com/doi/full/10.1080/19490976.2021.1911571) of mother and infant gut microbiome studies. Wang et al. identified a set of eight studies that collected mother and infant gut microbiome samples over time and performed metagenomic sequencing. These studies collectively include 1,496 samples. The variables that we will use to answer our questions include:
 
 Variable | Details
 -------- | -------
@@ -147,15 +147,15 @@ We describe several ethical considerations of working with version control, incl
 Package    | Use
 ---------- |-------------
 [here](https://here.r-lib.org) | To construct file paths within folders
-[readxl](https://readxl.tidyverse.org){target="_blank"}      | To read excel files into R
-[dplyr](https://dplyr.tidyverse.org){target="_blank"}      | To combine and manipulate data tables
+[readxl](https://readxl.tidyverse.org)     | To read excel files into R
+[dplyr](https://dplyr.tidyverse.org)    | To combine and manipulate data tables
 [ggplot2](https://ggplot2.tidyverse.org) | To visualize data
 [stringr](https://stringr.tidyverse.org) | To manipulate strings
 
 
 ### Data Import
 
-In this section, we ask the learner to open the file in their repository that laods data, run the file, and answer a question about the dataset. 
+In this section, we ask the learner to open the file in their repository that loads data, run the file, and answer a question about the dataset. 
 
 ### Data Wrangling
 
@@ -164,11 +164,11 @@ In this section, we ask the learner to open the file in their repository that wr
 ### Data Visualization
 
 In this section, we guide the learner through creating two plots to compare the designs of the studies included in the meta-analysis. After each update, 
-the learner documents changes in the README document and stages and commits their changes. Finally, they push their updates to the remote repository.
+the learner documents changes in the README document, and stages and commits their changes. Finally, they push their updates to the remote repository.
 
 ### Pull Requests
 
-In this section, we describe what a pull request is and why it is useful, and prompt the learner to create a pull request with their plots and analysis. 
+In this section, we describe what a pull request is and why it is useful, and prompt the learner to create a pull request with their plots and analysis and a request for code review. 
 
 ### Summary 
 
@@ -185,7 +185,7 @@ It also provides guidance on using AI for troubleshooting Git and GitHub.
 
 This section provides suggestions to reinforce version control skills by making other scientific project folders into version-controlled repositories, 
 adding additional branches to their analysis from the case study, and adding collaborators to repositories. This section also introduces the concept of forking,
-and guides the learner in forking a repository with files for their analysis, adding in the plots they made in the case study, and opening a pull request from their
+and guides the learner in forking a repository with files for this case study analysis, adding in the plots they made, and opening a pull request from their
 fork. 
 
 ### Other notes and resources
