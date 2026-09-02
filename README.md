@@ -1,90 +1,204 @@
-# Bio-OCS Quarto Template
+# Biomedical Open Case Studies: Making version controlled reproducible analyses
 
-This is a template for creating websites from qmd files hosted on GitHub with three helpful automations following a pull request to the repository:
+### Useful Links
 
-- Spelling check
-- Broken link check
-- Website rendering.
+-   HTML: <https://www.opencasestudies.org/ocs-bio-version-control/>
+-   GitHub:
+    <https://github.com/opencasestudies/ocs-bio-version-control>
 
-This is all supported by the OTTR Template, specifically the [OTTR Quarto Web](https://github.com/ottrproject/OTTR_Quarto_Website) version.
+### Disclaimer
 
-- Check for spelling errors more intensively than RStudio and allow you to add words to the dictionary
-- Check for broken links - you will be warned about broken links
-- Automatic rendering of the website for previewing before merges
-- Automatic rendering of the website upon merging to main
-- Docker images that can be customized.
+The purpose of the [Open Case
+Studies](https://opencasestudies.github.io) project is **to demonstrate
+the use of various data science methods, tools, and software in the
+context of messy, real-world data**. A given case study does not cover all 
+aspects of the research process, is not claiming to be the most appropriate 
+way to analyze a given data set, and should not be used in the context of 
+making policy or clinical decisions without external consultation from scientific 
+experts or medical care professionals. In addition, due to size constraints, 
+datasets used within a case study may be a subset of the original/full dataset.
 
-This specific template sets up the style and content template for Biomedical Open Case Studies (Bio-OCS).
+### License
 
-## Repository Structure + Checklist for files to update when using the template
+This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 [(CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/deed.en){target="_blank"}  United States License unless otherwise noted.
 
-### Style and Configuration
+### Citation
 
-* _quarto.yml -- Configurations for how the rendered website will look.
-  * [x] Update the title on line 6
-  * [x] Replace the Google analytics tracking ID ("G-XXXXXXXXXX") with the appropriate Bio_OCS case study specific tracking ID on line 17
-  * [x] Update the GitHub Repository link to point to the specific open case studies repository instead of the template
-    * [x] line 11
-    * [x] line 28
+To cite this case study:
 
-The rest of these files will largely not need updated though a brief description of what each contains is provided.
+Teichman, Sarah and Wright, Carrie. (2026). [https://github.com/opencasestudies/ocs-bio-version-control/](https://github.com/opencasestudies/ocs-bio-version-control/). Making version-controlled reproducible analyses (Version v1.0.0).
 
-* styles.css -- Defines html elements
-* _brand.yml -- Logo and favicon definition
-* config_automation.yml	-- Configurations for the OTTR Template automations. Update this file to toggle spelling or url check as well as minimum errors allowed for those checks or to update the docker image.
+### Funding
 
-### Directories
+This work is funded through the National Institutes of Health, specifically the National Institute of General Medical Sciences: Grant Number 1R25GM160622.
 
-* `data/`: Raw, imported, and wrangled datasets. `raw/pm25_data.csv`, `imported/pm25_data_imported.rda`, and `wrangled_data.csv` are template files that can be removed or overwritten by case study repositories.
-* `assets/`: Template images such as the logo or icons.
-* `img/`: This is where images should go for the case study background, motivation, etc.
-  - [x] Replace the `mainplot.png` from the template with your main plot
-  - [x] Add any additional case study specific (non-template) images in this directory
-* `resources/`: Files related to OTTR checks (e.g., dictionary and a file of URLs to exclude/ignore from checking.).
-* `.github/`: workflow files supporting the OTTR template automations
-* `docs/`: the rendered files that GitHub pages will use -- refreshed through OTTR template automations.
+### Acknowledgments
+
+We would like to acknowledge [Candace Savonen](https://www.cansavvy.com), [Casey Greene](https://greenelab.com/members/casey-greene.html), [Emma Lathouwers](https://greenelab.com/members/emma-lathouwers.html), and [Taylor Reiter](https://taylorreiter.github.io) for their expert review of this case study.
+
+We would also like to acknowledge the National Institute of General Medical Sciences for funding this work (1R25GM160622).
+
+Icons are from [iconpacks](https://www.iconpacks.net).
+
+Avatars are from [getavataaars](https://getavataaars.com).
+
+### Title
+
+Making version controlled reproducible analyses
+
+### Prerequisites
+
+To follow along with this case study, you'll need the following installed:
+
+- R ([install here](https://www.r-project.org))
+- RStudio ([install here](https://posit.co/download/rstudio-desktop)) or Positron ([install here](https://positron.posit.co/install.html)) or another IDE compatible with R
+
+It will also be helpful to be have the following skills:
+
+- basic R skills (many introductory courses can be found online, including [this one](https://hutchdatascience.org/Intro_to_R/))
+- familiarity with `dplyr` and `ggplot2`, or willingness to learn (these [`dplyr`](https://rstudio.github.io/cheatsheets/data-transformation.pdf) and [`ggplot2`](https://rstudio.github.io/cheatsheets/data-visualization.pdf) cheatsheets may be helpful, as well as the original [open case studies](https://www.opencasestudies.org/search.html))
+
+You do not need to have any previous Git and GitHub knowledge or experience for this case study. 
+
+### Target Audience
+
+The target audience for this case study is scientists and researchers who use R but do not use version control.
+
+### Motivation
+
+This case study introduces version control in the context of a realistic collaborative scientific project. 
+Using a meta-analysis of infant gut microbiome studies as an example, learners work through a preliminary 
+data analysis while managing a version-controlled research workflow with Git and GitHub. This case study teaches
+what version control is and the role it plays in collaborative and reproducible science, and gives the learner 
+practice in created a version-controlled repository and tracking changes to an analysis using Git and GitHub. 
+
+### Main Questions
+
+The main questions in this case study are the following:
+
+1. How does the use of version control contribute to transparent and reproducible science?
+1. How can Git and GitHub be used to facilitate collaboration on a research project?
+1. In this meta-analysis of infant git microbiome samples, how do the original studies compare in their sampling designs?
+
+### Learning Objectives
+
+The learning objectives of this case study are the following:
+
+<u>**Data Science Learning Objectives**</u>
+
+1. Understand ways in which version control facilitates reproducible science
+1. Understand how version control works by recording differences between versions of a project
+1. Follow a workflow to create and make changes to a repository with Git and GitHub
+1. Make pull requests to propose changes to a codebase and request review from a collaborator
+1. Organize a repository for a project with a README file and folders for data, figures, and results
+
+<u>**Biological/Bioinformatics Objectives:**</u>
+
+1. Understand the value and limitations of combining data from multiple studies in a meta-analysis.
+1. Use visualizations to compare sampling designs across a set of studies. 
+
+### Context 
+
+A microbiome is a collection of microorganisms that live in a particular environment. One commonly studied microbiome is the human gut microbiome. 
+In this case study, we examine data from several studies that have collected longitudinal gut microbiome samples from infant-mother pairs in order to
+understand how the infant gut microbiome develops over time and how it relates to the maternal microbiome. 
+
+A meta-analysis combines data or results from multiple studies investigating a common research question. The scientific
+paper that reference performed a meta-analysis of eight longitudinal gut microbiome studies. In the case study, we ask how comparable
+the original studies in their study design, specifically in terms of their sample sizes and longitudinal sampling designs.
+
+### Introduction to Git and GitHub
+
+We provide an explanation of how reproducibility fits into the scientific process and how version control facilitates reproducible analyses.
+We describe Git and GitHub and how they work together. We guide the learner through creating a GitHub account and their first GitHub repository. 
+We next walk through installing Git locally and connecting Git and GitHub to each other. The learner makes a local clone of their first GitHub repo, 
+and works through the staging, commiting, pushing, and pulling process. We then have the learner download a folder of files related to the microbiome
+meta-analysis study design comparison, and have them track the folder locally with Git and make a remote version on GitHub. Finally, we discuss
+branches and have the learner make a new branch for their analysis. 
+
+### Scientific Project Organization
+
+We include a section on recommendations for scientific project organization. This includes file and folder organization, README documents,
+files to track with Git and .gitignore files, and working with large files. 
+
+### What are the Data?
+
+In this case study, we will investigate data about samples from [this meta-analysis](https://www.tandfonline.com/doi/full/10.1080/19490976.2021.1911571) of mother and infant gut {{< glossary "microbiome">}} studies. Wang et al. identified a set of eight studies that collected mother and infant gut microbiome samples over time and performed metagenomic sequencing. These studies collectively include 1,496 samples. The variables that we will use to answer our questions include:
+
+Variable | Details
+-------- | -------
+**Study** | Original study the sample comes from 
+**SampleID** | ID for sample
+**PersonID** | ID for participant the sample came from
+**Category** | Either "mother" or "infant"
+**Sampling from papers** | Sampling time frame described in paper 
+**Sampling, day** | Day after birth that the sample was collected on
+
+### Limitations
+
+We describe limitations of this data, as well as limitations of version control (including the need to make commits, challenges of version control with large files, and the future evolution of version control software).
+
+### Ethical Considerations
+
+We describe several ethical considerations of working with version control, including taking care to not include PII or PHI in online repositories. 
+
+### Packages used in this case study
+
+Package    | Use
+---------- |-------------
+[here](https://here.r-lib.org) | To construct file paths within folders
+[readxl](https://readxl.tidyverse.org){target="_blank"}      | To read excel files into R
+[dplyr](https://dplyr.tidyverse.org){target="_blank"}      | To combine and manipulate data tables
+[ggplot2](https://ggplot2.tidyverse.org) | To visualize data
+[stringr](https://stringr.tidyverse.org) | To manipulate strings
 
 
-### Content
+### Data Import
 
-For the overall content of the Open Case Study, each portion of the case study is split into individual `.qmd` files. They are included in order within the `index.qmd` file. Certain case studies will not have every component, and so we can toggle those on and off using short code and header booleans.  This is mostly for others using our case studies to teach, as they might want to have a version that only has part of the case study.  For our core team, we will likely have all components for our case studies. Below is a list of all of the sub-component `.qmd` files in checklist form. Besides the listed changes below, `index.qmd` should not need updated.
+In this section, we ask the learner to open the file in their repository that laods data, run the file, and answer a question about the dataset. 
 
-* [x] `index.qmd`
-  * [x] Update Case Study Title
-  * [x] Update any header booleans for section inclusion or add additional short code content-hidden sections as necessary
-* [x] _main_image.qmd
-  * Provides an example of including images with Quarto
-  * [x] switch out `mainplot.png` within the `img` directory to be the case study main plot.
-* [x] _ocs_frontmatter.qmd
-* [x] _cite.qmd
-* [x] _motivation.qmd
-  * Provides an example of including images with Quarto (including those that you can click to open in a larger preview)
-  * Provides an example of a custom definition box
-* [x] _main_question.qmd
-* [x] _los.qmd
-  * [x] _data_science_los.qmd
-  * [x] _statistical_los.qmd
-  * [x] _biological_los.qmd
-* [x] _packages.qmd
-* [x] _context.qmd
-  * Provides an example of including a video with Quarto
-* [x] _data_description.qmd
-* [x] _limitations.qmd
-* [x] _bioethics.qmd
-* [x] _data_import.qmd
-* [x] _data_exploration.qmd
-* [x] _data_wrangling.qmd
-  * Provides an example of including code annotations with Quarto
-* [x] _data_visualization.qmd
-* [x] _data_analysis.qmd
-  * Provides an example of using a column margin note with Quarto
-  * Provides an example of a custom question opportunity box
-* [x] _summary.qmd
-* [x] _suggested_hw.qmd
-* [x] _additional_info.qmd
-* [x] _acknowledgements.qmd
+### Data Wrangling
 
-* [x] **Verify**
-  * [x] Every image ....
-    * [x] has accompanying alt text (using `{fig-alt=""}`)
-    * [x] has lightbox capability enabled (using `{.lightbox}`) so that images can be opened in a larger preview
+In this section, we ask the learner to open the file in their repository that wrangles data, run the file, and answer a question about the wrangled data.
+
+### Data Visualization
+
+In this section, we guide the learner through creating two plots to compare the designs of the studies included in the meta-analysis. After each update, 
+the learner documents changes in the README document and stages and commits their changes. Finally, they push their updates to the remote repository.
+
+### Pull Requests
+
+In this section, we describe what a pull request is and why it is useful, and prompt the learner to create a pull request with their plots and analysis. 
+
+### Summary 
+
+This section summarizes the case study, gives the learner a chance to drag and drop elements of their version controlled workflow from the case study into the correct order,
+emphasizing major steps along the way. This section also includes the main image, reminding the learner of the motivation for using version control instead of emailing project 
+files back and forth with collaborators.
+
+### Troubleshooting Git and GitHub
+
+This section provides guidance for dealing with merge conflicts, stopping version control for specific files, and for mistakenly committing large files.
+It also provides guidance on using AI for troubleshooting Git and GitHub.
+
+### Continued Learning
+
+This section provides suggestions to reinforce version control skills by making other scientific project folders into version-controlled repositories, 
+adding additional branches to their analysis from the case study, and adding collaborators to repositories. This section also introduces the concept of forking,
+and guides the learner in forking a repository with files for their analysis, adding in the plots they made in the case study, and opening a pull request from their
+fork. 
+
+### Other notes and resources
+
+- [happy git with R](https://happygitwithr.com): online book that covers most relevant topics for using Git and GitHub with R
+- [How to Use Git/GitHub with R](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r): blog post about getting Git and GitHub set up and working with RStudio. This uses the built-in Git GUI in RStudio instead of GitHub Desktop
+- [Dangit, Git!?!](https://dangitgit.com/en): brief description of some common Git errors and how to resolve them
+- [Intro to reproducibility in cancer informatics](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/): short course on reproducibility for scientific projects, includes Git and GitHub in chapter 4 and provides other resources on reproducibility
+- [Advanced reproducibility in cancer informatics](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/): short course on more advanced reproducibility for scientific projects, includes GitHub in chapter 3 and provides other resources on reproducibility
+- [Carpentries](https://carpentries.org):
+  - [Install Git](https://carpentries.github.io/workshop-template/install_instructions/): instructions on installing Git (and other types of software)
+  - [Set up Git](https://swcarpentry.github.io/git-novice/02-setup.html): instructions on setting up Git
+  - [Build on existing branch](https://docs.carpentries.org/resources/curriculum/fetch-existing-branch.html): instructions on how to work from a branch on someone else's fork of a repository 
+- [Hands on introduction to Git and GitHub](https://training.arcadiascience.com/workshops/20220920-intro-to-git-and-github/lesson/): another introduction to Git and GitHub, covering some overlapping material and some additional material
+- [Contributing to Galaxy Training Network with GitHub](https://training.galaxyproject.org/training-material/topics/contributing/tutorials/github-contribution/tutorial.html): tutorial on how to contribute to an open source project with GitHub
+- [GitHub cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf): cheatsheet with Git commands that can be used in the command line
