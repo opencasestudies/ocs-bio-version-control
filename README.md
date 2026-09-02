@@ -112,7 +112,7 @@ the original studies in their study design, specifically in terms of their sampl
 We provide an explanation of how reproducibility fits into the scientific process and how version control facilitates reproducible analyses.
 We describe Git and GitHub and how they work together. We guide the learner through creating a GitHub account and their first GitHub repository. 
 We next walk through installing Git locally and connecting Git and GitHub to each other. The learner makes a local clone of their first GitHub repo, 
-and works through the staging, commiting, pushing, and pulling process. We then have the learner download a folder of files related to the microbiome
+and works through the staging, committing, pushing, and pulling process. We then have the learner download a folder of files related to the microbiome
 meta-analysis study design comparison, and have them track the folder locally with Git and make a remote version on GitHub. Finally, we discuss
 branches and have the learner make a new branch for their analysis. 
 
@@ -123,7 +123,7 @@ files to track with Git and .gitignore files, and working with large files.
 
 ### What are the Data?
 
-In this case study, we will investigate data about samples from [this meta-analysis](https://www.tandfonline.com/doi/full/10.1080/19490976.2021.1911571) of mother and infant gut {{< glossary "microbiome">}} studies. Wang et al. identified a set of eight studies that collected mother and infant gut microbiome samples over time and performed metagenomic sequencing. These studies collectively include 1,496 samples. The variables that we will use to answer our questions include:
+In this case study, we will investigate data about samples from [this meta-analysis](https://www.tandfonline.com/doi/full/10.1080/19490976.2021.1911571) of mother and infant gut microbiome studies. Wang et al. identified a set of eight studies that collected mother and infant gut microbiome samples over time and performed metagenomic sequencing. These studies collectively include 1,496 samples. The variables that we will use to answer our questions include:
 
 Variable | Details
 -------- | -------
