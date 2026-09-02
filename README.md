@@ -147,8 +147,8 @@ We describe several ethical considerations of working with version control, incl
 Package    | Use
 ---------- |-------------
 [here](https://here.r-lib.org) | To construct file paths within folders
-[readxl](https://readxl.tidyverse.org){target="_blank"}      | To read excel files into R
-[dplyr](https://dplyr.tidyverse.org){target="_blank"}      | To combine and manipulate data tables
+[readxl](https://readxl.tidyverse.org)     | To read excel files into R
+[dplyr](https://dplyr.tidyverse.org)    | To combine and manipulate data tables
 [ggplot2](https://ggplot2.tidyverse.org) | To visualize data
 [stringr](https://stringr.tidyverse.org) | To manipulate strings
 
