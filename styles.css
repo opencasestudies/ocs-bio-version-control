@@ -235,17 +235,7 @@
    height: 50vh !important;
 }
 
-/*
-.outline {
-   padding: .20em;
-   background-color: #000000;
-   vertical-align: middle;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 100%
-}*/
-
+/* main image outline styling */
 
 .outline {
     box-sizing: border-box;
