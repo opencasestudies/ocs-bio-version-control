@@ -20,15 +20,68 @@ A good way to reinforce these version control skills is to make a current scient
 
 ## Advancement Exercises
 
-<!--
 ### Beginner
 
-**Under construction**
+#### Moving work in progress into a new branch 
 
-Have the learner make a commit and then reset it. 
+In this exercise, we will follow a process where we start to make changes to the main branch, but then realize that we would rather keep this work in a separate branch and only merge it into the main branch of the repository through a pull request after code review. 
+
+Complete the following steps:
+
+- Open repository for this case study
+- Check out the main branch
+- Add a new line to the README (add whatever you'd like here!)
+- Follow the instructions on the [troubleshooting section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github) to move this update to the README to a new branch called updated_readme
+- Commit and push your changes to a remote updated_readme branch
+- Submit another pull request on GitHub to contribute this change into the main branch. 
+
+:::{.think_question}
+::::{.think_question_header}
+Question opportunity
+::::
+::::{.inner_block}
+What are some advantages to making changes to a repository within a new branch and using a pull request to merge these changes into the main branch? 
+
+<details><summary>Answer</summary>
+
+There are several advantages to this workflow: 
+
+- Using a new branch lets you try new things without disrupting a stable version of the code and project
+- Multiple people can work on different components of a project on their own branches, and then merge the branches into main when they are ready to contribute their work
+- A branch and pull request lets you group several related commits together, and describe in more detail in the pull request why you made them 
+- A pull request lets you request a code review from a collaborator before merging your work into main, making you less susceptible to mistakes in your code
+
+</details>
+::::
+:::
 
 ### Intermediate
--->
+
+#### Going through a project's history 
+
+In this exercise you will search through the history in a GitHub repository to find when a change took place. 
+Open this [GitHub repository](https://github.com/opencasestudies/ocs-bio-version-control) which contains the contents of this case study. Feel free to spend some time poking around here, all of the content that is used to create different components of this case study are stored in this repository. 
+
+Your goal is to find the pull request number and commit tag from when the learning objectives map table was filled in within the case study (the learning objectives table can be found [here](https://www.opencasestudies.org/ocs-bio-version-control/#objectives-map)). Do this by searching through the files, commits, or pull requests in this repository. 
+
+<details>
+<summary>Hints:</summary>
+
+There are multiple ways to search for this change:
+
+- Open the file _lo_map.qmd and click the "History" button to see a history of commits that affected this file.
+- Go to the "Pull requests" tab, click on the "Closed" pull requests, and search a relevant search term. Once you find the correct pull request, look at the commits that make up that pull request.   
+
+</details>
+
+<details>
+<summary>Answer:</summary>
+
+Content was added to the learning objectives map in [pull request 18](https://github.com/opencasestudies/ocs-bio-version-control/pull/18), within the commit tagged [34a4550](https://github.com/opencasestudies/ocs-bio-version-control/commit/34a455071ec726470567932402f9496650ec46d6). 
+
+</details>
+
+### Advanced
 
 #### Forking
 
@@ -83,16 +136,5 @@ How does this pull request from a fork to an upstream repository look different 
 Click "Create pull request" and inspect your pull request. 
 
 Finally, please close this pull request, as we do not actually want to include these changes in this repository. 
-
-<!--
-### Advanced
-
-#### Merge conflicts
-
-**Under construction** 
-
-Another piece of suggested homework will be creating a merge conflict and then resolving it.
-
--->
 
 ***
