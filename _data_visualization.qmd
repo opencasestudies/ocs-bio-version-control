@@ -380,7 +380,27 @@ ggsave("figures/sampling_timepoints.png", height = 6, width = 9)
 
 Now that we have two plots, go back through your file "03_visualize_study_cohorts.qmd" to make sure that it contains all relevant code to make these two plots, and that there are explanations before each code chunk. Render your file to confirm that when rendered it will create these two plots. 
 
+:::{.think_question}
+::::{.think_question_header}
+Question opportunity
+::::
+::::{.inner_block}
+Recall one of the main questions of this case study: In this meta-analysis of infant git microbiome samples, how do the original studies compare in their sampling designs? Specifically, how do they compare in terms of the number of samples and the sampling timeline?
 
+Use the two plots you've made to make a few observations to compare and contrast the sampling designs of the original studies. Include these observations at the end of your "03_visualize_study_cohorts.qmd" document. 
+
+<details><summary>Answer</summary>
+
+Possible observations from the plots: 
+
+- Two studies have small samples sizes (Asnicar with 16 samples and Chu with 27 samples), three studies have more moderate sample sizes (Wampach with 49 samples Parnanen with 64 samples, and Ferretti with 102 samples), and three studies have larger sample sizes (Yassour with 258 samples, Backhed with 392 samples, and Shao with 588 samples). 
+- Some studies take the same number or similar numbers of samples from mothers and infants (Asnicar, Chu, Parnanen) and other studies take significantly more samples from infants than mothers (Wampach, Ferretti, Yassour, Backhed, and Shao). 
+- Wampach sampled only in the first days after birth, Chu, Parnanen, Ferretti, and Yassour sampled only in the first six months since birth, and Asnicar, Backhed, and Shao took samples in the first year and a half since birth. 
+- Some studies appear to have sampled at specific time points (Asnicar, Chu, Wampach, Parnanen, and Ferretti) and other studies appear to have sampled at a wider variety of timepoints (Yassour, Backhed, Shao). 
+
+</details>
+::::
+:::
 
 Since you've performed the requested analysis, make sure to document any new files in this repository in the README.md file. Specifically, describe what the file "03_visualize_study_cohorts.qmd" does, and describe the two plots that are now saved in the figures folder. After doing this, make another commit and push your work. 
 
