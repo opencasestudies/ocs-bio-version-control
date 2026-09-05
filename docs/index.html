@@ -98,9 +98,9 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f636a4ba9f8baff21ad862c8cdd28a94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-f636a4ba9f8baff21ad862c8cdd28a94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-f636a4ba9f8baff21ad862c8cdd28a94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-31e90097cc70b629543000df370c8fd0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-31e90097cc70b629543000df370c8fd0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-31e90097cc70b629543000df370c8fd0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/glossary/glossary.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -288,7 +288,12 @@ gtag('config', 'G-DPKD3JXYG6', { 'anonymize_ip': true});
   <li><a href="#continued-learning" id="toc-continued-learning" class="nav-link" data-scroll-target="#continued-learning"><strong>Continued Learning</strong></a>
   <ul class="collapse">
   <li><a href="#reinforcement-exercises" id="toc-reinforcement-exercises" class="nav-link" data-scroll-target="#reinforcement-exercises">Reinforcement Exercises</a></li>
-  <li><a href="#advancement-exercises" id="toc-advancement-exercises" class="nav-link" data-scroll-target="#advancement-exercises">Advancement Exercises</a></li>
+  <li><a href="#advancement-exercises" id="toc-advancement-exercises" class="nav-link" data-scroll-target="#advancement-exercises">Advancement Exercises</a>
+  <ul class="collapse">
+  <li><a href="#beginner" id="toc-beginner" class="nav-link" data-scroll-target="#beginner">Beginner</a></li>
+  <li><a href="#intermediate" id="toc-intermediate" class="nav-link" data-scroll-target="#intermediate">Intermediate</a></li>
+  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced">Advanced</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#additional-information" id="toc-additional-information" class="nav-link" data-scroll-target="#additional-information"><strong>Additional Information</strong></a>
   <ul class="collapse">
@@ -298,7 +303,10 @@ gtag('config', 'G-DPKD3JXYG6', { 'anonymize_ip': true});
   </ul></li>
   <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info"><strong>Session info</strong></a>
   <ul class="collapse">
-  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments"><strong>Acknowledgments</strong></a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments"><strong>Acknowledgments</strong></a>
+  <ul class="collapse">
+  <li><a href="#ai-attribution-statement" id="toc-ai-attribution-statement" class="nav-link" data-scroll-target="#ai-attribution-statement">AI Attribution Statement</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -834,7 +842,7 @@ More information on how reproducibility fits into the scientific process.
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3d9461be06f_0_143.png" class="img-fluid figure-img" style="width:100.0%" alt="commit diagram"></p>
+<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3fa1f00b0c7_7_182.png" class="img-fluid figure-img" style="width:100.0%" alt="commit diagram"></p>
 </figure>
 </div>
 </div>
@@ -1440,23 +1448,74 @@ You may see examples in other Git tutorials using <code>git add .</code>, which 
 <p>Integrating changes from one branch into another branch.</p>
 </div>
 </div>
-<p>Here is an example of a workflow, in which a Git user makes a “feature” branch from the “main” branch, adds commits to both branches, and then eventually merges the “feature” branch back into “main”.</p>
+<p>Here is an example of a workflow, in which a Git user makes a “plotting” branch from the “main” branch, adds commits to both branches, and then eventually merges the “plotting” branch back into “main”. Click through the tabs from left to right to follow the branching process.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-12-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-1" role="tab" aria-controls="tabset-12-1" aria-selected="true" href="">Step 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-12-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-2" role="tab" aria-controls="tabset-12-2" aria-selected="false" href="">Step 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-12-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-3" role="tab" aria-controls="tabset-12-3" aria-selected="false" href="">Step 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-12-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-4" role="tab" aria-controls="tabset-12-4" aria-selected="false" href="">Step 4</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-12-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-5" role="tab" aria-controls="tabset-12-5" aria-selected="false" href="">Step 5</a></li></ul>
+<div class="tab-content">
+<div id="tabset-12-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-12-1-tab">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f139628ce6_0_263.png" class="img-fluid figure-img" style="width:100.0%" alt="branch workflow"></p>
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f9c55c112a_0_733.png" class="img-fluid figure-img" style="width:100.0%" alt="branch workflow: start with Main branch"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>If there are no lines of code in any files that are directly in conflict, then merging will automatically combine the sets of files into a single version to move forward with. If there are lines that are directly in conflict, this will create what is called a merge conflict (merge conflicts are explained further in <a href="https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github">this section</a>.</p>
-<p>Here is an example of a file from the branching workflow above that can be merged automatically.</p>
+</div>
+<div id="tabset-12-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-12-2-tab">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f139628ce6_0_292.png" class="img-fluid figure-img" style="width:100.0%" alt="file before and after merge"></p>
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f9c55c112a_0_774.png" class="img-fluid figure-img" style="width:100.0%" alt="branch workflow: add Plotting branch"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-12-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-12-3-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f9c55c112a_0_796.png" class="img-fluid figure-img" style="width:100.0%" alt="branch workflow: Commit to Plotting branch"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-12-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-12-4-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f9c55c112a_0_818.png" class="img-fluid figure-img" style="width:100.0%" alt="branch workflow: Separately, commit to main branch"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-12-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-12-5-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f9c55c112a_0_840.png" class="img-fluid figure-img" style="width:100.0%" alt="branch workflow: merge Plotting back into Main"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>If there are no lines of code in any files that are directly in conflict, then merging will automatically combine the sets of files into a single version to move forward with. If there are lines that are directly in conflict, this will create what is called a merge conflict (merge conflicts are explained further in <a href="https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github">this section</a>.</p>
+<p>Here is an example of a file from the branching workflow above that can be merged automatically. The lines with red minus signs are deleted within the particular commit, and the lines with green plus signs are added within the particular commit.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3f9c55c112a_0_130.png" class="img-fluid figure-img" style="width:100.0%" alt="file before and after merge"></p>
 </figure>
 </div>
 </div>
@@ -1465,9 +1524,9 @@ You may see examples in other Git tutorials using <code>git add .</code>, which 
 <section id="create-a-new-branch-for-this-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="create-a-new-branch-for-this-analysis">Create a new branch for this analysis</h3>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-12-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-1" role="tab" aria-controls="tabset-12-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-12-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-2" role="tab" aria-controls="tabset-12-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-13-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-1" role="tab" aria-controls="tabset-13-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-13-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-2" role="tab" aria-controls="tabset-13-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-12-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-12-1-tab">
+<div id="tabset-13-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-13-1-tab">
 <p>You will create a new branch with GitHub Desktop.</p>
 <p>In GitHub Desktop:</p>
 <ul>
@@ -1476,7 +1535,7 @@ You may see examples in other Git tutorials using <code>git add .</code>, which 
 <li>name your new branch “study_comparison”.</li>
 </ul>
 </div>
-<div id="tabset-12-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-12-2-tab">
+<div id="tabset-13-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-13-2-tab">
 <p>Open the command line, navigate to the folder that you have unzipped, and enter the following:</p>
 <div class="shell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> study_comparison</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1522,7 +1581,7 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 <ul>
 <li>file names are concise but informative</li>
 <li>there is one central folder to contain all files for each project</li>
-<li>there is a central file (often called the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button>) that explains what files are included and how to use them to run the analysis</li>
+<li>there is a central file (often called the <button class="glossary"><span class="def"></span>README</button>) that explains what files are included and how to use them to run the analysis</li>
 <li>there are folders to keep similar files together
 <ul>
 <li>data folder (this could be split into raw data and processed data)</li>
@@ -1756,7 +1815,7 @@ At the end of this section, save incremental data so that users can pause and co
 <section id="data-import" class="level1">
 <h1><strong>Data Import</strong></h1>
 <hr>
-<p>Now that you have set up this project with <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with GitHub</span>GitHub</button>, you can start working on the study comparison in R. Open RStudio or Positron or your preferred R IDE to the “infant_gut_analysis” folder. We will start by taking a look at the data. Take a look at the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button> file to determine which file contains commands that can read in the raw data. Open this file and run the code.</p>
+<p>Now that you have set up this project with <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with GitHub</span>GitHub</button>, you can start working on the study comparison in R. Open RStudio or Positron or your preferred R IDE to the “infant_gut_analysis” folder. We will start by taking a look at the data. Take a look at the <button class="glossary"><span class="def"></span>README</button> file to determine which file contains commands that can read in the raw data. Open this file and run the code.</p>
 <div class="think_question">
 <div class="think_question_header">
 <p>Question opportunity</p>
@@ -1803,7 +1862,7 @@ At the end of this section, save incremental data so that users can pause and co
 <section id="data-wrangling" class="level1">
 <h1><strong>Data Wrangling</strong></h1>
 <hr>
-<p>Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses. Again, use the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button> to identify which file contains commands that wrangle the data. Open this file and run the code.</p>
+<p>Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses. Again, use the <button class="glossary"><span class="def"></span>README</button> to identify which file contains commands that wrangle the data. Open this file and run the code.</p>
 <div class="think_question">
 <div class="think_question_header">
 <p>Question opportunity</p>
@@ -1844,9 +1903,9 @@ Answer
 <p>We will now generate visualizations to compare the <button class="glossary"><span class="def">An analysis of data from a collection of studies targeting a common research question</span>meta-analysis</button> study cohorts.</p>
 <p>First, we will make sure that we are on the correct branch. We want to use a development branch for this analysis, which we will request to merge back into the main branch once the analysis is ready. We already created the branch “study_comparison” in the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#branches">introduction to Git and GitHub section</a>, so we just need to make sure that we are working on that branch.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-13-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-1" role="tab" aria-controls="tabset-13-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-13-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-2" role="tab" aria-controls="tabset-13-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-14-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-14-1" role="tab" aria-controls="tabset-14-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-14-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-14-2" role="tab" aria-controls="tabset-14-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-13-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-13-1-tab">
+<div id="tabset-14-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-14-1-tab">
 <ul>
 <li>In the upper panel, under “Current Branch”, look to see if it says the current branch is “study_comparison” or “main” or something else.
 <ul>
@@ -1867,7 +1926,7 @@ Answer
 </div>
 </div>
 </div>
-<div id="tabset-13-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-13-2-tab">
+<div id="tabset-14-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-14-2-tab">
 <p>Open the command line and navigate to your repository. Use the <code>git branch</code> command.</p>
 <div class="shell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1902,16 +1961,16 @@ Answer
 Adding a code chunk to a quarto file
 </summary>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-14-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-14-1" role="tab" aria-controls="tabset-14-1" aria-selected="true" href="">Manually</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-14-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-14-2" role="tab" aria-controls="tabset-14-2" aria-selected="false" href="">In RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-14-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-14-3" role="tab" aria-controls="tabset-14-3" aria-selected="false" href="">In Positron</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-15-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-15-1" role="tab" aria-controls="tabset-15-1" aria-selected="true" href="">Manually</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-15-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-15-2" role="tab" aria-controls="tabset-15-2" aria-selected="false" href="">In RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-15-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-15-3" role="tab" aria-controls="tabset-15-3" aria-selected="false" href="">In Positron</a></li></ul>
 <div class="tab-content">
-<div id="tabset-14-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-14-1-tab">
+<div id="tabset-15-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-15-1-tab">
 <p>To add a new R code chunk, go to a new line and enter: ```{r}</p>
 <p>Then, type your code, starting on the following line. To end a code chunk, go to another new line and enter: ```</p>
 </div>
-<div id="tabset-14-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-14-2-tab">
+<div id="tabset-15-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-15-2-tab">
 <p>You can also add a code chunk in RStudio by navigating to “Code” -&gt; “Insert Chunk”. There is also a keyboard shortcut: <code>Ctrl + Alt + I</code> in Windows and Linux, and <code>Cmd + Option + I</code> on Mac.</p>
 </div>
-<div id="tabset-14-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-14-3-tab">
+<div id="tabset-15-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-15-3-tab">
 <p>In Positron there is a keyboard shortcut to add a code chunk: <code>Ctrl + Shift + I</code> in Windows and Linux, and <code>Cmd + Shift + I</code> on Mac.</p>
 </div>
 </div>
@@ -1940,12 +1999,12 @@ The <code>here()</code> function creates file paths that always start from the m
 </div>
 <p>Now that you have created a new file and loaded packages and data, this is a good time to track this new file and <button class="glossary"><span class="def">A snapshot of all files in a repository at a moment in time</span>commit</button> your work.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-15-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-15-1" role="tab" aria-controls="tabset-15-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-15-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-15-2" role="tab" aria-controls="tabset-15-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-16-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-1" role="tab" aria-controls="tabset-16-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-16-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-2" role="tab" aria-controls="tabset-16-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-15-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-15-1-tab">
+<div id="tabset-16-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-16-1-tab">
 <p>Navigate back to <button class="glossary"><span class="def">A graphical user interface for interacting with Git on a local computer</span>GitHub Desktop</button>. You should see your new file name “03_visualize_study_cohorts.qmd” with a green plus next to it, meaning that this is a new file. The check in the checkbox means that this file is staged. Add an appropriate commit message and commit this file.</p>
 </div>
-<div id="tabset-15-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-15-2-tab">
+<div id="tabset-16-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-16-2-tab">
 <p>Open the <button class="glossary"><span class="def">A window that lets a user interact with a computer through typing commands</span>command line</button> and navigate to your repository. Recall that you can stage the new file (tell Git to track it with):</p>
 <div class="shell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add 03_visualize_study_cohorts.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2093,7 +2152,7 @@ View code:
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-42-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2156,7 +2215,7 @@ More information about these <code>dplyr</code> functions:
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2177,7 +2236,7 @@ More information about these <code>dplyr</code> functions:
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-41-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-45-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2191,12 +2250,12 @@ More information about these <code>dplyr</code> functions:
 </div>
 <p>This is another great time to commit your current work.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-16-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-1" role="tab" aria-controls="tabset-16-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-16-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-2" role="tab" aria-controls="tabset-16-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-17-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-17-1" role="tab" aria-controls="tabset-17-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-17-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-17-2" role="tab" aria-controls="tabset-17-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-16-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-16-1-tab">
+<div id="tabset-17-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-17-1-tab">
 <p>Navigate back to GitHub Desktop. You should now see that “03_visualize_study_cohorts.qmd” has a check in the checkbox (meaning it is staged) and has an orange box next to it, which means the file has been modified. Add an appropriate commit message and commit this file.</p>
 </div>
-<div id="tabset-16-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-16-2-tab">
+<div id="tabset-17-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-17-2-tab">
 <p>Even though Git is already tracking “03_visualize_study_cohorts.qmd”, we still need to use <code>git add</code> to tell Git to stage this file for this commit.</p>
 <div class="shell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add 03_visualize_study_cohorts.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2243,7 +2302,7 @@ View code:
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-48-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2269,7 +2328,7 @@ View code:
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-45-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-49-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2310,14 +2369,35 @@ More information about this warning message.
 </div>
 </div>
 <p>Now that we have two plots, go back through your file “03_visualize_study_cohorts.qmd” to make sure that it contains all relevant code to make these two plots, and that there are explanations before each code chunk. Render your file to confirm that when rendered it will create these two plots.</p>
+<div class="think_question">
+<div class="think_question_header">
+<p>Question opportunity</p>
+</div>
+<div class="inner_block">
+<p>Recall one of the main questions of this case study: In this meta-analysis of infant git microbiome samples, how do the original studies compare in their sampling designs? Specifically, how do they compare in terms of the number of samples and the sampling timeline?</p>
+<p>Use the two plots you’ve made to make a few observations to compare and contrast the sampling designs of the original studies. Include these observations at the end of your “03_visualize_study_cohorts.qmd” document.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>Possible observations from the plots:</p>
+<ul>
+<li>Two studies have small samples sizes (Asnicar with 16 samples and Chu with 27 samples), three studies have more moderate sample sizes (Wampach with 49 samples Parnanen with 64 samples, and Ferretti with 102 samples), and three studies have larger sample sizes (Yassour with 258 samples, Backhed with 392 samples, and Shao with 588 samples).</li>
+<li>Some studies take the same number or similar numbers of samples from mothers and infants (Asnicar, Chu, Parnanen) and other studies take significantly more samples from infants than mothers (Wampach, Ferretti, Yassour, Backhed, and Shao).</li>
+<li>Wampach sampled only in the first days after birth, Chu, Parnanen, Ferretti, and Yassour sampled only in the first six months since birth, and Asnicar, Backhed, and Shao took samples in the first year and a half since birth.</li>
+<li>Some studies appear to have sampled at specific time points (Asnicar, Chu, Wampach, Parnanen, and Ferretti) and other studies appear to have sampled at a wider variety of timepoints (Yassour, Backhed, Shao).</li>
+</ul>
+</details>
+</div>
+</div>
 <p>Since you’ve performed the requested analysis, make sure to document any new files in this repository in the README.md file. Specifically, describe what the file “03_visualize_study_cohorts.qmd” does, and describe the two plots that are now saved in the figures folder. After doing this, make another commit and push your work.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-17-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-17-1" role="tab" aria-controls="tabset-17-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-17-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-17-2" role="tab" aria-controls="tabset-17-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-18-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-1" role="tab" aria-controls="tabset-18-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-18-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-2" role="tab" aria-controls="tabset-18-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-17-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-17-1-tab">
+<div id="tabset-18-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-18-1-tab">
 <p>Navigate back to GitHub Desktop. You should now see the modifications that you’ve made to “03_visualize_study_cohorts.qmd”, as well as the added .png files for the figures. Add an appropriate commit message and commit. Then click “Push origin”, to push these changes that you’ve made locally to your remote repository.</p>
 </div>
-<div id="tabset-17-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-17-2-tab">
+<div id="tabset-18-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-18-2-tab">
 <p>We need to now make sure to stage “03_visualize_study_cohorts.qmd” and the figures that we’ve added. We can use <code>git add .</code> to tell Git to track all files that have changes in this repository.</p>
 <div class="shell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2920,12 +3000,12 @@ I’ve created a merge conflict. What is this? How do I fix it?
 </div>
 <p>You will know that you have a merge conflict when Git attempts to combine changes (for example, during <code>git merge</code> or <code>git pull</code>) and reports that it cannot automatically resolve some differences.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-18-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-1" role="tab" aria-controls="tabset-18-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-18-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-2" role="tab" aria-controls="tabset-18-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-19-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-19-1" role="tab" aria-controls="tabset-19-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-19-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-19-2" role="tab" aria-controls="tabset-19-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-18-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-18-1-tab">
+<div id="tabset-19-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-19-1-tab">
 <p>You will see a pop-up window that says “Resolve conflicts before Merge”, along with a list of files with conflicts. You will need to open the files in a text editor in order to manually resolve the merge conflicts.</p>
 </div>
-<div id="tabset-18-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-18-2-tab">
+<div id="tabset-19-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-19-2-tab">
 <p>When you try to run <code>git pull</code>, you’ll get a response that includes: “Automatic merge failed; fix conflicts and then commit the result”.</p>
 </div>
 </div>
@@ -2960,16 +3040,25 @@ I’ve accidentally been working in the main branch, but I actually want my work
 </summary>
 <p>Luckily, this is an easy problem to resolve!</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-19-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-19-1" role="tab" aria-controls="tabset-19-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-19-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-19-2" role="tab" aria-controls="tabset-19-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-20-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-20-1" role="tab" aria-controls="tabset-20-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-20-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-20-2" role="tab" aria-controls="tabset-20-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-19-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-19-1-tab">
+<div id="tabset-20-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-20-1-tab">
+<p>If you have made changes locally but <strong>haven’t yet committed</strong>, you can do the following:</p>
 <p>Open GitHub Desktop, and create a new branch. If you have changes in main that haven’t been committed, GitHub Desktop will open a pop-up to ask you if you’d like to leave your changes on main or bring your changes to the new branch. Choose to bring the changes to the new branch.</p>
+<p>If you have made changes locally and <strong>have committed</strong>, you can follow the steps above and then additionally do the following:</p>
+<p>Switch back to the main branch, and click on History in the upper left panel. Then, right-click on the commit that you would like to return to in your main branch and choose “Reset to Commit…” from the right-click menu.</p>
 </div>
-<div id="tabset-19-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-19-2-tab">
+<div id="tabset-20-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-20-2-tab">
+<p>If you have made changes locally but haven’t yet committed, you can do the following:</p>
 <p>Use the following command, replacing “new_branch_name” with your desired branch name.</p>
 <div class="shell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb73"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> new_branch_name </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<p>If you have made changes locally and have committed, you can follow the steps above to create a new branch, and then additionally do the following to revert main back to match the remote version of main:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb74"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--hard</span> origin/main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>However, make sure that you only <code>git reset --hard</code> after you’ve created the new branch and moved your commits, otherwise you risk losing your updated work.</p>
 </div>
 </div>
 </div>
@@ -2980,26 +3069,26 @@ I’ve staged and committed a file, but I don’t want to track it anymore. How 
 </summary>
 <p>This is another common problem. We’ll first tell Git to stop tracking the file (but keep it locally), and then we will add it to the .gitignore file to avoid tracking it with Git in the future. First, we will stop tracking the file.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-20-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-20-1" role="tab" aria-controls="tabset-20-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-20-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-20-2" role="tab" aria-controls="tabset-20-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-21-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-21-1" role="tab" aria-controls="tabset-21-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-21-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-21-2" role="tab" aria-controls="tabset-21-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-20-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-20-1-tab">
+<div id="tabset-21-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-21-1-tab">
 <p>Make sure you are starting in the correct branch that you have been working in. Click “Repository -&gt; Open in Terminal”. This will open a command line for you to work with. In this command line, use the following command, replacing “path_to_file” with the path to the file to stop tracking, including the file name.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb74"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> <span class="st">"path_to_file"</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb75"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> <span class="st">"path_to_file"</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Next, open the .gitignore file and add the file to the list of files to avoid tracking.</p>
 <p>Then, return to GitHub Desktop and commit these changes.</p>
 </div>
-<div id="tabset-20-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-20-2-tab">
+<div id="tabset-21-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-21-2-tab">
 <p>Use the following command, replacing “path_to_file” with the path to the file to stop tracking, including the file name.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb75"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> path/to/file</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb76"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> path/to/file</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Next, open the .gitignore file and add the file to the list of files to avoid tracking.</p>
 <p>Then, return to the command line and stage and stage and commit these changes.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb76"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .gitignore</span>
-<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"removing file_name from Git tracking and adding it to .gitignore"</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb77"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .gitignore</span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"removing file_name from Git tracking and adding it to .gitignore"</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -3011,34 +3100,34 @@ I’ve accidentally committed a large file and when I try to push I get an error
 </summary>
 <p>This is a common error that can be a little tricky to resolve. You need to remove this file from Git tracking and also amend the commits that include the file. We will assume that the large file was added in the most recent commit. If it was added multiple commits previously, then it can still be removed but will include additional steps that we will not cover here (see <a href="https://www.git-tower.com/learn/git/faq/git-filter-repo">here</a> for a workflow for removing a file from multiple commits).</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-21-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-21-1" role="tab" aria-controls="tabset-21-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-21-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-21-2" role="tab" aria-controls="tabset-21-2" aria-selected="false" href="">Command line</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-22-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-22-1" role="tab" aria-controls="tabset-22-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-22-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-22-2" role="tab" aria-controls="tabset-22-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
-<div id="tabset-21-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-21-1-tab">
+<div id="tabset-22-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-22-1-tab">
 <p>Make sure you are starting in the correct branch that you have been working in. Click “Repository -&gt; Open in Terminal”. This will open a command line for you to work with. In this command line, use the following command, replacing “path_to_file” with the path to the file to stop tracking, including the file name.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb77"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> <span class="st">"path_to_file"</span> </span>
-<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb78"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> <span class="st">"path_to_file"</span> </span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Including the <code>git commit --amend</code> rewrites the most recent commit as if the large file was not added. Don’t close the terminal yet, we will come back to it.</p>
 <p>Next, open the .gitignore file and add the file to the list of files to avoid tracking. In GitHub Desktop, stage the .gitignore, but do not commit it yet.</p>
 <p>Return to the terminal. Repeat the <code>git commit --amend</code> command, which will add this update to the .gitignore to the most recent commit.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb78"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb79"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Then, return to GitHub Desktop and commit these changes.</p>
 </div>
-<div id="tabset-21-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-21-2-tab">
+<div id="tabset-22-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-22-2-tab">
 <p>Use the following command, replacing “path_to_file” with the path to the file to stop tracking, including the file name. Including the <code>git commit --amend</code> rewrites the most recent commit as if the large file was not added.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb79"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> path/to/file</span>
-<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb80"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">--cached</span> path/to/file</span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Next, open the .gitignore file and add the file to the list of files to avoid tracking.</p>
 <p>Then, return to the command line and stage and stage and commit these changes. Note that we include <code>git commit --amend</code> a second time to add the changes to the .gitignore file to the previous commit.</p>
 <div class="shell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb80"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .gitignore</span>
-<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span></span>
-<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"removing file_name from Git tracking and adding it to .gitignore"</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb81"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .gitignore</span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span></span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"removing file_name from Git tracking and adding it to .gitignore"</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -3053,16 +3142,17 @@ I’ve accidentally committed a large file and when I try to push I get an error
 <p><u>Context:</u></p>
 <p>When you ask an AI chatbot for assistance with version control, make sure to give appropriate background. Describe the specific task that you would like to do, or the problem that you are encountering. It can be helpful to include any error messages that you might be receiving from Git. For example, imagine that you’ve created a merge conflict.</p>
 <p><u>Suggested Prompt:</u></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb81"><pre class="sourceCode default code-overflow-wrap code-with-copy"><code class="sourceCode default"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>I am working with a Git-controlled repository, in a branch called new_feature. I have made several changes locally, and have staged those files and committed them. I just went to pull changes from the remote version of this branch that my collaborator made recently, and I'm getting a merge conflict. Specifically, I've received the following message:</span>
-<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>Auto-merging README.md</span>
-<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a>CONFLICT (content): Merge conflict in README.md</span>
-<span id="cb81-5"><a href="#cb81-5" aria-hidden="true" tabindex="-1"></a>Auto-merging 01_import_data.R</span>
-<span id="cb81-6"><a href="#cb81-6" aria-hidden="true" tabindex="-1"></a>CONFLICT (content): Merge conflict in 01_import_data.R</span>
-<span id="cb81-7"><a href="#cb81-7" aria-hidden="true" tabindex="-1"></a>Automatic merge failed; fix conflicts and then commit the result.</span>
-<span id="cb81-8"><a href="#cb81-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-9"><a href="#cb81-9" aria-hidden="true" tabindex="-1"></a>How can I resolve this merge conflict?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb82"><pre class="sourceCode default code-overflow-wrap code-with-copy"><code class="sourceCode default"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>I am working with a Git-controlled repository, in a branch called new_feature. I have made several changes locally, and have staged those files and committed them. I just went to pull changes from the remote version of this branch that my collaborator made recently, and I'm getting a merge conflict. Specifically, I've received the following message:</span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>Auto-merging README.md</span>
+<span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a>CONFLICT (content): Merge conflict in README.md</span>
+<span id="cb82-5"><a href="#cb82-5" aria-hidden="true" tabindex="-1"></a>Auto-merging 01_import_data.R</span>
+<span id="cb82-6"><a href="#cb82-6" aria-hidden="true" tabindex="-1"></a>CONFLICT (content): Merge conflict in 01_import_data.R</span>
+<span id="cb82-7"><a href="#cb82-7" aria-hidden="true" tabindex="-1"></a>Automatic merge failed; fix conflicts and then commit the result.</span>
+<span id="cb82-8"><a href="#cb82-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-9"><a href="#cb82-9" aria-hidden="true" tabindex="-1"></a>How can I resolve this merge conflict?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><u>Validation:</u> You should always be careful when taking advice on Git and GitHub from an AI chatbot. If you are asking for commands to use with Git for a situation that is very new to you, it could be helpful to do a quick search of the commands the chatbot tells you to use, to confirm that they do what you want to do. You could also ask multiple chatbots the same question.</p>
+<p>You should be especially careful when using agentic AI with Git and GitHub. Agentic AI systems can use external tools and execute tasks, often performing steps without human supervision. There are many git commands (and command line commands in general) that are challenging to reverse and can cause major problems to scientific projects. For example, running <code>git reset --hard</code> will reset a local branch to the remote version of the branch, removing all uncommitted changes, which could remove valuable content. Therefore, it is recommended to monitor the ways that agentic AI can make changes with version control and to prevent them from from performing potentially destructive actions without human supervision.</p>
 </div>
 </div>
 
@@ -3125,15 +3215,68 @@ I’ve accidentally committed a large file and when I try to push I get an error
 </section>
 <section id="advancement-exercises" class="level2">
 <h2 class="anchored" data-anchor-id="advancement-exercises">Advancement Exercises</h2>
-<!--
-### Beginner
-
-**Under construction**
-
-Have the learner make a commit and then reset it. 
-
-### Intermediate
--->
+<section id="beginner" class="level3">
+<h3 class="anchored" data-anchor-id="beginner">Beginner</h3>
+<section id="moving-work-in-progress-into-a-new-branch" class="level4">
+<h4 class="anchored" data-anchor-id="moving-work-in-progress-into-a-new-branch">Moving work in progress into a new branch</h4>
+<p>In this exercise, we will follow a process where we start to make changes to the main branch, but then realize that we would rather keep this work in a separate branch and only merge it into the main branch of the repository through a pull request after code review.</p>
+<p>Complete the following steps:</p>
+<ul>
+<li>Open repository for this case study</li>
+<li>Check out the main branch</li>
+<li>Add a new line to the README (add whatever you’d like here!)</li>
+<li>Follow the instructions on the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github">troubleshooting section</a> to move this update to the README to a new branch called updated_readme</li>
+<li>Commit and push your changes to a remote updated_readme branch</li>
+<li>Submit another pull request on GitHub to contribute this change into the main branch.</li>
+</ul>
+<div class="think_question">
+<div class="think_question_header">
+<p>Question opportunity</p>
+</div>
+<div class="inner_block">
+<p>What are some advantages to making changes to a repository within a new branch and using a pull request to merge these changes into the main branch?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>There are several advantages to this workflow:</p>
+<ul>
+<li>Using a new branch lets you try new things without disrupting a stable version of the code and project</li>
+<li>Multiple people can work on different components of a project on their own branches, and then merge the branches into main when they are ready to contribute their work</li>
+<li>A branch and pull request lets you group several related commits together, and describe in more detail in the pull request why you made them</li>
+<li>A pull request lets you request a code review from a collaborator before merging your work into main, making you less susceptible to mistakes in your code</li>
+</ul>
+</details>
+</div>
+</div>
+</section>
+</section>
+<section id="intermediate" class="level3">
+<h3 class="anchored" data-anchor-id="intermediate">Intermediate</h3>
+<section id="going-through-a-projects-history" class="level4">
+<h4 class="anchored" data-anchor-id="going-through-a-projects-history">Going through a project’s history</h4>
+<p>In this exercise you will search through the history in a GitHub repository to find when a change took place. Open this <a href="https://github.com/opencasestudies/ocs-bio-version-control">GitHub repository</a> which contains the contents of this case study. Feel free to spend some time poking around here, all of the content that is used to create different components of this case study are stored in this repository.</p>
+<p>Your goal is to find the pull request number and commit tag from when the learning objectives map table was filled in within the case study (the learning objectives table can be found <a href="https://www.opencasestudies.org/ocs-bio-version-control/#objectives-map">here</a>). Do this by searching through the files, commits, or pull requests in this repository.</p>
+<details>
+<summary>
+Hints:
+</summary>
+<p>There are multiple ways to search for this change:</p>
+<ul>
+<li>Open the file _lo_map.qmd and click the “History” button to see a history of commits that affected this file.</li>
+<li>Go to the “Pull requests” tab, click on the “Closed” pull requests, and search a relevant search term. Once you find the correct pull request, look at the commits that make up that pull request.</li>
+</ul>
+</details>
+<details>
+<summary>
+Answer:
+</summary>
+<p>Content was added to the learning objectives map in <a href="https://github.com/opencasestudies/ocs-bio-version-control/pull/18">pull request 18</a>, within the commit tagged <a href="https://github.com/opencasestudies/ocs-bio-version-control/commit/34a455071ec726470567932402f9496650ec46d6">34a4550</a>.</p>
+</details>
+</section>
+</section>
+<section id="advanced" class="level3">
+<h3 class="anchored" data-anchor-id="advanced">Advanced</h3>
 <section id="forking" class="level4">
 <h4 class="anchored" data-anchor-id="forking">Forking</h4>
 <p>So far, you’ve created repositories to work with. This means that GitHub considers you the repository owner. If you are working with collaborators who you want to be able to push to your GitHub repo, you can add them to your repository with write permissions (you can also make them a maintainer or admin to have additional abilities). However, let’s consider a different situation. You want to contribute to a GitHub repository, but you do not have permission to push to this repository. This is where forks come in.</p>
@@ -3183,17 +3326,8 @@ Have the learner make a commit and then reset it.
 </div>
 <p>Click “Create pull request” and inspect your pull request.</p>
 <p>Finally, please close this pull request, as we do not actually want to include these changes in this repository.</p>
-<!--
-### Advanced
-
-#### Merge conflicts
-
-**Under construction** 
-
-Another piece of suggested homework will be creating a merge conflict and then resolving it.
-
--->
 <hr>
+</section>
 </section>
 </section>
 </section>
@@ -3384,7 +3518,7 @@ Wang, Shaopu, Shuqin Zeng, Muireann Egan, Paul Cherry, Conall Strain, Emilene Mo
 </div>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value
@@ -3396,7 +3530,7 @@ Wang, Shaopu, Shuqin Zeng, Muireann Egan, Paul Cherry, Conall Strain, Emilene Mo
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       Etc/UTC
- date     2026-09-02
+ date     2026-09-05
  pandoc   3.1.1 @ /usr/local/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────
@@ -3496,8 +3630,16 @@ Fill in any Acknowledgments using an example from a previous case study if neede
 <p>We would also like to acknowledge the National Institute of General Medical Sciences for funding this work (1R25GM160622).</p>
 <p>Icons are from <a href="https://www.iconpacks.net/">iconpacks</a>.</p>
 <p>Avatars are from <a href="https://getavataaars.com">avataaars</a></p>
+<section id="ai-attribution-statement" class="level3">
+<h3 class="anchored" data-anchor-id="ai-attribution-statement">AI Attribution Statement</h3>
+<p>The text in this work was primarily human-created. AI was used to make content edits, such as changes to scope, information, and ideas. AI was prompted for its contributions. AI-generated content was reviewed and approved. The following model(s) or application(s) were used: Microsoft 356 Copilot (GPT-5).</p>
+<p>AIA Primarily human, Content edits, Human-initiated, Reviewed, Microsoft 356 Copilot (GPT-5) v1.0</p>
+<p>The code for the drag-and-drop activity was entirely AI-generated. AI was prompted for its contributions. AI-generated content was reviewed and approved. The following model(s) or application(s) were used: Microsoft 356 Copilot (GPT-5).</p>
+<p>AIA Entirely AI, Human-initiated, Reviewed, Microsoft 356 Copilot (GPT-5) v1.0</p>
+<p>More information about this AI attribution can be found <a href="https://aiattribution.github.io">here</a>.</p>
 
 
+</section>
 </section>
 </section>
 
