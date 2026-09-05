@@ -1,6 +1,8 @@
 acknowledgements
 ai
+AIA
 al
+Asnicar
 avataaars
 automations
 Backhed
@@ -12,6 +14,7 @@ callout
 chatbot
 Chatbots
 cheatsheet
+Chu
 codebase
 Collab
 counterintuitive
@@ -27,6 +30,7 @@ dplyr
 else's
 et
 favicon
+Ferretti
 figshare
 Figshare
 frontmatter
@@ -39,6 +43,7 @@ gitignore
 GitLab
 Git's
 glyphicons
+GPT
 HTTPS
 hw
 iconpacks
@@ -59,6 +64,7 @@ NonCommercial
 ocs
 OTTR
 ottrproject
+Parnanen
 PersonID
 PII
 Pixabay
@@ -94,7 +100,9 @@ th
 uncheck
 Unsplash
 untracked
+Wampach
 www
 xlsx
+Yassour
 Zenodo
 Zotero
