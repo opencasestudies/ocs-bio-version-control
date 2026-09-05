@@ -15,11 +15,11 @@ Avatars are from [avataaars](https://getavataaars.com)
 
 ### AI Attribution Statement
 
-The text in this work was primarily human-created. AI was used to make content edits, such as changes to scope, information, and ideas. AI was prompted for its contributions, or AI assistance was enabled. AI-generated content was reviewed and approved. The following model(s) or application(s) were used: Microsoft 356 Copilot (GPT-5).
+The text in this work was primarily human-created. AI was used to make content edits, such as changes to scope, information, and ideas. AI was prompted for its contributions. AI-generated content was reviewed and approved. The following model(s) or application(s) were used: Microsoft 356 Copilot (GPT-5).
 
 AIA Primarily human, Content edits, Human-initiated, Reviewed, Microsoft 356 Copilot (GPT-5) v1.0
 
-The code for the drag-and-drop activity was entirely AI-generated. AI was prompted for its contributions, or AI assistance was enabled. AI-generated content was reviewed and approved. The following model(s) or application(s) were used: Microsoft 356 Copilot (GPT-5).
+The code for the drag-and-drop activity was entirely AI-generated. AI was prompted for its contributions. AI-generated content was reviewed and approved. The following model(s) or application(s) were used: Microsoft 356 Copilot (GPT-5).
 
 AIA Entirely AI, Human-initiated, Reviewed, Microsoft 356 Copilot (GPT-5) v1.0
 
