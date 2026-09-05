@@ -121,7 +121,7 @@ Another way to think about a commit is as a save point in a video game. This mea
 Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between each file in the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. If you want to return to a previous version of a project, you can only return to the version of files at any commit.
 
 ```{r, fig.alt="commit diagram", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_143#slide=id.g3d9461be06f_0_143")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3fa1f00b0c7_7_182&pli=1#slide=id.g3fa1f00b0c7_7_182")
 ```
 
 ### GitHub
@@ -854,7 +854,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YC
 
 If there are no lines of code in any files that are directly in conflict, then merging will automatically combine the sets of files into a single version to move forward with. If there are lines that are directly in conflict, this will create what is called a merge conflict (merge conflicts are explained further in [this section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github). 
 
-Here is an example of a file from the branching workflow above that can be merged automatically. 
+Here is an example of a file from the branching workflow above that can be merged automatically. The lines with red minus signs are deleted within the particular commit, and the lines with green plus signs are added within the particular commit.  
 
 ```{r, fig.alt="file before and after merge", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f9c55c112a_0_130#slide=id.g3f9c55c112a_0_130")
