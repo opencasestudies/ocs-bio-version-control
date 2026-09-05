@@ -32,14 +32,43 @@ When you try to run `git pull`, you'll get a response that includes: "Automatic 
 
 Recall the hypothetical branch workflow from earlier in the case study.
 
-```{r, fig.alt="branch workflow", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f139628ce6_0_263#slide=id.g3f139628ce6_0_263")
+::: {.panel-tabset}
+#### Step 1
+
+```{r, fig.alt="branch workflow: start with Main branch", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f9c55c112a_0_733#slide=id.g3f9c55c112a_0_733")
 ```
+
+#### Step 2
+
+```{r, fig.alt="branch workflow: add Plotting branch", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f9c55c112a_0_774#slide=id.g3f9c55c112a_0_774")
+```
+
+#### Step 3
+
+```{r, fig.alt="branch workflow: Commit to Plotting branch", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f9c55c112a_0_796#slide=id.g3f9c55c112a_0_796")
+```
+
+#### Step 4
+
+```{r, fig.alt="branch workflow: Separately, commit to main branch", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f9c55c112a_0_818#slide=id.g3f9c55c112a_0_818")
+```
+
+#### Step 5
+
+```{r, fig.alt="branch workflow: merge Plotting back into Main", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f9c55c112a_0_840#slide=id.g3f9c55c112a_0_840")
+```
+
+:::
 
 Here is an example of a file from the branching workflow that will result in a merge conflict. 
 
 ```{r, fig.alt="file before and after merge conflict", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_142#slide=id.g3f94a4bdf40_0_142")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f9c55c112a_0_874#slide=id.g3f9c55c112a_0_874")
 ```
 
 When you open a file with a merge conflict, you will see that conflict markers have been added. For lines that are in conflict, you'll see "<<<<<<< HEAD" and "=======". The code in between these two markers is the code that is contained locally in the branch that you are working with. Lower in the file, you'll see ">>>>>>> incoming_change_tag", where "incoming_change_tag" references the commit or branch that identifies the incoming change. You need to manually edit the file to remove the tags, and to include whatever content you would like (either the content in your local branch, the content from the remote commit that is being pulled, or a combination of the two). Once you've edited this file, you should save and stage the file. 
