@@ -836,17 +836,27 @@ More information on how reproducibility fits into the scientific process.
 <p>A snapshot of a the files in a repository at a certain time.</p>
 </div>
 </div>
-<p>Another way to think about a commit is as a save point in a video game. This means that it saves your work up to a certain point in time.</p>
-<p>Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between each file in the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. If you want to return to a previous version of a project, you can only return to the version of files at any commit.</p>
+<p>Another way to think about a commit is as a save point in a video game. This means that it saves your work up to a certain point in time. In the image below, a repository called <strong>analysis_project</strong> is tracked using version control, and it is made up of four commits. Each commit has a message that explains what the commit does. Within a commit, files can be added, edited, left unchanged, or deleted.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3fa1f00b0c7_7_182.png" class="img-fluid figure-img" style="width:100.0%" alt="commit diagram"></p>
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g3fade600e50_0_0.png" class="img-fluid figure-img" style="width:100.0%" alt="Commits made to a repository called analysis_project. The first commit has the message 'Create repo and add data' and data.csv is added. The second commit has the message 'Add code to clean data' and data.csv has no change and code.R is added. The third commit has the message 'Add code for initial plots' and data.csv has no change and code.R is edited. The fourth commit has the message 'Fix plot themes' and data.csv has no change and code.R is edited."></p>
 </figure>
 </div>
 </div>
 </div>
+<p>Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between each file in the most recent commit and the current commit. We can look closer at an individual file and see how it changes across commits.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_g409bc527eed_0_33.png" class="img-fluid figure-img" style="width:100.0%" alt="Changes to code.R file across commits. In Commit 2 the file is added, and code is added (denoted with plus marks) to load the data and remove missing ids. In Commit 3 the original code is still there, and code to plot is added afterwards (again denoted with plus marks). In Commit 4, one old line of code making the plot is removed and two new lines are added."></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Git will not automatically make commits for you. You need to decide when to commit. If you want to return to a previous version of a project, you can only return to the version of files at any commit.</p>
 </section>
 <section id="github" class="level3">
 <h3 class="anchored" data-anchor-id="github">GitHub</h3>
@@ -2152,7 +2162,7 @@ View code:
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-42-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-43-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2215,7 +2225,7 @@ More information about these <code>dplyr</code> functions:
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-45-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2236,7 +2246,7 @@ More information about these <code>dplyr</code> functions:
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-45-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-46-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2302,7 +2312,7 @@ View code:
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-48-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-49-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2328,7 +2338,7 @@ View code:
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-49-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-50-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -3581,7 +3591,7 @@ Wang, Shaopu, Shuqin Zeng, Muireann Egan, Paul Cherry, Conall Strain, Emilene Mo
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       Etc/UTC
- date     2026-09-05
+ date     2026-09-07
  pandoc   3.1.1 @ /usr/local/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────
