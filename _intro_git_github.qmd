@@ -116,13 +116,19 @@ A snapshot of a the files in a repository at a certain time.
 ::::
 :::
 
-Another way to think about a commit is as a save point in a video game. This means that it saves your work up to a certain point in time. 
+Another way to think about a commit is as a save point in a video game. This means that it saves your work up to a certain point in time. In the image below, a repository called **analysis_project** is tracked using version control, and it is made up of four commits. Each commit has a message that explains what the commit does. Within a commit, files can be added, edited, left unchanged, or deleted. 
 
-Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between each file in the most recent commit and the current commit. Git will not automatically make commits for you. You need to decide when to commit. If you want to return to a previous version of a project, you can only return to the version of files at any commit.
-
-```{r, fig.alt="commit diagram", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3fa1f00b0c7_7_182&pli=1#slide=id.g3fa1f00b0c7_7_182")
+```{r, fig.alt="Commits made to a repository called analysis_project. The first commit has the message 'Create repo and add data' and data.csv is added. The second commit has the message 'Add code to clean data' and data.csv has no change and code.R is added. The third commit has the message 'Add code for initial plots' and data.csv has no change and code.R is edited. The fourth commit has the message 'Fix plot themes' and data.csv has no change and code.R is edited.", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3fade600e50_0_0#slide=id.g3fade600e50_0_0")
 ```
+
+Each time that you tell Git to commit a version of your project, it will save it as a series of changes that list the differences between each file in the most recent commit and the current commit. We can look closer at an individual file and see how it changes across commits. 
+
+```{r, fig.alt="Changes to code.R file across commits. In Commit 2 the file is added, and code is added (denoted with plus marks) to load the data and remove missing ids. In Commit 3 the original code is still there, and code to plot is added afterwards (again denoted with plus marks). In Commit 4, one old line of code making the plot is removed and two new lines are added.", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g409bc527eed_0_33#slide=id.g409bc527eed_0_33")
+```
+
+Git will not automatically make commits for you. You need to decide when to commit. If you want to return to a previous version of a project, you can only return to the version of files at any commit.
 
 ### GitHub
 
