@@ -51,6 +51,6 @@ repo: |
 reproducible: |
   A project in which a new researcher can re-run an experiment or analysis with the same data and code and generate the same results
 reproducibility: |
-  The ability for someone else the run the same analysis on the same data and get the same results
+  The ability for someone else to run the same analysis on the same data and get the same results
 version control: |
   A tool that records changes to a project over time
