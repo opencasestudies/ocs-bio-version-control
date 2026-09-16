@@ -735,7 +735,7 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 <li>It also provides a digital backup and an online repository of code and possibly also data (if it doesn’t contain sensitive data). This can be very valuable if something happens to your computer.</li>
 <li>Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes.</li>
 </ul>
-<p>While several tools exist for version control, we will introduce <a href="https://git-scm.com">Git</a> and <a href="https://github.com">GitHub</a>, two of the most commonly used version control tools. Common alternatives to GitHub include <a href="https://about.gitlab.com/resources/">GitLab</a> and <a href="https://bitbucket.org/product/guides">Bitbucket</a></p>
+<p>While several tools exist for version control, we will introduce <a href="https://git-scm.com">Git</a> and <a href="https://github.com">GitHub</a>, two of the most commonly used version control tools. Common alternatives to GitHub include <a href="https://about.gitlab.com/resources/">GitLab</a> and <a href="https://bitbucket.org/product/guides">Bitbucket</a>.</p>
 <details>
 <summary>
 More information on how reproducibility fits into the scientific process.
@@ -807,7 +807,7 @@ More information on how reproducibility fits into the scientific process.
 </section>
 <section id="what-are-git-and-github" class="level2">
 <h2 class="anchored" data-anchor-id="what-are-git-and-github">What are Git and GitHub?</h2>
-<p>Git is a version control tool, and GitHub is an website for hosting folders that are tracked with Git. Git works locally on your computer to record different versions of a project, and GitHub works online to provide a digital backup of files, let you connect with collaborators, and optionally create a web presence for your project.</p>
+<p>Git is a version control tool, and GitHub is an website for hosting files that are tracked with Git. Git works locally on your computer to record different versions of a project, and GitHub works online to provide a digital backup of files, let you connect with collaborators, and optionally create a web presence for your project.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -857,7 +857,7 @@ More information on how reproducibility fits into the scientific process.
 </div>
 </div>
 </div>
-<p>Git will not automatically make commits for you. You need to decide when to commit. If you want to return to a previous version of a project, you can only return to the version of files at any commit.</p>
+<p>Here you can see that green colored sections are additions and red colored sections are deletions. Git will not automatically make commits for you. You need to decide when to commit. If you want to return to a previous version of a project, you can only return to the version of files at any commit.</p>
 </section>
 <section id="github" class="level3">
 <h3 class="anchored" data-anchor-id="github">GitHub</h3>
@@ -961,7 +961,7 @@ More information on how reproducibility fits into the scientific process.
 <summary>
 Visibility
 </summary>
-<p>By default your repository will be set to public, which means that anyone can view all of the files contained in it. If you would prefer that only you and collaborators that you add can view the contents, you can set the visibility to private.</p>
+<p>By default your repository will be set to public, which means that anyone can view all of the files contained in it. If you would prefer that only you and collaborators that you add can view the contents, you can set the visibility to private. Please note that this is not <strong><em>truly</em></strong> private, so please do not host protected heath information or other forms of data that require extra protection on GitHub even with a private repo.</p>
 </details>
 <details>
 <summary>
@@ -1035,7 +1035,7 @@ An issue is a way to keep track of ideas, tasks to complete, errors to resolve, 
 <summary>
 More information about the command line.
 </summary>
-<p>You may have also heard this called the <em>shell</em>, <em>terminal</em>, <em>console</em>, or <em>command prompt</em>. The command line lets us interact with our computers by typing commands (as opposed to using a graphical interface which involves clicking buttons and menus). These commands let you perform tasks such as navigating and modifying your file system, installing programs, running code, and working with Git. Each of these tasks can also be performed using a graphical interface. Some people prefer the visual layout of a GUI, while others prefer the simplicity and centralized control of the command line.</p>
+<p>You may have also heard this called the <em>shell</em>, <em>terminal</em>, <em>console</em>, or <em>command prompt</em>. The command line lets us interact with our computers by typing commands (as opposed to using a graphical user interface (GUI) which involves clicking buttons and menus). These commands let you perform tasks such as navigating and modifying your file system, installing programs, running code, and working with Git. Each of these tasks can also be performed using a graphical interface. Some people prefer the visual layout of a GUI, while others prefer the simplicity and centralized control of the command line.</p>
 </details>
 <p>Follow this <a href="https://desktop.github.com/download/">link</a> to install GitHub Desktop.</p>
 <details>
@@ -1112,7 +1112,7 @@ If you are unable to install GitHub Desktop or would prefer not to install GitHu
 </div>
 <p>The third line should print your name and email correctly.</p>
 <p>Next, you need to connect your GitHub account to your local Git.</p>
-<p>GitHub no longer supports using passwords to connect Git and GitHub, so you’ll instead need to use a Personal Access Token (PAT). To create a token, <a href="https://github.com/settings/tokens">follow these instructions</a>. In order to connect your token to your computer do the following:</p>
+<p>GitHub no longer supports using passwords to connect Git and GitHub, so you’ll instead need to use a Personal Access Token (PAT). To create a token, <a href="https://github.com/settings/tokens">click this link to go to your settings for tokens</a>. In order to connect your token to your computer do the following:</p>
 <ul>
 <li>click “Generate new token”</li>
 <li>choose “Generate new token (classic)”</li>
@@ -1148,7 +1148,7 @@ If you are unable to install GitHub Desktop or would prefer not to install GitHu
 </div>
 </div>
 <p>This tells Git to remember the login credentials that we will provide so you won’t need to enter them each time.</p>
-<p>Next, we need to trigger a GitHub credentials check. We will do this by cloning the repository that you made (this means we will make a local version of this repo). Run the following, replacing “your_username” with your username:</p>
+<p>Next, we need to trigger a GitHub credentials check. We will do this by cloning the repository that you made (this means we will make a local version of this repo). See this <a href="https://www.opencasestudies.org/ocs-bio-version-control/#creating-a-new-github-repository">section if you still need to make the repository</a>. Run the following, replacing “your_username” with your username:</p>
 <div class="shell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/your_username/my-first-repository.git  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -1364,7 +1364,7 @@ If you are using RStudio, you can also track the additional files that have been
 <section id="create-a-version-controlled-repository-for-your-project" class="level2">
 <h2 class="anchored" data-anchor-id="create-a-version-controlled-repository-for-your-project">Create a version controlled repository for your project</h2>
 <p>Now, we will return to the project with Collab. O. Rator. In the previous section, we created a repository on GitHub, and then cloned to make a local copy. Here, we will start with a local folder, track it with Git, and then create a remote version on GitHub.</p>
-<p>First, download the .zip file <a href="https://github.com/opencasestudies/version_controlled_infant_gut_analysis/blob/main/version_controlled_infant_gut_analysis.zip">here</a>. Your browser may automatically unzip this file to create a folder called “infant_gut_files”, if not then unzip the file.</p>
+<p>First, download the .zip file <a href="https://github.com/opencasestudies/version_controlled_infant_gut_analysis/blob/main/version_controlled_infant_gut_analysis.zip">here</a>. Your browser may automatically unzip this file to create a folder called “infant_gut_files”, if not then unzip the file manually (this typically involves right clicking or double clicking depending on your operating system).</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-10-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-1" role="tab" aria-controls="tabset-10-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-2" role="tab" aria-controls="tabset-10-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
@@ -1566,7 +1566,8 @@ You may see examples in other Git tutorials using <code>git add .</code>, which 
 <div class="inner_block">
 <ul>
 <li><p>Commit often. A history will not be helpful if you run an entire analysis locally and then commit everything in a single commit.</p></li>
-<li><p>If you are working on a repository with multiple contributors, make sure to pull each time you work in order to work on the most up-to-date version of the repository</p></li>
+<li><p>If you are working on a repository with multiple contributors, make sure to pull each time you work in order to work on the most up-to-date version of the repository. If you don’t, Git will let you know and help you to do so (check out this resource about more complicated <a href="https://medium.com/@Spritan/merge-vs-rebase-vs-fast-forward-mastering-git-integration-strategies-3ba8e652d93e">merging when you forgot to pull</a>).<br>
+</p></li>
 <li><p>Never use version control to track files with passwords or other sensitive information. If you have there are ways to remove these files and change the Git history, but this should be considered a last resort. Instead, add any files with sensitive information to your .gitignore.</p>
 <ul>
 <li>If passwords, access tokens, API keys, or other credentials are accidentally committed and pushed to a remote repository on GitHub (either public or private), they should be considered compromised and changed as soon as possible, and all collaborators who work with that repository should be alerted.</li>
