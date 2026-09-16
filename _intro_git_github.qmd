@@ -905,7 +905,7 @@ Tips
 ::::
 ::::{.inner_block}
 - Commit often. A history will not be helpful if you run an entire analysis locally and then commit everything in a single commit. 
-- If you are working on a repository with multiple contributors, make sure to pull each time you work in order to work on the most up-to-date version of the repository. If you don't, Git will let you know and help you to do so (Check out this resource about more complicated [merging when you forgot to pull](https://medium.com/@Spritan/merge-vs-rebase-vs-fast-forward-mastering-git-integration-strategies-3ba8e652d93e)).  
+- If you are working on a repository with multiple contributors, make sure to pull each time you work in order to work on the most up-to-date version of the repository. If you don't, Git will let you know and help you to do so (check out this resource about more complicated [merging when you forgot to pull](https://medium.com/@Spritan/merge-vs-rebase-vs-fast-forward-mastering-git-integration-strategies-3ba8e652d93e)).  
 - Never use version control to track files with passwords or other sensitive information. If you have there are ways to remove these files and change the Git history, but this should be considered a last resort. Instead, add any files with sensitive information to your .gitignore.
 
     - If passwords, access tokens, API keys, or other credentials are accidentally committed and pushed to a remote repository on GitHub (either public or private), they should be considered compromised and changed as soon as possible, and all collaborators who work with that repository should be alerted. 
