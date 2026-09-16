@@ -695,7 +695,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 
 Now, we will return to the project with Collab. O. Rator. In the previous section, we created a repository on GitHub, and then cloned to make a local copy. Here, we will start with a local folder, track it with Git, and then create a remote version on GitHub. 
 
-First, download the .zip file [here](https://github.com/opencasestudies/version_controlled_infant_gut_analysis/blob/main/version_controlled_infant_gut_analysis.zip). Your browser may automatically unzip this file to create a folder called "infant_gut_files", if not then unzip the file manually (this typically involes right clicking or double clicking depending on your operating system). 
+First, download the .zip file [here](https://github.com/opencasestudies/version_controlled_infant_gut_analysis/blob/main/version_controlled_infant_gut_analysis.zip). Your browser may automatically unzip this file to create a folder called "infant_gut_files", if not then unzip the file manually (this typically involves right clicking or double clicking depending on your operating system). 
 
 ::: {.panel-tabset}
 
