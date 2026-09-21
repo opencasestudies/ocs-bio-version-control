@@ -191,10 +191,19 @@ We can see that there is quite the spread of study sizes. Let's also break this 
 
 **Your turn**: Modify the code above to count the number of observations by `Study` and by `Category`, and save the results as a data frame named `sample_counts`. **Add this code to your .qmd file.**
 
+The data frame should look like this:
+
+```{r, echo = FALSE}
+sample_counts <- clean_metadata %>%
+  group_by(Study, Category) %>%
+  count(name = "total")
+sample_counts
+```
+
 <details>
 <summary>View code:</summary>
 ::: {.rcode}
-```{r}
+```{r, eval = FALSE}
 sample_counts <- clean_metadata %>%
   group_by(Study, Category) %>%
   count(name = "total")
@@ -251,7 +260,7 @@ sample_counts %>%
 ```
 :::
 
-Finally, we can update the colors of the plot and add labels. **Include this code in your .qmd document** to refine your bar plot.
+Finally, we can update the colors of the plot and add labels. We will use the function `scale_fill_viridis_d()` to use colors that are more color-deficiency friendly (more information about these color scales can be found [in this resource](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html). **Include this code in your .qmd document** to refine your bar plot.
  
 ::: {.rcode}
 ```{r}
@@ -259,6 +268,7 @@ sample_counts %>%
   mutate(Study = factor(Study, levels = study_order)) %>%
   ggplot(aes(x = Study, y = total, fill = Category)) +
   geom_col(position = position_dodge()) +
+  scale_fill_viridis_d() + 
   theme_minimal() + 
   labs(y = "Number of samples",
        x = "Study",
@@ -335,23 +345,6 @@ observations_after_birth %>%
 ```
 :::
 
-Notice that because we set `scale = "free_y"` in the `facet_wrap()`, each of the y-axes of the panels is different. Let's order the studies in the same order that we used in the bar plot earlier. We will also update the theme and add axes labels. **Include this code in your .qmd document** to order the studies and refine your histograms. 
-
-::: {.rcode}
-```{r}
-observations_after_birth %>%
-  mutate(Study = factor(Study, levels = study_order)) %>%
-  ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
-  geom_histogram(position = position_dodge(), bins = 20) +
-  facet_wrap(~Study, scale = "free_y") +
-  labs(x = "Days since birth at sampling",
-       y = "Count",
-       title = "Distribution of sampling day across studies") + 
-  theme_minimal() + 
-  theme(plot.title = element_text(hjust = 0.5))
-```
-:::
-
 <details>
 <summary>More information about this warning message.</summary>
 `ggplot` will give you warning messages when there are data in the dataframe that it cannot include in a plot due to missing information. In this warning, we can see that 7 observations in the data (representing samples taken) cannot be plotted because of non-finite values. Typically, this means there are observations with missing data. We can investigate what is missing with the following:
@@ -369,6 +362,24 @@ observations_after_birth %>%
 Here we can see that there are 6 observations from the Backhed study and one observation from the Shao study for which `sampling_day` is missing. Therefore, these observations cannot be included in the plot.
 
 </details>
+
+Notice that because we set `scale = "free_y"` in the `facet_wrap()`, each of the y-axes of the panels is different. Let's order the studies in the same order that we used in the bar plot earlier. We will also update the theme, switch to color-deficiency friendly colors, and add axes labels. **Include this code in your .qmd document** to order the studies and refine your histograms. 
+
+::: {.rcode}
+```{r}
+observations_after_birth %>%
+  mutate(Study = factor(Study, levels = study_order)) %>%
+  ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
+  geom_histogram(position = position_dodge(), bins = 20) +
+  facet_wrap(~Study, scale = "free_y") +
+  labs(x = "Days since birth at sampling",
+       y = "Count",
+       title = "Distribution of sampling day across studies") + 
+  scale_fill_viridis_d() + 
+  theme_minimal() + 
+  theme(plot.title = element_text(hjust = 0.5))
+```
+:::
 
 Finally, we will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name "sampling_timepoints.png" within the "figures" folder.
 
