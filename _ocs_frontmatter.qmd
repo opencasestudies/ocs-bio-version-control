@@ -114,6 +114,8 @@ It will also be helpful to be have the following skills:
 
 - basic R skills (many introductory courses can be found online, including [this one](https://hutchdatascience.org/Intro_to_R/))
 - familiarity with `dplyr` and `ggplot2`, or willingness to learn (these [`dplyr`](https://rstudio.github.io/cheatsheets/data-transformation.pdf) and [`ggplot2`](https://rstudio.github.io/cheatsheets/data-visualization.pdf) cheatsheets may be helpful, as well as the original [open case studies](https://www.opencasestudies.org/search.html))
+- OPTIONAL: command line skills (this [resource for basics with the command line](https://swcarpentry.github.io/shell-novice/key-points.html) maybe helpful)
+  - this is not necessary if using GitHub Desktop, as is suggested in this case study, however there are alternate instructions throughout the case study that use the command line to interact with Git
 
 You do not need to have any previous Git and GitHub knowledge or experience for this case study. 
 ::::
