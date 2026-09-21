@@ -98,6 +98,7 @@ stringr
 subdir
 tabset
 Teichman
+tidyverse
 th
 uncheck
 Unsplash
