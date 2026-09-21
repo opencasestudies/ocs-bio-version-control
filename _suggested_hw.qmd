@@ -49,6 +49,7 @@ There are several advantages to this workflow:
 - Using a new branch lets you try new things without disrupting a stable version of the code and project
 - Multiple people can work on different components of a project on their own branches, and then merge the branches into main when they are ready to contribute their work
 - A branch and pull request lets you group several related commits together, and describe in more detail in the pull request why you made them 
+- The "Files changed" tab can help you identify exactly which lines were changed across all commits included in the pull requests, which is often more convenient than separately looking at the changes from each commit 
 - A pull request lets you request a code review from a collaborator before merging your work into main, making you less susceptible to mistakes in your code
 
 </details>

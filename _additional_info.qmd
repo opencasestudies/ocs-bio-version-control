@@ -24,4 +24,3 @@ Use this section to provide any additional information or resources on the topic
 Automatically include the packages table from _packages.qmd?
 -->
 
-***
