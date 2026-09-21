@@ -193,6 +193,10 @@ Creating a local repository that is a copy of a remote repository on GitHub.
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_210#slide=id.g3d9461be06f_0_210")
 ```
 
+Typically, it is easier to create a new repository remotely with GitHub when started a version-controlled project from scratch. However, when you have already started work on a project and decide to version-control existing resources, you will want to create your new repository locally. 
+
+In this case study we will practice both approaches. First, in the [following section](https://www.opencasestudies.org/ocs-bio-version-control/#getting-started-with-git-and-github), you will practice creating a new repository from GitHub and cloning it to your local computer. Later, in the [section in which you create a repository for the case study analysis](https://www.opencasestudies.org/ocs-bio-version-control/#create-a-version-controlled-repository-for-your-project), you will practice working with an existing set of files and version-controlling them locally with Git. 
+
 ## Getting started with Git and GitHub
 
 ### Creating a GitHub account
@@ -203,7 +207,7 @@ When you choose a username, consider [advice](https://happygitwithr.com/github-a
 
 ### Creating a new GitHub repository
 
-Now that you have a GitHub account, you can create your first repository. 
+Now that you have a GitHub account, you can create your first repository. The goal of this repository is to get you set up and to practice with Git and GitHub, you will later make another repository to use for the case study analysis.
 
 To create your repository:
 
@@ -553,16 +557,6 @@ By default, the box next to added or updated files is checked. This means that e
 
 In the lower left corner you will see a box that says "Summary (required)" and "Description". This is where you will put your commit message. 
 
-A few pieces of advice to consider for your commit messages:
-
-- A commit message should be informative. Think of a collaborator (or yourself in a few months) reading the commit message. It should tell the reader why you've made this commit. Did you add a file? Did you fix a bug in the code? Did you remove an outdated data file? Your commit history, when maintained thoughtfully, can provide a record of why you made changes throughout a project. 
-- A commit message should be concise. Avoid adding too many unnecessary details here. The reader can always look at the differences in files for the commit to see exactly what you've done. 
-- In a public repository, the commit message will be visible to anyone and exist as long as the repository does. Make sure that your message is appropriate and you'd be comfortable with colleagues seeing it. 
-
-```{r, fig.alt="good and bad commit messages", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_174#slide=id.g3f139628ce6_0_174")
-```
-
 For this commit, you might use the summary "Add new file '01-calculations.R' to do calculations."  
 
 Once you've added the commit message, you are ready to commit these files. Click "commit to main". Now these changes have been entered into the version control history of your repository in Git. 
@@ -615,16 +609,6 @@ git add my-first-repository.Rproj .gitignore
 
 Next, we will commit the staged files (remember, this is similar to creating a snapshot of these files, or to creating a save point in a video game). The command `git commit -m "..."` commits the staged files and the flag `-m` adds a commit messages. 
 
-A few pieces of advice to consider for your commit messages:
-
-- A commit message should be informative. Think of a collaborator (or yourself in a few months) reading the commit message. It should tell the reader why you've made this commit. Did you add a file? Did you fix a bug in the code? Did you remove an outdated data file? 
-- A commit message should be concise. Avoid adding too many unnecessary details here. The reader can always look at the differences in files for the commit to see exactly what you've done. 
-- In a public repository, the commit message will be visible to anyone and exist as long as the repository does. Make sure that your message is appropriate and you'd be comfortable with colleagues seeing it. 
-
-```{r, fig.alt="good and bad commit messages", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_174#slide=id.g3f139628ce6_0_174")
-```
-
 For this commit, you might use the summary "Add new file '01-calculations.R' to do calculations."  
 
 :::: {.shell}
@@ -643,6 +627,16 @@ git push
 
 Now, open your project in GitHub. You should now see the new file that you made locally, as well the commit message. 
 :::
+
+A few pieces of advice to consider for your commit messages:
+
+- A commit message should be informative. Think of a collaborator (or yourself in a few months) reading the commit message. It should tell the reader why you've made this commit. Did you add a file? Did you fix a bug in the code? Did you remove an outdated data file? Your commit history, when maintained thoughtfully, can provide a record of why you made changes throughout a project. 
+- A commit message should be concise. Avoid adding too many unnecessary details here. The reader can always look at the differences in files for the commit to see exactly what you've done. 
+- In a public repository, the commit message will be visible to anyone and exist as long as the repository does. Make sure that your message is appropriate and you'd be comfortable with colleagues seeing it. 
+
+```{r, fig.alt="good and bad commit messages", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_174#slide=id.g3f139628ce6_0_174")
+```
 
 #### Pulling updates from GitHub
 
@@ -693,7 +687,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 
 ## Create a version controlled repository for your project 
 
-Now, we will return to the project with Collab. O. Rator. In the previous section, we created a repository on GitHub, and then cloned to make a local copy. Here, we will start with a local folder, track it with Git, and then create a remote version on GitHub. 
+Now, we will return to the project with Collab. O. Rator. In the previous section, you created a repository on GitHub, and then cloned to make a local copy. Here, you will practice the other approach to creating a new version-controlled repository. You will start with a local folder, track it with Git, and then create a remote version of the repository on GitHub. 
 
 First, download the .zip file [here](https://github.com/opencasestudies/version_controlled_infant_gut_analysis/blob/main/version_controlled_infant_gut_analysis.zip). Your browser may automatically unzip this file to create a folder called "infant_gut_files", if not then unzip the file manually (this typically involves right clicking or double clicking depending on your operating system). 
 
