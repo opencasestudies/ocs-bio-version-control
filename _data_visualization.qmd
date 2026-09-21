@@ -80,11 +80,11 @@ Then, type your code, starting on the following line. To end a code chunk, go to
 
 #### In RStudio
 
-You can also add a code chunk in RStudio by navigating to "Code" -> "Insert Chunk". There is also a keyboard shortcut: `Ctrl + Alt + I` in Windows and Linux, and `Cmd + Option + I` on Mac. 
+You can also add a code chunk in RStudio by clicking the button green button with a plus sign and a "c", below the open file names. Other options include navigating to "Code" -> "Insert Chunk" or using a keyboard shortcut: `Ctrl + Alt + I` in Windows and Linux, and `Cmd + Option + I` on Mac. 
 
 #### In Positron
 
-In Positron there is a keyboard shortcut to add a code chunk: `Ctrl + Shift + I` in Windows and Linux, and `Cmd + Shift + I` on Mac. 
+You can also add a code chunk in Positron by clicking the icon that shows an arrow pointing towards to two vertical boxes. There is a keyboard shortcut to add a code chunk: `Ctrl + Shift + I` in Windows and Linux, and `Cmd + Shift + I` on Mac. 
 
 :::
 </details>
