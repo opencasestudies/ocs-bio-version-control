@@ -1,31 +1,155 @@
 # **Data Analysis**
 ***
 
-[potentially cut this section!]
+Now, we're going to put our evidence together to draw some conclusions about the study designs of studies included in this meta-analysis. 
 
-[continue in same script as before]
+First, recall the two plots that we made.
 
-Generate a table to summarize the information in our plots
-
-```{r}
-study_info <- clean_metadata %>%
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+library(here)
+library(dplyr)
+library(ggplot2)
+load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
+sample_counts <- clean_metadata %>%
   group_by(Study, Category) %>%
+  count(name = "total")
+study_order <- sample_counts %>%
+  group_by(Study) %>%
+  summarise(total_both = sum(total)) %>%
+  arrange(total_both) %>%
+  pull(Study)
+```
+
+::: {.panel-tabset}
+
+#### Number of samples plot
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+sample_counts %>%
+  mutate(Study = factor(Study, levels = study_order)) %>%
+  ggplot(aes(x = Study, y = total, fill = Category)) +
+  geom_col(position = position_dodge()) +
+  scale_fill_viridis_d() + 
+  theme_minimal() + 
+  labs(y = "Number of samples",
+       x = "Study",
+       title = "Number of Samples by Study and Category") + 
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+#### Sampling time points plot
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+observations_after_birth <- clean_metadata %>%
+  filter(!sampling_before_birth) 
+observations_after_birth %>%
+  mutate(Study = factor(Study, levels = study_order)) %>%
+  ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
+  geom_histogram(position = position_dodge(), bins = 20) +
+  facet_wrap(~Study, scale = "free_y") +
+  labs(x = "Days since birth at sampling",
+       y = "Count",
+       title = "Distribution of sampling day across studies") + 
+  scale_fill_viridis_d() + 
+  theme_minimal() + 
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+:::
+
+Additionally, we can make a summary table to have a concise view of some of the important study design features of these studies.
+
+::: {.rcode}
+```{r}
+clean_metadata %>%
+  # group data by study and category 
+  group_by(Study, Category) %>%
+  # calculate the number of unique people in each study and category
   summarise(n_person = n_distinct(PersonID),
+            # calculate the number of unique samples in each study and category
             n_sample = n_distinct(SampleID),
+            # calculate the number of unique days at which samples were taken in 
+            # each study and category 
             n_time = n_distinct(sampling_paper),
+            # calculate first sampling day for each study and category
             min_time = min(sampling_day[!sampling_before_birth], na.rm = TRUE),
+            # calculate last sampling day for each study and category
             max_time = max(sampling_day[!sampling_before_birth], na.rm = TRUE),
+            # report if any samples were taken during pregnancy, and when 
             pregnancy_time = ifelse(any(sampling_before_birth), 
                                     median(sampling_day[sampling_before_birth]),
                                     NA),
             .groups = "drop")
-study_info
+```
+:::
+
+:::{.think_question}
+::::{.think_question_header}
+Question opportunity
+::::
+::::{.inner_block}
+Recall one of the main questions of this case study: In this meta-analysis of infant git microbiome samples, how do the original studies compare in their sampling designs? Specifically, how do they compare in terms of the number of samples and the sampling timeline?
+
+Use the two plots you've made and the table above to make a few observations that compare and contrast the sampling designs of the original studies. Include these observations at the end of your "03_visualize_study_cohorts.qmd" document. 
+
+<details><summary>Answer</summary>
+
+Possible observations from the plots: 
+
+- Two studies have small samples sizes (Asnicar with 16 samples and Chu with 27 samples), three studies have more moderate sample sizes (Wampach with 49 samples Parnanen with 64 samples, and Ferretti with 102 samples), and three studies have larger sample sizes (Yassour with 258 samples, Backhed with 392 samples, and Shao with 588 samples). 
+- Some studies take the same number or similar numbers of samples from mothers and infants (Asnicar, Chu, Parnanen) and other studies take significantly more samples from infants than mothers (Wampach, Ferretti, Yassour, Backhed, and Shao). 
+- Wampach sampled only in the first days after birth, Chu, Parnanen, Ferretti, and Yassour sampled only in the first six months since birth, and Asnicar, Backhed, and Shao took samples in the first year and a half since birth. 
+- Some studies appear to have sampled at specific time points (Asnicar, Chu, Wampach, Parnanen, and Ferretti) and other studies appear to have sampled at a wider variety of timepoints (Yassour, Backhed, Shao). 
+
+</details>
+::::
+:::
+
+Since you've performed the requested analysis, make sure to document any new files in this repository in the README.md file. Specifically, describe what the file "03_visualize_study_cohorts.qmd" does, and describe the two plots that are now saved in the figures folder. After doing this, make another commit and {{< glossary "push">}} your work. 
+
+::: {.panel-tabset}
+
+#### GitHub Desktop 
+
+Navigate back to GitHub Desktop. 
+
+- Stage "03_visualize_study_cohorts.qmd" and "README.md". 
+- Add an appropriate commit message and commit. 
+- Click "Push origin", to push these changes that you've made locally to your remote repository. 
+
+#### Command line 
+
+We need to first stage "03_visualize_study_cohorts.qmd" and "README.md".
+
+:::: {.shell}
+
+```bash
+git add 03_visualize_study_cohorts.qmd README.md
 ```
 
-[potentially save this table as a .csv file in results. I'm not sure about this, because this isn't really the type of result that we would need to save (because it is easy and fast to regenerate), however if this is a table that we would hypothetically like to share outside of R and outside of a rendered output file, it could be good to have as a .csv.]
+::::
 
-[It would be nice to ask the learner to write a paragraph that compares these studies based on the plots and table. However, I'm not sure (1) if this is too much critical thinking outside of the version control objectives, and (2) exactly where to put this. If this file with data visualization and analysis is a .Rmd or .qmd, they could add a summary section and write it there.]
+Next, add a commit with an appropriate commit message. 
 
-Now that you've performed this analysis, make sure to document any new files in this repository in the README file. This is another good time to commit any changes. 
+:::: {.shell}
+
+```bash
+git commit -m "Draw conclusions and document new files in README"
+```
+
+::::
+
+Finally, push these changes that you've made locally to your remote repository. Because this is your first time pushing from a new branch, you will need to tell Git where you want to push to, adding the flag `--set-upstream origin branch_name`. 
+
+:::: {.shell}
+
+```bash
+git push --set-upstream origin study_comparison
+```
+
+::::
+
+:::
+
 
 ***
