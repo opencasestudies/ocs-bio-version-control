@@ -28,12 +28,12 @@ In this exercise, we will follow a process where we start to make changes to the
 
 Complete the following steps:
 
-- Open repository for this case study
-- Check out the main branch
-- Add a new line to the README (add whatever you'd like here!)
-- Follow the instructions on the [troubleshooting section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github) to move this update to the README to a new branch called updated_readme
-- Commit and push your changes to a remote updated_readme branch
-- Submit another pull request on GitHub to contribute this change into the main branch. 
+- [ ] Open repository for this case study
+- [ ] Check out the main branch
+- [ ] Add a new line to the README (add whatever you'd like here!)
+- [ ] Follow the instructions on the [troubleshooting section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github) to move this update to the README to a new branch called updated_readme
+- [ ] Commit and push your changes to a remote updated_readme branch
+- [ ] Submit another pull request on GitHub to contribute this change into the main branch. 
 
 :::{.think_question}
 ::::{.think_question_header}

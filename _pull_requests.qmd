@@ -9,10 +9,10 @@ Recall that in the initial description of branches, you learned that branches ca
 
 In the previous section, you worked locally to make the visualizations that Collab O. Rator had asked you for, and you staged, committed, and pushed these changes. Recall that you were working on a branch called "study comparison". Let's take a look at this branch on GitHub. 
 
-- Navigate back to "https://github.com/your_username/infant_gut_analysis" (replacing your username). 
-- Click underneath the repository name where is says "Branches". This should take you to a page that shows you the existing branches (this should include "main" and "study_comparison"). 
-- Click on "study_comparison". 
-- You should see a yellow banner with a green button that says "Compare & pull request". Click on this button. 
+- [ ] Navigate back to "https://github.com/your_username/infant_gut_analysis" (replacing your username). 
+- [ ] Click underneath the repository name where is says "Branches". This should take you to a page that shows you the existing branches (this should include "main" and "study_comparison"). 
+- [ ] Click on "study_comparison". 
+- [ ] You should see a yellow banner with a green button that says "Compare & pull request". Click on this button. 
 
 This set of steps will bring you to a page where you can make your pull request. The first thing to note is the panel at the top of the page, which gives you the base branch (this will by default be "main") and the compare branch (this will be the branch you've been working on, in this case "study_comparison"). There is an arrow, showing that you are trying to merge the updates that you've made in the compare branch into the base branch. 
 

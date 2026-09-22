@@ -113,9 +113,9 @@ Since you've performed the requested analysis, make sure to document any new fil
 
 Navigate back to GitHub Desktop. 
 
-- Stage "03_visualize_study_cohorts.qmd" and "README.md". 
-- Add an appropriate commit message and commit. 
-- Click "Push origin", to push these changes that you've made locally to your remote repository. 
+- [ ] Stage "03_visualize_study_cohorts.qmd" and "README.md". 
+- [ ] Add an appropriate commit message and commit. 
+- [ ] Click "Push origin", to push these changes that you've made locally to your remote repository. 
 
 #### Command line 
 

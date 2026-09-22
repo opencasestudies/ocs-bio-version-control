@@ -211,9 +211,9 @@ Now that you have a GitHub account, you can create your first repository. The go
 
 To create your repository:
 
-- click on the menu bottom (three horizontal lines)
-- click "Repositories"
-- click the green button that says "New repository" 
+- [ ] click on the menu bottom (three horizontal lines)
+- [ ] click "Repositories"
+- [ ] click the green button that says "New repository" 
 
 This will take you to a new page. GitHub will automatically set you as the owner of the repository, and you can choose a name. Let's call this repository "my-first-repository". 
 
@@ -269,12 +269,12 @@ Once you click "Create repository", you will be brought to the GitHub page for y
 
 If you look at your repository, you will see that it has one file, README.md. This is where you will document what is contained in your repository, and it will serve as a homepage for your project. It is written in Markdown, a language that can be used to format documents (you can find more information about how Markdown works and its syntax [here](https://www.markdownguide.org)). You will now edit the README:
 
-- click the pencil on the upper right of the README
-- add a new line to your README document that says "Adding a new commit to my README." 
-- click the green button that says "Commit changes"
-- provide an informative commit message, something like "Add new line to README.md" 
-- click the green button that says "Commit changes"
-- click the repository name in the upper left to navigate back to the home page
+- [ ] click the pencil on the upper right of the README
+- [ ] add a new line to your README document that says "Adding a new commit to my README." 
+- [ ] click the green button that says "Commit changes"
+- [ ] provide an informative commit message, something like "Add new line to README.md" 
+- [ ] click the green button that says "Commit changes"
+- [ ] click the repository name in the upper left to navigate back to the home page
 
 ```{r, fig.alt="Image of first repository", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_13#slide=id.g3f94a4bdf40_0_13")
@@ -407,12 +407,12 @@ Next, you need to connect your GitHub account to your local Git.
 
 GitHub no longer supports using passwords to connect Git and GitHub, so you'll instead need to use a Personal Access Token (PAT). To create a token, [click this link to go to your settings for tokens](https://github.com/settings/tokens). In order to connect your token to your computer do the following:
 
-- click "Generate new token"
-- choose "Generate new token (classic)"
-- give your token a name and expiration date
-- select the "repo" scope
-- click "Generate Token"
-- copy the token to your clipboard, or keep this window open (you will not be able to access this again)
+- [ ] click "Generate new token"
+- [ ] choose "Generate new token (classic)"
+- [ ] give your token a name and expiration date
+- [ ] select the "repo" scope
+- [ ] click "Generate Token"
+- [ ] copy the token to your clipboard, or keep this window open (you will not be able to access this again)
 
 Now, open the command line and run the following:
 
@@ -642,12 +642,12 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 
 You've learned how to make updates locally, and stage, commit, and push these changes so that the GitHub repository includes those updates. While "pushing" sends updates from a local repository to the remote repository on GitHub, "pulling" sends updates from the remote GitHub repository to your local repository. To practice pulling, we're going to make another change and commit from GitHub, and then pull that commit into our local repository. We'll follow the same steps to make a change and commit on GitHub:
 
-- click the pencil on the upper right of the README
-- add a new line to your README document that says "Adding another commit from GitHub." 
-- click the green button that says "Commit changes"
-- provide an informative commit message, something like "Add one more new line to README" 
-- click the green button that says "Commit changes"
-- click the repository name in the upper left to navigate back to the home page
+- [ ] click the pencil on the upper right of the README
+- [ ] add a new line to your README document that says "Adding another commit from GitHub." 
+- [ ] click the green button that says "Commit changes"
+- [ ] provide an informative commit message, something like "Add one more new line to README" 
+- [ ] click the green button that says "Commit changes"
+- [ ] click the repository name in the upper left to navigate back to the home page
 
 ::: {.panel-tabset}
 
@@ -655,9 +655,9 @@ You've learned how to make updates locally, and stage, commit, and push these ch
 
 Now, return to GitHub Desktop. Do the following: 
 
-- In the upper banner, click where it says "Fetch origin". It should then update and say "Pull origin".
-- Click "Pull origin". 
-- Go to the "History" pane, and you'll see the most recent commit that you made on GitHub, now included in your local repository. 
+- [ ] In the upper banner, click where it says "Fetch origin". It should then update and say "Pull origin".
+- [ ] Click "Pull origin". 
+- [ ] Go to the "History" pane, and you'll see the most recent commit that you made on GitHub, now included in your local repository. 
 
 If you return to RStudio or Positron and open "README.md", you will now see the update that you made on GitHub. 
 
@@ -697,19 +697,19 @@ First, download the .zip file [here](https://github.com/opencasestudies/version_
 
 Now, go to GitHub Desktop and do the following: 
 
-- click the button "Add" in the top right
-- click "Create New Repository"
-- give your repository the name "infant_gut_analysis".
-- leave the box "Initialize this repository with a README" unchecked (because a README is already included in the set of files). 
-- under Git Ignore choose "R" and under License choose "MIT License". 
+- [ ] click the button "Add" in the top right
+- [ ] click "Create New Repository"
+- [ ] give your repository the name "infant_gut_analysis".
+- [ ] leave the box "Initialize this repository with a README" unchecked (because a README is already included in the set of files). 
+- [ ] under Git Ignore choose "R" and under License choose "MIT License". 
 
 Now, copy the contents of the "infant_gut_files" into the new repository that you just created with GitHub Desktop
 
 Once you add these files, return to GitHub Desktop. You should see a set of changed files, with check marks next to them to denote that they are staged. 
 
-- add a commit message and commit this change
-- you should then see an option to "Publish repository", click this
-- you should now see the option "Open the repository page on GitHub in your browser". 
+- [ ] add a commit message and commit this change
+- [ ] you should then see an option to "Publish repository", click this
+- [ ] you should now see the option "Open the repository page on GitHub in your browser". 
 
 Clicking this will bring you to the new GitHub repo that you just made for this project! 
 
@@ -873,9 +873,9 @@ You will create a new branch with GitHub Desktop.
 
 In GitHub Desktop:
 
-- navigate to the tab in the top left of the window that says "Current Branch" 
-- click on this tab, and you should see a button that says "New Branch"
-- name your new branch "study_comparison". 
+- [ ] navigate to the tab in the top left of the window that says "Current Branch" 
+- [ ] click on this tab, and you should see a button that says "New Branch"
+- [ ] name your new branch "study_comparison". 
 
 #### Command line 
 
