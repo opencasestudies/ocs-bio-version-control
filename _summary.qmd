@@ -470,7 +470,7 @@ button {
 
 ## **Summary Image**
 
-Now that you've reconstructed the version control workflow from this case study, recall the motivation for version control. 
+Now that you've reconstructed the version control workflow from this case study, recall the motivation for version control. Without version control, collaborative scientific projects often involve many emails back and forth, and either a single recent version of the project with no record of its history, or a collection of files representing older versions of the project that can be challenging to organize and are not optimal for multiple people to work on. Version control provides a solution to these challenges. When a project is version-controlled, each file within the project has a recorded history, and commits and associated commit messages can be used to understand when and why changes were made. Additionally, version control facilitates collaboration on scientific projects, letting multiple people work on the same set of files more easily, and providing a useful interface for code review through pull requests.  
 
 ```{r, fig.alt="Motivation for using version control", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f9c5fef626_0_3&pli=1#slide=id.g3f9c5fef626_0_3")
