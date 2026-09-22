@@ -15,7 +15,7 @@ Package    | Use | Where this packages is used
 ---------- |------------- | ----------------------------
 [here](https://here.r-lib.org) | To construct file paths within folders | [Data visualization](https://www.opencasestudies.org/ocs-bio-version-control/#data-visualization)
 [readxl](https://readxl.tidyverse.org){target="_blank"}      | To read excel files into R | [Data import](https://www.opencasestudies.org/ocs-bio-version-control/#data-import)
-[dplyr](https://dplyr.tidyverse.org){target="_blank"}      | To combine and manipulate data tables | [Data import](https://www.opencasestudies.org/ocs-bio-version-control/#data-import), [Data wrangling](https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling), [Data visualization](https://www.opencasestudies.org/ocs-bio-version-control/#data-visualization)
+[dplyr](https://dplyr.tidyverse.org){target="_blank"}      | To combine and manipulate data tables | [Data import](https://www.opencasestudies.org/ocs-bio-version-control/#data-import), [Data exploration](https://www.opencasestudies.org/ocs-bio-version-control/#data-exploration), [Data wrangling](https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling), [Data visualization](https://www.opencasestudies.org/ocs-bio-version-control/#data-visualization), [Data analysis](https://www.opencasestudies.org/ocs-bio-version-control/#data-analysis)
 [ggplot2](https://ggplot2.tidyverse.org) | To visualize data | [Data visualization](https://www.opencasestudies.org/ocs-bio-version-control/#data-visualization)
 [stringr](https://stringr.tidyverse.org) | To manipulate strings | [Data wrangling](https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling)
 
