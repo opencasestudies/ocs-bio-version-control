@@ -11,6 +11,7 @@ Use this section to provide any additional information or resources on the topic
 - [happy git with R](https://happygitwithr.com): online book that covers most relevant topics for using Git and GitHub with R
 - [How to Use Git/GitHub with R](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r): blog post about getting Git and GitHub set up and working with RStudio. This uses the built-in Git GUI in RStudio instead of GitHub Desktop
 - [Dangit, Git!?!](https://dangitgit.com/en): brief description of some common Git errors and how to resolve them
+- [Git Tutorial: How to Fix 18 Common Mistakes](https://www.creative-tim.com/blog/educational-tech/git-tutorial-fix-common-mistakes/): another collection of common Git errors and their fixes
 - [Intro to reproducibility in cancer informatics](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/): short course on reproducibility for scientific projects, includes Git and GitHub in chapter 4 and provides other resources on reproducibility
 - [Advanced reproducibility in cancer informatics](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/): short course on more advanced reproducibility for scientific projects, includes GitHub in chapter 3 and provides other resources on reproducibility
 - [Carpentries](https://carpentries.org):
@@ -20,6 +21,7 @@ Use this section to provide any additional information or resources on the topic
 - [Hands on introduction to Git and GitHub](https://training.arcadiascience.com/workshops/20220920-intro-to-git-and-github/lesson/): another introduction to Git and GitHub, covering some overlapping material and some additional material
 - [Contributing to Galaxy Training Network with GitHub](https://training.galaxyproject.org/training-material/topics/contributing/tutorials/github-contribution/tutorial.html): tutorial on how to contribute to an open source project with GitHub
 - [GitHub cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf): cheatsheet with Git commands that can be used in the command line
+- [Merge vs. Rebase vs. Fast-Forward: Mastering Git Integration Strategies](https://medium.com/@Spritan/merge-vs-rebase-vs-fast-forward-mastering-git-integration-strategies-3ba8e652d93e): article that explains the differences between merging, rebasing, and fast-forwarding, as well as when to use each of them
 
 <!--
 Automatically include the packages table from _packages.qmd?
