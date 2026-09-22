@@ -1,5 +1,4 @@
-# **Session info**
-***
+## **Session info**
 
 :::{.reproducibility_box}
 ::::{.reproducibility_box_header}
@@ -15,3 +14,5 @@ While using version control to track the data and code that produce a given outp
 devtools::session_info()
 ```
 :::
+
+***
