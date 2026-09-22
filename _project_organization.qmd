@@ -25,6 +25,7 @@ Although this is not directly related to {{< glossary "version control">}}, ther
 :::
 
 ## Organization of this project 
+***
 
 If we look at the files contained in the "infant_gut_analysis" repository, they follow the recommendations provided above. 
 
@@ -33,6 +34,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 ```
 
 ## README
+***
 
 A README file should describe the files related to your scientific project. It should describe where inputs come from, what each script does, and where outputs are generated. If someone reads through your README, they should know where to find each component of your analysis. 
 
@@ -49,6 +51,7 @@ The script "01_pull_study_data.R" generates "sample_metadata.csv".
 :::
 
 ## Project organization with Git and GitHub
+***
 
 ### Empty folders
 

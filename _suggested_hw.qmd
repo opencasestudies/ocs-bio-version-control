@@ -15,10 +15,12 @@ Now that you've learned how to how to make and use version-controlled repositori
 :::
 
 ## Reinforcement Exercises
+***
 
 A good way to reinforce these version control skills is to make a current scientific project that you've been working on into a Git tracked repository, and connecting it to a remote GitHub repository. See if you can integrate the Git workflow that you've learned here into your scientific process. Even if you are the only one working on this project, this is a good way to practice skills. This will get you into the habit of staging, committing, and pushing changes as you work, and working on different branches for different components of a project. 
 
 ## Advancement Exercises
+***
 
 ### Beginner
 

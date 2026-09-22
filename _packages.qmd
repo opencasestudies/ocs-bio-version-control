@@ -23,3 +23,5 @@ Package    | Use | Where this packages is used
 The first time we use a function, we will use the `::` to indicate which package we are using. Unless we have overlapping function names, this is not necessary, but we will include it here to be informative about where the functions we will use come from.
 
 Three of these packages, `dplyr`, `ggplot2`, and `stringr` are part of the [tidyverse suite of packages](https://tidyverse.org). The `tidyverse` includes eight packages that can easily be used together and share data structures and syntax. While each of the packages can be installed or loaded separately (as we do above), they can be installed or loaded all at once using `install.packages("tidyverse")` or `library(tidyverse)`. 
+
+***

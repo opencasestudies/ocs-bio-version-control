@@ -4,6 +4,8 @@ Don't adjust the shortcode or the table header in this file, only the markdown t
 
 ## **Objectives Map**
 
+***
+
 The following collapsed table shows what parts of the case study provide practice for different learning goals for those who are interested in a specific learning goal. 
 
 ::: {.callout-note collapse="true" title="Objectives Map: Where It Is Covered"}

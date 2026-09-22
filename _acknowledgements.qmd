@@ -1,5 +1,5 @@
 ## **Acknowledgments**
-
+***
 
 <!--
 Fill in any Acknowledgments using an example from a previous case study if needed: https://www.opencasestudies.org/ocs-bp-co2-emissions/#Acknowledgments
@@ -13,7 +13,6 @@ Icons are from [iconpacks](https://www.iconpacks.net/).
 
 Avatars are from [avataaars](https://getavataaars.com)
 
-*** 
 
 ### AI Attribution Statement
 

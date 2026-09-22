@@ -1,4 +1,5 @@
 ## **Session info**
+***
 
 :::{.reproducibility_box}
 ::::{.reproducibility_box_header}
@@ -15,4 +16,3 @@ devtools::session_info()
 ```
 :::
 
-***

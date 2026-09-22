@@ -2,10 +2,12 @@
 ***
 
 ## What is a pull request? 
+***
 
 Recall that in the initial description of branches, you learned that branches can be used for development of a new part of a project, separate from the stable version of a repository. A pull request is a way to take a collection of commits on a branch and request to {{< glossary "merge">}} those into another {{< glossary "branch">}}, typically "main". A pull request will provide a list of each file that is changed in the branch, as well as the difference between each file and the version of that file on the branch that you are trying to merge your changes into. While you can review your own pull requests, GitHub also has features that make it convenient for collaborators to review your pull requests. 
 
 ## How to make a pull request 
+***
 
 In the previous section, you worked locally to make the visualizations that Collab O. Rator had asked you for, and you staged, committed, and pushed these changes. Recall that you were working on a branch called "study comparison". Let's take a look at this branch on GitHub. 
 
@@ -40,6 +42,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 </details>
 
 ## Merging or closing pull requests 
+***
 
 Once you have created a pull request, it is considered an "open" pull request and there are two potential actions, either merging it or closing it. 
 
@@ -52,6 +55,7 @@ Let's say that you submitted a pull request, you or your collaborator has decide
 If you close a pull request without merging it, this means that you've decided not to integrate the changes from the compare branch into the base branch. This may happen if you decide to go in another direction with an analysis. You can close a pull request by clicking the "Close pull request" button at the bottom of the pull request page. It is important to close pull requests that are no longer active so that the set of open pull requests accurately represents the current state of the project. 
 
 ## Additional notes on pull requests 
+***
 
 While your pull request is open, any additional changes that you commit and push to this branch will be automatically added to the pull request. 
 

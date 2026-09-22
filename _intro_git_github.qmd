@@ -8,6 +8,7 @@ Introduction to Git and GitHub (similar to "Dashboard Basics" section in school 
 Before we start to address your project with Collab O. Rator, we will provide an introduction to version control with Git and GitHub. In this section, you will learn more about what Git and GitHub are, create a GitHub account, download Git software, and create your first version controlled project. Towards the end of this section we will return to the infant microbiome meta-analysis project. 
 
 ## Reproducibility and version control 
+***
 
 :::{.definition_box}
 ::::{.definition_box_header}
@@ -53,6 +54,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 </details>
 
 ## Why use version control? 
+***
 
 Consider a typical workflow when you have a project with multiple files (for example: data, code, resulting figures). You likely have a folder on your computer where you keep these files. When you edit a file you save it, and you have access to the most recent version. You might run into a situation where you want to try something new, so you save "project_file_old.R" along with "project_file_updated.R" or perhaps "project_file_july_2026.R" or eventually "project_file_final_version_4_final.R". If you haven't saved an older version of a file but you wish you could revert to the version from last week before you tried something new, you would be out of luck. 
 
@@ -85,6 +87,7 @@ Version control resources:
 :::
 
 ## What are Git and GitHub? 
+***
 
 Git is a version control tool, and GitHub is an website for hosting files that are tracked with Git. Git works locally on your computer to record different versions of a project, and GitHub works online to provide a digital backup of files, let you connect with collaborators, and optionally create a web presence for your project. 
 
@@ -198,6 +201,7 @@ Typically, it is easier to create a new repository remotely with GitHub when sta
 In this case study we will practice both approaches. First, in the [following section](https://www.opencasestudies.org/ocs-bio-version-control/#getting-started-with-git-and-github), you will practice creating a new repository from GitHub and cloning it to your local computer. Later, in the [section in which you create a repository for the case study analysis](https://www.opencasestudies.org/ocs-bio-version-control/#create-a-version-controlled-repository-for-your-project), you will practice working with an existing set of files and version-controlling them locally with Git. 
 
 ## Getting started with Git and GitHub
+***
 
 ### Creating a GitHub account
 
@@ -686,6 +690,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 ```
 
 ## Create a version controlled repository for your project 
+***
 
 Now, we will return to the project with Collab. O. Rator. In the previous section, you created a repository on GitHub, and then cloned to make a local copy. Here, you will practice the other approach to creating a new version-controlled repository. You will start with a local folder, track it with Git, and then create a remote version of the repository on GitHub. 
 
@@ -806,6 +811,7 @@ If you are using another R IDE besides RStudio or Positron, you should look up i
 :::
 
 ## Branches
+***
 
 One useful feature of Git is the ability to make branches. A branch is a history of commits, and by default a repository that is tracked by Git starts with the "main" branch. Multiple branches provide parallel versions of the repository that can be developed separately. For example, you may have a version of your analysis and results in the main branch, but you want to experiment with changing a parameter. You could do this in a separate branch. This would let you work on the experimental version of your analysis while also having a stable version of your analysis elsewhere. You can switch between branches depending on what version of the analysis you want to work with on a given day. If you eventually decide that you want to move forward with the changed parameter, you can merge your experimental branch back into your main branch. 
 
@@ -892,6 +898,7 @@ When you create a new branch, you can name it by providing a new branch name (we
 :::
 
 ## Tips for Git and GitHub
+***
 
 :::{.reproducibility_box}
 ::::{.reproducibility_box_header}
