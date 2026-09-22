@@ -14,7 +14,7 @@ Before we start to address your project with Collab O. Rator, we will provide an
 Reproducibility
 ::::
 ::::{.inner_block}
-The ability for someone else the run the same analysis on the same data and get the same results.
+The ability for someone else the run the same analysis on the same data and get the same results as the original researcher.
 ::::
 :::
 
@@ -86,7 +86,7 @@ Version control resources:
 
 ## What are Git and GitHub? 
 
-Git is a version control tool, and GitHub is an website for hosting files that are tracked with Git. Git works locally on your computer to record different versions of a project, and GitHub works online to provide a digital backup of files, let you connect with collaborators, and optionally create a web presence for your project. 
+Git is a version control tool, and GitHub is a website for hosting files that are tracked with Git. Git works locally on your computer to record different versions of a project, and GitHub works online to provide a digital backup of files, let you connect with collaborators, and optionally create a web presence for your project. 
 
 ```{r, fig.alt="Git vs GitHub", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_0#slide=id.g3f94a4bdf40_0_0")
@@ -112,11 +112,11 @@ When you set up a repository, Git will save an initial version of the files in t
 Commit
 ::::
 ::::{.inner_block}
-A snapshot of a the files in a repository at a certain time.
+A snapshot of the files in a repository at a certain time.
 ::::
 :::
 
-Another way to think about a commit is as a save point in a video game. This means that it saves your work up to a certain point in time. In the image below, a repository called **analysis_project** is tracked using version control, and it is made up of four commits. Each commit has a message that explains what the commit does. Within a commit, files can be added, edited, left unchanged, or deleted. 
+Another way to think about a commit is as a save point in a video game. This means that it saves your work up to a certain point in time. In the image below, a repository called **analysis_project** is tracked using version control, and it is made up of four commits. Each commit has a message that explains what work the commit represents. Within a commit, files can be added, edited, left unchanged, or deleted. 
 
 ```{r, fig.alt="Commits made to a repository called analysis_project. The first commit has the message 'Create repo and add data' and data.csv is added. The second commit has the message 'Add code to clean data' and data.csv has no change and code.R is added. The third commit has the message 'Add code for initial plots' and data.csv has no change and code.R is edited. The fourth commit has the message 'Fix plot themes' and data.csv has no change and code.R is edited.", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3fade600e50_0_0#slide=id.g3fade600e50_0_0")
@@ -154,16 +154,16 @@ The online version of the repository tracked on GitHub.
 
 There are several benefits to pairing your local repositories with remote repositories on GitHub. 
 
-- You have a backup of files in case something happens to your computer
-- You can easily work with collaborators
-- You have a central location where your data and code are stored for a project that can be viewed by and shared with other scientists
+- You have a backup of files in case something happens to your computer.
+- You can easily work with collaborators.
+- You have a central location where your data (if appropriate) and code are stored for a project that can be viewed by and shared with other scientists.
 
 :::{.reproducibility_box}
 ::::{.reproducibility_box_header}
 Reproducibility considerations
 ::::
 ::::{.inner_block}
-A scientific paper is more reproducible if the data (or instructions to access the data) and code are publicly available, because other researchers can directly inspect and reproduce the analysis. While some papers have data and code "available upon request", hosting data and code on GitHub makes it easier to share these files without requiring additional time and effort from the authors to respond to emails. This aligns with the open science movement, which aims to make research, data, and scientific software more transparent and accessible. 
+A scientific paper is more reproducible if the data (or instructions to access the data) and code are publicly available, because other researchers can directly inspect and reproduce the analysis. While some papers have data and code "available upon request", hosting code (and data if appropriate) on GitHub makes it easier to share these files without requiring additional time and effort from the authors to respond to emails. This aligns with the open science movement, which aims to make research, data, and scientific software more transparent and accessible. 
 ::::
 :::
 
