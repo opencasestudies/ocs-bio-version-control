@@ -85,6 +85,9 @@ Reiter
 replicability
 replicable
 qs
+rebase
+Rebase
+rebasing
 recode
 repo
 reproducibility
