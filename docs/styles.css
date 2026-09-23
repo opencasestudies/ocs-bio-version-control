@@ -1,4 +1,11 @@
 
+/* Strip background gradient or box-shadow lines from headings and anchor links */
+h1, h2, h3, h4, .anchored, .anchorjs-link {
+  border-bottom: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
 /* To add some space below the navigation bar */
 
  body {
