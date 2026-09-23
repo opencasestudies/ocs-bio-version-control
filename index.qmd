@@ -8,7 +8,7 @@ include-sections:
   data-exploration: false
   data-wrangling: true
   data-viz: true
-  data-analysis: false
+  data-analysis: true
   main-q-table: true
 ---
 

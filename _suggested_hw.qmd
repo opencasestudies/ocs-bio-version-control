@@ -15,10 +15,12 @@ Now that you've learned how to how to make and use version-controlled repositori
 :::
 
 ## Reinforcement Exercises
+***
 
 A good way to reinforce these version control skills is to make a current scientific project that you've been working on into a Git tracked repository, and connecting it to a remote GitHub repository. See if you can integrate the Git workflow that you've learned here into your scientific process. Even if you are the only one working on this project, this is a good way to practice skills. This will get you into the habit of staging, committing, and pushing changes as you work, and working on different branches for different components of a project. 
 
 ## Advancement Exercises
+***
 
 ### Beginner
 
@@ -28,12 +30,12 @@ In this exercise, we will follow a process where we start to make changes to the
 
 Complete the following steps:
 
-- Open repository for this case study
-- Check out the main branch
-- Add a new line to the README (add whatever you'd like here!)
-- Follow the instructions on the [troubleshooting section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github) to move this update to the README to a new branch called updated_readme
-- Commit and push your changes to a remote updated_readme branch
-- Submit another pull request on GitHub to contribute this change into the main branch. 
+- [ ] Open repository for this case study
+- [ ] Check out the main branch
+- [ ] Add a new line to the README (add whatever you'd like here!)
+- [ ] Follow the instructions on the [troubleshooting section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github) to move this update to the README to a new branch called updated_readme
+- [ ] Commit and push your changes to a remote updated_readme branch
+- [ ] Submit another pull request on GitHub to contribute this change into the main branch. 
 
 :::{.think_question}
 ::::{.think_question_header}
@@ -49,6 +51,7 @@ There are several advantages to this workflow:
 - Using a new branch lets you try new things without disrupting a stable version of the code and project
 - Multiple people can work on different components of a project on their own branches, and then merge the branches into main when they are ready to contribute their work
 - A branch and pull request lets you group several related commits together, and describe in more detail in the pull request why you made them 
+- The "Files changed" tab can help you identify exactly which lines were changed across all commits included in the pull requests, which is often more convenient than separately looking at the changes from each commit 
 - A pull request lets you request a code review from a collaborator before merging your work into main, making you less susceptible to mistakes in your code
 
 </details>

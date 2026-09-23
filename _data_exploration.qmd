@@ -13,7 +13,38 @@ At the end of this section, save incremental data (if changes were made) so that
 # **Data Exploration**
 ***
 
-Skip this section
+```{r, echo = FALSE}
+load(here::here("data", "imported", "sample_metadata.rda"))
+```
+
+Now that you've imported the data, let's take a look at it. We'll use the function `glimpse()`, from the `dplyr` package that we've already been working with. This function shows the first several observations from each column of our dataset.
+
+::: {.rcode}
+```{r}
+glimpse(sample_metadata)
+```
+:::
+
+:::{.think_question}
+::::{.think_question_header}
+Question opportunity
+::::
+::::{.inner_block}
+As we described in the ["What are the data?" section](https://www.opencasestudies.org/ocs-bio-version-control/#what-are-the-data), the variables that we will use in our analysis are `Study`, `SampleID`, `PersonID`, `Category`, `Sampling from papers`, and `Sampling, day`. Based on the output of the `glimpse()` function, which if any of these variables will we want to work with as a numeric data type as opposed to a character data type? 
+<details> <summary> Hint </summary>
+
+Numeric data types are used for data that we'd like to do math with (such as `4` or `3.14`). Character data types are used for data in which we record a word or a series of words, and don't need to do any mathematical equations (such as `"apple"` or `"treatment group"`). Character data are enclosed in quotes. 
+
+</details>
+<details><summary>Answer</summary>
+
+The variable `Sampling, day` is saved as a character, however seems to contain numerical data. In the [Data Wrangling section](https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling) we will recode `Sampling, day` as a numeric variable. 
+
+</details>
+::::
+:::
+
+
 
 ***
 
