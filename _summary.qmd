@@ -332,11 +332,11 @@ document
 <!-- CSS part of code, controls layout and style -->
 <style>
 
-/* Make whole workflow scrollable */
+/* Make whole workflow scrollable 
 .workflow-wrapper {
   overflow-x: auto;
   width: 100%;
-}
+} */
 
 /* Set up dimensions of cards and images */
 :root {
