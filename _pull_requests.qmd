@@ -18,15 +18,19 @@ In the previous section, you worked locally to make the visualizations that Coll
 
 This set of steps will bring you to a page where you can make your pull request. The first thing to note is the panel at the top of the page, which gives you the base branch (this will by default be "main") and the compare branch (this will be the branch you've been working on, in this case "study_comparison"). There is an arrow, showing that you are trying to merge the updates that you've made in the compare branch into the base branch. 
 
-There are a few useful components of this page in which you make a pull request. First, you have a spot to add a title and a description. If you scroll down, you'll see a list of commits that make up this pull request along with the commit messages, and each of the files changed. On the right panel next to the title you'll see an option for reviewers. If other users have access to this repository, then you can add them as a reviewer. Depending on how they have configured their notification preferences, they may get an email notification that you've requested a review from them. It is good practice for you to also reach out to them and send them the link to your pull request to review! 
+There are a few useful components of this page in which you make a pull request:
+
+1. You have a spot to add a title and a description. 
+1. If you scroll down, you'll see a list of commits that make up this pull request along with the commit messages, and a view of each of the files changed/what was changed. 
+1. On the right panel next to the title you'll see an option for reviewers. If other users have access to this repository, then you can add them as a reviewer. Depending on how they have configured their notification preferences, they may get an email notification that you've requested a review from them. It is good practice for you to also reach out to them and send them the link to your pull request to review! 
 
 ### Components of a good pull title and description 
 
-- A concise but descriptive title
-- A description of the changes you want to merge. This is a good place to list files added and modified and give a quick description of those changes. Give plenty of context, you've likely been thinking about the code you want to merge more recently than your collaborator who will review it 
-  - One good way to describe changes is in a checklist of what you've done
-  - It can also be helpful to include a checklist of what is left to do, especially if your pull request is a work in progress
-- A request for code review (make specific requests: do you want your collaborator to review all changes? Do you want them to focus on a specific file or part of an analysis? do you just a bigger picture review to see if your approach to the problem makes sense?)
+- A concise but descriptive title.
+- A description of the changes you want to merge. This is a good place to list files added and modified and give a quick description of those changes. Give plenty of context; you've likely been thinking about the code you want to merge more recently than your collaborator who will review it. 
+  - One good way to describe changes is in a checklist of what you've done.
+  - It can also be helpful to include a checklist of what is left to do, especially if your pull request is a work in progress.
+- A request for code review (make specific requests: do you want your collaborator to review all changes? do you want them to focus on a specific file or part of an analysis? do you just a bigger picture review to see if your approach to the problem makes sense?).
 
 For additional suggestions on making good pull requests, you can read more in [this reproducibility course](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html). Also see [this real-world example of a pull request](https://github.com/AlexsLemonade/OpenPBTA-analysis/pull/741) with these components, followed by back-and-forth between the author and reviewer to iterate on the proposed changes to the analysis. 
 
