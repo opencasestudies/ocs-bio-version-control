@@ -11,6 +11,35 @@ At the end of this section, save incremental data so that users can pause and co
 
 Now that you have set up this project with {{< glossary "Git">}} and {{< glossary "GitHub">}}, you can start working on the study comparison in R. Open RStudio or Positron or your preferred R IDE to the "infant_gut_analysis" folder. We will start by taking a look at the data. Take a look at the {{< glossary "README">}} file to determine which file contains commands that can read in the raw data. Open this file and run the code. 
 
+<details> <summary> Click here to see the code included in this file. </summary>
+
+::: {.rcode}
+```r
+library(readxl) # for reading data from supplementary table
+library(dplyr) # for combining data across studies 
+
+# read tabs for each study from Table S1 from Wang et al. supplementary 
+# information, saved as "meta_analysis_metadata.xlsx"
+study_data <- lapply(3:10, function(i) {
+  read_xlsx("raw_data/Table S1.xlsx", sheet = i)
+}) 
+
+# set all variables as characters in order to combine data across studies
+# original data had some variables in different data types across studies
+study_data_clean <- lapply(study_data, function(df) {
+  df %>% mutate(across(everything(), as.character))
+})
+
+# combine lists for each study into a single data frame
+sample_metadata <- bind_rows(study_data_clean)
+
+# save data frame as a .rda file
+save(sample_metadata, file = "processed_data/sample_metadata.rda")
+```
+:::
+
+</details>
+
 :::{.think_question}
 ::::{.think_question_header}
 Question opportunity

@@ -85,6 +85,10 @@ Reiter
 replicability
 replicable
 qs
+rebase
+Rebase
+rebasing
+recode
 repo
 reproducibility
 Reproducibility
@@ -98,6 +102,7 @@ stringr
 subdir
 tabset
 Teichman
+tidyverse
 th
 uncheck
 Unsplash

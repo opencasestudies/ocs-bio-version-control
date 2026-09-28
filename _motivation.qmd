@@ -31,5 +31,19 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 ```
 
 In this case study, you will learn how to use {{< glossary "Git" >}} and {{< glossary "GitHub" >}} to track this project and perform the requested comparison of studies used in the {{< glossary "meta-analysis" >}}. You will also learn how version control can facilitate collaboration and make a scientific project more {{< glossary "reproducible" >}}. 
+
+You will learn more about version control, Git, and GitHub, in the [Introduction to Git and GitHub Section](https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github) below. Much of the information in that section is described in the following papers. They both provide a helpful introduction to version control with Git and GitHub. 
+
+:::{.reference_box}
+::::{.reference_box_header}
+Version control resources:
+::::
+::::{.inner_block}
+- Blischak, J. D., Davenport, E. R., & Wilson, G (2016). [A Quick Introduction to Version Control with Git and GitHub](https://doi.org/10.1371/journal.pcbi.1004668), PLoS Computational Biology, 12(1).  
+  - this paper provides an overview of Git and GitHub for scientists who primarily work with the command line
+- Bryan, J (2018). [Excuse Me, Do You Have a Moment to Talk About Version Control?](https://doi.org/10.7287/peerj.preprints.3159v2) The American Statistician, 72(1), 20-27. 
+  - this paper provides an overview of Git and GitHub for scientists and data scientists who primarily work with R and RStudio
+::::
+:::
   
 ***

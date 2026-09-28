@@ -1,7 +1,42 @@
 # **Troubleshooting Git and GitHub**
 ***
 
-Most new and experienced users of Git and GitHub will run into problems occasionally. Luckily, version control is designed so that these problems can be solved, it just may take some time to get used to. There are many helpful [resources](https://dangitgit.com/en) online for common Git and GitHub problems, and AI chatbots can provide advice (please see our AI disclaimer below for advice on using AI for version control!). In this section, we will mention a few common Git and GitHub problems and provide solutions. 
+Most new and experienced users of {{< glossary "Git">}} and {{< glossary "GitHub">}} will run into problems occasionally. Luckily, {{< glossary "version control">}} is designed so that these problems can be solved, it just may take some time to get used to. There are many helpful [resources](https://dangitgit.com/en) online for common Git and GitHub problems, and AI chatbots can provide advice (please see our AI disclaimer below for advice on using AI for version control!). In this section, we will mention a few common Git and GitHub problems and provide solutions. 
+
+<details> <summary> I {{< glossary "commit" display="committed">}} my work but I made a mistake in my most recent commit message that I would like to fix. </summary>
+
+:::{.panel-tabset}
+#### GitHub Desktop
+
+Navigate to the repository in GitHub Desktop and go to the "History" pane. Right-click on the commit, and you should see the option "Amend Commit...", click on this option. 
+
+If you have not yet pushed your work, you can then update your commit message and click "Commit", and then continue working.
+
+However, if you have already pushed your work, then you will need to amend the commit message and then force push. This should only be done carefully, because it will rewrite the commit history of the branch for any other collaborator using that branch. Therefore, it is suggested to only do this for branches that you are working on alone, or to alert your collaborator before performing this operation and having them reset their branch after you force push. 
+
+#### Command line
+
+If you have committed but not yet {{< glossary "push" display="pushed">}} your work, you can open the command line and do the following:
+
+:::: {.shell}
+```bash
+git commit --amend -m "Corrected commit message"
+```
+::::
+
+If you have already pushed your work, you will need to run the previous line, and then push those changes.
+
+:::: {.shell}
+```bash
+git push --force-with-lease
+```
+::::
+
+The `--force-with-lease` option will push your change to the remote repository, unless the remote branch has new commits. If there are already new commits, this will fail, to avoid disrupting the version history of other users. If you would like to change the message anyway, you can replace `--force-with-lease` with `--force`. 
+
+:::
+
+</details>
 
 <details> 
 <summary>I've created a merge conflict. What is this? How do I fix it?</summary>
@@ -77,6 +112,8 @@ In some cases (such as when one branch deletes a file and another edits it), you
 
 After you resolve and stage all files that had merge conflicts, you should commit these changes. This will resolve your merge conflict. 
 
+You can read more about when you might merge branches versus using a rebase operation to integrate changes in [this article](https://medium.com/@Spritan/merge-vs-rebase-vs-fast-forward-mastering-git-integration-strategies-3ba8e652d93e). 
+
 </details>
 
 <details> <summary> I've accidentally been working in the main branch, but I actually want my work to all go into a new branch. How do I switch branches and move this work with me?   </summary>
@@ -115,6 +152,16 @@ git reset --hard origin/main
 ::::
 
 However, make sure that you only `git reset --hard` after you've created the new branch and moved your commits, otherwise you risk losing your updated work.
+
+Alternately, if you have only edited a few files, you could just run `git restore --hard` for those files. This reverts the files to their previous versions, instead of reverting the full branch. If you have edited files called "file1.txt" and "file2.txt" and want to revert them to the versions saved in main, you could do the following:
+
+:::: {.shell}
+```bash
+git fetch origin
+git restore --source=origin/main file1.txt file2.txt
+```
+::::
+
 
 :::
 
@@ -222,6 +269,45 @@ git commit -m "removing file_name from Git tracking and adding it to .gitignore"
 The best way to avoid this problem is when you add large files to a folder that is tracked with Git, immediately add them to the .gitignore. If you really do want to track them with version control, consider using [Git Large File Storage](https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage) (LFS). 
 
 </details>
+
+<details> <summary> I'm in the middle of working on one branch, but I need to pause and make a quick update on another branch. How do I move between branches if I'm not ready to commit my current work? </summary>
+
+This is a common occurrence when you're working on a project with multiple branches. Imagine that you are deep in work for a feature that you're adding to an analysis, when you collaborator asks you to make a quick update to a difference branch that they've been working on. You aren't yet ready to commit the changes that you've been working on. This is a great time to use Git stash! 
+
+:::{.panel-tabset}
+#### GitHub Desktop
+
+Open GitHub Desktop in the current branch that you're working with. In the top toolbar, click "Branch" -> "Stash All Changes". This will take all of the changes in this branch since your last commit and store them for you to come back to. Once you've done this, you should see no local changes to the branch. You can then move into the other branch you want to work on. 
+
+Once you are ready to return to your original branch and continue your work, navigate back to that branch on GitHub Desktop. In the "Changes" panel, you should see the message "Stashed Changes". If you click on this, it will bring you to a page where you can click the "Restore" button to return your stashed changes to the branch. You can continue working from there. 
+
+#### Command line
+
+Open the command line to the branch that you've been working in. To save the changes in your current branch for you to later return to, use the following command:
+
+:::: {.shell}
+```bash
+git stash
+```
+::::
+
+After doing this, you can move to the other branch that you'd like to work on. Once you are ready to return to your original branch and continue your work, navigate back to that branch, and use the following command:
+
+:::: {.shell}
+```bash
+git stash pop
+```
+::::
+
+This command will restore your stashed changes to the current branch.
+
+:::
+
+To learn more about Git stash and additional options, you can read its [documentation from Git](https://git-scm.com/docs/git-stash).
+
+</details>
+
+You can learn more about other common Git mistakes and their fixes [in this article](https://www.creative-tim.com/blog/educational-tech/git-tutorial-fix-common-mistakes/).
 
 :::{.ai_box}
 ::::{.ai_box_header}
