@@ -272,7 +272,7 @@ The best way to avoid this problem is when you add large files to a folder that 
 
 <details> <summary> I'm in the middle of working on one branch, but I need to pause and make a quick update on another branch. How do I move between branches if I'm not ready to commit my current work? </summary>
 
-This is a common occurrence when you're working on a project with multiple branches. Imagine that you are deep in work for a feature that you're adding to an analysis, when you collaborator asks you to make a quick update to a difference branch that they've been working on. You aren't yet ready to commit the changes that you've been working on. This is a great time to use Git stash! 
+This is a common occurrence when you're working on a project with multiple branches. Imagine that you are deep in work for a feature that you're adding to an analysis, when your collaborator asks you to make a quick update to a different branch that they've been working on. You aren't yet ready to commit the changes that you've been working on. This is a great time to use Git stash! 
 
 :::{.panel-tabset}
 #### GitHub Desktop
@@ -336,7 +336,7 @@ How can I resolve this merge conflict?
 <u>Validation:</u>
 You should always be careful when taking advice on Git and GitHub from an AI chatbot. If you are asking for commands to use with Git for a situation that is very new to you, it could be helpful to do a quick search of the commands the chatbot tells you to use, to confirm that they do what you want to do. You could also ask multiple chatbots the same question. 
 
-You should be especially careful when using agentic AI with Git and GitHub. Agentic AI systems can use external tools and execute tasks, often performing steps without human supervision. There are many git commands (and command line commands in general) that are challenging to reverse and can cause major problems to scientific projects. For example, running `git reset --hard` will reset a local branch to the remote version of the branch, removing all uncommitted changes, which could remove valuable content. Therefore, it is recommended to monitor the ways that agentic AI can make changes with version control and to prevent them from from performing potentially destructive actions without human supervision.
+You should be especially careful when using agentic AI with Git and GitHub. Agentic AI systems can use external tools and execute tasks, often performing steps without human supervision. There are many git commands (and command line commands in general) that are challenging to reverse and can cause major problems to scientific projects. For example, running `git reset --hard` will reset a local branch to the remote version of the branch, removing all uncommitted changes, which could remove valuable content. Therefore, it is recommended to monitor the ways that agentic AI can make changes with version control and to prevent them from performing potentially destructive actions without human supervision.
 ::::
 :::
 
