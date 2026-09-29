@@ -1559,7 +1559,13 @@ You may see examples in other Git tutorials using <code>git add .</code>, which 
 <div class="shell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> study_comparison</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>When you create a new branch, you can name it by providing a new branch name after using the <code>-b</code> flag (we name the new branch “study_comparison” above).</p>
+<p>When you create a new branch, you can name it by providing a new branch name after using the <code>-b</code> flag (we name the new branch “study_comparison” above). When you want to move to an existing branch, you can use <code>git checkout</code> without the <code>-b</code> flag. For example, if you want to navigate back to the main branch, you could use the command <code>git checkout main</code>.</p>
+<details>
+<summary>
+A newer Git command to use with branches: <code>git switch</code>
+</summary>
+<p>Git is a piece of actively maintained software, and will continuously be updated and improve. In 2019, the <code>git switch</code> command was introduced to work more clearly with branches. The command <code>git switch -c study_comparison</code> is equivalent to the command <code>git checkout -b study_comparison</code>, where the <code>-c</code> flag creates a new branch. Similarly, the command <code>git switch main</code> is equivalent to <code>git checkout main</code>, and will move you to whatever branch you have specified (in this case the main branch). When you look at Git documentation, you may see <code>git checkout</code> used in older material and <code>git switch</code> used in newer material when creating or moving between branches, but either command will work in these situations. You can read <a href="https://www.datacamp.com/tutorial/git-switch-vs-checkout">this article about why <code>git switch</code> was created</a> if you would like to learn more.</p>
+</details>
 </div>
 </div>
 </div>
