@@ -15,7 +15,7 @@ Before we start to address your project with Collab O. Rator, we will provide an
 Reproducibility
 ::::
 ::::{.inner_block}
-The ability for someone else the run the same analysis on the same data and get the same results as the original researcher.
+The ability for someone else to run the same analysis on the same data and get the same results as the original researcher.
 ::::
 :::
 
