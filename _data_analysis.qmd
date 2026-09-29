@@ -65,7 +65,7 @@ clean_metadata %>%
   # group data by study and category 
   group_by(Study, Category) %>%
   # calculate the number of unique people in each study and category
-  summarise(n_person = n_distinct(PersonID),
+  summarise(n_person = dplyr::n_distinct(PersonID),
             # calculate the number of unique samples in each study and category
             n_sample = n_distinct(SampleID),
             # calculate the number of unique days at which samples were taken in 

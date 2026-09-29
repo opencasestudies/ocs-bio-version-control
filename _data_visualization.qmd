@@ -153,8 +153,8 @@ Use the `dplyr` functions `group_by()` and `count()` to view the number of obser
 ::: {.rcode}
 ```{r}
 clean_metadata %>%
-  group_by(Study) %>%
-  count(name = "total")
+  dplyr::group_by(Study) %>%
+  dplyr::count(name = "total")
 ```
 :::
 
@@ -217,8 +217,8 @@ Now that we've looked at this data in a table format, let's make a plot so that 
 ::: {.rcode}
 ```{r}
 sample_counts %>%
-  ggplot(aes(x = Study, y = total, fill = Category)) +
-  geom_col(position = position_dodge())
+  ggplot2::ggplot(ggplot2::aes(x = Study, y = total, fill = Category)) +
+  ggplot2::geom_col(position = ggplot2::position_dodge())
 ```
 :::
 
@@ -242,8 +242,8 @@ While this plot looks good, it would be visually easier to compare if the studie
 ```{r}
 study_order <- sample_counts %>%
   group_by(Study) %>%
-  summarise(total_both = sum(total)) %>%
-  arrange(total_both) %>%
+  dplyr::summarise(total_both = sum(total)) %>%
+  dplyr::arrange(total_both) %>%
   pull(Study)
 study_order
 ```
@@ -268,12 +268,12 @@ sample_counts %>%
   mutate(Study = factor(Study, levels = study_order)) %>%
   ggplot(aes(x = Study, y = total, fill = Category)) +
   geom_col(position = position_dodge()) +
-  scale_fill_viridis_d() + 
-  theme_minimal() + 
-  labs(y = "Number of samples",
+  ggplot2::scale_fill_viridis_d() + 
+  ggplot2::theme_minimal() + 
+  ggplot2::labs(y = "Number of samples",
        x = "Study",
        title = "Number of Samples by Study and Category") + 
-  theme(plot.title = element_text(hjust = 0.5))
+  ggplot2::theme(plot.title = element_text(hjust = 0.5))
 ```
 :::
 
@@ -281,7 +281,7 @@ We will now use `ggsave()` to save this plot in the figures folder. **Include th
 
 ::: {.rcode}
 ```{r, eval = FALSE}
-ggsave("figures/study_sizes_by_category.png", height = 6, width = 9)
+ggplot2::ggsave("figures/study_sizes_by_category.png", height = 6, width = 9)
 ```
 :::
 
@@ -340,8 +340,8 @@ Now, we will make a histogram of sampling day, where we separate the data by `Ca
 ```{r}
 observations_after_birth %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
-  geom_histogram(position = position_dodge(), bins = 20) +
-  facet_wrap(~Study, scale = "free_y") 
+  ggplot2::geom_histogram(position = position_dodge(), bins = 20) +
+  ggplot2::facet_wrap(~Study, scale = "free_y") 
 ```
 :::
 
