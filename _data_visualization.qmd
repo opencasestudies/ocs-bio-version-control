@@ -268,7 +268,7 @@ sample_counts %>%
   mutate(Study = factor(Study, levels = study_order)) %>%
   ggplot(aes(x = Study, y = total, fill = Category)) +
   geom_col(position = position_dodge()) +
-  viridis::scale_fill_viridis_d() + 
+  ggplot2::scale_fill_viridis_d() + 
   ggplot2::theme_minimal() + 
   ggplot2::labs(y = "Number of samples",
        x = "Study",
