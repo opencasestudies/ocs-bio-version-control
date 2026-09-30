@@ -693,6 +693,15 @@ A few pieces of advice to consider for your commit messages:
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_174#slide=id.g3f139628ce6_0_174")
 ```
 
+:::{.think_question}
+::::{.think_question_header}
+Question opportunity
+::::
+::::{.inner_block}
+What makes each of these bad commit messages bad, and how might you improve them?
+::::
+:::
+
 #### Pulling updates from GitHub
 
 You've learned how to make updates locally, and stage, commit, and push these changes so that the GitHub repository includes those updates. While "pushing" sends updates from a local repository to the remote repository on GitHub, "pulling" sends updates from the remote GitHub repository to your local repository. To practice pulling, we're going to make another change and commit from GitHub, and then pull that commit into our local repository. We'll follow the same steps to make a change and commit on GitHub:
