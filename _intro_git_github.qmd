@@ -48,6 +48,8 @@ Finally, conclusions from an experiment or analysis are replicable if a **new** 
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f2d5a3e170_0_0#slide=id.g3f2d5a3e170_0_0")
 ```
 
+Note that while reproducibility is an important consideration in the scientific process, a result that is reproducible is not necessarily correct or valid. Research can be reproducibly wrong. However, version control with Git and GitHub promotes transparent code and collaborative work with code review, and therefore provides more opportunities to identify and correct mistakes. 
+
 ::::
 :::
 
@@ -119,7 +121,9 @@ A snapshot of the files in a repository at a certain time.
 ::::
 :::
 
-Another way to think about a commit is as a save point in a video game. This means that it saves your work up to a certain point in time. In the image below, a repository called **analysis_project** is tracked using version control, and it is made up of four commits. Each commit has a message that explains what work the commit represents. Within a commit, files can be added, edited, left unchanged, or deleted. 
+Another way to think about a commit is as a save point in a video game. Just as a player can return to a previously saved game state, a researcher can return to a previous commit. In a video game, if you progress past a save point and lose a life, you typically restart from the most recent save rather than from an arbitrary moment in the game. Similarly, if you continue working on a project without committing your changes, those updates will not be recorded in the version control history. Because Git only records the state of a project when a commit is made, you can return to versions of your files that were saved in commits, but not to arbitrary moments between commits. However, Git is more forgiving than a typical video game. While video games often limit your number of available save points, Git allows you to create as many commits as you need and retains the history of all commits, making it easy to revisit earlier versions of your work.
+
+In the image below, a repository called **analysis_project** is tracked using version control, and it is made up of four commits. Each commit has a message that explains what work the commit represents. Within a commit, files can be added, edited, left unchanged, or deleted. 
 
 ```{r, fig.alt="Commits made to a repository called analysis_project. The first commit has the message 'Create repo and add data' and data.csv is added. The second commit has the message 'Add code to clean data' and data.csv has no change and code.R is added. The third commit has the message 'Add code for initial plots' and data.csv has no change and code.R is edited. The fourth commit has the message 'Fix plot themes' and data.csv has no change and code.R is edited.", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3fade600e50_0_0#slide=id.g3fade600e50_0_0")
@@ -172,16 +176,7 @@ A scientific paper is more reproducible if the data (or instructions to access t
 
 ### Creating new repositories
 
-There are two ways to start new version controlled projects with Git and GitHub. You could create a new repository locally on your computer, track it with Git, and then "push" it to GitHub, creating a remote version of the repo. Or, you could create a new remote repository on GitHub and then "clone" it to your computer, creating a local version. We will provide examples of both workflows in the next section. 
-
-:::{.definition_box}
-::::{.definition_box_header}
-Push
-::::
-::::{.inner_block}
-Sending commits from the local version of a repository to the remote version of the repository on GitHub.
-::::
-:::
+There are two ways to start new version controlled projects with Git and GitHub. You could create a new remote repository on GitHub and then "clone" it to your computer, creating a local version. Or, you could create a new repository locally on your computer, track it with Git, and then "push" it to GitHub, creating a remote version of the repo. We will provide examples of both workflows in the next section. 
 
 :::{.definition_box}
 ::::{.definition_box_header}
@@ -189,6 +184,15 @@ Clone
 ::::
 ::::{.inner_block}
 Creating a local repository that is a copy of a remote repository on GitHub. 
+::::
+:::
+
+:::{.definition_box}
+::::{.definition_box_header}
+Push
+::::
+::::{.inner_block}
+Sending commits from the local version of a repository to the remote version of the repository on GitHub.
 ::::
 :::
 
@@ -211,22 +215,27 @@ When you choose a username, consider [advice](https://happygitwithr.com/github-a
 
 ### Creating a new GitHub repository
 
-Now that you have a GitHub account, you can create your first repository. The goal of this repository is to get you set up and to practice with Git and GitHub. You will later make another repository to use for the case study analysis.
+Now that you have confirmed that you have a GitHub account, you can create a new repository (perhaps your first GitHub repository!). In this section, you will practice creating a new GitHub repository, connecting it to your local computer and Git, and making version-controlled changes to the repository. You will later make another repository to use for the case study analysis.
 
-To create your repository:
+To create your repository, navigate to [github.com](https://github.com) and make sure that you are signed in:
 
-- [ ] click on the menu bottom (three horizontal lines)
-- [ ] click "Repositories"
+- [ ] click on the menu button (three horizontal lines) in the top left of the webpage
+- [ ] click "All repositories"
 - [ ] click the green button that says "New repository" 
 
-This will take you to a new page. GitHub will automatically set you as the owner of the repository, and you can choose a name. Let's call this repository "my-first-repository". 
+This will take you to a new page. GitHub will automatically set you as the owner of the repository, and you can choose a name. Let's call this repository "my-first-repository" (even if it may not be the first repository that you've created). 
 
 A few notes on naming repositories:
 
 - keep the name descriptive but short
 - don't use spaces, instead use "-", "_", or "." 
 
-Next, add a short description for this repository. Toggle the bottom next to "Add README" to "On". For now, we won't worry about visibility, a template, .gitignore, or license. 
+Next, do the following:
+
+- [ ] add a short description for this repository in the "Description" field
+- [ ] toggle the button next to "Add README" to "On".
+- [ ] leave the other default options (for now, we won't worry about visibility, a template, a .gitignore, or a license) 
+- [ ] click the "Create repository" button
 
 ```{r, fig.alt="Creating first repository", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e1f8f72664_0_798#slide=id.g3e1f8f72664_0_798")
@@ -274,7 +283,7 @@ Once you click "Create repository", you will be brought to the GitHub page for y
 If you look at your repository, you will see that it has one file: README.md. This is where you will document what is contained in your repository, and it will serve as a homepage for your project. It is written in Markdown, a language that can be used to format documents (you can find more information about how Markdown works and its syntax [here](https://www.markdownguide.org)). You will now edit the README:
 
 - [ ] click the pencil on the upper right of the README
-- [ ] add a new line to your README document that says "Adding a new commit to my README." 
+- [ ] add a new line to your README document that says "Editing my README file from GitHub." 
 - [ ] click the green button that says "Commit changes"
 - [ ] provide an informative commit message, something like "Add new line to README.md" 
 - [ ] click the green button that says "Commit changes"
@@ -299,7 +308,7 @@ This will bring you to information about the commit. Each commit has an alphanum
 <summary>GitHub issues: a convenient to-do list for your repository</summary>
 One thing that you'll see when looking at your new repository is a tab in the upper left corner (just above the repository name) that says "Issues". Click on this "Issues" button.
 
-An issue is a way to keep track of ideas, tasks to complete, errors to resolve, or anything else related to a GitHub repo (see how GitHub describes issues [here](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues)). Issues are also a good place to collaborate. You can tag people with their GitHub usernames in an issue, which will trigger an email notification. Multiple people can comment on an issue, so you can have a discussion about how to resolve the issue. The benefit of this over an email thread is that other collaborators can view this conversation, as well as other GitHub users who may want to know about the issue and resolution as well. Once an issue is considered resolved (for example, the task it mentions has been completed or the error it mentions has been fixed), then the issue can be closed. However, the GitHub repo will retain a searchable list of closed issues. When used frequently, this can be a helpful record of the development of a project. 
+An issue is a way to keep track of ideas, tasks to complete, errors to resolve, or anything else related to a GitHub repo (see how GitHub describes issues [here](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues)). Issues are also a good place to collaborate. You can tag people with their GitHub usernames in an issue, which will let them know that you'd like to work together on this to-do. Multiple people can comment on an issue, so you can have a discussion about how to resolve the issue. The benefit of this over an email thread is that other collaborators can view the conversation, as well as other GitHub users who may want to know about the issue and resolution. Once an issue is considered resolved (for example, the task it mentions has been completed or the error it mentions has been fixed), then the issue can be closed. However, the GitHub repo will retain a searchable list of closed issues. Issues can also be referenced in pull requests (you will learn more in the [pull request section](https://www.opencasestudies.org/ocs-bio-version-control/#pull-requests)), which lets you indicate which commits make changes that resolve a specific issue. When used frequently, issues can provide a helpful record of the development of a project. 
 </details>
 
 ### Installing GitHub Desktop 
@@ -468,7 +477,47 @@ git clone https://github.com/your_username/my-first-repository.git
 ```
 ::::
 
-Running this command should prompt you to give a username and password. Use your GitHub username, and the PAT you just generated as the password (do not use your GitHub password). Git will now store these credentials so you won't need to enter them again. When your PAT expires, you will need to follow these steps again. 
+Running this command should prompt you to give a username and password. Use your GitHub username, and the PAT you just generated as the password (do not use your GitHub password). Git will now store these credentials so you won't need to enter them again. Eventually your PAT will expire. When this happens (you'll get a notification about this when you try to use Git), you will need to generate a new PAT (following the steps to generate a token above), and replace the old one. You can do this by first running the following command to remove the outdated PAT:
+
+:::: {.panel-tabset}
+
+#### Mac
+
+::::: {.shell}
+```bash
+printf "protocol=https\nhost=github.com\n" | git credential-osxkeychain erase
+```
+:::::
+
+#### Windows
+
+::::: {.shell}
+```bash
+git credential-manager erase https://github.com
+```
+:::::
+
+#### Linux 
+
+If available, run:
+
+::::: {.shell}
+```bash
+git credential-manager erase https://github.com
+```
+:::::
+
+If that does not work, use: 
+
+::::: {.shell}
+```bash
+printf "protocol=https\nhost=github.com\n" | git credential reject
+```
+:::::
+
+::::
+
+Then, run the Git action that you were trying to do again. You should then be prompted to provide a PAT, and can provide the new one that you created. 
 
 :::
 
@@ -766,7 +815,7 @@ In the `git add` command above, we track all scripts (.R files) and data. We do 
 
 <details>
 <summary> Note on staging all files in a repository </summary>
-You may see examples in other Git tutorials using `git add .`, which stages all files in the current directory. While convenient, you should use this with caution, as it can unintentionally include files you do not want to track, such as large data files, sensitive data, or auxiliary files generated by your computer (e.g., .Rproj, .Rproj.user, .DS_Store). While this can be avoided by adding all of these files to your .gitignore file, it is generally safer to add individual files and folders to your `git add` command that you'd like to track. 
+You may see examples in other Git tutorials using `git add .`, which stages all files in the current directory. While convenient, you should use this with caution, as it can unintentionally include files you do not want to track, such as large data files, sensitive data, or auxiliary files generated by your computer (e.g., .Rproj.user, .DS_Store). While this can be avoided by adding all of these files to your .gitignore file, it is generally safer to add individual files and folders to your `git add` command when you'd like to track. 
 </details>
 
 Next, you will need to create an empty repository on GitHub. Go to GitHub and create a new repository called "infant_gut_analysis". Review [these steps](https://www.opencasestudies.org/ocs-bio-version-control/#creating-a-new-github-repository) if needed, but importantly, this time **do not check "Initialize with README"**, this should be a fully empty repository. Copy the URL of this repository. 
