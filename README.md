@@ -86,16 +86,16 @@ The learning objectives of this case study are the following:
 
 <u>**Data Science Learning Objectives**</u>
 
-1. Understand ways in which version control facilitates reproducible science
-1. Understand how version control works by recording differences between versions of a project
+1. Describe ways in which version control facilitates reproducible science
+1. Explain how version control works by recording differences between versions of a project
 1. Follow a workflow to create and make changes to a repository with Git and GitHub
-1. Make pull requests to propose changes to a codebase and request review from a collaborator
+1. Open a pull request to propose changes to a codebase and request review from a collaborator
 1. Organize a repository for a project with a README file and folders for data, figures, and results
 
 <u>**Biological/Bioinformatics Objectives:**</u>
 
-1. Understand the value and limitations of combining data from multiple studies in a meta-analysis.
-1. Use visualizations to compare sampling designs across a set of studies. 
+1. Identify the value and limitations of combining data from multiple studies in a meta-analysis.
+1. Create visualizations to compare sampling designs across a set of studies. 
 
 ### Context 
 
@@ -157,6 +157,10 @@ Package    | Use
 
 In this section, we ask the learner to open the file in their repository that loads data, run the file, and answer a question about the dataset. 
 
+### Data Exploration
+
+In this section, we ask the learner to look closer at the loaded data.
+
 ### Data Wrangling
 
 In this section, we ask the learner to open the file in their repository that wrangles data, run the file, and answer a question about the wrangled data.
@@ -164,7 +168,12 @@ In this section, we ask the learner to open the file in their repository that wr
 ### Data Visualization
 
 In this section, we guide the learner through creating two plots to compare the designs of the studies included in the meta-analysis. After each update, 
-the learner documents changes in the README document, and stages and commits their changes. Finally, they push their updates to the remote repository.
+the learner documents changes in the README document, and stages and commits their changes. 
+
+### Data Analysis
+
+In this section, the learner uses the visualizations and a summary table to draw conclusions about similarities and differences in the study designs. They
+document their conclusions in their .qmd file and push their upates to the remote repository.
 
 ### Pull Requests
 
@@ -178,8 +187,8 @@ files back and forth with collaborators.
 
 ### Troubleshooting Git and GitHub
 
-This section provides guidance for dealing with merge conflicts, stopping version control for specific files, and for mistakenly committing large files.
-It also provides guidance on using AI for troubleshooting Git and GitHub.
+This section provides guidance for dealing with several potential Git and GitHub challenges, including merge conflicts, removing specific files from version control, mistakenly 
+committing large files, etc. It also provides guidance on using AI for troubleshooting Git and GitHub.
 
 ### Continued Learning
 
