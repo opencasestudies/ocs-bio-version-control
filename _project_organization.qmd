@@ -82,6 +82,7 @@ The best way to avoid tracking a file is to add it to your {{< glossary ".gitign
 
 If you open an RStudio project for a Git-tracked repository, you'll have a .gitignore file that looks similar to the following:
 
+::: {.emphasis_block}
 ```
 # History files
 .Rhistory
@@ -97,6 +98,7 @@ If you open an RStudio project for a Git-tracked repository, you'll have a .giti
 # RStudio files
 .Rproj.user/
 ```
+:::
 
 If you would like Git to avoid tracking a file called "large_data.csv", which lives in a folder called "data", you would add the following line to the end of your .gitignore file:
 
