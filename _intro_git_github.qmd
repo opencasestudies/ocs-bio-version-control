@@ -50,6 +50,8 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 
 Note that while reproducibility is an important consideration in the scientific process, a result that is reproducible is not necessarily correct or valid. Research can be reproducibly wrong. However, version control with Git and GitHub promotes transparent code and collaborative work with code review, and therefore provides more opportunities to identify and correct mistakes. 
 
+For additional recommendations about reproducible research practices, you can read [these course notes about reproducible research](https://lcolladotor.github.io/jhustatcomputing/posts/04-reproducible-research/).
+
 ::::
 :::
 
