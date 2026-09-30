@@ -139,7 +139,7 @@ git commit -m "Draw conclusions and document new files in README"
 
 ::::
 
-Finally, push these changes that you've made locally to your remote repository. Because this is your first time pushing from a new branch, you will need to tell Git where you want to push to, adding the flag `--set-upstream origin branch_name`. 
+Finally, push these changes that you've made locally to your remote repository. Because this is your first time pushing from a new branch, you will need to tell Git where you want to push to, adding the flag `--set-upstream` or `-u` followed by `origin` and the name of the branch that you've been working on. 
 
 :::: {.shell}
 

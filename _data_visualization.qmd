@@ -4,6 +4,9 @@
 
 We will now generate visualizations to compare the {{< glossary "meta-analysis">}} study cohorts.
 
+## Setup 
+***
+
 First, we will make sure that we are on the correct branch. We want to use a development branch for this analysis, which we will request to merge back into the main branch once the analysis is ready. We already created the branch "study_comparison" in the [introduction to Git and GitHub section](https://www.opencasestudies.org/ocs-bio-version-control/#branches), so we just need to make sure that we are working on that branch.
 
 ::: {.panel-tabset}
@@ -146,6 +149,9 @@ git commit -m "Add new file '03_visualize_study_cohorts'"
 
 :::
 
+## Comparing Sample Sizes
+***
+
 Now that we've started tracking our work with Git, let's start by considering the first question: how do these studies compare in terms of the number of observations? 
 
 Use the `dplyr` functions `group_by()` and `count()` to view the number of observations per study.
@@ -189,9 +195,14 @@ clean_metadata |>
 
 We can see that there is quite the spread of study sizes. Let's also break this down by whether observations are from infants vs mothers. Whether the observation comes from an infant or a mother is contained in the variable `Category`.
 
+:::{.think_question}
+::::{.think_question_header}
+Coding opportunity
+::::
+::::{.inner_block}
 **Your turn**: Modify the code above to count the number of observations by `Study` and by `Category`, and save the results as a data frame named `sample_counts`. **Add this code to your .qmd file.**
 
-The data frame should look like this:
+The output data frame should look like this:
 
 ```{r, echo = FALSE}
 sample_counts <- clean_metadata %>%
@@ -202,15 +213,19 @@ sample_counts
 
 <details>
 <summary>View code:</summary>
-::: {.rcode}
+::::: {.rcode}
 ```{r, eval = FALSE}
+# create the sample_counts data frame
 sample_counts <- clean_metadata %>%
   group_by(Study, Category) %>%
   count(name = "total")
+# calling the variable name here will print the output
 sample_counts
 ```
-:::
+:::::
 </details>
+::::
+:::
 
 Now that we've looked at this data in a table format, let's make a plot so that we can compare this data visually. We'll make a bar plot, with separate bars for each study and for observation category (infant vs mother). **Include this code in your .qmd document** to make a bar plot.
 
@@ -222,7 +237,7 @@ sample_counts %>%
 ```
 :::
 
-While this plot looks good, it would be visually easier to compare if the studies were ordered by the number of observations. We can make a vector that orders the studies from the least observations to the most observations by using the `dplyr` functions `group_by()`, `summarise()`, `arrange()`, and `pull()`. 
+While this plot looks good, it would be visually easier to compare if the studies were ordered by the number of observations (read more details about this recommendation as well as other recommendations for making better data visualizations in [this data visualization course](https://hutchdatascience.org/DataViz_Considerations/05_how_to_improve_viz.html#rule-4-making-comparisons-easier)). We can make a vector that orders the studies from the least observations to the most observations by using the `dplyr` functions `group_by()`, `summarise()`, `arrange()`, and `pull()`. 
 
 <details>
 <summary>More information about these `dplyr` functions:</summary>
@@ -260,7 +275,7 @@ sample_counts %>%
 ```
 :::
 
-Finally, we can update the colors of the plot and add labels. We will use the function `scale_fill_viridis_d()` to use colors that are more color-deficiency friendly (more information about these color scales can be found [in this resource](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html). **Include this code in your .qmd document** to refine your bar plot.
+Finally, we can update the colors of the plot and add labels. We will use the function `scale_fill_viridis_d()` to use colors that are more color-deficiency friendly (more information can be found in [this documentation about color scales](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) and in [this description of accessible color palettes](https://hutchdatascience.org/DataViz_Considerations/05_how_to_improve_viz.html#rule-1-using-accessible-color-palettes). **Include this code in your .qmd document** to refine your bar plot.
  
 ::: {.rcode}
 ```{r}
@@ -313,26 +328,36 @@ git commit -m "Add plot of study sizes to '03_visualize_study_cohorts' and save 
 
 :::
 
+## Comparing Longitudinal Sampling
+***
+
 Next we will consider the second question: how do these studies compare in terms of when they took samples after the birth of the infants? You may have noticed in the script "02_wrangle_data.R" that two studies took samples from mothers during pregnancy. This information is contained in the variable `sampling_before_birth`. We would like to exclude these observations from our plots, because their `sampling_day` is counted from the beginning of pregnancy and not since birth. 
 
+:::{.think_question}
+::::{.think_question_header}
+Coding opportunity
+::::
+::::{.inner_block}
 **Your turn**: create a data frame `observations_after_birth` that does not include these observations that were taken before birth. **Include this code in your .qmd document.**
 
 <details>
 <summary>Hint:</summary>
-::: {.rcode}
+::::: {.rcode}
 The function `filter()` will remove rows that match a certain logical condition. 
-:::
+:::::
 </details>
 
 <details>
 <summary>View code:</summary>
-::: {.rcode}
+::::: {.rcode}
 ```{r}
 observations_after_birth <- clean_metadata %>%
-  filter(!sampling_before_birth) 
+  filter(sampling_before_birth == FALSE) 
 ```
-:::
+:::::
 </details>
+::::
+:::
 
 Now, we will make a histogram of sampling day, where we separate the data by `Category` and `Study`. There are multiple ways to do this, but we will color the bars by `Category` and then use `facet_wrap()` to make separate panels for each study. **Include this code in your .qmd document** to make histograms of sampling day for each study. 
 
