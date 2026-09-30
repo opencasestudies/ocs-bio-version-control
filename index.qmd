@@ -5,7 +5,7 @@ include-sections:
   stat-los: false
   lo-map: true
   data-import: true
-  data-exploration: false
+  data-exploration: true
   data-wrangling: true
   data-viz: true
   data-analysis: true
