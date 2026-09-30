@@ -3,6 +3,8 @@
 
 Most new and experienced users of {{< glossary "Git">}} and {{< glossary "GitHub">}} will run into problems occasionally. Luckily, {{< glossary "version control">}} is designed so that these problems can be solved, it just may take some time to get used to. There are many helpful [resources](https://dangitgit.com/en) online for common Git and GitHub problems, and AI chatbots can provide advice (please see our AI disclaimer below for advice on using AI for version control!). In this section, we will mention a few common Git and GitHub problems and provide solutions. 
 
+### Amending Commit Messages
+
 <details> <summary> I {{< glossary "commit" display="committed">}} my work but I made a mistake in my most recent commit message that I would like to fix. </summary>
 
 :::{.panel-tabset}
@@ -38,6 +40,8 @@ The `--force-with-lease` option will push your change to the remote repository, 
 
 </details>
 
+### Resolving Merge Conflicts
+
 <details> 
 <summary>I've created a merge conflict. What is this? How do I fix it?</summary>
 
@@ -61,7 +65,13 @@ You will see a pop-up window that says "Resolve conflicts before Merge", along w
 
 #### Command line
 
-When you try to run `git pull`, you'll get a response that includes: "Automatic merge failed; fix conflicts and then commit the result". 
+When you try to run `git pull`, you'll get a response that includes: "Automatic merge failed; fix conflicts and then commit the result". To identify the files that need to be resolved, you can use the `git status` command:
+
+:::: {.shell}
+```bash
+git status
+```
+::::
 
 :::
 
@@ -116,6 +126,8 @@ You can read more about when you might merge branches versus using a rebase oper
 
 </details>
 
+### Moving Work Between Branches
+
 <details> <summary> I've accidentally been working in the main branch, but I actually want my work to all go into a new branch. How do I switch branches and move this work with me?   </summary>
 
 Luckily, this is an easy problem to resolve!
@@ -167,6 +179,62 @@ git restore --source=origin/main file1.txt file2.txt
 
 </details>
 
+### Integrating Updates into Branch
+
+<details> <summary> I am currently working in a branch and want to merge updates from the main branch into my branch. </summary>
+
+This situation may come up if you are working in a branch and are not yet ready to submit a pull request, but updates have been made to the main branch that you would like to integrate into your work. You can do this by merging changes from main into your current branch. First, make sure that you have committed your current work or have stashed it to return to later (for details about this, see [the section on moving between branches](https://www.opencasestudies.org/ocs-bio-version-control/#moving-between-branches)).
+
+:::{.panel-tabset}
+#### GitHub Desktop
+
+In GitHub Desktop, perform the following steps:
+
+- [ ] In the top toolbar, click "Repository" and select "Fetch"
+- [ ] Switch to the main branch (do this by clicking "Current branch" and selecting "main")
+- [ ] Click the button that says "Pull origin" to update your local version of the main branch with the latest changes from GitHub
+- [ ] Switch to the branch you are working on (click "Current branch" and select the desired branch)
+- [ ] In the top toolbar, click "Branch" and select "Merge into Current Branch"
+- [ ] In the menu that pops up, choose "main"
+- [ ] Click "Create a merge commit"
+- [ ] If there are any merge conflicts, address them as described above in the instructions for resolving merge conflicts
+
+#### Command line
+
+First, we will confirm that we're on the current branch that we would like to continue working on.
+
+:::: {.shell}
+```bash
+git branch
+```
+::::
+
+This command will list all branches, with a star next to the one that you are currently working on.
+
+We will use two Git commands for this merge operation. We will start with `git fetch origin`, which will download the latest changes from the remote repository, without making any changes locally. 
+
+:::: {.shell}
+```bash
+git fetch origin
+```
+::::
+
+In order to incorporate changes from the `main` branch into your local files in the branch you're working on, we will use `git merge`.
+
+:::: {.shell}
+```bash
+git merge origin/main
+```
+::::
+
+If Git identifies conflicting changes, it will pause the merge and ask you to resolve the conflicts before completing the merge commit. If there are merge conflicts, address them as described above in the instructions for resolving merge conflicts.
+
+:::
+
+</details>
+
+### Removing Files from Version Control
+
 <details> <summary> I've staged and committed a file, but I don't want to track it anymore. How can I remove it? </summary>
 
 This is another common problem. We'll first tell Git to stop tracking the file (but keep it locally), and then we will add it to the .gitignore file to avoid tracking it with Git in the future. First, we will stop tracking the file. 
@@ -210,6 +278,8 @@ git commit -m "removing file_name from Git tracking and adding it to .gitignore"
 :::
 
 </details>
+
+### Removing Large Files from Version Control
 
 <details> <summary> I've accidentally committed a large file and when I try to push I get an error from GitHub saying that the file is too big. How do I resolve this?  </summary>
 
@@ -270,6 +340,8 @@ The best way to avoid this problem is when you add large files to a folder that 
 
 </details>
 
+### Moving Between Branches
+
 <details> <summary> I'm in the middle of working on one branch, but I need to pause and make a quick update on another branch. How do I move between branches if I'm not ready to commit my current work? </summary>
 
 This is a common occurrence when you're working on a project with multiple branches. Imagine that you are deep in work for a feature that you're adding to an analysis, when your collaborator asks you to make a quick update to a different branch that they've been working on. You aren't yet ready to commit the changes that you've been working on. This is a great time to use Git stash! 
@@ -307,7 +379,9 @@ To learn more about Git stash and additional options, you can read its [document
 
 </details>
 
-You can learn more about other common Git mistakes and their fixes [in this article](https://www.creative-tim.com/blog/educational-tech/git-tutorial-fix-common-mistakes/).
+### Other Troubleshooting Resources
+
+You can learn more about other common Git mistakes and their fixes [in this article](https://www.creative-tim.com/blog/educational-tech/git-tutorial-fix-common-mistakes/). AI chatbots can also be helpful for troubleshooting problems with Git and GitHub, but should be used with care.
 
 :::{.ai_box}
 ::::{.ai_box_header}

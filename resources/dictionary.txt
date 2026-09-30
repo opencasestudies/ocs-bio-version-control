@@ -92,6 +92,7 @@ recode
 repo
 reproducibility
 Reproducibility
+reproducibly
 Rmd
 Rproj
 RStudio

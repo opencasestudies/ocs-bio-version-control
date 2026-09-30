@@ -102,8 +102,9 @@ Data are wrangled in the file "02_wrangle_data.R". You can use the functions `ma
 </details>
 <details><summary>Answer</summary>
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
 load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
+library(dplyr)
 ```
 
 ::: {.rcode}
@@ -111,9 +112,23 @@ load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
 min(clean_metadata$sampling_day, na.rm = TRUE)
 max(clean_metadata$sampling_day, na.rm = TRUE)
 ```
+:::
 
 The earliest day that a participant was sampled after birth was 0, and the latest day was 480. 
 
+If we would like to be more careful to exclude any samples that were taken from mothers before birth, we could explicitly remove these samples before calculating the minimum and maximum.
+
+::: {.rcode}
+```{r}
+sampling_days_after_birth <- clean_metadata %>%
+  # filter to only contain samples that were taken after birth
+  dplyr::filter(sampling_before_birth == FALSE) %>% 
+  # extract the sampling day column
+  dplyr::pull(sampling_day)
+
+min(sampling_days_after_birth, na.rm = TRUE)
+max(sampling_days_after_birth, na.rm = TRUE)
+```
 :::
 
 
