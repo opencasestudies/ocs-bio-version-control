@@ -960,6 +960,8 @@ Tips
 
     - If passwords, access tokens, API keys, or other credentials are accidentally committed and pushed to a remote repository on GitHub (either public or private), they should be considered compromised and changed as soon as possible, and all collaborators who work with that repository should be alerted. 
 
+- Use the issues page as a searchable and collaborative to-do list for your repository.
+
 ::::
 :::
 
