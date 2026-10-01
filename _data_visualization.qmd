@@ -283,7 +283,7 @@ sample_counts %>%
   mutate(Study = factor(Study, levels = study_order)) %>%
   ggplot(aes(x = Study, y = total, fill = Category)) +
   geom_col(position = position_dodge()) +
-  ggplot2::scale_fill_viridis_d() + 
+  ggplot2::scale_fill_viridis_d(begin = 0.1, end = 0.8) + 
   ggplot2::theme_minimal() + 
   ggplot2::labs(y = "Number of samples",
        x = "Study",
@@ -400,7 +400,7 @@ observations_after_birth %>%
   labs(x = "Days since birth at sampling",
        y = "Count",
        title = "Distribution of sampling day across studies") + 
-  scale_fill_viridis_d() + 
+  scale_fill_viridis_d(begin = 0.1, end = 0.8) + 
   theme_minimal() + 
   theme(plot.title = element_text(hjust = 0.5))
 ```
