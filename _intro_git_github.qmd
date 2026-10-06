@@ -953,7 +953,13 @@ git checkout -b study_comparison
 ```
 ::::
 
-When you create a new branch, you can name it by providing a new branch name after using the `-b` flag (we name the new branch "study_comparison" above).
+When you create a new branch, you can name it by providing a new branch name after using the `-b` flag (we name the new branch "study_comparison" above) for the `checkout` command. When you want to move to an existing branch, you can use `git checkout` without the `-b` flag. For example, if you want to navigate back to the main branch, you could use the command `git checkout main`. 
+
+<details><summary>A newer Git command to use with branches: `git switch`</summary>
+
+Git is a piece of actively maintained software, and will continuously be updated and improved. In 2019, the `git switch` command was introduced to work more clearly with branches. The command `git switch -c study_comparison` is equivalent to the command `git checkout -b study_comparison`, where the `-c` flag creates a new branch. Similarly, the command `git switch main` is equivalent to `git checkout main`, and will move you to whatever branch you have specified (in this case the main branch). When you look at Git documentation, you may see `git checkout` used in older material and `git switch` used in newer material when creating or moving between branches, but either command will work in these situations. You can read [this article about why `git switch` was created](https://www.datacamp.com/tutorial/git-switch-vs-checkout) if you would like to learn more.
+
+</details>
 
 :::
 
