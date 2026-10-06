@@ -3,7 +3,7 @@
 
 Now, we're going to put our evidence together to draw some conclusions about the study designs of studies included in this meta-analysis. 
 
-First, recall the two plots that we made.
+First, recall the plots that we made.
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 library(here)
@@ -22,14 +22,14 @@ study_order <- sample_counts %>%
 
 ::: {.panel-tabset}
 
-#### Number of samples plot
+#### Sample size plot
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 sample_counts %>%
   mutate(Study = factor(Study, levels = study_order)) %>%
   ggplot(aes(x = Study, y = total, fill = Category)) +
   geom_col(position = position_dodge()) +
-  scale_fill_viridis_d() + 
+  scale_fill_viridis_d(begin = 0.1, end = 0.8) + 
   theme_minimal() + 
   labs(y = "Number of samples",
        x = "Study",
@@ -37,27 +37,45 @@ sample_counts %>%
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-#### Sampling time points plot
+#### Sampling time plot option 1
 
-```{r, echo = FALSE, warning = FALSE, message = FALSE}
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 7, fig.height = 10}
 observations_after_birth <- clean_metadata %>%
   filter(!sampling_before_birth) 
 observations_after_birth %>%
-  mutate(Study = factor(Study, levels = study_order)) %>%
+    mutate(Study = factor(Study, levels = study_order)) %>%
+    ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
+    geom_histogram(position = position_dodge(), bins = 20) +
+    facet_wrap(~Study, scale = "free_y", ncol = 1) +
+    labs(x = "Days since birth at sampling",
+         y = "Count",
+         title = "Distribution of sampling day across studies") + 
+    scale_fill_viridis_d(begin = 0.1, end = 0.8) + 
+    theme_minimal() + 
+    theme(plot.title = element_text(hjust = 0.5))
+```
+
+#### Sampling time plot option 2
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 7, fig.height = 10}
+observations_after_birth <- clean_metadata %>%
+  filter(!sampling_before_birth) 
+observations_after_birth %>%
+  mutate(Study = reorder(Study, sampling_day)) %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
-  facet_wrap(~Study, scale = "free_y") +
+  facet_wrap(~Study, scale = "fixed", ncol = 1) +
   labs(x = "Days since birth at sampling",
        y = "Count",
        title = "Distribution of sampling day across studies") + 
-  scale_fill_viridis_d() + 
+  scale_fill_viridis_d(begin = 0.1, end = 0.8) + 
   theme_minimal() + 
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
 :::
 
-Additionally, we can make a summary table to have a concise view of some of the important study design features of these studies.
+Additionally, we can make a summary table for a concise view of some study design features of these studies.
 
 ::: {.rcode}
 ```{r}
