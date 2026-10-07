@@ -211,7 +211,7 @@ In this case study we will practice both approaches. First, in the [following se
 
 ### Creating a GitHub account
 
-We will start with GitHub. If you do not have an account, make one [here](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://github.com/signup&ved=2ahUKEwjRoqKR48-TAxVIyOYEHYMpA6QQFnoECA0QAQ&usg=AOvVaw0a6qEmIZVdziwPUb-hFApr). 
+We will start with GitHub. If you do not have an account, make one [here](https://github.com/signup). 
 
 When you choose a username, consider [advice](https://happygitwithr.com/github-acct) from Jenny Bryan (a data scientist who has thought a lot about version control). She suggests choosing a username that incorporates your real name and that you would be comfortable sharing with professional colleagues. 
 
