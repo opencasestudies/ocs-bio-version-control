@@ -9,7 +9,7 @@ Examples may include: how identifiable (or re-identifiable) is your data? cell l
 # **Ethical Considerations**
 ***
 
-There are some important ethical considerations when working with version control, as well as with health related data in general and when collaborating on scientific projects. 
+There are some important ethical considerations when working with version control, as well as with health-related data in general and when collaborating on scientific projects. 
 
 1. When hosting data, code, and results on {{< glossary "GitHub">}}, **make sure to never include personally identifiable information (PII) or protected health information (PHI) in a repository** (even private repositories are not truly private or secure and are not appropriate places to store PII or PHI). This includes names, dates of birth, medical records and diagnosis, lab results, identifiable genomic sequencing data, as well as other types of data. You can read more about PII and PHI in [this course](https://hutchdatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-privacy.html#pii-personal-identifiable-information) about ethical data handling. For more general information about data management, you can explore [this course](https://hutchdatascience.org/Proactive_Data_Management_and_Sharing/). 
 
