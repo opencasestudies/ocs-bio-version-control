@@ -60,13 +60,13 @@ For additional recommendations about reproducible research practices, you can re
 ## Why use version control? 
 ***
 
-Consider a typical workflow when you have a project with multiple files (for example: data, code, resulting figures). You likely have a folder on your computer where you keep these files. When you edit a file you save it, and you have access to the most recent version. You might run into a situation where you want to try something new, so you save "project_file_old.R" along with "project_file_updated.R" or perhaps "project_file_july_2026.R" or eventually "project_file_final_version_4_final.R". If you haven't saved an older version of a file but you wish you could revert to the version from last week before you tried something new, you would be out of luck. 
+Consider a typical workflow when you have a project with multiple files (for example: data, code, resulting figures). You likely have a folder on your computer where you keep these files. When you edit a file and save it, you have access to the most recent version. You might run into a situation where you want to try something new, so you save "project_file_old.R" along with "project_file_updated.R" or perhaps "project_file_july_2026.R" or eventually "project_file_final_version_4_final.R". If you haven't saved an older version of a file but you wish you could revert to the version from last week before you tried something new, you would be out of luck. 
 
 ```{r, fig.alt="why do you need version control (single person)", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3eb20c49c0b_0_0#slide=id.g3eb20c49c0b_0_0")
 ```
 
-Similarly, think about how you might work on that same project with a collaborator. Perhaps you both have a folder on your computer for that project, and when you make an update you email the file to your collaborator, and they copy that update into their file, or save your file in their folder. Perhaps the two of you update the same file at the same time and then you have to go through line by line to merge the updates into a single version of the file. 
+Similarly, think about how you might work on that same project with a collaborator. Perhaps you both have a folder on your computer for that project. When you make an update, you email the file to your collaborator, and they copy that update into their file, or save your file in their folder. Perhaps the two of you update the same file at the same time. Then you have to go through line by line to merge the updates into a single version of the file. 
 
 ```{r, fig.alt="why do you need version control (single person)", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_2#slide=id.g3f139628ce6_0_2")
