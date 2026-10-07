@@ -6,6 +6,8 @@ Videos or images may be helpful so this includes an example of embedding a video
 # **Context**
 ***
 
+Before we explore version control, we will explore some of the scientific context for the data and methods we will encounter in this case study.
+
 ### What is a microbiome?
 
 A microbiome is a collection of microorganisms that live in a particular environment. One commonly studied microbiome is the human gut microbiome. The bacteria that live in our gut help regulate our metabolism, protect us against pathogens, and perform other important roles in our health [@han2026host]. Studies have shown associations between changes to the gut microbiome and many diseases, including diabetes, autoimmune diseases, and Alzheimer's disease. 
