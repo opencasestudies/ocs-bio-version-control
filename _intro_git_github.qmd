@@ -306,6 +306,10 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YC
 
 This will bring you to information about the commit. Each commit has an alphanumeric hash (set of letters and numbers), which uniquely identifies that commit. In this view, you can see each file that has been changed in your commit, as well as the changes to the files. Here, we can see with the plus signs that you've added a line to the README. This type of visual representation of a commit, in terms of the changes between files, can be helpful when you want to understand the history of a project. 
 
+```{r, fig.alt="Information about commit", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h69c8975ee950326d_0_0#slide=id.h69c8975ee950326d_0_0")
+```
+
 <details>
 <summary>GitHub issues: a convenient to-do list for your repository</summary>
 One thing that you'll see when looking at your new repository is a tab in the upper left corner (just above the repository name) that says "Issues". Click on this "Issues" button.
