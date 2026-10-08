@@ -1,7 +1,7 @@
 # **Troubleshooting Git and GitHub**
 ***
 
-Most new and experienced users of {{< glossary "Git">}} and {{< glossary "GitHub">}} will run into problems occasionally. Luckily, {{< glossary "version control">}} is designed so that these problems can be solved, it just may take some time to get used to. There are many helpful [resources](https://dangitgit.com/en) online for common Git and GitHub problems, and AI chatbots can provide advice (please see our AI disclaimer below for advice on using AI for version control!). In this section, we will mention a few common Git and GitHub problems and provide solutions. 
+Most new and experienced users of {{< glossary "Git">}} and {{< glossary "GitHub">}} will run into problems occasionally. Luckily, {{< glossary "version control">}} is designed so that these problems can be solved, it just may take some time to get used to. There are many helpful [resources](https://dangitgit.com/en) online for common Git and GitHub problems, and AI chatbots can provide advice (please see our [AI disclaimer below](https://www.opencasestudies.org/ocs-bio-version-control/#other-troubleshooting-resources) for advice on using AI for version control!). In this section, we will mention a few common Git and GitHub problems and provide solutions. 
 
 ### Amending Commit Messages
 
