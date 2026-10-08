@@ -275,7 +275,7 @@ sample_counts %>%
 ```
 :::
 
-Finally, we can update the colors of the plot and add labels. We will use the function `scale_fill_viridis_d()` to use colors that are more color-deficiency friendly (more information can be found in [this documentation about color scales](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) and in [this description of accessible color palettes](https://hutchdatascience.org/DataViz_Considerations/05_how_to_improve_viz.html#rule-1-using-accessible-color-palettes). **Include this code in your .qmd document** to refine your bar plot.
+Finally, we can update the colors of the plot and add labels. We will use the function `scale_fill_viridis_d()` to use colors that are more color-deficiency friendly (more information can be found in [this documentation about color scales](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) and in [this description of accessible color palettes](https://hutchdatascience.org/DataViz_Considerations/05_how_to_improve_viz.html#rule-1-using-accessible-color-palettes)). **Include this code in your .qmd document** to refine your bar plot.
  
 ::: {.rcode}
 ```{r}
