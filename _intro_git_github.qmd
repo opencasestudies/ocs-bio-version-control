@@ -332,7 +332,7 @@ Follow this [link](https://desktop.github.com/download/) to install GitHub Deskt
 <details> <summary> If you are using a Mac, it will ask you if your Mac has an Apple silicon or Intel chip. Click here for more information. </summary>
 
 To check whether your Mac has an Apple silicon chip or an Intel chip, click the Apple menu 
--> "About This Mac". If the information window shows "Chip" then your Mac uses Apple silicon. If the information window shows "Processor" then your Mac uses an Intel processor. 
+→ "About This Mac". If the information window shows "Chip" then your Mac uses Apple silicon. If the information window shows "Processor" then your Mac uses an Intel processor. 
 
 </details>
 
@@ -541,7 +541,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YC
 
 #### GitHub Desktop 
 
-From GitHub Desktop, go to "File -> Clone Repository" and then provide the URL to your GitHub repository. Now, you should be able to see a window in GitHub Desktop that corresponds with "my-first-repository". If you click on history, you can see a list of commits to this repository. 
+From GitHub Desktop, go to "File → Clone Repository" and then provide the URL to your GitHub repository. Now, you should be able to see a window in GitHub Desktop that corresponds with "my-first-repository". If you click on history, you can see a list of commits to this repository. 
 
 
 #### Command line 
@@ -571,11 +571,11 @@ Next, you will open the local repository. RStudio and Positron have different ap
 
 The easiest way to work with a Git-tracked repository in RStudio is to make an RStudio project. A project is a folder that R can open as a self-contained unit. The most useful part of an RStudio project is that you can use relative file paths; the folder that you used to create the project will be the root of any relative file path. Using relative file paths for a project, as opposed to absolute file paths that are specific to your personal computer, make it easier to collaborate with other people.
 
-In order to open your Git-tracked repository as an RStudio project, open RStudio and click "File -> Open Project". This should prompt you to open your file browser, and you should navigate to the folder called "my_first_repository", which was created when you cloned the repository. Once you select the correct folder, RStudio will open the project. If you look at the "Files" panel, you'll see the README that you made for "my_first_repository" on GitHub. You will additionally see a file called "my_first_repository.Rproj". This file is automatically made by RStudio when opening a new project, and saves information about the project. 
+In order to open your Git-tracked repository as an RStudio project, open RStudio and click "File → Open Project". This should prompt you to open your file browser, and you should navigate to the folder called "my_first_repository", which was created when you cloned the repository. Once you select the correct folder, RStudio will open the project. If you look at the "Files" panel, you'll see the README that you made for "my_first_repository" on GitHub. You will additionally see a file called "my_first_repository.Rproj". This file is automatically made by RStudio when opening a new project, and saves information about the project. 
 
 #### Positron
 
-In Positron, click "File -> Open Folder..." and then navigate to the folder called "my_first_repository", which was created when you cloned the repository. Once you select the correct folder, Positron will open it. In the file explorer, you will be able to see the README that you made for "my_first_repository" on GitHub. 
+In Positron, click "File → Open Folder..." and then navigate to the folder called "my_first_repository", which was created when you cloned the repository. Once you select the correct folder, Positron will open it. In the file explorer, you will be able to see the README that you made for "my_first_repository" on GitHub. 
 
 #### Other R IDE
 
@@ -862,11 +862,11 @@ Finally, we will open this repository with RStudio or Positron.
 ::: {.panel-tabset}
 #### RStudio
 
-In order to open your Git-tracked repository as an RStudio project, open RStudio and click "File -> Open Project". This should prompt you to open your file browser, and you should navigate to the folder called "infant_gut_analysis". Once you select the correct folder, RStudio will open the project. 
+In order to open your Git-tracked repository as an RStudio project, open RStudio and click "File → Open Project". This should prompt you to open your file browser, and you should navigate to the folder called "infant_gut_analysis". Once you select the correct folder, RStudio will open the project. 
 
 #### Positron
 
-In Positron, click "File -> Open Folder..." and then navigate to the folder called "infant_gut_analysis", which was created when you opened the .zip file. Once you select the correct folder, Positron will open it. 
+In Positron, click "File → Open Folder..." and then navigate to the folder called "infant_gut_analysis", which was created when you opened the .zip file. Once you select the correct folder, Positron will open it. 
 
 #### Other R IDE
 

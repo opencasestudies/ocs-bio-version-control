@@ -242,7 +242,7 @@ This is another common problem. We'll first tell Git to stop tracking the file (
 :::{.panel-tabset}
 #### GitHub Desktop
 
-Make sure you are starting in the correct branch that you have been working in. Click "Repository -> Open in Terminal". This will open a command line for you to work with. In this command line, use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. 
+Make sure you are starting in the correct branch that you have been working in. Click "Repository → Open in Terminal". This will open a command line for you to work with. In this command line, use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. 
 
 :::: {.shell}
 ```bash
@@ -288,7 +288,7 @@ This is a common error that can be a little tricky to resolve. You need to remov
 :::{.panel-tabset}
 #### GitHub Desktop
 
-Make sure you are starting in the correct branch that you have been working in. Click "Repository -> Open in Terminal". This will open a command line for you to work with. In this command line, use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. 
+Make sure you are starting in the correct branch that you have been working in. Click "Repository → Open in Terminal". This will open a command line for you to work with. In this command line, use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. 
 
 :::: {.shell}
 ```bash
@@ -349,7 +349,7 @@ This is a common occurrence when you're working on a project with multiple branc
 :::{.panel-tabset}
 #### GitHub Desktop
 
-Open GitHub Desktop in the current branch that you're working with. In the top toolbar, click "Branch" -> "Stash All Changes". This will take all of the changes in this branch since your last commit and store them for you to come back to. Once you've done this, you should see no local changes to the branch. You can then move into the other branch you want to work on. 
+Open GitHub Desktop in the current branch that you're working with. In the top toolbar, click "Branch" → "Stash All Changes". This will take all of the changes in this branch since your last commit and store them for you to come back to. Once you've done this, you should see no local changes to the branch. You can then move into the other branch you want to work on. 
 
 Once you are ready to return to your original branch and continue your work, navigate back to that branch on GitHub Desktop. In the "Changes" panel, you should see the message "Stashed Changes". If you click on this, it will bring you to a page where you can click the "Restore" button to return your stashed changes to the branch. You can continue working from there. 
 
