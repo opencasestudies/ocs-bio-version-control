@@ -8,7 +8,7 @@ Images or videos may be helpful so this includes an example of including an imag
 # **Motivation**
 ***
 
-In this case study, we ask you to imagine that you are working with a collaborator on a scientific project. You receive the following email, with a request for your help performing a preliminary data analysis. Don't worry if you don't understand the context of this analysis right now, background will be given later in the case study. 
+In this case study, we ask you to imagine that you are working with a collaborator on a scientific project. You receive the following email, requesting your help performing a preliminary data analysis. Don't worry if you don't understand the context of this analysis right now, background will be given later in the case study. 
 
 ```{r, fig.alt="Motivation email asking for cohort comparison analysis", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_0#slide=id.g3d9461be06f_0_0")

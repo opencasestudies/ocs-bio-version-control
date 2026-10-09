@@ -10,7 +10,7 @@ as well as any system or server requirements to work with the data
 Disclaimer
 ::::
 ::::{.inner_block}
-This case study is still getting reviewed by a team of experts. While it is complete and has undergone some review by experts, we are continuing to improve the case study. If you have any suggestions, please email us at bioOCS@fredhutch.org. This case study is scheduled to be finalized by October 19, 2026.
+This case study is still under review by a team of experts. While it is complete and has undergone some review by experts, we are continuing to improve the case study. If you have any suggestions, please email us at <bioOCS@fredhutch.org>. This case study is scheduled to be finalized by October 19, 2026.
 ::::
 :::
 
@@ -110,7 +110,7 @@ Prerequisites
 To follow along with this case study, you'll need the following installed:
 
 - R ([install here](https://www.r-project.org))
-- RStudio ([install here](https://posit.co/download/rstudio-desktop)) or Positron ([install here](https://positron.posit.co/install.html)) or another IDE compatible with R
+- RStudio ([install here](https://posit.co/download/rstudio-desktop)), Positron ([install here](https://positron.posit.co/install.html)), or another IDE compatible with R
 
 It will also be helpful to be have the following skills:
 

@@ -60,13 +60,13 @@ For additional recommendations about reproducible research practices, you can re
 ## Why use version control? 
 ***
 
-Consider a typical workflow when you have a project with multiple files (for example: data, code, resulting figures). You likely have a folder on your computer where you keep these files. When you edit a file you save it, and you have access to the most recent version. You might run into a situation where you want to try something new, so you save "project_file_old.R" along with "project_file_updated.R" or perhaps "project_file_july_2026.R" or eventually "project_file_final_version_4_final.R". If you haven't saved an older version of a file but you wish you could revert to the version from last week before you tried something new, you would be out of luck. 
+Consider a typical workflow when you have a project with multiple files (for example: data, code, resulting figures). You likely have a folder on your computer where you keep these files. When you edit a file and save it, you have access to the most recent version. You might run into a situation where you want to try something new, so you save "project_file_old.R" along with "project_file_updated.R" or perhaps "project_file_july_2026.R" or eventually "project_file_final_version_4_final.R". If you haven't saved an older version of a file but you wish you could revert to the version from last week before you tried something new, you would be out of luck. 
 
 ```{r, fig.alt="why do you need version control (single person)", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3eb20c49c0b_0_0#slide=id.g3eb20c49c0b_0_0")
 ```
 
-Similarly, think about how you might work on that same project with a collaborator. Perhaps you both have a folder on your computer for that project, and when you make an update you email the file to your collaborator, and they copy that update into their file, or save your file in their folder. Perhaps the two of you update the same file at the same time and then you have to go through line by line to merge the updates into a single version of the file. 
+Similarly, think about how you might work on that same project with a collaborator. Perhaps you both have a folder on your computer for that project. When you make an update, you email the file to your collaborator, and they copy that update into their file, or save your file in their folder. Perhaps the two of you update the same file at the same time. Then you have to go through line by line to merge the updates into a single version of the file. 
 
 ```{r, fig.alt="why do you need version control (single person)", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_2#slide=id.g3f139628ce6_0_2")
@@ -211,7 +211,7 @@ In this case study we will practice both approaches. First, in the [following se
 
 ### Creating a GitHub account
 
-We will start with GitHub. If you do not have an account, make one [here](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://github.com/signup&ved=2ahUKEwjRoqKR48-TAxVIyOYEHYMpA6QQFnoECA0QAQ&usg=AOvVaw0a6qEmIZVdziwPUb-hFApr). 
+We will start with GitHub. If you do not have an account, make one [here](https://github.com/signup). 
 
 When you choose a username, consider [advice](https://happygitwithr.com/github-acct) from Jenny Bryan (a data scientist who has thought a lot about version control). She suggests choosing a username that incorporates your real name and that you would be comfortable sharing with professional colleagues. 
 
@@ -758,7 +758,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 
 Now, we will return to the project with Collab. O. Rator. In the previous section, you created a repository on GitHub, and then cloned it to make a local copy. Here, you will practice the other approach for creating a new version-controlled repository. You will start with a local folder, track it with Git, and then create a remote version of the repository on GitHub. 
 
-First, download the .zip file [here](https://github.com/opencasestudies/version_controlled_infant_gut_analysis/blob/main/version_controlled_infant_gut_analysis.zip). Your browser may automatically unzip this file to create a folder called "infant_gut_files", if not then unzip the file manually (this typically involves right clicking or double clicking depending on your operating system). 
+First, download the .zip file [here](https://github.com/opencasestudies/version_controlled_infant_gut_analysis/raw/refs/heads/main/version_controlled_infant_gut_analysis.zip). Your browser may automatically unzip this file to create a folder called "infant_gut_files", if not then unzip the file manually (this typically involves right clicking or double clicking depending on your operating system). 
 
 ::: {.panel-tabset}
 
