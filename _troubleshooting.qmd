@@ -1,7 +1,7 @@
 # **Troubleshooting Git and GitHub**
 ***
 
-Most new and experienced users of {{< glossary "Git">}} and {{< glossary "GitHub">}} will run into problems occasionally. Luckily, {{< glossary "version control">}} is designed so that these problems can be solved, it just may take some time to get used to. There are many helpful [resources](https://dangitgit.com/en) online for common Git and GitHub problems, and AI chatbots can provide advice (please see our AI disclaimer below for advice on using AI for version control!). In this section, we will mention a few common Git and GitHub problems and provide solutions. 
+Most new and experienced users of {{< glossary "Git">}} and {{< glossary "GitHub">}} will run into problems occasionally. Luckily, {{< glossary "version control">}} is designed so that these problems can be solved, it just may take some time to get used to. There are many helpful [resources](https://dangitgit.com/en) online for common Git and GitHub problems, and AI chatbots can provide advice (please see our [AI disclaimer below](https://www.opencasestudies.org/ocs-bio-version-control/#other-troubleshooting-resources) for advice on using AI for version control!). In this section, we will mention a few common Git and GitHub problems and provide solutions. 
 
 ### Amending Commit Messages
 
@@ -410,7 +410,7 @@ How can I resolve this merge conflict?
 <u>Validation:</u>
 You should always be careful when taking advice on Git and GitHub from an AI chatbot. If you are asking for commands to use with Git for a situation that is very new to you, it could be helpful to do a quick search of the commands the chatbot tells you to use, to confirm that they do what you want to do. You could also ask multiple chatbots the same question. 
 
-You should be especially careful when using agentic AI with Git and GitHub. Agentic AI systems can use external tools and execute tasks, often performing steps without human supervision. There are many git commands (and command line commands in general) that are challenging to reverse and can cause major problems to scientific projects. For example, running `git reset --hard` will reset a local branch to the remote version of the branch, removing all uncommitted changes, which could remove valuable content. Therefore, it is recommended to monitor the ways that agentic AI can make changes with version control and to prevent them from performing potentially destructive actions without human supervision.
+You should be especially careful when using agentic AI with Git and GitHub. Agentic AI systems can use external tools and execute tasks, often performing steps without human supervision. There are many git commands (and command line commands in general) that are challenging to reverse and can cause major problems to scientific projects. For example, running `git reset --hard` will reset a local branch to the remote version of the branch, removing all uncommitted changes, which could undo your hard work or remove valuable content. Therefore, it is recommended to monitor the ways that agentic AI can make changes with version control and to prevent them from performing potentially destructive actions without human supervision.
 ::::
 :::
 
