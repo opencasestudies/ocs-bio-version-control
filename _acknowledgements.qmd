@@ -17,13 +17,13 @@ Avatars are from [avataaars](https://getavataaars.com)
 ### AI Attribution Statement
 
 
-The text in this work was primarily human-created. AI was used to make content edits, such as changes to scope, information, and ideas. AI was prompted for its contributions. AI-generated content was reviewed and approved. The following model(s) or application(s) were used: Microsoft 356 Copilot (GPT-5).
+The text in this work was primarily human-created. AI was used to make stylistic edits, such as changes to structure, wording, and clarity. AI was used to make content edits, such as changes to scope, information, and ideas. AI was prompted for its contributions, or AI assistance was enabled. AI-generated content was reviewed and approved. The following model(s) or application(s) were used: Microsoft 356 Copilot (GPT-5).
 
-AIA Primarily human, Content edits, Human-initiated, Reviewed, Microsoft 356 Copilot (GPT-5) v1.0
+[AIA Primarily human, Stylistic edits, Content edits, Human-initiated, Reviewed, Microsoft 356 Copilot (GPT-5) v1.0](https://aiattribution.github.io/statements/AIA-Ph-SeCe-Hin-R-?model=Microsoft%20356%20Copilot%20(GPT%252D5)-v1.0)![AI attribution image for AI assisted](img/full_statement_ai_assist.svg)
+
 
 The code for the drag-and-drop activity was entirely AI-generated. AI was prompted for its contributions. AI-generated content was reviewed and approved. The following model(s) or application(s) were used: Microsoft 356 Copilot (GPT-5).
 
-AIA Entirely AI, Human-initiated, Reviewed, Microsoft 356 Copilot (GPT-5) v1.0
+[AIA Entirely AI, Human-initiated, Reviewed, Microsoft 356 Copilot (GPT-5) v1.0](https://aiattribution.github.io/statements/AIA-EAI-Hin-R-?model=Microsoft%20356%20Copilot%20(GPT%252D5)-v1.0)![AI attribution image for AI generated](img/full_statement_ai_generate.svg)
 
 More information about this AI attribution can be found [here](https://aiattribution.github.io).
-
