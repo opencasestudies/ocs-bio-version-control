@@ -283,7 +283,7 @@ sample_counts %>%
   mutate(Study = factor(Study, levels = study_order)) %>%
   ggplot(aes(x = Study, y = total, fill = Category)) +
   geom_col(position = position_dodge()) +
-  ggplot2::scale_fill_viridis_d() + 
+  ggplot2::scale_fill_viridis_d(begin = 0.1, end = 0.8) + 
   ggplot2::theme_minimal() + 
   ggplot2::labs(y = "Number of samples",
        x = "Study",
@@ -359,22 +359,35 @@ observations_after_birth <- clean_metadata %>%
 ::::
 :::
 
-Now, we will make a histogram of sampling day, where we separate the data by `Category` and `Study`. There are multiple ways to do this, but we will color the bars by `Category` and then use `facet_wrap()` to make separate panels for each study. **Include this code in your .qmd document** to make histograms of sampling day for each study. 
+Now, we will make a histogram of sampling day, where we separate the data by `Category` and `Study`. There are multiple ways to do this, but we will color the bars by `Category` and then use `facet_wrap()` to make separate panels for each study. Below we show two versions of this histogram that show the patterns in the data in different ways. Choose the sampling day histogram that you prefer (or choose to use both), and **include this code in your .qmd document**. 
 
-::: {.rcode}
-```{r}
+::: {.panel-tabset}
+
+#### Histogram option 1
+
+In this histogram, we will order the studies in the same order that we used in the bar plot earlier (from smallest to largest sample size) and set `scale = "free_y"` in `facet_wrap()` so that each of the y-axes of the panels is different. The different y-axes in this plot make it easy for us to compare sampling day across studies, because we can easily see when samples were taken in each study. 
+
+:::: {.rcode}
+```{r, fig.width = 7, fig.height = 10}
 observations_after_birth %>%
+  mutate(Study = factor(Study, levels = study_order)) %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
-  ggplot2::geom_histogram(position = position_dodge(), bins = 20) +
-  ggplot2::facet_wrap(~Study, scale = "free_y") 
+  geom_histogram(position = position_dodge(), bins = 20) +
+  facet_wrap(~Study, scale = "free_y", ncol = 1) +
+  labs(x = "Days since birth at sampling",
+       y = "Count",
+       title = "Distribution of sampling day across studies") + 
+  scale_fill_viridis_d(begin = 0.1, end = 0.8) + 
+  theme_minimal() + 
+  theme(plot.title = element_text(hjust = 0.5))
 ```
-:::
+::::
 
 <details>
-<summary>More information about this warning message.</summary>
+<summary>More information about the warning message above.</summary>
 `ggplot` will give you warning messages when there are data in the dataframe that it cannot include in a plot due to missing information. In this warning, we can see that 7 observations in the data (representing samples taken) cannot be plotted because of non-finite values. Typically, this means there are observations with missing data. We can investigate what is missing with the following:
 
-::: {.rcode}
+:::: {.rcode}
 ```{r}
 observations_after_birth %>%
   # only keep rows that have NA values for Study, sampling_day, or Category
@@ -382,39 +395,110 @@ observations_after_birth %>%
   # view a smaller subset of variables
   select(Study, SampleID, PersonID, sampling_day, Category)
 ```
-:::
+::::
 
 Here we can see that there are 6 observations from the Backhed study and one observation from the Shao study for which `sampling_day` is missing. Therefore, these observations cannot be included in the plot.
 
 </details>
 
-Notice that because we set `scale = "free_y"` in the `facet_wrap()`, each of the y-axes of the panels is different. Let's order the studies in the same order that we used in the bar plot earlier. We will also update the theme, switch to color-deficiency friendly colors, and add axes labels. **Include this code in your .qmd document** to order the studies and refine your histograms. 
+We will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name "sampling_timepoints_option1.png" within the "figures" folder.
 
-::: {.rcode}
-```{r}
+:::: {.rcode}
+```{r, eval = FALSE}
+ggsave("figures/sampling_timepoints_option1.png", height = 6, width = 9)
+```
+::::
+
+#### Histogram option 2
+
+In this histogram, we will set `scale = "fixed"` in `facet_wrap()` so that the y-axes of the panels all share the same scale. We will order the study panels by the last sampling day. The shared y-axis in this plot lets us visually compare the studies both by sample size and by sampling day. However, for studies with smaller sample sizes it is harder to see the bars and determine when samples were taken. The ordering of the study facets helps us compare the range of sampling time points between studies.
+
+:::: {.rcode}
+```{r, fig.width = 7, fig.height = 10}
 observations_after_birth %>%
-  mutate(Study = factor(Study, levels = study_order)) %>%
+  mutate(Study = reorder(Study, sampling_day)) %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
-  facet_wrap(~Study, scale = "free_y") +
+  facet_wrap(~Study, scale = "fixed", ncol = 1) +
   labs(x = "Days since birth at sampling",
        y = "Count",
        title = "Distribution of sampling day across studies") + 
-  scale_fill_viridis_d() + 
+  scale_fill_viridis_d(begin = 0.1, end = 0.8) + 
   theme_minimal() + 
   theme(plot.title = element_text(hjust = 0.5))
 ```
+::::
+
+<details>
+<summary>More information about the warning message above.</summary>
+`ggplot` will give you warning messages when there are data in the dataframe that it cannot include in a plot due to missing information. In this warning, we can see that 7 observations in the data (representing samples taken) cannot be plotted because of non-finite values. Typically, this means there are observations with missing data. We can investigate what is missing with the following:
+
+:::: {.rcode}
+```{r}
+observations_after_birth %>%
+  # only keep rows that have NA values for Study, sampling_day, or Category
+  filter(is.na(Study) | is.na(sampling_day) | is.na(Category)) %>% 
+  # view a smaller subset of variables
+  select(Study, SampleID, PersonID, sampling_day, Category)
+```
+::::
+
+Here we can see that there are 6 observations from the Backhed study and one observation from the Shao study for which `sampling_day` is missing. Therefore, these observations cannot be included in the plot.
+
+</details>
+
+We will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name "sampling_timepoints_option2.png" within the "figures" folder.
+
+:::: {.rcode}
+```{r, eval = FALSE}
+ggsave("figures/sampling_timepoints_option2.png", height = 6, width = 9)
+```
+::::
+
 :::
 
-Finally, we will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name "sampling_timepoints.png" within the "figures" folder.
+<details><summary>While we use histograms to compare the sampling time points, you could also try other types of plots.</summary>
+
+We could also compare sampling time points between studies using boxplots. These boxplots let us visualize the distribution of sampling time points for each study, emphasizing the range and middle 50% of each sampling times for each study. Note the differences in y-axis scales. The number of points in each facet represent the number of samples in that study. Read more about boxplots with jittered points in [this data visualization course](https://hutchdatascience.org/DataViz_Considerations/04_graph_info.html#boxplots-with-jitter). 
 
 ::: {.rcode}
-```{r, eval = FALSE}
-ggsave("figures/sampling_timepoints.png", height = 6, width = 9)
+```{r, warning = FALSE}
+observations_after_birth %>%
+    mutate(Study = factor(Study, levels = study_order)) %>%
+    ggplot(aes(x = Category, y = sampling_day, fill = Category)) +
+    geom_boxplot(outliers = FALSE, alpha = 0.6, width = 0.5) +
+    geom_jitter(aes(fill = Category), width = 0.2, alpha = 0.5,       
+                size = 1.5, shape = 21, color = 'black') +
+    facet_wrap(~Study, scales = "free_y") +
+    labs(x = "Category", y = "Days since birth at sampling",
+        title = "Distribution of sampling day across studies") +
+    scale_fill_viridis_d(begin = 0.1, end = 0.8) +
+    scale_color_viridis_d(begin = 0.1, end = 0.8) +
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5), legend.position = "none")
 ```
 :::
 
-Now that we have two plots, go back through your file "03_visualize_study_cohorts.qmd" to make sure that it contains all relevant code to make these two plots, and that there are explanations before each code chunk. 
+If you like these boxplots, you can **include the code above into your .qmd file** and save the plot to your figures folder. 
+
+::: {.rcode}
+```{r, eval = FALSE}
+ggsave("figures/sampling_timepoints_boxplots.png", height = 6, width = 9)
+```
+:::
+
+:::{.think_question}
+::::{.think_question_header}
+Question opportunity
+::::
+::::{.inner_block}
+Are there patterns in the sampling time points can be more easily identified from the histograms? Are there patterns that can be more easily identified from the boxplots? How could these plots complement each other in an analysis?
+::::
+:::
+
+</details>
+
+Now that we have plotted patterns in sample size and sampling time points, go back through your file "03_visualize_study_cohorts.qmd" to make sure that it contains all relevant code to make the plots, and that there are explanations before each code chunk. 
 
 Once you've done this, make another commit for these edits. 
 
@@ -422,15 +506,15 @@ Once you've done this, make another commit for these edits.
 
 #### GitHub Desktop 
 
-Navigate back to GitHub Desktop. Stage "03_visualize_study_cohorts.qmd" and "figures/sampling_timepoints.png", add an informative commit message, and commit these files. 
+Navigate back to GitHub Desktop. Stage "03_visualize_study_cohorts.qmd" and whichever of the figures you have saved ("figures/sampling_timepoints_option1.png", "figures/sampling_timepoints_option2.png", and/or "figures/sampling_timepoints_boxplots.png"), then add an informative commit message and commit these files. 
 
 #### Command line 
 
-First, stage "03_visualize_study_cohorts.qmd" and "figures/sampling_timepoints.png".
+First, stage "03_visualize_study_cohorts.qmd" and whichever of the figures you have saved ("figures/sampling_timepoints_option1.png", "figures/sampling_timepoints_option2.png", and/or "figures/sampling_timepoints_boxplots.png"). 
 
 :::: {.shell}
 ```bash
-git add 03_visualize_study_cohorts.qmd figures/sampling_timepoints.png 
+git add 03_visualize_study_cohorts.qmd figures/sampling_timepoints_option1.png 
 ```
 ::::
 
@@ -444,6 +528,6 @@ git commit -m "Add plot of sampling time points to '03_visualize_study_cohorts' 
 
 :::
 
-Great job! You have now made two plots to compare the study designs of the studies within the meta-analysis, and made several commits with informative messages that create a history of this analysis. 
+Great job! You have now made plots to compare the study designs of the studies within the meta-analysis, and made several commits with informative messages that create a history of this analysis. 
 
 ***
