@@ -12,7 +12,7 @@ While using version control to track the data and code that produce a given outp
 
 :::{.rcode}
 ```{r}
-devtools::session_info()
+sessionInfo()
 ```
 :::
 
