@@ -8,7 +8,7 @@ Images or videos may be helpful so this includes an example of including an imag
 # **Motivation**
 ***
 
-In this case study, we ask you to imagine that you are working with a collaborator on a scientific project. You receive the following email, requesting your help performing a preliminary data analysis. Don't worry if you don't understand the context of this analysis right now, background will be given later in the case study. 
+In this case study, we ask you to imagine that you are working with a collaborator on a scientific project. You receive the following email, requesting your help performing a preliminary data analysis. Don't worry about the scientific background for this analysis right now, an explanation will be given in the [context](https://www.opencasestudies.org/ocs-bio-version-control/#context) section. 
 
 ```{r, fig.alt="Motivation email asking for cohort comparison analysis", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_0#slide=id.g3d9461be06f_0_0")
@@ -23,16 +23,15 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e1f8f72664_0_429#slide=id.g3e1f8f72664_0_429")
 ```
 
-
 Between your own edits as you work on this project and the back-and-forth with your collaborator, it will quickly become challenging to keep track of all of the files and changes to them over time. A solution to this is {{< glossary "version control" >}}! 
 
 ```{r, fig.alt="Back and forth over email without version control", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e1f8f72664_0_444#slide=id.g3e1f8f72664_0_444")
 ```
 
-In this case study, you will learn how to use {{< glossary "Git" >}} and {{< glossary "GitHub" >}} to track this project and perform the requested comparison of studies used in the {{< glossary "meta-analysis" >}}. You will also learn how version control can facilitate collaboration and make a scientific project more {{< glossary "reproducible" >}}. 
+In this case study, you will learn how to use {{< glossary "Git" >}} and {{< glossary "GitHub" >}} for version control. You will also learn how version control can facilitate collaboration and make a scientific project more transparent and {{< glossary "reproducible" >}}. Along the way, you will use a {{< glossary "microbiome">}} {{< glossary "meta-analysis">}} as a motivating example and practice using R to visualize differences among the studies included in the meta-analysis. 
 
-You will learn more about version control, Git, and GitHub, in the [Introduction to Git and GitHub Section](https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github) below. Much of the information in that section is described in the following papers. They both provide a helpful introduction to version control with Git and GitHub. 
+You will learn more about version control, and specifically Git and GitHub, in the [Introduction to Git and GitHub Section](https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github) below. Much of the information in that section is described in the following papers. They both provide a helpful introduction to version control with Git and GitHub. 
 
 :::{.reference_box}
 ::::{.reference_box_header}
