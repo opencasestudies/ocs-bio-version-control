@@ -116,7 +116,7 @@ Here is an example of a file from the branching workflow that will result in a m
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f9c55c112a_0_874#slide=id.g3f9c55c112a_0_874")
 ```
 
-When you open a file with a merge conflict, you will see that conflict markers have been added. For lines that are in conflict, you'll see "<<<<<<< HEAD" and "=======". The code between these two markers is the version contained in the branch you are currently working on. Lower in the file, you'll see ">>>>>>> incoming_commit_or_branch_name", where "incoming_commit_or_branch_name" references the commit or branch containing the incoming changes. You need to manually edit the file to remove the conflict markers, and to include whatever content you would like (either the content in your local branch, the content from the incoming branch, or a combination of the two). Once you've edited this file, save it and stage the changes. 
+When you open a file with a merge conflict, you will see that conflict markers have been added. For lines that are in conflict, you'll see `<<<<<<< HEAD` and `=======`. The code between these two markers is the version contained in the branch you are currently working on. Lower in the file, you'll see `>>>>>>> incoming_commit_or_branch_name`, where `incoming_commit_or_branch_name` references the commit or branch containing the incoming changes. You need to manually edit the file to remove the conflict markers, and to include whatever content you would like (either the content in your local branch, the content from the incoming branch, or a combination of the two). Once you've edited this file, save it and stage the changes. 
 
 In some cases, such as when one branch deletes a file and another edits it, you may not see conflict markers inside a file. Instead, Git will require you to decide whether to keep or remove the file. To resolve the conflict, either delete the file (to remove it) or stage the file (to keep it). 
 
@@ -128,7 +128,7 @@ You can read more about when you might merge branches versus using a rebase oper
 
 ### Moving Work Between Branches
 
-<details> <summary> I've accidentally been working in the main branch, but I actually want my work to all go into a new branch. How do I switch branches and move this work with me?   </summary>
+<details> <summary> I've accidentally been working in the `main` branch, but I actually want my work to all go into a new branch. How do I switch branches and move this work with me? </summary>
 
 Luckily, this is an easy problem to resolve!
 
@@ -137,17 +137,17 @@ Luckily, this is an easy problem to resolve!
 
 If you have made changes locally but **haven't yet committed**, you can do the following: 
 
-Open GitHub Desktop, and create a new branch. If you have changes in main that haven't been committed, GitHub Desktop will open a pop-up to ask you if you'd like to leave your changes on main or bring your changes to the new branch. Choose to bring the changes to the new branch. 
+Open GitHub Desktop, and create a new branch. If you have changes in `main` that haven't been committed, GitHub Desktop will open a pop-up to ask you if you'd like to leave your changes on `main` or bring your changes to the new branch. Choose to bring the changes to the new branch. 
 
 If you have made changes locally and **have committed**, you can follow the steps above and then additionally do the following: 
 
-Switch back to the main branch, and click on History in the upper left panel. Then, right-click on the commit that you would like to return to in your main branch and choose "Reset to Commit..." from the right-click menu.
+Switch back to the `main` branch, and click on "History" in the upper left panel. Then, right-click on the commit that you would like to return to in your main branch and choose "Reset to Commit..." from the right-click menu.
 
 #### Command line
 
 If you have made changes locally but haven't yet committed, you can do the following: 
 
-Use the following command, replacing "new_branch_name" with your desired branch name. 
+Use the following command, replacing `new_branch_name` with your desired branch name. 
 
 :::: {.shell}
 ```bash
@@ -155,7 +155,7 @@ git checkout -b new_branch_name
 ```
 ::::
 
-If you have made changes locally and have committed, you can follow the steps above to create a new branch, and then additionally do the following to revert main back to match the remote version of main: 
+If you have made changes locally and have committed, you can follow the steps above to create a new branch, and then additionally do the following to revert main back to match the remote version of `main`: 
 
 :::: {.shell}
 ```bash
@@ -165,7 +165,7 @@ git reset --hard origin/main
 
 However, make sure that you only `git reset --hard` after you've created the new branch and moved your commits, otherwise you risk losing your updated work.
 
-Alternately, if you have only edited a few files, you could just run `git restore --hard` for those files. This reverts the files to their previous versions, instead of reverting the full branch. If you have edited files called "file1.txt" and "file2.txt" and want to revert them to the versions saved in main, you could do the following:
+Alternately, if you have only edited a few files, you could just run `git restore --hard` for those files. This reverts the files to their previous versions, instead of reverting the full branch. If you have edited files called `file1.txt` and `file2.txt` and want to revert them to the versions saved in main, you could do the following:
 
 :::: {.shell}
 ```bash
@@ -181,9 +181,9 @@ git restore --source=origin/main file1.txt file2.txt
 
 ### Integrating Updates into Branch
 
-<details> <summary> I am currently working in a branch and want to merge updates from the main branch into my branch. </summary>
+<details> <summary> I am currently working in a branch and want to merge updates from the `main` branch into my branch. </summary>
 
-This situation may come up if you are working in a branch and are not yet ready to submit a pull request, but updates have been made to the main branch that you would like to integrate into your work. You can do this by fetching the latest changes from GitHub and then merging the main branch into your current branch. First, make sure that you have committed your current work or have stashed it to return to later (for details about this, see [the section on moving between branches](https://www.opencasestudies.org/ocs-bio-version-control/#moving-between-branches)).
+This situation may come up if you are working in a branch and are not yet ready to submit a pull request, but updates have been made to the `main` branch that you would like to integrate into your work. You can do this by fetching the latest changes from GitHub and then merging the `main` branch into your current branch. First, make sure that you have committed your current work or have stashed it to return to later (for details about this, see [the section on moving between branches](https://www.opencasestudies.org/ocs-bio-version-control/#moving-between-branches)).
 
 :::{.panel-tabset}
 #### GitHub Desktop
@@ -193,7 +193,7 @@ In GitHub Desktop, perform the following steps:
 - [ ] Make sure that you are on the branch that you would like to update.
 - [ ] In the top toolbar, click "Repository" and select "Fetch". 
 - [ ] In the top toolbar, click "Branch" and select "Merge into Current Branch".
-- [ ] In the menu that pops up, choose "main".
+- [ ] In the menu that pops up, choose `main`.
 - [ ] Click "Create a merge commit".
 - [ ] If there are any merge conflicts, address them as described above in the instructions for resolving merge conflicts.
 
@@ -235,14 +235,14 @@ If Git identifies conflicting changes, it will pause the merge and ask you to re
 
 <details> <summary> I've staged and committed a file, but I don't want to track it anymore. How can I remove it? </summary>
 
-This is another common problem. We'll first tell Git to stop tracking the file (but keep it locally on your computer), and then we will add it to the .gitignore file to avoid tracking it with Git in the future. 
+This is another common problem. We'll first tell Git to stop tracking the file (but keep it locally on your computer), and then we will add it to the `.gitignore` file to avoid tracking it with Git in the future. 
 
 :::{.panel-tabset}
 #### GitHub Desktop
 
 Make sure you are starting in the correct branch that you have been working in. This is a situation that we cannot resolve directly with the GitHub Desktop GUI. Instead, we will launch a command line within GitHub Desktop. 
 
-Click "Repository → Open in Terminal". This will open a command line for you to work with. In this command line, use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. 
+Click "Repository" → "Open in Terminal". This will open a command line for you to work with. In this command line, use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. 
 
 :::: {.shell}
 ```bash
@@ -259,15 +259,15 @@ Next, return to GitHub Desktop and do the following:
 
 #### Command line
 
-Use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. 
+Use the following command, replacing `path_to_file` with the path to the file to stop tracking, including the file name. 
 
 :::: {.shell}
 ```bash
-git rm --cached path/to/file
+git rm --cached path_to_file
 ```
 ::::
 
-Next, open the .gitignore file and add the file to the list of files to avoid tracking. 
+Next, open the `.gitignore` file and add the file to the list of files to avoid tracking. 
 
 Then, return to the command line and stage and stage and commit these changes. 
 
@@ -291,7 +291,7 @@ This is a common error that can be a little tricky to resolve. You need to remov
 :::{.panel-tabset}
 #### GitHub Desktop
 
-Make sure you are starting in the correct branch that you have been working in. Click "Repository → Open in Terminal". This will open a command line for you to work with. In this command line, use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. 
+Make sure you are starting in the correct branch that you have been working in. Click "Repository" → "Open in Terminal". This will open a command line for you to work with. In this command line, use the following command, replacing `path_to_file` with the path to the file to stop tracking, including the file name. 
 
 :::: {.shell}
 ```bash
@@ -302,9 +302,9 @@ git commit --amend
 
 Including the `git commit --amend` rewrites the most recent commit as if the large file was not added. Don't close the terminal yet, we will come back to it. 
 
-Next, open the .gitignore file and add the file to the list of files to avoid tracking. In GitHub Desktop, stage the .gitignore, but do not commit it yet. 
+Next, open the `.gitignore` file and add the file to the list of files to avoid tracking. In GitHub Desktop, stage the `.gitignore`, but do not commit it yet. 
 
-Return to the terminal. Repeat the `git commit --amend` command, which will add this update to the .gitignore to the most recent commit. 
+Return to the terminal. Repeat the `git commit --amend` command, which will add this update to the `.gitignore` to the most recent commit. 
 
 :::: {.shell}
 ```bash
@@ -316,7 +316,7 @@ Then, return to GitHub Desktop and commit these changes.
 
 #### Command line
 
-Use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. Including the `git commit --amend` rewrites the most recent commit as if the large file was not added.
+Use the following command, replacing `path_to_file` with the path to the file to stop tracking, including the file name. Including the `git commit --amend` rewrites the most recent commit as if the large file was not added.
 
 :::: {.shell}
 ```bash
@@ -325,9 +325,9 @@ git commit --amend
 ```
 ::::
 
-Next, open the .gitignore file and add the file to the list of files to avoid tracking. 
+Next, open the `.gitignore` file and add the file to the list of files to avoid tracking. 
 
-Then, return to the command line and stage and stage and commit these changes. Note that we include `git commit --amend` a second time to add the changes to the .gitignore file to the previous commit. 
+Then, return to the command line and stage and stage and commit these changes. Note that we include `git commit --amend` a second time to add the changes to the `.gitignore` file to the previous commit. 
 
 :::: {.shell}
 ```bash
@@ -339,7 +339,7 @@ git commit -m "removing file_name from Git tracking and adding it to .gitignore"
 
 :::
 
-The best way to avoid this problem is when you add large files to a folder that is tracked with Git, immediately add them to the .gitignore. If you really do want to track them with version control, consider using [Git Large File Storage](https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage) (LFS). 
+The best way to avoid this problem is when you add large files to a folder that is tracked with Git, immediately add them to the `.gitignore`. If you really do want to track them with version control, consider using [Git Large File Storage](https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage) (LFS). 
 
 </details>
 
@@ -347,7 +347,7 @@ The best way to avoid this problem is when you add large files to a folder that 
 
 <details> <summary> I'm in the middle of working on one branch, but I need to pause and make a quick update on another branch. How do I move between branches if I'm not ready to commit my current work? </summary>
 
-This is a common occurrence when you're working on a project with multiple branches. Imagine that you are deep in work for a feature that you're adding to an analysis, when your collaborator asks you to make a quick update to a different branch that they've been working on. You aren't yet ready to commit the changes that you've been working on. This is a great time to use Git stash! 
+This is a common occurrence when you're working on a project with multiple branches. Imagine that you are deep in work for a feature that you're adding to an analysis, when your collaborator asks you to make a quick update to a different branch that they've been working on. You aren't yet ready to commit the changes that you've been working on. This is a great time to use the stash feature! 
 
 :::{.panel-tabset}
 #### GitHub Desktop

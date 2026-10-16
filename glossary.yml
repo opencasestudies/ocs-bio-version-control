@@ -2,6 +2,8 @@
   File that tells Git what files to avoid tracking
 branch: |
   A history of commits in a Git-tracked repository (there can be multiple parallel branches in a repository) 
+clone: |
+  Create a local repository that is a copy of a remote repository on GitHub
 command line: |
   A window that lets a user interact with a computer through typing commands
 commit: |
@@ -47,10 +49,14 @@ repository: |
 repositories: |
   Folders in Git that contains all of the files to be tracked for a project
 repo: |
-  A shortened version of "repository", a folder in Git that contains all of hte files to be tracked for a project
+  A shortened version of "repository", a folder in Git that contains all of the files to be tracked for a project
 reproducible: |
   Describes a project in which a new researcher can re-run an experiment or analysis with the same data and code and generate the same results
 reproducibility: |
   The ability for someone else to run the same analysis on the same data and get the same results
+staage: |
+  Prepare to track specified files when the next commit is made to a repository.
+upstream: |
+  The original repository that was copied to create a forked repository
 version control: |
   A tool that records changes to a project over time
