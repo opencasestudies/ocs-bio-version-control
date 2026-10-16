@@ -54,3 +54,8 @@
 .glossary_table tr:nth-child(even) {
   background-color: #99999933;
 }
+
+.glossary-term {
+  margin-right: 0;
+  padding-right: 0;
+}
