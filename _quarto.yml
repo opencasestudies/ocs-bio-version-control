@@ -41,7 +41,7 @@ format:
     grid:
        sidebar-width: 260px
     theme: cosmo
-    css: [styles.css, version_control_styles.css]
+    css: styles.css
     sidebar: true
     toc: true
     toc-location: left
