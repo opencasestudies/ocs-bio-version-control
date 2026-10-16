@@ -100,17 +100,19 @@ If you open an RStudio project for a Git repository, you'll have a `.gitignore` 
 ```
 :::
 
-If you would like Git to avoid tracking a file called `large_data.csv`, which lives in a folder called `data`, you would add the following line to the end of your `.gitignore` file:
+If you would like Git to avoid tracking a PDF called `analysis_report.pdf`, which lives in a folder called `reports`, you would add the following line to the end of your `.gitignore` file:
 
 ```
-data/large_data.csv
+reports/analysis_report.pdf
 ```
 
-You could also tell Git to avoid tracking an entire folder. If you didn't want to track any data from a folder called `restricted_data`, you would add the following line to your `.gitignore` file:
+You could also tell Git to avoid tracking an entire folder. If you didn't want to track any files in the `reports` folder, you would add the following line to your `.gitignore` file:
 
 ```
-restricted_data/
+reports/
 ```
+
+In some cases, you may not want to include data in your repository because it is too large to host online or because it contains sensitive information that should not be publicly available. Although these files could be listed in the `.gitignore` file, keeping them outside the repository entirely in a separate folder provides an additional safeguard against accidentally committing them or losing them if they are inadvertently deleted (since Git cannot restore ignored files). For example, you could have a folder called `analysis_files` that contains both a `data` folder and an `analysis_repo` folder, where only `analysis_repo` is version-controlled with Git.  
 
 #### Git and large files
 
