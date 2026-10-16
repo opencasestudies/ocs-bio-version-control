@@ -22,7 +22,7 @@ The ability for someone else to run the same analysis on the same data and get t
 Good scientific practice relies on finding consistent patterns in data that can be verified. If another researcher can use your data and code and reproduce the same results, then your conclusions are more credible to the scientific community. Version control is a tool that enables reproducible research by recording changes to a project over time. It has the following benefits:
 
 - When used carefully, it gives a complete history of changes made over the course of a project. This can be helpful for a research team to better understand what they did in one of their own previous studies!
-- It also provides a digital backup and an online repository of code and possibly also data (if it doesn't contain sensitive data). This can be very valuable if something happens to your computer.
+- It provides a digital backup and an online repository of code and possibly also data (if it doesn't contain sensitive data). This can be very valuable if something happens to your computer.
 - Version control makes collaboration easier, automating the sharing of work in-progress and providing a system to propose and accept changes. 
 
 While several tools exist for version control, we will introduce [Git](https://git-scm.com) and [GitHub](https://github.com), two of the most commonly used version control tools. Common alternatives to GitHub include [GitLab](https://about.gitlab.com/resources/) and [Bitbucket](https://bitbucket.org/product/guides).
@@ -112,7 +112,7 @@ A folder in Git that contains all of the files to be tracked for a project.
 ::::
 :::
 
-When you set up a repository, Git will save an initial version of the files in that repository. Git works by tracking the evolution of files in a repository through a series of commits. 
+When you set up a repository, Git will save an initial version of the files in that repository. Git works by tracking the evolution of files in a repository through a series of {{< glossary "commit" display="commits" >}}. 
 
 :::{.definition_box}
 ::::{.definition_box_header}
@@ -172,7 +172,7 @@ There are several benefits to pairing your local repositories with remote reposi
 Reproducibility considerations
 ::::
 ::::{.inner_block}
-A scientific paper is more reproducible if the data (or instructions to access the data) and code are publicly available, because other researchers can directly inspect and reproduce the analysis. While some papers have data and code "available upon request", hosting code (and data if appropriate) on GitHub makes it easier to share these files without requiring additional time and effort from the authors to respond to emails. This aligns with the open science movement, which aims to make research, data, and scientific software more transparent and accessible. 
+A scientific paper is more reproducible if the data (or instructions to access the data) and code are publicly available, because other researchers can directly inspect and reproduce the analysis. While some papers have data and code "available upon request", hosting code (and data if appropriate) on GitHub makes it easier to share these files without requiring additional time and effort from the authors to respond to emails. This aligns with the open science movement, which aims to make research, data, and scientific software more transparent and accessible. Keeping project files in a GitHub repository also helps adhere to [FAIR principles](https://www.gofair.foundation/fair-principles), which suggest that digital resources should be findable, accessible, interoperable, and reusable.  
 ::::
 :::
 
