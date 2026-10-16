@@ -30,6 +30,7 @@ Dockerfile
 Dockerhub
 dplyr
 else's
+env
 et
 favicon
 Ferretti
