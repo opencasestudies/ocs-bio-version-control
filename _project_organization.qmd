@@ -43,9 +43,9 @@ A README file should describe the files related to your scientific project. It s
 Question opportunity
 ::::
 ::::{.inner_block}
-Read through the README.md file for this project. Which script generates "sample_metadata.csv"? 
+Read through the README.md file for this project. Which script generates "sample_metadata.rda"? 
 <details><summary>Answer</summary>
-The script "01_pull_study_data.R" generates "sample_metadata.csv". 
+The script "01_pull_study_data.R" generates "sample_metadata.rda". 
 </details>
 ::::
 :::
@@ -78,7 +78,7 @@ From a Git perspective, files are either text files or binary files. Text files 
 
 #### How to use the .gitignore file
 
-The best way to avoid tracking a file is to add it to your {{< glossary ".gitignore">}} file. If a file or folder is included in your .gitignore file, it will not be staged when you use the command `git add .`. 
+The best way to avoid tracking a file is to add it to your {{< glossary ".gitignore">}} file. If a file or folder is included in your .gitignore file, it will be included in a commit if you explicitly decide to stage it (if using the command line with the command `git add .`, this will not include any files listed in the .gitignore).
 
 If you open an RStudio project for a Git-tracked repository, you'll have a .gitignore file that looks similar to the following:
 

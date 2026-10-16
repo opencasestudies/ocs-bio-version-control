@@ -19,7 +19,7 @@ The ability for someone else to run the same analysis on the same data and get t
 ::::
 :::
 
-When conducting a scientific project, reproducibility is very important. If another researcher can use your data and code and generate the same results, then your conclusions are more credible to the scientific community. Version control is a tool that enables reproducible research by recording changes to a project over time. It has the following benefits:
+Good scientific practice relies on finding consistent patterns in data that can be verified. If another researcher can use your data and code and reproduce the same results, then your conclusions are more credible to the scientific community. Version control is a tool that enables reproducible research by recording changes to a project over time. It has the following benefits:
 
 - When used carefully, it gives a complete history of changes made over the course of a project. This can be helpful for a research team to better understand what they did in one of their own previous studies!
 - It also provides a digital backup and an online repository of code and possibly also data (if it doesn't contain sensitive data). This can be very valuable if something happens to your computer.
@@ -219,11 +219,7 @@ When you choose a username, consider [advice](https://happygitwithr.com/github-a
 
 Now that you have confirmed that you have a GitHub account, you can create a new repository (perhaps your first GitHub repository!). In this section, you will practice creating a new GitHub repository, connecting it to your local computer and Git, and making version-controlled changes to the repository. You will later make another repository to use for the case study analysis.
 
-To create your repository, navigate to [github.com](https://github.com) and make sure that you are signed in:
-
-- [ ] click on the menu button (three horizontal lines) in the top left of the webpage
-- [ ] click "All repositories"
-- [ ] click the green button that says "New repository" 
+To create your repository, navigate to [github.com/new](https://github.com/new) and make sure that you are signed in.
 
 This will take you to a new page. GitHub will automatically set you as the owner of the repository, and you can choose a name. Let's call this repository "my-first-repository" (even if it may not be the first repository that you've created). 
 
