@@ -700,6 +700,8 @@ What makes each of these bad commit messages bad, and how might you improve them
 ::::
 :::
 
+For more tips on writing commit messages, check out [this article](https://cbea.ms/git-commit/).
+
 #### Pulling updates from GitHub
 
 You've learned how to make updates locally, and stage, commit, and push these changes so that the GitHub repository includes those updates. Next, we will {{< glossary "pull" >}} changes that have been made on GitHub. While pushing sends updates from a local repository to the remote repository on GitHub, pulling sends updates from the remote GitHub repository to your local repository. To practice pulling, we're going to make another change and commit from GitHub, and then pull that commit into our local repository. We'll follow the same steps to make a change and commit on GitHub:
