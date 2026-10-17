@@ -898,6 +898,32 @@ Finally, we will open this repository with RStudio or Positron.
 
 In order to open your Git-tracked repository as an RStudio project, open RStudio and click "File" → "Open Project". This should prompt you to open your file browser, and you should navigate to the folder called `infant_gut_analysis`. Once you select the correct folder, RStudio will open the project. 
 
+When you use RStudio to open a project, a `.Rproj` file will automatically be added to your repository. You can version control this file as well. 
+
+:::: {.panel-tabset}
+
+#### GitHub Desktop 
+
+Return to GitHub Desktop. You should see the new file `infant_gut_analysis.Rproj` in the list of changed files. 
+
+- [ ] Confirm that `infant_gut_analysis.Rproj` is staged, with a check in the check box next to it.
+- [ ] Make a commit message and commit this new file. 
+- [ ] Push this commit to GitHub. 
+
+#### Command line 
+
+Open the command line and enter the following:
+
+::::: {.shell}
+```bash
+git add infant_gut_analysis.Rproj
+git commit -m "Add .Rproj file to repository"
+git push
+```
+:::::
+
+::::
+
 #### Positron
 
 In Positron, click "File" → "Open Folder..." and then navigate to the folder called `infant_gut_analysis`, which was created when you opened the .zip file. Once you select the correct folder, Positron will open it. 
