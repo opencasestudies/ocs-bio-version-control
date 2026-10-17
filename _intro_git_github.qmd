@@ -1018,4 +1018,10 @@ Tips
 ::::
 :::
 
+There are a lot of great examples of scientists using Git and GitHub to make their work more reproducible, to provide a convenient platform for collaboration, and to create an accessible web presence for their projects. For inspiration, check out some of these repositories:
+
+- [Bowtie2](https://github.com/BenLangmead/bowtie2): This is a tool for aligning sequence reads. You can see that the README gives an overview of the tool, explains how to get started, and lists related publications. The [issues](https://github.com/BenLangmead/bowtie2/issues) page keeps a running to-do list of feature requests and bug fixes, suggested by a variety of users. 
+- [Tybalt](https://github.com/greenelab/tybalt): This repository includes code and data to train a variational autoencoded on cancer types from The Cancer Genome Atlas. You can see that the README gives an overview of the project, the data, the results, and includes a citation. The [closed issues page](https://github.com/greenelab/tybalt/issues?q=is%3Aissue+state%3Aclosed) shows issues that were opened and then closed after being resolved. 
+- [OpenScPCA-analysis](https://github.com/AlexsLemonade/OpenScPCA-analysis): This is a collaborative project to analyze data from the Single-cell Pediatric Cancer Atlas. You can see a description of the project and the repository contents in the README, and the running to-do list in the [issues page](https://github.com/AlexsLemonade/OpenScPCA-analysis/issues).
+
 ***
