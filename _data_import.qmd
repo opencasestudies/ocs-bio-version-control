@@ -9,7 +9,7 @@ At the end of this section, save incremental data so that users can pause and co
 # **Data Import**
 ***
 
-Now that you have set up this project with {{< glossary "Git">}} and {{< glossary "GitHub">}}, you can start working on the study comparison in R. Open RStudio or Positron or your preferred R IDE to the "infant_gut_analysis" folder. We will start by taking a look at the data. Take a look at the {{< glossary "README">}} file to determine which file contains commands that can read in the raw data. Open this file and run the code. 
+Now that you have set up this project with {{< glossary "Git">}} and {{< glossary "GitHub">}}, you can start working on the study comparison in R. Open RStudio or Positron or your preferred R IDE to the `infant_gut_analysis` folder. We will start by taking a look at the data. Take a look at the {{< glossary "README">}} file to determine which file contains commands that can read in the raw data. Open this file and run the code. 
 
 <details> <summary> Click here to see the code included in this file. </summary>
 
@@ -48,7 +48,7 @@ Question opportunity
 How many observations are included in our data set? How many variables are included in our data set? 
 <details> <summary> Hint </summary>
 
-Data is imported in the file "01_pull_study_data.R". You can find out how many rows are in a data frame with the function `nrow(name_of_data_frame)`. You can find out how many columns are in a data frame with the function `ncol(name_of_data_frame)`. 
+Data is imported in the file `01_pull_study_data.R`. You can find out how many rows are in a data frame with the function `nrow(name_of_data_frame)`. You can find out how many columns are in a data frame with the function `ncol(name_of_data_frame)`. If you are working in either RStudio or Positron, you can also see the object dimensions in the Environment pane (in RStudio) or the Session pane (in Positron).
 
 </details>
 <details><summary>Answer</summary>

@@ -14,7 +14,7 @@ Although this is not directly related to {{< glossary "version control">}}, ther
 
 - file names are concise but informative
 - there is one central folder to contain all files for each project
-- there is a central file (often called the {{< glossary "README">}}) that explains what files are included and how to use them to run the analysis
+- there is a central file (often called the {{< glossary "README" >}}) that explains what files are included and how to use them to run the analysis
 - there are folders to keep similar files together 
   - data folder (this could be split into raw data and processed data)
   - figures folder for any figures made for the analysis
@@ -27,7 +27,7 @@ Although this is not directly related to {{< glossary "version control">}}, ther
 ## Organization of this project 
 ***
 
-If we look at the files contained in the "infant_gut_analysis" repository, they follow the recommendations provided above. 
+If we look at the files contained in the `infant_gut_analysis` repository, they follow the recommendations provided above. 
 
 ```{r, fig.alt="File viewer for files in this repository", out.width = "100%", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e3d77952e3_0_0#slide=id.g3e3d77952e3_0_0")
@@ -36,16 +36,16 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 ## README
 ***
 
-A README file should describe the files related to your scientific project. It should describe where inputs come from, what each script does, and where outputs are generated. If someone reads through your README, they should know where to find each component of your analysis. 
+A `README.md` file should describe the files related to your scientific project. It should describe where inputs come from, what each script does, and where outputs are generated. If someone reads through your README, they should know where to find each component of your analysis. 
 
 :::{.think_question}
 ::::{.think_question_header}
 Question opportunity
 ::::
 ::::{.inner_block}
-Read through the README.md file for this project. Which script generates "sample_metadata.csv"? 
+Read through the `README.md` file for this project. Which script generates `sample_metadata.rda`? 
 <details><summary>Answer</summary>
-The script "01_pull_study_data.R" generates "sample_metadata.csv". 
+The script `01_pull_study_data.R` generates `sample_metadata.rda`. 
 </details>
 ::::
 :::
@@ -55,14 +55,14 @@ The script "01_pull_study_data.R" generates "sample_metadata.csv".
 
 ### Empty folders
 
-One thing that often surprises new Git users is that any empty folders may exist on your computer but will not be tracked by Git until they have content. So while we see "figures" and "results" in the set of files from the folder "infant_gut_files", they  cannot be tracked by Git or hosted on GitHub until they have content. If you want to track an empty folder before it has content, you can add a placeholder file into the folder, and remove it later once the folder has content.
+One thing that often surprises new Git users is that any empty folders may exist on your computer but will not be tracked by Git until they have content. So while we see `figures` and `results` in the set of files from the folder `infant_gut_analysis`, they  cannot be tracked by Git or hosted on GitHub until they have content. If you want to track an empty folder before it has content, you can add a placeholder file into the folder, and remove it later once the folder has content.
 
 ### Which files to track with Git 
 
 Recall that version control lets you track project files as they change throughout the research process. Therefore, there are some files that should always be tracked with version control, some files that should never be tracked with version control, and some files that depend more on personal preference. Deciding which files to track is another topic that different people take different approaches to, but there are some rules that are typically followed: 
 
-- track source files that you've written (such as R scripts, shell scripts, LaTeX files, etc) 
-- track configuration files (such as .gitignore) that tell your tools how to interact with this repository
+- track source files that you've written (such as `R` scripts, `shell` scripts, `LaTeX` files, etc) 
+- track configuration files (such as `.gitignore`) that tell your tools how to interact with this repository
 - do not track intermediate files (such as log files), these are files that are generated automatically during a certain part of your workflow but are not needed on their own
 - sometimes track derived products (such as intermediate data, figures, or reports)
   - this depends if you would like a copy of these products to live on GitHub
@@ -72,15 +72,15 @@ Recall that version control lets you track project files as they change througho
 
 <details> <summary> Binary files </summary>
 
-From a Git perspective, files are either text files or binary files. Text files are human-readable. They work nicely with Git because they can be represented in terms of differences between versions. In contrast, binary files are readable by certain programs but are not human-readable. They cannot be represented in terms of diffs, and therefore a new version of the file is saved at each commit. Examples of binary files are images (.png, .jpeg), word and excel files (.doc, .xlsx) and PDFs (.pdf). Tracking many binary files with Git can eventually slow down Git operations. Recommendations vary about when you may or may not want to track binary files with Git, we suggest tracking them only if you want viewers of your GitHub repository to be able to view and download specific figures or documents without regenerating them from the source code, and otherwise do not track them. 
+From a Git perspective, files are either text files or binary files. Text files are human-readable. They work nicely with Git because they can be represented in terms of differences between versions. In contrast, binary files are readable by certain programs but are not human-readable. They cannot be represented in terms of diffs, and therefore a new version of the file is saved at each commit. Examples of binary files are images (`.png`, `.jpeg`), word and excel files (`.doc`, `.xlsx`) and PDFs (`.pdf`). Tracking many binary files with Git can eventually slow down Git operations. Recommendations vary about when you may or may not want to track binary files with Git, we suggest tracking them only if you want viewers of your GitHub repository to be able to view and download specific figures or documents without regenerating them from the source code, and otherwise do not track them. 
 
 </details>
 
-#### How to use the .gitignore file
+#### How to use the `.gitignore` file
 
-The best way to avoid tracking a file is to add it to your {{< glossary ".gitignore">}} file. If a file or folder is included in your .gitignore file, it will not be staged when you use the command `git add .`. 
+The best way to avoid tracking a file is to add it to your {{< glossary ".gitignore">}} file. If a file or folder is included in your `.gitignore` file, it will be included in a commit if you explicitly decide to stage it (if using the command line with the command `git add .`, this will not include any files listed in the `.gitignore`).
 
-If you open an RStudio project for a Git-tracked repository, you'll have a .gitignore file that looks similar to the following:
+If you open an RStudio project for a Git repository, you'll have a `.gitignore` file that looks similar to the following:
 
 ::: {.emphasis_block}
 ```
@@ -100,17 +100,19 @@ If you open an RStudio project for a Git-tracked repository, you'll have a .giti
 ```
 :::
 
-If you would like Git to avoid tracking a file called "large_data.csv", which lives in a folder called "data", you would add the following line to the end of your .gitignore file:
+If you would like Git to avoid tracking a PDF called `analysis_report.pdf`, which lives in a folder called `reports`, you would add the following line to the end of your `.gitignore` file:
 
 ```
-data/large_data.csv
+reports/analysis_report.pdf
 ```
 
-You could also tell Git to avoid tracking an entire folder. If you didn't want to track any data from a folder called "restricted_data", you would add the following line to your .gitignore file:
+You could also tell Git to avoid tracking an entire folder. If you didn't want to track any files in the `reports` folder, you would add the following line to your `.gitignore` file:
 
 ```
-restricted_data/
+reports/
 ```
+
+In some cases, you may not want to include data in your repository because it is too large to host online or because it contains sensitive information that should not be publicly available. Although these files could be listed in the `.gitignore` file, keeping them outside the repository entirely in a separate folder provides an additional safeguard against accidentally committing them or losing them if they are inadvertently deleted (since Git cannot restore ignored files). For example, you could have a folder called `analysis_files` that contains both a `data` folder and an `analysis_repo` folder, where only `analysis_repo` is version-controlled with Git.  
 
 #### Git and large files
 

@@ -17,7 +17,7 @@ Now that you've learned how to how to make and use version-controlled repositori
 ## Reinforcement Exercises
 ***
 
-A good way to reinforce these version control skills is to make a current scientific project that you've been working on into a Git tracked repository, and connecting it to a remote GitHub repository. See if you can integrate the Git workflow that you've learned here into your scientific process. Even if you are the only one working on this project, this is a good way to practice skills. This will get you into the habit of staging, committing, and pushing changes as you work, and working on different branches for different components of a project. 
+A good way to reinforce these version control skills is to make a current scientific project that you've been working on into a Git tracked repository, and connecting it to a remote GitHub repository. See if you can integrate the Git workflow that you've learned here into your scientific process. Even if you are the only one working on this project, this is a good way to practice skills. This will get you into the habit of staging, committing, and pushing changes as you work, and working on different branches for different components of a project. Additionally, making GitHub repositories for your projects will give you an easy way to host and share code for publications. You can edit the README.md file to provide more information about your analysis (check out this [template](https://gist.github.com/danielecook/94272f387d3366070d2546e2eadefe57) to make a README.md file for a scientific or data analysis project and this [example](https://github.com/greenelab/tybalt) of a scientific project hosted on GitHub with a very informative README). 
 
 ## Advancement Exercises
 ***
@@ -30,29 +30,29 @@ In this exercise, we will follow a process where we start to make changes to the
 
 Complete the following steps:
 
-- [ ] Open repository for this case study.
-- [ ] Check out the main branch.
+- [ ] Open the `infant_gut_analysis` repository locally.
+- [ ] Make sure you are on the `main` branch (navigate to it if not).
 - [ ] Add a new line to the README (add whatever you'd like here!).
-- [ ] Follow the instructions on the [troubleshooting section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github) to move this update to the README to a new branch called updated_readme.
-- [ ] Commit and push your changes to a remote updated_readme branch.
-- [ ] Submit another pull request on GitHub to contribute this change into the main branch. 
+- [ ] Follow the instructions on the [troubleshooting section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github) to move this update to the README to a new branch called u`pdated_readme`.
+- [ ] Commit and push your changes to a remote `updated_readme` branch.
+- [ ] Submit another pull request on GitHub to contribute this change into the `main` branch. 
 
 :::{.think_question}
 ::::{.think_question_header}
 Question opportunity
 ::::
 ::::{.inner_block}
-What are some advantages to making changes to a repository within a new branch and using a pull request to merge these changes into the main branch? 
+What are some advantages to working in a new branch and using a pull request to merge changes from that branch into the `main` branch (instead of working directly in the main branch)?
 
 <details><summary>Answer</summary>
 
-There are several advantages to this workflow: 
+There are several advantages to this workflow:
 
 - Using a new branch lets you try new things without disrupting a stable version of the code and project.
-- Multiple people can work on different components of a project on their own branches, and then merge the branches into main when they are ready to contribute their work.
+- Multiple people can work on different components of a project on their own branches, and then merge the branches into `main` when they are ready to contribute their work.
 - A branch and pull request lets you group several related commits together, and describe in more detail in the pull request why you made them.
 - The "Files changed" tab can help you identify exactly which lines were changed across all commits included in the pull requests, which is often more convenient than separately looking at the changes from each commit.
-- A pull request lets you request a code review from a team member or collaborator before merging your work into main, making you less susceptible to mistakes in your analysis.
+- A pull request lets you request a code review from a team member or collaborator before merging your work into `main`, making you less susceptible to mistakes in your analysis.
 
 </details>
 ::::
@@ -99,7 +99,7 @@ A copy of a repository, often used to make changes when the user does not have w
 ::::
 :::
 
-We will call the original repository (for which you do not have write permissions) the upstream. Earlier, when you cloned a GitHub repository, you made a local version of that repository. In contrast, when you fork from the upstream, you make a remote copy of the GitHub repository, that you own with your GitHub account. You can then clone this fork, so that you can work locally. 
+We will call the original repository (for which you do not have write permissions) the {{< glossary "upstream" >}} repository. Earlier, when you cloned a GitHub repository, you made a local version of that repository. In contrast, when you fork from the upstream, you make a remote copy of the GitHub repository, that you own with your GitHub account. You can then clone this fork, so that you can work locally. 
 
 ```{r, fig.alt="Fork workflow, making local repo", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_369#slide=id.g3f139628ce6_0_369")
@@ -113,13 +113,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 
 ##### Practice making and using a fork
 
-To practice using a fork, go to [this GitHub repository](https://github.com/opencasestudies/version_controlled_infant_gut_analysis). You'll see that this repository contains the files that you originally downloaded when you started working on this infant gut analysis project. 
+To practice using a fork, go to [this GitHub repository](https://github.com/opencasestudies/infant_gut_analysis_files). You'll see that this repository contains the files that you originally downloaded when you started working on this infant gut analysis project. 
 
 Look for the button that says "Fork" on the top right, above the "Code" button that you previously used to clone a repository. Click on "Fork". 
 
 This will bring you to a page that is very similar to when you had created a new repository at the beginning of the case study. However, there are a few differences. You'll see now that you are the owner of this repository, and by default it has the same name as the repository that you are forking from. Click "Create fork". 
 
-Once you create the fork, you'll be brought to this repository. Now, follow the same process that you used previously to clone this repository (*note: make sure that you are cloning the fork, and not the upstream repository!*). Open the repository locally. Make a copy of the file "03_visualize_study_cohorts.qmd", and add it to your local version of your forked repo. Follow the workflow to stage this file, commit it, and push it. 
+Once you create the fork, you'll be brought to this repository. Now, follow the same process that you used previously to clone this repository (*note: make sure that you are cloning the fork, and not the upstream repository!*). Open the repository locally (this repository will be called `infant_gut_analysis_files`, as opposed to the repository `infant_gut_analysis` that we were working with for the rest of the case study). Make a copy of the file `03_visualize_study_cohorts.qmd` from your local repository `infant_gut_analysis`, and add it to your local version of your forked repo `infant_gut_analysis_files`. Follow the workflow to stage this file, commit changes, and push to GitHub. 
 
 After you push, you should now see the file on GitHub in your forked repo, along with a notification that this branch is a commit ahead of the upstream repository. There will be a button with the option to "Contribute" these changes. Click that button. This will take you to a page on the upstream repository where you can make a pull request from your fork. 
 

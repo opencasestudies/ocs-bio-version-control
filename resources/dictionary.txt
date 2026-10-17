@@ -6,11 +6,13 @@ AIA
 al
 Asnicar
 avataaars
+autoencoded
 automations
 Backhed
 Bitbucket
 Bioinformatics
 Blischak
+Bowtie
 Carpentries
 callout
 chatbot
@@ -30,11 +32,13 @@ Dockerfile
 Dockerhub
 dplyr
 else's
+env
 et
 favicon
 Ferretti
 figshare
 Figshare
+findable
 frontmatter
 ggplot
 GH
@@ -49,6 +53,7 @@ GPT
 HTTPS
 hw
 iconpacks
+interoperable
 jpeg
 july
 Lathouwers
@@ -64,6 +69,7 @@ metagenomic
 microbiome
 NonCommercial
 ocs
+OpenScPCA
 OTTR
 ottrproject
 Parnanen
@@ -105,9 +111,11 @@ tabset
 Teichman
 tidyverse
 th
+Tybalt
 uncheck
 Unsplash
 untracked
+variational
 Wampach
 www
 xlsx
