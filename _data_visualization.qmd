@@ -283,7 +283,7 @@ sample_counts %>%
   mutate(Study = factor(Study, levels = study_order)) %>%
   ggplot(aes(x = Study, y = total, fill = Category)) +
   geom_col(position = position_dodge()) +
-  ggplot2::scale_fill_viridis_d() + 
+  ggplot2::scale_fill_viridis_d(begin = 0.1, end = 0.8) + 
   ggplot2::theme_minimal() + 
   ggplot2::labs(y = "Number of samples",
        x = "Study",
@@ -331,33 +331,7 @@ git commit -m "Add plot of study sizes to '03_visualize_study_cohorts' and save 
 ## Comparing Longitudinal Sampling
 ***
 
-Next we will consider the second question: how do these studies compare in terms of when they took samples after the birth of the infants? You may have noticed in the script `02_wrangle_data.R` that two studies took samples from mothers during pregnancy. This information is contained in the variable `sampling_before_birth`. We would like to exclude these observations from our plots, because their `sampling_day` is counted from the beginning of pregnancy and not since birth. 
-
-:::{.think_question}
-::::{.think_question_header}
-Coding opportunity
-::::
-::::{.inner_block}
-**Your turn**: create a data frame `observations_after_birth` that does not include these observations that were taken before birth. **Include this code in your .qmd document.**
-
-<details>
-<summary>Hint:</summary>
-::::: {.rcode}
-The function `filter()` will remove rows that match a certain logical condition. 
-:::::
-</details>
-
-<details>
-<summary>View code:</summary>
-::::: {.rcode}
-```{r}
-observations_after_birth <- clean_metadata %>%
-  filter(sampling_before_birth == FALSE) 
-```
-:::::
-</details>
-::::
-:::
+Next we will consider the second question: how do these studies compare in terms of when they took samples after the birth of the infants? 
 
 Now, we will make a histogram of sampling day, where we separate the data by `Category` and `Study`. There are multiple ways to do this, but we will color the bars by `Category` and then use `facet_wrap()` to make separate panels for each study. Below we show two versions of this histogram that show the patterns in the data in different ways. Choose the sampling day histogram that you prefer (or choose to use both), and **include this code in your .qmd document**. 
 
@@ -369,7 +343,7 @@ In this histogram, we will order the studies in the same order that we used in t
 
 :::: {.rcode}
 ```{r, fig.width = 7, fig.height = 10}
-observations_after_birth %>%
+clean_metadata %>%
   mutate(Study = factor(Study, levels = study_order)) %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
@@ -389,7 +363,7 @@ observations_after_birth %>%
 
 :::: {.rcode}
 ```{r}
-observations_after_birth %>%
+clean_metadata %>%
   # only keep rows that have NA values for Study, sampling_day, or Category
   filter(is.na(Study) | is.na(sampling_day) | is.na(Category)) %>% 
   # view a smaller subset of variables
@@ -415,7 +389,7 @@ In this histogram, we will set `scale = "fixed"` in `facet_wrap()` so that the y
 
 :::: {.rcode}
 ```{r, fig.width = 7, fig.height = 10}
-observations_after_birth %>%
+clean_metadata %>%
   mutate(Study = reorder(Study, sampling_day)) %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
@@ -423,7 +397,7 @@ observations_after_birth %>%
   labs(x = "Days since birth at sampling",
        y = "Count",
        title = "Distribution of sampling day across studies") + 
-  scale_fill_viridis_d() + 
+  scale_fill_viridis_d(begin = 0.1, end = 0.8) + 
   theme_minimal() + 
   theme(plot.title = element_text(hjust = 0.5))
 ```
@@ -435,7 +409,7 @@ observations_after_birth %>%
 
 :::: {.rcode}
 ```{r}
-observations_after_birth %>%
+clean_metadata %>%
   # only keep rows that have NA values for Study, sampling_day, or Category
   filter(is.na(Study) | is.na(sampling_day) | is.na(Category)) %>% 
   # view a smaller subset of variables
@@ -463,7 +437,7 @@ We could also compare sampling time points between studies using boxplots. These
 
 ::: {.rcode}
 ```{r, warning = FALSE}
-observations_after_birth %>%
+clean_metadata %>%
     mutate(Study = factor(Study, levels = study_order)) %>%
     ggplot(aes(x = Category, y = sampling_day, fill = Category)) +
     geom_boxplot(outliers = FALSE, alpha = 0.6, width = 0.5) +

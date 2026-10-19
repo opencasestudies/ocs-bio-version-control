@@ -38,8 +38,9 @@ clean_metadata <- sample_metadata %>%
   # remove spaces from names of variables 
   dplyr::rename(sampling_paper = `Sampling from papers`, 
          sampling_day = `Sampling, day`) %>%
-  # make sampling_day a numeric variable
-  mutate(sampling_day = as.numeric(sampling_day)) 
+  # recode "NA" as NA and make sampling_day a numeric variable
+  mutate(sampling_day = na_if(sampling_day, "NA") %>%
+           as.numeric()) 
 
 # in Yassour study, sample IDs are not unique to samples 
 # first inspect this to confirm
@@ -65,21 +66,10 @@ clean_metadata %>%
 
 # two studies (Parnanen and Yassour) took samples 
 # from mothers during pregnancy
-# for these samples, `sampling_day` represents sampling day 
-# since start of pregnancy, unlike all other samples for which 
-# `sampling_day` represents sampling day since birth
-ids_before_birth <- clean_metadata %>%
-  # identify these specific samples
-  filter(Category == "mother",
-         Study == "Parnanen" & sampling_paper == "32WK" |
-           Study == "Yassour" & sampling_paper == "Gest") %>%
-  # get sample ids for these samples
-  dplyr::pull(SampleID) 
+# remove these samples, because they don't fit into
+# the time range that we want to consider 
 clean_metadata <- clean_metadata %>%
-  # add `sampling_before_birth` variable, and set to TRUE
-  # for these specific samples we identified 
-  mutate(sampling_before_birth = ifelse(SampleID %in% ids_before_birth,
-                                        TRUE, FALSE))
+  filter(!(sampling_paper %in% c("32WK", "Gest")))
 
 # save cleaned data
 save(clean_metadata, file = "processed_data/clean_sample_metadata.rda")
@@ -87,6 +77,37 @@ save(clean_metadata, file = "processed_data/clean_sample_metadata.rda")
 :::
 
 </details>
+
+:::{.think_question}
+::::{.think_question_header}
+Question opportunity
+::::
+::::{.inner_block}
+Now that the data have been wrangled, how many observations remain? And why did we remove data?  
+
+<details> <summary> Hint </summary>
+
+Data are wrangled in the file `02_wrangle_data.R`. You can find out how many rows are in a data frame with the function `nrow(name_of_data_frame)`. You can find out how many columns are in a data frame with the function `ncol(name_of_data_frame)`. If you are working in either RStudio or Positron, you can also see the object dimensions in the Environment pane (in RStudio) or the Session pane (in Positron).
+
+</details>
+<details><summary>Answer</summary>
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
+library(dplyr)
+```
+
+::: {.rcode}
+```{r}
+nrow(clean_metadata)
+```
+:::
+
+There are 1,443 observations after data wrangling. We removed observations that had `NA` values for the variable `SampleID` (in line 10) and we removed observations that were taken before birth (in line 51).
+
+</details>
+::::
+:::
 
 :::{.think_question}
 ::::{.think_question_header}
@@ -115,22 +136,6 @@ max(clean_metadata$sampling_day, na.rm = TRUE)
 :::
 
 The earliest day that a participant was sampled after birth was 0, and the latest day was 480. 
-
-If we would like to be more careful to exclude any samples that were taken from mothers before birth, we could explicitly remove these samples before calculating the minimum and maximum.
-
-::: {.rcode}
-```{r}
-sampling_days_after_birth <- clean_metadata %>%
-  # filter to only contain samples that were taken after birth
-  dplyr::filter(sampling_before_birth == FALSE) %>% 
-  # extract the sampling day column
-  dplyr::pull(sampling_day)
-
-min(sampling_days_after_birth, na.rm = TRUE)
-max(sampling_days_after_birth, na.rm = TRUE)
-```
-:::
-
 
 </details>
 ::::
