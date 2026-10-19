@@ -68,7 +68,11 @@ To start, we will create a new quarto document and call it `03_visualize_study_c
 
 In this section, we will go through the steps to make two visualizations to compare the study cohorts. As you go, include the relevant code (as well as explanations of what the code is doing) into your quarto document. When you are done, you or someone else with access to the data and your document, should be able to run the code and create the visualizations. 
 
-In your quarto document, you should start by making a code chunk to load the required packages. 
+In your quarto document, you should start by making a code chunk to load the required packages. A code chunk looks like the following:
+
+```{r, fig.alt="Example R code chunk in .qmd document", out.width = "100%", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h60886f95c2238bb5_0_0#slide=id.h60886f95c2238bb5_0_0")
+```
 
 <details>
 <summary>Adding a code chunk to a quarto file</summary>
@@ -97,7 +101,7 @@ You can also add a code chunk in Positron by clicking the icon that shows an arr
 ::: {.rcode}
 ```{r, message = FALSE, warning = FALSE}
 library(here)
-library(dplyr)
+library(dplyr) 
 library(ggplot2)
 ```
 :::
