@@ -165,7 +165,7 @@ There are several benefits to pairing your local repositories with remote reposi
 
 - You have a backup of files in case something happens to your computer.
 - You can easily work with collaborators.
-- You have a central location where your data (if appropriate) and code are stored for a project that can be viewed by and shared with other scientists.
+- You have a central location where your data (if appropriate) and code are stored for a project that can be viewed by and shared with other scientists. Each file has an associated URL, so if you would like to share a code or data file you can share the URL where the file can be viewed online, instead of emailing a file that must be downloaded to view. 
 
 :::{.reproducibility_box}
 ::::{.reproducibility_box_header}
