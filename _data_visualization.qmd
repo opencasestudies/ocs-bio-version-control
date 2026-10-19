@@ -165,7 +165,7 @@ clean_metadata %>%
 :::
 
 <details>
-<summary>A note on the pipe operator `%>%`</summary>
+<summary>A note on the pipe operators `%>%` and `|>`. </summary>
 The pipe operator `%>%` chains R commands together. It takes the preceding object and inputs it as the first argument to the function that follows it. It often is used to make code more readable and to avoid using intermediate objects or nested functions. The code above is equivalent to both of these expressions:
 
 ::: {.rcode}
@@ -181,7 +181,7 @@ count(group_by(clean_metadata, Study))
 ```
 :::
 
-The pipe operator that we use, `%>%`, is part of the `magrittr` and `dplyr` R packages. There is also a pipe operator in base R, `|>`. In most cases, these two pipe operators will work equivalently. 
+The pipe operator that we use, `%>%`, is part of the `magrittr` and `dplyr` R packages. There is also a pipe operator in base R, `|>`. In most cases, these two pipe operators will work equivalently.
 
 ::: {.rcode}
 ```{r}
@@ -333,6 +333,28 @@ git commit -m "Add plot of study sizes to '03_visualize_study_cohorts' and save 
 
 Next we will consider the second question: how do these studies compare in terms of when they took samples after the birth of the infants? 
 
+First, we will check if any of our observations have missing sampling day information. 
+
+:::: {.rcode}
+```{r}
+clean_metadata %>%
+  # only keep rows that have NA values for sampling_day
+  filter(is.na(sampling_day)) %>% 
+  # view a smaller subset of variables
+  select(Study, SampleID, sampling_day, Category)
+```
+::::
+
+Here we can see that there are 6 observations from the Backhed study and one observation from the Shao study for which `sampling_day` is missing. Let's create a new data frame that removes these observations. 
+
+:::: {.rcode}
+```{r}
+sampling_day_df <- clean_metadata %>%
+  # remove rows that have NA values for sampling_day
+  filter(!is.na(sampling_day)) 
+```
+::::
+
 Now, we will make a histogram of sampling day, where we separate the data by `Category` and `Study`. There are multiple ways to do this, but we will color the bars by `Category` and then use `facet_wrap()` to make separate panels for each study. Below we show two versions of this histogram that show the patterns in the data in different ways. Choose the sampling day histogram that you prefer (or choose to use both), and **include this code in your .qmd document**. 
 
 ::: {.panel-tabset}
@@ -343,7 +365,7 @@ In this histogram, we will order the studies in the same order that we used in t
 
 :::: {.rcode}
 ```{r, fig.width = 7, fig.height = 10}
-clean_metadata %>%
+sampling_day_df %>%
   mutate(Study = factor(Study, levels = study_order)) %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
@@ -356,24 +378,6 @@ clean_metadata %>%
   theme(plot.title = element_text(hjust = 0.5))
 ```
 ::::
-
-<details>
-<summary>More information about the warning message above.</summary>
-`ggplot` will give you warning messages when there are data in the dataframe that it cannot include in a plot due to missing information. In this warning, we can see that 7 observations in the data (representing samples taken) cannot be plotted because of non-finite values. Typically, this means there are observations with missing data. We can investigate what is missing with the following:
-
-:::: {.rcode}
-```{r}
-clean_metadata %>%
-  # only keep rows that have NA values for Study, sampling_day, or Category
-  filter(is.na(Study) | is.na(sampling_day) | is.na(Category)) %>% 
-  # view a smaller subset of variables
-  select(Study, SampleID, PersonID, sampling_day, Category)
-```
-::::
-
-Here we can see that there are 6 observations from the Backhed study and one observation from the Shao study for which `sampling_day` is missing. Therefore, these observations cannot be included in the plot.
-
-</details>
 
 We will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name "sampling_timepoints_option1.png" within the "figures" folder.
 
@@ -389,7 +393,7 @@ In this histogram, we will set `scale = "fixed"` in `facet_wrap()` so that the y
 
 :::: {.rcode}
 ```{r, fig.width = 7, fig.height = 10}
-clean_metadata %>%
+sampling_day_df %>%
   mutate(Study = reorder(Study, sampling_day)) %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
@@ -402,24 +406,6 @@ clean_metadata %>%
   theme(plot.title = element_text(hjust = 0.5))
 ```
 ::::
-
-<details>
-<summary>More information about the warning message above.</summary>
-`ggplot` will give you warning messages when there are data in the dataframe that it cannot include in a plot due to missing information. In this warning, we can see that 7 observations in the data (representing samples taken) cannot be plotted because of non-finite values. Typically, this means there are observations with missing data. We can investigate what is missing with the following:
-
-:::: {.rcode}
-```{r}
-clean_metadata %>%
-  # only keep rows that have NA values for Study, sampling_day, or Category
-  filter(is.na(Study) | is.na(sampling_day) | is.na(Category)) %>% 
-  # view a smaller subset of variables
-  select(Study, SampleID, PersonID, sampling_day, Category)
-```
-::::
-
-Here we can see that there are 6 observations from the Backhed study and one observation from the Shao study for which `sampling_day` is missing. Therefore, these observations cannot be included in the plot.
-
-</details>
 
 We will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name `sampling_timepoints_option2.png` within the "figures" folder.
 
@@ -436,8 +422,8 @@ ggsave("figures/sampling_timepoints_option2.png", height = 6, width = 9)
 We could also compare sampling time points between studies using boxplots. These boxplots let us visualize the distribution of sampling time points for each study, emphasizing the range and middle 50% of each sampling times for each study. Note the differences in y-axis scales. The number of points in each facet represent the number of samples in that study. Read more about boxplots with jittered points in [this data visualization course](https://hutchdatascience.org/DataViz_Considerations/04_graph_info.html#boxplots-with-jitter). 
 
 ::: {.rcode}
-```{r, warning = FALSE}
-clean_metadata %>%
+```{r}
+sampling_day_df %>%
     mutate(Study = factor(Study, levels = study_order)) %>%
     ggplot(aes(x = Category, y = sampling_day, fill = Category)) +
     geom_boxplot(outliers = FALSE, alpha = 0.6, width = 0.5) +

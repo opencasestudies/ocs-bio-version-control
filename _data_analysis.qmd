@@ -40,9 +40,8 @@ sample_counts %>%
 #### Sampling time plot option 1
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 7, fig.height = 10}
-observations_after_birth <- clean_metadata %>%
-  filter(!sampling_before_birth) 
-observations_after_birth %>%
+sampling_day_df <- clean_metadata %>% filter(!is.na(sampling_day)) 
+sampling_day_df %>%
     mutate(Study = factor(Study, levels = study_order)) %>%
     ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
     geom_histogram(position = position_dodge(), bins = 20) +
@@ -58,9 +57,8 @@ observations_after_birth %>%
 #### Sampling time plot option 2
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 7, fig.height = 10}
-observations_after_birth <- clean_metadata %>%
-  filter(!sampling_before_birth) 
-observations_after_birth %>%
+sampling_day_df <- clean_metadata %>% filter(!is.na(sampling_day)) 
+sampling_day_df %>%
   mutate(Study = reorder(Study, sampling_day)) %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
@@ -90,13 +88,9 @@ clean_metadata %>%
             # each study and category 
             n_time = n_distinct(sampling_paper),
             # calculate first sampling day for each study and category
-            min_time = min(sampling_day[!sampling_before_birth], na.rm = TRUE),
+            min_time = min(sampling_day, na.rm = TRUE),
             # calculate last sampling day for each study and category
-            max_time = max(sampling_day[!sampling_before_birth], na.rm = TRUE),
-            # report if any samples were taken during pregnancy, and when 
-            pregnancy_time = ifelse(any(sampling_before_birth), 
-                                    median(sampling_day[sampling_before_birth]),
-                                    NA),
+            max_time = max(sampling_day, na.rm = TRUE),
             .groups = "drop")
 ```
 :::
