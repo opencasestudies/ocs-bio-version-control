@@ -6,6 +6,8 @@ Videos or images may be helpful so this includes an example of embedding a video
 # **Context**
 ***
 
+Before we explore version control, we will explore some of the scientific context for the data and methods we will encounter in this case study.
+
 ### What is a microbiome?
 
 A microbiome is a collection of microorganisms that live in a particular environment. One commonly studied microbiome is the human gut microbiome. The bacteria that live in our gut help regulate our metabolism, protect us against pathogens, and perform other important roles in our health [@han2026host]. Studies have shown associations between changes to the gut microbiome and many diseases, including diabetes, autoimmune diseases, and Alzheimer's disease. 
@@ -22,13 +24,13 @@ A microbiome is a collection of microorganisms that live in a particular environ
 
 :::
 
-Many features of the gut microbiome are established early in life, making the infant gut microbiome an important area of study [@wang2021metagenomic]. Researchers are particularly interested in understanding how the infant gut microbiome develops over time and how it relates to the maternal microbiome. To address these questions, several studies have collected {{< glossary "longitudinal">}} samples from infant-mother pairs. Sequencing microbiome samples is expensive, and individual studies are often limited in size. @wang2021metagenomic conducted a meta-analysis of eight of these studies, using this large data set to compare gut microbiome composition (which microbes are there?) and functional potential (what are the microbes capable of doing?) between infants and mothers.
+Many features of the gut microbiome are established early in life, making the infant gut microbiome an important area of study [@wang2021metagenomic]. Researchers are particularly interested in understanding how the infant gut microbiome develops over time and how it relates to the maternal microbiome. To address these questions, several studies have collected {{< glossary "longitudinal">}} samples from infant-mother pairs. Sequencing microbiome samples is expensive, and individual studies are often limited in size. @wang2021metagenomic conducted a meta-analysis of eight of these studies, using this large data set to compare gut microbiome composition (which microbes are there?) and functional potential (what are the microbes capable of doing?) between infants and mothers. **We will use data from @wang2021metagenomic in this case study.**
 
 ### What is a meta-analysis?
 
 A meta-analysis combines data or results from multiple studies investigating a common research question [@dersimonian1986meta]. By pooling information across studies, researchers can increase sample size, make better use of existing data, and generate a consensus result from a set of studies. However, meta-analyses must be conducted with care, as combining data from studies with different participant populations and different study designs can lead to misleading results. 
 
-One approach to meta-analysis combines summary results from each study. Another approach combines the original data from all studies and re-analyzes them jointly, accounting for systematic differences between studies [@andrade2025primer]. The latter approach (also referred to as mega-analysis) requires access to the raw data from each study, but allows researchers to ask new questions and analyze the data from all studies using a common protocol. 
+One approach to meta-analysis combines summary results from each study. Another approach combines the original data from all studies and re-analyzes them jointly, accounting for systematic differences between studies [@andrade2025primer]. The latter approach (also referred to as "mega-analysis") requires access to the raw data from each study, but allows researchers to ask new questions and analyze the data from all studies using a common protocol. 
 
 ```{r, fig.alt="Types of meta-analyses", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e878f6c4a7_0_0#slide=id.g3e878f6c4a7_0_0")
