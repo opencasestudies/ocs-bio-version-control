@@ -20,11 +20,16 @@ This set of steps will bring you to a page where you can make your pull request.
 
 There are a few useful components of this page in which you make a pull request:
 
-1. You have a spot to add a title and a description. 
-1. If you scroll down, you'll see a list of commits that make up this pull request along with the commit messages, and a view of each of the files changed/what was changed. 
-1. On the right panel next to the title you'll see an option for reviewers. If other users have access to this repository, then you can add them as a reviewer. Depending on how they have configured their notification preferences, they may get an email notification that you've requested a review from them. It is good practice for you to also reach out to them and send them the link to your pull request to review! 
+- You have a spot to add a title and a description. 
+- If you scroll down, you'll see a list of commits that make up this pull request along with the commit messages, and a view of each of the files changed with details of what was changed. 
+- On the right panel next to the title you'll see an option for reviewers. If other users have access to this repository, then you can add them as a reviewer. Depending on how they have configured their notification preferences, they may get an email notification that you've requested a review from them. It is good practice for you to also reach out to them and send them the link to your pull request to review! 
 
-### Components of a good pull request title and description 
+:::{.reproducibility_box}
+::::{.reproducibility_box_header}
+Reproducibility considerations
+::::
+::::{.inner_block}
+Components of a good pull requests include:
 
 - A concise but descriptive title.
 - A description of the changes you want to merge. This is a good place to list files added and modified and give a quick description of those changes. Give plenty of context; you've likely been thinking about the code you want to merge more recently than your collaborator who will review it. 
@@ -33,8 +38,14 @@ There are a few useful components of this page in which you make a pull request:
 - A request for code review (make specific requests: do you want your collaborator to review all changes? do you want them to focus on a specific file or part of an analysis? do you just a bigger picture review to see if your approach to the problem makes sense?).
 
 For additional suggestions on making good pull requests, you can read more in [this reproducibility course](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html). Also see [this real-world example of a pull request](https://github.com/AlexsLemonade/OpenPBTA-analysis/pull/741) with these components, followed by back-and-forth between the author and reviewer to iterate on the proposed changes to the analysis. 
+::::
+:::
 
-Add a title and a description for your pull request now. 
+Navigate to your pull request page and do the following:
+
+- [ ] Add a title for your pull request.
+- [ ] Add a description. 
+- [ ] Click "Create pull request" button.
 
 <details>
 <summary>Example pull request for this analysis</summary>
@@ -64,5 +75,10 @@ If you close a pull request without merging it, this means that you've decided n
 While your pull request is open, any additional changes that you commit and push to this branch will be automatically added to the pull request. 
 
 It is recommended to not let your pull requests get too large. A pull request should be a set of changes that address a certain component of an analysis. Try to avoid combining multiple parts of a project in a single pull request. If you decide to start working on a different part of a project, you can create a new branch for this, and eventually submit a new pull request from that branch. For example, in this project, if you wanted to change how the data is imported, you would want to do this in a separate pull request from the one in which you create data visualizations to compare the study designs. This is a great way to stay organized for complex projects that have different components happening in parallel. Additionally, using more branches and smaller pull requests, each focused on a single set of related changes, can make it easier to review the pull requests and to identify when changes were introduced to a project. Changes to code that depend on each other but address different issues can be addressed in a series of "stacked" pull requests (check out [GitHub's documentation about stacked pull requests](https://docs.github.com/en/pull-requests/how-tos/stacked-pull-requests) for more information).
+
+## Reviewing pull requests
+***
+
+If you are the person reviewing a pull request...
 
 ***
