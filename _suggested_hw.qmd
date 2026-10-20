@@ -72,7 +72,7 @@ Your goal is to find the pull request number and commit tag from when the learni
 
 There are multiple ways to search for this change:
 
-- Open the file _lo_map.qmd and click the "History" button to see a history of commits that affected this file.
+- Open the file `_lo_map.qmd` and click the "History" button to see a history of commits that affected this file.
 - Go to the "Pull requests" tab, click on the "Closed" pull requests, and search a relevant search term. Once you find the correct pull request, look at the commits that make up that pull request.   
 
 </details>
