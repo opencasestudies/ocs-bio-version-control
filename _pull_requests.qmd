@@ -63,7 +63,7 @@ Once you have created a pull request, it is referred to as "open", and the two p
 
 ### Merging pull requests 
 
-Image that you submitted a pull request, you or your collaborator has decided that the changes look good, and you want to integrate the changes from your development branch into the base branch. This is called merging your pull request. In most cases, you will see a box that says "No conflicts with base branch", and you can click the button that says "Merge pull request". However, in some cases, you will not be able to merge until you resolve merge conflicts. See the [troubleshooting section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github) for more information about merge conflicts and how to resolve them. 
+Imagine that you submitted a pull request, you or your collaborator has decided that the changes look good, and you want to integrate the changes from your development branch into the base branch. This is called merging your pull request. In most cases, you will see a box that says "No conflicts with base branch", and you can click the button that says "Merge pull request". However, in some cases, you will not be able to merge until you resolve merge conflicts. See the [troubleshooting section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github) for more information about merge conflicts and how to resolve them. 
 
 ### Closing pull requests
 
