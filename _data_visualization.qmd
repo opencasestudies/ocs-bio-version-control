@@ -386,7 +386,7 @@ sampling_day_df %>%
 ```
 ::::
 
-We will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name "sampling_timepoints_option1.png" within the "figures" folder.
+We will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name `sampling_timepoints_option1.png` within the `figures` folder.
 
 :::: {.rcode}
 ```{r, eval = FALSE}
@@ -414,7 +414,7 @@ sampling_day_df %>%
 ```
 ::::
 
-We will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name `sampling_timepoints_option2.png` within the "figures" folder.
+We will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name `sampling_timepoints_option2.png` within the `figures` folder.
 
 :::: {.rcode}
 ```{r, eval = FALSE}
