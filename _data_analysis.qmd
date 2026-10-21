@@ -102,7 +102,9 @@ Question opportunity
 ::::{.inner_block}
 Recall one of the main questions of this case study: In this meta-analysis of infant gut microbiome samples, how do the original studies compare in their sampling designs? Specifically, how do they compare in terms of the number of samples and the sampling timeline?
 
-Use the two plots you've made and the table above to make a few observations that compare and contrast the sampling designs of the original studies. Include these observations at the end of your `03_visualize_study_cohorts.qmd` document. 
+Use the two plots you've made and the table above to make a few observations that compare and contrast the sampling designs of the original studies. 
+
+- [ ] Include these observations at the end of your `03_visualize_study_cohorts.qmd` document. 
 
 <details><summary>Answer</summary>
 
@@ -117,7 +119,9 @@ Possible observations from the plots:
 ::::
 :::
 
-Since you've performed the requested analysis, make sure to document any new files in this repository in the README.md file. Specifically, describe what the file `03_visualize_study_cohorts.qmd` does, and describe the two plots that are now saved in the figures folder. After doing this, make another commit and {{< glossary "push">}} your work. 
+Since you've performed the requested analysis, make sure to document any new files in this repository in the `README.md` file. 
+
+- [ ] In the `README.md` file, describe what the file `03_visualize_study_cohorts.qmd` does, and describe the two plots that are now saved in the `figures` folder. 
 
 ::: {.panel-tabset}
 

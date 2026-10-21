@@ -13,7 +13,7 @@ First, we will make sure that we are on the correct branch. We want to use a dev
 
 #### GitHub Desktop 
 
-- In the upper panel, under "Current Branch", look to see if it says the current branch is `study_comparison` or `main` or something else.
+- [ ]  In the upper panel, under "Current Branch", look to see if it says the current branch is `study_comparison` or `main` or something else.
   - If it says `study_comparison`, then you are already working on the correct branch.
   - If it says `main`, then you can click the drop-down button next to "Current Branch" and select `study_comparison`.
     - If `study_comparison` does not appear, you can click the "New Branch" button to create it. 
@@ -64,7 +64,9 @@ Another file type is a notebook-style document, which combines text components w
 ::::
 :::
 
-To start, we will create a new quarto document and call it `03_visualize_study_cohorts.qmd`. Make sure to give your quarto document an appropriate title. 
+We will use a quarto document for this analysis. To start:
+
+- [ ] Create a new quarto document and call it `03_visualize_study_cohorts.qmd`. Make sure to give your quarto document an appropriate title. 
 
 In this section, we will go through the steps to make two visualizations to compare the study cohorts. As you go, include the relevant code (as well as explanations of what the code is doing) into your quarto document. When you are done, you or someone else with access to the data and your document, should be able to run the code and create the visualizations. 
 
@@ -96,7 +98,7 @@ You can also add a code chunk in Positron by clicking the icon that shows an arr
 :::
 </details>
 
-**Include this code in your .qmd file**, to load the packages that we'll need. 
+- [ ] **Include this code in your .qmd file**, to load the packages that we'll need. 
 
 ::: {.rcode}
 ```{r, message = FALSE, warning = FALSE}
@@ -113,7 +115,9 @@ Next, we will load the wrangled data. We will use the function `here()`, which c
 The `here()` function creates file paths that always start from the main project folder (the top-level folder that contains all of your project files). In a Git repository, this is the folder that contains the `.git` directory, which was created when you initialized the repository. However, there are other ways here can determine where to start the path, including the directory with an `.Rproj` file (if you are using one), see this [list of conditions for the starting directory](https://here.r-lib.org/reference/here.html) for more information.  Using relative file paths (i.e., paths that only reference folders within your project) makes your code more portable and easier for collaborators to run. Importantly, the `here()` function creates these relative paths in a way that is compatible with different kinds of operating systems which have different path requirements. In contrast, absolute file paths depend on the specific file structure of your personal computer and will not necessarily work on other machines.
 </details>
 
-We want to load data from the file `clean_sample_metadata.rda` contained within the `processed_data` folder. **Include this code in your .qmd file** to load the data.
+We want to load data from the file `clean_sample_metadata.rda` contained within the `processed_data` folder. 
+
+- [ ] **Include this code in your .qmd file** to load the data.
 
 ```{r, echo = FALSE}
 load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
@@ -207,7 +211,9 @@ We can see that there is quite the spread of study sizes. Let's also break this 
 Coding opportunity
 ::::
 ::::{.inner_block}
-**Your turn**: Modify the code above to count the number of observations by `Study` and by `Category`, and save the results as a data frame named `sample_counts`. **Add this code to your .qmd file.**
+**Your turn**: Modify the code above to count the number of observations by `Study` and by `Category`, and save the results as a data frame named `sample_counts`. 
+
+- [ ] **Add this code to your .qmd file.**
 
 The output data frame should look like this:
 
@@ -234,7 +240,9 @@ sample_counts
 ::::
 :::
 
-Now that we've looked at this data in a table format, let's make a plot so that we can compare this data visually. We'll make a bar plot, with separate bars for each study and for observation category (infant vs mother). **Include this code in your .qmd document** to make a bar plot.
+Now that we've looked at this data in a table format, let's make a plot so that we can compare this data visually. We'll make a bar plot, with separate bars for each study and for observation category (infant vs mother). 
+
+- [ ] **Include this code in your .qmd document** to make a bar plot.
 
 ::: {.rcode}
 ```{r}
@@ -258,7 +266,7 @@ While this plot looks good, it would be visually easier to compare if the studie
 
 </details>
 
-**Include this code in your .qmd document** to make a new vector for the desired study order.
+- [ ] **Include this code in your .qmd document** to make a new vector for the desired study order.
 
 ::: {.rcode}
 ```{r}
@@ -271,7 +279,9 @@ study_order
 ```
 :::
 
-We can now order the bar plot by increasing sample size. **Include this code in your .qmd document** to make the bar plot with increasing bar heights.
+We can now order the bar plot by increasing sample size. 
+
+- [ ] **Include this code in your .qmd document** to make the bar plot with increasing bar heights.
 
 ::: {.rcode}
 ```{r}
@@ -282,7 +292,9 @@ sample_counts %>%
 ```
 :::
 
-Finally, we can update the colors of the plot and add labels. We will use the function `scale_fill_viridis_d()` to use colors that are more color-deficiency friendly (more information can be found in [this documentation about color scales](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) and in [this description of accessible color palettes](https://hutchdatascience.org/DataViz_Considerations/05_how_to_improve_viz.html#rule-1-using-accessible-color-palettes). While we could use the function `gglot2::scale_fill_viridis_d()` with no arguments to use default colors from this color map, here we include the arguments `begin` and `end` to choose specific colors (see the help file by typing `?ggplot2::scale_fill_viridis_d()` for more information on these arguments). **Include this code in your .qmd document** to refine your bar plot.
+Finally, we can update the colors of the plot and add labels. We will use the function `scale_fill_viridis_d()` to use colors that are more color-deficiency friendly (more information can be found in [this documentation about color scales](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) and in [this description of accessible color palettes](https://hutchdatascience.org/DataViz_Considerations/05_how_to_improve_viz.html#rule-1-using-accessible-color-palettes). While we could use the function `gglot2::scale_fill_viridis_d()` with no arguments to use default colors from this color map, here we include the arguments `begin` and `end` to choose specific colors (see the help file by typing `?ggplot2::scale_fill_viridis_d()` for more information on these arguments). 
+
+- [ ] **Include this code in your .qmd document** to refine your bar plot.
  
 ::: {.rcode}
 ```{r}
@@ -299,7 +311,9 @@ sample_counts %>%
 ```
 :::
 
-We will now use `ggsave()` to save this plot in the figures folder. **Include this code in your .qmd document** to save this bar plot with the file name `study_sizes_by_category.png` within the `figures` folder.
+We will now use `ggsave()` to save this plot in the figures folder. 
+
+- [ ] **Include this code in your .qmd document** to save this bar plot with the file name `study_sizes_by_category.png` within the `figures` folder.
 
 ::: {.rcode}
 ```{r, eval = FALSE}
@@ -313,7 +327,10 @@ This is another great time to commit your current work.
 
 #### GitHub Desktop 
 
-Navigate back to GitHub Desktop. You should see that `03_visualize_study_cohorts.qmd` now has an orange box next to it (signaling that this file has been modified) and that `figures/study_sizes_by_category.png` has been added (which is signaled by the green plus sign next to it). Make sure that both of these have checks in the checkboxes to the left of the filenames, which indicates that they are staged. Add an appropriate commit message and commit these files. 
+Navigate back to GitHub Desktop. You should see that `03_visualize_study_cohorts.qmd` now has an orange box next to it (signaling that this file has been modified) and that `figures/study_sizes_by_category.png` has been added (which is signaled by the green plus sign next to it). 
+
+- [ ] Make sure that both of these have checks in the checkboxes to the left of the filenames, which indicates that they are staged.
+- [ ] Add an appropriate commit message and commit these files. 
 
 #### Command line 
 
@@ -362,7 +379,9 @@ sampling_day_df <- clean_metadata %>%
 ```
 ::::
 
-Now, we will make a histogram of sampling day, where we separate the data by `Category` and `Study`. There are multiple ways to do this, but we will color the bars by `Category` and then use `facet_wrap()` to make separate panels for each study. Below we show two versions of this histogram that show the patterns in the data in different ways. Choose the sampling day histogram that you prefer (or choose to use both), and **include this code in your .qmd document**. 
+Now, we will make a histogram of sampling day, where we separate the data by `Category` and `Study`. There are multiple ways to do this, but we will color the bars by `Category` and then use `facet_wrap()` to make separate panels for each study. Below we show two versions of this histogram that show the patterns in the data in different ways. 
+
+- [ ] Choose the sampling day histogram that you prefer (or choose to use both), and **include this code in your .qmd document**. 
 
 ::: {.panel-tabset}
 
@@ -386,7 +405,9 @@ sampling_day_df %>%
 ```
 ::::
 
-We will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name `sampling_timepoints_option1.png` within the `figures` folder.
+We will save this plot in the figures folder. 
+
+- [ ] **Include this code in your .qmd document** to save this plot with the file name `sampling_timepoints_option1.png` within the `figures` folder.
 
 :::: {.rcode}
 ```{r, eval = FALSE}
@@ -414,7 +435,9 @@ sampling_day_df %>%
 ```
 ::::
 
-We will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name `sampling_timepoints_option2.png` within the `figures` folder.
+We will save this plot in the figures folder. 
+
+- [ ] **Include this code in your .qmd document** to save this plot with the file name `sampling_timepoints_option2.png` within the `figures` folder.
 
 :::: {.rcode}
 ```{r, eval = FALSE}
@@ -465,7 +488,9 @@ Are there patterns in the sampling time points can be more easily identified fro
 
 </details>
 
-Now that we have plotted patterns in sample size and sampling time points, go back through your file `03_visualize_study_cohorts.qmd` to make sure that it contains all relevant code to make the plots, and that there are explanations before each code chunk. 
+Now that we have plotted patterns in sample size and sampling time points:
+
+- [ ] Go back through your file `03_visualize_study_cohorts.qmd` to make sure that it contains all relevant code to make the plots, and that there are explanations before each code chunk. 
 
 Once you've done this, make another commit for these edits. 
 
