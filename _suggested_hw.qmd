@@ -17,7 +17,7 @@ Now that you've learned how to how to make and use version-controlled repositori
 ## Reinforcement Exercises
 ***
 
-A good way to reinforce these version control skills is to make a current scientific project that you've been working on into a Git tracked repository, and connecting it to a remote GitHub repository. See if you can integrate the Git workflow that you've learned here into your scientific process. Even if you are the only one working on this project, this is a good way to practice skills. This will get you into the habit of staging, committing, and pushing changes as you work, and working on different branches for different components of a project. Additionally, making GitHub repositories for your projects will give you an easy way to host and share code for publications. You can edit the README.md file to provide more information about your analysis (check out this [template](https://gist.github.com/danielecook/94272f387d3366070d2546e2eadefe57) to make a README.md file for a scientific or data analysis project and this [example](https://github.com/greenelab/tybalt) of a scientific project hosted on GitHub with a very informative README). 
+A good way to reinforce these version control skills is to make a current scientific project that you've been working on into a Git tracked repository, and connecting it to a remote GitHub repository. See if you can integrate the Git workflow that you've learned here into your scientific process. Even if you are the only one working on this project, this is a good way to practice skills. This will get you into the habit of staging, committing, and pushing changes as you work, and working on different branches for different components of a project. Additionally, making GitHub repositories for your projects will give you an easy way to host and share code for publications. You can edit the `README.md` file to provide more information about your analysis (check out this [template](https://gist.github.com/danielecook/94272f387d3366070d2546e2eadefe57) to make a `README.md` file for a scientific or data analysis project and this [example](https://github.com/greenelab/tybalt) of a scientific project hosted on GitHub with a very informative README). 
 
 ## Advancement Exercises
 ***
@@ -42,7 +42,7 @@ Complete the following steps:
 Question opportunity
 ::::
 ::::{.inner_block}
-What are some advantages to working in a new branch and using a pull request to merge changes from that branch into the `main` branch (instead of working directly in the main branch)?
+What are some advantages to working in a new branch and using a pull request to merge changes from that branch into the `main` branch (instead of working directly in the `main` branch)?
 
 <details><summary>Answer</summary>
 
@@ -63,9 +63,12 @@ There are several advantages to this workflow:
 #### Going through a project's history 
 
 In this exercise you will search through the history in a GitHub repository to find when a change took place. 
-Open this [GitHub repository](https://github.com/opencasestudies/ocs-bio-version-control) which contains the contents of this case study. Feel free to spend some time poking around here, all of the content that is used to create different components of this case study are stored in this repository. 
 
-Your goal is to find the pull request number and commit tag from when the learning objectives map table was filled in within the case study (the learning objectives table can be found [here](https://www.opencasestudies.org/ocs-bio-version-control/#objectives-map)). Do this by searching through the files, commits, or pull requests in this repository. 
+- [ ] Open this [GitHub repository](https://github.com/opencasestudies/ocs-bio-version-control) which contains the contents of this case study. Feel free to spend some time poking around here, all of the files that create different components of this case study are stored in this repository. 
+
+Your goal is to find the pull request number and commit tag from when the learning objectives map table was filled in within the case study (the learning objectives table can be found [here](https://www.opencasestudies.org/ocs-bio-version-control/#objectives-map)). 
+
+- [ ] Identify the pull request and commit by searching through the files, commits, or pull requests in this repository. 
 
 <details>
 <summary>Hints:</summary>
@@ -113,17 +116,23 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 
 ##### Practice making and using a fork
 
-To practice using a fork, go to [this GitHub repository](https://github.com/opencasestudies/infant_gut_analysis_files). You'll see that this repository contains the files that you originally downloaded when you started working on this infant gut analysis project. 
+To practice using a fork, follow these instructions:
 
-Look for the button that says "Fork" on the top right, above the "Code" button that you previously used to clone a repository. Click on "Fork". 
+- [ ] Go to [this GitHub repository](https://github.com/opencasestudies/infant_gut_analysis_files). You'll see that this repository contains the files that you originally downloaded when you started working on this infant gut analysis project. 
+- [ ] Look for the button that says "Fork" on the top right, above the "Code" button that you previously used to clone a repository. Click on "Fork". 
 
-This will bring you to a page that is very similar to when you had created a new repository at the beginning of the case study. However, there are a few differences. You'll see now that you are the owner of this repository, and by default it has the same name as the repository that you are forking from. Click "Create fork". 
+This will bring you to a page that is very similar to when you had created a new repository at the beginning of the case study. However, there are a few differences. You'll see now that you are the owner of this repository, and by default it has the same name as the repository that you are forking from. 
 
-Once you create the fork, you'll be brought to this repository. Now, follow the same process that you used previously to clone this repository (*note: make sure that you are cloning the fork, and not the upstream repository!*). Open the repository locally (this repository will be called `infant_gut_analysis_files`, as opposed to the repository `infant_gut_analysis` that we were working with for the rest of the case study). Make a copy of the file `03_visualize_study_cohorts.qmd` from your local repository `infant_gut_analysis`, and add it to your local version of your forked repo `infant_gut_analysis_files`. Follow the workflow to stage this file, commit changes, and push to GitHub. 
+- [ ] Click "Create fork". 
+- [ ] Follow the same process that you used previously to clone a repository (*note: make sure that you are cloning the fork, and not the upstream repository!*). 
+- [ ] Open the repository locally (this repository will be called `infant_gut_analysis_files`, as opposed to the repository `infant_gut_analysis` that we were working with for the rest of the case study). 
+- [ ] Make a copy of the file `03_visualize_study_cohorts.qmd` from your local repository `infant_gut_analysis`, and add it to your local forked repo `infant_gut_analysis_files`. 
+- [ ] Stage `03_visualize_study_cohorts.qmd` in the repo `infant_gut_analysis_files`, commit changes, and push to your remote fork on GitHub. 
 
-After you push, you should now see the file on GitHub in your forked repo, along with a notification that this branch is a commit ahead of the upstream repository. There will be a button with the option to "Contribute" these changes. Click that button. This will take you to a page on the upstream repository where you can make a pull request from your fork. 
+After you push, you should now see the file on GitHub in your remote forked repo, along with a notification that this branch is a commit ahead of the upstream repository. There will be a button with the option to "Contribute" these changes. 
 
-Fill in the title and description of your pull request. 
+- [ ] Click the "Contribute" button. This will take you to a page on the upstream repository where you can make a pull request from your fork. 
+- [ ] Fill in the title and description of your pull request. 
 
 :::{.think_question}
 ::::{.think_question_header}
@@ -136,8 +145,7 @@ How does this pull request from a fork to an upstream repository look different 
 ::::
 :::
 
-Click "Create pull request" and inspect your pull request. 
-
-Finally, please close this pull request, as we do not actually want to include these changes in this repository. 
+- [ ] Click "Create pull request" and inspect your pull request. 
+- [ ] Finally, please close this pull request, as we do not actually want to include these changes in this repository. 
 
 ***
