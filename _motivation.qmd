@@ -31,7 +31,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 
 In this case study, you will learn how to use {{< glossary "Git" >}} and {{< glossary "GitHub" >}} for version control. You will also learn how version control can facilitate collaboration and make a scientific project more transparent and {{< glossary "reproducible" >}}. Along the way, you will use a {{< glossary "microbiome">}} {{< glossary "meta-analysis">}} as a motivating example and practice using R to visualize differences among the studies included in the meta-analysis. 
 
-You will learn more about version control, and specifically Git and GitHub, in the [Introduction to Git and GitHub Section](https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github) below. Much of the information in that section is described in the following papers. They both provide a helpful introduction to version control with Git and GitHub. 
+You will learn more about version control, and specifically Git and GitHub, in the [Introduction to Git and GitHub Section](https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github) below. Much of the information in that section is described in the following papers (@blischak2016quick and @bryan2018excuse). They both provide a helpful introduction to version control with Git and GitHub. 
 
 :::{.reference_box}
 ::::{.reference_box_header}
