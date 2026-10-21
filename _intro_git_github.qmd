@@ -556,7 +556,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YC
 
 From GitHub Desktop:
 
-- Click "File" → "Clone Repository", click "URL", and then provide the URL to your GitHub repository.
+- [ ] Click "File" → "Clone Repository", click "URL", and then provide the URL to your GitHub repository.
 
 Now, you should be able to see a window in GitHub Desktop that corresponds with `my-first-repository`. If you click on history, you can see a list of commits to this repository. 
 
