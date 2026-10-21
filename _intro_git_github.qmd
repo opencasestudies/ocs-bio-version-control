@@ -219,9 +219,13 @@ When you choose a username, consider [advice](https://happygitwithr.com/github-a
 
 Now that you have confirmed that you have a GitHub account, you can create a new repository (perhaps your first GitHub repository!). In this section, you will practice creating a new GitHub repository, connecting it to your local computer and Git, and making version-controlled changes to the repository. You will later make another repository to use for the case study analysis.
 
-To create your repository, navigate to [github.com/new](https://github.com/new) and make sure that you are signed in.
+To create your repository:
 
-This will take you to a new page. GitHub will automatically set you as the owner of the repository, and you can choose a name. Let's call this repository `my-first-repository` (even if it may not be the first repository that you've created). 
+- [ ] Navigate to [github.com/new](https://github.com/new) and make sure that you are signed in.
+
+This will take you to a new page. GitHub will automatically set you as the owner of the repository, and you can choose a name. 
+
+- [ ] Name the repository `my-first-repository` (even if it may not be the first repository that you've created). 
 
 A few notes on naming repositories:
 
@@ -291,9 +295,13 @@ If you look at your repository, you will see that it has one file: `README.md` (
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_13#slide=id.g3f94a4bdf40_0_13")
 ```
 
-Let's now look at the commit history for this repository. We can do that by clicking where it says "2 Commits" just below the green "Code" button. 
+Let's now look at the commit history for this repository:
 
-This brings us to a list of commits for this repository. You should see two commits, the initial commit that created the repository and the one you just made when you edited the README. Click on the title of the newer commit. 
+- [ ] Click where it says "2 Commits" with the clock icon, just below the green "Code" button. 
+
+This brings us to a list of commits for this repository. You should see two commits, the initial commit that created the repository and the one you just made when you edited the README. 
+
+- [ ] Click on the title of the newer commit. 
 
 ```{r, fig.alt="List of commits", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_68#slide=id.g3f94a4bdf40_0_68")
@@ -327,8 +335,11 @@ Follow this [link](https://desktop.github.com/download/) to install GitHub Deskt
 
 <details> <summary> If you are using a Mac, it will ask you if your Mac has an Apple silicon or Intel chip. Click here for more information. </summary>
 
-To check whether your Mac has an Apple silicon chip or an Intel chip, click the Apple menu 
-→ "About This Mac". If the information window shows "Chip" then your Mac uses Apple silicon. If the information window shows "Processor" then your Mac uses an Intel processor. 
+To check whether your Mac has an Apple silicon chip or an Intel chip:
+
+- [ ] Click the Apple menu → "About This Mac". 
+
+If the information window shows "Chip" then your Mac uses Apple silicon. If the information window shows "Processor" then your Mac uses an Intel processor. 
 
 </details>
 
@@ -402,7 +413,11 @@ If you have GitHub Desktop installed, we can use it to authenticate your GitHub 
 
 When you open GitHub Desktop, it will prompt you to sign into GitHub. If it does not, then follow [these instructions](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/authenticating-to-github-in-github-desktop), choosing instructions for Mac or Windows based on your operating system.
 
-Next, we will configure Git. This means that you will tell Git your name and email. Follow [these instructions](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop), again choosing instructions for Mac or Windows based on your operating system. 
+- [ ] Sign into GitHub from GitHub Desktop.
+
+Next, we will configure Git. This means that you will tell Git your name and email. 
+
+- [ ] Follow [these instructions](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop), again choosing instructions for Mac or Windows based on your operating system. 
 
 #### Command line 
 
@@ -525,7 +540,11 @@ Then, run the Git action that you were trying to do again. You should then be pr
 
 ### Creating a local clone of your GitHub repository 
 
-You've finished setting up GitHub, Git, and GitHub Desktop, great job! Now, we will {{< glossary "clone" >}} the remote repository you made on GitHub to make a copy on your computer (this will be your local repository). Start by navigating to your repository on GitHub, and copy the URL. 
+You've finished setting up GitHub, Git, and GitHub Desktop, great job! Now, we will {{< glossary "clone" >}} the remote repository you made on GitHub to make a copy on your computer (this will be your local repository). 
+
+- [ ] Navigate to your repository on GitHub.
+- [ ] Click the green "<> Code" button.
+- [ ] Copy the URL listed under "HTTPS". 
 
 ```{r, fig.alt="Cloning repo", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_38#slide=id.g3f94a4bdf40_0_38")
@@ -535,7 +554,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YC
 
 #### GitHub Desktop 
 
-From GitHub Desktop, go to "File" → "Clone Repository" and then provide the URL to your GitHub repository. Now, you should be able to see a window in GitHub Desktop that corresponds with `my-first-repository`. If you click on history, you can see a list of commits to this repository. 
+From GitHub Desktop:
+
+- Click "File" → "Clone Repository", click "URL", and then provide the URL to your GitHub repository.
+
+Now, you should be able to see a window in GitHub Desktop that corresponds with `my-first-repository`. If you click on history, you can see a list of commits to this repository. 
 
 
 #### Command line 
@@ -565,11 +588,20 @@ Next, you will open the local repository. RStudio and Positron have different ap
 
 The easiest way to work with a Git-tracked repository in RStudio is to make an RStudio project. A project is a folder that R can open as a self-contained unit. The most useful part of an RStudio project is that you can use relative file paths; the folder that you used to create the project will be the root of any relative file path. Using relative file paths for a project, as opposed to absolute file paths that are specific to your personal computer, make it easier to collaborate with other people.
 
-In order to open your Git-tracked repository as an RStudio project, open RStudio and click "File" → "Open Project". This should prompt you to open your file browser, and you should navigate to the folder called `my-first-repository`, which was created when you cloned the repository. Once you select the correct folder, RStudio will open the project. If you look at the "Files" panel, you'll see the README that you made for `my-first-repository` on GitHub. You will additionally see a file called `my-first-repository.Rproj`. This file is automatically made by RStudio when opening a new project, and saves information about the project. 
+In order to open your Git-tracked repository as an RStudio project, do the following:
+
+- [ ] Open RStudio and click "File" → "Open Project". 
+- [ ] This should prompt you to open your file browser. Navigate to the folder called `my-first-repository`, which was created when you cloned the repository. 
+
+Once you select the correct folder, RStudio will open the project. If you look at the "Files" panel, you'll see the README that you made for `my-first-repository` on GitHub. You will additionally see a file called `my-first-repository.Rproj`. This file is automatically made by RStudio when opening a new project, and saves information about the project. 
 
 #### Positron
 
-In Positron, click "File" → "Open Folder..." and then navigate to the folder called `my-first-repository`, which was created when you cloned the repository. Once you select the correct folder, Positron will open it. In the file explorer, you will be able to see the README that you made for `my-first-repository` on GitHub. 
+In Positron, do the following:
+
+- [ ] Click "File" → "Open Folder..." and then navigate to the folder called `my-first-repository`, which was created when you cloned the repository. 
+
+Once you select the correct folder, Positron will open it. In the file explorer, you will be able to see the README that you made for `my-first-repository` on GitHub. 
 
 #### Other R IDE
 
@@ -579,7 +611,10 @@ If you are using another R IDE besides RStudio or Positron, you should look up i
 
 #### Stage, commit, push
 
-Next, we will create a new file locally. Create a new R file within `my-first-repository` and call it `01-calculations.R`. In this file, include the following:
+Next, we will create a new file locally. 
+
+- [ ] Create a new R file within `my-first-repository` and call it `01-calculations.R`. 
+- [ ] In this file, include the following code:
 
 ::: {.rcode}
 ```r
@@ -589,7 +624,9 @@ x * y
 ```
 :::
 
-Save this file. Now, we will discuss how to track a new file with Git. 
+- [ ] Save this file. 
+
+Now, we will discuss how to track a new file with Git. 
 
 ::: {.panel-tabset}
 
@@ -610,13 +647,20 @@ By default, the box next to added or updated files is checked. This means that e
 
 In the lower left corner you will see a box that says "Summary (required)" and "Description". This is where you will put your commit message. 
 
-For this commit, you might use the summary "Add new file `01-calculations.R` to do calculations."  
+- [ ] In this box, use the summary "Add new file `01-calculations.R` to do calculations."  
 
-Once you've added the commit message, you are ready to commit these files. Click "commit to main". Now these changes have been entered into the version control history of your repository in Git. 
+Once you've added the commit message, you are ready to commit these files. 
 
-We have one more step to update the GitHub repository, which is to {{< glossary "push" >}} these files to GitHub. This is the step that transfers local changes to the remote repository. Once you commit you will see a box in GitHub Desktop that says "Push commits to the origin remote". Click this box. 
+- [ ] Click "commit to main". 
 
-Now, open your project in GitHub. You should now see the file that you added locally, as well the commit message. 
+Now these changes have been entered into the version control history of your repository in Git. 
+
+We have one more step to update the GitHub repository, which is to {{< glossary "push" >}} these files to GitHub. This is the step that transfers local changes to the remote repository. Once you commit you will see a box in GitHub Desktop that says "Push commits to the origin remote". 
+
+- [ ] Click "Push commits to the origin remote" button. 
+- [ ] Open your project in GitHub. 
+
+You should now see the file that you added locally, as well the commit message. 
 
 #### Command line 
 
@@ -896,7 +940,12 @@ Finally, we will open this repository with RStudio or Positron.
 ::: {.panel-tabset}
 #### RStudio
 
-In order to open your Git-tracked repository as an RStudio project, open RStudio and click "File" → "Open Project". This should prompt you to open your file browser, and you should navigate to the folder called `infant_gut_analysis`. Once you select the correct folder, RStudio will open the project. 
+In order to open your Git-tracked repository as an RStudio project:
+
+- [ ] Open RStudio and click "File" → "Open Project". 
+- [ ] This will prompt you to open your file browser. Navigate to the folder called `infant_gut_analysis`. 
+
+Once you select the correct folder, RStudio will open the project. 
 
 When you use RStudio to open a project, a `.Rproj` file will automatically be added to your repository. You can version control this file as well. 
 
@@ -926,7 +975,11 @@ git push
 
 #### Positron
 
-In Positron, click "File" → "Open Folder..." and then navigate to the folder called `infant_gut_analysis`, which was created when you opened the .zip file. Once you select the correct folder, Positron will open it. 
+In Positron, do the following:
+
+- [ ] Click "File" → "Open Folder..." and then navigate to the folder called `infant_gut_analysis`, which was created when you opened the .zip file. 
+
+Once you select the correct folder, Positron will open it. 
 
 #### Other R IDE
 
