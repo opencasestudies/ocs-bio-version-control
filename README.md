@@ -34,7 +34,7 @@ This work is funded through the National Institutes of Health, specifically the 
 
 ### Acknowledgments
 
-We would like to acknowledge [Candace Savonen](https://www.cansavvy.com), [Casey Greene](https://greenelab.com/members/casey-greene.html), [Emma Lathouwers](https://greenelab.com/members/emma-lathouwers.html), and [Taylor Reiter](https://taylorreiter.github.io) for their expert review of this case study.
+We would like to acknowledge [Candace Savonen](https://www.cansavvy.com), [Casey Greene](https://greenelab.com/members/casey-greene.html), [Emma Lathouwers](https://greenelab.com/members/emma-lathouwers.html), [Taylor Reiter](https://taylorreiter.github.io), and ethicist [Jodyn Platt](https://medschool.umich.edu/profile/3774/jodyn-platt) for their expert review of this case study.
 
 We would also like to acknowledge the National Institute of General Medical Sciences for funding this work (1R25GM160622).
 
