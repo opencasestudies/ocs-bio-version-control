@@ -123,7 +123,17 @@ A snapshot of the files in a repository at a certain time.
 ::::
 :::
 
-Another way to think about a commit is as a save point in a video game. Just as a player can return to a previously saved game state, a researcher can return to a previous commit. In a video game, if you progress past a save point and lose a life, you typically restart from the most recent save rather than from an arbitrary moment in the game. Similarly, if you continue working on a project without committing your changes, those updates will not be recorded in the version control history. Because Git only records the state of a project when a commit is made, you can return to versions of your files that were saved in commits, but not to arbitrary moments between commits. However, Git is more forgiving than a typical video game. While video games often limit your number of available save points, Git allows you to create as many commits as you need and retains the history of all commits, making it easy to revisit earlier versions of your work.
+Another way to think about a commit is as a save point in a video game. Just as a player can return to a previously saved game state, a researcher can return to a previous commit. In a video game, if you progress past a save point and lose a life, you typically restart from the most recent save rather than from an arbitrary moment in the game. 
+
+```{r, fig.alt="Commits are like video games, where when you die you can return to the game at a previous save point.", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h18f35fae74a7280_0_0#slide=id.h18f35fae74a7280_0_0")
+```
+
+Similarly, if you continue working on a project without committing your changes, those updates will not be recorded in the version control history. Because Git only records the state of a project when a commit is made, you can return to versions of your files that were saved in commits, but not to arbitrary moments between commits. However, Git is more forgiving than a typical video game. While video games often limit your number of available save points, Git allows you to create as many commits as you need and retains the history of all commits, making it easy to revisit earlier versions of your work.
+
+```{r, fig.alt="Commits are like video games, where when you can view or return to a project at any commit.", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h18f35fae74a7280_0_33#slide=id.h18f35fae74a7280_0_33")
+```
 
 In the image below, a repository called `analysis_project` is tracked using version control, and it is made up of four commits. Each commit has a message that explains what work the commit represents. Within a commit, files can be added, edited, left unchanged, or deleted. 
 
