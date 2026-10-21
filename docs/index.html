@@ -971,8 +971,14 @@ More information on how reproducibility fits into the scientific process.
 <section id="creating-a-new-github-repository" class="level3">
 <h3 class="anchored" data-anchor-id="creating-a-new-github-repository">Creating a new GitHub repository</h3>
 <p>Now that you have confirmed that you have a GitHub account, you can create a new repository (perhaps your first GitHub repository!). In this section, you will practice creating a new GitHub repository, connecting it to your local computer and Git, and making version-controlled changes to the repository. You will later make another repository to use for the case study analysis.</p>
-<p>To create your repository, navigate to <a href="https://github.com/new">github.com/new</a> and make sure that you are signed in.</p>
-<p>This will take you to a new page. GitHub will automatically set you as the owner of the repository, and you can choose a name. Let’s call this repository <code>my-first-repository</code> (even if it may not be the first repository that you’ve created).</p>
+<p>To create your repository:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Navigate to <a href="https://github.com/new">github.com/new</a> and make sure that you are signed in.</label></li>
+</ul>
+<p>This will take you to a new page. GitHub will automatically set you as the owner of the repository, and you can choose a name.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Name the repository <code>my-first-repository</code> (even if it may not be the first repository that you’ve created).</label></li>
+</ul>
 <p>A few notes on naming repositories:</p>
 <ul>
 <li>keep the name descriptive but short</li>
@@ -1047,8 +1053,14 @@ License
 </div>
 </div>
 </div>
-<p>Let’s now look at the commit history for this repository. We can do that by clicking where it says “2 Commits” just below the green “Code” button.</p>
-<p>This brings us to a list of commits for this repository. You should see two commits, the initial commit that created the repository and the one you just made when you edited the README. Click on the title of the newer commit.</p>
+<p>Let’s now look at the commit history for this repository:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Click where it says “2 Commits” with the clock icon, just below the green “Code” button.</label></li>
+</ul>
+<p>This brings us to a list of commits for this repository. You should see two commits, the initial commit that created the repository and the one you just made when you edited the README.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Click on the title of the newer commit.</label></li>
+</ul>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -1090,7 +1102,11 @@ More information about the command line.
 <summary>
 If you are using a Mac, it will ask you if your Mac has an Apple silicon or Intel chip. Click here for more information.
 </summary>
-<p>To check whether your Mac has an Apple silicon chip or an Intel chip, click the Apple menu → “About This Mac”. If the information window shows “Chip” then your Mac uses Apple silicon. If the information window shows “Processor” then your Mac uses an Intel processor.</p>
+<p>To check whether your Mac has an Apple silicon chip or an Intel chip:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Click the Apple menu → “About This Mac”.</label></li>
+</ul>
+<p>If the information window shows “Chip” then your Mac uses Apple silicon. If the information window shows “Processor” then your Mac uses an Intel processor.</p>
 </details>
 </section>
 <section id="installing-git" class="level3">
@@ -1149,7 +1165,13 @@ If you are unable to install GitHub Desktop or would prefer not to install GitHu
 <div class="tab-content">
 <div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
 <p>When you open GitHub Desktop, it will prompt you to sign into GitHub. If it does not, then follow <a href="https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/authenticating-to-github-in-github-desktop">these instructions</a>, choosing instructions for Mac or Windows based on your operating system.</p>
-<p>Next, we will configure Git. This means that you will tell Git your name and email. Follow <a href="https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop">these instructions</a>, again choosing instructions for Mac or Windows based on your operating system.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Sign into GitHub from GitHub Desktop.</label></li>
+</ul>
+<p>Next, we will configure Git. This means that you will tell Git your name and email.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Follow <a href="https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop">these instructions</a>, again choosing instructions for Mac or Windows based on your operating system.</label></li>
+</ul>
 </div>
 <div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
 <p>First we will tell Git your name and email address. Open the command line and enter the following:</p>
@@ -1233,7 +1255,12 @@ If you are unable to install GitHub Desktop or would prefer not to install GitHu
 </section>
 <section id="creating-a-local-clone-of-your-github-repository" class="level3">
 <h3 class="anchored" data-anchor-id="creating-a-local-clone-of-your-github-repository">Creating a local clone of your GitHub repository</h3>
-<p>You’ve finished setting up GitHub, Git, and GitHub Desktop, great job! Now, we will <button class="glossary"><span class="def">Create a local repository that is a copy of a remote repository on GitHub</span>clone</button> the remote repository you made on GitHub to make a copy on your computer (this will be your local repository). Start by navigating to your repository on GitHub, and copy the URL.</p>
+<p>You’ve finished setting up GitHub, Git, and GitHub Desktop, great job! Now, we will <button class="glossary"><span class="def">Create a local repository that is a copy of a remote repository on GitHub</span>clone</button> the remote repository you made on GitHub to make a copy on your computer (this will be your local repository).</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Navigate to your repository on GitHub.</label></li>
+<li><label><input type="checkbox">Click the green “&lt;&gt; Code” button.</label></li>
+<li><label><input type="checkbox">Copy the URL listed under “HTTPS”.</label></li>
+</ul>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -1247,7 +1274,11 @@ If you are unable to install GitHub Desktop or would prefer not to install GitHu
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
 <div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
-<p>From GitHub Desktop, go to “File” → “Clone Repository” and then provide the URL to your GitHub repository. Now, you should be able to see a window in GitHub Desktop that corresponds with <code>my-first-repository</code>. If you click on history, you can see a list of commits to this repository.</p>
+<p>From GitHub Desktop:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Click “File” → “Clone Repository”, click “URL”, and then provide the URL to your GitHub repository.</label></li>
+</ul>
+<p>Now, you should be able to see a window in GitHub Desktop that corresponds with <code>my-first-repository</code>. If you click on history, you can see a list of commits to this repository.</p>
 </div>
 <div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
 <p>You were already asked to clone this repository in the last section, in order to trigger Git’s login credentials. If you haven’t done that, open the command line and enter the following, replacing “your_username” with your username:</p>
@@ -1267,10 +1298,19 @@ If you are unable to install GitHub Desktop or would prefer not to install GitHu
 <div class="tab-content">
 <div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
 <p>The easiest way to work with a Git-tracked repository in RStudio is to make an RStudio project. A project is a folder that R can open as a self-contained unit. The most useful part of an RStudio project is that you can use relative file paths; the folder that you used to create the project will be the root of any relative file path. Using relative file paths for a project, as opposed to absolute file paths that are specific to your personal computer, make it easier to collaborate with other people.</p>
-<p>In order to open your Git-tracked repository as an RStudio project, open RStudio and click “File” → “Open Project”. This should prompt you to open your file browser, and you should navigate to the folder called <code>my-first-repository</code>, which was created when you cloned the repository. Once you select the correct folder, RStudio will open the project. If you look at the “Files” panel, you’ll see the README that you made for <code>my-first-repository</code> on GitHub. You will additionally see a file called <code>my-first-repository.Rproj</code>. This file is automatically made by RStudio when opening a new project, and saves information about the project.</p>
+<p>In order to open your Git-tracked repository as an RStudio project, do the following:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Open RStudio and click “File” → “Open Project”.</label></li>
+<li><label><input type="checkbox">This should prompt you to open your file browser. Navigate to the folder called <code>my-first-repository</code>, which was created when you cloned the repository.</label></li>
+</ul>
+<p>Once you select the correct folder, RStudio will open the project. If you look at the “Files” panel, you’ll see the README that you made for <code>my-first-repository</code> on GitHub. You will additionally see a file called <code>my-first-repository.Rproj</code>. This file is automatically made by RStudio when opening a new project, and saves information about the project.</p>
 </div>
 <div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
-<p>In Positron, click “File” → “Open Folder…” and then navigate to the folder called <code>my-first-repository</code>, which was created when you cloned the repository. Once you select the correct folder, Positron will open it. In the file explorer, you will be able to see the README that you made for <code>my-first-repository</code> on GitHub.</p>
+<p>In Positron, do the following:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Click “File” → “Open Folder…” and then navigate to the folder called <code>my-first-repository</code>, which was created when you cloned the repository.</label></li>
+</ul>
+<p>Once you select the correct folder, Positron will open it. In the file explorer, you will be able to see the README that you made for <code>my-first-repository</code> on GitHub.</p>
 </div>
 <div id="tabset-8-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-3-tab">
 <p>If you are using another R IDE besides RStudio or Positron, you should look up instructions for opening a folder in your environment.</p>
@@ -1279,13 +1319,20 @@ If you are unable to install GitHub Desktop or would prefer not to install GitHu
 </div>
 <section id="stage-commit-push" class="level4">
 <h4 class="anchored" data-anchor-id="stage-commit-push">Stage, commit, push</h4>
-<p>Next, we will create a new file locally. Create a new R file within <code>my-first-repository</code> and call it <code>01-calculations.R</code>. In this file, include the following:</p>
+<p>Next, we will create a new file locally.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Create a new R file within <code>my-first-repository</code> and call it <code>01-calculations.R</code>.</label></li>
+<li><label><input type="checkbox">In this file, include the following code:</label></li>
+</ul>
 <div class="rcode">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">103</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">5</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>x <span class="sc">*</span> y</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Save this file. Now, we will discuss how to track a new file with Git.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Save this file.</label></li>
+</ul>
+<p>Now, we will discuss how to track a new file with Git.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
@@ -1308,10 +1355,20 @@ When you created a RStudio project, RStudio automatically created a <code>my-fir
 </details>
 <p>By default, the box next to added or updated files is checked. This means that each of these files are <button class="glossary"><span class="def">Prepare to track specified files when the next commit is made to a repository.</span>staged</button>, or ready to be included in a commit and added to the repository history. If you uncheck the box, you are telling Git that for now you would not like to track that file with version control. If you would like to tell Git to never track files, you should add them to a .gitignore file.</p>
 <p>In the lower left corner you will see a box that says “Summary (required)” and “Description”. This is where you will put your commit message.</p>
-<p>For this commit, you might use the summary “Add new file <code>01-calculations.R</code> to do calculations.”</p>
-<p>Once you’ve added the commit message, you are ready to commit these files. Click “commit to main”. Now these changes have been entered into the version control history of your repository in Git.</p>
-<p>We have one more step to update the GitHub repository, which is to <button class="glossary"><span class="def">Sending commits from the local version of a repository to the remote version of the repository on GitHub</span>push</button> these files to GitHub. This is the step that transfers local changes to the remote repository. Once you commit you will see a box in GitHub Desktop that says “Push commits to the origin remote”. Click this box.</p>
-<p>Now, open your project in GitHub. You should now see the file that you added locally, as well the commit message.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">In this box, use the summary “Add new file <code>01-calculations.R</code> to do calculations.”</label></li>
+</ul>
+<p>Once you’ve added the commit message, you are ready to commit these files.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Click “commit to main”.</label></li>
+</ul>
+<p>Now these changes have been entered into the version control history of your repository in Git.</p>
+<p>We have one more step to update the GitHub repository, which is to <button class="glossary"><span class="def">Sending commits from the local version of a repository to the remote version of the repository on GitHub</span>push</button> these files to GitHub. This is the step that transfers local changes to the remote repository. Once you commit you will see a box in GitHub Desktop that says “Push commits to the origin remote”.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Click “Push commits to the origin remote” button.</label></li>
+<li><label><input type="checkbox">Open your project in GitHub.</label></li>
+</ul>
+<p>You should now see the file that you added locally, as well the commit message.</p>
 </div>
 <div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
 <p>Open the command line, navigate to the folder that contains your repository, and enter the following:</p>
@@ -1542,7 +1599,12 @@ You may see examples in other Git tutorials using <code>git add .</code>, which 
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-13-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-1" role="tab" aria-controls="tabset-13-1" aria-selected="true" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-13-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-2" role="tab" aria-controls="tabset-13-2" aria-selected="false" href="">Positron</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-13-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-3" role="tab" aria-controls="tabset-13-3" aria-selected="false" href="">Other R IDE</a></li></ul>
 <div class="tab-content">
 <div id="tabset-13-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-13-1-tab">
-<p>In order to open your Git-tracked repository as an RStudio project, open RStudio and click “File” → “Open Project”. This should prompt you to open your file browser, and you should navigate to the folder called <code>infant_gut_analysis</code>. Once you select the correct folder, RStudio will open the project.</p>
+<p>In order to open your Git-tracked repository as an RStudio project:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Open RStudio and click “File” → “Open Project”.</label></li>
+<li><label><input type="checkbox">This will prompt you to open your file browser. Navigate to the folder called <code>infant_gut_analysis</code>.</label></li>
+</ul>
+<p>Once you select the correct folder, RStudio will open the project.</p>
 <p>When you use RStudio to open a project, a <code>.Rproj</code> file will automatically be added to your repository. You can version control this file as well.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-12-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-1" role="tab" aria-controls="tabset-12-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-12-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-2" role="tab" aria-controls="tabset-12-2" aria-selected="false" href="">Command line</a></li></ul>
@@ -1567,7 +1629,11 @@ You may see examples in other Git tutorials using <code>git add .</code>, which 
 </div>
 </div>
 <div id="tabset-13-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-13-2-tab">
-<p>In Positron, click “File” → “Open Folder…” and then navigate to the folder called <code>infant_gut_analysis</code>, which was created when you opened the .zip file. Once you select the correct folder, Positron will open it.</p>
+<p>In Positron, do the following:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Click “File” → “Open Folder…” and then navigate to the folder called <code>infant_gut_analysis</code>, which was created when you opened the .zip file.</label></li>
+</ul>
+<p>Once you select the correct folder, Positron will open it.</p>
 </div>
 <div id="tabset-13-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-13-3-tab">
 <p>If you are using another R IDE besides RStudio or Positron, you should look up instructions for opening a folder in your environment, and follow these to open <code>infant_gut_analysis</code>.</p>
@@ -1991,7 +2057,15 @@ At the end of this section, save incremental data so that users can pause and co
 <section id="data-import" class="level1">
 <h1><strong>Data Import</strong></h1>
 <hr>
-<p>Now that you have set up this project with <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with GitHub</span>GitHub</button>, you can start working on the study comparison in R. Open RStudio or Positron or your preferred R IDE to the <code>infant_gut_analysis</code> folder. We will start by taking a look at the data. Take a look at the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button> file to determine which file contains commands that can read in the raw data. Open this file and run the code.</p>
+<p>Now that you have set up this project with <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with GitHub</span>GitHub</button>, you can start working on the study comparison in R.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Open RStudio or Positron or your preferred R IDE to the <code>infant_gut_analysis</code> folder.</label></li>
+</ul>
+<p>We will start by taking a look at the data.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Take a look at the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button> file to determine which file contains commands that can read in the raw data.</label></li>
+<li><label><input type="checkbox">Open this file and run the code.</label></li>
+</ul>
 <details>
 <summary>
 Click here to see the code included in this file.
@@ -2132,7 +2206,11 @@ At the end of this section, save incremental data so that users can pause and co
 <section id="data-wrangling" class="level1">
 <h1><strong>Data Wrangling</strong></h1>
 <hr>
-<p>Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses. Again, use the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button> to identify which file contains commands that wrangle the data. Open this file and run the code.</p>
+<p>Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Again, use the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button> to identify which file contains commands that wrangle the data.</label></li>
+<li><label><input type="checkbox">Open this file and run the code.</label></li>
+</ul>
 <details>
 <summary>
 Click here to see the code included in this file.
@@ -2268,8 +2346,8 @@ Answer
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-16-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-1" role="tab" aria-controls="tabset-16-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-16-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-2" role="tab" aria-controls="tabset-16-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
 <div id="tabset-16-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-16-1-tab">
-<ul>
-<li>In the upper panel, under “Current Branch”, look to see if it says the current branch is <code>study_comparison</code> or <code>main</code> or something else.
+<ul class="task-list">
+<li><label><input type="checkbox">In the upper panel, under “Current Branch”, look to see if it says the current branch is <code>study_comparison</code> or <code>main</code> or something else.</label>
 <ul>
 <li>If it says <code>study_comparison</code>, then you are already working on the correct branch.</li>
 <li>If it says <code>main</code>, then you can click the drop-down button next to “Current Branch” and select <code>study_comparison</code>.
@@ -2315,7 +2393,10 @@ Answer
 <p>Another file type is a notebook-style document, which combines text components with code components. The code is broken into pieces, which are referred to as “code chunks”. Two common types of these files are R Markdown files (<code>.Rmd</code>) and quarto files (<code>.qmd</code>). These files can be rendered, which means that all code chunks are run in order (typically in a fresh R session), and any outputs (calculations, tables, plots) are included in the resulting document. These notebook-style documents also make it easier to explain what each step of an analysis is doing, improving both readability and reproducibility by clearly linking code, output, and interpretation in a single document.</p>
 </div>
 </div>
-<p>To start, we will create a new quarto document and call it <code>03_visualize_study_cohorts.qmd</code>. Make sure to give your quarto document an appropriate title.</p>
+<p>We will use a quarto document for this analysis. To start:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Create a new quarto document and call it <code>03_visualize_study_cohorts.qmd</code>. Make sure to give your quarto document an appropriate title.</label></li>
+</ul>
 <p>In this section, we will go through the steps to make two visualizations to compare the study cohorts. As you go, include the relevant code (as well as explanations of what the code is doing) into your quarto document. When you are done, you or someone else with access to the data and your document, should be able to run the code and create the visualizations.</p>
 <p>In your quarto document, you should start by making a code chunk to load the required packages. A code chunk looks like the following:</p>
 <div class="cell" data-layout-align="center">
@@ -2347,7 +2428,9 @@ Adding a code chunk to a quarto file
 </div>
 </div>
 </details>
-<p><strong>Include this code in your .qmd file</strong>, to load the packages that we’ll need.</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Include this code in your .qmd file</strong>, to load the packages that we’ll need.</label></li>
+</ul>
 <div class="rcode">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
@@ -2362,7 +2445,10 @@ More information about the <code>here()</code> function:
 </summary>
 The <code>here()</code> function creates file paths that always start from the main project folder (the top-level folder that contains all of your project files). In a Git repository, this is the folder that contains the <code>.git</code> directory, which was created when you initialized the repository. However, there are other ways here can determine where to start the path, including the directory with an <code>.Rproj</code> file (if you are using one), see this <a href="https://here.r-lib.org/reference/here.html">list of conditions for the starting directory</a> for more information. Using relative file paths (i.e., paths that only reference folders within your project) makes your code more portable and easier for collaborators to run. Importantly, the <code>here()</code> function creates these relative paths in a way that is compatible with different kinds of operating systems which have different path requirements. In contrast, absolute file paths depend on the specific file structure of your personal computer and will not necessarily work on other machines.
 </details>
-<p>We want to load data from the file <code>clean_sample_metadata.rda</code> contained within the <code>processed_data</code> folder. <strong>Include this code in your .qmd file</strong> to load the data.</p>
+<p>We want to load data from the file <code>clean_sample_metadata.rda</code> contained within the <code>processed_data</code> folder.</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Include this code in your .qmd file</strong> to load the data.</label></li>
+</ul>
 <div class="rcode">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"processed_data"</span>, <span class="st">"clean_sample_metadata.rda"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2373,7 +2459,7 @@ The <code>here()</code> function creates file paths that always start from the m
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-18-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-1" role="tab" aria-controls="tabset-18-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-18-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-2" role="tab" aria-controls="tabset-18-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
 <div id="tabset-18-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-18-1-tab">
-<p>Navigate back to <button class="glossary"><span class="def">A graphical user interface for interacting with Git on a local computer</span>GitHub Desktop</button>.</p>
+<p>Navigate back to <button class="glossary"><span class="def"></span>GitHub Desktop</button>.</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Confirm that you see your new file name <code>03_visualize_study_cohorts.qmd</code> with a green plus next to it, meaning that this is a new file. The check in the checkbox means that this file is staged.</label></li>
 <li><label><input type="checkbox">Add an appropriate commit message and commit this file.</label></li>
@@ -2491,7 +2577,10 @@ A note on the pipe operators <code>%&gt;%</code> and <code>|&gt;</code>.
 <p>Coding opportunity</p>
 </div>
 <div class="inner_block">
-<p><strong>Your turn</strong>: Modify the code above to count the number of observations by <code>Study</code> and by <code>Category</code>, and save the results as a data frame named <code>sample_counts</code>. <strong>Add this code to your .qmd file.</strong></p>
+<p><strong>Your turn</strong>: Modify the code above to count the number of observations by <code>Study</code> and by <code>Category</code>, and save the results as a data frame named <code>sample_counts</code>.</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Add this code to your .qmd file.</strong></label></li>
+</ul>
 <p>The output data frame should look like this:</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -2534,7 +2623,10 @@ View code:
 </details>
 </div>
 </div>
-<p>Now that we’ve looked at this data in a table format, let’s make a plot so that we can compare this data visually. We’ll make a bar plot, with separate bars for each study and for observation category (infant vs mother). <strong>Include this code in your .qmd document</strong> to make a bar plot.</p>
+<p>Now that we’ve looked at this data in a table format, let’s make a plot so that we can compare this data visually. We’ll make a bar plot, with separate bars for each study and for observation category (infant vs mother).</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Include this code in your .qmd document</strong> to make a bar plot.</label></li>
+</ul>
 <div class="rcode">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>sample_counts <span class="sc">%&gt;%</span></span>
@@ -2581,7 +2673,9 @@ More information about these <code>dplyr</code> functions:
 </tbody>
 </table>
 </details>
-<p><strong>Include this code in your .qmd document</strong> to make a new vector for the desired study order.</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Include this code in your .qmd document</strong> to make a new vector for the desired study order.</label></li>
+</ul>
 <div class="rcode">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>study_order <span class="ot">&lt;-</span> sample_counts <span class="sc">%&gt;%</span></span>
@@ -2596,7 +2690,10 @@ More information about these <code>dplyr</code> functions:
 </div>
 </div>
 </div>
-<p>We can now order the bar plot by increasing sample size. <strong>Include this code in your .qmd document</strong> to make the bar plot with increasing bar heights.</p>
+<p>We can now order the bar plot by increasing sample size.</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Include this code in your .qmd document</strong> to make the bar plot with increasing bar heights.</label></li>
+</ul>
 <div class="rcode">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>sample_counts <span class="sc">%&gt;%</span></span>
@@ -2612,7 +2709,10 @@ More information about these <code>dplyr</code> functions:
 </div>
 </div>
 </div>
-<p>Finally, we can update the colors of the plot and add labels. We will use the function <code>scale_fill_viridis_d()</code> to use colors that are more color-deficiency friendly (more information can be found in <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html">this documentation about color scales</a> and in <a href="https://hutchdatascience.org/DataViz_Considerations/05_how_to_improve_viz.html#rule-1-using-accessible-color-palettes">this description of accessible color palettes</a>. While we could use the function <code>gglot2::scale_fill_viridis_d()</code> with no arguments to use default colors from this color map, here we include the arguments <code>begin</code> and <code>end</code> to choose specific colors (see the help file by typing <code>?ggplot2::scale_fill_viridis_d()</code> for more information on these arguments). <strong>Include this code in your .qmd document</strong> to refine your bar plot.</p>
+<p>Finally, we can update the colors of the plot and add labels. We will use the function <code>scale_fill_viridis_d()</code> to use colors that are more color-deficiency friendly (more information can be found in <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html">this documentation about color scales</a> and in <a href="https://hutchdatascience.org/DataViz_Considerations/05_how_to_improve_viz.html#rule-1-using-accessible-color-palettes">this description of accessible color palettes</a>. While we could use the function <code>gglot2::scale_fill_viridis_d()</code> with no arguments to use default colors from this color map, here we include the arguments <code>begin</code> and <code>end</code> to choose specific colors (see the help file by typing <code>?ggplot2::scale_fill_viridis_d()</code> for more information on these arguments).</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Include this code in your .qmd document</strong> to refine your bar plot.</label></li>
+</ul>
 <div class="rcode">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>sample_counts <span class="sc">%&gt;%</span></span>
@@ -2634,7 +2734,10 @@ More information about these <code>dplyr</code> functions:
 </div>
 </div>
 </div>
-<p>We will now use <code>ggsave()</code> to save this plot in the figures folder. <strong>Include this code in your .qmd document</strong> to save this bar plot with the file name <code>study_sizes_by_category.png</code> within the <code>figures</code> folder.</p>
+<p>We will now use <code>ggsave()</code> to save this plot in the figures folder.</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Include this code in your .qmd document</strong> to save this bar plot with the file name <code>study_sizes_by_category.png</code> within the <code>figures</code> folder.</label></li>
+</ul>
 <div class="rcode">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>ggplot2<span class="sc">::</span><span class="fu">ggsave</span>(<span class="st">"figures/study_sizes_by_category.png"</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">width =</span> <span class="dv">9</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2645,7 +2748,11 @@ More information about these <code>dplyr</code> functions:
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-19-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-19-1" role="tab" aria-controls="tabset-19-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-19-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-19-2" role="tab" aria-controls="tabset-19-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
 <div id="tabset-19-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-19-1-tab">
-<p>Navigate back to GitHub Desktop. You should see that <code>03_visualize_study_cohorts.qmd</code> now has an orange box next to it (signaling that this file has been modified) and that <code>figures/study_sizes_by_category.png</code> has been added (which is signaled by the green plus sign next to it). Make sure that both of these have checks in the checkboxes to the left of the filenames, which indicates that they are staged. Add an appropriate commit message and commit these files.</p>
+<p>Navigate back to GitHub Desktop. You should see that <code>03_visualize_study_cohorts.qmd</code> now has an orange box next to it (signaling that this file has been modified) and that <code>figures/study_sizes_by_category.png</code> has been added (which is signaled by the green plus sign next to it).</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Make sure that both of these have checks in the checkboxes to the left of the filenames, which indicates that they are staged.</label></li>
+<li><label><input type="checkbox">Add an appropriate commit message and commit these files.</label></li>
+</ul>
 </div>
 <div id="tabset-19-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-19-2-tab">
 <p>Even though Git is already tracking <code>03_visualize_study_cohorts.qmd</code>, we still need to use <code>git add</code> to tell Git to stage this file for this commit. We will also need to start tracking <code>figures/study_sizes_by_category.png</code>. We can stage multiple files at once by listing them with spaces between.</p>
@@ -2694,7 +2801,10 @@ More information about these <code>dplyr</code> functions:
 <span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(sampling_day)) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
-<p>Now, we will make a histogram of sampling day, where we separate the data by <code>Category</code> and <code>Study</code>. There are multiple ways to do this, but we will color the bars by <code>Category</code> and then use <code>facet_wrap()</code> to make separate panels for each study. Below we show two versions of this histogram that show the patterns in the data in different ways. Choose the sampling day histogram that you prefer (or choose to use both), and <strong>include this code in your .qmd document</strong>.</p>
+<p>Now, we will make a histogram of sampling day, where we separate the data by <code>Category</code> and <code>Study</code>. There are multiple ways to do this, but we will color the bars by <code>Category</code> and then use <code>facet_wrap()</code> to make separate panels for each study. Below we show two versions of this histogram that show the patterns in the data in different ways.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Choose the sampling day histogram that you prefer (or choose to use both), and <strong>include this code in your .qmd document</strong>.</label></li>
+</ul>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-20-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-20-1" role="tab" aria-controls="tabset-20-1" aria-selected="true" href="">Histogram option 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-20-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-20-2" role="tab" aria-controls="tabset-20-2" aria-selected="false" href="">Histogram option 2</a></li></ul>
 <div class="tab-content">
@@ -2722,7 +2832,10 @@ More information about these <code>dplyr</code> functions:
 </div>
 </div>
 </div>
-<p>We will save this plot in the figures folder. <strong>Include this code in your .qmd document</strong> to save this plot with the file name <code>sampling_timepoints_option1.png</code> within the <code>figures</code> folder.</p>
+<p>We will save this plot in the figures folder.</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Include this code in your .qmd document</strong> to save this plot with the file name <code>sampling_timepoints_option1.png</code> within the <code>figures</code> folder.</label></li>
+</ul>
 <div class="rcode">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"figures/sampling_timepoints_option1.png"</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">width =</span> <span class="dv">9</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2753,7 +2866,10 @@ More information about these <code>dplyr</code> functions:
 </div>
 </div>
 </div>
-<p>We will save this plot in the figures folder. <strong>Include this code in your .qmd document</strong> to save this plot with the file name <code>sampling_timepoints_option2.png</code> within the <code>figures</code> folder.</p>
+<p>We will save this plot in the figures folder.</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Include this code in your .qmd document</strong> to save this plot with the file name <code>sampling_timepoints_option2.png</code> within the <code>figures</code> folder.</label></li>
+</ul>
 <div class="rcode">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"figures/sampling_timepoints_option2.png"</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">width =</span> <span class="dv">9</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2806,7 +2922,10 @@ While we use histograms to compare the sampling time points, you could also try 
 </div>
 </div>
 </details>
-<p>Now that we have plotted patterns in sample size and sampling time points, go back through your file <code>03_visualize_study_cohorts.qmd</code> to make sure that it contains all relevant code to make the plots, and that there are explanations before each code chunk.</p>
+<p>Now that we have plotted patterns in sample size and sampling time points:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Go back through your file <code>03_visualize_study_cohorts.qmd</code> to make sure that it contains all relevant code to make the plots, and that there are explanations before each code chunk.</label></li>
+</ul>
 <p>Once you’ve done this, make another commit for these edits.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-21-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-21-1" role="tab" aria-controls="tabset-21-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-21-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-21-2" role="tab" aria-controls="tabset-21-2" aria-selected="false" href="">Command line</a></li></ul>
@@ -2924,7 +3043,10 @@ While we use histograms to compare the sampling time points, you could also try 
 </div>
 <div class="inner_block">
 <p>Recall one of the main questions of this case study: In this meta-analysis of infant gut microbiome samples, how do the original studies compare in their sampling designs? Specifically, how do they compare in terms of the number of samples and the sampling timeline?</p>
-<p>Use the two plots you’ve made and the table above to make a few observations that compare and contrast the sampling designs of the original studies. Include these observations at the end of your <code>03_visualize_study_cohorts.qmd</code> document.</p>
+<p>Use the two plots you’ve made and the table above to make a few observations that compare and contrast the sampling designs of the original studies.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Include these observations at the end of your <code>03_visualize_study_cohorts.qmd</code> document.</label></li>
+</ul>
 <details>
 <summary>
 Answer
@@ -2939,7 +3061,10 @@ Answer
 </details>
 </div>
 </div>
-<p>Since you’ve performed the requested analysis, make sure to document any new files in this repository in the README.md file. Specifically, describe what the file <code>03_visualize_study_cohorts.qmd</code> does, and describe the two plots that are now saved in the figures folder. After doing this, make another commit and <button class="glossary"><span class="def">Sending commits from the local version of a repository to the remote version of the repository on GitHub</span>push</button> your work.</p>
+<p>Since you’ve performed the requested analysis, make sure to document any new files in this repository in the <code>README.md</code> file.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">In the <code>README.md</code> file, describe what the file <code>03_visualize_study_cohorts.qmd</code> does, and describe the two plots that are now saved in the <code>figures</code> folder.</label></li>
+</ul>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-23-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-23-1" role="tab" aria-controls="tabset-23-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-23-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-23-2" role="tab" aria-controls="tabset-23-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
@@ -3062,7 +3187,7 @@ Example pull request for this analysis
 <section id="synopsis" class="level2">
 <h2 class="anchored" data-anchor-id="synopsis"><strong>Synopsis</strong></h2>
 <hr>
-<p>In this case study, you’ve learned about why <button class="glossary"><span class="def">A tool that records changes to a project over time</span>version control</button> is used as part of <button class="glossary"><span class="def">Describes a project in which a new researcher can re-run an experiment or analysis with the same data and code and generate the same results</span>reproducible</button> science workflows. You’ve been introduced to <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with GitHub</span>GitHub</button>, and learned procedures for managing Git-tracked <button class="glossary"><span class="def">Folders in Git that contains all of the files to be tracked for a project</span>repositories</button> locally using <button class="glossary"><span class="def">A graphical user interface for interacting with Git on a local computer</span>GitHub Desktop</button> or the <button class="glossary"><span class="def">A window that lets a user interact with a computer through typing commands</span>command line</button>, and remotely using GitHub (<a href="https://github.com/">github.com</a>). You’ve practiced using the “pull → stage → commit → push” workflow to make changes locally that are then tracked remotely. In your analysis, you worked in a <button class="glossary"><span class="def">A history of commits in a Git-tracked repository (there can be multiple parallel branches in a repository)</span>branch</button>, and you submitted a <button class="glossary"><span class="def">A request to integrate a collection of commits from one branch (or from a fork) into another branch (or another repository)</span>pull request</button> in order to integrate new changes into a stable version of the code and as a way to ask a collaborator to review your code.</p>
+<p>In this case study, you’ve learned about why <button class="glossary"><span class="def">A tool that records changes to a project over time</span>version control</button> is used as part of <button class="glossary"><span class="def">Describes a project in which a new researcher can re-run an experiment or analysis with the same data and code and generate the same results</span>reproducible</button> science workflows. You’ve been introduced to <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with GitHub</span>GitHub</button>, and learned procedures for managing Git-tracked <button class="glossary"><span class="def">Folders in Git that contains all of the files to be tracked for a project</span>repositories</button> locally using <button class="glossary"><span class="def"></span>GitHub Desktop</button> or the <button class="glossary"><span class="def">A window that lets a user interact with a computer through typing commands</span>command line</button>, and remotely using GitHub (<a href="https://github.com/">github.com</a>). You’ve practiced using the “pull → stage → commit → push” workflow to make changes locally that are then tracked remotely. In your analysis, you worked in a <button class="glossary"><span class="def">A history of commits in a Git-tracked repository (there can be multiple parallel branches in a repository)</span>branch</button>, and you submitted a <button class="glossary"><span class="def">A request to integrate a collection of commits from one branch (or from a fork) into another branch (or another repository)</span>pull request</button> in order to integrate new changes into a stable version of the code and as a way to ask a collaborator to review your code.</p>
 <p>Along the way, you’ve also learned about the advantages and challenges of <button class="glossary"><span class="def">Analyses of data from a collection of studies targeting a common research question</span>meta-analyses</button> and best practices for scientific project organization.</p>
 </section>
 <section id="summary-activity" class="level2">
