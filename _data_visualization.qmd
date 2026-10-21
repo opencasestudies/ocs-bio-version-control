@@ -446,7 +446,7 @@ sampling_day_df %>%
 ```
 :::
 
-If you like these boxplots, you can **include the code above into your .qmd file** and save the plot to your figures folder. 
+If you like these boxplots, you can **include the code above into your .qmd file** and save the plot to your `figures` folder. 
 
 ::: {.rcode}
 ```{r, eval = FALSE}
@@ -473,7 +473,10 @@ Once you've done this, make another commit for these edits.
 
 #### GitHub Desktop 
 
-Navigate back to GitHub Desktop. Stage `03_visualize_study_cohorts.qmd` and whichever of the figures you have saved (`figures/sampling_timepoints_option1.png`, `figures/sampling_timepoints_option2.png`, and/or `figures/sampling_timepoints_boxplots.png`), then add an informative commit message and commit these files. 
+Navigate back to GitHub Desktop. 
+
+- [ ] Stage `03_visualize_study_cohorts.qmd` and whichever of the figures you have saved (`figures/sampling_timepoints_option1.png`, `figures/sampling_timepoints_option2.png`, and/or `figures/sampling_timepoints_boxplots.png`).
+- [ ] Add an informative commit message and commit these files. 
 
 #### Command line 
 
@@ -489,12 +492,12 @@ Next, add a commit with an appropriate commit message.
 
 :::: {.shell}
 ```bash
-git commit -m "Add plot of sampling time points to '03_visualize_study_cohorts' and save plot in figures folder."
+git commit -m "Add plot of sampling time points and save plot in figures folder."
 ```
 ::::
 
 :::
 
-Great job! You have now made plots to compare the study designs of the studies within the meta-analysis, and made several commits with informative messages that create a history of this analysis. 
+Great job! You have now made plots to compare the study designs of the studies within the meta-analysis, and made several commits with informative messages that track the history of this analysis. 
 
 ***
