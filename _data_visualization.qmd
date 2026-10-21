@@ -352,7 +352,7 @@ clean_metadata %>%
 ```
 ::::
 
-Here we can see that there are 6 observations from the Backhed study and one observation from the Shao study for which `sampling_day` is missing. Let's create a new data frame that removes these observations. 
+Here we can see that there are six observations from the Backhed study and one observation from the Shao study for which `sampling_day` is missing. Let's create a new data frame that removes these observations. 
 
 :::: {.rcode}
 ```{r}
