@@ -61,7 +61,7 @@ One thing that often surprises new Git users is that any empty folders may exist
 
 Recall that version control lets you track project files as they change throughout the research process. Therefore, there are some files that should always be tracked with version control, some files that should never be tracked with version control, and some files that depend more on personal preference. Deciding which files to track is another topic that different people take different approaches to, but there are some rules that are typically followed: 
 
-- track source files that you've written (such as `R` scripts, `shell` scripts, `LaTeX` files, etc) 
+- track source files that you've written (such as `.R` scripts, `shell` scripts, `LaTeX` files, etc) 
 - track configuration files (such as `.gitignore`) that tell your tools how to interact with this repository
 - do not track intermediate files (such as log files), these are files that are generated automatically during a certain part of your workflow but are not needed on their own
 - sometimes track derived products (such as intermediate data, figures, or reports)
@@ -78,7 +78,7 @@ From a Git perspective, files are either text files or binary files. Text files 
 
 #### How to use the `.gitignore` file
 
-The best way to avoid tracking a file is to add it to your {{< glossary ".gitignore">}} file. If a file or folder is included in your `.gitignore` file, it will be included in a commit if you explicitly decide to stage it (if using the command line with the command `git add .`, this will not include any files listed in the `.gitignore`).
+The best way to avoid tracking a file is to add it to your {{< glossary ".gitignore">}} file. If a file or folder is included in your `.gitignore` file, it will only be included in a commit if you explicitly decide to stage it. This means that if you use GitHub Desktop, it will not stage these files by default, and if you use the command line and the command `git add .`, this will ignore any files listed in the `.gitignore`.
 
 If you open an RStudio project for a Git repository, you'll have a `.gitignore` file that looks similar to the following:
 
