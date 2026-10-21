@@ -230,10 +230,10 @@ A few notes on naming repositories:
 
 Next, do the following:
 
-- [ ] add a short description for this repository in the "Description" field
-- [ ] toggle the button next to "Add README" to "On".
-- [ ] leave the other default options (for now, we won't worry about visibility, a template, a .gitignore, or a license) 
-- [ ] click the "Create repository" button
+- [ ] Add a short description for this repository in the "Description" field.
+- [ ] Toggle the button next to "Add README" to "On".
+- [ ] Leave the other default options (for now, we won't worry about visibility, a template, a .gitignore, or a license). 
+- [ ] Click the "Create repository" button.
 
 ```{r, fig.alt="Creating first repository", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e1f8f72664_0_798#slide=id.g3e1f8f72664_0_798")
@@ -280,12 +280,12 @@ Once you click "Create repository", you will be brought to the GitHub page for y
 
 If you look at your repository, you will see that it has one file: `README.md` (often referred to as the project's README). This is where you will document what is contained in your repository, and it will serve as a homepage for your project. It is written in Markdown, a language that can be used to format documents (you can find more information about how Markdown works and its syntax [here](https://www.markdownguide.org)). You will now edit the README:
 
-- [ ] click the pencil on the upper right of the README
-- [ ] add a new line to your README document that says "Editing my README file from GitHub." 
-- [ ] click the green button that says "Commit changes"
-- [ ] provide an informative commit message, something like "Add new line to README.md" 
-- [ ] click the green button that says "Commit changes"
-- [ ] click the repository name in the upper left to navigate back to the home page
+- [ ] Click the pencil on the upper right of the README.
+- [ ] Add a new line to your README document that says "Editing my README file from GitHub". 
+- [ ] Click the green button that says "Commit changes".
+- [ ] Provide an informative commit message, something like "Add new line to README.md" 
+- [ ] Click the green button that says "Commit changes".
+- [ ] Click the repository name in the upper left to navigate back to the home page.
 
 ```{r, fig.alt="Image of first repository", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_13#slide=id.g3f94a4bdf40_0_13")
@@ -706,12 +706,12 @@ For more tips on writing commit messages, check out [this article](https://cbea.
 
 You've learned how to make updates locally, and stage, commit, and push these changes so that the GitHub repository includes those updates. Next, we will {{< glossary "pull" >}} changes that have been made on GitHub. While pushing sends updates from a local repository to the remote repository on GitHub, pulling sends updates from the remote GitHub repository to your local repository. To practice pulling, we're going to make another change and commit from GitHub, and then pull that commit into our local repository. We'll follow the same steps to make a change and commit on GitHub:
 
-- [ ] click the pencil on the upper right of the README
-- [ ] add a new line to your README document that says "Adding another commit from GitHub." 
-- [ ] click the green button that says "Commit changes"
-- [ ] provide an informative commit message, something like "Add one more new line to README" 
-- [ ] click the green button that says "Commit changes"
-- [ ] click the repository name in the upper left to navigate back to the home page
+- [ ] Click the pencil on the upper right of the README.
+- [ ] Add a new line to your README document that says "Adding another commit from GitHub". 
+- [ ] Click the green button that says "Commit changes".
+- [ ] Provide an informative commit message, something like "Add one more new line to README". 
+- [ ] Click the green button that says "Commit changes".
+- [ ] Click the repository name in the upper left to navigate back to the home page.
 
 ::: {.panel-tabset}
 
@@ -743,7 +743,7 @@ If you return to RStudio or Positron and open `README.md`, you will now see the 
 
 In this section you have made a GitHub account, installed Git and GitHub Desktop, configured Git and GitHub to be connected so they can receive updates from each other, and made your first repository. You've learned how to make changes to the remote on GitHub and transfer them to the local repository on your computer, as well as do the opposite. 
 
-In a typical GitHub workflow, you will rarely be making changes online from the [github.com](github.com) website. Instead, you will often be working with one or multiple collaborators on a repository. Once your collaborator makes changes locally, they can push those changes to GitHub, and then you can pull those changes to your local copy of the repository. This process will continue cyclically while you collaboratively work on a project. Note that this is a simplified system where you take turns to make changes, in practice you can work on the project at the same time (using branches which will be discussed later in the Branches [section](https://www.opencasestudies.org/ocs-bio-version-control/#branches)).
+In a typical GitHub workflow, you will rarely be making changes online from the [github.com](github.com) website. Instead, you will often be working with one or multiple collaborators on a repository. Once your collaborator makes changes locally, they can push those changes to GitHub, and then you can pull those changes to your local copy of the repository. This process will continue cyclically while you collaboratively work on a project. Note that this is a simplified system where you take turns to make changes, in practice you can work on the project at the same time (using branches which will be discussed later in the [branches  section](https://www.opencasestudies.org/ocs-bio-version-control/#branches)).
 
 ```{r, fig.alt="Git and GitHub workflow", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_206#slide=id.g3f139628ce6_0_206")
@@ -758,7 +758,7 @@ First, we need to download the project files, and set them up in a folder on you
 
 - [ ] Download the .zip file [here](https://github.com/opencasestudies/infant_gut_analysis_files/raw/refs/heads/main/infant_gut_analysis.zip). 
 - [ ] Your browser may automatically unzip this file to create a folder called `infant_gut_analysis`. If not, unzip the file manually (this typically involves right clicking or double clicking depending on your operating system). 
-- [ ] Move the folder `infant_gut_analysis` to whatever folder on your computer that you would like to work in (for example, you could put this in your `Documents` folder, or wherever makes sense based on your local folder organization)
+- [ ] Move the folder `infant_gut_analysis` to whichever folder on your computer you would like to work in (for example, you could put this in your `Documents` folder, or wherever makes sense based on your local folder organization)
 
 Next, we will make this folder into a Git repository. 
 
@@ -778,11 +778,11 @@ Now, go to GitHub Desktop and do the following:
 - [ ] Under "License", choose "MIT License". 
 - [ ] Click the button "Create Repository". 
 
-Great work, you have successfully turned your folder into a local Git repository. Next, we will need to make a remote repository on GitHub. This is easy with GitHub Desktop. 
+Great work, you have successfully turned your folder into a local Git repository! Next, we will need to make a remote repository on GitHub. GitHub Desktop makes this easy for us. 
 
 - [ ] In the top of the window, click where it says "Publish repository".
 - [ ] Leave the name as is and do not provide a description. 
-- [ ] If you would like this repository to be private to only you, you can leave the "Keep this code private" box checked. If you would like this to be a public repository that can be viewed on GitHub by others, uncheck this box.
+- [ ] If you would like this repository to be private (so only you can see it on GitHub), you can leave the "Keep this code private" box checked. If you would like this to be a public repository that can be viewed on GitHub by others, uncheck this box.
 - [ ] Click the "Publish Repository" button. 
 - [ ] Scroll to the bottom of the GitHub Desktop page, and click "View on GitHub". 
 
@@ -802,9 +802,9 @@ This command tells Git to create a Git repository in the current folder. Don't w
 
 If you look into your folder you will not see any changes. However, this command creates a hidden `.git` folder within the current folder, which contains the files that are needed to start tracking this folder with Git. 
 
-Now we will stage files, so that Git knows to track them, and commit them, so that Git saves the set of files as part of the history. 
+Now we will stage and commit files.
 
-First, check which files are currently untracked or modified.
+First, check which files are currently untracked or modified with `git status`.
 
 :::: {.shell}
 ```bash
@@ -812,7 +812,7 @@ git status
 ```
 ::::
 
-When you run `git status`, look for files listed under *"Untracked files"* (new files not yet tracked) or *"Changes not staged for commit"* (modified files that have not yet been added). You can then choose which files to add. In this repo, because the data is small and publicly available, we will add and commit the data folders. If this is not the case for your data, you should list data files or folders in your .gitignore file, to avoid tracking them. 
+When you run `git status`, look for files listed under "Untracked files" (new files not yet tracked) or "Changes not staged for commit" (modified files that have not yet been added). You can then choose which files to stage. In this repo, because the data is small and publicly available, we will stage and commit the data folders. If this is not the case for your data, you should avoid tracking the data folders and files with version control. Note that when you stage a folder (like `raw_data`), you stage all files within it.  
 
 :::: {.shell}
 ```bash
@@ -822,11 +822,11 @@ git commit -m "track all files for infant gut project"
 ```
 ::::
 
-In the `git add` command above, we track all scripts (`.R` files) and data. We do not track the figures and results folders for now because Git will not track empty folders. Once we add figures and results to these folders, we can then version control them (if we want to include these outputs in our version controlled repository). 
+In the `git add` command above, we stage all scripts (`.R` files) and data. We do not stage the figures and results folders for now because Git will not version control empty folders. Once we add figures and results to these folders, we can then stage them (if we want to include these outputs in our version controlled repository). 
 
 <details>
 <summary> Note on staging all files in a repository </summary>
-You may see examples in other Git tutorials using `git add .`, which stages all files in the current directory. While convenient, you should use this with caution, as it can unintentionally include files you do not want to track, such as large data files, sensitive data, or auxiliary files generated by your computer (e.g., `.Rproj.user`, `.DS_Store`). While this can be avoided by adding all of these files to your `.gitignore` file, it is generally safer to add individual files and folders to your `git add` command when you'd like to track. 
+You may see examples in other Git tutorials using `git add .`, which stages all files in the current directory. While convenient, you should use this with caution, as it can unintentionally include files you do not want to track, such as large data files, sensitive data, or auxiliary files generated by your computer (e.g., `.Rproj.user`, `.DS_Store`). While this can be avoided by adding all of these files to your `.gitignore` file, it is generally safer to add individual files and folders to your `git add` command when you'd like to stage them. 
 </details>
 
 Next, you will need to create an empty repository on GitHub. 
@@ -849,9 +849,9 @@ git push -u origin main
 ```
 ::::
 
-Because this is the first time pushing to the remote repository, we need the `-u` flag to tell Git to remember where to send our changes. `origin` refers to the remote GitHub repository (that we set in the previous command), and `main` refers to the default version of the repository.
+Since this is the first time pushing to the remote repository, we need the `-u` flag to tell Git to remember where to send our changes. The argument `origin` refers to the remote GitHub repository (that we set in the previous command), and `main` refers to the default version of the repository.
 
-Because we created the Git repository locally before creating the GitHub repository, we still need to add a `.gitignore` file and a license. The easiest way to do this will be on GitHub, using existing templates. While this `.gitignore` template lists many files that won't actually be included in your project, there is no harm in including files in a `.gitignore` file that don't exist in the repository. 
+We would like to include a `.gitignore` file and license for this project. The easiest way to do this will be on GitHub, using existing templates. While the `.gitignore` template that we will use lists many files that won't actually be included in your project, there is no harm in including additional files in a `.gitignore` file that don't exist in the repository. 
 
 - [ ] Open the GitHub repo page for `infant_gut_analysis`. 
 - [ ] Click the button with a plus "+" next to the green "Code" button. 
@@ -865,11 +865,11 @@ Because we created the Git repository locally before creating the GitHub reposit
 - [ ] Name this file "LICENSE" (in all caps!).
 - [ ] After you type "LICENSE", text should pop up below that says "Choose a license template". Click this text.
 - [ ] Click "MIT License" from the side-bar options. 
-- [ ] Click the green button that says "Review and submit". 
+- [ ] Confirm that the year and your name are correct, and click the green button that says "Review and submit". 
 - [ ] Click "Commit changes..."
 - [ ] Add a commit message and click "Commit changes". 
 
-Now, you've added the `.gitignore` and license on GitHub, but we do not have them in the local repository. Our final step is {{< glossary "pull" display="pulling" >}} them to our local repository. Open the command line again and type:
+Now, you've added the `.gitignore` and license on GitHub, but we do not have them in the local repository. Our final step is {{< glossary "pull" display="pulling" >}} them into our local repository. Open the command line again and type:
 
 :::: {.shell}
 ```bash
@@ -885,7 +885,7 @@ ls -a
 ```
 ::::
 
-Confirm here that `infant_gut_analysis` includes all expected files. 
+- [ ] Confirm here that `infant_gut_analysis` includes all expected files. 
 
 :::
 
@@ -948,7 +948,7 @@ Integrating changes from one branch into another branch.
 ::::
 :::
 
-Here is an example of a workflow, in which a Git user makes a `plotting` branch from the `main` branch, adds commits to both branches, and then eventually merges the `plotting` branch back into "main". Click through the tabs from left to right to follow the branching process. 
+Here is an example of a workflow, in which a Git user makes a `plotting` branch from the `main` branch, adds commits to both branches, and then eventually merges the `plotting` branch back into `main`. Click through the tabs from left to right to follow the branching process. 
 
 ::: {.panel-tabset}
 #### Step 1
@@ -1046,7 +1046,7 @@ Tips
 ::::
 :::
 
-There are a lot of great examples of scientists using Git and GitHub to make their work more reproducible, to provide a convenient platform for collaboration, and to create an accessible web presence for their projects. For inspiration, check out some of these repositories:
+There are a lot of great examples of scientists using Git and GitHub to make their work more reproducible, to provide a convenient platform for collaboration, and to create an accessible website for their projects. For inspiration, check out some of these repositories:
 
 - [Bowtie2](https://github.com/BenLangmead/bowtie2): This is a tool for aligning sequence reads. You can see that the README gives an overview of the tool, explains how to get started, and lists related publications. The [issues](https://github.com/BenLangmead/bowtie2/issues) page keeps a running to-do list of feature requests and bug fixes, suggested by a variety of users. 
 - [Tybalt](https://github.com/greenelab/tybalt): This repository includes code and data to train a variational autoencoded on cancer types from The Cancer Genome Atlas. You can see that the README gives an overview of the project, the data, the results, and includes a citation. The [closed issues page](https://github.com/greenelab/tybalt/issues?q=is%3Aissue+state%3Aclosed) shows issues that were opened and then closed after being resolved. 
