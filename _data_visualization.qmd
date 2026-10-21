@@ -125,17 +125,20 @@ load(here::here("processed_data", "clean_sample_metadata.rda"))
 ```
 :::
 
-Now that you have created a new file and loaded packages and data, this is a good time to track this new file and {{< glossary "commit">}} your work. 
+Now that you have created a new file and loaded packages and data, this is a good time to stage this new file and {{< glossary "commit">}} your work. 
 
 ::: {.panel-tabset}
 
 #### GitHub Desktop 
 
-Navigate back to {{< glossary "GitHub Desktop">}}. You should see your new file name `03_visualize_study_cohorts.qmd` with a green plus next to it, meaning that this is a new file. The check in the checkbox means that this file is staged. Add an appropriate commit message and commit this file. 
+Navigate back to {{< glossary "GitHub Desktop">}}. 
+
+- [ ] Confirm that you see your new file name `03_visualize_study_cohorts.qmd` with a green plus next to it, meaning that this is a new file. The check in the checkbox means that this file is staged. 
+- [ ] Add an appropriate commit message and commit this file. 
 
 #### Command line 
 
-Open the {{< glossary "command line">}} and navigate to your repository. Recall that you can stage the new file (tell Git to track it with):
+Open the {{< glossary "command line">}} and navigate to your repository. Recall that you can stage the new file with `git add`:
 
 :::: {.shell}
 ```bash
@@ -310,7 +313,7 @@ This is another great time to commit your current work.
 
 #### GitHub Desktop 
 
-Navigate back to GitHub Desktop. You should see that `03_visualize_study_cohorts.qmd` now has an orange box next to it (signaling that this file has been modified) and that "figures/study_sizes_by_category.png" has been added (which is signaled by the green plus sign next to it). Make sure that both of these have checks in the checkboxes to the left of the filenames, which indicates that they are staged. Add an appropriate commit message and commit these files. 
+Navigate back to GitHub Desktop. You should see that `03_visualize_study_cohorts.qmd` now has an orange box next to it (signaling that this file has been modified) and that `figures/study_sizes_by_category.png` has been added (which is signaled by the green plus sign next to it). Make sure that both of these have checks in the checkboxes to the left of the filenames, which indicates that they are staged. Add an appropriate commit message and commit these files. 
 
 #### Command line 
 
