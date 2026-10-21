@@ -242,11 +242,11 @@ This is another common problem. We'll first tell Git to stop tracking the file (
 
 Make sure you are starting in the correct branch that you have been working in. This is a situation that we cannot resolve directly with the GitHub Desktop GUI. Instead, we will launch a command line within GitHub Desktop. 
 
-Click "Repository" → "Open in Terminal". This will open a command line for you to work with. In this command line, use the following command, replacing "path_to_file" with the path to the file to stop tracking, including the file name. 
+Click "Repository" → "Open in Terminal". This will open a command line for you to work with. In this command line, use the following command, replacing `path_to_file` with the path to the file to stop tracking, including the file name. 
 
 :::: {.shell}
 ```bash
-git rm --cached "path_to_file" 
+git rm --cached path_to_file 
 ```
 ::::
 
@@ -295,7 +295,7 @@ Make sure you are starting in the correct branch that you have been working in. 
 
 :::: {.shell}
 ```bash
-git rm --cached "path_to_file" 
+git rm --cached path_to_file
 git commit --amend 
 ```
 ::::
@@ -320,7 +320,7 @@ Use the following command, replacing `path_to_file` with the path to the file to
 
 :::: {.shell}
 ```bash
-git rm --cached path/to/file
+git rm --cached path_to_file
 git commit --amend
 ```
 ::::
