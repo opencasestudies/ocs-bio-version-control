@@ -100,7 +100,7 @@ clean_metadata %>%
 Question opportunity
 ::::
 ::::{.inner_block}
-Recall one of the main questions of this case study: In this meta-analysis of infant git microbiome samples, how do the original studies compare in their sampling designs? Specifically, how do they compare in terms of the number of samples and the sampling timeline?
+Recall one of the main questions of this case study: In this meta-analysis of infant gut microbiome samples, how do the original studies compare in their sampling designs? Specifically, how do they compare in terms of the number of samples and the sampling timeline?
 
 Use the two plots you've made and the table above to make a few observations that compare and contrast the sampling designs of the original studies. Include these observations at the end of your `03_visualize_study_cohorts.qmd` document. 
 
@@ -159,10 +159,9 @@ Push the changes that you've made locally to your remote repository. Because thi
 ```bash
 git push --set-upstream origin study_comparison
 ```
+::::
 
 Finally, open the repository on GitHub and confirm that these changes are now visible in the remote repository.
-
-::::
 
 :::
 
