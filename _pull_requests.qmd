@@ -4,27 +4,32 @@
 ## What is a pull request? 
 ***
 
-Recall that in the initial description of branches, you learned that branches can be used for development of a new part of a project, separate from the stable version of a repository. A pull request is a way to take a collection of commits on a branch and request to {{< glossary "merge">}} those into another {{< glossary "branch">}}, typically "main". A pull request will provide a list of each file that is changed in the branch, as well as the difference between each file and the version of that file on the branch that you are trying to merge your changes into. While you can review your own pull requests, GitHub also has features that make it convenient for collaborators to review your pull requests. 
+Recall that in the initial description of branches, you learned that branches can be used for development of a new part of a project, separate from the stable version of a repository. A {{< glossary "pull request" >}} is a way to take a collection of commits on a branch and request to {{< glossary "merge">}} those into another {{< glossary "branch">}}, typically `main`. A pull request will provide a list of each file that is changed in the branch, as well as the difference between each file and the version of that file on the branch that you are trying to merge your changes into. While you can review your own pull requests, GitHub also has features that make it convenient for collaborators to review your pull requests. 
 
 ## How to make a pull request 
 ***
 
-In the previous section, you worked locally to make the visualizations that Collab O. Rator had asked you for, and you staged, committed, and pushed these changes. Recall that you were working on a branch called "study_comparison". Let's take a look at this branch on GitHub. 
+In the previous section, you worked locally to make the visualizations that Collab O. Rator had asked you for, and you staged, committed, and pushed these changes. Recall that you were working on a branch called `study_comparison`. Let's take a look at this branch on GitHub. 
 
 - [ ] Navigate back to "https://github.com/your_username/infant_gut_analysis" (replacing your username). 
-- [ ] Click underneath the repository name where is says "Branches". This should take you to a page that shows you the existing branches (this should include "main" and "study_comparison"). 
-- [ ] Click on "study_comparison". 
+- [ ] Click underneath the repository name where is says "Branches". This should take you to a page that shows you the existing branches (this should include `main` and `study_comparison`). 
+- [ ] Click on `study_comparison`. 
 - [ ] You should see a yellow banner with a green button that says "Compare & pull request". Click on this button. 
 
-This set of steps will bring you to a page where you can make your pull request. The first thing to note is the panel at the top of the page, which gives you the base branch (this will by default be "main") and the compare branch (this will be the branch you've been working on, in this case "study_comparison"). There is an arrow, showing that you are trying to merge the updates that you've made in the compare branch into the base branch. 
+This set of steps will bring you to a page where you can make your pull request. The first thing to note is the panel at the top of the page, which gives you the base branch (this will by default be `main`) and the compare branch (this will be the branch you've been working on, in this case `study_comparison`). There is an arrow, showing that you are trying to merge the updates that you've made in the compare branch into the base branch. 
 
 There are a few useful components of this page in which you make a pull request:
 
-1. You have a spot to add a title and a description. 
-1. If you scroll down, you'll see a list of commits that make up this pull request along with the commit messages, and a view of each of the files changed/what was changed. 
-1. On the right panel next to the title you'll see an option for reviewers. If other users have access to this repository, then you can add them as a reviewer. Depending on how they have configured their notification preferences, they may get an email notification that you've requested a review from them. It is good practice for you to also reach out to them and send them the link to your pull request to review! 
+- You have a spot to add a title and a description. 
+- If you scroll down, you'll see a list of commits that make up this pull request along with the commit messages, and a view of each of the files changed with details of what was changed. 
+- On the right panel next to the title you'll see an option for reviewers. If other users have access to this repository, then you can add them as a reviewer. Depending on how they have configured their notification preferences, they may get an email notification that you've requested a review from them. It is good practice for you to also reach out to them and send them the link to your pull request to review! 
 
-### Components of a good pull request title and description 
+:::{.reproducibility_box}
+::::{.reproducibility_box_header}
+Reproducibility considerations
+::::
+::::{.inner_block}
+Components of a good pull requests include:
 
 - A concise but descriptive title.
 - A description of the changes you want to merge. This is a good place to list files added and modified and give a quick description of those changes. Give plenty of context; you've likely been thinking about the code you want to merge more recently than your collaborator who will review it. 
@@ -33,8 +38,14 @@ There are a few useful components of this page in which you make a pull request:
 - A request for code review (make specific requests: do you want your collaborator to review all changes? do you want them to focus on a specific file or part of an analysis? do you just a bigger picture review to see if your approach to the problem makes sense?).
 
 For additional suggestions on making good pull requests, you can read more in [this reproducibility course](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html). Also see [this real-world example of a pull request](https://github.com/AlexsLemonade/OpenPBTA-analysis/pull/741) with these components, followed by back-and-forth between the author and reviewer to iterate on the proposed changes to the analysis. 
+::::
+:::
 
-Add a title and a description for your pull request now. 
+Navigate to your pull request page and do the following:
+
+- [ ] Add a title for your pull request.
+- [ ] Add a description. 
+- [ ] Click "Create pull request" button.
 
 <details>
 <summary>Example pull request for this analysis</summary>
@@ -48,11 +59,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 ## Merging or closing pull requests 
 ***
 
-Once you have created a pull request, it is considered an "open" pull request and there are two potential actions, either merging it or closing it. 
+Once you have created a pull request, it is referred to as "open", and the two potential actions are to merge it or close it. 
 
 ### Merging pull requests 
 
-Let's say that you submitted a pull request, you or your collaborator has decided that the changes look good, and you want to integrate the changes from your development branch into the base branch. This is called "merging" your pull request. In most cases, you will see a box that says "No conflicts with base branch", and you can click the button that says "Merge pull request". However, in some cases, you will not be able to merge until you resolve merge conflicts. See the [troubleshooting section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github) for more information about merge conflicts and how to resolve them. 
+Imagine that you submitted a pull request, you or your collaborator has decided that the changes look good, and you want to integrate the changes from your development branch into the base branch. This is called merging your pull request. In most cases, you will see a box that says "No conflicts with base branch", and you can click the button that says "Merge pull request". However, in some cases, you will not be able to merge until you resolve merge conflicts. See the [troubleshooting section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github) for more information about merge conflicts and how to resolve them. 
 
 ### Closing pull requests
 

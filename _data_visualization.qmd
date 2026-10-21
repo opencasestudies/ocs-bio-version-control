@@ -7,16 +7,16 @@ We will now generate visualizations to compare the {{< glossary "meta-analysis">
 ## Setup 
 ***
 
-First, we will make sure that we are on the correct branch. We want to use a development branch for this analysis, which we will request to merge back into the main branch once the analysis is ready. We already created the branch "study_comparison" in the [introduction to Git and GitHub section](https://www.opencasestudies.org/ocs-bio-version-control/#branches), so we just need to make sure that we are working on that branch.
+First, we will make sure that we are on the correct branch. We want to use a development branch for this analysis, which we will request to merge back into the main branch once the analysis is ready. We already created the branch `study_comparison` in the [introduction to Git and GitHub section](https://www.opencasestudies.org/ocs-bio-version-control/#branches), so we just need to make sure that we are working on that branch.
 
 ::: {.panel-tabset}
 
 #### GitHub Desktop 
 
-- In the upper panel, under "Current Branch", look to see if it says the current branch is "study_comparison" or "main" or something else.
-  - If it says "study_comparison", then you are already working on the correct branch.
-  - If it says "main", then you can click the drop-down button next to "Current Branch" and select "study_comparison".
-    - If "study_comparison" does not appear, you can click the "New Branch" button to create it. 
+- In the upper panel, under "Current Branch", look to see if it says the current branch is `study_comparison` or `main` or something else.
+  - If it says `study_comparison`, then you are already working on the correct branch.
+  - If it says `main`, then you can click the drop-down button next to "Current Branch" and select `study_comparison`.
+    - If `study_comparison` does not appear, you can click the "New Branch" button to create it. 
 
 ```{r, fig.alt="Creating first repository", out.width = "100%", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_170#slide=id.g3f94a4bdf40_0_170")
@@ -32,9 +32,9 @@ git branch
 ```
 ::::
 
-This should list the branches for your repository, with the current branch highlighted and marked with an asterisk (*). If the highlighted branch is "study_comparison", then you are already working on the correct branch. If the highlighted branch is "main" or something else, you can switch over to "study_comparison" using the `git checkout` command. 
+This should list the branches for your repository, with the current branch highlighted and marked with an asterisk (*). If the highlighted branch is `study_comparison`, then you are already working on the correct branch. If the highlighted branch is `main` or something else, you can switch over to `study_comparison` using the `git checkout` command. 
 
-If "study_comparison" appears in your list of branches, you can move to it with the following command:
+If `study_comparison` appears in your list of branches, you can move to it with the following command:
 
 :::: {.shell}
 ```bash
@@ -42,7 +42,7 @@ git checkout study_comparison
 ```
 ::::
 
-However, if "study_comparison" doesn't appear in your list of branches, you can create it with `git checkout -b`. 
+However, if `study_comparison` doesn't appear in your list of branches, you can create it with `git checkout -b`. 
 
 :::: {.shell}
 ```bash
@@ -51,24 +51,28 @@ git checkout -b study_comparison
 ::::
 :::
 
-Because this is a new component of the analysis, we will create a new file in the "infant_gut_analysis" folder for this code. 
+Because this is a new component of the analysis, we will create a new file in the `infant_gut_analysis` folder for this code. 
 
 :::{.reproducibility_box}
 ::::{.reproducibility_box_header}
 Reproducibility considerations
 ::::
 ::::{.inner_block}
-There are different types of files that you can create to run R code. The most basic file is a .R script, which is used for the scripts that we ran in the data import and wrangling sections: "01_pull_study_data.R" and "02_wrangle_data.R". An R script assumes that all contents are R code, except for comments (which are preceded by `#`). 
+There are different types of files that you can create to run R code. The most basic file is an `.R` script (the code files that we ran in the [data import](https://www.opencasestudies.org/ocs-bio-version-control/#data-import) and [data wrangling](https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling) sections are `.R` scripts). In an `.R` script, everything is interpreted as R code except for comments, which are preceded by `#`. 
 
-Another file type is a notebook-style document, which combines text components with code components. The code is broken into pieces, which are referred to as "code chunks". Two common types of these files are R Markdown files (.Rmd) and quarto files (.qmd). These files can be rendered, which means that all code chunks are run in order (typically in a fresh R session), and any output (calculations, tables, plots) is included in the resulting document. These notebook-style formats also make it easier to explain what each step of an analysis is doing, improving both readability and reproducibility by clearly linking code, output, and interpretation in a single document.
+Another file type is a notebook-style document, which combines text components with code components. The code is broken into pieces, which are referred to as "code chunks". Two common types of these files are R Markdown files (`.Rmd`) and quarto files (`.qmd`). These files can be rendered, which means that all code chunks are run in order (typically in a fresh R session), and any outputs (calculations, tables, plots) are included in the resulting document. These notebook-style documents also make it easier to explain what each step of an analysis is doing, improving both readability and reproducibility by clearly linking code, output, and interpretation in a single document.
 ::::
 :::
 
-To start, we will create a new quarto document and call it "03_visualize_study_cohorts.qmd". Make sure to give your quarto document an appropriate title. 
+To start, we will create a new quarto document and call it `03_visualize_study_cohorts.qmd`. Make sure to give your quarto document an appropriate title. 
 
 In this section, we will go through the steps to make two visualizations to compare the study cohorts. As you go, include the relevant code (as well as explanations of what the code is doing) into your quarto document. When you are done, you or someone else with access to the data and your document, should be able to run the code and create the visualizations. 
 
-In your quarto document, you should start by making a code chunk to load the required packages. 
+In your quarto document, you should start by making a code chunk to load the required packages. A code chunk looks like the following:
+
+```{r, fig.alt="Example R code chunk in .qmd document", out.width = "100%", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h60886f95c2238bb5_0_0#slide=id.h60886f95c2238bb5_0_0")
+```
 
 <details>
 <summary>Adding a code chunk to a quarto file</summary>
@@ -83,7 +87,7 @@ Then, type your code, starting on the following line. To end a code chunk, go to
 
 #### In RStudio
 
-You can also add a code chunk in RStudio by clicking the button green button with a plus sign and a "c", below the open file names. Other options include navigating to "Code" -> "Insert Chunk" or using a keyboard shortcut: `Ctrl + Alt + I` in Windows and Linux, and `Cmd + Option + I` on Mac. 
+You can also add a code chunk in RStudio by clicking the button green button with a plus sign and a "c", below the open file names. Other options include navigating to "Code" → "Insert Chunk" or using a keyboard shortcut: `Ctrl + Alt + I` in Windows and Linux, and `Cmd + Option + I` on Mac. 
 
 #### In Positron
 
@@ -97,7 +101,7 @@ You can also add a code chunk in Positron by clicking the icon that shows an arr
 ::: {.rcode}
 ```{r, message = FALSE, warning = FALSE}
 library(here)
-library(dplyr)
+library(dplyr) 
 library(ggplot2)
 ```
 :::
@@ -106,10 +110,10 @@ Next, we will load the wrangled data. We will use the function `here()`, which c
 
 <details>
 <summary>More information about the `here()` function:</summary>
-The `here()` function creates file paths that always start from the main project folder (the top-level folder that contains all of your project files). In a Git-tracked repository, this is the folder that contains the `.git` directory, which was created when you initialized the repository. However, there are other ways here can determine where to start the path, including the directory with an `.Rproj` file (if you are using one), see this [list of conditions for the starting directory](https://here.r-lib.org/reference/here.html) for more information.  Using relative file paths (i.e., paths that only reference folders within your project) makes your code more portable and easier for collaborators to run. Importantly, the `here()` function creates these relative paths in a way that is compatible with different kinds of operating systems which have different path requirements. In contrast, absolute file paths depend on the specific file structure of your personal computer and will not necessarily work on other machines.
+The `here()` function creates file paths that always start from the main project folder (the top-level folder that contains all of your project files). In a Git repository, this is the folder that contains the `.git` directory, which was created when you initialized the repository. However, there are other ways here can determine where to start the path, including the directory with an `.Rproj` file (if you are using one), see this [list of conditions for the starting directory](https://here.r-lib.org/reference/here.html) for more information.  Using relative file paths (i.e., paths that only reference folders within your project) makes your code more portable and easier for collaborators to run. Importantly, the `here()` function creates these relative paths in a way that is compatible with different kinds of operating systems which have different path requirements. In contrast, absolute file paths depend on the specific file structure of your personal computer and will not necessarily work on other machines.
 </details>
 
-We want to load data from the file "clean_sample_metadata.rda", contained within the "processed_data" folder. **Include this code in your .qmd file** to load the data.
+We want to load data from the file `clean_sample_metadata.rda` contained within the `processed_data` folder. **Include this code in your .qmd file** to load the data.
 
 ```{r, echo = FALSE}
 load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
@@ -121,17 +125,20 @@ load(here::here("processed_data", "clean_sample_metadata.rda"))
 ```
 :::
 
-Now that you have created a new file and loaded packages and data, this is a good time to track this new file and {{< glossary "commit">}} your work. 
+Now that you have created a new file and loaded packages and data, this is a good time to stage this new file and {{< glossary "commit">}} your work. 
 
 ::: {.panel-tabset}
 
 #### GitHub Desktop 
 
-Navigate back to {{< glossary "GitHub Desktop">}}. You should see your new file name "03_visualize_study_cohorts.qmd" with a green plus next to it, meaning that this is a new file. The check in the checkbox means that this file is staged. Add an appropriate commit message and commit this file. 
+Navigate back to {{< glossary "GitHub Desktop">}}. 
+
+- [ ] Confirm that you see your new file name `03_visualize_study_cohorts.qmd` with a green plus next to it, meaning that this is a new file. The check in the checkbox means that this file is staged. 
+- [ ] Add an appropriate commit message and commit this file. 
 
 #### Command line 
 
-Open the {{< glossary "command line">}} and navigate to your repository. Recall that you can stage the new file (tell Git to track it with):
+Open the {{< glossary "command line">}} and navigate to your repository. Recall that you can stage the new file with `git add`:
 
 :::: {.shell}
 ```bash
@@ -165,7 +172,7 @@ clean_metadata %>%
 :::
 
 <details>
-<summary>A note on the pipe operator `%>%`</summary>
+<summary>A note on the pipe operators `%>%` and `|>`. </summary>
 The pipe operator `%>%` chains R commands together. It takes the preceding object and inputs it as the first argument to the function that follows it. It often is used to make code more readable and to avoid using intermediate objects or nested functions. The code above is equivalent to both of these expressions:
 
 ::: {.rcode}
@@ -181,7 +188,7 @@ count(group_by(clean_metadata, Study))
 ```
 :::
 
-The pipe operator that we use, `%>%`, is part of the `magrittr` and `dplyr` R packages. There is also a pipe operator in base R, `|>`. In most cases, these two pipe operators will work equivalently. 
+The pipe operator that we use, `%>%`, is part of the `magrittr` and `dplyr` R packages. There is also a pipe operator in base R, `|>`. In most cases, these two pipe operators will work equivalently.
 
 ::: {.rcode}
 ```{r}
@@ -283,7 +290,7 @@ sample_counts %>%
   mutate(Study = factor(Study, levels = study_order)) %>%
   ggplot(aes(x = Study, y = total, fill = Category)) +
   geom_col(position = position_dodge()) +
-  ggplot2::scale_fill_viridis_d() + 
+  ggplot2::scale_fill_viridis_d(begin = 0.1, end = 0.8) + 
   ggplot2::theme_minimal() + 
   ggplot2::labs(y = "Number of samples",
        x = "Study",
@@ -292,7 +299,7 @@ sample_counts %>%
 ```
 :::
 
-We will now use `ggsave()` to save this plot in the figures folder. **Include this code in your .qmd document** to save this bar plot with the file name "study_sizes_by_category.png" within the "figures" folder.
+We will now use `ggsave()` to save this plot in the figures folder. **Include this code in your .qmd document** to save this bar plot with the file name `study_sizes_by_category.png` within the `figures` folder.
 
 ::: {.rcode}
 ```{r, eval = FALSE}
@@ -306,11 +313,11 @@ This is another great time to commit your current work.
 
 #### GitHub Desktop 
 
-Navigate back to GitHub Desktop. You should see that "03_visualize_study_cohorts.qmd" now has an orange box next to it (signaling that this file has been modified) and that "figures/study_sizes_by_category.png" has been added (which is signaled by the green plus sign next to it). Make sure that both of these have checks in the checkboxes to the left of the filenames, which indicates that they are staged. Add an appropriate commit message and commit these files. 
+Navigate back to GitHub Desktop. You should see that `03_visualize_study_cohorts.qmd` now has an orange box next to it (signaling that this file has been modified) and that `figures/study_sizes_by_category.png` has been added (which is signaled by the green plus sign next to it). Make sure that both of these have checks in the checkboxes to the left of the filenames, which indicates that they are staged. Add an appropriate commit message and commit these files. 
 
 #### Command line 
 
-Even though Git is already tracking "03_visualize_study_cohorts.qmd", we still need to use `git add` to tell Git to stage this file for this commit. We will also need to start tracking "figures/study_sizes_by_category.png". We can stage multiple files at once by listing them with spaces between. 
+Even though Git is already tracking `03_visualize_study_cohorts.qmd`, we still need to use `git add` to tell Git to stage this file for this commit. We will also need to start tracking `figures/study_sizes_by_category.png`. We can stage multiple files at once by listing them with spaces between. 
 
 :::: {.shell}
 ```bash
@@ -331,33 +338,29 @@ git commit -m "Add plot of study sizes to '03_visualize_study_cohorts' and save 
 ## Comparing Longitudinal Sampling
 ***
 
-Next we will consider the second question: how do these studies compare in terms of when they took samples after the birth of the infants? You may have noticed in the script "02_wrangle_data.R" that two studies took samples from mothers during pregnancy. This information is contained in the variable `sampling_before_birth`. We would like to exclude these observations from our plots, because their `sampling_day` is counted from the beginning of pregnancy and not since birth. 
+Next we will consider the second question: how do these studies compare in terms of when they took samples after the birth of the infants? 
 
-:::{.think_question}
-::::{.think_question_header}
-Coding opportunity
-::::
-::::{.inner_block}
-**Your turn**: create a data frame `observations_after_birth` that does not include these observations that were taken before birth. **Include this code in your .qmd document.**
+First, we will check if any of our observations have missing sampling day information. 
 
-<details>
-<summary>Hint:</summary>
-::::: {.rcode}
-The function `filter()` will remove rows that match a certain logical condition. 
-:::::
-</details>
-
-<details>
-<summary>View code:</summary>
-::::: {.rcode}
+:::: {.rcode}
 ```{r}
-observations_after_birth <- clean_metadata %>%
-  filter(sampling_before_birth == FALSE) 
+clean_metadata %>%
+  # only keep rows that have NA values for sampling_day
+  filter(is.na(sampling_day)) %>% 
+  # view a smaller subset of variables
+  select(Study, SampleID, sampling_day, Category)
 ```
-:::::
-</details>
 ::::
-:::
+
+Here we can see that there are six observations from the Backhed study and one observation from the Shao study for which `sampling_day` is missing. Let's create a new data frame that removes these observations. 
+
+:::: {.rcode}
+```{r}
+sampling_day_df <- clean_metadata %>%
+  # remove rows that have NA values for sampling_day
+  filter(!is.na(sampling_day)) 
+```
+::::
 
 Now, we will make a histogram of sampling day, where we separate the data by `Category` and `Study`. There are multiple ways to do this, but we will color the bars by `Category` and then use `facet_wrap()` to make separate panels for each study. Below we show two versions of this histogram that show the patterns in the data in different ways. Choose the sampling day histogram that you prefer (or choose to use both), and **include this code in your .qmd document**. 
 
@@ -369,7 +372,7 @@ In this histogram, we will order the studies in the same order that we used in t
 
 :::: {.rcode}
 ```{r, fig.width = 7, fig.height = 10}
-observations_after_birth %>%
+sampling_day_df %>%
   mutate(Study = factor(Study, levels = study_order)) %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
@@ -383,25 +386,7 @@ observations_after_birth %>%
 ```
 ::::
 
-<details>
-<summary>More information about the warning message above.</summary>
-`ggplot` will give you warning messages when there are data in the dataframe that it cannot include in a plot due to missing information. In this warning, we can see that 7 observations in the data (representing samples taken) cannot be plotted because of non-finite values. Typically, this means there are observations with missing data. We can investigate what is missing with the following:
-
-:::: {.rcode}
-```{r}
-observations_after_birth %>%
-  # only keep rows that have NA values for Study, sampling_day, or Category
-  filter(is.na(Study) | is.na(sampling_day) | is.na(Category)) %>% 
-  # view a smaller subset of variables
-  select(Study, SampleID, PersonID, sampling_day, Category)
-```
-::::
-
-Here we can see that there are 6 observations from the Backhed study and one observation from the Shao study for which `sampling_day` is missing. Therefore, these observations cannot be included in the plot.
-
-</details>
-
-We will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name "sampling_timepoints_option1.png" within the "figures" folder.
+We will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name `sampling_timepoints_option1.png` within the `figures` folder.
 
 :::: {.rcode}
 ```{r, eval = FALSE}
@@ -415,7 +400,7 @@ In this histogram, we will set `scale = "fixed"` in `facet_wrap()` so that the y
 
 :::: {.rcode}
 ```{r, fig.width = 7, fig.height = 10}
-observations_after_birth %>%
+sampling_day_df %>%
   mutate(Study = reorder(Study, sampling_day)) %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
@@ -423,31 +408,13 @@ observations_after_birth %>%
   labs(x = "Days since birth at sampling",
        y = "Count",
        title = "Distribution of sampling day across studies") + 
-  scale_fill_viridis_d() + 
+  scale_fill_viridis_d(begin = 0.1, end = 0.8) + 
   theme_minimal() + 
   theme(plot.title = element_text(hjust = 0.5))
 ```
 ::::
 
-<details>
-<summary>More information about the warning message above.</summary>
-`ggplot` will give you warning messages when there are data in the dataframe that it cannot include in a plot due to missing information. In this warning, we can see that 7 observations in the data (representing samples taken) cannot be plotted because of non-finite values. Typically, this means there are observations with missing data. We can investigate what is missing with the following:
-
-:::: {.rcode}
-```{r}
-observations_after_birth %>%
-  # only keep rows that have NA values for Study, sampling_day, or Category
-  filter(is.na(Study) | is.na(sampling_day) | is.na(Category)) %>% 
-  # view a smaller subset of variables
-  select(Study, SampleID, PersonID, sampling_day, Category)
-```
-::::
-
-Here we can see that there are 6 observations from the Backhed study and one observation from the Shao study for which `sampling_day` is missing. Therefore, these observations cannot be included in the plot.
-
-</details>
-
-We will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name "sampling_timepoints_option2.png" within the "figures" folder.
+We will save this plot in the figures folder. **Include this code in your .qmd document** to save this plot with the file name `sampling_timepoints_option2.png` within the `figures` folder.
 
 :::: {.rcode}
 ```{r, eval = FALSE}
@@ -462,8 +429,8 @@ ggsave("figures/sampling_timepoints_option2.png", height = 6, width = 9)
 We could also compare sampling time points between studies using boxplots. These boxplots let us visualize the distribution of sampling time points for each study, emphasizing the range and middle 50% of each sampling times for each study. Note the differences in y-axis scales. The number of points in each facet represent the number of samples in that study. Read more about boxplots with jittered points in [this data visualization course](https://hutchdatascience.org/DataViz_Considerations/04_graph_info.html#boxplots-with-jitter). 
 
 ::: {.rcode}
-```{r, warning = FALSE}
-observations_after_birth %>%
+```{r}
+sampling_day_df %>%
     mutate(Study = factor(Study, levels = study_order)) %>%
     ggplot(aes(x = Category, y = sampling_day, fill = Category)) +
     geom_boxplot(outliers = FALSE, alpha = 0.6, width = 0.5) +
@@ -479,7 +446,7 @@ observations_after_birth %>%
 ```
 :::
 
-If you like these boxplots, you can **include the code above into your .qmd file** and save the plot to your figures folder. 
+If you like these boxplots, you can **include the code above into your .qmd file** and save the plot to your `figures` folder. 
 
 ::: {.rcode}
 ```{r, eval = FALSE}
@@ -498,7 +465,7 @@ Are there patterns in the sampling time points can be more easily identified fro
 
 </details>
 
-Now that we have plotted patterns in sample size and sampling time points, go back through your file "03_visualize_study_cohorts.qmd" to make sure that it contains all relevant code to make the plots, and that there are explanations before each code chunk. 
+Now that we have plotted patterns in sample size and sampling time points, go back through your file `03_visualize_study_cohorts.qmd` to make sure that it contains all relevant code to make the plots, and that there are explanations before each code chunk. 
 
 Once you've done this, make another commit for these edits. 
 
@@ -506,11 +473,14 @@ Once you've done this, make another commit for these edits.
 
 #### GitHub Desktop 
 
-Navigate back to GitHub Desktop. Stage "03_visualize_study_cohorts.qmd" and whichever of the figures you have saved ("figures/sampling_timepoints_option1.png", "figures/sampling_timepoints_option2.png", and/or "figures/sampling_timepoints_boxplots.png"), then add an informative commit message and commit these files. 
+Navigate back to GitHub Desktop. 
+
+- [ ] Stage `03_visualize_study_cohorts.qmd` and whichever of the figures you have saved (`figures/sampling_timepoints_option1.png`, `figures/sampling_timepoints_option2.png`, and/or `figures/sampling_timepoints_boxplots.png`).
+- [ ] Add an informative commit message and commit these files. 
 
 #### Command line 
 
-First, stage "03_visualize_study_cohorts.qmd" and whichever of the figures you have saved ("figures/sampling_timepoints_option1.png", "figures/sampling_timepoints_option2.png", and/or "figures/sampling_timepoints_boxplots.png"). 
+First, stage `03_visualize_study_cohorts.qmd` and whichever of the figures you have saved (`figures/sampling_timepoints_option1.png`, `figures/sampling_timepoints_option2.png`, and/or `figures/sampling_timepoints_boxplots.png`). 
 
 :::: {.shell}
 ```bash
@@ -522,12 +492,12 @@ Next, add a commit with an appropriate commit message.
 
 :::: {.shell}
 ```bash
-git commit -m "Add plot of sampling time points to '03_visualize_study_cohorts' and save plot in figures folder."
+git commit -m "Add plot of sampling time points and save plot in figures folder."
 ```
 ::::
 
 :::
 
-Great job! You have now made plots to compare the study designs of the studies within the meta-analysis, and made several commits with informative messages that create a history of this analysis. 
+Great job! You have now made plots to compare the study designs of the studies within the meta-analysis, and made several commits with informative messages that track the history of this analysis. 
 
 ***

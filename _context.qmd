@@ -6,7 +6,7 @@ Videos or images may be helpful so this includes an example of embedding a video
 # **Context**
 ***
 
-Before we explore version control, we will explore some of the scientific context for the data and methods we will encounter in this case study.
+Before we explore {{< glossary "version control" >}}, we will explore some of the scientific context for the data and methods we will encounter in this case study.
 
 ### What is a microbiome?
 
@@ -36,6 +36,6 @@ One approach to meta-analysis combines summary results from each study. Another 
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e878f6c4a7_0_0#slide=id.g3e878f6c4a7_0_0")
 ```
 
-@wang2021metagenomic used the second meta-analysis approach. They pulled the raw data from eight {{< glossary "longitudinal">}} studies of infant and mother gut microbiomes, processed all samples with a unified protocol, and conducted analyses on the pooled dataset while accounting for differences between studies. However, the success of this approach depends on how comparable the original studies are. This motivates our exploration of the similarities and differences between the various study cohorts. We want to understand how comparable these studies are, both in terms of sample size (how many samples are in each study?) and in terms of their longitudinal study design (when in the lifespan of the infants were samples taken?). While differences in study designs would not make a meta-analysis of these studies invalid, they can influence how analyses should be conducted and how results should be interpreted. Accounting for these differences can reduce the risk that conclusions primarily reflect the largest cohorts and help minimize confounding arising from differences in the age ranges and developmental stages represented across studies.
+@wang2021metagenomic, mentioned above, used the second meta-analysis approach. They pulled the raw data from eight {{< glossary "longitudinal">}} studies of infant and mother gut microbiomes, processed all samples with a unified protocol, and conducted analyses on the pooled dataset while accounting for differences between studies. However, the success of this approach depends on how comparable the original studies are. This motivates our exploration of the similarities and differences between the various study cohorts. We want to understand how comparable these studies are, both in terms of sample size (how many samples are in each study?) and in terms of their longitudinal study design (when in the lifespan of the infants were samples taken?). While differences in study designs would not make a meta-analysis of these studies invalid, they can influence how analyses should be conducted and how results should be interpreted. Accounting for these differences can reduce the risk that conclusions primarily reflect the largest cohorts and help minimize confounding due to differences in the age ranges and developmental stages represented across studies.
 
 ***

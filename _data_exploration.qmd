@@ -38,7 +38,7 @@ Numeric data types are used for data that we'd like to do math with (such as `4`
 </details>
 <details><summary>Answer</summary>
 
-The variable `Sampling, day` is saved as a character, however seems to contain numerical data. In the [Data Wrangling section](https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling) we will recode `Sampling, day` as a numeric variable. 
+The variable `Sampling, day` is encoded with character values, however seems to contain numerical data. In the [Data Wrangling section](https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling) we will recode `Sampling, day` as a numeric variable. 
 
 </details>
 ::::

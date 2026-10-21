@@ -40,9 +40,8 @@ sample_counts %>%
 #### Sampling time plot option 1
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 7, fig.height = 10}
-observations_after_birth <- clean_metadata %>%
-  filter(!sampling_before_birth) 
-observations_after_birth %>%
+sampling_day_df <- clean_metadata %>% filter(!is.na(sampling_day)) 
+sampling_day_df %>%
     mutate(Study = factor(Study, levels = study_order)) %>%
     ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
     geom_histogram(position = position_dodge(), bins = 20) +
@@ -58,9 +57,8 @@ observations_after_birth %>%
 #### Sampling time plot option 2
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 7, fig.height = 10}
-observations_after_birth <- clean_metadata %>%
-  filter(!sampling_before_birth) 
-observations_after_birth %>%
+sampling_day_df <- clean_metadata %>% filter(!is.na(sampling_day)) 
+sampling_day_df %>%
   mutate(Study = reorder(Study, sampling_day)) %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
@@ -90,13 +88,9 @@ clean_metadata %>%
             # each study and category 
             n_time = n_distinct(sampling_paper),
             # calculate first sampling day for each study and category
-            min_time = min(sampling_day[!sampling_before_birth], na.rm = TRUE),
+            min_time = min(sampling_day, na.rm = TRUE),
             # calculate last sampling day for each study and category
-            max_time = max(sampling_day[!sampling_before_birth], na.rm = TRUE),
-            # report if any samples were taken during pregnancy, and when 
-            pregnancy_time = ifelse(any(sampling_before_birth), 
-                                    median(sampling_day[sampling_before_birth]),
-                                    NA),
+            max_time = max(sampling_day, na.rm = TRUE),
             .groups = "drop")
 ```
 :::
@@ -106,9 +100,9 @@ clean_metadata %>%
 Question opportunity
 ::::
 ::::{.inner_block}
-Recall one of the main questions of this case study: In this meta-analysis of infant git microbiome samples, how do the original studies compare in their sampling designs? Specifically, how do they compare in terms of the number of samples and the sampling timeline?
+Recall one of the main questions of this case study: In this meta-analysis of infant gut microbiome samples, how do the original studies compare in their sampling designs? Specifically, how do they compare in terms of the number of samples and the sampling timeline?
 
-Use the two plots you've made and the table above to make a few observations that compare and contrast the sampling designs of the original studies. Include these observations at the end of your "03_visualize_study_cohorts.qmd" document. 
+Use the two plots you've made and the table above to make a few observations that compare and contrast the sampling designs of the original studies. Include these observations at the end of your `03_visualize_study_cohorts.qmd` document. 
 
 <details><summary>Answer</summary>
 
@@ -123,7 +117,7 @@ Possible observations from the plots:
 ::::
 :::
 
-Since you've performed the requested analysis, make sure to document any new files in this repository in the README.md file. Specifically, describe what the file "03_visualize_study_cohorts.qmd" does, and describe the two plots that are now saved in the figures folder. After doing this, make another commit and {{< glossary "push">}} your work. 
+Since you've performed the requested analysis, make sure to document any new files in this repository in the README.md file. Specifically, describe what the file `03_visualize_study_cohorts.qmd` does, and describe the two plots that are now saved in the figures folder. After doing this, make another commit and {{< glossary "push">}} your work. 
 
 ::: {.panel-tabset}
 
@@ -131,13 +125,14 @@ Since you've performed the requested analysis, make sure to document any new fil
 
 Navigate back to GitHub Desktop. 
 
-- [ ] Stage "03_visualize_study_cohorts.qmd" and "README.md". 
+- [ ] Stage `03_visualize_study_cohorts.qmd` and `README.md`. 
 - [ ] Add an appropriate commit message and commit. 
 - [ ] Click "Push origin", to push these changes that you've made locally to your remote repository. 
+- [ ] Open the repository on GitHub and confirm that these changes are now visible in the remote repository. 
 
 #### Command line 
 
-We need to first stage "03_visualize_study_cohorts.qmd" and "README.md".
+We need to first stage `03_visualize_study_cohorts.qmd` and `README.md`.
 
 :::: {.shell}
 
@@ -157,15 +152,16 @@ git commit -m "Draw conclusions and document new files in README"
 
 ::::
 
-Finally, push these changes that you've made locally to your remote repository. Because this is your first time pushing from a new branch, you will need to tell Git where you want to push to, adding the flag `--set-upstream` or `-u` followed by `origin` and the name of the branch that you've been working on. 
+Push the changes that you've made locally to your remote repository. Because this is your first time pushing from a new branch, you will need to tell Git where you want to push to, adding the flag `--set-upstream` or `-u` followed by `origin` and the name of the branch that you've been working on. 
 
 :::: {.shell}
 
 ```bash
 git push --set-upstream origin study_comparison
 ```
-
 ::::
+
+Finally, open the repository on GitHub and confirm that these changes are now visible in the remote repository.
 
 :::
 
