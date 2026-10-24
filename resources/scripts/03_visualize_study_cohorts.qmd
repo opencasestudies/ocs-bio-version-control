@@ -1,7 +1,6 @@
 ---
 title: "Study Comparison"
 editor: visual
-draft: true
 ---
 
 In this document, we compare the study designs of the eight infant gut microbiome studies that Wang et al. use in their [meta-analysis](https://pubmed.ncbi.nlm.nih.gov/33960282/).
@@ -127,4 +126,3 @@ Based on the plots and the summary table, we can make a few observations about t
 - Wampach sampled only in the first days after birth, Chu, Parnanen, Ferretti, and Yassour sampled only in the first six months since birth, and Asnicar, Backhed, and Shao took samples in the first year and a half since birth.
 
 - Some studies appear to have sampled at specific time points (Asnicar, Chu, Wampach, Parnanen, and Ferretti) and other studies appear to have sampled at a wider variety of timepoints (Yassour, Backhed, Shao).
-
