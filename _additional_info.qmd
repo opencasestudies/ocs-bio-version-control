@@ -11,7 +11,7 @@ Use this section to provide any additional information or resources on the topic
 - [Git documentation](https://git-scm.com/): Git's documentation website
 - [Install Git](https://github.com/git-guides/install-git): Git installation instructions
 - [GitHub](https://github.com/): GitHub website 
-  - [GitHub - Signup](https://github.com/signup): site to create a GitHub account
+  - [GitHub - Sign up](https://github.com/signup): site to create a GitHub account
   - [GitHub - Create new repository](github.com/new): site to create a new GitHub repository 
   - [GitHub - Personal access tokens](https://github.com/settings/tokens): site to create a GitHub token
 - [Download GitHub Desktop](https://desktop.github.com/download/): site to download GitHub Desktop 
@@ -41,7 +41,7 @@ Use this section to provide any additional information or resources on the topic
 - [The Unix Shell: Key Points](https://swcarpentry.github.io/shell-novice/key-points.html): resource for command line basics
 - [Introduction to R](https://hutchdatascience.org/Intro_to_R/): an online course providing an introduction to R
 - [Tidyverse](https://tidyverse.org/): Documentation for the `tidyverse` suite of R packages
-- [INtroduction tot he viridis color maps](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html): Documentation for the `viridis` color maps for color-deficiency friendly visualizations
+- [Introduction tot he viridis color maps](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html): Documentation for the `viridis` color maps for color-deficiency friendly visualizations
 - [Markdown Guide](https://www.markdownguide.org/): a guide to the Markdown language 
 - [Scientific Readme Template](https://gist.github.com/danielecook/94272f387d3366070d2546e2eadefe57): template for make a README for a scientific or data analysis project
 
