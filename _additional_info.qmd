@@ -8,12 +8,15 @@ Use this section to provide any additional information or resources on the topic
 ## **Helpful Links**
 ***
 
+- [Git documentation](https://git-scm.com/): Git's documentation website
+- [Install Git](https://github.com/git-guides/install-git): Git installation instructions
+- [GitHub](https://github.com/): GitHub website 
+  - [GitHub - Sign up](https://github.com/signup): site to create a GitHub account
+  - [GitHub - Create new repository](github.com/new): site to create a new GitHub repository 
+  - [GitHub - Personal access tokens](https://github.com/settings/tokens): site to create a GitHub token
+- [Download GitHub Desktop](https://desktop.github.com/download/): site to download GitHub Desktop 
 - [happy git with R](https://happygitwithr.com): online book that covers most relevant topics for using Git and GitHub with R
 - [How to Use Git/GitHub with R](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r): blog post about getting Git and GitHub set up and working with RStudio. This uses the built-in Git GUI in RStudio instead of GitHub Desktop
-- [Dangit, Git!?!](https://dangitgit.com/en): brief description of some common Git errors and how to resolve them
-- [Git Tutorial: How to Fix 18 Common Mistakes](https://www.creative-tim.com/blog/educational-tech/git-tutorial-fix-common-mistakes/): another collection of common Git errors and their fixes
-- [Intro to reproducibility in cancer informatics](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/): short course on reproducibility for scientific projects, includes Git and GitHub in chapter 4 and provides other resources on reproducibility
-- [Advanced reproducibility in cancer informatics](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/): short course on more advanced reproducibility for scientific projects, includes GitHub in chapter 3 and provides other resources on reproducibility
 - [Carpentries](https://carpentries.org):
   - [Install Git](https://carpentries.github.io/workshop-template/install_instructions/): instructions on installing Git (and other types of software)
   - [Set up Git](https://swcarpentry.github.io/git-novice/02-setup.html): instructions on setting up Git
@@ -21,7 +24,26 @@ Use this section to provide any additional information or resources on the topic
 - [Hands on introduction to Git and GitHub](https://training.arcadiascience.com/workshops/20220920-intro-to-git-and-github/lesson/): another introduction to Git and GitHub, covering some overlapping material and some additional material
 - [Contributing to Galaxy Training Network with GitHub](https://training.galaxyproject.org/training-material/topics/contributing/tutorials/github-contribution/tutorial.html): tutorial on how to contribute to an open source project with GitHub
 - [GitHub cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf): cheatsheet with Git commands that can be used in the command line
+- [Dangit, Git!?!](https://dangitgit.com/en): brief description of some common Git errors and how to resolve them
+- [Git Tutorial: How to Fix 18 Common Mistakes](https://www.creative-tim.com/blog/educational-tech/git-tutorial-fix-common-mistakes/): another collection of common Git errors and their fixes
+- [How to Write a Git Commit Message](https://cbea.ms/git-commit/): Advice for writing commit messages
+- [Stacked pull requests](https://docs.github.com/en/pull-requests/how-tos/stacked-pull-requests): GitHub documentation about stacked pull requests
+- [Git Large File Storage](https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage): GitHub documentation on Git Large File Storage
+- [Git Stash](https://git-scm.com/docs/git-stash): Git documentation on stashing changes 
+- [Inviting collaborators to a personal repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository): GitHub documentation on adding collaborators to repositories
+- [GitHub issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues): GitHub documentation on using issues
+- [Intro to reproducibility in cancer informatics](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/): short course on reproducibility for scientific projects, includes Git and GitHub in chapter 4 and provides other resources on reproducibility
+- [Advanced reproducibility in cancer informatics](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/): short course on more advanced reproducibility for scientific projects, includes GitHub in chapter 3 and provides other resources on reproducibility
+- [Ethical Data Handling](https://hutchdatascience.org/Ethical_Data_Handling_for_Cancer_Research/): short course about data handling for clinical data
+- [Proactive Data Management and Sharing](https://hutchdatascience.org/Proactive_Data_Management_and_Sharing/): short course about data management and sharing for clinical data
+- [Considerations for Data Visualization](https://hutchdatascience.org/DataViz_Considerations/): short course about data visualization
 - [Merge vs. Rebase vs. Fast-Forward: Mastering Git Integration Strategies](https://medium.com/@Spritan/merge-vs-rebase-vs-fast-forward-mastering-git-integration-strategies-3ba8e652d93e): article that explains the differences between merging, rebasing, and fast-forwarding, as well as when to use each of them
+- [The Unix Shell: Key Points](https://swcarpentry.github.io/shell-novice/key-points.html): resource for command line basics
+- [Introduction to R](https://hutchdatascience.org/Intro_to_R/): an online course providing an introduction to R
+- [Tidyverse](https://tidyverse.org/): documentation for the `tidyverse` suite of R packages
+- [Introduction tot he viridis color maps](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html): documentation for the `viridis` color maps for color-deficiency friendly visualizations
+- [Markdown Guide](https://www.markdownguide.org/): a guide to the Markdown language 
+- [Scientific Readme Template](https://gist.github.com/danielecook/94272f387d3366070d2546e2eadefe57): template for make a README for a scientific or data analysis project
 
 <!--
 Automatically include the packages table from _packages.qmd?

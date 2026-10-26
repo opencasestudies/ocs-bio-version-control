@@ -28,6 +28,7 @@ csv
 custimization
 cwrigh
 Dangit
+DataViz
 Dockerfile
 Dockerhub
 dplyr
@@ -52,6 +53,8 @@ Git's
 glyphicons
 GPT
 HTTPS
+https
+hutchdatascience
 hw
 iconpacks
 interoperable
@@ -119,6 +122,7 @@ uncheck
 Unsplash
 untracked
 variational
+viridis
 Wampach
 www
 xlsx
