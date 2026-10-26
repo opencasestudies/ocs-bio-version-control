@@ -34,9 +34,9 @@ Use this section to provide any additional information or resources on the topic
 - [GitHub issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues): GitHub documentation on using issues
 - [Intro to reproducibility in cancer informatics](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/): short course on reproducibility for scientific projects, includes Git and GitHub in chapter 4 and provides other resources on reproducibility
 - [Advanced reproducibility in cancer informatics](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/): short course on more advanced reproducibility for scientific projects, includes GitHub in chapter 3 and provides other resources on reproducibility
-- [https://hutchdatascience.org/Ethical_Data_Handling_for_Cancer_Research/](Ethical Data Handling): short course about data handling for clinical data
-- [https://hutchdatascience.org/Proactive_Data_Management_and_Sharing/](Proactive Data Management and Sharing): short course about data management and sharing for clinical data
-- [https://hutchdatascience.org/DataViz_Considerations/](Considerations for Data Visualization): short course about data visualization
+- [Ethical Data Handling](https://hutchdatascience.org/Ethical_Data_Handling_for_Cancer_Research/): short course about data handling for clinical data
+- [Proactive Data Management and Sharing](https://hutchdatascience.org/Proactive_Data_Management_and_Sharing/): short course about data management and sharing for clinical data
+- [Considerations for Data Visualization](https://hutchdatascience.org/DataViz_Considerations/): short course about data visualization
 - [Merge vs. Rebase vs. Fast-Forward: Mastering Git Integration Strategies](https://medium.com/@Spritan/merge-vs-rebase-vs-fast-forward-mastering-git-integration-strategies-3ba8e652d93e): article that explains the differences between merging, rebasing, and fast-forwarding, as well as when to use each of them
 - [The Unix Shell: Key Points](https://swcarpentry.github.io/shell-novice/key-points.html): resource for command line basics
 - [Introduction to R](https://hutchdatascience.org/Intro_to_R/): an online course providing an introduction to R
