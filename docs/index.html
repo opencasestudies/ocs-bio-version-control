@@ -1821,7 +1821,7 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 <ul>
 <li>file names are concise but informative</li>
 <li>there is one central folder to contain all files for each project</li>
-<li>there is a central file (often called the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button>) that explains what files are included and how to use them to run the analysis</li>
+<li>there is a central file (often called the <button class="glossary"><span class="def"></span>README</button>) that explains what files are included and how to use them to run the analysis</li>
 <li>there are folders to keep similar files together
 <ul>
 <li>data folder (this could be split into raw data and processed data)</li>
@@ -2015,7 +2015,7 @@ Examples may include: how identifiable (or re-identifiable) is your data? cell l
 </ol></li>
 <li><p>It is important to carefully review files before staging and committing changes to ensure you aren’t pushing anything sensitive to GitHub, such as credentials, keys, access tokens, passwords, etc. Some tools automatically create environmental files containing credentials (these files have names like <code>.env</code>). Make sure that these files are included in your <code>.gitignore</code> and are never staged, committed, or pushed to GitHub.</p></li>
 <li><p>Make sure to keep comprehensive documentation for scientific projects to avoid losing track of which data generated a set of results or figure, or which version of a software you used in an analysis. Version control can help you do this. Reproducible science is ethical science: without a transparent and well-documented process, others in the scientific community cannot easily verify or trust your results.</p></li>
-<li><p>For projects with large teams, it can be challenging to track individual contributions. <button class="glossary"><span class="def">A tool that records changes to a project over time</span>Version control</button> histories can be helpful to see who worked on each component on an analysis, in order to fairly acknowledge each contributor’s work. You can read <a href="https://link.springer.com/article/10.1007/s11948-014-9562-8">this paper</a> for more ethical considerations related to large team science.</p></li>
+<li><p>For projects with large teams, it can be challenging to track individual contributions. <button class="glossary"><span class="def">A tool that records changes to a project over time</span>Version control</button> histories can be helpful to see who worked on each component on an analysis, in order to fairly acknowledge each contributor’s work. In <a href="https://link.springer.com/article/10.1007/s11948-014-9562-8">this paper</a>, <span class="citation" data-cites="petersen2014quantitative">Petersen, Pavlidis, and Semendeferi (<a href="#ref-petersen2014quantitative" role="doc-biblioref">2014</a>)</span> discuss additional ethical considerations related to large team science.</p></li>
 <li><p>When performing a <button class="glossary"><span class="def">An analysis of data from a collection of studies targeting a common research question</span>meta-analysis</button> such as the one described in this case study, it is important to be transparent about inclusion and exclusion criteria for studies and for individual observations within studies. Criteria should be determined before analysis, to avoid choosing studies that will support a desired conclusion. It is also important to properly cite the original studies and recognize the groups that collected the data.</p></li>
 </ol>
 <hr>
@@ -2082,7 +2082,7 @@ At the end of this section, save incremental data so that users can pause and co
 </ul>
 <p>We will start by taking a look at the data.</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Take a look at the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button> file to determine which file contains commands that can read in the raw data.</label></li>
+<li><label><input type="checkbox">Take a look at the <button class="glossary"><span class="def"></span>README</button> file to determine which file contains commands that can read in the raw data.</label></li>
 <li><label><input type="checkbox">Open this file and run the code.</label></li>
 </ul>
 <details>
@@ -2227,7 +2227,7 @@ At the end of this section, save incremental data so that users can pause and co
 <hr>
 <p>Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses.</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Again, use the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button> to identify which file contains commands that wrangle the data.</label></li>
+<li><label><input type="checkbox">Again, use the <button class="glossary"><span class="def"></span>README</button> to identify which file contains commands that wrangle the data.</label></li>
 <li><label><input type="checkbox">Open this file and run the code.</label></li>
 </ul>
 <details>
@@ -4274,12 +4274,17 @@ Use this section to provide any additional information or resources on the topic
 <h2 class="anchored" data-anchor-id="helpful-links"><strong>Helpful Links</strong></h2>
 <hr>
 <ul>
+<li><a href="https://git-scm.com/">Git documentation</a>: Git’s documentation website</li>
+<li><a href="https://github.com/git-guides/install-git">Install Git</a>: Git installation instructions</li>
+<li><a href="https://github.com/">GitHub</a>: GitHub website
+<ul>
+<li><a href="https://github.com/signup">GitHub - Sign up</a>: site to create a GitHub account</li>
+<li><a href="github.com/new">GitHub - Create new repository</a>: site to create a new GitHub repository</li>
+<li><a href="https://github.com/settings/tokens">GitHub - Personal access tokens</a>: site to create a GitHub token</li>
+</ul></li>
+<li><a href="https://desktop.github.com/download/">Download GitHub Desktop</a>: site to download GitHub Desktop</li>
 <li><a href="https://happygitwithr.com">happy git with R</a>: online book that covers most relevant topics for using Git and GitHub with R</li>
 <li><a href="https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r">How to Use Git/GitHub with R</a>: blog post about getting Git and GitHub set up and working with RStudio. This uses the built-in Git GUI in RStudio instead of GitHub Desktop</li>
-<li><a href="https://dangitgit.com/en">Dangit, Git!?!</a>: brief description of some common Git errors and how to resolve them</li>
-<li><a href="https://www.creative-tim.com/blog/educational-tech/git-tutorial-fix-common-mistakes/">Git Tutorial: How to Fix 18 Common Mistakes</a>: another collection of common Git errors and their fixes</li>
-<li><a href="https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/">Intro to reproducibility in cancer informatics</a>: short course on reproducibility for scientific projects, includes Git and GitHub in chapter 4 and provides other resources on reproducibility</li>
-<li><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/">Advanced reproducibility in cancer informatics</a>: short course on more advanced reproducibility for scientific projects, includes GitHub in chapter 3 and provides other resources on reproducibility</li>
 <li><a href="https://carpentries.org">Carpentries</a>:
 <ul>
 <li><a href="https://carpentries.github.io/workshop-template/install_instructions/">Install Git</a>: instructions on installing Git (and other types of software)</li>
@@ -4289,7 +4294,26 @@ Use this section to provide any additional information or resources on the topic
 <li><a href="https://training.arcadiascience.com/workshops/20220920-intro-to-git-and-github/lesson/">Hands on introduction to Git and GitHub</a>: another introduction to Git and GitHub, covering some overlapping material and some additional material</li>
 <li><a href="https://training.galaxyproject.org/training-material/topics/contributing/tutorials/github-contribution/tutorial.html">Contributing to Galaxy Training Network with GitHub</a>: tutorial on how to contribute to an open source project with GitHub</li>
 <li><a href="https://education.github.com/git-cheat-sheet-education.pdf">GitHub cheatsheet</a>: cheatsheet with Git commands that can be used in the command line</li>
+<li><a href="https://dangitgit.com/en">Dangit, Git!?!</a>: brief description of some common Git errors and how to resolve them</li>
+<li><a href="https://www.creative-tim.com/blog/educational-tech/git-tutorial-fix-common-mistakes/">Git Tutorial: How to Fix 18 Common Mistakes</a>: another collection of common Git errors and their fixes</li>
+<li><a href="https://cbea.ms/git-commit/">How to Write a Git Commit Message</a>: Advice for writing commit messages</li>
+<li><a href="https://docs.github.com/en/pull-requests/how-tos/stacked-pull-requests">Stacked pull requests</a>: GitHub documentation about stacked pull requests</li>
+<li><a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage">Git Large File Storage</a>: GitHub documentation on Git Large File Storage</li>
+<li><a href="https://git-scm.com/docs/git-stash">Git Stash</a>: Git documentation on stashing changes</li>
+<li><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository">Inviting collaborators to a personal repository</a>: GitHub documentation on adding collaborators to repositories</li>
+<li><a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues">GitHub issues</a>: GitHub documentation on using issues</li>
+<li><a href="https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/">Intro to reproducibility in cancer informatics</a>: short course on reproducibility for scientific projects, includes Git and GitHub in chapter 4 and provides other resources on reproducibility</li>
+<li><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/">Advanced reproducibility in cancer informatics</a>: short course on more advanced reproducibility for scientific projects, includes GitHub in chapter 3 and provides other resources on reproducibility</li>
+<li><a href="https://hutchdatascience.org/Ethical_Data_Handling_for_Cancer_Research/">Ethical Data Handling</a>: short course about data handling for clinical data</li>
+<li><a href="https://hutchdatascience.org/Proactive_Data_Management_and_Sharing/">Proactive Data Management and Sharing</a>: short course about data management and sharing for clinical data</li>
+<li><a href="https://hutchdatascience.org/DataViz_Considerations/">Considerations for Data Visualization</a>: short course about data visualization</li>
 <li><a href="https://medium.com/@Spritan/merge-vs-rebase-vs-fast-forward-mastering-git-integration-strategies-3ba8e652d93e">Merge vs.&nbsp;Rebase vs.&nbsp;Fast-Forward: Mastering Git Integration Strategies</a>: article that explains the differences between merging, rebasing, and fast-forwarding, as well as when to use each of them</li>
+<li><a href="https://swcarpentry.github.io/shell-novice/key-points.html">The Unix Shell: Key Points</a>: resource for command line basics</li>
+<li><a href="https://hutchdatascience.org/Intro_to_R/">Introduction to R</a>: an online course providing an introduction to R</li>
+<li><a href="https://tidyverse.org/">Tidyverse</a>: documentation for the <code>tidyverse</code> suite of R packages</li>
+<li><a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html">Introduction tot he viridis color maps</a>: documentation for the <code>viridis</code> color maps for color-deficiency friendly visualizations</li>
+<li><a href="https://www.markdownguide.org/">Markdown Guide</a>: a guide to the Markdown language</li>
+<li><a href="https://gist.github.com/danielecook/94272f387d3366070d2546e2eadefe57">Scientific Readme Template</a>: template for make a README for a scientific or data analysis project</li>
 </ul>
 <!--
 Automatically include the packages table from _packages.qmd?
@@ -4448,6 +4472,9 @@ DerSimonian, Rebecca, and Nan Laird. 1986. <span>“Meta-Analysis in Clinical Tr
 </div>
 <div id="ref-han2026host" class="csl-entry" role="listitem">
 Han, Yu, Zian Wang, Jiahao Xie, Guangdi Yang, Monong Su, Siqi Wang, Mengxin Yang, et al. 2026. <span>“Host–Gut Microbiota Interactions in Health and Disease: Mechanisms and Intervention Strategies.”</span> <em>Frontiers in Microbiology</em> 17: 1785607.
+</div>
+<div id="ref-petersen2014quantitative" class="csl-entry" role="listitem">
+Petersen, Alexander M, Ioannis Pavlidis, and Ioanna Semendeferi. 2014. <span>“A Quantitative Perspective on Ethics in Large Team Science.”</span> <em>Science and Engineering Ethics</em> 20 (4): 923–45.
 </div>
 <div id="ref-wang2021metagenomic" class="csl-entry" role="listitem">
 Wang, Shaopu, Shuqin Zeng, Muireann Egan, Paul Cherry, Conall Strain, Emilene Morais, Patrick Boyaval, et al. 2021. <span>“Metagenomic Analysis of Mother-Infant Gut Microbiome Reveals Global Distinct and Shared Microbial Signatures.”</span> <em>Gut Microbes</em> 13 (1): 1911571.
