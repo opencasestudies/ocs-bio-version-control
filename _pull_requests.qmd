@@ -18,6 +18,10 @@ In the previous section, you worked locally to make the visualizations that Coll
 
 This set of steps will bring you to a page where you can make your pull request. The first thing to note is the panel at the top of the page, which gives you the base branch (this will by default be `main`) and the compare branch (this will be the branch you've been working on, in this case `study_comparison`). There is an arrow, showing that you are trying to merge the updates that you've made in the compare branch into the base branch. 
 
+```{r, fig.alt="Example open pull request page", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.h57fc035897434697_0_0&pli=1#slide=id.h57fc035897434697_0_0")
+```
+
 There are a few useful components of this page in which you make a pull request:
 
 - You have a spot to add a title and a description. 
@@ -69,11 +73,19 @@ Imagine that you submitted a pull request, you or your collaborator has decided 
 
 If you close a pull request without merging it, this means that you've decided not to integrate the changes from the compare branch into the base branch. This may happen if you decide to go in another direction with an analysis. You can close a pull request by clicking the "Close pull request" button at the bottom of the pull request page. It is important to close pull requests that are no longer active so that the set of open pull requests accurately represents the current state of the project. 
 
+```{r, fig.alt="Pull request page", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("hhttps://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h175e18de373b618c_0_0#slide=id.h175e18de373b618c_0_0")
+```
+
+The image above shows what the pull requests page might look like for this repository, if there were another open pull request for a different component of the project, and if there were previously merged or closed pull requests. Like the issues page, the pull requests page for a repository provides a searchable history of works in progress (open pull requests), and completed tasks (closed pull requests). This can be helpful to you, a collaborator, or someone interested in the process of your scientific project, to understand the major contributions to the repository. 
+
 ## Additional notes on pull requests 
 ***
 
 While your pull request is open, any additional changes that you commit and push to this branch will be automatically added to the pull request. 
 
-It is recommended to not let your pull requests get too large. A pull request should be a set of changes that address a certain component of an analysis. Try to avoid combining multiple parts of a project in a single pull request. If you decide to start working on a different part of a project, you can create a new branch for this, and eventually submit a new pull request from that branch. For example, in this project, if you wanted to change how the data is imported, you would want to do this in a separate pull request from the one in which you create data visualizations to compare the study designs. This is a great way to stay organized for complex projects that have different components happening in parallel. Additionally, using more branches and smaller pull requests, each focused on a single set of related changes, can make it easier to review the pull requests and to identify when changes were introduced to a project. Changes to code that depend on each other but address different issues can be addressed in a series of "stacked" pull requests (check out [GitHub's documentation about stacked pull requests](https://docs.github.com/en/pull-requests/how-tos/stacked-pull-requests) for more information).
+A pull request should be a set of changes that address a certain component of an analysis. Try to avoid combining multiple parts of a project in a single pull request. If you decide to start working on a different part of a project, you can create a new branch for this, and eventually submit a new pull request from that branch. 
+
+Separating different parts of a project into multiple branches and pull requests is a good way to stay organized for complex projects that have multiple components in development at the same time. Using multiple branches and focused pull requests, each including a set of related commits, can make it easier to review the pull requests and to identify when and why changes were introduced to a project. Changes to files that depend on each other but relate to different issues can be addressed in a series of "stacked" pull requests (check out [GitHub's documentation about stacked pull requests](https://docs.github.com/en/pull-requests/how-tos/stacked-pull-requests) for more information).
 
 ***
