@@ -344,7 +344,6 @@ details {
 
 /* Style the clickable summary line */
 details summary {
-  font-weight: bold;
   cursor: pointer;
   color: black;
 }
