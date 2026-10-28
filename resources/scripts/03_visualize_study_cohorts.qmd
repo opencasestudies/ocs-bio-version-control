@@ -1,7 +1,6 @@
 ---
 title: "Study Comparison"
 editor: visual
-render: false
 ---
 
 In this document, we compare the study designs of the eight infant gut microbiome studies that Wang et al. use in their [meta-analysis](https://pubmed.ncbi.nlm.nih.gov/33960282/).
