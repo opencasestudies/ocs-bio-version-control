@@ -90,6 +90,36 @@ In some situations, you may be a code reviewer rather than a code author. When r
 - Make comments or suggestions related to specific files that are changed in the pull request. You can do this by opening the pull request page, navigating to the "Files changed" tab, and identifying specific lines within files that you would like to comment on or suggest changes to. As you move your cursor along the lines in a file, you should see a blue box with a plus pop up. You can click this box next to the line that you want to comment on or suggest changes to, and drag down to include all lines related to your comment. By default, this will open a box where you can leave a comment. If you would instead like to directly suggest a change to the file, you can click the button that looks like a document with a plus and a minus sign within it. If you suggest changes, the code author will have the opportunity to commit individual suggestions, or add multiple suggestions to a "batch" of suggestions, and commit them all at once. When you comment or suggest changes within individual files, these comments or suggestions will also appear on the main pull request page as part of the conversation. 
 - Work on the pull request branch locally and push changes directly to the pull request. You should only do this if you have discussed this previously with the code author, and they are ok with you directly editing their pull request. To do this, you can follow the following directions:
 
+::: {.panel-tabset}
+
+#### GitHub Desktop 
+
+From GitHub Desktop:
+
+- [ ] Click "Fetch origin" in the upper bar in the GitHub Desktop window. 
+
+Now, you should be able to see a window in GitHub Desktop that corresponds with `my-first-repository`. If you click on history, you can see a list of commits to this repository. 
+
+
+#### Command line 
+
+You were already asked to clone this repository in the last section, in order to trigger Git's login credentials. If you haven't done that, open the command line and enter the following, replacing "your_username" with your username:
+
+:::: {.shell}
+```bash
+git clone https://github.com/your_username/my-first-repository.git  
+```
+::::
+
+You will know that this has worked if you see the following output:
+
+:::: {.shell}
+```
+Cloning into 'my-first-repository'...
+```
+::::
+
+:::
 
 from advanced reproducibility:
 - talk about literally how to review
