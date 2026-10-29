@@ -26,7 +26,7 @@ This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 [
 
 To cite this case study:
 
-Teichman, Sarah and Wright, Carrie. (2026). [https://github.com/opencasestudies/ocs-bio-version-control/](https://github.com/opencasestudies/ocs-bio-version-control/). Making version-controlled reproducible analyses (Version v1.0.0).
+Teichman, Sarah and Isaac, Kathryn J, and Hoffman, Ava and Wright, Carrie. (2026). [https://github.com/opencasestudies/ocs-bio-version-control/](https://github.com/opencasestudies/ocs-bio-version-control/). Making version-controlled reproducible analyses (Version v1.0.0).
 
 ### Funding
 
@@ -78,7 +78,7 @@ The main questions in this case study are the following:
 
 1. How does the use of version control contribute to transparent and reproducible science?
 1. How can Git and GitHub be used to facilitate collaboration on a research project?
-1. In this meta-analysis of infant git microbiome samples, how do the original studies compare in their sampling designs?
+1. In this meta-analysis of infant gut microbiome samples, how do the original studies compare in their sampling designs?
 
 ### Learning Objectives
 
