@@ -79,6 +79,30 @@ ottrpal::include_slide("hhttps://docs.google.com/presentation/d/1QjS4NwVgB_oZX5Y
 
 The image above shows what the pull requests page might look like for this repository, if there were another open pull request for a different component of the project, and if there were previously merged or closed pull requests. Like the issues page, the pull requests page for a repository provides a searchable history of works in progress (open pull requests), and completed tasks (closed pull requests). This can be helpful to you, a collaborator, or someone interested in the process of your scientific project, to understand the major contributions to the repository. 
 
+## Reviewing pull requests
+***
+
+### How to review pull requests
+
+In some situations, you may be a code reviewer rather than a code author. When reviewing other people's pull requests, there are a few ways to provide feedback. From the most hands off approach to the most hands on approach, you could:
+
+- Comment on their pull request. This is the most straightforward way to provide feedback on a pull request. You can do this by opening the pull request page and writing in the box under the "Add a comment" heading. The code author will see your comment, and you can have a conversation back and forth in the pull requests comments. This is often better than an email correspondence because you will have this conversation saved in your pull request pages along with the pull request content, which provides more context to changes that may eventually be merged. 
+- Make comments or suggestions related to specific files that are changed in the pull request. You can do this by opening the pull request page, navigating to the "Files changed" tab, and identifying specific lines within files that you would like to comment on or suggest changes to. As you move your cursor along the lines in a file, you should see a blue box with a plus pop up. You can click this box next to the line that you want to comment on or suggest changes to, and drag down to include all lines related to your comment. By default, this will open a box where you can leave a comment. If you would instead like to directly suggest a change to the file, you can click the button that looks like a document with a plus and a minus sign within it. If you suggest changes, the code author will have the opportunity to commit individual suggestions, or add multiple suggestions to a "batch" of suggestions, and commit them all at once. When you comment or suggest changes within individual files, these comments or suggestions will also appear on the main pull request page as part of the conversation. 
+- Work on the pull request branch locally and push changes directly to the pull request. You should only do this if you have discussed this previously with the code author, and they are ok with you directly editing their pull request. To do this, you can follow the following directions:
+
+
+from advanced reproducibility:
+- talk about literally how to review
+  - make comments on GitHub, 
+  - if you want to make edits then either fetching someone else's branch and making changes and stage, commit, push, 
+  - or suggesting edits within the files changed panel. 
+- talk about content of review
+  - make sure that pull request adequately explains the question/problem that the PR addresses
+  - address any direct questions from coder author
+  - make sure that code is clear and readable, efficient, and follows project guidelines
+  - in some scenarios, pull locally and make sure that the code runs and that you can reproduce the outputs
+  - empathetic reviews! code author put a lot of time into this.
+
 ## Additional notes on pull requests 
 ***
 
