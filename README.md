@@ -26,7 +26,7 @@ This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 [
 
 To cite this case study:
 
-Teichman, Sarah and Wright, Carrie. (2026). [https://github.com/opencasestudies/ocs-bio-version-control/](https://github.com/opencasestudies/ocs-bio-version-control/). Making version-controlled reproducible analyses (Version v1.0.0).
+Teichman, Sarah and Isaac, Kathryn J, and Hoffman, Ava and Wright, Carrie. (2026). [https://github.com/opencasestudies/ocs-bio-version-control/](https://github.com/opencasestudies/ocs-bio-version-control/). Making version-controlled reproducible analyses (Version v1.0.0).
 
 ### Funding
 
