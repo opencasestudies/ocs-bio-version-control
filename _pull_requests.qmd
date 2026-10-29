@@ -86,9 +86,9 @@ The image above shows what the pull requests page might look like for this repos
 
 In some situations, you may be a code reviewer rather than a code author. When reviewing other people's pull requests, there are a few ways to provide feedback. From the most hands off approach to the most hands on approach, you could:
 
-- Comment on their pull request. This is the most straightforward way to provide feedback on a pull request. You can do this by opening the pull request page and writing in the box under the "Add a comment" heading. The code author will see your comment, and you can have a conversation back and forth in the pull requests comments. This is often better than an email correspondence because you will have this conversation saved in your pull request pages along with the pull request content, which provides more context to changes that may eventually be merged. 
-- Make comments or suggestions related to specific files that are changed in the pull request. You can do this by opening the pull request page, navigating to the "Files changed" tab, and identifying specific lines within files that you would like to comment on or suggest changes to. As you move your cursor along the lines in a file, you should see a blue box with a plus pop up. You can click this box next to the line that you want to comment on or suggest changes to, and drag down to include all lines related to your comment. By default, this will open a box where you can leave a comment. If you would instead like to directly suggest a change to the file, you can click the button that looks like a document with a plus and a minus sign within it. If you suggest changes, the code author will have the opportunity to commit individual suggestions, or add multiple suggestions to a "batch" of suggestions, and commit them all at once. When you comment or suggest changes within individual files, these comments or suggestions will also appear on the main pull request page as part of the conversation. 
-- Work on the pull request branch locally and push changes directly to the pull request. You should only do this if you have discussed this previously with the code author, and they are ok with you directly editing their pull request. To do this, you can follow the following directions:
+- *Comment on their pull request.* This is the most straightforward way to provide feedback on a pull request. You can do this by opening the pull request page and writing in the box under the "Add a comment" heading. The code author will see your comment, and you can have a conversation back and forth in the pull requests comments. This is often better than an email correspondence because you will have this conversation saved in your pull request page along with the pull request content, which provides more context to changes that may eventually be merged. 
+- *Make comments or suggestions related to specific files that are changed in the pull request.* You can do this by opening the pull request page, navigating to the "Files changed" tab, and identifying specific lines within files that you would like to comment on or suggest changes to. As you move your cursor along the lines in a file, you should see a blue box with a plus pop up. You can click this box next to the line that you want to comment on or suggest changes to, and drag down to include all lines related to your comment. By default, this will open a box where you can leave a comment. If you would instead like to directly suggest a change to the file, you can click the button that looks like a document with a plus and a minus sign within it. If you suggest changes, the code author will have the opportunity to commit individual suggestions, or add multiple suggestions to a "batch" of suggestions, and commit them all at once. When you comment or suggest changes within individual files, these comments or suggestions will also appear on the main pull request page as part of the conversation. 
+- *Open the pull request branch locally and push changes directly to the pull request.* You should only do this if you have discussed this previously with the code author, and they are fine with you directly editing their pull request. To do this, you can follow the following directions:
 
 ::: {.panel-tabset}
 
@@ -97,27 +97,40 @@ In some situations, you may be a code reviewer rather than a code author. When r
 From GitHub Desktop:
 
 - [ ] Click "Fetch origin" in the upper bar in the GitHub Desktop window. 
-
-Now, you should be able to see a window in GitHub Desktop that corresponds with `my-first-repository`. If you click on history, you can see a list of commits to this repository. 
-
+- [ ] Click on "Current branch" and navigate to the name of the branch that your collaborator has used for their pull request. 
+- [ ] Make edits locally, and stage, commit and push these edits. 
+- [ ] When you push, you should then see those changes included on the pull request page on GitHub. 
+- [ ] If you do this, you should add a comment to the conversation on the pull request page to let the author know that you've pushed changes. 
 
 #### Command line 
 
-You were already asked to clone this repository in the last section, in order to trigger Git's login credentials. If you haven't done that, open the command line and enter the following, replacing "your_username" with your username:
+Open the command line and navigate to the repository. First, you'll need to fetch from the remote repository (this means downloading updates from the remote repository to your local repository, without yet merging any updates). 
 
 :::: {.shell}
 ```bash
-git clone https://github.com/your_username/my-first-repository.git  
+git fetch origin  
 ```
 ::::
 
-You will know that this has worked if you see the following output:
+Next, you will switch to the branch that the code author used for their pull request. The pull request page on GitHub will provide the name of the branch. If the branch used for the pull request is called `feature_branch`, you would use the following command:
 
 :::: {.shell}
 ```
-Cloning into 'my-first-repository'...
+git checkout feature_branch
 ```
 ::::
+
+Once you open the pull request branch, you could make whatever local changes you would like. When you are ready to contribute those changes, you could do that with the typical stage/commit/push workflow. 
+
+:::: {.shell}
+```
+git add files_you_changed
+git commit -m "Make local edits to pull request branch (explain what you did here)"
+git push
+```
+::::
+
+After you push, you should then see those changes included on the pull request page on GitHub. If you do this, you should add a comment to the conversation on the pull request page to let the author know that you've pushed changes. 
 
 :::
 
