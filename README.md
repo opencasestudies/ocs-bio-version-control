@@ -78,7 +78,7 @@ The main questions in this case study are the following:
 
 1. How does the use of version control contribute to transparent and reproducible science?
 1. How can Git and GitHub be used to facilitate collaboration on a research project?
-1. In this meta-analysis of infant git microbiome samples, how do the original studies compare in their sampling designs?
+1. In this meta-analysis of infant gut microbiome samples, how do the original studies compare in their sampling designs?
 
 ### Learning Objectives
 
