@@ -120,7 +120,11 @@ git checkout feature_branch
 
 :::
 
-<details><summary>Different ways to provide feedback when to someone else's pull request.</summary>
+```{r, fig.alt="Example review of pull request", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.h3445f3d0018850a2_0_0#slide=id.h3445f3d0018850a2_0_0")
+```
+
+<details><summary>Different ways to provide feedback on someone else's pull request.</summary>
 
 There are a few ways to provide feedback on a pull request. From the most hands-off approach to the most hands-on approach, you could:
 
