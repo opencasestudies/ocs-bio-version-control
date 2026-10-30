@@ -18,6 +18,10 @@ In the previous section, you worked locally to make the visualizations that Coll
 
 This set of steps will bring you to a page where you can make your pull request. The first thing to note is the panel at the top of the page, which gives you the base branch (this will by default be `main`) and the compare branch (this will be the branch you've been working on, in this case `study_comparison`). There is an arrow, showing that you are trying to merge the updates that you've made in the compare branch into the base branch. 
 
+```{r, fig.alt="Example open pull request page", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.h57fc035897434697_0_0&pli=1#slide=id.h57fc035897434697_0_0")
+```
+
 There are a few useful components of this page in which you make a pull request:
 
 - You have a spot to add a title and a description. 
@@ -69,11 +73,126 @@ Imagine that you submitted a pull request, you or your collaborator has decided 
 
 If you close a pull request without merging it, this means that you've decided not to integrate the changes from the compare branch into the base branch. This may happen if you decide to go in another direction with an analysis. You can close a pull request by clicking the "Close pull request" button at the bottom of the pull request page. It is important to close pull requests that are no longer active so that the set of open pull requests accurately represents the current state of the project. 
 
+```{r, fig.alt="Pull request page", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("hhttps://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h175e18de373b618c_0_0#slide=id.h175e18de373b618c_0_0")
+```
+
+The image above shows what the pull requests page might look like for this repository, if there were another open pull request for a different component of the project, and if there were previously merged or closed pull requests. Like the issues page, the pull requests page for a repository provides a searchable history of works in progress (open pull requests), and completed tasks (closed pull requests). This can be helpful to you, a collaborator, or someone interested in the process of your scientific project, to understand the major contributions to the repository. 
+
+## Reviewing pull requests
+***
+
+In some situations, you may be a pull request reviewer rather than a pull request author. As a reviewer, you have several responsibilities. [See this chapter on code review](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html) for a more in-depth treatment of these responsibilities. As a reviewer, you should consider the following:
+
+- Throughout your pull request review, remember that the pull request author put time and effort into this code. Providing a empathetic review that balances constructive criticism with positive reinforcement can make the reviewing process easier for both parties.
+- Make sure that the pull request adequately explains the question or problem that the pull request addresses. There should be plenty of context for you to review the changes, as well as for someone else reading the pull request to understand what is being changed and why. Confirm that the pull request answers this question or solves this problem.
+- Address any direct questions from the pull request author. 
+- If you have questions or suggestions, make them as specific as possible. See the drop-down box below for ways to comment and provide suggestions on specific lines of text or code.
+- Make sure that the text and code are clear and efficient and follow any style conventions used for the project. 
+- In some scenarios, you may want to open the pull request branch locally and confirm that all code runs as expected and produces the desired results or visualizations. To do this, follow these instructions:
+
+::: {.panel-tabset}
+
+#### GitHub Desktop 
+
+From GitHub Desktop:
+
+- [ ] Click "Fetch origin" in the upper bar in the GitHub Desktop window. 
+- [ ] Click on "Current branch" and navigate to the name of the branch that your collaborator has used for their pull request. 
+
+#### Command line 
+
+Open the command line and navigate to the repository. First, you'll need to fetch from the remote repository (this means downloading updates from the remote repository to your local repository, without yet merging any updates). 
+
+:::: {.shell}
+```bash
+git fetch origin  
+```
+::::
+
+Next, you will switch to the branch that the code author used for their pull request. The pull request page on GitHub will provide the name of the branch. If the branch used for the pull request is called `feature_branch`, you would use the following command:
+
+:::: {.shell}
+```
+git checkout feature_branch
+```
+::::
+
+:::
+
+```{r, fig.alt="Example review of pull request", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.h3445f3d0018850a2_0_0#slide=id.h3445f3d0018850a2_0_0")
+```
+
+<details><summary>Different ways to provide feedback on someone else's pull request.</summary>
+
+There are a few ways to provide feedback on a pull request. From the most hands-off approach to the most hands-on approach, you could:
+
+- **Comment on their pull request.** This is the most straightforward way to provide feedback on a pull request. The pull request author can view your comment, and you can have a conversation back and forth in the pull requests comments. This is often better than an email correspondence because you will have this conversation saved in your pull request page along with the pull request content, which provides more context to changes that may eventually be merged. To comment on a pull request, do the following:
+  - [ ] Open the pull request page.
+  - [ ] Write in the box under the "Add a comment" heading at the bottom of the page. 
+  - [ ] Click the "Comment" button. 
+- **Comment directly on specific lines within files that are changed in the pull request.** This will let you make comments that are related to specific lines within files changed by the pull request. These comments will appear in the "Files changed" tab, as well as in the main "Conversation" tab on the pull request page. To comment on specific lines, do the following:
+  - [ ] Open the pull request page. 
+  - [ ] Navigate to the "Files changed" tab. 
+  - [ ] Identify the file and specific lines that you would like to comment on.
+  - [ ] As you move your cursor along the lines that you would like to comment on, you should see a blue box with a plus pop up. Click on this box when it appears next to the first line that you want to comment on.
+  - [ ] Click and drag down to include all lines related to your comment.
+  - [ ] This will open a box. In the "Leave a comment" field, write your comment.
+  - [ ] Click the "Comment" button. 
+- **Suggest changes to specific lines within files that are changed in the pull request.** This is similar to making comments on specific lines, but you can directly suggest a change to the lines, that the pull request author can choose whether or not to accept. To make suggestions, do the following: 
+  - [ ] Follow the directions for commenting directly on specific lines. 
+  - [ ] Click the button that looks like a document with a plus and a minus side within it (this appears between the "Preview" and "H" buttons, above the field to write your comment).
+  - [ ] This will pull up the contents of the code or text within the comment box. 
+  - [ ] Edit the code or text to provide a suggestion for a change. 
+  - [ ] Click the "Comment" button.
+  - [ ] If you would like to add another comment to explain your suggestion, you can click "Write a reply" and add your comment there. 
+- **Open the pull request branch locally and push changes directly to the pull request.** You should only do this if you have discussed this previously with the pull request author, and they are fine with you directly editing their pull request. To do this, follow the steps described above to open the pull request branch locally. Next, you can follow these directions:
+
+::: {.panel-tabset}
+
+#### GitHub Desktop 
+
+From GitHub Desktop:
+
+- [ ] Click on "Current branch" and navigate to the name of the branch that your collaborator has used for their pull request. 
+- [ ] Make edits locally, and stage, commit and push these edits. 
+- [ ] When you push, you should then see those changes included on the pull request page on GitHub. 
+- [ ] If you do this, you should add a comment to the conversation on the pull request page to let the author know that you've pushed changes. 
+
+#### Command line 
+
+Open the command line and navigate to the repository. If the branch used for the pull request is called `feature_branch`, you would use the following command to open that branch:
+
+:::: {.shell}
+```
+git checkout feature_branch
+```
+::::
+
+Once you open the pull request branch, you could make whatever local changes you would like. When you are ready to contribute those changes, you could do that with the typical stage/commit/push workflow. 
+
+:::: {.shell}
+```
+git add files_you_changed
+git commit -m "Make local edits to pull request branch (explain what you did here)"
+git push
+```
+::::
+
+After you push, you should then see those changes included on the pull request page on GitHub. If you do this, you should add a comment to the conversation on the pull request page to let the author know that you've pushed changes. 
+
+:::
+
+</details>
+
 ## Additional notes on pull requests 
 ***
 
 While your pull request is open, any additional changes that you commit and push to this branch will be automatically added to the pull request. 
 
-It is recommended to not let your pull requests get too large. A pull request should be a set of changes that address a certain component of an analysis. Try to avoid combining multiple parts of a project in a single pull request. If you decide to start working on a different part of a project, you can create a new branch for this, and eventually submit a new pull request from that branch. For example, in this project, if you wanted to change how the data is imported, you would want to do this in a separate pull request from the one in which you create data visualizations to compare the study designs. This is a great way to stay organized for complex projects that have different components happening in parallel. Additionally, using more branches and smaller pull requests, each focused on a single set of related changes, can make it easier to review the pull requests and to identify when changes were introduced to a project. Changes to code that depend on each other but address different issues can be addressed in a series of "stacked" pull requests (check out [GitHub's documentation about stacked pull requests](https://docs.github.com/en/pull-requests/how-tos/stacked-pull-requests) for more information).
+A pull request should be a set of changes that address a certain component of an analysis. Try to avoid combining multiple parts of a project in a single pull request. If you decide to start working on a different part of a project, you can create a new branch for this, and eventually submit a new pull request from that branch. 
+
+Separating different parts of a project into multiple branches and pull requests is a good way to stay organized for complex projects that have multiple components in development at the same time. Using multiple branches and focused pull requests, each including a set of related commits, can make it easier to review the pull requests and to identify when and why changes were introduced to a project. Changes to files that depend on each other but relate to different issues can be addressed in a series of "stacked" pull requests (check out [GitHub's documentation about stacked pull requests](https://docs.github.com/en/pull-requests/how-tos/stacked-pull-requests) for more information).
 
 ***
