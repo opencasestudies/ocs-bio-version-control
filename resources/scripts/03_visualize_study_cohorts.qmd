@@ -119,7 +119,7 @@ clean_metadata %>%
 
 Based on the plots and the summary table, we can make a few observations about these studies.
 
-- Two studies have small samples sizes (Asnicar with 16 samples and Chu with 27 samples), three studies have more moderate sample sizes (Wampach with 49 samples Parnanen with 64 samples, and Ferretti with 102 samples), and three studies have larger sample sizes (Yassour with 258 samples, Backhed with 392 samples, and Shao with 588 samples).
+- Two studies have small samples sizes (Asnicar with 16 samples and Chu with 27 samples), three studies have more moderate sample sizes (Parnanen with 48 samples, Wampach with 49 samples, and Ferretti with 102 samples), and three studies have larger sample sizes (Yassour with 221 samples, Backhed with 392 samples, and Shao with 588 samples).
 
 - Some studies take the same number or similar numbers of samples from mothers and infants (Asnicar, Chu, Parnanen) and other studies take significantly more samples from infants than mothers (Wampach, Ferretti, Yassour, Backhed, and Shao).
 
