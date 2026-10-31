@@ -422,7 +422,7 @@ In this histogram, we will set `scale = "fixed"` in `facet_wrap()` so that the y
 :::: {.rcode}
 ```{r, fig.width = 7, fig.height = 10}
 sampling_day_df %>%
-  mutate(Study = reorder(Study, sampling_day)) %>%
+  mutate(Study = reorder(Study, sampling_day, FUN = min)) %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
   facet_wrap(~Study, scale = "fixed", ncol = 1) +
