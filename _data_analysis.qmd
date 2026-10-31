@@ -59,7 +59,7 @@ sampling_day_df %>%
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 7, fig.height = 10}
 sampling_day_df <- clean_metadata %>% filter(!is.na(sampling_day)) 
 sampling_day_df %>%
-  mutate(Study = reorder(Study, sampling_day)) %>%
+  mutate(Study = reorder(Study, sampling_day, FUN = min)) %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
   facet_wrap(~Study, scale = "fixed", ncol = 1) +
@@ -110,7 +110,7 @@ Use the two plots you've made and the table above to make a few observations tha
 
 Possible observations from the plots: 
 
-- Two studies have small samples sizes (Asnicar with 16 samples and Chu with 27 samples), three studies have more moderate sample sizes (Wampach with 49 samples Parnanen with 64 samples, and Ferretti with 102 samples), and three studies have larger sample sizes (Yassour with 258 samples, Backhed with 392 samples, and Shao with 588 samples). 
+- Two studies have small samples sizes (Asnicar with 16 samples and Chu with 27 samples), three studies have more moderate sample sizes (Parnanen with 48 samples, Wampach with 49 samples, and Ferretti with 102 samples), and three studies have larger sample sizes (Yassour with 221 samples, Backhed with 392 samples, and Shao with 588 samples). 
 - Some studies take the same number or similar numbers of samples from mothers and infants (Asnicar, Chu, Parnanen) and other studies take significantly more samples from infants than mothers (Wampach, Ferretti, Yassour, Backhed, and Shao). 
 - Wampach sampled only in the first days after birth, Chu, Parnanen, Ferretti, and Yassour sampled only in the first six months since birth, and Asnicar, Backhed, and Shao took samples in the first year and a half since birth. 
 - Some studies appear to have sampled at specific time points (Asnicar, Chu, Wampach, Parnanen, and Ferretti) and other studies appear to have sampled at a wider variety of timepoints (Yassour, Backhed, Shao). 
