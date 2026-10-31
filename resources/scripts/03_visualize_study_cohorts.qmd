@@ -1,0 +1,128 @@
+---
+title: "Study Comparison"
+editor: visual
+---
+
+In this document, we compare the study designs of the eight infant gut microbiome studies that Wang et al. use in their [meta-analysis](https://pubmed.ncbi.nlm.nih.gov/33960282/).
+
+## Set-up
+
+First, we will load packages for this analysis.
+
+```{r, message = FALSE}
+library(here)
+library(dplyr) 
+library(ggplot2)
+```
+
+Next, we will load the meta-data from these eight studies.
+
+```{r}
+load(here::here("processed_data", "clean_sample_metadata.rda"))
+```
+
+## Sample size comparison
+
+First, we will compare the studies in terms of sample sizes. To do this, we need to count the number of observations by study and infant vs mother category.
+
+```{r}
+# create the sample_counts data frame
+sample_counts <- clean_metadata %>%
+  group_by(Study, Category) %>%
+  count(name = "total")
+# calling the variable name here will print the output
+sample_counts
+```
+
+Next, we can make a plot to compare sample sizes.
+
+```{r}
+# make a vector to order studies by total number of samples
+study_order <- sample_counts %>%
+  group_by(Study) %>%
+  dplyr::summarise(total_both = sum(total)) %>%
+  dplyr::arrange(total_both) %>%
+  pull(Study)
+
+# make bar plot
+sample_counts %>%
+  mutate(Study = factor(Study, levels = study_order)) %>%
+  ggplot(aes(x = Study, y = total, fill = Category)) +
+  geom_col(position = position_dodge()) +
+  ggplot2::scale_fill_viridis_d(begin = 0.1, end = 0.8) + 
+  ggplot2::theme_minimal() + 
+  ggplot2::labs(y = "Number of samples",
+       x = "Study",
+       title = "Number of Samples by Study and Category") + 
+  ggplot2::theme(plot.title = element_text(hjust = 0.5))
+```
+
+We will save this plot in the figures folder.
+
+```{r}
+ggplot2::ggsave("figures/study_sizes_by_category.png", height = 6, width = 9)
+```
+
+## Longitudinal sampling comparison
+
+Next, we will make a plot to compare the studies in terms of their longitudinal sampling. To start, we need to remove any observations that don't include the sampling day.
+
+```{r}
+sampling_day_df <- clean_metadata %>%
+  # remove rows that have NA values for sampling_day
+  filter(!is.na(sampling_day)) 
+```
+
+Now, we can make a set of faceted histograms.
+
+```{r, fig.width = 7, fig.height = 10}
+sampling_day_df %>%
+  mutate(Study = factor(Study, levels = study_order)) %>%
+  ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
+  geom_histogram(position = position_dodge(), bins = 20) +
+  facet_wrap(~Study, scale = "free_y", ncol = 1) +
+  labs(x = "Days since birth at sampling",
+       y = "Count",
+       title = "Distribution of sampling day across studies") + 
+  scale_fill_viridis_d(begin = 0.1, end = 0.8) + 
+  theme_minimal() + 
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+We will also save this plot in the figures folder.
+
+```{r}
+ggsave("figures/sampling_timepoints_option1.png", height = 6, width = 9)
+```
+
+## Study comparison conclusions
+
+As well as our plots, we can also summarize these study designs in a table.
+
+```{r}
+clean_metadata %>%
+  # group data by study and category 
+  group_by(Study, Category) %>%
+  # calculate the number of unique people in each study and category
+  summarise(n_person = dplyr::n_distinct(PersonID),
+            # calculate the number of unique samples in each study and category
+            n_sample = n_distinct(SampleID),
+            # calculate the number of unique days at which samples were taken in 
+            # each study and category 
+            n_time = n_distinct(sampling_paper),
+            # calculate first sampling day for each study and category
+            min_time = min(sampling_day, na.rm = TRUE),
+            # calculate last sampling day for each study and category
+            max_time = max(sampling_day, na.rm = TRUE),
+            .groups = "drop")
+```
+
+Based on the plots and the summary table, we can make a few observations about these studies.
+
+- Two studies have small samples sizes (Asnicar with 16 samples and Chu with 27 samples), three studies have more moderate sample sizes (Parnanen with 48 samples, Wampach with 49 samples, and Ferretti with 102 samples), and three studies have larger sample sizes (Yassour with 221 samples, Backhed with 392 samples, and Shao with 588 samples).
+
+- Some studies take the same number or similar numbers of samples from mothers and infants (Asnicar, Chu, Parnanen) and other studies take significantly more samples from infants than mothers (Wampach, Ferretti, Yassour, Backhed, and Shao).
+
+- Wampach sampled only in the first days after birth, Chu, Parnanen, Ferretti, and Yassour sampled only in the first six months since birth, and Asnicar, Backhed, and Shao took samples in the first year and a half since birth.
+
+- Some studies appear to have sampled at specific time points (Asnicar, Chu, Wampach, Parnanen, and Ferretti) and other studies appear to have sampled at a wider variety of timepoints (Yassour, Backhed, Shao).
