@@ -600,10 +600,11 @@ The easiest way to work with a Git-tracked repository in RStudio is to make an R
 
 In order to open your Git-tracked repository as an RStudio project, do the following:
 
-- [ ] Open RStudio and click "File" → "Open Project". 
+- [ ] Open RStudio and click "File" → "New Project..." → "Existing Directory" → "Browse...". 
 - [ ] This should prompt you to open your file browser. Navigate to the folder called `my-first-repository`, which was created when you cloned the repository. 
+- [ ] Click "Create Project". 
 
-Once you select the correct folder, RStudio will open the project. If you look at the "Files" panel, you'll see the README that you made for `my-first-repository` on GitHub. You will additionally see a file called `my-first-repository.Rproj`. This file is automatically made by RStudio when opening a new project, and saves information about the project. 
+Once you do this, RStudio will open the project. If you look at the "Files" panel, you'll see the README that you made for `my-first-repository` on GitHub. You will additionally see a file called `my-first-repository.Rproj`. This file is automatically made by RStudio when opening a new project, and saves information about the project. You will also see a the file `.gitignore`. This is a minimal `.gitignore.`, listing four files created by RStudio that are typically not tracked with version control. 
 
 #### Positron
 
@@ -952,8 +953,9 @@ Finally, we will open this repository with RStudio or Positron.
 
 In order to open your Git-tracked repository as an RStudio project:
 
-- [ ] Open RStudio and click "File" → "Open Project". 
-- [ ] This will prompt you to open your file browser. Navigate to the folder called `infant_gut_analysis`. 
+- [ ] Open RStudio and click "File" → "New Project..." → "Existing Directory" → "Browse...". 
+- [ ] This should prompt you to open your file browser. Navigate to the folder called `infant_gut_analysis`, which was created when you cloned the repository. 
+- [ ] Click "Create Project". 
 
 Once you select the correct folder, RStudio will open the project. 
 
