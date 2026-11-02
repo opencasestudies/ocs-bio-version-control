@@ -27,7 +27,7 @@ Three of these packages, `dplyr`, `ggplot2`, and `stringr` are part of the [tidy
 To install the packages used in this case study, you can use the following command (be sure to run this only once in the RStudio or Positron console, instead of putting it in a script). 
 
 ::: {.rcode}
-```{r}
+```{r, eval = FALSE}
 install.packages(c("here", "readxl", "dplyr", "ggplot2", "stringr"))
 ```
 :::
@@ -37,8 +37,9 @@ If you wanted to install all nine `tidyverse` packages, you could remove `dplyr`
 To confirm that these packages have successfully installed, you can run the following command (also in the console). 
 
 ::: {.rcode}
-```{r}
-c("here", "readxl", "dplyr", "ggplot2", "stringr") %in% rownames(installed.packages())
+```{r, eval = FALSE}
+c("here", "readxl", "dplyr", "ggplot2", "stringr") %in% 
+  rownames(installed.packages())
 ```
 :::
 
