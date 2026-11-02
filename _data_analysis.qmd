@@ -59,7 +59,7 @@ sampling_day_df %>%
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 7, fig.height = 10}
 sampling_day_df <- clean_metadata %>% filter(!is.na(sampling_day)) 
 sampling_day_df %>%
-  mutate(Study = reorder(Study, sampling_day, FUN = min)) %>%
+  mutate(Study = reorder(Study, sampling_day, FUN = max)) %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
   facet_wrap(~Study, scale = "fixed", ncol = 1) +
