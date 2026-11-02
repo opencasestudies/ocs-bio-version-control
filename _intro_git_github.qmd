@@ -796,9 +796,13 @@ If you return to RStudio or Positron and open `README.md`, you will now see the 
 
 ### What you've done
 
-In this section you have made a GitHub account, installed Git and GitHub Desktop, configured Git and GitHub to be connected so they can receive updates from each other, and made your first repository. You've learned how to make changes to the remote on GitHub and transfer them to the local repository on your computer, as well as do the opposite. 
+In this section you have made a GitHub account, installed Git and GitHub Desktop, configured Git and GitHub to be connected so they can receive updates from each other, and made your first repository. You've learned how to make changes to the remote on GitHub and transfer them to the local repository on your computer, as well as do the opposite. You've learned how to use the stage → commit → push workflow to send changes from the local Git repository on your computer to the remote GitHub repository, as well as the pull workflow to send changes from the remote GitHub repository to the local Git repository. 
 
-In a typical GitHub workflow, you will rarely be making changes online from the [github.com](github.com) website. Instead, you will often be working with one or multiple collaborators on a repository. Once your collaborator makes changes locally, they can push those changes to GitHub, and then you can pull those changes to your local copy of the repository. This process will continue cyclically while you collaboratively work on a project. Note that this is a simplified system where you take turns to make changes, in practice you can work on the project at the same time (using branches which will be discussed later in the [branches  section](https://www.opencasestudies.org/ocs-bio-version-control/#branches)).
+```{r, fig.alt="Stage-commit-push and Pull workflows", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h3d054029fb398613_0_0#slide=id.h3d054029fb398613_0_0")
+```
+
+In a typical GitHub workflow, you will rarely be making changes online from the [github.com](github.com) website. Instead, you will often be working with one or multiple collaborators on a repository. Once your collaborator makes changes locally, they can push those changes to GitHub, and then you can pull those changes to your local copy of the repository. This process will continue cyclically while you collaboratively work on a project. Note that this is a simplified system where you take turns to make changes, in practice you can work on the project at the same time (using branches, which will be discussed later in the [branches  section](https://www.opencasestudies.org/ocs-bio-version-control/#branches)).
 
 ```{r, fig.alt="Git and GitHub workflow", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_206#slide=id.g3f139628ce6_0_206")
