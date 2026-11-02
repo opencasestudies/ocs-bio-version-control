@@ -16,6 +16,15 @@ At the end of this section, save incremental data so that users can pause and co
 Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses.
 
 - [ ] Again, use the {{< glossary "README">}} to identify which file contains commands that wrangle the data. 
+
+This wrangling script takes four steps to clean the data:
+
+1. It removes all samples that are missing `SampleID` values. 
+1. It cleans variable names to make them more human readable and easier to use.
+1. It creates unique `SampleID` values for the Yassour study (previously, this study had identical `SampleID` values for samples from the same participant).
+1. It removes samples that were taken before birth (previously, the Parnanen and Yassour studies included samples taken from mothers during pregnancy). We remove these samples because in this meta-analysis we would like to consider a time frame that starts at birth.
+
+
 - [ ] Open this file and run the code. 
 
 <details> <summary> Click here to see the code included in this file. </summary>

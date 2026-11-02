@@ -24,4 +24,25 @@ The first time we use a function, we will use `::` to indicate which package we 
 
 Three of these packages, `dplyr`, `ggplot2`, and `stringr` are part of the [tidyverse suite of packages](https://tidyverse.org). The `tidyverse` includes nine packages that can easily be used together and share data structures and syntax. While each of the packages can be installed or loaded separately (as we do above), they can be installed or loaded all at once using `install.packages("tidyverse")` and `library(tidyverse)`, respectively. 
 
+To install the packages used in this case study, you can use the following command (be sure to run this only once in the RStudio or Positron console, instead of putting it in a script). 
+
+::: {.rcode}
+```{r, eval = FALSE}
+install.packages(c("here", "readxl", "dplyr", "ggplot2", "stringr"))
+```
+:::
+
+If you wanted to install all nine `tidyverse` packages, you could remove `dplyr`, `ggplot2`, and `stringr` from the command above, and instead run `install.packages("tidyverse")`. 
+
+To confirm that these packages have successfully installed, you can run the following command (also in the console). 
+
+::: {.rcode}
+```{r, eval = FALSE}
+c("here", "readxl", "dplyr", "ggplot2", "stringr") %in% 
+  rownames(installed.packages())
+```
+:::
+
+If this command returns a vector of `TRUE` values, then all packages are installed. If it includes a `FALSE` value, then the package that is in the corresponding index in the list of packages above did not successfully install. 
+
 ***
