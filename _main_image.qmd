@@ -1,8 +1,8 @@
 
 
 :::{.outline }
-```{r, fig.alt="Motivation for using version control", echo = FALSE, fig.align = "center"}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f9c5fef626_0_3&pli=1#slide=id.g3f9c5fef626_0_3")
+```{r, fig.alt="Version control can help you keep track of changes over time, simplifying collaboration and letting you identify when and where a change was made", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?pli=1&slide=id.g3f9c5fef626_0_103#slide=id.g3f9c5fef626_0_103")
 ```
 :::
 
