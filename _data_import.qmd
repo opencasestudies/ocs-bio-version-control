@@ -71,7 +71,9 @@ ncol(sample_metadata)
 ```
 :::
 
-There are 1,499 observations and 20 variables in the data frame.
+There are 1,499 observations and 20 variables in the data frame. 
+
+As we will see later in the [data wrangling section](https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling), 3 of these observations are extra lines added to the raw data file, and don't actually represent samples. This dataset includes 1,496 samples. 
 </details>
 ::::
 :::
