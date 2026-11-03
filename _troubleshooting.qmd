@@ -382,6 +382,43 @@ To learn more about Git stash and additional options, you can read its [document
 
 </details>
 
+### Deleting local repository and cloning again 
+
+<details> <summary> I've created a problem with my local repository that I can't solve. Can I just start again from my remote repository? </summary>
+
+Yes! While many Git problems can be resolved without deleting your repository, creating a fresh clone can be a quick and effective solution when troubleshooting efforts have been unsuccessful. Sometimes the easiest approach is to fully delete your local repository and make a clean local repository as a clone of the remote repository. 
+
+Before deleting your local repository, make sure that any work you want to keep has either been pushed to the remote repository or copied somewhere outside of the repository folder. Uncommitted and unpushed changes will be permanently lost when the local repository is deleted.
+
+:::{.panel-tabset}
+#### GitHub Desktop
+
+Open GitHub Desktop to the repository you are working with. First we will remove the local repository from your computer. 
+
+- [ ] Right-click (or double-click, depending on your computer), on the tab that says "Current Repository" followed by the repository name.
+- [ ] From the drop-down menu, select the "Remove" button.
+- [ ] Click the checkbox that says "Also move this repository to Trash". 
+- [ ] Click the "Remove" button. 
+
+Next, follow [these instructions](https://www.opencasestudies.org/ocs-bio-version-control/#creating-a-local-clone-of-your-github-repository) to clone your remote repository, creating a new local repository. Once your local repository has been created, you can restore any changes that you had saved locally on your computer, and continue working. 
+
+#### Command line
+
+First we will remove the local repository from your computer. Do this by deleting the local repository folder from your computer with your file viewer application or with the command line. To use the command line, open the command line to the repository you are working with, and navigate one folder above (into the folder that contains the local repository). First we will remove the local repository from your computer. To do this, use the following command:
+
+:::: {.shell}
+```bash
+rm -r repository_name
+```
+::::
+
+Next, follow [these instructions](https://www.opencasestudies.org/ocs-bio-version-control/#creating-a-local-clone-of-your-github-repository) to clone your remote repository, creating a new local repository. Once your local repository has been created, you can restore any changes that you had saved locally on your computer, and continue working. 
+
+:::
+
+
+</details>
+
 ### Other Troubleshooting Resources
 
 You can learn more about other common Git mistakes and their fixes [in this article](https://www.creative-tim.com/blog/educational-tech/git-tutorial-fix-common-mistakes/). AI chatbots can also be helpful for troubleshooting problems with Git and GitHub, but should be used with care.
