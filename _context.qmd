@@ -38,4 +38,17 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
 
 @wang2021metagenomic, mentioned above, used the second meta-analysis approach. They pulled the raw data from eight {{< glossary "longitudinal">}} studies of infant and mother gut microbiomes, processed all samples with a unified protocol, and conducted analyses on the pooled dataset while accounting for differences between studies. However, the success of this approach depends on how comparable the original studies are. This motivates our exploration of the similarities and differences between the various study cohorts. We want to understand how comparable these studies are, both in terms of sample size (how many samples are in each study?) and in terms of their longitudinal study design (when in the lifespan of the infants were samples taken?). While differences in study designs would not make a meta-analysis of these studies invalid, they can influence how analyses should be conducted and how results should be interpreted. Accounting for these differences can reduce the risk that conclusions primarily reflect the largest cohorts and help minimize confounding due to differences in the age ranges and developmental stages represented across studies.
 
+:::{.reproducibility_box}
+::::{.reproducibility_box_header}
+Reproducibility considerations
+::::
+::::{.inner_block}
+
+Meta-analyses are important tools for promoting scientific rigor and replication of research results because they systematically synthesize evidence across multiple studies using a consistent analytical framework. By evaluating whether findings are observed across different studies, populations, and settings, meta-analyses can provide a more robust assessment of the strength and consistency of scientific evidence than a single study can.
+
+Meta-analyses are also good types of projects to version control, as they are often computationally complex (given the challenges of combining multiple data sources), rely on transparent and consistent analysis approaches, and may involve large collaborative teams. 
+
+::::
+:::
+
 ***
