@@ -404,7 +404,7 @@ To learn more about Git stash and additional options, you can read its [document
 
 <details> <summary> I've created a problem with my local repository that I can't solve. Can I just start again from my remote repository? </summary>
 
-Yes! While many Git problems can be resolved without deleting your repository, creating a fresh clone can be a quick and effective solution when troubleshooting efforts have been unsuccessful. Sometimes the easiest approach is to fully delete your local repository and make a clean local repository as a clone of the remote repository. 
+Yes! While most Git problems can be resolved without deleting your repository, sometimes challenges can be tricky, especially when you are first learning. Sometimes the easiest approach is to fully delete your local repository,  and creat a fresh clone of what you have on GitHub. This can be a quick and effective solution when troubleshooting efforts have been unsuccessful.  Using this approach is a much more successful if you keep your remote repository mostly up-to-date with your local work. 
 
 Before deleting your local repository, make sure that any work you want to keep has either been pushed to the remote repository or copied somewhere outside of the repository folder. Uncommitted and unpushed changes will be permanently lost when the local repository is deleted.
 
