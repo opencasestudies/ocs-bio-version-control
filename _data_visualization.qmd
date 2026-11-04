@@ -102,6 +102,7 @@ You can also add a code chunk in Positron by clicking the icon that shows an arr
 
 ::: {.rcode}
 ```{r, message = FALSE, warning = FALSE}
+library(readr)
 library(here)
 library(dplyr) 
 library(ggplot2)
