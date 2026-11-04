@@ -36,7 +36,7 @@ library(dplyr) # for data manipulation
 library(stringr) # for working with strings
 
 # load data that we saved in data_import
-readr::read_csv("processed_data/sample_metadata.csv")
+sample_metadata <- readr::read_csv("processed_data/sample_metadata.csv")
 
 # clean data
 clean_metadata <- sample_metadata %>%
@@ -50,10 +50,7 @@ clean_metadata <- sample_metadata %>%
            stringr::str_remove_all("(?<=.)[A-Z]")) %>% 
   # remove spaces from names of variables 
   dplyr::rename(sampling_paper = `Sampling from papers`, 
-         sampling_day = `Sampling, day`) %>%
-  # recode "NA" as NA and make sampling_day a numeric variable
-  mutate(sampling_day = na_if(sampling_day, "NA") %>%
-           as.numeric()) 
+         sampling_day = `Sampling, day`) 
 
 # in Yassour study, sample IDs are not unique to samples 
 # first inspect this to confirm
@@ -107,7 +104,8 @@ Data are wrangled in the file `02_wrangle_data.R`. You can find out how many row
 <details><summary>Answer</summary>
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
-readr::read_csv(here::here("data", "wrangled", "clean_sample_metadata.csv"))
+clean_metadata <- readr::read_csv(here::here("data", "wrangled",
+                                             "clean_sample_metadata.csv"))
 library(dplyr)
 ```
 
@@ -117,7 +115,7 @@ nrow(clean_metadata)
 ```
 :::
 
-There are 1,443 observations after data wrangling. We removed observations that had `NA` values for the variable `SampleID` (in line 10) and we removed observations that were taken before birth (in line 51).
+There are 1,443 observations after data wrangling. We removed observations that had `NA` values for the variable `SampleID` and we removed observations that were taken before birth.
 
 </details>
 ::::
@@ -138,7 +136,8 @@ Data are wrangled in the file `02_wrangle_data.R`. You can use the functions `ma
 <details><summary>Answer</summary>
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
-readr::read_csv(here::here("data", "wrangled", "clean_sample_metadata.csv"))
+clean_metadata <- readr::read_csv(here::here("data", "wrangled", 
+                                             "clean_sample_metadata.csv"))
 library(dplyr)
 ```
 

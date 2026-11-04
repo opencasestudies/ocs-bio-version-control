@@ -120,12 +120,14 @@ We want to load data from the file `clean_sample_metadata.csv` contained within 
 - [ ] **Include this code in your .qmd file** to load the data.
 
 ```{r, echo = FALSE}
-readr::read_csv(here::here("data", "wrangled", "clean_sample_metadata.csv"))
+clean_metadata <- readr::read_csv(here::here("data", "wrangled", 
+                                             "clean_sample_metadata.csv"))
 ```
 
 ::: {.rcode}
 ```{r, eval = FALSE}
-readr::read_csv(here::here("processed_data", "clean_sample_metadata.csv"))
+clean_metadata <- readr::read_csv(here::here("processed_data", 
+                                             "clean_sample_metadata.csv"))
 ```
 :::
 
