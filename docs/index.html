@@ -544,7 +544,7 @@ Images or videos may be helpful so this includes an example of including an imag
 </div>
 </div>
 </div>
-<p>In this case study, you will learn how to use <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with Git</span>GitHub</button> for version control. You will also learn how version control can facilitate collaboration and make a scientific project more transparent and <button class="glossary"><span class="def">Describes a project in which a new researcher can re-run an experiment or analysis with the same data and code and generate the same results</span>reproducible</button>. Along the way, you will use a <button class="glossary"><span class="def">A collection of microorganisms that live in a shared environment</span>microbiome</button> <button class="glossary"><span class="def">An analysis of data from a collection of studies targeting a common research question</span>meta-analysis</button> as a motivating example and practice using R to visualize differences among the studies included in the meta-analysis.</p>
+<p>In this case study, you will learn how to use <button class="glossary"><span class="def"></span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with Git</span>GitHub</button> for version control. You will also learn how version control can facilitate collaboration and make a scientific project more transparent and <button class="glossary"><span class="def">Describes a project in which a new researcher can re-run an experiment or analysis with the same data and code and generate the same results</span>reproducible</button>. Along the way, you will use a <button class="glossary"><span class="def">A collection of microorganisms that live in a shared environment</span>microbiome</button> <button class="glossary"><span class="def">An analysis of data from a collection of studies targeting a common research question</span>meta-analysis</button> as a motivating example and practice using R to visualize differences among the studies included in the meta-analysis.</p>
 <p>You will learn more about version control, and specifically Git and GitHub, in the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github">Introduction to Git and GitHub Section</a> below. Much of the information in that section is described in the following papers (<span class="citation" data-cites="blischak2016quick">Blischak, Davenport, and Wilson (<a href="#ref-blischak2016quick" role="doc-biblioref">2016</a>)</span> and <span class="citation" data-cites="bryan2018excuse">Bryan (<a href="#ref-bryan2018excuse" role="doc-biblioref">2018</a>)</span>). They both provide a helpful introduction to version control with Git and GitHub.</p>
 <div class="reference_box">
 <div class="reference_box_header">
@@ -1866,12 +1866,12 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 <p>Question opportunity</p>
 </div>
 <div class="inner_block">
-Read through the <code>README.md</code> file for this project. Which script generates <code>sample_metadata.rda</code>?
+Read through the <code>README.md</code> file for this project. Which script generates <code>sample_metadata.csv</code>?
 <details>
 <summary>
 Answer
 </summary>
-The script <code>01_pull_study_data.R</code> generates <code>sample_metadata.rda</code>.
+The script <code>01_pull_study_data.R</code> generates <code>sample_metadata.csv</code>.
 </details>
 </div>
 </div>
@@ -2064,11 +2064,16 @@ Consider incorporating a checklist of statements that learners should answer/dis
 <td><a href="https://www.opencasestudies.org/ocs-bio-version-control/#data-import">Data import</a>, <a href="https://www.opencasestudies.org/ocs-bio-version-control/#data-exploration">Data exploration</a>, <a href="https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling">Data wrangling</a>, <a href="https://www.opencasestudies.org/ocs-bio-version-control/#data-visualization">Data visualization</a>, <a href="https://www.opencasestudies.org/ocs-bio-version-control/#data-analysis">Data analysis</a></td>
 </tr>
 <tr class="even">
+<td><a href="https://readr.tidyverse.org">readr</a></td>
+<td>To read CSV files into R</td>
+<td><a href="https://www.opencasestudies.org/ocs-bio-version-control/#data-import">Data import</a>, <a href="https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling">Data wrangling</a>, <a href="https://www.opencasestudies.org/ocs-bio-version-control/#data-visualization">Data visualization</a></td>
+</tr>
+<tr class="odd">
 <td><a href="https://ggplot2.tidyverse.org">ggplot2</a></td>
 <td>To visualize data</td>
 <td><a href="https://www.opencasestudies.org/ocs-bio-version-control/#data-visualization">Data visualization</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://stringr.tidyverse.org">stringr</a></td>
 <td>To manipulate strings</td>
 <td><a href="https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling">Data wrangling</a></td>
@@ -2076,7 +2081,7 @@ Consider incorporating a checklist of statements that learners should answer/dis
 </tbody>
 </table>
 <p>The first time we use a function, we will use <code>::</code> to indicate which package we are using. Unless we have overlapping function names, this is not necessary, but we will include it here to remind you which packages the functions come from.</p>
-<p>Three of these packages, <code>dplyr</code>, <code>ggplot2</code>, and <code>stringr</code> are part of the <a href="https://tidyverse.org">tidyverse suite of packages</a>. The <code>tidyverse</code> includes nine packages that can easily be used together and share data structures and syntax. While each of the packages can be installed or loaded separately (as we do above), they can be installed or loaded all at once using <code>install.packages("tidyverse")</code> and <code>library(tidyverse)</code>, respectively.</p>
+<p>Four of these packages, <code>dplyr</code>, <code>readr</code>, <code>ggplot2</code>, and <code>stringr</code> are part of the <a href="https://tidyverse.org">tidyverse suite of packages</a>. The <code>tidyverse</code> includes nine packages that can easily be used together and share data structures and syntax. While each of the packages can be installed or loaded separately (as we do above), they can be installed or loaded all at once using <code>install.packages("tidyverse")</code> and <code>library(tidyverse)</code>, respectively.</p>
 <details>
 <summary>
 Instructions to install these packages
@@ -2085,7 +2090,7 @@ Instructions to install these packages
 <p>First, you can check if you already have some of these packages installed with the following command:</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"here"</span>, <span class="st">"readxl"</span>, <span class="st">"dplyr"</span>, <span class="st">"ggplot2"</span>, <span class="st">"stringr"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"here"</span>, <span class="st">"readxl"</span>, <span class="st">"dplyr"</span>, <span class="st">"readr"</span>, <span class="st">"ggplot2"</span>, <span class="st">"stringr"</span>)</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(packages, <span class="at">installed =</span> </span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>             packages <span class="sc">%in%</span> <span class="fu">rownames</span>(<span class="fu">installed.packages</span>()))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -2093,10 +2098,10 @@ Instructions to install these packages
 <p>Any package that has <code>TRUE</code> under <code>installed</code> is already installed, and any package that has <code>FALSE</code> is not yet installed. To install the remaining packages, you can use the following command, removing any packages that are already installed.</p>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"here"</span>, <span class="st">"readxl"</span>, <span class="st">"dplyr"</span>, <span class="st">"ggplot2"</span>, <span class="st">"stringr"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"here"</span>, <span class="st">"readxl"</span>, <span class="st">"dplyr"</span>, <span class="st">"readr"</span>, <span class="st">"ggplot2"</span>, <span class="st">"stringr"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
-<p>If you want to install all nine <code>tidyverse</code> packages at once, you could remove <code>dplyr</code>, <code>ggplot2</code>, and <code>stringr</code> from the command above, and run <code>install.packages("tidyverse")</code>.</p>
+<p>If you want to install all nine <code>tidyverse</code> packages at once, you could remove <code>dplyr</code>, <code>readr</code>, <code>ggplot2</code>, and <code>stringr</code> from the command above, and run <code>install.packages("tidyverse")</code>.</p>
 <p>To confirm that these packages have successfully installed, you can check the package installations again.</p>
 <div class="rcode">
 <div class="cell">
@@ -2116,7 +2121,7 @@ At the end of this section, save incremental data so that users can pause and co
 <section id="data-import" class="level1">
 <h1><strong>Data Import</strong></h1>
 <hr>
-<p>Now that you have set up this project with <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with Git</span>GitHub</button>, you can start working on the study comparison in R.</p>
+<p>Now that you have set up this project with <button class="glossary"><span class="def"></span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with Git</span>GitHub</button>, you can start working on the study comparison in R.</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Open RStudio or Positron or your preferred R IDE to the <code>infant_gut_analysis</code> folder.</label></li>
 </ul>
@@ -2132,24 +2137,25 @@ Click here to see the code included in this file.
 <div class="rcode">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl) <span class="co"># for reading data from supplementary table</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr) <span class="co"># for combining data across studies </span></span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="co"># read tabs for each study from Table S1 from Wang et al. supplementary </span></span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="co"># information, saved as "Table S1.xlsx"</span></span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>study_data <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="dv">3</span><span class="sc">:</span><span class="dv">10</span>, <span class="cf">function</span>(i) {</span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>  readxl<span class="sc">::</span><span class="fu">read_xlsx</span>(<span class="st">"raw_data/Table S1.xlsx"</span>, <span class="at">sheet =</span> i)</span>
-<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>}) </span>
-<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a><span class="co"># set all variables as characters in order to combine data across studies</span></span>
-<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a><span class="co"># original data had some variables in different data types across studies</span></span>
-<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>study_data_clean <span class="ot">&lt;-</span> <span class="fu">lapply</span>(study_data, <span class="cf">function</span>(df) {</span>
-<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">mutate</span>(dplyr<span class="sc">::</span><span class="fu">across</span>(dplyr<span class="sc">::</span><span class="fu">everything</span>(), as.character))</span>
-<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a><span class="co"># combine lists for each study into a single data frame</span></span>
-<span id="cb38-17"><a href="#cb38-17" aria-hidden="true" tabindex="-1"></a>sample_metadata <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">bind_rows</span>(study_data_clean)</span>
-<span id="cb38-18"><a href="#cb38-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-19"><a href="#cb38-19" aria-hidden="true" tabindex="-1"></a><span class="co"># save data frame as a .rda file</span></span>
-<span id="cb38-20"><a href="#cb38-20" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(sample_metadata, <span class="at">file =</span> <span class="st">"processed_data/sample_metadata.rda"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr) <span class="co"># for writing result to .csv file</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="co"># read tabs for each study from Table S1 from Wang et al. </span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="co"># supplementary information, saved as "Table S1.xlsx"</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>study_data <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="dv">3</span><span class="sc">:</span><span class="dv">10</span>, <span class="cf">function</span>(i) {</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>  readxl<span class="sc">::</span><span class="fu">read_xlsx</span>(<span class="st">"raw_data/Table S1.xlsx"</span>, <span class="at">sheet =</span> i)</span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>}) </span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a><span class="co"># set all variables as characters in order to combine data across studies</span></span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a><span class="co"># original data had some variables in different data types across studies</span></span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a>study_data_clean <span class="ot">&lt;-</span> <span class="fu">lapply</span>(study_data, <span class="cf">function</span>(df) {</span>
+<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">mutate</span>(dplyr<span class="sc">::</span><span class="fu">across</span>(dplyr<span class="sc">::</span><span class="fu">everything</span>(), as.character))</span>
+<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-17"><a href="#cb38-17" aria-hidden="true" tabindex="-1"></a><span class="co"># combine lists for each study into a single data frame</span></span>
+<span id="cb38-18"><a href="#cb38-18" aria-hidden="true" tabindex="-1"></a>sample_metadata <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">bind_rows</span>(study_data_clean)</span>
+<span id="cb38-19"><a href="#cb38-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-20"><a href="#cb38-20" aria-hidden="true" tabindex="-1"></a><span class="co"># save data frame as a .csv file</span></span>
+<span id="cb38-21"><a href="#cb38-21" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">write_csv</span>(sample_metadata, <span class="at">file =</span> <span class="st">"processed_data/sample_metadata.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </details>
 <div class="think_question">
@@ -2212,19 +2218,19 @@ $ SampleID                                       &lt;chr&gt; "MV_FEI1_t1Q14", "M
 $ PersonID                                       &lt;chr&gt; "1", "1", "2", "2", "3"…
 $ Type                                           &lt;chr&gt; "stool", "stool", "stoo…
 $ Category                                       &lt;chr&gt; "infant", "mother", "in…
-$ `Maternal age`                                 &lt;chr&gt; "NA", "NA", "NA", "NA",…
-$ `Maternal body mass index before pregnancy`    &lt;chr&gt; "NA", "NA", "NA", "NA",…
-$ `Maternal antibiotics before delivery`         &lt;chr&gt; "NA", "NA", "NA", "NA",…
-$ `Maternal intrapartum antibiotics`             &lt;chr&gt; "NA", "NA", "NA", "NA",…
+$ `Maternal age`                                 &lt;chr&gt; NA, NA, NA, NA, NA, NA,…
+$ `Maternal body mass index before pregnancy`    &lt;dbl&gt; NA, NA, NA, NA, NA, NA,…
+$ `Maternal antibiotics before delivery`         &lt;chr&gt; NA, NA, NA, NA, NA, NA,…
+$ `Maternal intrapartum antibiotics`             &lt;chr&gt; NA, NA, NA, NA, NA, NA,…
 $ `Sampling from papers`                         &lt;chr&gt; "3mo", "3mo", "3mo", "3…
-$ `Sampling, day`                                &lt;chr&gt; "90", "90", "90", "90",…
-$ `Feeding regimen`                              &lt;chr&gt; "combined", "NA", "brea…
-$ `Postnatal antibiotic intervention in infants` &lt;chr&gt; "NA", "NA", "NA", "NA",…
+$ `Sampling, day`                                &lt;dbl&gt; 90, 90, 90, 90, 90, 90,…
+$ `Feeding regimen`                              &lt;chr&gt; "combined", NA, "breast…
+$ `Postnatal antibiotic intervention in infants` &lt;chr&gt; NA, NA, NA, NA, NA, NA,…
 $ Gender                                         &lt;chr&gt; "female", "female", "ma…
 $ `Mode of delivery`                             &lt;chr&gt; "vaginal", "vaginal", "…
-$ `Caesarean-section type`                       &lt;chr&gt; "NA", "NA", "NA", "NA",…
-$ `Gestational age`                              &lt;chr&gt; "NA", "NA", "NA", "NA",…
-$ `Birth weight`                                 &lt;chr&gt; "NA", "NA", "NA", "NA",…
+$ `Caesarean-section type`                       &lt;chr&gt; NA, NA, NA, NA, NA, NA,…
+$ `Gestational age`                              &lt;chr&gt; NA, NA, NA, NA, NA, NA,…
+$ `Birth weight`                                 &lt;dbl&gt; NA, NA, NA, NA, NA, NA,…
 $ Country                                        &lt;chr&gt; "ITA_1", "ITA_1", "ITA_…</code></pre>
 </div>
 </div>
@@ -2234,18 +2240,12 @@ $ Country                                        &lt;chr&gt; "ITA_1", "ITA_1", "
 <p>Question opportunity</p>
 </div>
 <div class="inner_block">
-As we described in the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#what-are-the-data">“What are the data?” section</a>, the variables that we will use in our analysis are <code>Study</code>, <code>SampleID</code>, <code>PersonID</code>, <code>Category</code>, <code>Sampling from papers</code>, and <code>Sampling, day</code>. Based on the output of the <code>glimpse()</code> function, which if any of these variables will we want to work with as a numeric data type as opposed to a character data type?
-<details>
-<summary>
-Hint
-</summary>
-<p>Numeric data types are used for data that we’d like to do math with (such as <code>4</code> or <code>3.14</code>). Character data types are used for data in which we record a word or a series of words, and don’t need to do any mathematical equations (such as <code>"apple"</code> or <code>"treatment group"</code>). Character data are enclosed in quotes.</p>
-</details>
+<p>As we described in the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#what-are-the-data">“What are the data?” section</a>, the variables that we will use in our analysis are <code>Study</code>, <code>SampleID</code>, <code>PersonID</code>, <code>Category</code>, <code>Sampling from papers</code>, and <code>Sampling, day</code>. What appears to be the difference between <code>Sampling from papers</code> and <code>Sampling, day</code>?</p>
 <details>
 <summary>
 Answer
 </summary>
-<p>The variable <code>Sampling, day</code> is encoded with character values, however seems to contain numerical data. In the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling">Data Wrangling section</a> we will recode <code>Sampling, day</code> as a numeric variable.</p>
+<p>The variable <code>Sampling, day</code> is encoded with numeric values (this represents the day since birth on which the sample was taken), while the variable <code>Sampling from paper</code> is a character vector. For the first several observations shown in <code>glimpse()</code>, this describes the month at which the sample was taken. This varies across studies; in other studies <code>Sampling from paper</code> describes the day of sampling. <code>Sampling, day</code> is a variable added by <span class="citation" data-cites="wang2021metagenomic">Wang et al. (<a href="#ref-wang2021metagenomic" role="doc-biblioref">2021</a>)</span> in their <button class="glossary"><span class="def">An analysis of data from a collection of studies targeting a common research question</span>meta-analysis</button> to compare sampling timing across studies on the same scale.</p>
 </details>
 </div>
 </div>
@@ -2285,60 +2285,59 @@ At the end of this section, save incremental data so that users can pause and co
 Click here to see the code included in this file.
 </summary>
 <div class="rcode">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr) <span class="co"># for data manipulation</span></span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr) <span class="co"># for working with strings</span></span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="co"># load data that we saved in data_import</span></span>
-<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"processed_data/sample_metadata.rda"</span>)</span>
-<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a><span class="co"># clean data</span></span>
-<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="ot">&lt;-</span> sample_metadata <span class="sc">%&gt;%</span></span>
-<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># remove all rows in data that are missing sample ID</span></span>
-<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(SampleID)) <span class="sc">%&gt;%</span> </span>
-<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># clean study name to only include last name of first author</span></span>
-<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Study =</span> </span>
-<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a>           <span class="co"># remove _year from study name</span></span>
-<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a>           stringr<span class="sc">::</span><span class="fu">str_remove</span>(Study, <span class="st">"</span><span class="sc">\\</span><span class="st">_.*"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a>           <span class="co"># remove first name initial from study name</span></span>
-<span id="cb45-16"><a href="#cb45-16" aria-hidden="true" tabindex="-1"></a>           stringr<span class="sc">::</span><span class="fu">str_remove_all</span>(<span class="st">"(?&lt;=.)[A-Z]"</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb45-17"><a href="#cb45-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># remove spaces from names of variables </span></span>
-<span id="cb45-18"><a href="#cb45-18" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">rename</span>(<span class="at">sampling_paper =</span> <span class="st">`</span><span class="at">Sampling from papers</span><span class="st">`</span>, </span>
-<span id="cb45-19"><a href="#cb45-19" aria-hidden="true" tabindex="-1"></a>         <span class="at">sampling_day =</span> <span class="st">`</span><span class="at">Sampling, day</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb45-20"><a href="#cb45-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># recode "NA" as NA and make sampling_day a numeric variable</span></span>
-<span id="cb45-21"><a href="#cb45-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sampling_day =</span> <span class="fu">na_if</span>(sampling_day, <span class="st">"NA"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb45-22"><a href="#cb45-22" aria-hidden="true" tabindex="-1"></a>           <span class="fu">as.numeric</span>()) </span>
-<span id="cb45-23"><a href="#cb45-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-24"><a href="#cb45-24" aria-hidden="true" tabindex="-1"></a><span class="co"># in Yassour study, sample IDs are not unique to samples </span></span>
-<span id="cb45-25"><a href="#cb45-25" aria-hidden="true" tabindex="-1"></a><span class="co"># first inspect this to confirm</span></span>
-<span id="cb45-26"><a href="#cb45-26" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="sc">%&gt;%</span></span>
-<span id="cb45-27"><a href="#cb45-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Study <span class="sc">==</span> <span class="st">"Yassour"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb45-28"><a href="#cb45-28" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(Study, Category, SampleID, sampling_day) <span class="sc">%&gt;%</span></span>
-<span id="cb45-29"><a href="#cb45-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span>
-<span id="cb45-30"><a href="#cb45-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-31"><a href="#cb45-31" aria-hidden="true" tabindex="-1"></a><span class="co"># create new unique sample IDs for Yassour study</span></span>
-<span id="cb45-32"><a href="#cb45-32" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="ot">&lt;-</span> clean_metadata <span class="sc">%&gt;%</span></span>
-<span id="cb45-33"><a href="#cb45-33" aria-hidden="true" tabindex="-1"></a>  <span class="co"># check if study is Yassour</span></span>
-<span id="cb45-34"><a href="#cb45-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">SampleID =</span> <span class="fu">ifelse</span>(Study <span class="sc">==</span> <span class="st">"Yassour"</span>, </span>
-<span id="cb45-35"><a href="#cb45-35" aria-hidden="true" tabindex="-1"></a>                           <span class="co"># if so, combine sample ID and sampling day</span></span>
-<span id="cb45-36"><a href="#cb45-36" aria-hidden="true" tabindex="-1"></a>                           <span class="fu">paste0</span>(SampleID, sampling_day),</span>
-<span id="cb45-37"><a href="#cb45-37" aria-hidden="true" tabindex="-1"></a>                           <span class="co"># if not, leave sample ID as is </span></span>
-<span id="cb45-38"><a href="#cb45-38" aria-hidden="true" tabindex="-1"></a>                           SampleID)) </span>
-<span id="cb45-39"><a href="#cb45-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-40"><a href="#cb45-40" aria-hidden="true" tabindex="-1"></a><span class="co"># confirm that we've fixed this problem</span></span>
-<span id="cb45-41"><a href="#cb45-41" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="sc">%&gt;%</span></span>
-<span id="cb45-42"><a href="#cb45-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Study <span class="sc">==</span> <span class="st">"Yassour"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb45-43"><a href="#cb45-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Study, Category, SampleID, sampling_day) <span class="sc">%&gt;%</span></span>
-<span id="cb45-44"><a href="#cb45-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span>
-<span id="cb45-45"><a href="#cb45-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-46"><a href="#cb45-46" aria-hidden="true" tabindex="-1"></a><span class="co"># two studies (Parnanen and Yassour) took samples </span></span>
-<span id="cb45-47"><a href="#cb45-47" aria-hidden="true" tabindex="-1"></a><span class="co"># from mothers during pregnancy</span></span>
-<span id="cb45-48"><a href="#cb45-48" aria-hidden="true" tabindex="-1"></a><span class="co"># remove these samples, because they don't fit into</span></span>
-<span id="cb45-49"><a href="#cb45-49" aria-hidden="true" tabindex="-1"></a><span class="co"># the time range that we want to consider </span></span>
-<span id="cb45-50"><a href="#cb45-50" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="ot">&lt;-</span> clean_metadata <span class="sc">%&gt;%</span></span>
-<span id="cb45-51"><a href="#cb45-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(sampling_paper <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"32WK"</span>, <span class="st">"Gest"</span>)))</span>
-<span id="cb45-52"><a href="#cb45-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-53"><a href="#cb45-53" aria-hidden="true" tabindex="-1"></a><span class="co"># save cleaned data</span></span>
-<span id="cb45-54"><a href="#cb45-54" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(clean_metadata, <span class="at">file =</span> <span class="st">"processed_data/clean_sample_metadata.rda"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr) <span class="co"># for reading .csv file and writing result to .csv file</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr) <span class="co"># for data manipulation</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr) <span class="co"># for working with strings</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="co"># load data that we saved in data_import</span></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>sample_metadata <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"processed_data/sample_metadata.csv"</span>)</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a><span class="co"># clean data</span></span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="ot">&lt;-</span> sample_metadata <span class="sc">%&gt;%</span></span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># remove all rows in data that are missing sample ID</span></span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(SampleID)) <span class="sc">%&gt;%</span> </span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># clean study name to only include last name of first author</span></span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">Study =</span> </span>
+<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a>           <span class="co"># remove _year from study name</span></span>
+<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a>           stringr<span class="sc">::</span><span class="fu">str_remove</span>(Study, <span class="st">"</span><span class="sc">\\</span><span class="st">_.*"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb45-16"><a href="#cb45-16" aria-hidden="true" tabindex="-1"></a>           <span class="co"># remove first name initial from study name</span></span>
+<span id="cb45-17"><a href="#cb45-17" aria-hidden="true" tabindex="-1"></a>           stringr<span class="sc">::</span><span class="fu">str_remove_all</span>(<span class="st">"(?&lt;=.)[A-Z]"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb45-18"><a href="#cb45-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># remove spaces from names of variables </span></span>
+<span id="cb45-19"><a href="#cb45-19" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">rename</span>(<span class="at">sampling_paper =</span> <span class="st">`</span><span class="at">Sampling from papers</span><span class="st">`</span>, </span>
+<span id="cb45-20"><a href="#cb45-20" aria-hidden="true" tabindex="-1"></a>         <span class="at">sampling_day =</span> <span class="st">`</span><span class="at">Sampling, day</span><span class="st">`</span>) </span>
+<span id="cb45-21"><a href="#cb45-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-22"><a href="#cb45-22" aria-hidden="true" tabindex="-1"></a><span class="co"># in Yassour study, sample IDs are not unique to samples </span></span>
+<span id="cb45-23"><a href="#cb45-23" aria-hidden="true" tabindex="-1"></a><span class="co"># first inspect this to confirm</span></span>
+<span id="cb45-24"><a href="#cb45-24" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="sc">%&gt;%</span></span>
+<span id="cb45-25"><a href="#cb45-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Study <span class="sc">==</span> <span class="st">"Yassour"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb45-26"><a href="#cb45-26" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(Study, Category, SampleID, sampling_day) <span class="sc">%&gt;%</span></span>
+<span id="cb45-27"><a href="#cb45-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span>
+<span id="cb45-28"><a href="#cb45-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-29"><a href="#cb45-29" aria-hidden="true" tabindex="-1"></a><span class="co"># create new unique sample IDs for Yassour study</span></span>
+<span id="cb45-30"><a href="#cb45-30" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="ot">&lt;-</span> clean_metadata <span class="sc">%&gt;%</span></span>
+<span id="cb45-31"><a href="#cb45-31" aria-hidden="true" tabindex="-1"></a>  <span class="co"># check if study is Yassour</span></span>
+<span id="cb45-32"><a href="#cb45-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">SampleID =</span> <span class="fu">ifelse</span>(Study <span class="sc">==</span> <span class="st">"Yassour"</span>, </span>
+<span id="cb45-33"><a href="#cb45-33" aria-hidden="true" tabindex="-1"></a>                           <span class="co"># if so, combine sample ID and sampling day</span></span>
+<span id="cb45-34"><a href="#cb45-34" aria-hidden="true" tabindex="-1"></a>                           <span class="fu">paste0</span>(SampleID, sampling_day),</span>
+<span id="cb45-35"><a href="#cb45-35" aria-hidden="true" tabindex="-1"></a>                           <span class="co"># if not, leave sample ID as is </span></span>
+<span id="cb45-36"><a href="#cb45-36" aria-hidden="true" tabindex="-1"></a>                           SampleID)) </span>
+<span id="cb45-37"><a href="#cb45-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-38"><a href="#cb45-38" aria-hidden="true" tabindex="-1"></a><span class="co"># confirm that we've fixed this problem</span></span>
+<span id="cb45-39"><a href="#cb45-39" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="sc">%&gt;%</span></span>
+<span id="cb45-40"><a href="#cb45-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Study <span class="sc">==</span> <span class="st">"Yassour"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb45-41"><a href="#cb45-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Study, Category, SampleID, sampling_day) <span class="sc">%&gt;%</span></span>
+<span id="cb45-42"><a href="#cb45-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span>
+<span id="cb45-43"><a href="#cb45-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-44"><a href="#cb45-44" aria-hidden="true" tabindex="-1"></a><span class="co"># two studies (Parnanen and Yassour) took samples </span></span>
+<span id="cb45-45"><a href="#cb45-45" aria-hidden="true" tabindex="-1"></a><span class="co"># from mothers during pregnancy</span></span>
+<span id="cb45-46"><a href="#cb45-46" aria-hidden="true" tabindex="-1"></a><span class="co"># remove these samples, because they don't fit into</span></span>
+<span id="cb45-47"><a href="#cb45-47" aria-hidden="true" tabindex="-1"></a><span class="co"># the time range that we want to consider </span></span>
+<span id="cb45-48"><a href="#cb45-48" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="ot">&lt;-</span> clean_metadata <span class="sc">%&gt;%</span></span>
+<span id="cb45-49"><a href="#cb45-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(sampling_paper <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"32WK"</span>, <span class="st">"Gest"</span>)))</span>
+<span id="cb45-50"><a href="#cb45-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-51"><a href="#cb45-51" aria-hidden="true" tabindex="-1"></a><span class="co"># save cleaned data</span></span>
+<span id="cb45-52"><a href="#cb45-52" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">write_csv</span>(clean_metadata, </span>
+<span id="cb45-53"><a href="#cb45-53" aria-hidden="true" tabindex="-1"></a>                 <span class="at">file =</span> <span class="st">"processed_data/clean_sample_metadata.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </details>
 <div class="think_question">
@@ -2365,7 +2364,7 @@ Answer
 </div>
 </div>
 </div>
-<p>There are 1,443 observations after data wrangling. We removed observations that had <code>NA</code> values for the variable <code>SampleID</code> (in line 10) and we removed observations that were taken before birth (in line 51).</p>
+<p>There are 1,443 observations after data wrangling. We removed observations that had <code>NA</code> values for the variable <code>SampleID</code> and we removed observations that were taken before birth.</p>
 </details>
 </div>
 </div>
@@ -2514,13 +2513,14 @@ More information about the <code>here()</code> function:
 </summary>
 The <code>here()</code> function creates file paths that always start from the main project folder (the top-level folder that contains all of your project files). In a Git repository, this is the folder that contains the <code>.git</code> directory, which was created when you initialized the repository. However, there are other ways here can determine where to start the path, including the directory with an <code>.Rproj</code> file (if you are using one), see this <a href="https://here.r-lib.org/reference/here.html">list of conditions for the starting directory</a> for more information. Using relative file paths (i.e., paths that only reference folders within your project) makes your code more portable and easier for collaborators to run. Importantly, the <code>here()</code> function creates these relative paths in a way that is compatible with different kinds of operating systems which have different path requirements. In contrast, absolute file paths depend on the specific file structure of your personal computer and will not necessarily work on other machines.
 </details>
-<p>We want to load data from the file <code>clean_sample_metadata.rda</code> contained within the <code>processed_data</code> folder.</p>
+<p>We want to load data from the file <code>clean_sample_metadata.csv</code> contained within the <code>processed_data</code> folder.</p>
 <ul class="task-list">
 <li><label><input type="checkbox"><strong>Include this code in your .qmd file</strong> to load the data.</label></li>
 </ul>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"processed_data"</span>, <span class="st">"clean_sample_metadata.rda"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>clean_metadata <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"processed_data"</span>, </span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>                                             <span class="st">"clean_sample_metadata.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <p>Now that you have created a new file and loaded packages and data, this is a good time to stage this new file and <button class="glossary"><span class="def">A snapshot of all files in a repository at a moment in time</span>commit</button> your work.</p>
@@ -3256,7 +3256,7 @@ Example pull request for this analysis
 <section id="synopsis" class="level2">
 <h2 class="anchored" data-anchor-id="synopsis"><strong>Synopsis</strong></h2>
 <hr>
-<p>In this case study, you’ve learned about why <button class="glossary"><span class="def">A tool that records changes to a project over time</span>version control</button> is used as part of <button class="glossary"><span class="def">Describes a project in which a new researcher can re-run an experiment or analysis with the same data and code and generate the same results</span>reproducible</button> science workflows. You’ve been introduced to <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with Git</span>GitHub</button>, and learned procedures for managing Git-tracked <button class="glossary"><span class="def">Folders in Git that contains all of the files to be tracked for a project</span>repositories</button> locally using <button class="glossary"><span class="def">A graphical user interface for interacting with Git on a local computer</span>GitHub Desktop</button> or the <button class="glossary"><span class="def">A window that lets a user interact with a computer through typing commands</span>command line</button>, and remotely using GitHub (<a href="https://github.com/">github.com</a>). You’ve practiced using the “pull → stage → commit → push” workflow to make changes locally that are then tracked remotely. In your analysis, you worked in a <button class="glossary"><span class="def">A history of commits in a Git-tracked repository (there can be multiple parallel branches in a repository)</span>branch</button>, and you submitted a <button class="glossary"><span class="def">A request to integrate a collection of commits from one branch (or from a fork) into another branch (or another repository)</span>pull request</button> in order to integrate new changes into a stable version of the code and as a way to ask a collaborator to review your code.</p>
+<p>In this case study, you’ve learned about why <button class="glossary"><span class="def">A tool that records changes to a project over time</span>version control</button> is used as part of <button class="glossary"><span class="def">Describes a project in which a new researcher can re-run an experiment or analysis with the same data and code and generate the same results</span>reproducible</button> science workflows. You’ve been introduced to <button class="glossary"><span class="def"></span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with Git</span>GitHub</button>, and learned procedures for managing Git-tracked <button class="glossary"><span class="def">Folders in Git that contains all of the files to be tracked for a project</span>repositories</button> locally using <button class="glossary"><span class="def">A graphical user interface for interacting with Git on a local computer</span>GitHub Desktop</button> or the <button class="glossary"><span class="def">A window that lets a user interact with a computer through typing commands</span>command line</button>, and remotely using GitHub (<a href="https://github.com/">github.com</a>). You’ve practiced using the “pull → stage → commit → push” workflow to make changes locally that are then tracked remotely. In your analysis, you worked in a <button class="glossary"><span class="def">A history of commits in a Git-tracked repository (there can be multiple parallel branches in a repository)</span>branch</button>, and you submitted a <button class="glossary"><span class="def">A request to integrate a collection of commits from one branch (or from a fork) into another branch (or another repository)</span>pull request</button> in order to integrate new changes into a stable version of the code and as a way to ask a collaborator to review your code.</p>
 <p>Along the way, you’ve also learned about the advantages and challenges of <button class="glossary"><span class="def">Analyses of data from a collection of studies targeting a common research question</span>meta-analyses</button> and best practices for scientific project organization.</p>
 </section>
 <section id="summary-activity" class="level2">
@@ -3798,7 +3798,7 @@ Don't adjust the shortcode or the table header in this file, only the markdown t
 <section id="troubleshooting-git-and-github" class="level1 page-columns page-full">
 <h1><strong>Troubleshooting Git and GitHub</strong></h1>
 <hr>
-<p>Most new and experienced users of <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with Git</span>GitHub</button> will run into problems occasionally. Luckily, <button class="glossary"><span class="def">A tool that records changes to a project over time</span>version control</button> is designed so that these problems can be solved, it just may take some time to get used to. There are many helpful <a href="https://dangitgit.com/en">resources</a> online for common Git and GitHub problems, and AI chatbots can provide advice (please see our <a href="https://www.opencasestudies.org/ocs-bio-version-control/#other-troubleshooting-resources">AI disclaimer below</a> for advice on using AI for version control!). In this section, we will mention a few common Git and GitHub problems and provide solutions.</p>
+<p>Most new and experienced users of <button class="glossary"><span class="def"></span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with Git</span>GitHub</button> will run into problems occasionally. Luckily, <button class="glossary"><span class="def">A tool that records changes to a project over time</span>version control</button> is designed so that these problems can be solved, it just may take some time to get used to. There are many helpful <a href="https://dangitgit.com/en">resources</a> online for common Git and GitHub problems, and AI chatbots can provide advice (please see our <a href="https://www.opencasestudies.org/ocs-bio-version-control/#other-troubleshooting-resources">AI disclaimer below</a> for advice on using AI for version control!). In this section, we will mention a few common Git and GitHub problems and provide solutions.</p>
 <section id="amending-commit-messages" class="level3">
 <h3 class="anchored" data-anchor-id="amending-commit-messages">Amending Commit Messages</h3>
 <details>
@@ -4605,8 +4605,8 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] yaml_2.3.12   stringr_1.5.1 ggplot2_3.5.0 dplyr_1.1.4   readxl_1.4.3 
-[6] here_1.0.2   
+[1] yaml_2.3.12   readr_2.1.5   stringr_1.5.1 ggplot2_3.5.0 dplyr_1.1.4  
+[6] readxl_1.4.3  here_1.0.2   
 
 loaded via a namespace (and not attached):
  [1] utf8_1.2.4        generics_0.1.3    tidyr_1.3.1       xml2_1.5.1       
@@ -4615,15 +4615,16 @@ loaded via a namespace (and not attached):
 [13] rprojroot_2.1.1   jsonlite_2.0.0    processx_3.8.6    chromote_0.5.1   
 [17] ps_1.9.1          promises_1.2.1    httr_1.4.7        rvest_1.0.5      
 [21] purrr_1.0.2       fansi_1.0.6       ottrpal_2.0.0     viridisLite_0.4.2
-[25] scales_1.3.0      cli_3.6.5         rlang_1.1.6       gitcreds_0.1.2   
-[29] munsell_0.5.0     withr_3.0.2       tools_4.3.2       tzdb_0.4.0       
-[33] colorspace_2.1-0  curl_7.0.0        vctrs_0.6.5       R6_2.6.1         
-[37] png_0.1-8         lifecycle_1.0.4   htmlwidgets_1.6.4 pkgconfig_2.0.3  
-[41] pillar_1.9.0      later_1.3.2       gtable_0.3.4      glue_1.7.0       
-[45] Rcpp_1.0.12       xfun_0.55         tibble_3.3.0      tidyselect_1.2.0 
-[49] knitr_1.50        farver_2.1.1      htmltools_0.5.7   spelling_2.3.2   
-[53] websocket_1.4.4   labeling_0.4.3    rmarkdown_2.25    webshot2_0.1.2   
-[57] readr_2.1.5       compiler_4.3.2   </code></pre>
+[25] scales_1.3.0      cli_3.6.5         crayon_1.5.2      rlang_1.1.6      
+[29] gitcreds_0.1.2    bit64_4.0.5       munsell_0.5.0     withr_3.0.2      
+[33] parallel_4.3.2    tools_4.3.2       tzdb_0.4.0        colorspace_2.1-0 
+[37] curl_7.0.0        vctrs_0.6.5       R6_2.6.1          png_0.1-8        
+[41] lifecycle_1.0.4   bit_4.0.5         htmlwidgets_1.6.4 vroom_1.6.5      
+[45] pkgconfig_2.0.3   pillar_1.9.0      later_1.3.2       gtable_0.3.4     
+[49] glue_1.7.0        Rcpp_1.0.12       xfun_0.55         tibble_3.3.0     
+[53] tidyselect_1.2.0  knitr_1.50        farver_2.1.1      htmltools_0.5.7  
+[57] spelling_2.3.2    websocket_1.4.4   labeling_0.4.3    rmarkdown_2.25   
+[61] webshot2_0.1.2    compiler_4.3.2   </code></pre>
 </div>
 </div>
 </div>
