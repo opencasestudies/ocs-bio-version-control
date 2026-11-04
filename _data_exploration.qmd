@@ -14,7 +14,7 @@ At the end of this section, save incremental data (if changes were made) so that
 ***
 
 ```{r, echo = FALSE}
-load(here::here("data", "imported", "sample_metadata.rda"))
+readr::read_csv(here::here("data", "imported", "sample_metadata.csv"))
 ```
 
 Now that you've imported the data, let's take a look at it. We'll use the function `glimpse()`, from the `dplyr` package that we've already been working with. This function shows the first several observations from each column of our dataset.

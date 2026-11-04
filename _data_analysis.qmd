@@ -6,10 +6,11 @@ Now, we're going to put our evidence together to draw some conclusions about the
 First, recall the plots that we made.
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
+library(readr)
 library(here)
 library(dplyr)
 library(ggplot2)
-load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
+readr::read_csv(here::here("data", "wrangled", "clean_sample_metadata.csv"))
 sample_counts <- clean_metadata %>%
   group_by(Study, Category) %>%
   count(name = "total")
