@@ -13,8 +13,9 @@ At the end of this section, save incremental data (if changes were made) so that
 # **Data Exploration**
 ***
 
-```{r, echo = FALSE}
-load(here::here("data", "imported", "sample_metadata.rda"))
+```{r, echo = FALSE, message = FALSE}
+library(dplyr)
+sample_metadata <- readr::read_csv(here::here("data", "imported", "sample_metadata.csv"))
 ```
 
 Now that you've imported the data, let's take a look at it. We'll use the function `glimpse()`, from the `dplyr` package that we've already been working with. This function shows the first several observations from each column of our dataset.
@@ -30,15 +31,11 @@ glimpse(sample_metadata)
 Question opportunity
 ::::
 ::::{.inner_block}
-As we described in the ["What are the data?" section](https://www.opencasestudies.org/ocs-bio-version-control/#what-are-the-data), the variables that we will use in our analysis are `Study`, `SampleID`, `PersonID`, `Category`, `Sampling from papers`, and `Sampling, day`. Based on the output of the `glimpse()` function, which if any of these variables will we want to work with as a numeric data type as opposed to a character data type? 
-<details> <summary> Hint </summary>
+As we described in the ["What are the data?" section](https://www.opencasestudies.org/ocs-bio-version-control/#what-are-the-data), the variables that we will use in our analysis are `Study`, `SampleID`, `PersonID`, `Category`, `Sampling from papers`, and `Sampling, day`. What appears to be the difference between `Sampling from papers` and `Sampling, day`? 
 
-Numeric data types are used for data that we'd like to do math with (such as `4` or `3.14`). Character data types are used for data in which we record a word or a series of words, and don't need to do any mathematical equations (such as `"apple"` or `"treatment group"`). Character data are enclosed in quotes. 
-
-</details>
 <details><summary>Answer</summary>
 
-The variable `Sampling, day` is encoded with character values, however seems to contain numerical data. In the [Data Wrangling section](https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling) we will recode `Sampling, day` as a numeric variable. 
+The variable `Sampling, day` is encoded with numeric values (this represents the day since birth on which the sample was taken), while the variable `Sampling from paper` is a character vector. For the first several observations shown in `glimpse()`, this describes the month at which the sample was taken. This varies across studies; in other studies `Sampling from paper` describes the day of sampling. `Sampling, day` is a variable added by @wang2021metagenomic in their {{< glossary "meta-analysis" >}} to compare sampling timing across studies on the same scale.
 
 </details>
 ::::

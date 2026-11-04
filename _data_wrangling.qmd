@@ -31,28 +31,26 @@ This wrangling script takes four steps to clean the data:
 
 ::: {.rcode}
 ```r
+library(readr) # for reading .csv file and writing result to .csv file
 library(dplyr) # for data manipulation
 library(stringr) # for working with strings
 
 # load data that we saved in data_import
-load("processed_data/sample_metadata.rda")
+sample_metadata <- readr::read_csv("processed_data/sample_metadata.csv")
 
 # clean data
 clean_metadata <- sample_metadata %>%
   # remove all rows in data that are missing sample ID
   dplyr::filter(!is.na(SampleID)) %>% 
   # clean study name to only include last name of first author
-  mutate(Study = 
+  dplyr::mutate(Study = 
            # remove _year from study name
            stringr::str_remove(Study, "\\_.*") %>% 
            # remove first name initial from study name
            stringr::str_remove_all("(?<=.)[A-Z]")) %>% 
   # remove spaces from names of variables 
   dplyr::rename(sampling_paper = `Sampling from papers`, 
-         sampling_day = `Sampling, day`) %>%
-  # recode "NA" as NA and make sampling_day a numeric variable
-  mutate(sampling_day = na_if(sampling_day, "NA") %>%
-           as.numeric()) 
+         sampling_day = `Sampling, day`) 
 
 # in Yassour study, sample IDs are not unique to samples 
 # first inspect this to confirm
@@ -84,7 +82,8 @@ clean_metadata <- clean_metadata %>%
   filter(!(sampling_paper %in% c("32WK", "Gest")))
 
 # save cleaned data
-save(clean_metadata, file = "processed_data/clean_sample_metadata.rda")
+readr::write_csv(clean_metadata, 
+                 file = "processed_data/clean_sample_metadata.csv")
 ```
 :::
 
@@ -105,7 +104,8 @@ Data are wrangled in the file `02_wrangle_data.R`. You can find out how many row
 <details><summary>Answer</summary>
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
-load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
+clean_metadata <- readr::read_csv(here::here("data", "wrangled",
+                                             "clean_sample_metadata.csv"))
 library(dplyr)
 ```
 
@@ -115,7 +115,7 @@ nrow(clean_metadata)
 ```
 :::
 
-There are 1,443 observations after data wrangling. We removed observations that had `NA` values for the variable `SampleID` (in line 10) and we removed observations that were taken before birth (in line 51).
+There are 1,443 observations after data wrangling. We removed observations that had `NA` values for the variable `SampleID` and we removed observations that were taken before birth.
 
 </details>
 ::::
@@ -136,7 +136,8 @@ Data are wrangled in the file `02_wrangle_data.R`. You can use the functions `ma
 <details><summary>Answer</summary>
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
-load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
+clean_metadata <- readr::read_csv(here::here("data", "wrangled", 
+                                             "clean_sample_metadata.csv"))
 library(dplyr)
 ```
 
