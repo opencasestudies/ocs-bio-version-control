@@ -98,6 +98,7 @@ Reiter
 replicability
 replicable
 qs
+readr
 rebase
 Rebase
 rebasing
