@@ -231,6 +231,20 @@ If Git identifies conflicting changes, it will pause the merge and ask you to re
 
 </details>
 
+### Merging vs Rebasing
+
+<details> <summary> When I pull, Git is asking whether I want to merge or rebase. What does this mean? </summary>
+
+Merging and rebasing are two different ways of incorporating changes from one branch into another. When you merge, Git combines the histories of both branches by creating a merge commit, preserving the complete history of how the branches diverged and came back together. When you rebase, Git moves the commits from your current branch so that they appear after the latest commit on another branch, creating a more linear project history.
+
+Both approaches have advantages and disadvantages. Merging preserves the project's history exactly as it occurred and does not rewrite commit history, but it can lead to a more complex commit history. Rebasing creates a cleaner, more linear history, but it rewrites commits and can cause problems if performed on branches that other people are using. If you aren't sure which to choose, a merge is typically safer than a rebase, because it avoids rewriting history. 
+
+Conflicts are handled differently during the two operations. During a merge, Git identifies conflicts between the branches and asks you to resolve them manually before creating the merge commit. During a rebase, Git reapplies commits one at a time and pauses whenever a conflict occurs. After resolving the conflict, you can continue the rebase and Git will proceed to the next commit.
+
+You can read more in [this article about Git integration strategies](https://medium.com/@Spritan/merge-vs-rebase-vs-fast-forward-mastering-git-integration-strategies-3ba8e652d93e).
+
+</details>
+
 ### Removing Files from Version Control
 
 <details> <summary> I've staged and committed a file, but I don't want to track it anymore. How can I remove it? </summary>
@@ -415,7 +429,6 @@ rm -r repository_name
 Next, follow [these instructions](https://www.opencasestudies.org/ocs-bio-version-control/#creating-a-local-clone-of-your-github-repository) to clone your remote repository, creating a new local repository. Once your local repository has been created, you can restore any changes that you had saved locally on your computer, and continue working. 
 
 :::
-
 
 </details>
 
