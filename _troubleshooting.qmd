@@ -241,7 +241,16 @@ Merging and rebasing are two different ways of incorporating changes from one li
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h6ecd945789ebeb89_0_57#slide=id.h6ecd945789ebeb89_0_57")
 ```
 
-Both approaches have advantages and disadvantages. Merging preserves the project's history exactly as it occurred and does not rewrite commit history, but it can lead to a more complex commit history. Rebasing creates a cleaner, more linear history, but it rewrites commits and can cause problems if performed on branches that other people are using. If you aren't sure which to choose, a merge is typically safer than a rebase, because it avoids rewriting history. 
+Both approaches have advantages and disadvantages. Merging preserves the project's history exactly as it occurred and does not rewrite commit history, but it can lead to a more complex commit history. Rebasing creates a cleaner, more linear history, but it rewrites commits and can cause problems if performed on branches that other people are using. 
+
+::::{.disclaimer_box}
+:::::{.disclaimer_box_header}
+Warning
+:::::
+:::::{.inner_block}
+If you aren't sure which to choose, a merge is typically safer than a rebase, because it avoids rewriting history. Additionally, rebasing has a higher risk of losing recent work by accident, if the rebase is interrupted or mistakes are made when resolving commits. 
+:::::
+::::
 
 Conflicts are handled differently during the two operations. During a merge, Git identifies conflicts between the two lines of development and asks you to resolve them manually before creating the merge commit. During a rebase, Git reapplies commits one at a time and pauses whenever a conflict occurs. After resolving the conflict, you can continue the rebase and Git will proceed to the next commit.
 
@@ -406,7 +415,14 @@ To learn more about Git stash and additional options, you can read its [document
 
 Yes! While many Git problems can be resolved without deleting your repository, creating a fresh clone can be a quick and effective solution when troubleshooting efforts have been unsuccessful. Sometimes the easiest approach is to fully delete your local repository and make a clean local repository as a clone of the remote repository. 
 
+::::{.disclaimer_box}
+:::::{.disclaimer_box_header}
+Warning
+:::::
+:::::{.inner_block}
 Before deleting your local repository, make sure that any work you want to keep has either been pushed to the remote repository or copied somewhere outside of the repository folder. Uncommitted and unpushed changes will be permanently lost when the local repository is deleted.
+:::::
+::::
 
 :::{.panel-tabset}
 #### GitHub Desktop
