@@ -70,6 +70,12 @@ We will use a quarto document for this analysis. To start:
 
 In this section, we will go through the steps to make two visualizations to compare the study cohorts. As you go, include the relevant code (as well as explanations of what the code is doing) into your quarto document. When you are done, you or someone else with access to the data and your document, should be able to run the code and create the visualizations. 
 
+<details><summary>If you run into problems while coding in this case study:</summary>
+
+Coding is challenging, and the coding portions of this case study shouldn't distract from your practice with Git and GitHub. All code that will go into `03_visualize_study_cohorts.qmd` will be provided in the case study, either directly or within click-to-expand sections. However, if you are still getting stuck or have code that will not run, it is likely that you have missed a section. You can use [this completed .qmd document](https://github.com/opencasestudies/ocs-bio-version-control/blob/main/resources/scripts/03_visualize_study_cohorts.qmd) to check your work. However, we do not recommend directly copying this .qmd script all at once, because practicing the {{< glossary "stage">}} → {{< glossary "commit">}} → {{< glossary "push">}} workflow several times as you work will get you into the habit of doing these actions while you code, not just when you finish a project.
+
+</details>
+
 In your quarto document, you should start by making a code chunk to load the required packages. A code chunk looks like the following:
 
 ```{r, fig.alt="Example R code chunk in .qmd document", out.width = "100%", echo = FALSE, fig.align = "center"}
