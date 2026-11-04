@@ -61,7 +61,7 @@ Data is imported in the file `01_pull_study_data.R`. You can find out how many r
 </details>
 <details><summary>Answer</summary>
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, message = FALSE}
 sample_metadata <- readr::read_csv(here::here("data", "imported", "sample_metadata.csv"))
 ```
 

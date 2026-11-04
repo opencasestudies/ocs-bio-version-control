@@ -13,7 +13,7 @@ At the end of this section, save incremental data (if changes were made) so that
 # **Data Exploration**
 ***
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, message = FALSE}
 library(dplyr)
 sample_metadata <- readr::read_csv(here::here("data", "imported", "sample_metadata.csv"))
 ```
@@ -32,9 +32,7 @@ Question opportunity
 ::::
 ::::{.inner_block}
 As we described in the ["What are the data?" section](https://www.opencasestudies.org/ocs-bio-version-control/#what-are-the-data), the variables that we will use in our analysis are `Study`, `SampleID`, `PersonID`, `Category`, `Sampling from papers`, and `Sampling, day`. What appears to be the difference between `Sampling from papers` and `Sampling, day`? 
-<details> <summary> Hint </summary>
 
-</details>
 <details><summary>Answer</summary>
 
 The variable `Sampling, day` is encoded with numeric values (this represents the day since birth on which the sample was taken), while the variable `Sampling from paper` is a character vector. For the first several observations shown in `glimpse()`, this describes the month at which the sample was taken. This varies across studies; in other studies `Sampling from paper` describes the day of sampling. `Sampling, day` is a variable added by @wang2021metagenomic in their {{< glossary "meta-analysis" >}} to compare sampling timing across studies on the same scale.
