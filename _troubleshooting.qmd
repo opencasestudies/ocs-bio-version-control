@@ -235,11 +235,15 @@ If Git identifies conflicting changes, it will pause the merge and ask you to re
 
 <details> <summary> When I pull, Git is asking whether I want to merge or rebase. What does this mean? </summary>
 
-Merging and rebasing are two different ways of incorporating changes from one branch into another. When you merge, Git combines the histories of both branches by creating a merge commit, preserving the complete history of how the branches diverged and came back together. When you rebase, Git moves the commits from your current branch so that they appear after the latest commit on another branch, creating a more linear project history.
+Merging and rebasing are two different ways of incorporating changes from one line of development into another. This includes bringing changes from one branch to another (for example, incorporating updates from `main` into a feature branch or contributing changes from a feature branch into `main`), as well as incorporating remote changes into your local repository. When you merge, Git combines the histories of lines of development by creating a merge commit, preserving the complete history of how they diverged and later came back together. When you rebase, Git temporarily removes commits that are unique to your work, updates the project history to the latest commit from another line of development, and then reapplies your commits one at a time. This creates a more linear project history. The figure below shows the differences between the commit histories from merging and rebasing when trying to incorporate new changes from the remote repository into the local repository, after making additionally commits locally. 
+
+```{r, fig.alt="Merge vs rebase", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h6ecd945789ebeb89_0_57#slide=id.h6ecd945789ebeb89_0_57")
+```
 
 Both approaches have advantages and disadvantages. Merging preserves the project's history exactly as it occurred and does not rewrite commit history, but it can lead to a more complex commit history. Rebasing creates a cleaner, more linear history, but it rewrites commits and can cause problems if performed on branches that other people are using. If you aren't sure which to choose, a merge is typically safer than a rebase, because it avoids rewriting history. 
 
-Conflicts are handled differently during the two operations. During a merge, Git identifies conflicts between the branches and asks you to resolve them manually before creating the merge commit. During a rebase, Git reapplies commits one at a time and pauses whenever a conflict occurs. After resolving the conflict, you can continue the rebase and Git will proceed to the next commit.
+Conflicts are handled differently during the two operations. During a merge, Git identifies conflicts between the two lines of development and asks you to resolve them manually before creating the merge commit. During a rebase, Git reapplies commits one at a time and pauses whenever a conflict occurs. After resolving the conflict, you can continue the rebase and Git will proceed to the next commit.
 
 You can read more in [this article about Git integration strategies](https://medium.com/@Spritan/merge-vs-rebase-vs-fast-forward-mastering-git-integration-strategies-3ba8e652d93e).
 
