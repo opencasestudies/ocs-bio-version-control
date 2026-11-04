@@ -21,6 +21,7 @@ Drag each workflow block into the correct position below and click **Check Answe
 ```{=html}
 <!-- html part of code, creates structure of activity -->
 <!-- creates board with dropzones, arrows, and empty placeholder divs -->
+<div class="workflow-extend-right">
 <div class="workflow-wrapper">
   <div class="workflow-grid">
   
@@ -145,6 +146,7 @@ Drag each workflow block into the correct position below and click **Check Answe
   <button id="reset-btn">Reset</button>
   
   <div id="feedback"></div>
+</div>
 </div>
 
 <!-- JavaScript part of code, creates interactive features -->
@@ -473,9 +475,44 @@ button {
   margin-top: 20px;
 }
 
+.workflow-extend-right {
+  width: calc(100% + 200px);
+  max-width: none;
+}
+
+.workflow-wrapper {
+  overflow-x: auto;
+}
+
+.workflow-grid {
+  display: grid;
+
+  grid-template-columns:
+    var(--card-width) 40px var(--card-width) 40px var(--card-width);
+
+  gap: 16px;
+
+  align-items: center;
+  justify-content: start;
+
+  min-width: max-content;
+}
+
+.bank {
+  display: grid;
+  grid-template-columns: repeat(4, var(--card-width));
+
+  gap: 1px;
+
+  justify-content: start;
+
+  min-width: max-content;
+}
+
 </style>
 
 ```
+
 
 ## **Summary Image**
 ***

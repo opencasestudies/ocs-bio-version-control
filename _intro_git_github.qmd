@@ -600,10 +600,11 @@ The easiest way to work with a Git-tracked repository in RStudio is to make an R
 
 In order to open your Git-tracked repository as an RStudio project, do the following:
 
-- [ ] Open RStudio and click "File" → "Open Project". 
+- [ ] Open RStudio and click "File" → "New Project..." → "Existing Directory" → "Browse...". 
 - [ ] This should prompt you to open your file browser. Navigate to the folder called `my-first-repository`, which was created when you cloned the repository. 
+- [ ] Click "Create Project". 
 
-Once you select the correct folder, RStudio will open the project. If you look at the "Files" panel, you'll see the README that you made for `my-first-repository` on GitHub. You will additionally see a file called `my-first-repository.Rproj`. This file is automatically made by RStudio when opening a new project, and saves information about the project. 
+Once you do this, RStudio will open the project. If you look at the "Files" panel, you'll see the README that you made for `my-first-repository` on GitHub. You will additionally see a file called `my-first-repository.Rproj`. This file is automatically made by RStudio when opening a new project, and saves information about the project. You will also see a the file `.gitignore`. This is a minimal `.gitignore.`, listing four files created by RStudio that are typically not tracked with version control. 
 
 #### Positron
 
@@ -795,9 +796,13 @@ If you return to RStudio or Positron and open `README.md`, you will now see the 
 
 ### What you've done
 
-In this section you have made a GitHub account, installed Git and GitHub Desktop, configured Git and GitHub to be connected so they can receive updates from each other, and made your first repository. You've learned how to make changes to the remote on GitHub and transfer them to the local repository on your computer, as well as do the opposite. 
+In this section you have made a GitHub account, installed Git and GitHub Desktop, configured Git and GitHub to be connected so they can receive updates from each other, and made your first repository. You've learned how to make changes to the remote on GitHub and transfer them to the local repository on your computer, as well as do the opposite. You've learned how to use the stage → commit → push workflow to send changes from the local Git repository on your computer to the remote GitHub repository, as well as the pull workflow to send changes from the remote GitHub repository to the local Git repository. 
 
-In a typical GitHub workflow, you will rarely be making changes online from the [github.com](github.com) website. Instead, you will often be working with one or multiple collaborators on a repository. Once your collaborator makes changes locally, they can push those changes to GitHub, and then you can pull those changes to your local copy of the repository. This process will continue cyclically while you collaboratively work on a project. Note that this is a simplified system where you take turns to make changes, in practice you can work on the project at the same time (using branches which will be discussed later in the [branches  section](https://www.opencasestudies.org/ocs-bio-version-control/#branches)).
+```{r, fig.alt="Stage-commit-push and Pull workflows", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h3d054029fb398613_0_0#slide=id.h3d054029fb398613_0_0")
+```
+
+In a typical GitHub workflow, you will rarely be making changes online from the [github.com](github.com) website. Instead, you will often be working with one or multiple collaborators on a repository. Once your collaborator makes changes locally, they can push those changes to GitHub, and then you can pull those changes to your local copy of the repository. This process will continue cyclically while you collaboratively work on a project. Note that this is a simplified system where you take turns to make changes, in practice you can work on the project at the same time (using branches, which will be discussed later in the [branches  section](https://www.opencasestudies.org/ocs-bio-version-control/#branches)).
 
 ```{r, fig.alt="Git and GitHub workflow", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f139628ce6_0_206#slide=id.g3f139628ce6_0_206")
@@ -952,8 +957,9 @@ Finally, we will open this repository with RStudio or Positron.
 
 In order to open your Git-tracked repository as an RStudio project:
 
-- [ ] Open RStudio and click "File" → "Open Project". 
-- [ ] This will prompt you to open your file browser. Navigate to the folder called `infant_gut_analysis`. 
+- [ ] Open RStudio and click "File" → "New Project..." → "Existing Directory" → "Browse...". 
+- [ ] This should prompt you to open your file browser. Navigate to the folder called `infant_gut_analysis`, which was created when you cloned the repository. 
+- [ ] Click "Create Project". 
 
 Once you select the correct folder, RStudio will open the project. 
 
