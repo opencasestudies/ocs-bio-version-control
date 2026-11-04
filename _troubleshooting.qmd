@@ -231,6 +231,33 @@ If Git identifies conflicting changes, it will pause the merge and ask you to re
 
 </details>
 
+### Merging vs Rebasing
+
+<details> <summary> When I pull, Git is asking whether I want to merge or rebase. What does this mean? </summary>
+
+Merging and rebasing are two different ways of incorporating changes from one line of development into another. This includes bringing changes from one branch to another (for example, incorporating updates from `main` into a feature branch or contributing changes from a feature branch into `main`), as well as incorporating remote changes into your local repository. When you merge, Git combines the histories of lines of development by creating a merge commit, preserving the complete history of how they diverged and later came back together. When you rebase, Git temporarily removes commits that are unique to your work, updates the project history to the latest commit from another line of development, and then reapplies your commits one at a time. This creates a more linear project history. The figure below shows the differences between the commit histories from merging and rebasing when trying to incorporate new changes from the remote repository into the local repository, after making additional commits locally. 
+
+```{r, fig.alt="Merge vs rebase", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h6ecd945789ebeb89_0_57#slide=id.h6ecd945789ebeb89_0_57")
+```
+
+Both approaches have advantages and disadvantages. Merging preserves the project's history exactly as it occurred and does not rewrite commit history, but it can lead to a more complex commit history. Rebasing creates a cleaner, more linear history, but it rewrites commits and can cause problems if performed on branches that other people are using. 
+
+::::{.disclaimer_box}
+:::::{.disclaimer_box_header}
+Warning
+:::::
+:::::{.inner_block}
+If you aren't sure which to choose, a merge is typically safer than a rebase, because it avoids rewriting history. Additionally, rebasing has a higher risk of losing recent work by accident, if the rebase is interrupted or mistakes are made when resolving commits. 
+:::::
+::::
+
+Conflicts are handled differently during the two operations. During a merge, Git identifies conflicts between the two lines of development and asks you to resolve them manually before creating the merge commit. During a rebase, Git reapplies commits one at a time and pauses whenever a conflict occurs. After resolving the conflict, you can continue the rebase and Git will proceed to the next commit.
+
+You can read more in [this article about Git integration strategies](https://medium.com/@Spritan/merge-vs-rebase-vs-fast-forward-mastering-git-integration-strategies-3ba8e652d93e).
+
+</details>
+
 ### Removing Files from Version Control
 
 <details> <summary> I've staged and committed a file, but I don't want to track it anymore. How can I remove it? </summary>
@@ -379,6 +406,49 @@ This command will restore your stashed changes to the current branch.
 :::
 
 To learn more about Git stash and additional options, you can read its [documentation from Git](https://git-scm.com/docs/git-stash).
+
+</details>
+
+### Deleting local repository and cloning again 
+
+<details> <summary> I've created a problem with my local repository that I just can't solve. Can I  start again from my remote repository? </summary>
+
+Yes! While most Git problems can be resolved without deleting your repository, sometimes challenges can be tricky, especially when you are first learning. Sometimes the easiest approach is to fully delete your local repository,  and create a fresh clone of what you have on GitHub. This can be a quick and effective solution when troubleshooting efforts have been unsuccessful.  Using this approach is a much more successful if you keep your remote repository mostly up-to-date with your local work. 
+
+::::{.disclaimer_box}
+:::::{.disclaimer_box_header}
+Warning
+:::::
+:::::{.inner_block}
+Before deleting your local repository, make sure that any work you want to keep has either been pushed to the remote repository or copied somewhere outside of the repository folder. Uncommitted and unpushed changes will be permanently lost when the local repository is deleted.
+:::::
+::::
+
+:::{.panel-tabset}
+#### GitHub Desktop
+
+Open GitHub Desktop to the repository you are working with. First we will remove the local repository from your computer. 
+
+- [ ] Right-click (or double-click, depending on your computer), on the tab that says "Current Repository" followed by the repository name.
+- [ ] From the drop-down menu, select the "Remove" button.
+- [ ] Click the checkbox that says "Also move this repository to Trash". 
+- [ ] Click the "Remove" button. 
+
+Next, follow [these instructions](https://www.opencasestudies.org/ocs-bio-version-control/#creating-a-local-clone-of-your-github-repository) to clone your remote repository, creating a new local repository. Once your local repository has been created, you can restore any changes that you had saved locally on your computer, and continue working. 
+
+#### Command line
+
+First we will remove the local repository from your computer. Do this by deleting the local repository folder from your computer with your file viewer application or with the command line. To use the command line, open the command line to the repository you are working with, and navigate one folder above (into the folder that contains the local repository). First we will remove the local repository from your computer. To do this, use the following command:
+
+:::: {.shell}
+```bash
+rm -r repository_name
+```
+::::
+
+Next, follow [these instructions](https://www.opencasestudies.org/ocs-bio-version-control/#creating-a-local-clone-of-your-github-repository) to clone your remote repository, creating a new local repository. Once your local repository has been created, you can restore any changes that you had saved locally on your computer, and continue working. 
+
+:::
 
 </details>
 

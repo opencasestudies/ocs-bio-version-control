@@ -567,13 +567,15 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YC
 From GitHub Desktop:
 
 - [ ] Click "File" → "Clone Repository", click "URL", and then provide the URL to your GitHub repository.
+- [ ] Click the "Choose..." button to choose where on your computer you would like to store the local repository.
+- [ ] Click the "Clone" button. 
 
 Now, you should be able to see a window in GitHub Desktop that corresponds with `my-first-repository`. If you click on history, you can see a list of commits to this repository. 
 
 
 #### Command line 
 
-You were already asked to clone this repository in the last section, in order to trigger Git's login credentials. If you haven't done that, open the command line and enter the following, replacing "your_username" with your username:
+You were already asked to clone this repository in the last section, in order to trigger Git's login credentials. If you haven't done that, open the command line, move to the folder on your computer where you would like to store the local repository, and enter the following, replacing "your_username" with your username:
 
 :::: {.shell}
 ```bash
