@@ -82,7 +82,7 @@ The image above shows what the pull requests page might look like for this repos
 ## Reviewing pull requests
 ***
 
-In some situations, you may be a pull request reviewer rather than a pull request author. As a reviewer, you have several responsibilities. [See this chapter on code review](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html) for a more in-depth treatment of these responsibilities. As a reviewer, you should consider the following:
+In some situations, you may be a pull request reviewer rather than a pull request author. As a reviewer, you have several responsibilities. [See this resource on code review](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html) for a more in-depth treatment of these responsibilities. As a reviewer, you should consider the following:
 
 - Throughout your pull request review, remember that the pull request author put time and effort into this code. Providing a empathetic review that balances constructive criticism with positive reinforcement can make the reviewing process easier for both parties.
 - Make sure that the pull request adequately explains the question or problem that the pull request addresses. There should be plenty of context for you to review the changes, as well as for someone else reading the pull request to understand what is being changed and why. Confirm that the pull request answers this question or solves this problem.
@@ -192,6 +192,8 @@ After you push, you should then see those changes included on the pull request p
 While your pull request is open, any additional changes that you commit and push to this branch will be automatically added to the pull request. 
 
 A pull request should be a set of changes that address a certain component of an analysis. Try to avoid combining multiple parts of a project in a single pull request. If you decide to start working on a different part of a project, you can create a new branch for this, and eventually submit a new pull request from that branch. 
+
+Opinions among experts differ, but most suggest that ideally pull requests should be between 50-250 lines changed, with 500 lines edging into the "too big" category. Smaller pull requests can make it easier for collaborators to spot mistakes.
 
 Separating different parts of a project into multiple branches and pull requests is a good way to stay organized for complex projects that have multiple components in development at the same time. Using multiple branches and focused pull requests, each including a set of related commits, can make it easier to review the pull requests and to identify when and why changes were introduced to a project. Changes to files that depend on each other but relate to different issues can be addressed in a series of "stacked" pull requests (check out [GitHub's documentation about stacked pull requests](https://docs.github.com/en/pull-requests/how-tos/stacked-pull-requests) for more information).
 
