@@ -77,7 +77,7 @@ If you close a pull request without merging it, this means that you've decided n
 ottrpal::include_slide("hhttps://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h175e18de373b618c_0_0#slide=id.h175e18de373b618c_0_0")
 ```
 
-The image above shows what the pull requests page might look like for this repository, if there were another open pull request for a different component of the project, and if there were previously merged or closed pull requests. Like the issues page, the pull requests page for a repository provides a searchable history of works in progress (open pull requests), and completed tasks (closed pull requests). This can be helpful to you, a collaborator, or someone interested in the process of your scientific project, to understand the major contributions to the repository. 
+The image above shows what the pull requests page might look like for this repository. For example, we can see **two** open pull request for different components of the project, and **five** previously merged or closed pull requests. Like the issues page, the pull requests page for a repository provides a searchable history of works in progress (open pull requests), and completed tasks (closed pull requests). This can be helpful to you, a collaborator, or someone interested in the process of your scientific project, to understand the major contributions to the repository. 
 
 ## Reviewing pull requests
 ***
