@@ -74,7 +74,7 @@ Imagine that you submitted a pull request, you or your collaborator has decided 
 If you close a pull request without merging it, this means that you've decided not to integrate the changes from the compare branch into the base branch. This may happen if you decide to go in another direction with an analysis. You can close a pull request by clicking the "Close pull request" button at the bottom of the pull request page. It is important to close pull requests that are no longer active so that the set of open pull requests accurately represents the current state of the project. 
 
 ```{r, fig.alt="Pull request page", echo = FALSE, fig.align = "center"}
-ottrpal::include_slide("hhttps://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h175e18de373b618c_0_0#slide=id.h175e18de373b618c_0_0")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h175e18de373b618c_0_0#slide=id.h175e18de373b618c_0_0")
 ```
 
 The image above shows what the pull requests page might look like for this repository. For example, we can see **two** open pull request for different components of the project, and **five** previously merged or closed pull requests. Like the issues page, the pull requests page for a repository provides a searchable history of works in progress (open pull requests), and completed tasks (closed pull requests). This can be helpful to you, a collaborator, or someone interested in the process of your scientific project, to understand the major contributions to the repository. 
@@ -140,6 +140,11 @@ There are a few ways to provide feedback on a pull request. From the most hands-
   - [ ] Click and drag down to include all lines related to your comment.
   - [ ] This will open a box. In the "Leave a comment" field, write your comment.
   - [ ] Click the "Comment" button. 
+  
+```{r, fig.alt="Image that shows selecting lines to comment on when reviewing a pull request", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?pli=1&slide=id.h73e8fb61f88611d8_0_0#slide=id.h73e8fb61f88611d8_0_0")
+```
+
 - **Suggest changes to specific lines within files that are changed in the pull request.** This is similar to making comments on specific lines, but you can directly suggest a change to the lines, that the pull request author can choose whether or not to accept. To make suggestions, do the following: 
   - [ ] Follow the directions for commenting directly on specific lines. 
   - [ ] Click the button that looks like a document with a plus and a minus side within it (this appears between the "Preview" and "H" buttons, above the field to write your comment).
@@ -147,6 +152,11 @@ There are a few ways to provide feedback on a pull request. From the most hands-
   - [ ] Edit the code or text to provide a suggestion for a change. 
   - [ ] Click the "Comment" button.
   - [ ] If you would like to add another comment to explain your suggestion, you can click "Write a reply" and add your comment there. 
+  
+```{r, fig.alt="Image that shows selecting lines to suggest changes to when reviewing a pull request", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?pli=1&slide=id.h73e8fb61f88611d8_0_10#slide=id.h73e8fb61f88611d8_0_10")
+```
+  
 - **Open the pull request branch locally and push changes directly to the pull request.** You should only do this if you have discussed this previously with the pull request author, and they are fine with you directly editing their pull request. To do this, follow the steps described above to open the pull request branch locally. Next, you can follow these directions:
 
 ::: {.panel-tabset}
