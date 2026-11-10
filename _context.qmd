@@ -32,7 +32,7 @@ A meta-analysis combines data or results from multiple studies investigating a c
 
 One approach to meta-analysis combines summary results from each study. Another approach combines the original data from all studies and re-analyzes them jointly, accounting for systematic differences between studies [@andrade2025primer]. The latter approach (also referred to as "mega-analysis") requires access to the raw data from each study, but allows researchers to ask new questions and analyze the data from all studies using a common protocol. 
 
-```{r, fig.alt="Types of meta-analyses", out.width = "100%", echo = FALSE}
+```{r, fig.alt="Two ways that meta-analyses are performed: combining estimates and combining data", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e878f6c4a7_0_0#slide=id.g3e878f6c4a7_0_0")
 ```
 

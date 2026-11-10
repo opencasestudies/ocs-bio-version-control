@@ -18,7 +18,7 @@ In the previous section, you worked locally to make the visualizations that Coll
 
 This set of steps will bring you to a page where you can make your pull request. The first thing to note is the panel at the top of the page, which gives you the base branch (this will by default be `main`) and the compare branch (this will be the branch you've been working on, in this case `study_comparison`). There is an arrow, showing that you are trying to merge the updates that you've made in the compare branch into the base branch. 
 
-```{r, fig.alt="Example open pull request page", echo = FALSE, fig.align = "center"}
+```{r, fig.alt="Page in which you open a pull request, showing the compare and base branches, fields to add a title and a description, a spot to add a reviewer, and a list of commits and changed files in the pull request. ", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.h57fc035897434697_0_0&pli=1#slide=id.h57fc035897434697_0_0")
 ```
 
@@ -54,7 +54,7 @@ Navigate to your pull request page and do the following:
 <details>
 <summary>Example pull request for this analysis</summary>
 
-```{r, fig.alt="Example pull request", echo = FALSE, fig.align = "center"}
+```{r, fig.alt="Example pull request from this case study, describing the changes made in this branch and requesting a code review", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3f2d5a3e170_0_164#slide=id.g3f2d5a3e170_0_164")
 ```
 
@@ -120,7 +120,7 @@ git checkout feature_branch
 
 :::
 
-```{r, fig.alt="Example review of pull request", echo = FALSE, fig.align = "center"}
+```{r, fig.alt="Example code review for this pull request, providing feedback and making specific requests for changes", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.h3445f3d0018850a2_0_0#slide=id.h3445f3d0018850a2_0_0")
 ```
 
@@ -141,7 +141,7 @@ There are a few ways to provide feedback on a pull request. From the most hands-
   - [ ] This will open a box. In the "Leave a comment" field, write your comment.
   - [ ] Click the "Comment" button. 
   
-```{r, fig.alt="Image that shows selecting lines to comment on when reviewing a pull request", echo = FALSE, fig.align = "center"}
+```{r, fig.alt="Image showing how to comment on specific lines within a pull request.", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?pli=1&slide=id.h73e8fb61f88611d8_0_0#slide=id.h73e8fb61f88611d8_0_0")
 ```
 
@@ -153,7 +153,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR
   - [ ] Click the "Comment" button.
   - [ ] If you would like to add another comment to explain your suggestion, you can click "Write a reply" and add your comment there. 
   
-```{r, fig.alt="Image that shows selecting lines to suggest changes to when reviewing a pull request", echo = FALSE, fig.align = "center"}
+```{r, fig.alt="Image showing how to suggest changes to specific lines within a pull request.", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?pli=1&slide=id.h73e8fb61f88611d8_0_10#slide=id.h73e8fb61f88611d8_0_10")
 ```
   
