@@ -73,7 +73,7 @@ Imagine that you submitted a pull request, you or your collaborator has decided 
 
 If you close a pull request without merging it, this means that you've decided not to integrate the changes from the compare branch into the base branch. This may happen if you decide to go in another direction with an analysis. You can close a pull request by clicking the "Close pull request" button at the bottom of the pull request page. It is important to close pull requests that are no longer active so that the set of open pull requests accurately represents the current state of the project. 
 
-```{r, fig.alt="Pull request page", echo = FALSE, fig.align = "center"}
+```{r, fig.alt="View of pull requests, including both open and closed pull requests", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h175e18de373b618c_0_0#slide=id.h175e18de373b618c_0_0")
 ```
 
