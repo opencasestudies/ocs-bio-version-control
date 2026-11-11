@@ -18,7 +18,7 @@ First, we will make sure that we are on the correct branch. We want to use a dev
   - If it says `main`, then you can click the drop-down button next to "Current Branch" and select `study_comparison`.
     - If `study_comparison` does not appear, you can click the "New Branch" button to create it. 
 
-```{r, fig.alt="Creating first repository", out.width = "100%", echo = FALSE, fig.align = "center"}
+```{r, fig.alt="Image of GitHub Desktop, showing how to switch between branches", out.width = "100%", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_170#slide=id.g3f94a4bdf40_0_170")
 ```
 
