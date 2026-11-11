@@ -1,5 +1,7 @@
 # Biomedical Open Case Studies: Making Version Controlled Reproducible Analyses
 
+[![Render website](https://github.com/opencasestudies/ocs-bio-version-control/actions/workflows/render-all.yml/badge.svg)](https://github.com/opencasestudies/ocs-bio-version-control/actions/workflows/render-all.yml)
+
 ### Useful Links
 
 -   HTML: <https://www.opencasestudies.org/ocs-bio-version-control/>
