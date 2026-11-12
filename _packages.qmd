@@ -1,7 +1,9 @@
 # **Packages and Setup**
 ***
 
-Before we get into the coding, we want to describe the R packages that we'll use in this case study, or that are used in other scripts contained in our repository:
+Before you get started with the analysis for this case study, you will need R, RStudio or Positron or another R IDE, and GitHub Desktop or Git installed. See more information about installation in the [prerequisites section](https://www.opencasestudies.org/ocs-bio-version-control/#prerequisites), or return to [these instructions to install GitHub Desktop](https://www.opencasestudies.org/ocs-bio-version-control/#installing-github-desktop) or [these instructions to install Git](https://www.opencasestudies.org/ocs-bio-version-control/#installing-git).
+
+Next, we want to describe the R packages that we'll use in this case study, or that are used in other scripts contained in our repository:
 
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 library(here)
