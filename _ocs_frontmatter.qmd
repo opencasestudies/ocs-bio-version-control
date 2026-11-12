@@ -109,8 +109,15 @@ Prerequisites
 ::::{.inner_block}
 To follow along with this case study, you'll need the following installed:
 
-- R ([install here](https://www.r-project.org))
-- RStudio ([install here](https://posit.co/download/rstudio-desktop)), Positron ([install here](https://positron.posit.co/install.html)), or another IDE compatible with R
+- R ([install here](https://www.r-project.org), ~500 MB including packages needed for this case study)
+- RStudio ([install here](https://posit.co/download/rstudio-desktop), ~1 GB), Positron ([install here](https://positron.posit.co/install.html), ~1 GB), or another IDE compatible with R
+
+In the [introduction to Git and GitHub section](https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github), you will follow steps to [install GitHub Desktop](https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github) or [to install Git](https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github). You will only need one or the other. If you would like to install this software before you start, you can follow these instructions:
+
+- GitHub Desktop ([install here](https://github.com/apps/desktop), ~1 GB)
+- Git ([instructions to install here](https://github.com/git-guides/install-git), ~50-150 MB)
+
+Installing R, either RStudio or Positron, and either GitHub Desktop or Git, will require ~3-4 GB of available storage. 
 
 It will also be helpful to be have the following skills:
 
