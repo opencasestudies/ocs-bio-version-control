@@ -109,14 +109,21 @@ Prerequisites
 ::::{.inner_block}
 To follow along with this case study, you'll need the following installed:
 
-- R ([install here](https://www.r-project.org))
-- RStudio ([install here](https://posit.co/download/rstudio-desktop)), Positron ([install here](https://positron.posit.co/install.html)), or another IDE compatible with R
+- R ([install here](https://www.r-project.org), ~500 MB including packages needed for this case study)
+- RStudio ([install here](https://posit.co/download/rstudio-desktop), ~1 GB), Positron ([install here](https://positron.posit.co/install.html), ~1 GB), or another IDE compatible with R
+
+In the [introduction to Git and GitHub section](https://www.opencasestudies.org/ocs-bio-version-control/#introduction-to-git-and-github), you will follow steps to [install GitHub Desktop](https://www.opencasestudies.org/ocs-bio-version-control/#installing-github-desktop) or [to install Git](https://www.opencasestudies.org/ocs-bio-version-control/#installing-git). You will only need one or the other. If you would like to install this software before you start, you can follow these instructions:
+
+- GitHub Desktop ([install here](https://github.com/apps/desktop), ~1 GB)
+- Git ([instructions to install here](https://github.com/git-guides/install-git), ~50-150 MB)
+
+Installing R, either RStudio or Positron, and either GitHub Desktop or Git, will require ~3-4 GB of available storage. 
 
 It will also be helpful to be have the following skills:
 
 - basic R skills (many introductory courses can be found online, including [this one](https://hutchdatascience.org/Intro_to_R/))
 - familiarity with `dplyr` and `ggplot2`, or willingness to learn (these [`dplyr`](https://rstudio.github.io/cheatsheets/data-transformation.pdf) and [`ggplot2`](https://rstudio.github.io/cheatsheets/data-visualization.pdf) cheatsheets may be helpful, as well as the original [open case studies](https://www.opencasestudies.org/search.html))
-- OPTIONAL: command line skills (this [resource for basics with the command line](https://swcarpentry.github.io/shell-novice/key-points.html) maybe helpful)
+- OPTIONAL: command line skills (this [resource for basics with the command line](https://swcarpentry.github.io/shell-novice/key-points.html) may be helpful)
   - this is not necessary if using GitHub Desktop, as is suggested in this case study, however there are alternate instructions throughout the case study that use the command line to interact with Git
 
 You do not need to have any previous Git and GitHub knowledge or experience for this case study. 
