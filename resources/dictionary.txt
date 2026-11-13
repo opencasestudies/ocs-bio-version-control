@@ -121,6 +121,7 @@ tidyverse
 th
 Tybalt
 uncheck
+unpushed
 Unsplash
 untracked
 variational
