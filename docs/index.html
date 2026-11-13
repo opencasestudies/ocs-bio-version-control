@@ -295,9 +295,11 @@ gtag('config', 'G-DPKD3JXYG6', { 'anonymize_ip': true});
   <li><a href="#resolving-merge-conflicts" id="toc-resolving-merge-conflicts" class="nav-link" data-scroll-target="#resolving-merge-conflicts">Resolving Merge Conflicts</a></li>
   <li><a href="#moving-work-between-branches" id="toc-moving-work-between-branches" class="nav-link" data-scroll-target="#moving-work-between-branches">Moving Work Between Branches</a></li>
   <li><a href="#integrating-updates-into-branch" id="toc-integrating-updates-into-branch" class="nav-link" data-scroll-target="#integrating-updates-into-branch">Integrating Updates into Branch</a></li>
+  <li><a href="#merging-vs-rebasing" id="toc-merging-vs-rebasing" class="nav-link" data-scroll-target="#merging-vs-rebasing">Merging vs Rebasing</a></li>
   <li><a href="#removing-files-from-version-control" id="toc-removing-files-from-version-control" class="nav-link" data-scroll-target="#removing-files-from-version-control">Removing Files from Version Control</a></li>
   <li><a href="#removing-large-files-from-version-control" id="toc-removing-large-files-from-version-control" class="nav-link" data-scroll-target="#removing-large-files-from-version-control">Removing Large Files from Version Control</a></li>
   <li><a href="#moving-between-branches" id="toc-moving-between-branches" class="nav-link" data-scroll-target="#moving-between-branches">Moving Between Branches</a></li>
+  <li><a href="#deleting-local-repository-and-cloning-again" id="toc-deleting-local-repository-and-cloning-again" class="nav-link" data-scroll-target="#deleting-local-repository-and-cloning-again">Deleting local repository and cloning again</a></li>
   <li><a href="#other-troubleshooting-resources" id="toc-other-troubleshooting-resources" class="nav-link" data-scroll-target="#other-troubleshooting-resources">Other Troubleshooting Resources</a></li>
   </ul></li>
   <li><a href="#continued-learning" id="toc-continued-learning" class="nav-link" data-scroll-target="#continued-learning"><strong>Continued Learning</strong></a>
@@ -1312,11 +1314,13 @@ If you are unable to install GitHub Desktop or would prefer not to install GitHu
 <p>From GitHub Desktop:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Click “File” → “Clone Repository”, click “URL”, and then provide the URL to your GitHub repository.</label></li>
+<li><label><input type="checkbox">Click the “Choose…” button to choose where on your computer you would like to store the local repository.</label></li>
+<li><label><input type="checkbox">Click the “Clone” button.</label></li>
 </ul>
 <p>Now, you should be able to see a window in GitHub Desktop that corresponds with <code>my-first-repository</code>. If you click on history, you can see a list of commits to this repository.</p>
 </div>
 <div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
-<p>You were already asked to clone this repository in the last section, in order to trigger Git’s login credentials. If you haven’t done that, open the command line and enter the following, replacing “your_username” with your username:</p>
+<p>You were already asked to clone this repository in the last section, in order to trigger Git’s login credentials. If you haven’t done that, open the command line, move to the folder on your computer where you would like to store the local repository, and enter the following, replacing “your_username” with your username:</p>
 <div class="shell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/your_username/my-first-repository.git  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -1848,7 +1852,7 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 <ul>
 <li>file names are concise but informative</li>
 <li>there is one central folder to contain all files for each project</li>
-<li>there is a central file (often called the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button>) that explains what files are included and how to use them to run the analysis</li>
+<li>there is a central file (often called the <button class="glossary"><span class="def"></span>README</button>) that explains what files are included and how to use them to run the analysis</li>
 <li>there are folders to keep similar files together
 <ul>
 <li>data folder (this could be split into raw data and processed data)</li>
@@ -2144,7 +2148,7 @@ At the end of this section, save incremental data so that users can pause and co
 </ul>
 <p>We will start by taking a look at the data.</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Take a look at the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button> file to determine which file contains commands that can read in the raw data.</label></li>
+<li><label><input type="checkbox">Take a look at the <button class="glossary"><span class="def"></span>README</button> file to determine which file contains commands that can read in the raw data.</label></li>
 <li><label><input type="checkbox">Open this file and run the code.</label></li>
 </ul>
 <details>
@@ -2285,7 +2289,7 @@ At the end of this section, save incremental data so that users can pause and co
 <hr>
 <p>Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses.</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Again, use the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button> to identify which file contains commands that wrangle the data.</label></li>
+<li><label><input type="checkbox">Again, use the <button class="glossary"><span class="def"></span>README</button> to identify which file contains commands that wrangle the data.</label></li>
 </ul>
 <p>This wrangling script takes four steps to clean the data:</p>
 <ol type="1">
@@ -2552,7 +2556,7 @@ The <code>here()</code> function creates file paths that always start from the m
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-18-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-1" role="tab" aria-controls="tabset-18-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-18-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-2" role="tab" aria-controls="tabset-18-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
 <div id="tabset-18-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-18-1-tab">
-<p>Navigate back to <button class="glossary"><span class="def">A graphical user interface for interacting with Git on a local computer</span>GitHub Desktop</button>.</p>
+<p>Navigate back to <button class="glossary"><span class="def"></span>GitHub Desktop</button>.</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Confirm that you see your new file name <code>03_visualize_study_cohorts.qmd</code> with a green plus next to it, meaning that this is a new file. The check in the checkbox means that this file is staged.</label></li>
 <li><label><input type="checkbox">Add an appropriate commit message and commit this file.</label></li>
@@ -3428,7 +3432,7 @@ git push</code></pre>
 <section id="synopsis" class="level2">
 <h2 class="anchored" data-anchor-id="synopsis"><strong>Synopsis</strong></h2>
 <hr>
-<p>In this case study, you’ve learned about why <button class="glossary"><span class="def">A tool that records changes to a project over time</span>version control</button> is used as part of <button class="glossary"><span class="def">Describes a project in which a new researcher can re-run an experiment or analysis with the same data and code and generate the same results</span>reproducible</button> science workflows. You’ve been introduced to <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with Git</span>GitHub</button>, and learned procedures for managing Git-tracked <button class="glossary"><span class="def">Folders in Git that contains all of the files to be tracked for a project</span>repositories</button> locally using <button class="glossary"><span class="def">A graphical user interface for interacting with Git on a local computer</span>GitHub Desktop</button> or the <button class="glossary"><span class="def">A window that lets a user interact with a computer through typing commands</span>command line</button>, and remotely using GitHub (<a href="https://github.com/">github.com</a>). You’ve practiced using the “pull → stage → commit → push” workflow to make changes locally that are then tracked remotely. In your analysis, you worked in a <button class="glossary"><span class="def">A history of commits in a Git-tracked repository (there can be multiple parallel branches in a repository)</span>branch</button>, and you submitted a <button class="glossary"><span class="def">A request to integrate a collection of commits from one branch (or from a fork) into another branch (or another repository)</span>pull request</button> in order to integrate new changes into a stable version of the code and as a way to ask a collaborator to review your code.</p>
+<p>In this case study, you’ve learned about why <button class="glossary"><span class="def">A tool that records changes to a project over time</span>version control</button> is used as part of <button class="glossary"><span class="def">Describes a project in which a new researcher can re-run an experiment or analysis with the same data and code and generate the same results</span>reproducible</button> science workflows. You’ve been introduced to <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with Git</span>GitHub</button>, and learned procedures for managing Git-tracked <button class="glossary"><span class="def">Folders in Git that contains all of the files to be tracked for a project</span>repositories</button> locally using <button class="glossary"><span class="def"></span>GitHub Desktop</button> or the <button class="glossary"><span class="def">A window that lets a user interact with a computer through typing commands</span>command line</button>, and remotely using GitHub (<a href="https://github.com/">github.com</a>). You’ve practiced using the “pull → stage → commit → push” workflow to make changes locally that are then tracked remotely. In your analysis, you worked in a <button class="glossary"><span class="def">A history of commits in a Git-tracked repository (there can be multiple parallel branches in a repository)</span>branch</button>, and you submitted a <button class="glossary"><span class="def">A request to integrate a collection of commits from one branch (or from a fork) into another branch (or another repository)</span>pull request</button> in order to integrate new changes into a stable version of the code and as a way to ask a collaborator to review your code.</p>
 <p>Along the way, you’ve also learned about the advantages and challenges of <button class="glossary"><span class="def">Analyses of data from a collection of studies targeting a common research question</span>meta-analyses</button> and best practices for scientific project organization.</p>
 </section>
 <section id="summary-activity" class="level2">
@@ -4185,6 +4189,35 @@ I am currently working in a branch and want to merge updates from the <code>main
 </div>
 </details>
 </section>
+<section id="merging-vs-rebasing" class="level3">
+<h3 class="anchored" data-anchor-id="merging-vs-rebasing">Merging vs Rebasing</h3>
+<details>
+<summary>
+When I pull, Git is asking whether I want to merge or rebase. What does this mean?
+</summary>
+<p>Merging and rebasing are two different ways of incorporating changes from one line of development into another. This includes bringing changes from one branch to another (for example, incorporating updates from <code>main</code> into a feature branch or contributing changes from a feature branch into <code>main</code>), as well as incorporating remote changes into your local repository. When you merge, Git combines the histories of lines of development by creating a merge commit, preserving the complete history of how they diverged and later came back together. When you rebase, Git temporarily removes commits that are unique to your work, updates the project history to the latest commit from another line of development, and then reapplies your commits one at a time. This creates a more linear project history. The figure below shows the differences between the commit histories from merging and rebasing when trying to incorporate new changes from the remote repository into the local repository, after making additional commits locally.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html//1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo_h6ecd945789ebeb89_0_57.png" class="img-fluid figure-img" style="width:100.0%" alt="Merge vs rebase"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Both approaches have advantages and disadvantages. Merging preserves the project’s history exactly as it occurred and does not rewrite commit history, but it can lead to a more complex commit history. Rebasing creates a cleaner, more linear history, but it rewrites commits and can cause problems if performed on branches that other people are using.</p>
+<div class="disclaimer_box">
+<div class="disclaimer_box_header">
+<p>Warning</p>
+</div>
+<div class="inner_block">
+<p>If you aren’t sure which to choose, a merge is typically safer than a rebase, because it avoids rewriting history. Additionally, rebasing has a higher risk of losing recent work by accident, if the rebase is interrupted or mistakes are made when resolving commits.</p>
+</div>
+</div>
+<p>Conflicts are handled differently during the two operations. During a merge, Git identifies conflicts between the two lines of development and asks you to resolve them manually before creating the merge commit. During a rebase, Git reapplies commits one at a time and pauses whenever a conflict occurs. After resolving the conflict, you can continue the rebase and Git will proceed to the next commit.</p>
+<p>You can read more in <a href="https://medium.com/@Spritan/merge-vs-rebase-vs-fast-forward-mastering-git-integration-strategies-3ba8e652d93e">this article about Git integration strategies</a>.</p>
+</details>
+</section>
 <section id="removing-files-from-version-control" class="level3">
 <h3 class="anchored" data-anchor-id="removing-files-from-version-control">Removing Files from Version Control</h3>
 <details>
@@ -4297,6 +4330,45 @@ I’m in the middle of working on one branch, but I need to pause and make a qui
 <p>To learn more about Git stash and additional options, you can read its <a href="https://git-scm.com/docs/git-stash">documentation from Git</a>.</p>
 </details>
 </section>
+<section id="deleting-local-repository-and-cloning-again" class="level3">
+<h3 class="anchored" data-anchor-id="deleting-local-repository-and-cloning-again">Deleting local repository and cloning again</h3>
+<details>
+<summary>
+I’ve created a problem with my local repository that I just can’t solve. Can I start again from my remote repository?
+</summary>
+<p>Yes! While most Git problems can be resolved without deleting your repository, sometimes challenges can be tricky, especially when you are first learning. Sometimes the easiest approach is to fully delete your local repository, and create a fresh clone of what you have on GitHub. This can be a quick and effective solution when troubleshooting efforts have been unsuccessful. Using this approach is a much more successful if you keep your remote repository mostly up-to-date with your local work.</p>
+<div class="disclaimer_box">
+<div class="disclaimer_box_header">
+<p>Warning</p>
+</div>
+<div class="inner_block">
+<p>Before deleting your local repository, make sure that any work you want to keep has either been pushed to the remote repository or copied somewhere outside of the repository folder. Uncommitted and unpushed changes will be permanently lost when the local repository is deleted.</p>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-34-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-34-1" role="tab" aria-controls="tabset-34-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-34-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-34-2" role="tab" aria-controls="tabset-34-2" aria-selected="false" href="">Command line</a></li></ul>
+<div class="tab-content">
+<div id="tabset-34-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-34-1-tab">
+<p>Open GitHub Desktop to the repository you are working with. First we will remove the local repository from your computer.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Right-click (or double-click, depending on your computer), on the tab that says “Current Repository” followed by the repository name.</label></li>
+<li><label><input type="checkbox">From the drop-down menu, select the “Remove” button.</label></li>
+<li><label><input type="checkbox">Click the checkbox that says “Also move this repository to Trash”.</label></li>
+<li><label><input type="checkbox">Click the “Remove” button.</label></li>
+</ul>
+<p>Next, follow <a href="https://www.opencasestudies.org/ocs-bio-version-control/#creating-a-local-clone-of-your-github-repository">these instructions</a> to clone your remote repository, creating a new local repository. Once your local repository has been created, you can restore any changes that you had saved locally on your computer, and continue working.</p>
+</div>
+<div id="tabset-34-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-34-2-tab">
+<p>First we will remove the local repository from your computer. Do this by deleting the local repository folder from your computer with your file viewer application or with the command line. To use the command line, open the command line to the repository you are working with, and navigate one folder above (into the folder that contains the local repository). First we will remove the local repository from your computer. To do this, use the following command:</p>
+<div class="shell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb115"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-r</span> repository_name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Next, follow <a href="https://www.opencasestudies.org/ocs-bio-version-control/#creating-a-local-clone-of-your-github-repository">these instructions</a> to clone your remote repository, creating a new local repository. Once your local repository has been created, you can restore any changes that you had saved locally on your computer, and continue working.</p>
+</div>
+</div>
+</div>
+</details>
+</section>
 <section id="other-troubleshooting-resources" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="other-troubleshooting-resources">Other Troubleshooting Resources</h3>
 <p>You can learn more about other common Git mistakes and their fixes <a href="https://www.creative-tim.com/blog/educational-tech/git-tutorial-fix-common-mistakes/">in this article</a>. AI chatbots can also be helpful for troubleshooting problems with Git and GitHub, but should be used with care.</p>
@@ -4308,15 +4380,15 @@ I’m in the middle of working on one branch, but I need to pause and make a qui
 <p><u>Context:</u></p>
 <p>When you ask an AI chatbot for assistance with version control, make sure to give appropriate background. Describe the specific task that you would like to do, or the problem that you are encountering. It can be helpful to include any error messages that you might be receiving from Git. For example, imagine that you’ve created a merge conflict.</p>
 <p><u>Suggested Prompt:</u></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb115"><pre class="sourceCode default code-overflow-wrap code-with-copy"><code class="sourceCode default"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a>I am working with a Git-controlled repository, in a branch called new_feature. I have made several changes locally, and have staged those files and committed them. I just went to pull changes from the remote version of this branch that my collaborator made recently, and I'm getting a merge conflict. Specifically, I've received the following message:</span>
-<span id="cb115-2"><a href="#cb115-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb115-3"><a href="#cb115-3" aria-hidden="true" tabindex="-1"></a>Auto-merging README.md</span>
-<span id="cb115-4"><a href="#cb115-4" aria-hidden="true" tabindex="-1"></a>CONFLICT (content): Merge conflict in README.md</span>
-<span id="cb115-5"><a href="#cb115-5" aria-hidden="true" tabindex="-1"></a>Auto-merging 01_import_data.R</span>
-<span id="cb115-6"><a href="#cb115-6" aria-hidden="true" tabindex="-1"></a>CONFLICT (content): Merge conflict in 01_import_data.R</span>
-<span id="cb115-7"><a href="#cb115-7" aria-hidden="true" tabindex="-1"></a>Automatic merge failed; fix conflicts and then commit the result.</span>
-<span id="cb115-8"><a href="#cb115-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb115-9"><a href="#cb115-9" aria-hidden="true" tabindex="-1"></a>How can I resolve this merge conflict?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb116"><pre class="sourceCode default code-overflow-wrap code-with-copy"><code class="sourceCode default"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a>I am working with a Git-controlled repository, in a branch called new_feature. I have made several changes locally, and have staged those files and committed them. I just went to pull changes from the remote version of this branch that my collaborator made recently, and I'm getting a merge conflict. Specifically, I've received the following message:</span>
+<span id="cb116-2"><a href="#cb116-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb116-3"><a href="#cb116-3" aria-hidden="true" tabindex="-1"></a>Auto-merging README.md</span>
+<span id="cb116-4"><a href="#cb116-4" aria-hidden="true" tabindex="-1"></a>CONFLICT (content): Merge conflict in README.md</span>
+<span id="cb116-5"><a href="#cb116-5" aria-hidden="true" tabindex="-1"></a>Auto-merging 01_import_data.R</span>
+<span id="cb116-6"><a href="#cb116-6" aria-hidden="true" tabindex="-1"></a>CONFLICT (content): Merge conflict in 01_import_data.R</span>
+<span id="cb116-7"><a href="#cb116-7" aria-hidden="true" tabindex="-1"></a>Automatic merge failed; fix conflicts and then commit the result.</span>
+<span id="cb116-8"><a href="#cb116-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb116-9"><a href="#cb116-9" aria-hidden="true" tabindex="-1"></a>How can I resolve this merge conflict?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><u>Validation:</u> You should always be careful when taking advice on Git and GitHub from an AI chatbot. If you are asking for commands to use with Git for a situation that is very new to you, it could be helpful to do a quick search of the commands the chatbot tells you to use, to confirm that they do what you want to do. You could also ask multiple chatbots the same question.</p>
 <p>You should be especially careful when using agentic AI with Git and GitHub. Agentic AI systems can use external tools and execute tasks, often performing steps without human supervision. There are many git commands (and command line commands in general) that are challenging to reverse and can cause major problems to scientific projects. For example, running <code>git reset --hard</code> will reset a local branch to the remote version of the branch, removing all uncommitted changes, which could undo your hard work or remove valuable content. Therefore, it is recommended to monitor the ways that agentic AI can make changes with version control and to prevent them from performing potentially destructive actions without human supervision.</p>
 </div>
@@ -4752,7 +4824,7 @@ Wang, Shaopu, Shuqin Zeng, Muireann Egan, Paul Cherry, Conall Strain, Emilene Mo
 </div>
 <div class="rcode">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb116"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb117"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.2 (2023-10-31)
 Platform: x86_64-pc-linux-gnu (64-bit)
