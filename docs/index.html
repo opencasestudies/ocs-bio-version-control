@@ -967,7 +967,7 @@ More information on how reproducibility fits into the scientific process.
 </section>
 <section id="creating-new-repositories" class="level3">
 <h3 class="anchored" data-anchor-id="creating-new-repositories">Creating new repositories</h3>
-<p>There are two ways to start new version controlled projects with Git and GitHub. You could create a new remote repository on GitHub and then <button class="glossary"><span class="def">Create a local repository that is a copy of a remote repository on GitHub</span>clone</button> it to your computer, creating a local version. Or, you could create a new repository locally on your computer, track it with Git, and then <button class="glossary"><span class="def">Sending commits from the local version of a repository to the remote version of the repository on GitHub</span>push</button> it to GitHub, creating a remote version of the repo. We will provide examples of both workflows in the next section.</p>
+<p>There are two ways to start new version controlled projects with Git and GitHub. You could create a new remote repository on GitHub and then <button class="glossary"><span class="def">Create a local repository that is a copy of a remote repository on GitHub</span>clone</button> it to your computer, creating a local version. Or, you could create a new repository locally on your computer, track it with Git, and then <button class="glossary"><span class="def">Send commits from the local repository to the remote repository on GitHub</span>push</button> it to GitHub, creating a remote version of the repo. We will provide examples of both workflows in the next section.</p>
 <div class="definition_box">
 <div class="definition_box_header">
 <p>Clone</p>
@@ -1403,7 +1403,7 @@ When you created a RStudio project, RStudio automatically created a <code>my-fir
 <li><label><input type="checkbox">Click “commit to main”.</label></li>
 </ul>
 <p>Now these changes have been entered into the version control history of your repository in Git.</p>
-<p>We have one more step to update the GitHub repository, which is to <button class="glossary"><span class="def">Sending commits from the local version of a repository to the remote version of the repository on GitHub</span>push</button> these files to GitHub. This is the step that transfers local changes to the remote repository. Once you commit you will see a box in GitHub Desktop that says “Push commits to the origin remote”.</p>
+<p>We have one more step to update the GitHub repository, which is to <button class="glossary"><span class="def">Send commits from the local repository to the remote repository on GitHub</span>push</button> these files to GitHub. This is the step that transfers local changes to the remote repository. Once you commit you will see a box in GitHub Desktop that says “Push commits to the origin remote”.</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Click “Push commits to the origin remote” button.</label></li>
 <li><label><input type="checkbox">Open your project in GitHub.</label></li>
@@ -1443,7 +1443,7 @@ If you are using RStudio, you can also track the additional files that have been
 <div class="shell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add new file '01-calculations.R' to do calculations."</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>We have one more step to update the GitHub repository, which is to <button class="glossary"><span class="def">Sending commits from the local version of a repository to the remote version of the repository on GitHub</span>push</button> these files to GitHub. This is the final step that updates the GitHub repository to include the changes that we made locally. To push, enter:</p>
+<p>We have one more step to update the GitHub repository, which is to <button class="glossary"><span class="def">Send commits from the local repository to the remote repository on GitHub</span>push</button> these files to GitHub. This is the final step that updates the GitHub repository to include the changes that we made locally. To push, enter:</p>
 <div class="shell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -1478,7 +1478,7 @@ If you are using RStudio, you can also track the additional files that have been
 </section>
 <section id="pulling-updates-from-github" class="level4">
 <h4 class="anchored" data-anchor-id="pulling-updates-from-github">Pulling updates from GitHub</h4>
-<p>You’ve learned how to make updates locally, and stage, commit, and push these changes so that the GitHub repository includes those updates. Next, we will <button class="glossary"><span class="def"></span>pull</button> changes that have been made on GitHub. While pushing sends updates from a local repository to the remote repository on GitHub, pulling sends updates from the remote GitHub repository to your local repository. To practice pulling, we’re going to make another change and commit from GitHub, and then pull that commit into our local repository. We’ll follow the same steps to make a change and commit on GitHub:</p>
+<p>You’ve learned how to make updates locally, and stage, commit, and push these changes so that the GitHub repository includes those updates. Next, we will <button class="glossary"><span class="def">Send commits from the remote repository on GitHub to the local repository</span>pull</button> changes that have been made on GitHub. While pushing sends updates from a local repository to the remote repository on GitHub, pulling sends updates from the remote GitHub repository to your local repository. To practice pulling, we’re going to make another change and commit from GitHub, and then pull that commit into our local repository. We’ll follow the same steps to make a change and commit on GitHub:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Click the pencil on the upper right of the README.</label></li>
 <li><label><input type="checkbox">Add a new line to your README document that says “Adding another commit from GitHub”.</label></li>
@@ -1627,7 +1627,7 @@ You may see examples in other Git tutorials using <code>git add .</code>, which 
 <li><label><input type="checkbox">Click “Commit changes…”</label></li>
 <li><label><input type="checkbox">Add a commit message and click “Commit changes”.</label></li>
 </ul>
-<p>Now, you’ve added the <code>.gitignore</code> and license on GitHub, but we do not have them in the local repository. Our final step is <button class="glossary"><span class="def"></span>pulling</button> them into our local repository. Open the command line again and type:</p>
+<p>Now, you’ve added the <code>.gitignore</code> and license on GitHub, but we do not have them in the local repository. Our final step is <button class="glossary"><span class="def">Send commits from the remote repository on GitHub to the local repository</span>pulling</button> them into our local repository. Open the command line again and type:</p>
 <div class="shell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -1852,7 +1852,7 @@ Project organization (similar to "Dashboard Basics" section in school shootings 
 <ul>
 <li>file names are concise but informative</li>
 <li>there is one central folder to contain all files for each project</li>
-<li>there is a central file (often called the <button class="glossary"><span class="def"></span>README</button>) that explains what files are included and how to use them to run the analysis</li>
+<li>there is a central file (often called the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button>) that explains what files are included and how to use them to run the analysis</li>
 <li>there are folders to keep similar files together
 <ul>
 <li>data folder (this could be split into raw data and processed data)</li>
@@ -2148,7 +2148,7 @@ At the end of this section, save incremental data so that users can pause and co
 </ul>
 <p>We will start by taking a look at the data.</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Take a look at the <button class="glossary"><span class="def"></span>README</button> file to determine which file contains commands that can read in the raw data.</label></li>
+<li><label><input type="checkbox">Take a look at the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button> file to determine which file contains commands that can read in the raw data.</label></li>
 <li><label><input type="checkbox">Open this file and run the code.</label></li>
 </ul>
 <details>
@@ -2289,7 +2289,7 @@ At the end of this section, save incremental data so that users can pause and co
 <hr>
 <p>Data wrangling includes cleaning data to fix mistakes and reorganizing data to make it easier to use in visualizations and analyses.</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Again, use the <button class="glossary"><span class="def"></span>README</button> to identify which file contains commands that wrangle the data.</label></li>
+<li><label><input type="checkbox">Again, use the <button class="glossary"><span class="def">A document that describes what files are in a folder, as well as other relevant information</span>README</button> to identify which file contains commands that wrangle the data.</label></li>
 </ul>
 <p>This wrangling script takes four steps to clean the data:</p>
 <ol type="1">
@@ -2491,7 +2491,7 @@ Answer
 <summary>
 If you run into problems while coding in this case study:
 </summary>
-<p>Coding is challenging, and the coding portions of this case study shouldn’t distract from your practice with Git and GitHub. All code that will go into <code>03_visualize_study_cohorts.qmd</code> will be provided in the case study, either directly or within click-to-expand sections. However, if you are still getting stuck or have code that will not run, it is likely that you have missed a section. You can use <a href="https://github.com/opencasestudies/ocs-bio-version-control/blob/main/resources/scripts/03_visualize_study_cohorts.qmd">this completed .qmd document</a> to check your work. However, we do not recommend directly copying this .qmd script all at once, because practicing the <button class="glossary"><span class="def">Prepare to track specified files when the next commit is made to a repository.</span>stage</button> → <button class="glossary"><span class="def">A snapshot of all files in a repository at a moment in time</span>commit</button> → <button class="glossary"><span class="def">Sending commits from the local version of a repository to the remote version of the repository on GitHub</span>push</button> workflow several times as you work will get you into the habit of doing these actions while you code, not just when you finish a project.</p>
+<p>Coding is challenging, and the coding portions of this case study shouldn’t distract from your practice with Git and GitHub. All code that will go into <code>03_visualize_study_cohorts.qmd</code> will be provided in the case study, either directly or within click-to-expand sections. However, if you are still getting stuck or have code that will not run, it is likely that you have missed a section. You can use <a href="https://github.com/opencasestudies/ocs-bio-version-control/blob/main/resources/scripts/03_visualize_study_cohorts.qmd">this completed .qmd document</a> to check your work. However, we do not recommend directly copying this .qmd script all at once, because practicing the <button class="glossary"><span class="def">Prepare to track specified files when the next commit is made to a repository.</span>stage</button> → <button class="glossary"><span class="def">A snapshot of all files in a repository at a moment in time</span>commit</button> → <button class="glossary"><span class="def">Send commits from the local repository to the remote repository on GitHub</span>push</button> workflow several times as you work will get you into the habit of doing these actions while you code, not just when you finish a project.</p>
 </details>
 <p>In your quarto document, you should start by making a code chunk to load the required packages. A code chunk looks like the following:</p>
 <div class="cell" data-layout-align="center">
@@ -2556,7 +2556,7 @@ The <code>here()</code> function creates file paths that always start from the m
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-18-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-1" role="tab" aria-controls="tabset-18-1" aria-selected="true" href="">GitHub Desktop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-18-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-18-2" role="tab" aria-controls="tabset-18-2" aria-selected="false" href="">Command line</a></li></ul>
 <div class="tab-content">
 <div id="tabset-18-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-18-1-tab">
-<p>Navigate back to <button class="glossary"><span class="def"></span>GitHub Desktop</button>.</p>
+<p>Navigate back to <button class="glossary"><span class="def">A graphical user interface for interacting with Git on a local computer</span>GitHub Desktop</button>.</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Confirm that you see your new file name <code>03_visualize_study_cohorts.qmd</code> with a green plus next to it, meaning that this is a new file. The check in the checkbox means that this file is staged.</label></li>
 <li><label><input type="checkbox">Add an appropriate commit message and commit this file.</label></li>
@@ -3432,7 +3432,7 @@ git push</code></pre>
 <section id="synopsis" class="level2">
 <h2 class="anchored" data-anchor-id="synopsis"><strong>Synopsis</strong></h2>
 <hr>
-<p>In this case study, you’ve learned about why <button class="glossary"><span class="def">A tool that records changes to a project over time</span>version control</button> is used as part of <button class="glossary"><span class="def">Describes a project in which a new researcher can re-run an experiment or analysis with the same data and code and generate the same results</span>reproducible</button> science workflows. You’ve been introduced to <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with Git</span>GitHub</button>, and learned procedures for managing Git-tracked <button class="glossary"><span class="def">Folders in Git that contains all of the files to be tracked for a project</span>repositories</button> locally using <button class="glossary"><span class="def"></span>GitHub Desktop</button> or the <button class="glossary"><span class="def">A window that lets a user interact with a computer through typing commands</span>command line</button>, and remotely using GitHub (<a href="https://github.com/">github.com</a>). You’ve practiced using the “pull → stage → commit → push” workflow to make changes locally that are then tracked remotely. In your analysis, you worked in a <button class="glossary"><span class="def">A history of commits in a Git-tracked repository (there can be multiple parallel branches in a repository)</span>branch</button>, and you submitted a <button class="glossary"><span class="def">A request to integrate a collection of commits from one branch (or from a fork) into another branch (or another repository)</span>pull request</button> in order to integrate new changes into a stable version of the code and as a way to ask a collaborator to review your code.</p>
+<p>In this case study, you’ve learned about why <button class="glossary"><span class="def">A tool that records changes to a project over time</span>version control</button> is used as part of <button class="glossary"><span class="def">Describes a project in which a new researcher can re-run an experiment or analysis with the same data and code and generate the same results</span>reproducible</button> science workflows. You’ve been introduced to <button class="glossary"><span class="def">A popular version control tool that works to track files on a local computer</span>Git</button> and <button class="glossary"><span class="def">A website for hosting folders that are tracked with Git</span>GitHub</button>, and learned procedures for managing Git-tracked <button class="glossary"><span class="def">Folders in Git that contains all of the files to be tracked for a project</span>repositories</button> locally using <button class="glossary"><span class="def">A graphical user interface for interacting with Git on a local computer</span>GitHub Desktop</button> or the <button class="glossary"><span class="def">A window that lets a user interact with a computer through typing commands</span>command line</button>, and remotely using GitHub (<a href="https://github.com/">github.com</a>). You’ve practiced using the “pull → stage → commit → push” workflow to make changes locally that are then tracked remotely. In your analysis, you worked in a <button class="glossary"><span class="def">A history of commits in a Git-tracked repository (there can be multiple parallel branches in a repository)</span>branch</button>, and you submitted a <button class="glossary"><span class="def">A request to integrate a collection of commits from one branch (or from a fork) into another branch (or another repository)</span>pull request</button> in order to integrate new changes into a stable version of the code and as a way to ask a collaborator to review your code.</p>
 <p>Along the way, you’ve also learned about the advantages and challenges of <button class="glossary"><span class="def">Analyses of data from a collection of studies targeting a common research question</span>meta-analyses</button> and best practices for scientific project organization.</p>
 </section>
 <section id="summary-activity" class="level2">
@@ -3990,7 +3990,7 @@ I <button class="glossary"><span class="def">A snapshot of all files in a reposi
 <p>However, if you have already pushed your work, then you will need to amend the commit message and then force push. This should only be done carefully, because it will rewrite the commit history of the branch for any other collaborator using that branch. Therefore, it is suggested to only do this for branches that you are working on alone, or to alert your collaborator before performing this operation and having them reset their branch after you force push.</p>
 </div>
 <div id="tabset-26-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-26-2-tab">
-<p>If you have committed but not yet <button class="glossary"><span class="def">Sending commits from the local version of a repository to the remote version of the repository on GitHub</span>pushed</button> your work, you can open the command line and do the following:</p>
+<p>If you have committed but not yet <button class="glossary"><span class="def">Send commits from the local repository to the remote repository on GitHub</span>pushed</button> your work, you can open the command line and do the following:</p>
 <div class="shell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb97"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span> <span class="at">-m</span> <span class="st">"Corrected commit message"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -4466,7 +4466,7 @@ I’ve created a problem with my local repository that I just can’t solve. Can
 <li><label><input type="checkbox">Open the <code>infant_gut_analysis</code> repository locally.</label></li>
 <li><label><input type="checkbox">Make sure you are on the <code>main</code> branch (navigate to it if not).</label></li>
 <li><label><input type="checkbox">Add a new line to the README (add whatever you’d like here!).</label></li>
-<li><label><input type="checkbox">Follow the instructions on the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github">troubleshooting section</a> to move this update to the README to a new branch called u<code>pdated_readme</code>.</label></li>
+<li><label><input type="checkbox">Follow the instructions in the <a href="https://www.opencasestudies.org/ocs-bio-version-control/#moving-work-between-branches">moving work between branches section</a> to move this update to the README to a new branch called <code>updated_readme</code>.</label></li>
 <li><label><input type="checkbox">Commit and push your changes to a remote <code>updated_readme</code> branch.</label></li>
 <li><label><input type="checkbox">Submit another pull request on GitHub to contribute this change into the <code>main</code> branch.</label></li>
 </ul>
@@ -4730,54 +4730,58 @@ Automatically include the packages table from _packages.qmd?
 <td>A collection of microorganisms that live in a shared environment</td>
 </tr>
 <tr class="even">
+<td>pull</td>
+<td>Send commits from the remote repository on GitHub to the local repository</td>
+</tr>
+<tr class="odd">
 <td>pull request</td>
 <td>A request to integrate a collection of commits from one branch (or from a fork) into another branch (or another repository)</td>
 </tr>
-<tr class="odd">
-<td>push</td>
-<td>Sending commits from the local version of a repository to the remote version of the repository on GitHub</td>
-</tr>
 <tr class="even">
+<td>push</td>
+<td>Send commits from the local repository to the remote repository on GitHub</td>
+</tr>
+<tr class="odd">
 <td>quarto</td>
 <td>A type of document that combines code with the output of the code and text</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>README</td>
 <td>A document that describes what files are in a folder, as well as other relevant information</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>remote</td>
 <td>The online version of the repository tracked on GitHub</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>repo</td>
 <td>A shortened version of "repository", a folder in Git that contains all of the files to be tracked for a project</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>repositories</td>
 <td>Folders in Git that contains all of the files to be tracked for a project</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>repository</td>
 <td>A folder in Git that contains all of the files to be tracked for a project</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>reproducibility</td>
 <td>The ability for someone else to run the same analysis on the same data and get the same results</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>reproducible</td>
 <td>Describes a project in which a new researcher can re-run an experiment or analysis with the same data and code and generate the same results</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>stage</td>
 <td>Prepare to track specified files when the next commit is made to a repository.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>upstream</td>
 <td>The original repository that was copied to create a forked repository</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>version control</td>
 <td>A tool that records changes to a project over time</td>
 </tr>
