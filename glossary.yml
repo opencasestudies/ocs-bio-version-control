@@ -34,10 +34,12 @@ meta-analyses: |
   Analyses of data from a collection of studies targeting a common research question
 microbiome: |
   A collection of microorganisms that live in a shared environment
+pull: |
+  Send commits from the remote repository on GitHub to the local repository
 pull request: |
   A request to integrate a collection of commits from one branch (or from a fork) into another branch (or another repository)
 push: |
-  Sending commits from the local version of a repository to the remote version of the repository on GitHub
+  Send commits from the local repository to the remote repository on GitHub
 quarto: |
   A type of document that combines code with the output of the code and text 
 README: |
