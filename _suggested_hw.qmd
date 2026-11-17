@@ -33,7 +33,7 @@ Complete the following steps:
 - [ ] Open the `infant_gut_analysis` repository locally.
 - [ ] Make sure you are on the `main` branch (navigate to it if not).
 - [ ] Add a new line to the README (add whatever you'd like here!).
-- [ ] Follow the instructions on the [troubleshooting section](https://www.opencasestudies.org/ocs-bio-version-control/#troubleshooting-git-and-github) to move this update to the README to a new branch called `updated_readme`.
+- [ ] Follow the instructions in the [moving work between branches section](https://www.opencasestudies.org/ocs-bio-version-control/#moving-work-between-branches) to move this update to the README to a new branch called `updated_readme`.
 - [ ] Commit and push your changes to a remote `updated_readme` branch.
 - [ ] Submit another pull request on GitHub to contribute this change into the `main` branch. 
 
