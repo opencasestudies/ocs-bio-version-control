@@ -2,7 +2,7 @@
 title: "**Biomedical Open Case Studies: Making version controlled reproducible analyses**"
 bibliography: resources/references.bib
 include-sections:
-  stat-los: false
+  stat-los: true
   lo-map: true
   data-import: true
   data-exploration: true
