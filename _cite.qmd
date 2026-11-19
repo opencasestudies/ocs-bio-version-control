@@ -16,7 +16,7 @@ Teichman, Sarah and Isaac, Kathryn J and Thomas, Oshane and Hoffman, Ava and Wri
 Attributions follow the CRediT framework and are defined in [this document](https://zenodo.org/records/18421449).
 
 - **[Sarah Teichman]**: Conceptualization (equal); formal analysis (lead); methodology (lead); writing - original draft (lead).
-- **[Kate Isaac]**: Writing - review and editing (equal).
+- **[Kate Isaac]**: Resources, Writing - review and editing (equal).
 - **[Oshane Thomas]**: Writing - review and editing (equal).
 - **[Ava Hoffman]**: Funding acquisition (equal); supervision (equal); writing - review and editing (equal).
 - **[Carrie Wright]**: Conceptualization (equal); funding acquisition (equal); supervision (equal); writing - review and editing (equal). 
