@@ -11,6 +11,7 @@ automations
 Backhed
 Bitbucket
 Bioinformatics
+BioOCS
 Blischak
 Bowtie
 Carpentries
@@ -22,6 +23,7 @@ Chu
 codebase
 Collab
 counterintuitive
+CRediT
 css
 css
 csv
