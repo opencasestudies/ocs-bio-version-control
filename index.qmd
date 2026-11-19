@@ -48,8 +48,9 @@ include-sections:
 
 {{< include _bioethics.qmd >}}
 
-::: {.content-hidden unless-meta="include-sections.data-import"}
 {{< include _packages.qmd >}}
+
+::: {.content-hidden unless-meta="include-sections.data-import"}
 {{< include _data_import.qmd >}}
 
 :::

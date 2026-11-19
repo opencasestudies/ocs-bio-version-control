@@ -16,12 +16,50 @@ Package    | Use | Where this packages is used
 [here](https://here.r-lib.org) | To construct file paths within folders | [Data visualization](https://www.opencasestudies.org/ocs-bio-version-control/#data-visualization)
 [readxl](https://readxl.tidyverse.org){target="_blank"}      | To read Excel files into R | [Data import](https://www.opencasestudies.org/ocs-bio-version-control/#data-import)
 [dplyr](https://dplyr.tidyverse.org){target="_blank"}      | To combine and manipulate data tables | [Data import](https://www.opencasestudies.org/ocs-bio-version-control/#data-import), [Data exploration](https://www.opencasestudies.org/ocs-bio-version-control/#data-exploration), [Data wrangling](https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling), [Data visualization](https://www.opencasestudies.org/ocs-bio-version-control/#data-visualization), [Data analysis](https://www.opencasestudies.org/ocs-bio-version-control/#data-analysis)
+[readr](https://readr.tidyverse.org) | To read CSV files into R | [Data import](https://www.opencasestudies.org/ocs-bio-version-control/#data-import), [Data wrangling](https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling), [Data visualization](https://www.opencasestudies.org/ocs-bio-version-control/#data-visualization)
 [ggplot2](https://ggplot2.tidyverse.org) | To visualize data | [Data visualization](https://www.opencasestudies.org/ocs-bio-version-control/#data-visualization)
 [stringr](https://stringr.tidyverse.org) | To manipulate strings | [Data wrangling](https://www.opencasestudies.org/ocs-bio-version-control/#data-wrangling)
 
 
 The first time we use a function, we will use `::` to indicate which package we are using. Unless we have overlapping function names, this is not necessary, but we will include it here to remind you which packages the functions come from.
 
-Three of these packages, `dplyr`, `ggplot2`, and `stringr` are part of the [tidyverse suite of packages](https://tidyverse.org). The `tidyverse` includes nine packages that can easily be used together and share data structures and syntax. While each of the packages can be installed or loaded separately (as we do above), they can be installed or loaded all at once using `install.packages("tidyverse")` and `library(tidyverse)`, respectively. 
+Four of these packages, `dplyr`, `readr`, `ggplot2`, and `stringr` are part of the [tidyverse suite of packages](https://tidyverse.org). The `tidyverse` includes nine packages that can easily be used together and share data structures and syntax. While each of the packages can be installed or loaded separately (as we do above), they can be installed or loaded all at once using `install.packages("tidyverse")` and `library(tidyverse)`, respectively. 
+
+<details>
+<summary>Instructions to install these packages</summary>
+
+When checking package installations or installing packages, make sure you are working in the console (if using RStudio or Positron), not in a script. This is because installation should be performed only once, and not re-run each time you run your analysis.
+
+First, you can check if you already have some of these packages installed with the following command:
+
+::: {.rcode}
+```{r, eval = FALSE}
+packages <- c("here", "readxl", "dplyr", "readr", "ggplot2", "stringr")
+data.frame(packages, installed = 
+             packages %in% rownames(installed.packages()))
+```
+:::
+
+Any package that has `TRUE` under `installed` is already installed, and any package that has `FALSE` is not yet installed. To install the remaining packages, you can use the following command, removing any packages that are already installed. 
+
+::: {.rcode}
+```{r, eval = FALSE}
+install.packages(c("here", "readxl", "dplyr", "readr", "ggplot2", "stringr"))
+```
+:::
+
+If you want to install all nine `tidyverse` packages at once, you could remove `dplyr`, `readr`, `ggplot2`, and `stringr` from the command above, and run `install.packages("tidyverse")`. 
+
+To confirm that these packages have successfully installed, you can check the package installations again. 
+
+::: {.rcode}
+```{r, eval = FALSE}
+data.frame(packages, installed = 
+             packages %in% rownames(installed.packages()))
+```
+:::
+
+
+</details>
 
 ***

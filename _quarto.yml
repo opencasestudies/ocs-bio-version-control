@@ -1,5 +1,8 @@
 project:
   type: website
+  render:
+    - "*.qmd"
+    - "!resources/scripts/03_visualize_study_cohorts.qmd"
   output-dir: docs
   resources: img/**
 

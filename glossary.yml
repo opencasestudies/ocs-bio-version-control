@@ -15,7 +15,7 @@ Git: |
 Git LFS: |
   Git large file storage, an option to version control large files that are too large to track using Git and GitHub
 GitHub: |
-  A website for hosting folders that are tracked with GitHub
+  A website for hosting folders that are tracked with Git
 GitHub Desktop: |
   A graphical user interface for interacting with Git on a local computer 
 license: |

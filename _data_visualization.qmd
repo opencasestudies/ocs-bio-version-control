@@ -18,7 +18,7 @@ First, we will make sure that we are on the correct branch. We want to use a dev
   - If it says `main`, then you can click the drop-down button next to "Current Branch" and select `study_comparison`.
     - If `study_comparison` does not appear, you can click the "New Branch" button to create it. 
 
-```{r, fig.alt="Creating first repository", out.width = "100%", echo = FALSE, fig.align = "center"}
+```{r, fig.alt="Image of GitHub Desktop, showing how to switch between branches", out.width = "100%", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.g3f94a4bdf40_0_170#slide=id.g3f94a4bdf40_0_170")
 ```
 
@@ -70,6 +70,12 @@ We will use a quarto document for this analysis. To start:
 
 In this section, we will go through the steps to make two visualizations to compare the study cohorts. As you go, include the relevant code (as well as explanations of what the code is doing) into your quarto document. When you are done, you or someone else with access to the data and your document, should be able to run the code and create the visualizations. 
 
+<details><summary>If you run into problems while coding in this case study:</summary>
+
+Coding is challenging, and the coding portions of this case study shouldn't distract from your practice with Git and GitHub. All code that will go into `03_visualize_study_cohorts.qmd` will be provided in the case study, either directly or within click-to-expand sections. However, if you are still getting stuck or have code that will not run, it is likely that you have missed a section. You can use [this completed .qmd document](https://github.com/opencasestudies/ocs-bio-version-control/blob/main/resources/scripts/03_visualize_study_cohorts.qmd) to check your work. However, we do not recommend directly copying this .qmd script all at once, because practicing the {{< glossary "stage">}} → {{< glossary "commit">}} → {{< glossary "push">}} workflow several times as you work will get you into the habit of doing these actions while you code, not just when you finish a project.
+
+</details>
+
 In your quarto document, you should start by making a code chunk to load the required packages. A code chunk looks like the following:
 
 ```{r, fig.alt="Example R code chunk in .qmd document", out.width = "100%", echo = FALSE, fig.align = "center"}
@@ -102,6 +108,7 @@ You can also add a code chunk in Positron by clicking the icon that shows an arr
 
 ::: {.rcode}
 ```{r, message = FALSE, warning = FALSE}
+library(readr)
 library(here)
 library(dplyr) 
 library(ggplot2)
@@ -115,17 +122,19 @@ Next, we will load the wrangled data. We will use the function `here()`, which c
 The `here()` function creates file paths that always start from the main project folder (the top-level folder that contains all of your project files). In a Git repository, this is the folder that contains the `.git` directory, which was created when you initialized the repository. However, there are other ways here can determine where to start the path, including the directory with an `.Rproj` file (if you are using one), see this [list of conditions for the starting directory](https://here.r-lib.org/reference/here.html) for more information.  Using relative file paths (i.e., paths that only reference folders within your project) makes your code more portable and easier for collaborators to run. Importantly, the `here()` function creates these relative paths in a way that is compatible with different kinds of operating systems which have different path requirements. In contrast, absolute file paths depend on the specific file structure of your personal computer and will not necessarily work on other machines.
 </details>
 
-We want to load data from the file `clean_sample_metadata.rda` contained within the `processed_data` folder. 
+We want to load data from the file `clean_sample_metadata.csv` contained within the `processed_data` folder. 
 
 - [ ] **Include this code in your .qmd file** to load the data.
 
-```{r, echo = FALSE}
-load(here::here("data", "wrangled", "clean_sample_metadata.rda"))
+```{r, echo = FALSE, message = FALSE}
+clean_metadata <- readr::read_csv(here::here("data", "wrangled", 
+                                             "clean_sample_metadata.csv"))
 ```
 
 ::: {.rcode}
 ```{r, eval = FALSE}
-load(here::here("processed_data", "clean_sample_metadata.rda"))
+clean_metadata <- readr::read_csv(here::here("processed_data", 
+                                             "clean_sample_metadata.csv"))
 ```
 :::
 
@@ -422,7 +431,7 @@ In this histogram, we will set `scale = "fixed"` in `facet_wrap()` so that the y
 :::: {.rcode}
 ```{r, fig.width = 7, fig.height = 10}
 sampling_day_df %>%
-  mutate(Study = reorder(Study, sampling_day)) %>%
+  mutate(Study = reorder(Study, sampling_day, FUN = max)) %>%
   ggplot(aes(x = sampling_day, fill = Category, group = Category)) +
   geom_histogram(position = position_dodge(), bins = 20) +
   facet_wrap(~Study, scale = "fixed", ncol = 1) +

@@ -29,7 +29,7 @@ Although this is not directly related to {{< glossary "version control">}}, ther
 
 If we look at the files contained in the `infant_gut_analysis` repository, they follow the recommendations provided above. 
 
-```{r, fig.alt="File viewer for files in this repository", out.width = "100%", echo = FALSE, fig.align = "center"}
+```{r, fig.alt="Files included in the infant_gut_analysis repository", out.width = "100%", echo = FALSE, fig.align = "center"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3e3d77952e3_0_0#slide=id.g3e3d77952e3_0_0")
 ```
 
@@ -43,9 +43,9 @@ A `README.md` file should describe the files related to your scientific project.
 Question opportunity
 ::::
 ::::{.inner_block}
-Read through the `README.md` file for this project. Which script generates `sample_metadata.rda`? 
+Read through the `README.md` file for this project. Which script generates `sample_metadata.csv`? 
 <details><summary>Answer</summary>
-The script `01_pull_study_data.R` generates `sample_metadata.rda`. 
+The script `01_pull_study_data.R` generates `sample_metadata.csv`. 
 </details>
 ::::
 :::

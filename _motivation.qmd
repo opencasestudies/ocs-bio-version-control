@@ -10,7 +10,7 @@ Images or videos may be helpful so this includes an example of including an imag
 
 In this case study, we ask you to imagine that you are working with a collaborator on a scientific project. You receive the following email, requesting your help performing a preliminary data analysis. Don't worry about the scientific background for this analysis right now, an explanation will be given in the [context](https://www.opencasestudies.org/ocs-bio-version-control/#context) section. 
 
-```{r, fig.alt="Motivation email asking for cohort comparison analysis", out.width = "100%", echo = FALSE}
+```{r, fig.alt="Email asking for comparison of studies included in meta-analysis, motivating the case study analysis and the use of version control to track this project", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_0#slide=id.g3d9461be06f_0_0")
 ```
 
