@@ -9,10 +9,15 @@ In this case study, you've learned about why {{< glossary "version control">}} i
 
 Along the way, you've also learned about the advantages and challenges of {{< glossary "meta-analyses">}} and best practices for scientific project organization. 
 
+In this figure, you can see the process followed in this case study, with decision points highlighted. 
+
+```{r, fig.alt="Process and decision points for version control case study", echo = FALSE, fig.align = "center"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1Lhb7BeS8v9yfwAtX4rjKjMrOrt36dq4OvYmjJxC5gJc/edit?slide=id.h70e87ed7ed3599ce_1_0#slide=id.h70e87ed7ed3599ce_1_0")
+```
+
 
 ## **Summary Activity**
 ***
-
 
 ### Reconstruct the workflow
 
