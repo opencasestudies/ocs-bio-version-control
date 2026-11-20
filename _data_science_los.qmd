@@ -9,5 +9,5 @@ For an example, see this previous Open Case Study: https://www.opencasestudies.o
 1. Describe ways in which version control facilitates reproducible science.
 1. Explain how version control works by recording differences between versions of a project.
 1. Follow a workflow to create and make changes to a repository with Git and GitHub.
-1. Open a pull request to propose changes to a codebase and request a code review from a collaborator.
+1. Open a pull request to propose changes to a repository and request a code review from a collaborator.
 1. Organize a repository for a project with a README file and folders for data, figures, and results.
