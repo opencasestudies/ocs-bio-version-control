@@ -2,13 +2,13 @@
 
 [![Render website](https://github.com/opencasestudies/ocs-bio-version-control/actions/workflows/render-all.yml/badge.svg)](https://github.com/opencasestudies/ocs-bio-version-control/actions/workflows/render-all.yml)
 
-### Useful Links
+### [Useful Links](https://opencasestudies.github.io/ocs-bio-version-control/)
 
--   HTML: <https://www.opencasestudies.org/ocs-bio-version-control/>
+-   HTML: <https://opencasestudies.github.io/ocs-bio-version-control/>
 -   GitHub:
     <https://github.com/opencasestudies/ocs-bio-version-control>
 
-### Disclaimer
+### [Disclaimer](https://opencasestudies.github.io/ocs-bio-version-control/)
 
 The purpose of the [Open Case
 Studies](https://opencasestudies.github.io) project is **to demonstrate
@@ -20,21 +20,21 @@ making policy or clinical decisions without external consultation from scientifi
 experts or medical care professionals. In addition, due to size constraints, 
 datasets used within a case study may be a subset of the original/full dataset.
 
-### License
+### [License](https://opencasestudies.github.io/ocs-bio-version-control/)
 
 This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 [(CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/deed.en) United States License unless otherwise noted.
 
-### Citation
+### [Citation](https://opencasestudies.github.io/ocs-bio-version-control/)
 
 To cite this case study:
 
 Teichman, Sarah and Isaac, Kathryn J and Thomas, Oshane and Hoffman, Ava and Wright, Carrie. (2026). [https://github.com/opencasestudies/ocs-bio-version-control/](https://github.com/opencasestudies/ocs-bio-version-control/). Making version-controlled reproducible analyses (Version v1.0.0).
 
-### Funding
+### [Funding](https://opencasestudies.github.io/ocs-bio-version-control/#acknowledgments)
 
 This work is funded through the National Institutes of Health, specifically the National Institute of General Medical Sciences: Grant Number 1R25GM160622.
 
-### Acknowledgments
+### [Acknowledgments](https://opencasestudies.github.io/ocs-bio-version-control/#acknowledgments)
 
 We would like to acknowledge [Candace Savonen](https://www.cansavvy.com), [Casey Greene](https://greenelab.com/members/casey-greene.html), [Emma Lathouwers](https://greenelab.com/members/emma-lathouwers.html), [Taylor Reiter](https://taylorreiter.github.io), and ethicist [Jodyn Platt](https://medschool.umich.edu/profile/3774/jodyn-platt) for their expert review of this case study.
 
@@ -44,16 +44,16 @@ Icons are from [iconpacks](https://www.iconpacks.net).
 
 Avatars are from [getavataaars](https://getavataaars.com).
 
-### Title
+### [Title](https://opencasestudies.github.io/ocs-bio-version-control/)
 
 Making Version Controlled Reproducible Analyses
 
-### Prerequisites
+### [Prerequisites](https://opencasestudies.github.io/ocs-bio-version-control/#prerequisites)
 
 To follow along with this case study, you'll need the following installed:
 
 - R ([install here](https://www.r-project.org))
-- RStudio ([install here](https://posit.co/download/rstudio-desktop)) or Positron ([install here](https://positron.posit.co/install.html)) or another IDE compatible with R
+- RStudio ([install here]https://docs.posit.co/ide/user/download.html)) or Positron ([install here](https://positron.posit.co/download.html)) or another Integrated Development Environment (IDE) compatible with R
 
 It will also be helpful to be have the following skills:
 
@@ -62,19 +62,19 @@ It will also be helpful to be have the following skills:
 
 You do not need to have any previous Git and GitHub knowledge or experience for this case study. 
 
-### Target Audience
+### [Target Audience](https://opencasestudies.github.io/ocs-bio-version-control/)
 
 The target audience for this case study is scientists and researchers who use R but do not use version control.
 
-### Motivation
+### [Motivation](https://opencasestudies.github.io/ocs-bio-version-control/#motivation)
 
 This case study introduces version control in the context of a realistic collaborative scientific project. 
 Using a meta-analysis of infant gut microbiome studies as an example, learners work through a preliminary 
 data analysis while managing a version-controlled research workflow with Git and GitHub. This case study teaches
 what version control is and the role it plays in collaborative and reproducible science, and gives the learner 
-practice in created a version-controlled repository and tracking changes to an analysis using Git and GitHub. 
+practice in creating a version-controlled repository and tracking changes to an analysis using Git and GitHub. 
 
-### Main Questions
+### [Main Questions](https://opencasestudies.github.io/ocs-bio-version-control/#main-question)
 
 The main questions in this case study are the following:
 
@@ -82,7 +82,7 @@ The main questions in this case study are the following:
 1. How can Git and GitHub be used to facilitate collaboration on a research project?
 1. In this meta-analysis of infant gut microbiome samples, how do the original studies compare in their sampling designs?
 
-### Learning Objectives
+### [Learning Objectives](https://opencasestudies.github.io/ocs-bio-version-control/#learning-objectives)
 
 The learning objectives of this case study are the following:
 
@@ -99,7 +99,7 @@ The learning objectives of this case study are the following:
 1. Identify the value and limitations of combining data from multiple studies in a meta-analysis.
 1. Create visualizations to compare sampling designs across a set of studies. 
 
-### Context 
+### [Context](https://opencasestudies.github.io/ocs-bio-version-control/#context) 
 
 A microbiome is a collection of microorganisms that live in a particular environment. One commonly studied microbiome is the human gut microbiome. 
 In this case study, we examine several studies that have collected longitudinal gut microbiome samples from infant-mother pairs in order to
@@ -107,9 +107,9 @@ understand how the infant gut microbiome develops over time and how it relates t
 
 A meta-analysis combines data or results from multiple studies investigating a common research question. The scientific
 paper that we reference performed a meta-analysis of eight longitudinal gut microbiome studies. In the case study, we ask how comparable
-the original studies in their study design, specifically in terms of their sample sizes and longitudinal sampling designs.
+the original studies are in their study design, specifically in terms of their sample sizes and longitudinal sampling designs.
 
-### Introduction to Git and GitHub
+### [Introduction to Git and GitHub](https://opencasestudies.github.io/ocs-bio-version-control/#introduction-to-git-and-github)
 
 We provide an explanation of how reproducibility fits into the scientific process and how version control facilitates reproducible analyses.
 We describe Git and GitHub and how they work together. We guide the learner through creating a GitHub account and their first GitHub repository. 
@@ -118,14 +118,14 @@ and works through the staging, committing, pushing, and pulling process. We then
 meta-analysis study design comparison, and have them track the folder locally with Git and make a remote version on GitHub. Finally, we discuss
 branches and have the learner make a new branch for their analysis. 
 
-### Scientific Project Organization
+### [Scientific Project Organization](https://opencasestudies.github.io/ocs-bio-version-control/#scientific-project-organization)
 
 We include a section on recommendations for scientific project organization. This includes file and folder organization, README documents,
 files to track with Git and .gitignore files, and working with large files. 
 
-### What are the Data?
+### [What are the Data?](https://opencasestudies.github.io/ocs-bio-version-control/#what-are-the-data)
 
-In this case study, we will investigate data about samples from [this meta-analysis](https://www.tandfonline.com/doi/full/10.1080/19490976.2021.1911571) of mother and infant gut microbiome studies. Wang et al. identified a set of eight studies that collected mother and infant gut microbiome samples over time and performed metagenomic sequencing. These studies collectively include 1,496 samples. The variables that we will use to answer our questions include:
+In this case study, we will investigate data about samples from [this meta-analysis by Wang et al.](https://doi.org/10.1080/19490976.2021.1911571) of mother and infant gut microbiome studies. Wang et al. identified a set of eight studies that collected mother and infant gut microbiome samples over time and performed metagenomic sequencing. These studies collectively include 1,496 samples. The variables that we will use to answer our questions include:
 
 Variable | Details
 -------- | -------
@@ -136,15 +136,15 @@ Variable | Details
 **Sampling from papers** | Sampling time frame described in paper 
 **Sampling, day** | Day after birth that the sample was collected on
 
-### Limitations
+### [Limitations](https://opencasestudies.github.io/ocs-bio-version-control/#limitations)
 
 We describe limitations of this data, as well as limitations of version control (including the need to make commits, challenges of version control with large files, and the future evolution of version control software).
 
-### Ethical Considerations
+### [Ethical Considerations](https://opencasestudies.github.io/ocs-bio-version-control/#ethical-considerations)
 
-We describe several ethical considerations of working with version control, including taking care to not include PII or PHI in online repositories. 
+We describe several ethical considerations of working with version control, including taking care to not include Personally Identifiable Information (PII) or Protected Health Information (PHI) in online repositories. 
 
-### Packages used in this case study
+### [Packages used in this case study](https://opencasestudies.github.io/ocs-bio-version-control/#packages-and-setup)
 
 Package    | Use
 ---------- |-------------
@@ -155,54 +155,54 @@ Package    | Use
 [stringr](https://stringr.tidyverse.org) | To manipulate strings
 
 
-### Data Import
+### [Data Import](https://opencasestudies.github.io/ocs-bio-version-control/#data-import)
 
 In this section, we ask the learner to open the file in their repository that loads data, run the file, and answer a question about the dataset. 
 
-### Data Exploration
+### [Data Exploration](https://opencasestudies.github.io/ocs-bio-version-control/#data-exploration)
 
 In this section, we ask the learner to look closer at the loaded data.
 
-### Data Wrangling
+### [Data Wrangling](https://opencasestudies.github.io/ocs-bio-version-control/#data-wrangling)
 
 In this section, we ask the learner to open the file in their repository that wrangles data, run the file, and answer a question about the wrangled data.
 
-### Data Visualization
+### [Data Visualization](https://opencasestudies.github.io/ocs-bio-version-control/#data-visualization)
 
 In this section, we guide the learner through creating two plots to compare the designs of the studies included in the meta-analysis. After each update, 
 the learner documents changes in the README document, and stages and commits their changes. 
 
-### Data Analysis
+### [Data Analysis](https://opencasestudies.github.io/ocs-bio-version-control/#data-analysis)
 
 In this section, the learner uses the visualizations and a summary table to draw conclusions about similarities and differences in the study designs. They
-document their conclusions in their .qmd file and push their upates to the remote repository.
+document their conclusions in their Quarto (file extension: `.qmd`) file and push their updates to the remote repository.
 
-### Pull Requests
+### [Pull Requests](https://opencasestudies.github.io/ocs-bio-version-control/#pull-requests)
 
 In this section, we describe what a pull request is and why it is useful, and prompt the learner to create a pull request with their plots and analysis and a request for code review. 
 
-### Summary 
+### [Summary](https://opencasestudies.github.io/ocs-bio-version-control/#summary) 
 
 This section summarizes the case study, gives the learner a chance to drag and drop elements of their version controlled workflow from the case study into the correct order,
 emphasizing major steps along the way. This section also includes the main image, reminding the learner of the motivation for using version control instead of emailing project 
 files back and forth with collaborators.
 
-### Troubleshooting Git and GitHub
+### [Troubleshooting Git and GitHub](https://opencasestudies.github.io/ocs-bio-version-control/#troubleshooting-git-and-github)
 
 This section provides guidance for dealing with several potential Git and GitHub challenges, including merge conflicts, removing specific files from version control, mistakenly 
 committing large files, etc. It also provides guidance on using AI for troubleshooting Git and GitHub.
 
-### Continued Learning
+### [Continued Learning](https://opencasestudies.github.io/ocs-bio-version-control/#continued-learning)
 
 This section provides suggestions to reinforce version control skills by making other scientific project folders into version-controlled repositories, 
 adding additional branches to their analysis from the case study, and adding collaborators to repositories. This section also introduces the concept of forking,
 and guides the learner in forking a repository with files for this case study analysis, adding in the plots they made, and opening a pull request from their
 fork. 
 
-### Other notes and resources
+### [Other notes and resources](https://opencasestudies.github.io/ocs-bio-version-control/#additional-information)
 
 - [happy git with R](https://happygitwithr.com): online book that covers most relevant topics for using Git and GitHub with R
-- [How to Use Git/GitHub with R](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r): blog post about getting Git and GitHub set up and working with RStudio. This uses the built-in Git GUI in RStudio instead of GitHub Desktop
+- [How to Use Git/GitHub with R](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r): blog post about getting Git and GitHub set up and working with RStudio. This uses the built-in Git graphical user interface (GUI) in RStudio instead of GitHub Desktop
 - [Dangit, Git!?!](https://dangitgit.com/en): brief description of some common Git errors and how to resolve them
 - [Intro to reproducibility in cancer informatics](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/): short course on reproducibility for scientific projects, includes Git and GitHub in chapter 4 and provides other resources on reproducibility
 - [Advanced reproducibility in cancer informatics](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/): short course on more advanced reproducibility for scientific projects, includes GitHub in chapter 3 and provides other resources on reproducibility

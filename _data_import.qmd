@@ -11,7 +11,7 @@ At the end of this section, save incremental data so that users can pause and co
 
 Now that you have set up this project with {{< glossary "Git">}} and {{< glossary "GitHub">}}, you can start working on the study comparison in R. 
 
-- [ ] Open RStudio or Positron or your preferred R IDE to the `infant_gut_analysis` folder. 
+- [ ] Open RStudio or Positron or your preferred R Integrated Development Environment (IDE) to the `infant_gut_analysis` folder. 
 
 We will start by taking a look at the data. 
 
