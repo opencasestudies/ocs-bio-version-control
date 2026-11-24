@@ -16,7 +16,7 @@ Use this section to provide any additional information or resources on the topic
   - [GitHub - Personal access tokens](https://github.com/settings/tokens): site to create a GitHub token
 - [Download GitHub Desktop](https://desktop.github.com/download/): site to download GitHub Desktop 
 - [happy git with R](https://happygitwithr.com): online book that covers most relevant topics for using Git and GitHub with R
-- [How to Use Git/GitHub with R](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r): blog post about getting Git and GitHub set up and working with RStudio. This uses the built-in Git Graphical User Interface (GUI) in RStudio instead of GitHub Desktop
+- [How to Use Git/GitHub with R](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r): blog post about getting Git and GitHub set up and working with RStudio. This uses the built-in Git graphical user interface (GUI) in RStudio instead of GitHub Desktop
 - [Carpentries](https://carpentries.org):
   - [Install Git](https://carpentries.github.io/workshop-template/install_instructions/): instructions on installing Git (and other types of software)
   - [Set up Git](https://swcarpentry.github.io/git-novice/02-setup.html): instructions on setting up Git

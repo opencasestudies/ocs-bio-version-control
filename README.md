@@ -202,7 +202,7 @@ fork.
 ### [Other notes and resources](https://opencasestudies.github.io/ocs-bio-version-control/#additional-information)
 
 - [happy git with R](https://happygitwithr.com): online book that covers most relevant topics for using Git and GitHub with R
-- [How to Use Git/GitHub with R](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r): blog post about getting Git and GitHub set up and working with RStudio. This uses the built-in Git Graphical User Interface (GUI) in RStudio instead of GitHub Desktop
+- [How to Use Git/GitHub with R](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r): blog post about getting Git and GitHub set up and working with RStudio. This uses the built-in Git graphical user interface (GUI) in RStudio instead of GitHub Desktop
 - [Dangit, Git!?!](https://dangitgit.com/en): brief description of some common Git errors and how to resolve them
 - [Intro to reproducibility in cancer informatics](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/): short course on reproducibility for scientific projects, includes Git and GitHub in chapter 4 and provides other resources on reproducibility
 - [Advanced reproducibility in cancer informatics](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/): short course on more advanced reproducibility for scientific projects, includes GitHub in chapter 3 and provides other resources on reproducibility

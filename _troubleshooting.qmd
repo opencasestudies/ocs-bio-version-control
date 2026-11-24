@@ -267,7 +267,7 @@ This is another common problem. We'll first tell Git to stop tracking the file (
 :::{.panel-tabset}
 #### GitHub Desktop
 
-Make sure you are starting in the correct branch that you have been working in. This is a situation that we cannot resolve directly with the GitHub Desktop Graphical User Interface (GUI). Instead, we will launch a command line within GitHub Desktop. 
+Make sure you are starting in the correct branch that you have been working in. This is a situation that we cannot resolve directly with the GitHub Desktop graphical user interface (GUI). Instead, we will launch a command line within GitHub Desktop. 
 
 Click "Repository" → "Open in Terminal". This will open a command line for you to work with. In this command line, use the following command, replacing `path_to_file` with the path to the file to stop tracking, including the file name. 
 
