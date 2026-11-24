@@ -142,7 +142,7 @@ We describe limitations of this data, as well as limitations of version control 
 
 ### Ethical Considerations
 
-We describe several ethical considerations of working with version control, including taking care to not include PII or PHI in online repositories. 
+We describe several ethical considerations of working with version control, including taking care to not include Personally Identifiable Information (PII) or Protected Health Information (PHI) in online repositories. 
 
 ### Packages used in this case study
 
