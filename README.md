@@ -175,7 +175,7 @@ the learner documents changes in the README document, and stages and commits the
 ### Data Analysis
 
 In this section, the learner uses the visualizations and a summary table to draw conclusions about similarities and differences in the study designs. They
-document their conclusions in their .qmd file and push their upates to the remote repository.
+document their conclusions in their .qmd file and push their updates to the remote repository.
 
 ### Pull Requests
 
