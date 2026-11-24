@@ -125,7 +125,7 @@ files to track with Git and .gitignore files, and working with large files.
 
 ### What are the Data?
 
-In this case study, we will investigate data about samples from [this meta-analysis](https://www.tandfonline.com/doi/full/10.1080/19490976.2021.1911571) of mother and infant gut microbiome studies. Wang et al. identified a set of eight studies that collected mother and infant gut microbiome samples over time and performed metagenomic sequencing. These studies collectively include 1,496 samples. The variables that we will use to answer our questions include:
+In this case study, we will investigate data about samples from [this meta-analysis by Wang et al.](https://doi.org/10.1080/19490976.2021.1911571) of mother and infant gut microbiome studies. Wang et al. identified a set of eight studies that collected mother and infant gut microbiome samples over time and performed metagenomic sequencing. These studies collectively include 1,496 samples. The variables that we will use to answer our questions include:
 
 Variable | Details
 -------- | -------
