@@ -53,7 +53,7 @@ Making Version Controlled Reproducible Analyses
 To follow along with this case study, you'll need the following installed:
 
 - R ([install here](https://www.r-project.org))
-- RStudio ([install here](https://posit.co/download/rstudio-desktop)) or Positron ([install here](https://positron.posit.co/install.html)) or another Integrated Develpment Environment (IDE) compatible with R
+- RStudio ([install here](https://posit.co/download/rstudio-desktop)) or Positron ([install here](https://positron.posit.co/install.html)) or another Integrated Development Environment (IDE) compatible with R
 
 It will also be helpful to be have the following skills:
 
