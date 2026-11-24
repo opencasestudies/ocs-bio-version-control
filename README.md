@@ -53,7 +53,7 @@ Making Version Controlled Reproducible Analyses
 To follow along with this case study, you'll need the following installed:
 
 - R ([install here](https://www.r-project.org))
-- RStudio ([install here](https://posit.co/download/rstudio-desktop)) or Positron ([install here](https://positron.posit.co/install.html)) or another IDE compatible with R
+- RStudio ([install here](https://posit.co/download/rstudio-desktop)) or Positron ([install here](https://positron.posit.co/install.html)) or another Integrated Develpment Environment (IDE) compatible with R
 
 It will also be helpful to be have the following skills:
 
@@ -175,7 +175,7 @@ the learner documents changes in the README document, and stages and commits the
 ### Data Analysis
 
 In this section, the learner uses the visualizations and a summary table to draw conclusions about similarities and differences in the study designs. They
-document their conclusions in their .qmd file and push their updates to the remote repository.
+document their conclusions in their Quarto (file extension: `.qmd`) file and push their updates to the remote repository.
 
 ### Pull Requests
 
@@ -202,7 +202,7 @@ fork.
 ### Other notes and resources
 
 - [happy git with R](https://happygitwithr.com): online book that covers most relevant topics for using Git and GitHub with R
-- [How to Use Git/GitHub with R](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r): blog post about getting Git and GitHub set up and working with RStudio. This uses the built-in Git GUI in RStudio instead of GitHub Desktop
+- [How to Use Git/GitHub with R](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r): blog post about getting Git and GitHub set up and working with RStudio. This uses the built-in Git Graphical User Interface (GUI) in RStudio instead of GitHub Desktop
 - [Dangit, Git!?!](https://dangitgit.com/en): brief description of some common Git errors and how to resolve them
 - [Intro to reproducibility in cancer informatics](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/): short course on reproducibility for scientific projects, includes Git and GitHub in chapter 4 and provides other resources on reproducibility
 - [Advanced reproducibility in cancer informatics](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/): short course on more advanced reproducibility for scientific projects, includes GitHub in chapter 3 and provides other resources on reproducibility
