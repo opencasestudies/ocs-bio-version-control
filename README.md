@@ -72,7 +72,7 @@ This case study introduces version control in the context of a realistic collabo
 Using a meta-analysis of infant gut microbiome studies as an example, learners work through a preliminary 
 data analysis while managing a version-controlled research workflow with Git and GitHub. This case study teaches
 what version control is and the role it plays in collaborative and reproducible science, and gives the learner 
-practice in created a version-controlled repository and tracking changes to an analysis using Git and GitHub. 
+practice in creating a version-controlled repository and tracking changes to an analysis using Git and GitHub. 
 
 ### Main Questions
 
@@ -107,7 +107,7 @@ understand how the infant gut microbiome develops over time and how it relates t
 
 A meta-analysis combines data or results from multiple studies investigating a common research question. The scientific
 paper that we reference performed a meta-analysis of eight longitudinal gut microbiome studies. In the case study, we ask how comparable
-the original studies in their study design, specifically in terms of their sample sizes and longitudinal sampling designs.
+the original studies are in their study design, specifically in terms of their sample sizes and longitudinal sampling designs.
 
 ### Introduction to Git and GitHub
 
