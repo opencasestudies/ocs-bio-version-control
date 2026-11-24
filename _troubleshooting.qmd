@@ -296,7 +296,7 @@ git rm --cached path_to_file
 
 Next, open the `.gitignore` file and add the file to the list of files to avoid tracking. 
 
-Then, return to the command line and stage and stage and commit these changes. 
+Then, return to the command line and stage and commit these changes. 
 
 :::: {.shell}
 ```bash
@@ -354,7 +354,7 @@ git commit --amend
 
 Next, open the `.gitignore` file and add the file to the list of files to avoid tracking. 
 
-Then, return to the command line and stage and stage and commit these changes. Note that we include `git commit --amend` a second time to add the changes to the `.gitignore` file to the previous commit. 
+Then, return to the command line and stage and commit these changes. Note that we include `git commit --amend` a second time to add the changes to the `.gitignore` file to the previous commit. 
 
 :::: {.shell}
 ```bash

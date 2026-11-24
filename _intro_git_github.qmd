@@ -212,7 +212,7 @@ Send commits from the local version of a repository to the remote version of the
 ottrpal::include_slide("https://docs.google.com/presentation/d/1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I/edit?slide=id.g3d9461be06f_0_210#slide=id.g3d9461be06f_0_210")
 ```
 
-Typically, it is easier to create a new repository remotely with GitHub when started a version-controlled project from scratch. However, when you have already started work on a project and decide to version-control existing resources, you will want to create your new repository locally. 
+Typically, it is easier to create a new repository remotely with GitHub when starting a version-controlled project from scratch. However, when you have already started work on a project and decide to version-control existing resources, you will want to create your new repository locally. 
 
 In this case study we will practice both approaches. First, in the [following section](https://www.opencasestudies.org/ocs-bio-version-control/#getting-started-with-git-and-github), you will practice creating a new repository from GitHub and cloning it to your local computer. Later, in the [section in which you create a repository for the case study analysis](https://www.opencasestudies.org/ocs-bio-version-control/#create-a-version-controlled-repository-for-your-project), you will practice working with an existing set of files and version-controlling them locally with Git. 
 
@@ -258,7 +258,7 @@ Use the drop-down sections to learn about each of the configuration options.
 
 <details> <summary> Visibility </summary>
 
-By default your repository will be set to public, which means that anyone can view all of the files contained in it. If you would prefer that only you and collaborators that you add can view the contents, you can set the visibility to private. Please note that this is not ***truly*** private, so be careful not to host protected heath information (PHI) or other forms of data that require extra protection on GitHub even with a private repo.
+By default your repository will be set to public, which means that anyone can view all of the files contained in it. If you would prefer that only you and collaborators that you add can view the contents, you can set the visibility to private. Please note that this is not ***truly*** private, so be careful not to host protected health information (PHI) or other forms of data that require extra protection on GitHub even with a private repo.
 
 </details>
 
@@ -606,7 +606,7 @@ In order to open your Git-tracked repository as an RStudio project, do the follo
 - [ ] This should prompt you to open your file browser. Navigate to the folder called `my-first-repository`, which was created when you cloned the repository. 
 - [ ] Click "Create Project". 
 
-Once you do this, RStudio will open the project. If you look at the "Files" panel, you'll see the README that you made for `my-first-repository` on GitHub. You will additionally see a file called `my-first-repository.Rproj`. This file is automatically made by RStudio when opening a new project, and saves information about the project. You will also see a the file `.gitignore`. This is a minimal `.gitignore.`, listing four files created by RStudio that are typically not tracked with version control. 
+Once you do this, RStudio will open the project. If you look at the "Files" panel, you'll see the README that you made for `my-first-repository` on GitHub. You will additionally see a file called `my-first-repository.Rproj`. This file is automatically made by RStudio when opening a new project, and saves information about the project. You will also see the file `.gitignore`. This is a minimal `.gitignore.`, listing four files created by RStudio that are typically not tracked with version control. 
 
 #### Positron
 
@@ -717,7 +717,7 @@ git add my-first-repository.Rproj .gitignore
 ::::
 </details>
 
-Next, we will commit the staged files (remember, this is similar to creating a snapshot of these files, or to creating a save point in a video game). The command `git commit -m "..."` commits the staged files and the flag `-m` adds a commit messages. 
+Next, we will commit the staged files (remember, this is similar to creating a snapshot of these files, or to creating a save point in a video game). The command `git commit -m "..."` commits the staged files and the flag `-m` adds a commit message. 
 
 For this commit, you might use the summary "Add new file '01-calculations.R' to do calculations."  
 

@@ -33,7 +33,7 @@ There are a few useful components of this page in which you make a pull request:
 Reproducibility considerations
 ::::
 ::::{.inner_block}
-Components of a good pull requests include:
+Components of a good pull request include:
 
 - A concise but descriptive title.
 - A description of the changes you want to merge. This is a good place to list files added and modified and give a quick description of those changes. Give plenty of context; you've likely been thinking about the code you want to merge more recently than your collaborator who will review it. 
@@ -77,14 +77,14 @@ If you close a pull request without merging it, this means that you've decided n
 ottrpal::include_slide("https://docs.google.com/presentation/d/1QjS4NwVgB_oZX5YCHKCzVe9x4XRWhNv-N7iP26JXHXo/edit?slide=id.h175e18de373b618c_0_0#slide=id.h175e18de373b618c_0_0")
 ```
 
-The image above shows what the pull requests page might look like for this repository. For example, we can see **two** open pull request for different components of the project, and **five** previously merged or closed pull requests. Like the issues page, the pull requests page for a repository provides a searchable history of works in progress (open pull requests), and completed tasks (closed pull requests). This can be helpful to you, a collaborator, or someone interested in the process of your scientific project, to understand the major contributions to the repository. 
+The image above shows what the pull requests page might look like for this repository. For example, we can see **two** open pull requests for different components of the project, and **five** previously merged or closed pull requests. Like the issues page, the pull requests page for a repository provides a searchable history of works in progress (open pull requests), and completed tasks (closed pull requests). This can be helpful to you, a collaborator, or someone interested in the process of your scientific project, to understand the major contributions to the repository. 
 
 ## Reviewing pull requests
 ***
 
 In some situations, you may be a pull request reviewer rather than a pull request author. As a reviewer, you have several responsibilities. [See this resource on code review](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html) for a more in-depth treatment of these responsibilities. As a reviewer, you should consider the following:
 
-- Throughout your pull request review, remember that the pull request author put time and effort into this code. Providing a empathetic review that balances constructive criticism with positive reinforcement can make the reviewing process easier for both parties.
+- Throughout your pull request review, remember that the pull request author put time and effort into this code. Providing an empathetic review that balances constructive criticism with positive reinforcement can make the reviewing process easier for both parties.
 - Make sure that the pull request adequately explains the question or problem that the pull request addresses. There should be plenty of context for you to review the changes, as well as for someone else reading the pull request to understand what is being changed and why. Confirm that the pull request answers this question or solves this problem.
 - Address any direct questions from the pull request author. 
 - If you have questions or suggestions, make them as specific as possible. See the drop-down box below for ways to comment and provide suggestions on specific lines of text or code.
